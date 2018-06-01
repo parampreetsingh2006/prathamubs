@@ -20,21 +20,23 @@ ubsApp.renderPage = function(page) {
 	var html = "";
 	var wheelConfig = {};
 	for(var i=0; i< page.length; i++) {
-		var template = page[i];
-		var templateType = template.templateType;
+		var templateConfig = page[i];
+		var templateType = templateConfig.templateType;
 		if(templateType == "static") {
-			html += ubsStaticTemplate(template);
+			html += ubsStaticTemplate(templateConfig);
 		} else if(templateType == "decision") {
-			html += ubsDecisionTemplate(template);
-			ubsDecisionOption = template.options[0].optionName;
-			ubsDecisionOptionMap = template.optionPageMap;
+			html += ubsDecisionTemplate(templateConfig);
+			ubsDecisionOption = templateConfig.options[0].optionName;
+			ubsDecisionOptionMap = templateConfig.optionPageMap;
 		} else if (templateType == "wheelOfFortune") {
-			ubsApp.updateTemplateForFortuneWheel(template, wheelConfig);
-			html += wheelOfFortuneTemplate(template);
+			ubsApp.updateTemplateForFortuneWheel(templateConfig, wheelConfig);
+			html += wheelOfFortuneTemplate(templateConfig);
 		}
 	}
 	$("#templateBase").empty();
 	$("#templateBase").append(html);
+	
+	
 	if(wheelConfig.segments) {
 		
 		wheelConfig.animation.callbackFinished = ubsWheelOfFortune.alertPrize;
