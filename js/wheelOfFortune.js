@@ -58,14 +58,21 @@
             // -------------------------------------------------------
             ubsWheelOfFortune.alertPrize = function(indicatedSegment)
             {
+			    
+				$('#wheelOfFortuneIndicatedSegment').text(indicatedSegment.text);
+				$('#wheelOfFortuneModal').css("display", "table");
+				
+	
+            }
 			
-                alert("You have won " + indicatedSegment.text);
-              
+			 ubsWheelOfFortune.resetWheel = function()
+            {
+
 				ubsWheelOfFortune.wheelSpinning = false; 
 				ubsApp.wheelOfFortune.stopAnimation(false);  // Stop the animation, false as param so does not call callback function.
                 ubsApp.wheelOfFortune.rotationAngle = 0;     // Re-set the wheel angle to 0 degrees.
                 ubsApp.wheelOfFortune.draw(); 
-				ubsApp.renderPage(ubsApp.pages[ubsWheelOfFortune.optionPageMap[indicatedSegment.text]]);
+				ubsApp.renderPage(ubsApp.pages[ubsWheelOfFortune.optionPageMap[$('#wheelOfFortuneIndicatedSegment').text()]]);
 				
 				 
 				
