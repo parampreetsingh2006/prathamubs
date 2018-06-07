@@ -45,6 +45,11 @@ ubsApp.renderPage = function(page) {
 	}
 }
 
+
+ubsApp.renderPageByName = function(pageName) {
+	 this.renderPage(ubsApp.pages[pageName]);
+}
+
 ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
 		var screenWidth = $(window).height();
 		var wheelWidth = screenWidth * template.wheelWidthInPercent /100;
@@ -53,7 +58,8 @@ ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
 		template.settings.innerRadius = (template.settings.outerRadius / 3);
 		template.settings.textFontSize = template.settings.innerRadius / 2.5;
 		ubsWheelOfFortune.optionPageMap = template.optionPageMap;
-		wheelConfig = $.extend(true, wheelConfig, ubsWheelOfFortune.defaultSettings, template.settings);	
+		wheelConfig = $.extend(true, wheelConfig, ubsWheelOfFortune.defaultSettings, template.settings);
+		
 }
 
 ubsApp.intitializeTemplates = function() {

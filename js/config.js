@@ -8,21 +8,23 @@
 			"style": "padding:5px",
 			"wheelWidthInPercent" : "80",
 			"optionPageMap" : {
-				"300": "page2",
-				"450": "page3",
-				"600": "page2",
 				"300": "page3",
-				"450": "page2",
+				"450": "page3",
+				"600": "page3",
+				"300": "page3",
+				"450": "page3",
 				"600": "page3"
 			},
 			"settings" :{
                
-                'numSegments'     : 4,         // Specify number of segments.
+                'numSegments'     : 6,         // Specify number of segments.
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and test colour overridden on backrupt segments.
                    {'fillStyle' : '#ee1c24', 'text' : '300'},
                    {'fillStyle' : '#3cb878', 'text' : '450'},
                    {'fillStyle' : '#f6989d', 'text' : '600'},
+				   {'fillStyle' : '#ee1c24', 'text' : '300'},
+				    {'fillStyle' : '#f6989d', 'text' : '600'},
 				   {'fillStyle' : '#ee1c24', 'text' : '300'}
                   
                    
@@ -92,7 +94,8 @@
 			"templateType": "static",
 			"imgSrc": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
 			"width": "col-lg-4 col-md-4 col-xs-4",
-			"style": "padding:5px"
+			"style": "padding:5px;cursor:pointer",
+			"onClickPage" : "initPage"
 
 		}
 

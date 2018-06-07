@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 
-ubsApp.staticTemplate = '<div class="{{width}}" style="{{style}}">'+
+ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')" {{/if}}>'+
 '		{{imgSrc}}'+
 ' </div>';
 	
@@ -38,7 +38,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </div>'+
 ' </div>'+
 ' '+
-' <div id= "wheelOfFortuneModal" style="display:none; padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%;">'+
+' <div id= "wheelOfFortuneModal" style="display:none; padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%; ">'+
 ' <div style="    display: table-cell; vertical-align: middle;">'+
 ' <div style="width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;">'+
 '   Yay !!! Lets proceed to <span id="wheelOfFortuneIndicatedSegment"> </span> section.'+
