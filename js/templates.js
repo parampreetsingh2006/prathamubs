@@ -46,6 +46,22 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </div>'+
 ' </div>'+
 ' </div>';
+
+ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div class="col-lg-12 col-md-12 col-xs-12">'+
+'  <div class="rollscene" id="rollscene" style= "height:{{diceSceneWidth}}px; display:table; margin:auto;"}>'+
+'    <div onclick="mainroll()" class="cube">'+
+'      <div id="class_1" class="cube_face_1">O</div>'+
+'        <div id="class_2" class="cube_face_2">O O</div>'+
+'      <div id="class_3" class="cube_face_3">  O<br>  O<br>O</div>'+
+'      <div id="class_4" class="cube_face_4">O  O<br><br>O  O</div>'+
+'      <div id="class_5" class="cube_face_5">O  O<br>  O<br>O  O</div>'+
+'      <div id="class_6" class="cube_face_6">O  O<br>O  O<br>O  O</div>'+
+'    </div>'+
+'    <div class="rollButton">'+
+     '<button onclick="mainroll()" >Roll it </button>'+
+'    </div>'+
+'  </div>'+
+'</div></body>';
 	
 
 

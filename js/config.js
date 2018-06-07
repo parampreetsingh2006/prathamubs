@@ -58,7 +58,7 @@
 			],
 			"optionPageMap": {
 
-				"Happy": "initPage",
+				"Happy": "rollingDice",
 				"Not Happy": "page3"
 			},
 			"width": "col-lg-4 col-md-4 col-xs-4",
@@ -99,5 +99,23 @@
 
 		}
 
-	]
+	],
+
+	"rollingDice":[
+		{
+			"templateId":4,
+			"templateType":"rollingDice",
+			"optionPageMap" : {
+				"1": "page2",
+				"2": "page3",
+				"3": "page2",
+				"4": "page3",
+				"5": "page2",
+				"6": "page3",
+				"7": "page2",
+				"8": "page3",
+			},
+			
+		}
+	],
 }

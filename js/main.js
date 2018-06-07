@@ -31,6 +31,10 @@ ubsApp.renderPage = function(page) {
 		} else if (templateType == "wheelOfFortune") {
 			ubsApp.updateTemplateForFortuneWheel(templateConfig, wheelConfig);
 			html += wheelOfFortuneTemplate(templateConfig);
+		} else if(templateType == "rollingDice"){
+			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
+			ubsApp.updateRollingDiceTemplate(templateConfig);
+			html += rollingDiceTemplate(templateConfig);
 		}
 	}
 	$("#templateBase").empty();
@@ -67,11 +71,19 @@ ubsApp.intitializeTemplates = function() {
 	ubsStaticTemplate = Template7.compile(ubsApp.staticTemplate);
 	ubsDecisionTemplate = Template7.compile(ubsApp.decisionTemplate);
 	wheelOfFortuneTemplate = Template7.compile(ubsApp.wheelOfFortuneTemplate);
+	rollingDiceTemplate = Template7.compile(ubsApp.rollingDiceTemplate);
 }
 
 ubsApp.renderDecisonTemplate = function() {
   var checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").val();
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
+}
+
+ubsApp.updateRollingDiceTemplate = function(template){
+	var windowHeight =  $(window).height();
+    //$('#rollscene').css('width',windowHeight/3+"px");
+    //$('#rollscene').css('height',windowHeight/3+"px");
+    template.diceSceneWidth = windowHeight/3;
 }
 
 
