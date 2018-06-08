@@ -62,6 +62,12 @@ ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div class="col-lg-12 col
 '    </div>'+
 '  </div>'+
 '</div></body>';
+
+ubsApp.scratchCard ='<canvas id="scratch_card_canvas"'+
+                    '	height="{{height}}px"'+
+                    '	width="{{width}}px"'+
+                    '	style="{{style}}" />';
+
 	
 
 

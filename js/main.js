@@ -1,9 +1,9 @@
-var ubsStaticTemplate;
-var ubsDecisionTemplate;
-var ubsDecisionOption;
-var ubsDecisionOptionMap;
-var wheelOfFortuneTemplate;
-var ubsApp = {};
+let ubsStaticTemplate;
+let ubsDecisionTemplate;
+let ubsDecisionOption;
+let ubsDecisionOptionMap;
+let wheelOfFortuneTemplate;
+let ubsApp = {};
 ubsApp.wheelOfFortune = null;
 
 
@@ -17,11 +17,13 @@ $(document).ready(function(){
 
 
 ubsApp.renderPage = function(page) {
-	var html = "";
-	var wheelConfig = {};
-	for(var i=0; i< page.length; i++) {
-		var templateConfig = page[i];
-		var templateType = templateConfig.templateType;
+	let html = "";
+	let wheelConfig = {};
+	let scratchCardTemplateConfig = undefined;
+
+	for(let i=0; i< page.length; i++) {
+		let templateConfig = page[i];
+		let templateType = templateConfig.templateType;
 		if(templateType == "static") {
 			html += ubsStaticTemplate(templateConfig);
 		} else if(templateType == "decision") {
@@ -35,17 +37,20 @@ ubsApp.renderPage = function(page) {
 			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
 			ubsApp.updateRollingDiceTemplate(templateConfig);
 			html += rollingDiceTemplate(templateConfig);
-		}
+		} else if(templateType == "scratchCard") {
+		    scratchCardTemplateConfig=templateConfig;
+            preProcessScratchCardConfig(templateConfig);
+         	html += scratchCardTemplate(templateConfig);
+        }
 	}
 	$("#templateBase").empty();
 	$("#templateBase").append(html);
 	
-	
 	if(wheelConfig.segments) {
-		
 		wheelConfig.animation.callbackFinished = ubsWheelOfFortune.alertPrize;
 	    ubsApp.wheelOfFortune = new Winwheel(wheelConfig, true);
-
+	} else if (scratchCardTemplateConfig) {
+	    initScratchCard(scratchCardTemplateConfig);
 	}
 }
 
@@ -55,8 +60,8 @@ ubsApp.renderPageByName = function(pageName) {
 }
 
 ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
-		var screenWidth = $(window).height();
-		var wheelWidth = screenWidth * template.wheelWidthInPercent /100;
+		let screenWidth = $(window).height();
+		let wheelWidth = screenWidth * template.wheelWidthInPercent /100;
 		template.wheelWidth = wheelWidth;
 		template.settings.outerRadius = (wheelWidth / 2) - 2;
 		template.settings.innerRadius = (template.settings.outerRadius / 3);
@@ -67,26 +72,23 @@ ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
 }
 
 ubsApp.intitializeTemplates = function() {
-
 	ubsStaticTemplate = Template7.compile(ubsApp.staticTemplate);
 	ubsDecisionTemplate = Template7.compile(ubsApp.decisionTemplate);
 	wheelOfFortuneTemplate = Template7.compile(ubsApp.wheelOfFortuneTemplate);
 	rollingDiceTemplate = Template7.compile(ubsApp.rollingDiceTemplate);
+	scratchCardTemplate = Template7.compile(ubsApp.scratchCard);
 }
 
 ubsApp.renderDecisonTemplate = function() {
-  var checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").val();
+  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").val();
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
 }
 
 ubsApp.updateRollingDiceTemplate = function(template){
-	var windowHeight =  $(window).height();
+	let windowHeight =  $(window).height();
     //$('#rollscene').css('width',windowHeight/3+"px");
     //$('#rollscene').css('height',windowHeight/3+"px");
     template.diceSceneWidth = windowHeight/3;
 }
-
-
-
 
 

@@ -8,10 +8,10 @@
 			"style": "padding:5px",
 			"wheelWidthInPercent" : "80",
 			"optionPageMap" : {
-				"300": "page3",
+				"300": "page4",
 				"450": "page3",
 				"600": "page3",
-				"300": "page3",
+				"300": "page4",
 				"450": "page3",
 				"600": "page3"
 			},
@@ -118,4 +118,23 @@
 			
 		}
 	],
+	"page4" : [{
+        "templateId": 5,
+        "templateType": "scratchCard",
+        "initHeight": "30", // for technical reason
+        "initWidth": "20", // for technical reason
+        "height": "30", // in percentage
+        "width": "20", // in percentage
+        "backgroundImageList": [
+            {image:"images/TRAVEL.jpeg", message: "Congratulations you won a Travel Surprise !"},
+            {image:"images/IMG-1.jpeg", message: "Congratulations you won a Hard Cash !"},
+            {image:"images/IMG-2.jpeg", message: "Hard Luck dude !"},
+         ],
+        "initStyle": "background-image: url(${image});top: 50%;left: 50%;", // for technical reason
+        "style": "background-image: url(${image});top: 50%;left: 50%;",
+        "coverImage": "images/IMG-0.jpeg",
+        "successMessage": "Congratulations you won a Travel Surprise !",
+        "nextPage": "initPage",
+        }
+    ],
 }
