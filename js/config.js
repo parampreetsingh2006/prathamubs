@@ -180,7 +180,7 @@
 	  	    {
 	  	    	"templateId": 1,
 				"choiceID":0,
-				"Src": "<img style=\"float:right\" src=\"js/tl.png\" >",
+				"Src": "<img style=\"float:right\" src=\"Images/tl.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;margin-top:5%",
 				"display":false,
@@ -189,7 +189,7 @@
 			{
 				"templateId": 1,
 				"choiceID":1,
-				"Src": "<img style=\"\" src=\"js/tr.png\" >",
+				"Src": "<img style=\"\" src=\"Images/tr.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;margin-top:5%",
 				"display":false,
@@ -198,7 +198,7 @@
 			{
 				"templateId": 1,
 				"choiceID":2,
-				"Src": "<img style=\"float:right\" src=\"js/lb.png\" >",
+				"Src": "<img style=\"float:right\" src=\"Images/lb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;",
 				"display":false,
@@ -207,7 +207,7 @@
 		    {
 		    	"templateId": 1,
 				"choiceID":3,
-				"Src": "<img style=\"\" src=\"js/rb.png\" >",
+				"Src": "<img style=\"\" src=\"Images/rb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;",
 				"display":false,
