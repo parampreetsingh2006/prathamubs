@@ -389,5 +389,13 @@
 			"width": "col-lg-5 col-md-5 col-xs-5",
 			"style": "padding:5px;cursor:pointer"
 
-		}]	
+		}],
+		"popup":[{
+		
+		"id":"wheelOfFortuneModal",
+		"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+		"fortuneID":"wheelOfFortuneIndicatedSegment",
+		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
+		"onClick":"ubsWheelOfFortune.resetWheel()"
+	}]	
 }
