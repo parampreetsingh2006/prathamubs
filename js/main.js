@@ -3,6 +3,7 @@ let ubsDecisionTemplate;
 let ubsDecisionOption;
 let ubsDecisionOptionMap;
 let wheelOfFortuneTemplate;
+let ubsScoreTemplate;
 let choiceSelected={};
 let ubsApp = {};
 ubsApp.wheelOfFortune = null;
@@ -11,6 +12,12 @@ ubsApp.wheelOfFortune = null;
 $(document).ready(function(){
 	//$("#staticTemplate").load("templates/staticTemplate.html"); 
 	//$("#decisionTemplate").load("templates/decisionTemplate.html"); 
+	
+	if (typeof(Storage) == "undefined") {
+		localStorage.setItem("score","1000");
+		localStorage.setItem("currency","$");
+	}
+	localStorage.score=1000;
 	ubsApp.intitializeTemplates();
 	ubsApp.renderPage(ubsApp.pages.InitPage);
 });
@@ -49,6 +56,9 @@ ubsApp.renderPage = function(page) {
 				templateConfig.choices[i].notDisplay = choiceSelected[i];}
 		  	html += ubschoiceTemplate(templateConfig);
 		 }
+		 else if(templateType == "score"){
+			html += ubsScoreTemplate(templateConfig); 
+		 }
 	}
 	$("#templateBase").empty();
 	$("#templateBase").append(html);
@@ -59,7 +69,11 @@ ubsApp.renderPage = function(page) {
 	} else if (scratchCardTemplateConfig) {
 	    initScratchCard(scratchCardTemplateConfig);
 	}
+	if($('#headId').length > 0) {
+				document.getElementById("headId").innerHTML=ubsApp.getScore();
+	}
 }
+
 
 ubsApp.updateChoiceSelected = function(templateConfig) {
 	if(jQuery.isEmptyObject(choiceSelected)){
@@ -100,6 +114,7 @@ ubsApp.intitializeTemplates = function() {
 	rollingDiceTemplate = Template7.compile(ubsApp.rollingDiceTemplate);
 	scratchCardTemplate = Template7.compile(ubsApp.scratchCard);
 	ubschoiceTemplate = Template7.compile(ubsApp.choiceTemplate);
+	ubsScoreTemplate=Template7.compile(ubsApp.scoreTemplate);
 }
 
 ubsApp.renderDecisonTemplate = function() {
@@ -118,4 +133,22 @@ ubsApp.updateChoices = function(choiceId, pageName){
 	 ubsApp.renderPageByName(pageName);
 	 choiceSelected[choiceId]=false;
  if(ubsApp.checkSelected()) choiceSelected={};   
+}
+ubsApp.getScore=function()
+{
+	return parseInt(localStorage.score);
+}
+
+ubsApp.getCurrency=function()
+{
+	return localStorage.currency;
+}
+
+ubsApp.addScore=function (earnedScore,nextPage)
+{
+	var currentScore=localStorage.score;
+	localStorage.score=parseInt(currentScore)+parseInt(earnedScore);
+	document.getElementById("headId").innerHTML=ubsApp.getScore();
+	ubsApp.renderPage(ubsApp.pages[nextPage]);
+	
 }

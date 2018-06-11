@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 
-ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')" {{/if}}>'+
+ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')" {{elseif nextPage}} onclick="ubsApp.addScore(\'{{onClickOp}}\', \'{{nextPage}}\')" {{/if}}>'+
 '		{{imgSrc}}'+
 ' </div>';
 	
@@ -88,7 +88,21 @@ ubsApp.choiceTemplate =   '{{#each choices}}'+
 ''+
 '			{{/each}}';
 	
+ubsApp.scoreTemplate= '<style> {{style}} </style>'+
+
+'<div style=\"position: absolute; top: 2%; left: 90%;\">'+
 	
+	'{{score_text}}'+
+
+'</div>'+
+
+'<div style=\"position: absolute; top: 2%; left: 95%; \"> '+
+	
+	'{{coin}}'+
+	
+'</div>'
+	
+;
 
 
 	

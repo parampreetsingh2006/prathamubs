@@ -217,6 +217,14 @@
 	
 		"q1": [
 		{
+			"templateId":15,
+			"templateType":"score",
+			"width":"col-lg-12 col-md-12 col-xs-12",
+			"style":" .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; } .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; } .coin .back{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; } .coin .front_b{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;} .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; background:#f7941e; position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;} .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; } .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;} .print_txt{ display:block;padding: 10px ;border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} @keyframes coin{ 0%{transform: rotateY(0);} 100%{transform: rotateY(360deg);}}",
+			"score_text":"<div class=\"print_txt\" id=\"headId\" align=\"center\"></div>",
+			"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
+		},
+		{
 			"templateId": 2,
 			"templateType": "decision",
 			"question": "Looks like one customer wants to purchase items:<br>1.1.5kg Rice<br>2.5kg Dal<br>1 kg rice<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?",
@@ -247,6 +255,14 @@
 		}],
 	
 	"q1-correct":[
+		{
+			"templateId":15,
+			"templateType":"score",
+			"width":"col-lg-12 col-md-12 col-xs-12",
+			"style":" .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; } .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; } .coin .back{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; } .coin .front_b{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;} .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; background:#f7941e; position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;} .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; } .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;} .print_txt{ display:block;padding: 10px ;border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} @keyframes coin{ 0%{transform: rotateY(0);} 100%{transform: rotateY(360deg);}}",
+			"score_text":"<div class=\"print_txt\" id=\"headId\" align=\"center\"></div>",
+			"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
+		},
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -267,10 +283,19 @@
 			"templateType": "static",
 			"imgSrc": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
-			"onClickPage": "choicePage"
+			"onClickOp":"355",
+			"nextPage":"choicePage"
 	}],
 
     "q1-wrong":[
+		{
+			"templateId":15,
+			"templateType":"score",
+			"width":"col-lg-12 col-md-12 col-xs-12",
+			"style":" .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; } .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; } .coin .back{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; } .coin .front_b{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;} .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; background:#f7941e; position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;} .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; } .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;} .print_txt{ display:block;padding: 10px ;border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} @keyframes coin{ 0%{transform: rotateY(0);} 100%{transform: rotateY(360deg);}}",
+			"score_text":"<div class=\"print_txt\" id=\"headId\" align=\"center\"></div>",
+			"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
+		},
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -291,12 +316,21 @@
 			"templateType": "static",
 			"imgSrc": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
-			"onClickPage": "choicePage"
+			"onClickOp":"-255",
+			"nextPage":"choicePage"
 	}
 	
 	],
 	
 	"q1-vvwrong":[
+		{
+			"templateId":15,
+			"templateType":"score",
+			"width":"col-lg-12 col-md-12 col-xs-12",
+			"style":" .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; } .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; } .coin .back{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; } .coin .front_b{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;} .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; background:#f7941e; position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;} .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; } .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;} .print_txt{ display:block;padding: 10px ;border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} @keyframes coin{ 0%{transform: rotateY(0);} 100%{transform: rotateY(360deg);}}",
+			"score_text":"<div class=\"print_txt\" id=\"headId\" align=\"center\"></div>",
+			"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
+		},
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -317,7 +351,8 @@
 			"templateType": "static",
 			"imgSrc": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
-			"onClickPage": "choicePage"
+			"onClickOp":"-155",
+			"nextPage":"choicePage"
 	}],
 		
 	"q2": [{
