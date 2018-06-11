@@ -3,6 +3,7 @@ let ubsDecisionTemplate;
 let ubsDecisionOption;
 let ubsDecisionOptionMap;
 let wheelOfFortuneTemplate;
+let ubsPopupTemplate;
 let choiceSelected={};
 let ubsApp = {};
 ubsApp.wheelOfFortune = null;
@@ -34,6 +35,7 @@ ubsApp.renderPage = function(page) {
 		} else if (templateType == "wheelOfFortune") {
 			ubsApp.updateTemplateForFortuneWheel(templateConfig, wheelConfig);
 			html += wheelOfFortuneTemplate(templateConfig);
+			html+=ubsPopupTemplate(templateConfig);
 		} else if(templateType == "rollingDice"){
 			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
 			ubsApp.updateRollingDiceTemplate(templateConfig);
@@ -100,6 +102,7 @@ ubsApp.intitializeTemplates = function() {
 	rollingDiceTemplate = Template7.compile(ubsApp.rollingDiceTemplate);
 	scratchCardTemplate = Template7.compile(ubsApp.scratchCard);
 	ubschoiceTemplate = Template7.compile(ubsApp.choiceTemplate);
+	ubsPopupTemplate = Template7.compile(ubsApp.popupTemplate);
 }
 
 ubsApp.renderDecisonTemplate = function() {
