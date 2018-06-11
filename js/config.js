@@ -180,7 +180,7 @@
 	  	    {
 	  	    	"templateId": 1,
 				"choiceID":0,
-				"Src": "<img style=\"float:right\" src=\"C:/Users/UBS/Documents/prathamubs-master/prathamubs-master/js/tl.png\" >",
+				"Src": "<img style=\"float:right\" src=\"js/tl.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;margin-top:5%",
 				"display":false,
@@ -189,7 +189,7 @@
 			{
 				"templateId": 1,
 				"choiceID":1,
-				"Src": "<img style=\"\" src=\"C:/Users/UBS/Documents/prathamubs-master/prathamubs-master/js/tr.png\" >",
+				"Src": "<img style=\"\" src=\"js/tr.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;margin-top:5%",
 				"display":false,
@@ -198,7 +198,7 @@
 			{
 				"templateId": 1,
 				"choiceID":2,
-				"Src": "<img style=\"float:right\" src=\"C:/Users/UBS/Documents/prathamubs-master/prathamubs-master/js/lb.png\" >",
+				"Src": "<img style=\"float:right\" src=\"js/lb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;",
 				"display":false,
@@ -207,7 +207,7 @@
 		    {
 		    	"templateId": 1,
 				"choiceID":3,
-				"Src": "<img style=\"\" src=\"C:/Users/UBS/Documents/prathamubs-master/prathamubs-master/js/rb.png\" >",
+				"Src": "<img style=\"\" src=\"js/rb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:0px;",
 				"display":false,
