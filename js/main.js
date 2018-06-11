@@ -3,6 +3,7 @@ let ubsDecisionTemplate;
 let ubsDecisionOption;
 let ubsDecisionOptionMap;
 let wheelOfFortuneTemplate;
+let choiceSelected={};
 let ubsApp = {};
 ubsApp.wheelOfFortune = null;
 
@@ -11,7 +12,7 @@ $(document).ready(function(){
 	//$("#staticTemplate").load("templates/staticTemplate.html"); 
 	//$("#decisionTemplate").load("templates/decisionTemplate.html"); 
 	ubsApp.intitializeTemplates();
-	ubsApp.renderPage(ubsApp.pages.initPage);
+	ubsApp.renderPage(ubsApp.pages.InitPage);
 });
 
 
@@ -41,7 +42,13 @@ ubsApp.renderPage = function(page) {
 		    scratchCardTemplateConfig=templateConfig;
             preProcessScratchCardConfig(templateConfig);
          	html += scratchCardTemplate(templateConfig);
-        }
+        }else if(templateType == "choiceTemplate"){
+			ubsApp.updateChoiceSelected(templateConfig);
+			for(let i=0; i< templateConfig.choices.length; i++)  {
+				templateConfig.choices[i].display = !choiceSelected[i];
+				templateConfig.choices[i].notDisplay = choiceSelected[i];}
+		  	html += ubschoiceTemplate(templateConfig);
+		 }
 	}
 	$("#templateBase").empty();
 	$("#templateBase").append(html);
@@ -54,7 +61,22 @@ ubsApp.renderPage = function(page) {
 	}
 }
 
+ubsApp.updateChoiceSelected = function(templateConfig) {
+	if(jQuery.isEmptyObject(choiceSelected)){
+	 for(let i=0; i< templateConfig.choices.length; i++) { 
+	 choiceSelected[templateConfig.choices[i].choiceID] = true;
+	 }
+	}
+}
+ubsApp.checkSelected= function(){
 
+	$.each($.parseJSON(choiceSelected), function(key,value){
+     if(value == true) {
+     	return false;
+     }
+});
+	return true;
+}
 ubsApp.renderPageByName = function(pageName) {
 	 this.renderPage(ubsApp.pages[pageName]);
 }
@@ -77,6 +99,7 @@ ubsApp.intitializeTemplates = function() {
 	wheelOfFortuneTemplate = Template7.compile(ubsApp.wheelOfFortuneTemplate);
 	rollingDiceTemplate = Template7.compile(ubsApp.rollingDiceTemplate);
 	scratchCardTemplate = Template7.compile(ubsApp.scratchCard);
+	ubschoiceTemplate = Template7.compile(ubsApp.choiceTemplate);
 }
 
 ubsApp.renderDecisonTemplate = function() {
@@ -91,4 +114,8 @@ ubsApp.updateRollingDiceTemplate = function(template){
     template.diceSceneWidth = windowHeight/3;
 }
 
-
+ubsApp.updateChoices = function(choiceId, pageName){
+	 ubsApp.renderPageByName(pageName);
+	 choiceSelected[choiceId]=false;
+ if(ubsApp.checkSelected()) choiceSelected={};   
+}
