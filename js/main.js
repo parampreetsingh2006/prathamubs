@@ -115,7 +115,7 @@ ubsApp.intitializeTemplates = function() {
 	wheelOfFortuneTemplate = Template7.compile(ubsApp.wheelOfFortuneTemplate);
 	rollingDiceTemplate = Template7.compile(ubsApp.rollingDiceTemplate);
 	scratchCardTemplate = Template7.compile(ubsApp.scratchCard);
-	ubschoiceTemplate = Template7.compile(ubsApp.choiceTemplate);`
+	ubschoiceTemplate = Template7.compile(ubsApp.choiceTemplate);
 	ubsScoreTemplate=Template7.compile(ubsApp.scoreTemplate);
 	ubsPopupTemplate = Template7.compile(ubsApp.popupTemplate);
 }
