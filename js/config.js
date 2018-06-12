@@ -38,7 +38,7 @@
 	"page2": [{
 			"templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyToPbYny02i9LY6pJ7muG13oQFoUarWoWnG6hkxKGNGDuspQR\" >",
+			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyToPbYny02i9LY6pJ7muG13oQFoUarWoWnG6hkxKGNGDuspQR\" >",
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px"
 
@@ -92,7 +92,7 @@
 		{
 			"templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;cursor:pointer",
 			"onClickPage" : "initPage"
@@ -180,7 +180,8 @@
 	  	    {
 	  	    	"templateId": 1,
 				"choiceID":0,
-				"Src": "<img style=\"float:right\" src=\"Images/tl.png\" >",
+				"notSelectedSrc": "<img style=\"float:right\" src=\"Images/tl.png\" >",
+				"selectedSrc": "<img style=\"float:right;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tl.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;margin-top:5%",
 				"display":false,
@@ -189,7 +190,8 @@
 			{
 				"templateId": 1,
 				"choiceID":1,
-				"Src": "<img style=\"\" src=\"Images/tr.png\" >",
+				"notSelectedSrc": "<img style=\"\" src=\"Images/tr.png\" >",
+				"selectedSrc": "<img style=\"filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tr.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;margin-top:5%",
 				"display":false,
@@ -198,7 +200,8 @@
 			{
 				"templateId": 1,
 				"choiceID":2,
-				"Src": "<img style=\"float:right\" src=\"Images/lb.png\" >",
+				"notSelectedSrc": "<img style=\"float:right\" src=\"Images/lb.png\" >",
+				"selectedSrc": "<img style=\"float:right;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/lb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
@@ -207,7 +210,8 @@
 		    {
 		    	"templateId": 1,
 				"choiceID":3,
-				"Src": "<img style=\"\" src=\"Images/rb.png\" >",
+				"notSelectedSrc": "<img style=\"\" src=\"Images/rb.png\" >",
+				"selectedSrc": "<img style=\"filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/rb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
@@ -266,7 +270,7 @@
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "Yay, you answered correct. Your balance increases by 355. His new balance is 355." ,
+			"src": "Yay, you answered correct. Your balance increases by 355. His new balance is 355." ,
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;"
 	   
@@ -274,14 +278,14 @@
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
 			"style": "padding:5px;"	
 	},
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<button type=\"button\" >Next Question!</button>",
+			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
 			"onClickOp":"355",
 			"nextPage":"choicePage"
@@ -299,7 +303,7 @@
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "Oops!! you answered incorrect. You lost money. Your balance decreases by by 255. Your new balance is 1000-255=745." ,
+			"src": "Oops!! you answered incorrect. You lost money. Your balance decreases by by 255. Your new balance is 1000-255=745." ,
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;"
 	   
@@ -307,14 +311,14 @@
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
 			"style": "padding:5px;"	
 	},
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<button type=\"button\" >Next Question!</button>",
+			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
 			"onClickOp":"-255",
 			"nextPage":"choicePage"
@@ -334,7 +338,7 @@
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "Oops!! you answered very much incorrect. You lost double money. Your balance decreases by by 2 x 255. Your new balance is 1000-510=490." ,
+			"src": "Oops!! you answered very much incorrect. You lost double money. Your balance decreases by by 2 x 255. Your new balance is 1000-510=490." ,
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;"
 	   
@@ -342,14 +346,14 @@
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
 			"style": "padding:5px;"	
 	},
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<button type=\"button\" >Next Question!</button>",
+			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
 			"onClickOp":"-155",
 			"nextPage":"choicePage"
@@ -385,7 +389,7 @@
 		{
 			"templateId": 1,
 			"templateType": "static",
-			"imgSrc": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
 			"width": "col-lg-5 col-md-5 col-xs-5",
 			"style": "padding:5px;cursor:pointer"
 

@@ -86,12 +86,14 @@ ubsApp.updateChoiceSelected = function(templateConfig) {
 }
 ubsApp.checkSelected= function(){
 
-	$.each($.parseJSON(choiceSelected), function(key,value){
+let allSelected = true;
+	$.each(choiceSelected, function(key,value){
      if(value == true) {
-     	return false;
+     	allSelected =  false;
+		return false;
      }
 });
-	return true;
+	return allSelected;
 }
 ubsApp.renderPageByName = function(pageName) {
 	 this.renderPage(ubsApp.pages[pageName]);

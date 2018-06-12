@@ -2,7 +2,7 @@
 
 
 ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')" {{elseif nextPage}} onclick="ubsApp.addScore(\'{{onClickOp}}\', \'{{nextPage}}\')" {{/if}}>'+
-'		{{imgSrc}}'+
+'		{{src}}'+
 ' </div>';
 	
 	
@@ -73,14 +73,11 @@ ubsApp.choiceTemplate =   '{{#each choices}}'+
 '		'+
 '				'+
 '				<div class="{{width}}" style="{{style}} {{#if notDisplay}} ;cursor:pointer;{{/if}}" {{#if onClickPage}} {{#if notDisplay}} onclick="ubsApp.updateChoices(\'{{choiceID}}\', \'{{onClickPage}}\')" {{/if}}{{/if}}>'+
-'					{{#if display}} '+
+'					{{#if notDisplay}} '+
 ''+
-'					<div style="background-color: rgba(255, 255, 255, 0.8);"> '+
-'                   {{/if}}'+
-'					   {{Src}}'+
-''+
-'					 {{#if display}} '+
-'					</div>'+
+'					{{notSelectedSrc}} '+
+'                   {{else}}'+
+'					   {{selectedSrc}}'+
 '					{{/if}}'+
 '	            </div>'+
 ''+
