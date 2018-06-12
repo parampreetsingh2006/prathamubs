@@ -182,7 +182,7 @@
 				"choiceID":0,
 				"Src": "<img style=\"float:right\" src=\"Images/tl.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
-				"style": "padding:0px;margin-top:5%",
+				"style": "padding:1px;margin-top:5%",
 				"display":false,
 				"onClickPage": "q1"
 			},
@@ -191,7 +191,7 @@
 				"choiceID":1,
 				"Src": "<img style=\"\" src=\"Images/tr.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
-				"style": "padding:0px;margin-top:5%",
+				"style": "padding:1px;margin-top:5%",
 				"display":false,
 				"onClickPage": "q1"
 			},
@@ -200,7 +200,7 @@
 				"choiceID":2,
 				"Src": "<img style=\"float:right\" src=\"Images/lb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
-				"style": "padding:0px;",
+				"style": "padding:1px;",
 				"display":false,
 				"onClickPage": "q1"
 			},
@@ -209,7 +209,7 @@
 				"choiceID":3,
 				"Src": "<img style=\"\" src=\"Images/rb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
-				"style": "padding:0px;",
+				"style": "padding:1px;",
 				"display":false,
 				"onClickPage": "q1"
 			}],
