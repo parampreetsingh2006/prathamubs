@@ -176,12 +176,13 @@
 			
 		"templateId": 4,
 		"templateType": "choiceTemplate",
+		"choiceHeightFactor" : 2,
 		"choices":[
 	  	    {
 	  	    	"templateId": 1,
 				"choiceID":0,
-				"notSelectedSrc": "<img style=\"float:right\" src=\"Images/tl.png\" >",
-				"selectedSrc": "<img style=\"float:right;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tl.png\" >",
+				"notSelectedSrc": "<img style=\"float:right;max-width: 100%;max-height: 100%;\" src=\"Images/tl.png\" >",
+				"selectedSrc": "<img style=\"float:right;;max-width: 100%;max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tl.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;margin-top:5%",
 				"display":false,
@@ -190,8 +191,8 @@
 			{
 				"templateId": 1,
 				"choiceID":1,
-				"notSelectedSrc": "<img style=\"\" src=\"Images/tr.png\" >",
-				"selectedSrc": "<img style=\"filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tr.png\" >",
+				"notSelectedSrc": "<img style=\";max-width: 100%;max-height: 100%;\" src=\"Images/tr.png\" >",
+				"selectedSrc": "<img style=\";max-width: 100%;max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tr.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;margin-top:5%",
 				"display":false,
@@ -200,8 +201,8 @@
 			{
 				"templateId": 1,
 				"choiceID":2,
-				"notSelectedSrc": "<img style=\"float:right\" src=\"Images/lb.png\" >",
-				"selectedSrc": "<img style=\"float:right;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/lb.png\" >",
+				"notSelectedSrc": "<img style=\"float:right;;max-width: 100%;max-height: 100%;\" src=\"Images/lb.png\" >",
+				"selectedSrc": "<img style=\";max-width: 100%;max-height: 100%;float:right;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/lb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
@@ -210,8 +211,8 @@
 		    {
 		    	"templateId": 1,
 				"choiceID":3,
-				"notSelectedSrc": "<img style=\"\" src=\"Images/rb.png\" >",
-				"selectedSrc": "<img style=\"filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/rb.png\" >",
+				"notSelectedSrc": "<img style=\";max-width: 100%;max-height: 100%;\" src=\"Images/rb.png\" >",
+				"selectedSrc": "<img style=\";max-width: 100%;max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/rb.png\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,

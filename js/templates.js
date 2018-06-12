@@ -68,11 +68,11 @@ ubsApp.scratchCard ='<canvas id="scratch_card_canvas"'+
                     '	width="{{width}}px"'+
                     '	style="{{style}}" />';
 
-ubsApp.choiceTemplate =   '{{#each choices}}'+
+ubsApp.choiceTemplate =  '<div style="height:{{containerHeight}}">'+ '{{#each choices}}'+
 ''+
 '		'+
 '				'+
-'				<div class="{{width}}" style="{{style}} {{#if display}} ;cursor:pointer;{{/if}}" {{#if onClickPage}} {{#if display}} onclick="ubsApp.updateChoices(\'{{choiceID}}\', \'{{onClickPage}}\')" {{/if}}{{/if}}>'+
+'				<div class="{{width}}" style="{{style}}; height: {{choiceHeight}}; {{#if display}} ;cursor:pointer;{{/if}}" {{#if onClickPage}} {{#if display}} onclick="ubsApp.updateChoices(\'{{choiceID}}\', \'{{onClickPage}}\')" {{/if}}{{/if}}>'+
 '					{{#if display}} '+
 ''+
 '					{{notSelectedSrc}} '+
@@ -83,7 +83,7 @@ ubsApp.choiceTemplate =   '{{#each choices}}'+
 ''+
 '			'+
 ''+
-'			{{/each}}';
+'			{{/each}}' + '</div>';
 	
 ubsApp.scoreTemplate= '<style> {{style}} </style>'+
 

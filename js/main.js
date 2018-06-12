@@ -55,7 +55,10 @@ ubsApp.renderPage = function(page) {
 			ubsApp.updateChoiceSelected(templateConfig);
 			for(let i=0; i< templateConfig.choices.length; i++)  {
 				templateConfig.choices[i].display = choiceSelected[i];
+				templateConfig.choices[i].choiceHeight = ($(window).innerHeight() / templateConfig.choiceHeightFactor) + 'px';
 				}
+			templateConfig.containerHeight= $(window).innerHeight() +'px';
+		  
 		  	html += ubschoiceTemplate(templateConfig);
 		 }
 		 else if(templateType == "score"){
@@ -81,6 +84,7 @@ ubsApp.updateChoiceSelected = function(templateConfig) {
 	if(jQuery.isEmptyObject(choiceSelected)){
 	 for(let i=0; i< templateConfig.choices.length; i++) { 
 	 choiceSelected[templateConfig.choices[i].choiceID] = true;
+	 
 	 }
 	}
 }
