@@ -72,8 +72,8 @@ ubsApp.choiceTemplate =   '{{#each choices}}'+
 ''+
 '		'+
 '				'+
-'				<div class="{{width}}" style="{{style}} {{#if notDisplay}} ;cursor:pointer;{{/if}}" {{#if onClickPage}} {{#if notDisplay}} onclick="ubsApp.updateChoices(\'{{choiceID}}\', \'{{onClickPage}}\')" {{/if}}{{/if}}>'+
-'					{{#if notDisplay}} '+
+'				<div class="{{width}}" style="{{style}} {{#if display}} ;cursor:pointer;{{/if}}" {{#if onClickPage}} {{#if display}} onclick="ubsApp.updateChoices(\'{{choiceID}}\', \'{{onClickPage}}\')" {{/if}}{{/if}}>'+
+'					{{#if display}} '+
 ''+
 '					{{notSelectedSrc}} '+
 '                   {{else}}'+

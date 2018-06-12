@@ -54,8 +54,8 @@ ubsApp.renderPage = function(page) {
         }else if(templateType == "choiceTemplate"){
 			ubsApp.updateChoiceSelected(templateConfig);
 			for(let i=0; i< templateConfig.choices.length; i++)  {
-				templateConfig.choices[i].display = !choiceSelected[i];
-				templateConfig.choices[i].notDisplay = choiceSelected[i];}
+				templateConfig.choices[i].display = choiceSelected[i];
+				}
 		  	html += ubschoiceTemplate(templateConfig);
 		 }
 		 else if(templateType == "score"){
