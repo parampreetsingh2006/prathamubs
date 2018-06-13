@@ -5,7 +5,9 @@ let ubsDecisionOptionMap;
 let wheelOfFortuneTemplate;
 let ubsScoreTemplate;
 let ubsPopupTemplate;
+let ubsTimerTemplate;
 let choiceSelected={};
+let timeVar;
 let ubsApp = {};
 var currentanswer=0;
 var answerselected=0;
@@ -31,6 +33,7 @@ ubsApp.renderPage = function(page) {
 	let html = "";
 	let wheelConfig = {};
 	flag=false;
+	let timerConfig = {};
 	let scratchCardTemplateConfig = undefined;
 
 	for(let i=0; i< page.length; i++) {
@@ -61,6 +64,10 @@ ubsApp.renderPage = function(page) {
 		} else if (templateType == "wheelOfFortune") {
 			ubsApp.updateTemplateForFortuneWheel(templateConfig, wheelConfig);
 			html += wheelOfFortuneTemplate(templateConfig);
+		} else if(templateType == "timerTemp") {
+			html+=ubsTimerTemplate(templateConfig)
+			timerConfig=templateConfig;
+		} else if (templateType == "popup") {
 			html+=ubsPopupTemplate(templateConfig);
 		} else if(templateType == "rollingDice"){
 			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
@@ -90,7 +97,7 @@ ubsApp.renderPage = function(page) {
 	}
 	$("#templateBase").empty();
 	$("#templateBase").append(html);
-	
+		
 	if(wheelConfig.segments) {
 		wheelConfig.animation.callbackFinished = ubsWheelOfFortune.alertPrize;
 	    ubsApp.wheelOfFortune = new Winwheel(wheelConfig, true);
@@ -117,6 +124,10 @@ ubsApp.renderPage = function(page) {
 			document.getElementById("headId").innerHTML=ubsApp.getScore();
 		}
 		
+	}
+	if(Object.keys(timerConfig).length != 0){
+		ubsApp.startTimer(timerConfig);
+		timerConfig={};
 	}
 }
 
@@ -166,6 +177,7 @@ ubsApp.intitializeTemplates = function() {
 	ubschoiceTemplate = Template7.compile(ubsApp.choiceTemplate);
 	ubsScoreTemplate=Template7.compile(ubsApp.scoreTemplate);
 	ubsPopupTemplate = Template7.compile(ubsApp.popupTemplate);
+	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
 }
 
 ubsApp.renderDecisonTemplate = function(answer) {
@@ -174,6 +186,7 @@ ubsApp.renderDecisonTemplate = function(answer) {
   answerselected=checkedValue;
   clearInterval(interval);
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
+  clearInterval(timeVar);
 }
 
 ubsApp.updateRollingDiceTemplate = function(template){
@@ -202,6 +215,7 @@ ubsApp.addScore=function (earnedScore)
 {
 	var currentScore=localStorage.score;
 	localStorage.score=parseInt(currentScore)+parseInt(earnedScore);
+
 }
 
 ubsApp.animate_score=function(amount)
@@ -227,4 +241,20 @@ ubsApp.animate_score=function(amount)
 			}, parseInt(amount)/1000000);
 	}
 	ubsApp.addScore(parseInt(amount));
+	document.getElementById("headId").innerHTML=ubsApp.getScore();
+	ubsApp.renderPage(ubsApp.pages[nextPage]);
+	
+}
+
+ubsApp.startTimer=function(temp)
+{
+    var timeleft = temp.time;
+    timeVar = setInterval(function(){
+		    timeleft--;
+		    document.getElementById(temp.divID).innerHTML = timeleft;
+		    if(timeleft === 0 ){
+		        clearInterval(timeVar);
+		        ubsApp.renderPageByName(temp.redirect);
+		    }
+    	},1000);
 }

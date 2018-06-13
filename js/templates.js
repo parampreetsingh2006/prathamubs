@@ -46,6 +46,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </div>'+
 ' </div>'+
 ' </div>'*/;
+' ';
 
 ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div class="col-lg-12 col-md-12 col-xs-12">'+
 '  <div class="rollscene" id="rollscene" style= "height:{{diceSceneWidth}}px; display:table; margin:auto;"}>'+
@@ -136,12 +137,19 @@ ubsApp.popupTemplate = '<div id="{{id}}"  style="display:none; padding: 30px; ba
 ' 	<div style="display: table-cell; vertical-align: middle;">'+
 ' 		'+
 ' 		<div style="{{msg_style}}">'+
-'   			Yay !!! Lets proceed to <span id="{{fortuneID}}"> </span> section.'+
+'   			{{message}}'+
 '   			<div style="{{button_style}}" onClick="{{onClick}}"> Next </div>'+
 ' 		</div>'+
 ' 		'+
 ' 	</div>'+
 ' </div>';
+	
+
+
+ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:16vw"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
+''+
+'</div>';
+
 
 
 	
