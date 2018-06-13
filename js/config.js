@@ -168,7 +168,16 @@
     
                 ]
             }			
-		}
+		},
+		{
+		"templateId": 5,
+		"templateType":"popup",
+		"id":"wheelOfFortuneModal",
+		"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+		"message":"Yay !!! Lets proceed to <span id=\"wheelOfFortuneIndicatedSegment\"> </span> section.",
+		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
+		"onClick":"ubsWheelOfFortune.resetWheel()"
+	}
 	],
 	
 	"choicePage": [
@@ -257,7 +266,16 @@
 			},
 			"width": "col-lg-8 col-md-8 col-xs-8",
 			"style": "padding:5px;height:100%; width:100%;textbackground-image:url('C:/Users/UBS/Documents/prathamubs-master/prathamubs-master/js/grocery.jpg');background-repeat:no-repeat;background-size:cover"
-		}],
+		},
+		{
+			"templateId":6,
+			"templateType":"timerTemp",
+			"time":21,
+			"divID":"countdowntimer",
+			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
+			"redirect":"choicePage"
+		}
+		],
 	
 	"q1-correct":[
 		{
@@ -342,7 +360,6 @@
 			"src": "Oops!! you answered very much incorrect. You lost double money. Your balance decreases by by 2 x 255. Your new balance is 1000-510=490." ,
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;"
-	   
 	},	
 	{
 		    "templateId": 1,
@@ -394,13 +411,14 @@
 			"width": "col-lg-5 col-md-5 col-xs-5",
 			"style": "padding:5px;cursor:pointer"
 
-		}],
-		"popup":[{
+		},
+		{
+			"templateId":6,
+			"templateType":"timerTemp",
+			"time":21,
+			"divID":"countdowntimer",
+			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
+			"redirect":"choicePage"
+		}]
 		
-		"id":"wheelOfFortuneModal",
-		"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
-		"fortuneID":"wheelOfFortuneIndicatedSegment",
-		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
-		"onClick":"ubsWheelOfFortune.resetWheel()"
-	}]	
 }
