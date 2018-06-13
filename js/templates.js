@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 
-ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')" {{elseif nextPage}} onclick="ubsApp.addScore(\'{{onClickOp}}\', \'{{nextPage}}\')" {{/if}}>'+
+ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"  {{#if onClickPage}}onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')">'+
 '		{{src}}'+
 ' </div>';
 	
@@ -19,7 +19,7 @@ ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '				'+
 '		</div>'+
 '		<div>'+
-'			<button onclick="ubsApp.renderDecisonTemplate()" >Submit</button>'+
+'			<button onclick="ubsApp.renderDecisonTemplate(\'{{answer}}\')" >Submit</button>'+
 '		</div>'+
 '		  '+
 '		'+
@@ -37,7 +37,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 '	<button onclick="ubsWheelOfFortune.startSpin()" >Spin </button>'+
 ' </div>'+
 ' </div>'+
-' '+
+' '/*+
 ' <div id= "wheelOfFortuneModal" style="display:none; padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%; ">'+
 ' <div style="    display: table-cell; vertical-align: middle;">'+
 ' <div style="width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;">'+
@@ -45,7 +45,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 '   <div style="border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;" onClick="ubsWheelOfFortune.resetWheel()"> Next </div>'+
 ' </div>'+
 ' </div>'+
-' </div>';
+' </div>'*/;
 
 ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div class="col-lg-12 col-md-12 col-xs-12">'+
 '  <div class="rollscene" id="rollscene" style= "height:{{diceSceneWidth}}px; display:table; margin:auto;"}>'+
@@ -85,17 +85,49 @@ ubsApp.choiceTemplate =  '<div style="height:{{containerHeight}}">'+ '{{#each ch
 ''+
 '			{{/each}}' + '</div>';
 	
-ubsApp.scoreTemplate= '<style> {{style}} </style>'+
+ubsApp.scoreTemplate= '<style>'+ 
+ 
+' .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; }'+
 
-'<div style=\"position: absolute; top: 2%; left: 90%;\">'+
-	
-	'{{score_text}}'+
+' .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; }'+
+
+' .coin .back{ width: 100%; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; }'+
+
+' .coin .front_b{ width: 100%; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;}'+
+
+' .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;}'+
+
+' .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; }'+ 
+
+
+' .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;}'+
+
+
+
+' .print_txt{ display:block;padding: 10px ; border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} '+
+
+
+' @keyframes'+ 
+' coin{'+ 
+	'0%{}'+ 
+	'100%{-webkit-transform: rotateY(360deg);}}'+ 
+
+
+' </style>'+
+
+
+'<div style=\"position: absolute; top: 2%; left: 90%; {{#if textColor}}color:{{textColor}};{{/if}}\"\">'+		
+	'<div class=\"print_txt\" id=\"headId\" align=\"center\" > </div>'+
 
 '</div>'+
 
 '<div style=\"position: absolute; top: 2%; left: 95%; \"> '+
 	
-	'{{coin}}'+
+	'<div class=\"coin\" style=\"float:right; {{#if backgroundColor}}background-color:{{backgroundColor}};\">'+ 
+		'<div class=\"front\"></div>'+
+		'<div class=\"front_b\"></div>'+
+		'<div class=\"back\"></div>'+
+	'</div>'+
 	
 '</div>'
 
