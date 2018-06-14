@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 
-ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"  {{#if onClickPage}}onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')">'+
+ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="ubsApp.renderPageByName(\'{{onClickPage}}\',\'{{amount}}\')">'+
 '		{{src}}'+
 ' </div>';
 	
@@ -105,7 +105,7 @@ ubsApp.scoreTemplate= '<style>'+
 
 
 
-' .print_txt{ display:block;padding: 10px ; border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} '+
+' .print_txt{ display:block;padding: 10px ; font-weight: 500;font-size: 18px;width: 7%;} '+
 
 
 ' @keyframes'+ 
@@ -117,14 +117,14 @@ ubsApp.scoreTemplate= '<style>'+
 ' </style>'+
 
 
-'<div style=\"position: absolute; top: 2%; left: 90%; {{#if textColor}}color:{{textColor}};{{/if}}\"\">'+		
+'<div style=\"position: absolute; top: 0%; left: 90%; {{#if textColor}}color:{{textColor}};{{/if}}\"\">'+		
 	'<div class=\"print_txt\" id=\"headId\" align=\"center\" > </div>'+
 
 '</div>'+
 
-'<div style=\"position: absolute; top: 2%; left: 95%; \"> '+
+'<div style=\"position: absolute; top: 0.5%; left: 95%; \"> '+
 	
-	'<div class=\"coin\" style=\"float:right; {{#if backgroundColor}}background-color:{{backgroundColor}};\">'+ 
+	'<div class=\"coin\" id=\"coin\" style=\"float:right; {{#if backgroundColor}}background-color:{{backgroundColor}};\">'+ 
 		'<div class=\"front\"></div>'+
 		'<div class=\"front_b\"></div>'+
 		'<div class=\"back\"></div>'+

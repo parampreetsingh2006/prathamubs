@@ -24,7 +24,7 @@ $(document).ready(function(){
 	}
 	localStorage.score=1000;
 	ubsApp.intitializeTemplates();
-	ubsApp.renderPage(ubsApp.pages.choicePage);
+	ubsApp.renderPage(ubsApp.pages.customerCheating);
 });
 
 
@@ -79,21 +79,27 @@ ubsApp.renderPage = function(page) {
          	html += scratchCardTemplate(templateConfig);
         }else if(templateType == "choiceTemplate"){
 			ubsApp.updateChoiceSelected(templateConfig);
+			if(templateConfig.display_score)
+			{
+				html += ubsScoreTemplate(ubsApp.pages.score[0]); 
+			}
+			let containerHeight = $(window).innerHeight() - 50;
 			for(let i=0; i< templateConfig.choices.length; i++)  {
 				templateConfig.choices[i].display = choiceSelected[i];
-				templateConfig.choices[i].choiceHeight = ($(window).innerHeight() / templateConfig.choiceHeightFactor) + 'px';
+
+				templateConfig.choices[i].choiceHeight = (containerHeight / templateConfig.choiceHeightFactor) + 'px';
 				}
-			templateConfig.containerHeight= $(window).innerHeight() +'px';
+			templateConfig.containerHeight= containerHeight +'px';
 		  
 		  	html += ubschoiceTemplate(templateConfig);
 		 }
-		 /*else if(templateType == "score"){
+		 else if(templateType == "score"){
 			 if(templateConfig.score_animation_req)
 			 {
 				flag=true;
 			 }
 			html += ubsScoreTemplate(templateConfig); 
-		 }*/
+		 }
 	}
 	$("#templateBase").empty();
 	$("#templateBase").append(html);
@@ -151,9 +157,17 @@ let allSelected = true;
 });
 	return allSelected;
 }
-ubsApp.renderPageByName = function(pageName) {
+ubsApp.renderPageByName = function(pageName,amount) {
 	clearInterval(interval);
-	 this.renderPage(ubsApp.pages[pageName]);
+	if(amount === undefined || amount === null|| amount.length===0)
+	{
+		
+	}
+	else
+	{
+		ubsApp.animate_score(amount);
+	}
+	this.renderPage(ubsApp.pages[pageName]);
 }
 
 ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
@@ -185,8 +199,8 @@ ubsApp.renderDecisonTemplate = function(answer) {
   currentanswer=answer;
   answerselected=checkedValue;
   clearInterval(interval);
-  this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
   clearInterval(timeVar);
+  this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
 }
 
 ubsApp.updateRollingDiceTemplate = function(template){
@@ -222,8 +236,10 @@ ubsApp.animate_score=function(amount)
 {
 	var sc=ubsApp.getScore(); 
 	var target_score=sc+parseInt(amount);
+	
 	if(amount<0)
 	{
+		
 		interval=window.setInterval(function () {
 		sc = sc-1;
 		document.getElementById("headId").innerHTML = sc;
@@ -231,8 +247,9 @@ ubsApp.animate_score=function(amount)
 			clearInterval(interval);
 		}, parseInt(amount)/1000000);
 	}
-	else
+	else if(amount>0)
 	{
+
 			interval=window.setInterval(function () {
 			sc = sc+1;
 			document.getElementById("headId").innerHTML = sc;
@@ -242,7 +259,7 @@ ubsApp.animate_score=function(amount)
 	}
 	ubsApp.addScore(parseInt(amount));
 	document.getElementById("headId").innerHTML=ubsApp.getScore();
-	ubsApp.renderPage(ubsApp.pages[nextPage]);
+	
 	
 }
 
