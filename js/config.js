@@ -230,44 +230,42 @@
 		}],
 	
 		"q1": [
-		/*{
-			"templateId":15,
-			"templateType":"score",
-			"width":"col-lg-12 col-md-12 col-xs-12",
-			//"style":" .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; } .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; } .coin .back{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; } .coin .front_b{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;} .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; background:#f7941e; position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;} .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; } .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;} .print_txt{ display:block;padding: 10px ;border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} @keyframes coin{ 0%{transform: rotateY(0);} 100%{transform: rotateY(360deg);}}",
-			//"score_text":"<div class=\"print_txt\" id=\"headId\" align=\"center\"></div>",
-			//"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
-		},*/
 		{
 			"templateId": 2,
 			"templateType": "decision",
 			"display_score":"true",
-			"question": "Looks like one customer wants to purchase items:<br>1.1.5kg Rice<br>2.5kg Dal<br>1 kg rice<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?",
+			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like one customer wants to purchase items:<br>1.1.5kg Rice<br>2.5kg Dal<br>1 kg rice<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?</div>",
 			"answer":"355",
 			"options": [
 			    {
 					"optionName":"q1", 
-					"optionValue": "355"
+					"optionValue": "355",
+					"id":1,
+					"amount":100
 				},
 				{
 					"optionName": "q1",
-					"optionValue": "255"
+					"optionValue": "255",
+					"id":2,
+					"amount":-100
 				},
 				{
 					"optionName":"q1",
-					"optionValue": "155"
+					"optionValue": "155",
+					"id":3,
+					"amount":-150
 				}
 				
 			],
 			"optionPageMap": 
 			{
-				"355":"q1-correct",
-				"255": "q1-wrong",
-				"155": "q1-vvwrong"
+				"1":"q1-correct",
+				"2": "q1-wrong",
+				"3": "q1-vvwrong"
 			},
 			"width": "col-lg-8 col-md-8 col-xs-8",
 			"asnwer":"355",			
-			"style": "padding:5px;height:100%; width:100%;textbackground-image:url('C:/Users/UBS/Documents/prathamubs-master/prathamubs-master/js/grocery.jpg');background-repeat:no-repeat;background-size:cover"
+			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 		},
 		{
 			"templateId":6,
@@ -280,15 +278,6 @@
 		],
 	
 	"q1-correct":[
-		/*{
-			
-			"templateId":15,
-			"templateType":"score",
-			"score_animation_req":"true",
-			//"textColor":"red",
-			"abc":"xyz"
-			//"background":"sxdcfvgbh"
-		},*/
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -310,20 +299,10 @@
 			"templateType": "static",
 			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
-			"onClickOp":"355",
 			"onClickPage":"choicePage"
 	}],
 
     "q1-wrong":[
-		/*{
-			"templateId":15,
-			"templateType":"score",
-			
-			//"width":"col-lg-12 col-md-12 col-xs-12",
-			//"style":" .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; } .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; } .coin .back{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; } .coin .front_b{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;} .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; background:#f7941e; position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;} .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; } .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;} .print_txt{ display:block;padding: 10px ;border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} @keyframes coin{ 0%{transform: rotateY(0);} 100%{transform: rotateY(360deg);}}",
-			//"score_text":"<div class=\"print_txt\" id=\"headId\" align=\"center\"></div>",
-			//"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
-		},*/
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -345,7 +324,6 @@
 			"templateType": "static",
 			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
-			"onClickOp":"-255",
 			"onClickPage":"choicePage"
 	},
 	
@@ -353,15 +331,6 @@
 	],
 	
 	"q1-vvwrong":[
-		/*{
-			"templateId":15,
-			"templateType":"score",
-			"score_animation_req":"true"
-			//"width":"col-lg-12 col-md-12 col-xs-12",
-			//"style":" .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; } .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; } .coin .back{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; } .coin .front_b{ width: 100%; height: 100%; background:#f7941e; border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;} .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; background:#f7941e; position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;} .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; } .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;} .print_txt{ display:block;padding: 10px ;border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} @keyframes coin{ 0%{transform: rotateY(0);} 100%{transform: rotateY(360deg);}}",
-			//"score_text":"<div class=\"print_txt\" id=\"headId\" align=\"center\"></div>",
-			//"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
-		},*/
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -391,37 +360,35 @@
 	"q2": [{
 			"templateId": 2,
 			"templateType": "decision",
-			"question": "Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> ! ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should customer pay?<br> ",			
+			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should customer pay?</div>",			
 			"options": [{
 					"optionName": "q2",
-					"optionValue": "65"
+					"optionValue": "65",
+					"id":"1",
+					"amount":100
 				},
 				{
 					"optionName": "q2",
-					"optionValue": "55"
+					"optionValue": "55",
+					"id":"2",
+					"amount":-100
 				},
 				{
 					"optionName": "q2",
-					"optionValue": "45"
+					"optionValue": "45",
+					"id":"3",
+					"amount":-100
 				}
 				
 			],
 			"optionPageMap": 
 			{
-				"65":"q2-correct",
-				"55": "q2-wrong" ,
-				"45": "q2-vvwrong"
+				"1":"q2-correct",
+				"2": "q2-wrong" ,
+				"3": "q2-vvwrong"
 			},
 			"width": "col-lg-7 col-md-7 col-xs-7",
-			"style": "padding:5px"
-		},
-		{
-			"templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
-			"width": "col-lg-5 col-md-5 col-xs-5",
-			"style": "padding:5px;cursor:pointer"
-
+			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 		},
 		{
 			"templateId":6,
@@ -432,18 +399,166 @@
 			"redirect":"choicePage"
 		}],
 		
- "popup":[{
-		"id":"wheelOfFortuneModal",
-		"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
-		"fortuneID":"wheelOfFortuneIndicatedSegment",
-		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
-		"onClick":"ubsWheelOfFortune.resetWheel()"
-	}],	
+ // "popup":[{
+	// 	"id":"wheelOfFortuneModal",
+	// 	"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+	// 	"fortuneID":"wheelOfFortuneIndicatedSegment",
+	// 	"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
+	// 	"onClick":"ubsWheelOfFortune.resetWheel()"
+	// }],	
 	
 	"score":[{
 		"textColor":"black",
 		"background-color":"white",
 		"coinColor":"#f7941e"
-	}]
+	}],
+//Scenario 2 - Agricultue Sector
+
+	"Scene2":[
+	    	{
+			
+			"templateId":15,
+			"templateType":"score",
+			"textColor":"red",
+			"abc":"xyz"
+		},
+		{
+			"templateId":1,
+			"templateType":"static",
+			"style":"align:center;",
+			"display_score":true,
+			"src":"<img width=\"97%\" height=\"85%\" controls style=\"position:absolute;top:9%; z-index:-1;\" src=\"Images/dummy.gif\"  alt=\"A kid come to shop and asked for a packet of chips. You fetched one packet of chips and gave to the kid. Later that day, kid's parent came to the shop and complained that their kid is now ill after eating staled chips.<br>As the news spread, food inspector visited the shop to enquire about the matter. He asked for shop documents from you. Now as you have messed up big because there was no proper check related to the expiry of the products. So it is a loss and <b>300</b> rupees will be deducted.\" >",
+
+		},
+		{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" align:center; style=\"position:relative;top:50%; left:46%;background-color:orange; color:white; border:0;\">Proceed to Quiz</button>",
+			"style":  "padding:5px; position:absolute; top:94%; width:97%; align:center;",
+			"onClickPage":"q1s2"
+		}],
+
+	"q1s2":[ //question 1 scenario 2
+		
+			{
+			"templateId": 2,
+			"answer":"0",
+			"templateType": "decision",
+			"display_score":true,
+			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Although, we give you an opportunity to recover part of the loss by taking a small quiz. If you answer correctly, then your loss will be reduced.</div><br><span style=' padding-left:2vw;text-shadow: 2px 2px 5px red;color:white'><i>Note:  If you answer incorrectly then your losses will further increase.</span></i><br><br>",			
+			"options": [{
+					"optionName": "q1s2",
+					"optionValue": "Show license of shop, registration of shop with local authority, permit from food department to keep perishable items.",
+					"id":1,
+					"amount":100
+
+				},
+				{
+					"optionName": "q1s2",
+					"optionValue": "Say to inspector that you don't have the documents and Bribe the inspector.",
+					"id":2,
+					"amount":0
+				},
+				{
+					"optionName": "q1s2",
+					"optionValue": "Say that documentation is in progress and just show approval from local authority.",
+					"id":3,
+					"amount":0
+				},
+				{
+					"optionName":"q1s2",
+					"optionValue":"None of the above",
+					"id":4,
+					"amount":0
+				}
+				],
+			"optionPageMap": 
+			{
+				"1":"q1s2c",
+				"2":"q1s2dialog" ,
+				"3":"q1s2w",
+				"4":"q1s2w"
+			},
+			"width": "col-lg-7 col-md-7 col-xs-7",
+			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+		}
+	],
+
+	"q1s2c":[
+	{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "Yay, you answered correct. Your balance increases by 100 Rupees.<br>Let's learn more about documentation." ,
+			"width": "col-lg-4 col-md-4 col-xs-4",
+			"style": "padding:5px;",
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;"	
+	},
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" >Next Question!</button>",
+			"style": "padding:5px;position: relative; top:0; right:13vw;",
+			"onClickPage":"choicePage"
+	}],
+
+	"q1s2dialog":[
+	{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "Giving or taking bribe to/from government officer is punishable offence. Never do it." ,
+			"width": "col-lg-4 col-md-4 col-xs-4",
+			"style": "padding:5px;",
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;"	
+	},
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" >Next Question!</button>",
+			"style": "padding:5px;position: relative; top:0; right:13vw;",
+			"onClickPage":"choicePage"
+	}
+],
+
+	"q1s2w":[
+	{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "Alas! that is a wrong choice." ,
+			"width": "col-lg-4 col-md-4 col-xs-4",
+			"style": "padding:5px;",
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;"	
+	},
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" >Next Question!</button>",
+			"style": "padding:5px;position: relative; top:0; right:13vw;",
+			"onClickPage":"choicePage"
+	}],
+
 
 }

@@ -10,16 +10,18 @@ ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"  {{#if onClickP
 ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '			'+
 '		'+
-'		<div>{{question}}</div>'+
+'		<div>{{question}}<br></div>'+
 '		<div>'+
 '				'+
 '			{{#each options}}'+
-'			 <input type="radio" name="{{optionName}}" value="{{optionValue}}" > {{optionValue}}<br>'+
+'			 <div style="color: white;background-color:rgb(204, 0, 255);border-radius: 2vw;padding:.5vw;font-size:1.3vw;"> <input type="radio" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
+'<span style="display:none" id="{{id}}Amount">{{amount}}</span>' + 
 '			{{/each}}    '+
 '				'+
 '		</div>'+
-'		<div>'+
-'			<button onclick="ubsApp.renderDecisonTemplate(\'{{answer}}\')" >Submit</button>'+
+'		<div style="text-align:center">'+
+'			<button style=\'background-color: #b3e6ff;color:black;display:inline-block;text-decoration: none;border:1px solid blue;width:8vw;\' onclick="ubsApp.renderDecisonTemplate()" >Submit</button>'+
+
 '		</div>'+
 '		  '+
 '		'+

@@ -24,7 +24,7 @@ $(document).ready(function(){
 	}
 	localStorage.score=1000;
 	ubsApp.intitializeTemplates();
-	ubsApp.renderPage(ubsApp.pages.choicePage);
+	ubsApp.renderPage(ubsApp.pages.q1);
 });
 
 
@@ -106,25 +106,13 @@ ubsApp.renderPage = function(page) {
 	}
 	
 	if($('#headId').length > 0) {
-		if(flag)
-		{
-			if(currentanswer == answerselected)
-			{
+		if(flag){
 				ubsApp.animate_score(answerselected);
-				//ubsApp.addScore(currentanswer);
-			}
-			else{
-				ubsApp.animate_score(-answerselected);
-				//ubsApp.addScore(-answerselected);
-			}
-			document.getElementById("headId").innerHTML=ubsApp.getScore();
-			
 		}
-		else{
-			document.getElementById("headId").innerHTML=ubsApp.getScore();
-		}
-		
+		document.getElementById("headId").innerHTML=ubsApp.getScore();
 	}
+		
+	
 	if(Object.keys(timerConfig).length != 0){
 		ubsApp.startTimer(timerConfig);
 		timerConfig={};
@@ -180,13 +168,13 @@ ubsApp.intitializeTemplates = function() {
 	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
 }
 
-ubsApp.renderDecisonTemplate = function(answer) {
-  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").val();
-  currentanswer=answer;
-  answerselected=checkedValue;
+ubsApp.renderDecisonTemplate = function() {
+  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
+  answerselected=$("#" + checkedValue + "Amount").text(); 
+  clearInterval(timeVar);
   clearInterval(interval);
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
-  clearInterval(timeVar);
+  
 }
 
 ubsApp.updateRollingDiceTemplate = function(template){
@@ -231,7 +219,7 @@ ubsApp.animate_score=function(amount)
 			clearInterval(interval);
 		}, parseInt(amount)/1000000);
 	}
-	else
+	else if(amount>0)
 	{
 			interval=window.setInterval(function () {
 			sc = sc+1;
@@ -258,3 +246,4 @@ ubsApp.startTimer=function(temp)
 		    }
     	},1000);
 }
+
