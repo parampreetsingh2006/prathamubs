@@ -24,11 +24,8 @@ $(document).ready(function(){
 	}
 	localStorage.score=1000;
 	ubsApp.intitializeTemplates();
-<<<<<<< HEAD
-	ubsApp.renderPage(ubsApp.pages.q1);
-=======
-	ubsApp.renderPage(ubsApp.pages.customerCheating);
->>>>>>> b790c2e1a44449925905bdb8a3775f89e1cd97f4
+	ubsApp.renderPage(ubsApp.pages.InitPage);
+
 });
 
 
@@ -191,13 +188,9 @@ ubsApp.renderDecisonTemplate = function() {
   answerselected=$("#" + checkedValue + "Amount").text(); 
   clearInterval(timeVar);
   clearInterval(interval);
-<<<<<<< HEAD
-  this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
-  
-=======
   clearInterval(timeVar);
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
->>>>>>> b790c2e1a44449925905bdb8a3775f89e1cd97f4
+
 }
 
 ubsApp.updateRollingDiceTemplate = function(template){
