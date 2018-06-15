@@ -481,6 +481,14 @@
 			},
 			"width": "col-lg-7 col-md-7 col-xs-7",
 			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+		},
+		{
+			"templateId":6,
+			"templateType":"timerTemp",
+			"time":21,
+			"divID":"countdowntimer",
+			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
+			"redirect":"choicePage"
 		}
 	],
 
