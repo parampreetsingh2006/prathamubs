@@ -227,7 +227,13 @@
 				"display":false,
 				"onClickPage": "q1"
 			}],
-		}],
+		},
+		{
+			"templateType":"audioTemplate",
+			"audioSrc":"audio/introMaths.mp3",
+			"audioId":"choiceTemplate",
+		},
+		],
 	
 		"q1": [
 		/*{
@@ -290,13 +296,19 @@
 			//"background":"sxdcfvgbh"
 		},*/
 	{
+		"templateType":"audioTemplate",
+		"audioSrc":"audio/Buzzercorrect.mp3",
+		"audioId":"q1-correct-audio",
+	},
+	{
 	        "templateId": 1,
 			"templateType": "static",
 			"src": "Yay, you answered correct. Your balance increases by 355. His new balance is 355." ,
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;",
 			"display_score":"true",
-			"score_animation_req":"true"
+			"score_animation_req":"true",
+			"audioId":"q1-correct-audio",
 	},	
 	{
 		    "templateId": 1,
@@ -325,13 +337,19 @@
 			//"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
 		},*/
 	{
+		"templateType":"audioTemplate",
+		"audioSrc":"audio/wrongbeat.mp3",
+		"audioId":"q1-correct-audio",
+	},
+	{
 	        "templateId": 1,
 			"templateType": "static",
 			"src": "Oops!! you answered incorrect. You lost money. Your balance decreases by by 255. Your new balance is 1000-255=745." ,
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;",
 			"display_score":"true",
-			"score_animation_req":"true"
+			"score_animation_req":"true",
+			"audioId":"q1-correct-audio",
 	},	
 	{
 		    "templateId": 1,
@@ -363,6 +381,11 @@
 			//"coin":"<div class=\"coin\" style=\"float:right\"> <div class=\"front\"></div> <div class=\"front_b\"></div> <div class=\"back\"></div> </div>"
 		},*/
 	{
+		"templateType":"audioTemplate",
+		"audioSrc":"audio/wrongbeat.mp3",
+		"audioId":"q1-correct-audio",
+	},
+	{
 	        "templateId": 1,
 			"templateType": "static",
 			"src": "Oops!! you answered very much incorrect. You lost double money. Your balance decreases by by 2 x 255. Your new balance is 1000-510=490." ,
@@ -370,7 +393,8 @@
 			"style": "padding:5px;",
 			"display_score":"true",
 			"score_animation_req":"true",
-			"style": "padding:5px;"
+			"style": "padding:5px;",
+			"audioId":"q1-correct-audio",
 	},	
 	{
 		    "templateId": 1,

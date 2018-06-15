@@ -3,7 +3,8 @@
 
 ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"  {{#if onClickPage}}onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')">'+
 '		{{src}}'+
-' </div>';
+' </div>'+
+'<div id={{audioId}}></div>';
 	
 	
 
@@ -24,7 +25,8 @@ ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '		  '+
 '		'+
 '			'+
-'		</div>';
+'		</div>' +
+'<div id={{audioId}}></div>';
 
 ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' <div style="width:100%; text-align: center;">'+
@@ -69,7 +71,7 @@ ubsApp.scratchCard ='<canvas id="scratch_card_canvas"'+
                     '	width="{{width}}px"'+
                     '	style="{{style}}" />';
 
-ubsApp.choiceTemplate =  '<div style="height:{{containerHeight}}">'+ '{{#each choices}}'+
+ubsApp.choiceTemplate =  '<div id = "choiceTemplate" style="height:{{containerHeight}}">'+ '{{#each choices}}'+
 ''+
 '		'+
 '				'+
@@ -84,7 +86,8 @@ ubsApp.choiceTemplate =  '<div style="height:{{containerHeight}}">'+ '{{#each ch
 ''+
 '			'+
 ''+
-'			{{/each}}' + '</div>';
+'			{{/each}}' + '</div>'+
+' <div id={{audioId}}></div>';
 	
 ubsApp.scoreTemplate= '<style>'+ 
  
@@ -148,6 +151,13 @@ ubsApp.popupTemplate = '<div id="{{id}}"  style="display:none; padding: 30px; ba
 
 ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:16vw"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
 ''+
+'</div>';
+
+
+ubsApp.audioTemplate = '<div >'+
+'	<audio id = "soundtrack">'+
+'		<source src={{audioSrc}} type="audio/mp3">'+
+'	</audio>'+
 '</div>';
 
 

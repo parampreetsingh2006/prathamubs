@@ -1,3 +1,4 @@
+
 let ubsStaticTemplate;
 let ubsDecisionTemplate;
 let ubsDecisionOption;
@@ -6,6 +7,7 @@ let wheelOfFortuneTemplate;
 let ubsScoreTemplate;
 let ubsPopupTemplate;
 let ubsTimerTemplate;
+let ubsAudioTemplate;
 let choiceSelected={};
 let timeVar;
 let ubsApp = {};
@@ -14,6 +16,7 @@ var answerselected=0;
 ubsApp.wheelOfFortune = null;
 var flag=false;
 var interval;
+let audioConfig = {};
 $(document).ready(function(){
 	//$("#staticTemplate").load("templates/staticTemplate.html"); 
 	//$("#decisionTemplate").load("templates/decisionTemplate.html"); 
@@ -53,7 +56,7 @@ ubsApp.renderPage = function(page) {
 			html += ubsDecisionTemplate(templateConfig);
 			ubsDecisionOption = templateConfig.options[0].optionName;
 			if(templateConfig.display_score)
-			{
+			{ 
 				html += ubsScoreTemplate(ubsApp.pages.score[0]); 
 			}
 			if(templateConfig.score_animation_req)
@@ -83,9 +86,19 @@ ubsApp.renderPage = function(page) {
 				templateConfig.choices[i].display = choiceSelected[i];
 				templateConfig.choices[i].choiceHeight = ($(window).innerHeight() / templateConfig.choiceHeightFactor) + 'px';
 				}
-			templateConfig.containerHeight= $(window).innerHeight() +'px';
-		  
+			templateConfig.containerHeight= $(window).innerHeight() +'px';		  
 		  	html += ubschoiceTemplate(templateConfig);
+		  	if(templateConfig.audioSrc){
+		  		audioConfig = templateConfig;
+		  		html+= ubsAudioTemplate(templateConfig);
+				
+			}
+		 }
+		 else if(templateType == "audioTemplate"){
+			if(templateConfig.audioSrc){
+				audioConfig = templateConfig;
+				html+= ubsAudioTemplate(templateConfig);
+		}
 		 }
 		 /*else if(templateType == "score"){
 			 if(templateConfig.score_animation_req)
@@ -103,6 +116,16 @@ ubsApp.renderPage = function(page) {
 	    ubsApp.wheelOfFortune = new Winwheel(wheelConfig, true);
 	} else if (scratchCardTemplateConfig) {
 	    initScratchCard(scratchCardTemplateConfig);
+	}
+	if(audioConfig.audioSrc){
+		var divElement = document.getElementById(audioConfig.audioId);
+		if(divElement != null) {
+			playAudio(divElement);
+			var audioevent = new CustomEvent('playAudio',{
+					detail: audioConfig.audioSrc,
+				});
+			divElement.dispatchEvent(audioevent);
+		}
 	}
 	
 	if($('#headId').length > 0) {
@@ -178,6 +201,8 @@ ubsApp.intitializeTemplates = function() {
 	ubsScoreTemplate=Template7.compile(ubsApp.scoreTemplate);
 	ubsPopupTemplate = Template7.compile(ubsApp.popupTemplate);
 	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
+	ubsAudioTemplate = Template7.compile(ubsApp.audioTemplate);
+
 }
 
 ubsApp.renderDecisonTemplate = function(answer) {
