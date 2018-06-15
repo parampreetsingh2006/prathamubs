@@ -144,38 +144,39 @@
 			"templateId": 3,
 			"templateType": "wheelOfFortune",
 			"width": "col-lg-12 col-md-12 col-xs-12",
-			"style": "padding:5px",
+			"style": "padding:5px;align:center;",
 			"wheelWidthInPercent" : "80",
 			"optionPageMap" : {
-				"300": "choicePage",
-				"450": "choicePage",
-				"600": "choicePage",
-				"300": "choicePage",
-				"450": "choicePage",
-				"600": "choicePage"
+				"Basic Screen": "choicePage",
+				"Customer Cheating": "choicePage",
+				"Expired Product": "choicePage",
+				"Basic Screen": "choicePage",
+				"Customer Cheating": "choicePage",
+				"Expired Product": "choicePage"
 			},
 			"settings" :{
                
                 'numSegments'     : 6,         // Specify number of segments.
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and test colour overridden on backrupt segments.
-                   {'fillStyle' : '#ee1c24', 'text' : '300'},
-                   {'fillStyle' : '#3cb878', 'text' : '450'},
-                   {'fillStyle' : '#f6989d', 'text' : '600'},
-				   {'fillStyle' : '#ee1c24', 'text' : '300'},
-				   {'fillStyle' : '#f6989d', 'text' : '600'},
-				   {'fillStyle' : '#ee1c24', 'text' : '300'}
+                   {'fillStyle' : '#ffcc00', 'text' : 'Basic Screen'},
+                   {'fillStyle' : '#ff6600', 'text' : 'Customer Cheating'},
+                   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'},
+				   {'fillStyle' : '#ffcc00', 'text' : 'Customer Cheating'},
+				   {'fillStyle' : '#ff6600', 'text' : 'Basic Screen'},
+				   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'}
     
                 ]
-            }			
+			},
+			"button_style":"background-color:#ff6600; padding:5px; border-radius:5px; border:0;",			
 		},
 		{
 		"templateId": 5,
 		"templateType":"popup",
 		"id":"wheelOfFortuneModal",
-		"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+		"msg_style":"width: 300px; height: 80px; background-color:#0099ff;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
 		"message":"Yay !!! Lets proceed to <span id=\"wheelOfFortuneIndicatedSegment\"> </span> section.",
-		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
+		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;margin: auto;",
 		"onClick":"ubsWheelOfFortune.resetWheel()"
 	}
 	],
@@ -187,7 +188,6 @@
 			"src": "<div style=\" text-align:center; color:white;\">Basic Screeen Maths</div>" ,
 			"style": "padding:8px;border-radius:5px;position:absolute;top:0%;width:90%;left:0%;height:6%; background-color:black;",
 			"display_score":"true",
-			"score_animation_req":"true"
 		},
 	{ 
 			
@@ -195,6 +195,7 @@
 		"templateType": "choiceTemplate",
 		"display_score":"true",
 		"choiceHeightFactor" : 2,
+		"nextPage": "InitPage",
 		"choices":[
 	  	    {
 	  	    	"templateId": 1,
@@ -214,7 +215,7 @@
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;margin-top:3.5%",
 				"display":false,
-				"onClickPage": "q1"
+				"onClickPage": "q2"
 			},
 			{
 				"templateId": 1,
@@ -224,7 +225,7 @@
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
-				"onClickPage": "q1"
+				"onClickPage": "q3"
 			},
 		    {
 		    	"templateId": 1,
@@ -234,15 +235,16 @@
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
-				"onClickPage": "q1"
+				"onClickPage": "q4"
 			}],
 		}],
 	
-		"q1": [
+	"q1": [
 		{
 			"templateId": 2,
 			"templateType": "decision",
 			"display_score":"true",
+			
 			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like one customer wants to purchase items:<br>1.1.5kg Rice<br>2.5kg Dal<br>1 kg rice<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?</div>",
 			"answer":"355",
 			"options": [
@@ -250,19 +252,19 @@
 					"optionName":"q1", 
 					"optionValue": "355",
 					"id":1,
-					"amount":100
+					"amount":355
 				},
 				{
 					"optionName": "q1",
 					"optionValue": "255",
 					"id":2,
-					"amount":-100
+					"amount":-355
 				},
 				{
 					"optionName":"q1",
 					"optionValue": "155",
 					"id":3,
-					"amount":-150
+					"amount":-355
 				}
 				
 			],
@@ -287,10 +289,7 @@
 		],
 	
 	"q1-correct":[
-<<<<<<< HEAD
-=======
-		
->>>>>>> b790c2e1a44449925905bdb8a3775f89e1cd97f4
+
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -298,6 +297,7 @@
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;",
 			"display_score":"true",
+			"completed":"true",
 			"score_animation_req":"true"
 	},	
 	{
@@ -316,9 +316,11 @@
 	}],
 
     "q1-wrong":[
+
 	{
 	        "templateId": 1,
 			"templateType": "static",
+			"completed":"true",
 			"src": "Oops!! you answered incorrect. You lost money. Your balance decreases by by 255. Your new balance is 1000-255=745." ,
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;",
@@ -344,6 +346,7 @@
 	],
 	
 	"q1-vvwrong":[
+
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -351,6 +354,7 @@
 			"width": "col-lg-4 col-md-4 col-xs-4",
 			"style": "padding:5px;",
 			"display_score":"true",
+			"completed":"true",
 			"score_animation_req":"true",
 			"style": "padding:5px;"
 	},	
@@ -372,32 +376,33 @@
 	"q2": [{
 			"templateId": 2,
 			"templateType": "decision",
-			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should customer pay?</div>",			
+			"display_score":"true",
+			"question": "<div style='font-size:1.3vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>0.5kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should you return pay?</div>",			
 			"options": [{
 					"optionName": "q2",
-					"optionValue": "65",
+					"optionValue": "30",
 					"id":"1",
-					"amount":100
+					"amount":30
 				},
 				{
 					"optionName": "q2",
-					"optionValue": "55",
+					"optionValue": "50",
 					"id":"2",
-					"amount":-100
+					"amount":-30
 				},
 				{
 					"optionName": "q2",
-					"optionValue": "45",
+					"optionValue": "40",
 					"id":"3",
-					"amount":-100
+					"amount":-30
 				}
 				
 			],
 			"optionPageMap": 
 			{
 				"1":"q2-correct",
-				"2": "q2-wrong" ,
-				"3": "q2-vvwrong"
+				"2": "q2-vvwrong" ,
+				"3": "q2-wrong"
 			},
 			"width": "col-lg-7 col-md-7 col-xs-7",
 			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
@@ -410,7 +415,339 @@
 			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
 			"redirect":"choicePage"
 		}],
+	
+	"q2-vvwrong":[
+
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "Oops!! You answered incorrectly" ,
+				"width": "col-lg-4 col-md-4 col-xs-4",
+				"style": "padding:5px; color:red",
+				"display_score":"true",
+				"completed":"true",
+				"score_animation_req":"true",
+				"style": "padding:5px;"
+		},	
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+				"width": "col-lg-6 col-md-6 col-xs-6",
+				"style": "padding:5px;"	
+		},
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" >Next Question!</button>",
+				"style": "padding:5px;",
+				"onClickPage":"choicePage"
+		}],
+	"q2-wrong":[
+
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"completed":"true",
+				"src": "Oops!! You answered incorrectly. Your money will be deducted!!" ,
+				"width": "col-lg-4 col-md-4 col-xs-4",
+				"style": "padding:5px; color:red",
+				"display_score":"true",
+				"score_animation_req":"true",
+				"style": "padding:5px;"
+		},	
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+				"width": "col-lg-6 col-md-6 col-xs-6",
+				"style": "padding:5px;"	
+		},
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" >Next Question!</button>",
+				"style": "padding:5px;",
+				"onClickPage":"choicePage"
+		}],
 		
+	"q2-correct":[
+
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "Yayy!!! you answered correctly" ,
+					"width": "col-lg-4 col-md-4 col-xs-4",
+					"style": "padding:5px; color:red",
+					"display_score":"true",
+					"completed":"true",
+					"score_animation_req":"true",
+					"style": "padding:5px;"
+			},	
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+					"width": "col-lg-6 col-md-6 col-xs-6",
+					"style": "padding:5px;"	
+			},
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" >Next Question!</button>",
+					"style": "padding:5px;",
+					"onClickPage":"choicePage"
+			}],
+			
+	
+	//Question 3 
+
+	"q3": [{
+		"templateId": 2,
+		"templateType": "decision",
+		"display_score":"true",
+		"question": "<div style='font-size:1.5vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Onion - Rs.19<br>1 kg of Potato- Rs 34<br><br> He wants to purchase <br>1.5kg Tomato<br> 1kg Cabbage<br>Per kg cost of tomato/cabbage is 26/24 rupees<br> Can you tell how much money should you return pay?</div>",			
+		"options": [{
+				"optionName": "q2",
+				"optionValue": "Rs.30",
+				"id":"1",
+				"amount":-10
+			},
+			{
+				"optionName": "q2",
+				"optionValue": "Rs.5",
+				"id":"2",
+				"amount":-10
+			},
+			{
+				"optionName": "q2",
+				"optionValue": "Rs.10",
+				"id":"3",
+				"amount":10
+			}
+		],
+		"optionPageMap": 
+		{
+			"1":"q3-vvwrong",
+			"2": "q3-wrong" ,
+			"3": "q3-correct"
+		},
+		"width": "col-lg-7 col-md-7 col-xs-7",
+		"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+	},
+	{
+		"templateId":6,
+		"templateType":"timerTemp",
+		"time":21,
+		"divID":"countdowntimer",
+		"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
+		"redirect":"choicePage"
+	}],
+
+	"q3-vvwrong":[
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "Oops!! You answered incorrectly. Your money will be deducted!!" ,
+				"width": "col-lg-4 col-md-4 col-xs-4",
+				"style": "padding:5px; color:red",
+				"completed":"true",
+				"display_score":"true",
+				"score_animation_req":"true",
+				"style": "padding:5px;"
+		},	
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+				"width": "col-lg-6 col-md-6 col-xs-6",
+				"style": "padding:5px;"	
+		},
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" >Next Question!</button>",
+				"style": "padding:5px;",
+				"onClickPage":"choicePage"
+		}],
+	"q3-wrong":[
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"completed":"true",
+					"src": "Oops!! You answered incorrectly. Your money will be deducted!!" ,
+					"width": "col-lg-4 col-md-4 col-xs-4",
+					"style": "padding:5px; color:red",
+					"display_score":"true",
+					"score_animation_req":"true",
+					"style": "padding:5px;"
+			},	
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+					"width": "col-lg-6 col-md-6 col-xs-6",
+					"style": "padding:5px;"	
+			},
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" >Next Question!</button>",
+					"style": "padding:5px;",
+					"onClickPage":"choicePage"
+			}],
+	"q3-correct":[
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"completed":"true",
+					"src": "Yayy!! You answered correctly. Your money is increased." ,
+					"width": "col-lg-4 col-md-4 col-xs-4",
+					"style": "padding:5px; color:green",
+					"display_score":"true",
+					"score_animation_req":"true",
+					"style": "padding:5px;"
+			},	
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+					"width": "col-lg-6 col-md-6 col-xs-6",
+					"style": "padding:5px;"	
+			},
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" >Next Question!</button>",
+					"style": "padding:5px;",
+					"onClickPage":"choicePage"
+			}],
+	
+	//Question 4
+
+	"q4": [{
+		"templateId": 2,
+		"templateType": "decision",
+		"display_score":"true",
+		"question": "<div style='font-size:1.5vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like a Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Potato- Rs 34<br><br> <br> Can you tell how much money should you return?</div>",	
+		"options": [{
+				"optionName": "q2",
+				"optionValue": "Rs.200",
+				"id":"1",
+				"amount":-150
+			},
+			{
+				"optionName": "q2",
+				"optionValue": "Rs.150",
+				"id":"2",
+				"amount":150
+			},
+			{
+				"optionName": "q2",
+				"optionValue": "Rs.100",
+				"id":"3",
+				"amount":-150
+			}
+		],
+		"optionPageMap": 
+		{
+			"1":"q4-vvwrong",
+			"2": "q4-correct" ,
+			"3": "q4-wrong"
+		},
+		"width": "col-lg-7 col-md-7 col-xs-7",
+		"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+	},
+	{
+		"templateId":6,
+		"templateType":"timerTemp",
+		"time":21,
+		"divID":"countdowntimer",
+		"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
+		"redirect":"choicePage"
+	}],
+	"q4-vvwrong":[
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"completed":"true",
+				"src": "Oops!! You answered incorrectly. Your money will be deducted!!" ,
+				"width": "col-lg-4 col-md-4 col-xs-4",
+				"style": "padding:5px; color:red",
+				"display_score":"true",
+				"score_animation_req":"true",
+				"style": "padding:5px;"
+		},	
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+				"width": "col-lg-6 col-md-6 col-xs-6",
+				"style": "padding:5px;"	
+		},
+		{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" >Next Question!</button>",
+				"style": "padding:5px;",
+				"onClickPage":"choicePage"
+		}],
+	"q4-wrong":[
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"completed":"true",
+					"src": "Oops!! You answered incorrectly. Your money will be deducted!!" ,
+					"width": "col-lg-4 col-md-4 col-xs-4",
+					"style": "padding:5px; color:red",
+					"display_score":"true",
+					"score_animation_req":"true",
+					"style": "padding:5px;"
+			},	
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+					"width": "col-lg-6 col-md-6 col-xs-6",
+					"style": "padding:5px;"	
+			},
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" >Next Question!</button>",
+					"style": "padding:5px;",
+					"onClickPage":"choicePage"
+			}],
+	"q4-correct":[
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"completed":"true",
+					"src": "Yayy!! You answered correctly. Your money is increased." ,
+					"width": "col-lg-4 col-md-4 col-xs-4",
+					"style": "padding:5px; color:green",
+					"display_score":"true",
+					"score_animation_req":"true",
+					"style": "padding:5px;"
+			},	
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
+					"width": "col-lg-6 col-md-6 col-xs-6",
+					"style": "padding:5px;"	
+			},
+			{
+					"templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" >Next Question!</button>",
+					"style": "padding:5px;",
+					"onClickPage":"choicePage"
+			}],
+	
+
+
+
  // "popup":[{
 	// 	"id":"wheelOfFortuneModal",
 	// 	"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
@@ -420,7 +757,7 @@
 	// }],	
 	
 	"score":[{
-		"textColor":"black",
+		"textColor":"white",
 		"background-color":"white",
 		"coinColor":"#f7941e"
 	}],
@@ -502,7 +839,7 @@
 			"time":21,
 			"divID":"countdowntimer",
 			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
-			"redirect":"choicePage"
+			"redirect":"InitPage"
 		}
 	],
 
@@ -528,7 +865,7 @@
 			"templateType": "static",
 			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;position: relative; top:0; right:13vw;",
-			"onClickPage":"choicePage"
+			"onClickPage":"InitPage"
 	}],
 
 	"q1s2dialog":[
@@ -553,7 +890,7 @@
 			"templateType": "static",
 			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;position: relative; top:0; right:13vw;",
-			"onClickPage":"choicePage"
+			"onClickPage":"InitPage"
 	}
 ],
 
@@ -579,7 +916,7 @@
 			"templateType": "static",
 			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;position: relative; top:0; right:13vw;",
-			"onClickPage":"choicePage"
+			"onClickPage":"InitPage"
 	}],
 
 
@@ -635,7 +972,7 @@
 				"src": "<button type=\"button\" align:center; style=\"position:absolute;top:10%;border-radius:2.5px;padding:6.5px; left:46%;background-color:orange; color:white; border:0;\">Proceed to NextPage</button>",
 				"style": "padding:5px; position:absolute; top:94%; width:97%; align:center;",
 				"amount":"-100",
-				"onClickPage":"customerCheatingResult"	//write here the name of the next scenario
+				"onClickPage":""	//write here the name of the next scenario
 			}			
 		]
 

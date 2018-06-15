@@ -14,6 +14,7 @@ var answerselected=0;
 ubsApp.wheelOfFortune = null;
 var flag=false;
 var interval;
+var count=0;
 $(document).ready(function(){
 	//$("#staticTemplate").load("templates/staticTemplate.html"); 
 	//$("#decisionTemplate").load("templates/decisionTemplate.html"); 
@@ -36,10 +37,11 @@ ubsApp.renderPage = function(page) {
 	flag=false;
 	let timerConfig = {};
 	let scratchCardTemplateConfig = undefined;
-
+	
 	for(let i=0; i< page.length; i++) {
 		let templateConfig = page[i];
 		let templateType = templateConfig.templateType;
+		
 		if(templateType == "static") {
 			html += ubsStaticTemplate(templateConfig);
 			if(templateConfig.display_score)
@@ -53,6 +55,7 @@ ubsApp.renderPage = function(page) {
 		} else if(templateType == "decision") {
 			html += ubsDecisionTemplate(templateConfig);
 			ubsDecisionOption = templateConfig.options[0].optionName;
+			
 			if(templateConfig.display_score)
 			{
 				html += ubsScoreTemplate(ubsApp.pages.score[0]); 
@@ -79,6 +82,11 @@ ubsApp.renderPage = function(page) {
             preProcessScratchCardConfig(templateConfig);
          	html += scratchCardTemplate(templateConfig);
         }else if(templateType == "choiceTemplate"){
+			if(ubsApp.areAllChoicesSelected() == true) {
+				choiceSelected={};
+				ubsApp.renderPageByName(templateConfig.nextPage);
+				return;
+			}
 			ubsApp.updateChoiceSelected(templateConfig);
 			if(templateConfig.display_score)
 			{
@@ -112,6 +120,8 @@ ubsApp.renderPage = function(page) {
 	    initScratchCard(scratchCardTemplateConfig);
 	}
 	
+	
+	
 	if($('#headId').length > 0) {
 		if(flag){
 				ubsApp.animate_score(answerselected);
@@ -135,9 +145,12 @@ ubsApp.updateChoiceSelected = function(templateConfig) {
 	 }
 	}
 }
-ubsApp.checkSelected= function(){
+ubsApp.areAllChoicesSelected= function(){
 
-let allSelected = true;
+	if(jQuery.isEmptyObject(choiceSelected)) {
+		return false;
+	}
+   let allSelected = true;
 	$.each(choiceSelected, function(key,value){
      if(value == true) {
      	allSelected =  false;
@@ -165,7 +178,7 @@ ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
 		template.wheelWidth = wheelWidth;
 		template.settings.outerRadius = (wheelWidth / 2) - 2;
 		template.settings.innerRadius = (template.settings.outerRadius / 3);
-		template.settings.textFontSize = template.settings.innerRadius / 2.5;
+		template.settings.textFontSize = template.settings.innerRadius / 5.5;
 		ubsWheelOfFortune.optionPageMap = template.optionPageMap;
 		wheelConfig = $.extend(true, wheelConfig, ubsWheelOfFortune.defaultSettings, template.settings);
 		
@@ -203,7 +216,6 @@ ubsApp.updateRollingDiceTemplate = function(template){
 ubsApp.updateChoices = function(choiceId, pageName){
 	 ubsApp.renderPageByName(pageName);
 	 choiceSelected[choiceId]=false;
- if(ubsApp.checkSelected()) choiceSelected={};   
 }
 ubsApp.getScore=function()
 {
