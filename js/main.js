@@ -24,7 +24,11 @@ $(document).ready(function(){
 	}
 	localStorage.score=1000;
 	ubsApp.intitializeTemplates();
+<<<<<<< HEAD
 	ubsApp.renderPage(ubsApp.pages.q1);
+=======
+	ubsApp.renderPage(ubsApp.pages.customerCheating);
+>>>>>>> b790c2e1a44449925905bdb8a3775f89e1cd97f4
 });
 
 
@@ -79,21 +83,27 @@ ubsApp.renderPage = function(page) {
          	html += scratchCardTemplate(templateConfig);
         }else if(templateType == "choiceTemplate"){
 			ubsApp.updateChoiceSelected(templateConfig);
+			if(templateConfig.display_score)
+			{
+				html += ubsScoreTemplate(ubsApp.pages.score[0]); 
+			}
+			let containerHeight = $(window).innerHeight() - 50;
 			for(let i=0; i< templateConfig.choices.length; i++)  {
 				templateConfig.choices[i].display = choiceSelected[i];
-				templateConfig.choices[i].choiceHeight = ($(window).innerHeight() / templateConfig.choiceHeightFactor) + 'px';
+
+				templateConfig.choices[i].choiceHeight = (containerHeight / templateConfig.choiceHeightFactor) + 'px';
 				}
-			templateConfig.containerHeight= $(window).innerHeight() +'px';
+			templateConfig.containerHeight= containerHeight +'px';
 		  
 		  	html += ubschoiceTemplate(templateConfig);
 		 }
-		 /*else if(templateType == "score"){
+		 else if(templateType == "score"){
 			 if(templateConfig.score_animation_req)
 			 {
 				flag=true;
 			 }
 			html += ubsScoreTemplate(templateConfig); 
-		 }*/
+		 }
 	}
 	$("#templateBase").empty();
 	$("#templateBase").append(html);
@@ -139,9 +149,17 @@ let allSelected = true;
 });
 	return allSelected;
 }
-ubsApp.renderPageByName = function(pageName) {
+ubsApp.renderPageByName = function(pageName,amount) {
 	clearInterval(interval);
-	 this.renderPage(ubsApp.pages[pageName]);
+	if(amount === undefined || amount === null|| amount.length===0)
+	{
+		
+	}
+	else
+	{
+		ubsApp.animate_score(amount);
+	}
+	this.renderPage(ubsApp.pages[pageName]);
 }
 
 ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
@@ -173,8 +191,13 @@ ubsApp.renderDecisonTemplate = function() {
   answerselected=$("#" + checkedValue + "Amount").text(); 
   clearInterval(timeVar);
   clearInterval(interval);
+<<<<<<< HEAD
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
   
+=======
+  clearInterval(timeVar);
+  this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
+>>>>>>> b790c2e1a44449925905bdb8a3775f89e1cd97f4
 }
 
 ubsApp.updateRollingDiceTemplate = function(template){
@@ -210,8 +233,10 @@ ubsApp.animate_score=function(amount)
 {
 	var sc=ubsApp.getScore(); 
 	var target_score=sc+parseInt(amount);
+	
 	if(amount<0)
 	{
+		
 		interval=window.setInterval(function () {
 		sc = sc-1;
 		document.getElementById("headId").innerHTML = sc;
@@ -221,6 +246,7 @@ ubsApp.animate_score=function(amount)
 	}
 	else if(amount>0)
 	{
+
 			interval=window.setInterval(function () {
 			sc = sc+1;
 			document.getElementById("headId").innerHTML = sc;
@@ -230,7 +256,7 @@ ubsApp.animate_score=function(amount)
 	}
 	ubsApp.addScore(parseInt(amount));
 	document.getElementById("headId").innerHTML=ubsApp.getScore();
-	ubsApp.renderPage(ubsApp.pages[nextPage]);
+	
 	
 }
 

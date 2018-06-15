@@ -181,37 +181,46 @@
 	],
 	
 	"choicePage": [
+		{
+			"templateId": 1,
+			"templateType": "static",
+			"src": "<div style=\" text-align:center; color:white;\">Basic Screeen Maths</div>" ,
+			"style": "padding:8px;border-radius:5px;position:absolute;top:0%;width:90%;left:0%;height:6%; background-color:black;",
+			"display_score":"true",
+			"score_animation_req":"true"
+		},
 	{ 
 			
 		"templateId": 4,
 		"templateType": "choiceTemplate",
+		"display_score":"true",
 		"choiceHeightFactor" : 2,
 		"choices":[
 	  	    {
 	  	    	"templateId": 1,
 				"choiceID":0,
-				"notSelectedSrc": "<img style=\"float:right;max-width: 100%;max-height: 100%;\" src=\"Images/tl.png\" >",
-				"selectedSrc": "<img style=\"float:right;;max-width: 100%;max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tl.png\" >",
+				"notSelectedSrc": "<img style=\"float:right;max-height: 100%;\" src=\"Images/paani-puri.jpg\" >",
+				"selectedSrc": "<img style=\"float:right;;max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/paani-puri.jpg\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
-				"style": "padding:1px;margin-top:5%",
+				"style": "padding:1px;margin-top:3.5%",
 				"display":false,
 				"onClickPage": "q1"
 			},
 			{
 				"templateId": 1,
 				"choiceID":1,
-				"notSelectedSrc": "<img style=\";max-width: 100%;max-height: 100%;\" src=\"Images/tr.png\" >",
-				"selectedSrc": "<img style=\";max-width: 100%;max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/tr.png\" >",
+				"notSelectedSrc": "<img style=\";max-height: 100%;\" src=\"Images/paani-puri.jpg\" >",
+				"selectedSrc": "<img style=\";max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/paani-puri.jpg\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
-				"style": "padding:1px;margin-top:5%",
+				"style": "padding:1px;margin-top:3.5%",
 				"display":false,
 				"onClickPage": "q1"
 			},
 			{
 				"templateId": 1,
 				"choiceID":2,
-				"notSelectedSrc": "<img style=\"float:right;;max-width: 100%;max-height: 100%;\" src=\"Images/lb.png\" >",
-				"selectedSrc": "<img style=\";max-width: 100%;max-height: 100%;float:right;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/lb.png\" >",
+				"notSelectedSrc": "<img style=\"float:right;max-height: 100%;\" src=\"Images/paani-puri.jpg\" >",
+				"selectedSrc": "<img style=\";max-height: 100%;float:right;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/paani-puri.jpg\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
@@ -220,8 +229,8 @@
 		    {
 		    	"templateId": 1,
 				"choiceID":3,
-				"notSelectedSrc": "<img style=\";max-width: 100%;max-height: 100%;\" src=\"Images/rb.png\" >",
-				"selectedSrc": "<img style=\";max-width: 100%;max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/rb.png\" >",
+				"notSelectedSrc": "<img style=\";max-height: 100%;\" src=\"Images/paani-puri.jpg\" >",
+				"selectedSrc": "<img style=\";max-height: 100%;filter: grayscale(100%);-webkit-filter: grayscale(100%);\" src=\"Images/paani-puri.jpg\" >",
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
@@ -278,6 +287,10 @@
 		],
 	
 	"q1-correct":[
+<<<<<<< HEAD
+=======
+		
+>>>>>>> b790c2e1a44449925905bdb8a3775f89e1cd97f4
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -353,7 +366,6 @@
 			"templateType": "static",
 			"src": "<button type=\"button\" >Next Question!</button>",
 			"style": "padding:5px;",
-			"onClickOp":"-155",
 			"onClickPage":"choicePage"
 	}],
 		
@@ -412,6 +424,7 @@
 		"background-color":"white",
 		"coinColor":"#f7941e"
 	}],
+
 //Scenario 2 - Agricultue Sector
 
 	"Scene2":[
@@ -421,6 +434,7 @@
 			"templateType":"score",
 			"textColor":"red",
 			"abc":"xyz"
+
 		},
 		{
 			"templateId":1,
@@ -567,6 +581,63 @@
 			"style": "padding:5px;position: relative; top:0; right:13vw;",
 			"onClickPage":"choicePage"
 	}],
+
+
+			
+	"customerCheating":[
+		{
+			"templateId": 1,
+			"templateType": "static",
+			"src": "<div style=\" text-align:center; color:white;\">Basic Screeen Maths</div>" ,
+			"style": "padding:8px;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+		},
+		{
+			"templateId":1,
+			"templateType":"static",
+			"style":"align:center;",
+			"src":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\" alt=\"A Teen came to your shop. He places a big order of nultiple products.He said that he will pay you later. Since,you know hima bit, you allowed that.<p>You write that transaction in a book that you maintain for all pending payment.</p><p>Later the teen never came back.When you went to his home.It was locked out.</p>\" > </img>",
+ 
+		},
+		{
+		    	"templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" align:center; style=\"position:absolute;border-radius:2.5px;padding:6.5px;top:10%; left:46%;background-color:orange; color:white; border:0;\">Proceed to NextPage</button>",
+				"style": "padding:5px; position:absolute; top:94%; width:97%; align:center;",
+				"onClickPage":"customerCheatingResult"	
+		}	],
+
+		"customerCheatingResult":[
+			{
+				"templateId": 1,
+				"templateType": "static",
+				"src": "<div style=\" text-align:center; color:white;\">Basic Screeen Maths</div>" ,
+				"style": "padding:8px;border-radius:2.5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+			},
+		{
+			
+			"templateId":15,
+			"templateType":"score",
+			
+			"textColor":"white",
+			"abc":"xyz"
+			//"background":"sxdcfvgbh"
+		},
+			{
+				"templateId":1,
+				"templateType":"static",
+				"style":"align:center;",
+				"answer":"-100",
+				"src":"<img width=\"97%\" height=\"85%\" controls autoplay style=\"position:absolute;top:6%; z-index:-1;\" src=\"videos/store.gif\"alt=\"Did You see,some people promise but they don't pay.<p>Lesson Learnt: Refrain from giving product when customer promises to pay later unless you know him very well.</p>\" > </video>",
+			},
+			{
+		    	"templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" align:center; style=\"position:absolute;top:10%;border-radius:2.5px;padding:6.5px; left:46%;background-color:orange; color:white; border:0;\">Proceed to NextPage</button>",
+				"style": "padding:5px; position:absolute; top:94%; width:97%; align:center;",
+				"amount":"-100",
+				"onClickPage":"customerCheatingResult"	//write here the name of the next scenario
+			}			
+		]
 
 
 }
