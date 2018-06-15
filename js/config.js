@@ -186,8 +186,7 @@
 			"templateType": "static",
 			"src": "<div style=\" text-align:center; color:white;\">Basic Screeen Maths</div>" ,
 			"style": "padding:8px;border-radius:5px;position:absolute;top:0%;width:90%;left:0%;height:6%; background-color:black;",
-			"display_score":"true",
-			"score_animation_req":"true"
+			"display_score":"true"
 		},
 	{ 
 			
@@ -214,7 +213,7 @@
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;margin-top:3.5%",
 				"display":false,
-				"onClickPage": "q1"
+				"onClickPage": "q2"
 			},
 			{
 				"templateId": 1,
@@ -224,7 +223,7 @@
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
-				"onClickPage": "q1"
+				"onClickPage": "q3"
 			},
 		    {
 		    	"templateId": 1,
@@ -234,7 +233,7 @@
 				"width": "col-lg-6 col-md-6 col-xs-6",
 				"style": "padding:1px;",
 				"display":false,
-				"onClickPage": "q1"
+				"onClickPage": "q4"
 			}],
 		}],
 	
@@ -243,26 +242,32 @@
 			"templateId": 2,
 			"templateType": "decision",
 			"display_score":"true",
-			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like one customer wants to purchase items:<br>1.1.5kg Rice<br>2.5kg Dal<br>1 kg rice<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?</div>",
+			"question": "<div style='font-size:1.8vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like one customer wants to purchase items:<br>1.1.5kg Rice<br>2.5kg Dal<br>1 kg rice<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?</div>",
 			"answer":"355",
 			"options": [
 			    {
 					"optionName":"q1", 
 					"optionValue": "355",
 					"id":1,
-					"amount":100
+					"amount":100,
+					//"radio_style":"visibility:hidden",
+					"for":"1"
 				},
 				{
 					"optionName": "q1",
 					"optionValue": "255",
 					"id":2,
-					"amount":-100
+					"amount":-100,
+					//"radio_style":"visibility:hidden",
+					"for":"2"
 				},
 				{
 					"optionName":"q1",
 					"optionValue": "155",
 					"id":3,
-					"amount":-150
+					"amount":-150,
+					//"radio_style":"visibility:hidden",
+					"for":"3"
 				}
 				
 			],
@@ -287,56 +292,57 @@
 		],
 	
 	"q1-correct":[
-<<<<<<< HEAD
-=======
-		
->>>>>>> b790c2e1a44449925905bdb8a3775f89e1cd97f4
+
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "Yay, you answered correct. Your balance increases by 355. His new balance is 355." ,
-			"width": "col-lg-4 col-md-4 col-xs-4",
-			"style": "padding:5px;",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yay, you answered correct. Your balance increases by 355. His new balance is 355</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
 			"display_score":"true",
 			"score_animation_req":"true"
 	},	
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;"	
-	},
-	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<button type=\"button\" >Next Question!</button>",
-			"style": "padding:5px;",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage":"choicePage"
 	}],
 
     "q1-wrong":[
+    {
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "Oops!! you answered incorrect. You lost money. Your balance decreases by by 255. Your new balance is 1000-255=745." ,
-			"width": "col-lg-4 col-md-4 col-xs-4",
-			"style": "padding:5px;",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered incorrect. You lost money. Your balance decreases by by 255. Your new balance is 1000-255=745.</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
 			"display_score":"true",
 			"score_animation_req":"true"
 	},	
 	{
-		    "templateId": 1,
+		   "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;"	
-	},
-	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<button type=\"button\" >Next Question!</button>",
-			"style": "padding:5px;",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage":"choicePage"
 	},
 	
@@ -345,34 +351,36 @@
 	
 	"q1-vvwrong":[
 	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "Oops!! you answered very much incorrect. You lost double money. Your balance decreases by by 2 x 255. Your new balance is 1000-510=490." ,
-			"width": "col-lg-4 col-md-4 col-xs-4",
-			"style": "padding:5px;",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered very much incorrect. You lost double money. Your balance decreases by by 2 x 255. Your new balance is 1000-510=490.</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
 			"display_score":"true",
-			"score_animation_req":"true",
-			"style": "padding:5px;"
+			"score_animation_req":"true"
 	},	
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%;\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;"	
-	},
-	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<button type=\"button\" >Next Question!</button>",
-			"style": "padding:5px;",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage":"choicePage"
 	}],
 		
 	"q2": [{
 			"templateId": 2,
 			"templateType": "decision",
-			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should customer pay?</div>",			
+			"display_score":"true",
+			"question": "<div style='font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should customer pay?</div>",			
 			"options": [{
 					"optionName": "q2",
 					"optionValue": "65",
@@ -410,6 +418,349 @@
 			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
 			"redirect":"choicePage"
 		}],
+
+		"q2-vvwrong":[
+
+		{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+	{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+
+        {
+                "templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage":"choicePage"
+        }],
+    "q2-wrong":[
+    {
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+
+        {
+                "templateId": 1,
+                "templateType": "static",
+                "completed":"true",
+                "src": "Oops!! You answered incorrectly. Your money will be deducted!!" ,
+                "width": "col-lg-4 col-md-4 col-xs-4",
+                "completed":true,
+                "style": "padding:5px; color:red",
+                "display_score":"true",
+                "score_animation_req":"true",
+                "style": "padding:5px;"
+        },  
+        
+        {
+                "templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage":"choicePage"
+        }],
+        
+    "q2-correct":[
+    		{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; height:40vw; \" src=\"images/Girl/Girl_Happy.gif\" >",
+			"width": "col-lg-6 col-md-6 col-md-offset-1 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+			},
+			{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!!! you answered correctly</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+
+            {
+                    "templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+					"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+					"style":"position:absolute;text-align: center; top:70%",
+					"onClickPage":"choicePage"
+            }],
+            
+    
+    //Question 3 
+
+    "q3": [{
+        "templateId": 2,
+        "templateType": "decision",
+        "display_score":"true",
+        "question": "<div style='font-size:1.35vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.He wants to return few items and purchase some new.<br>He wants to return<br>1kg Onion - Rs.19<br>1 kg of Potato- Rs 34<br><br> He wants to purchase <br>1.5kg Tomato<br> 1kg Cabbage<br>Per kg cost of tomato/cabbage is 26/24 rupees<br> Can you tell how much money should you return pay?</div>",           
+        "options": [{
+                "optionName": "q2",
+                "optionValue": "Rs.30",
+                "id":"1",
+                "amount":-10
+            },
+            {
+                "optionName": "q2",
+                "optionValue": "Rs.5",
+                "id":"2",
+                "amount":-10
+            },
+            {
+                "optionName": "q2",
+                "optionValue": "Rs.10",
+                "id":"3",
+                "amount":10
+            }
+        ],
+        "optionPageMap": 
+        {
+            "1":"q3-vvwrong",
+            "2": "q3-wrong" ,
+            "3": "q3-correct"
+        },
+        "width": "col-lg-7 col-md-7 col-xs-7",
+        "style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+    },
+    {
+        "templateId":6,
+        "templateType":"timerTemp",
+        "time":21,
+        "divID":"countdowntimer",
+        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
+        "redirect":"choicePage"
+    }],
+
+    "q3-vvwrong":[
+    {
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+	{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+
+        
+        {
+                "templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage":"choicePage"
+        }],
+    "q3-wrong":[
+    {
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+	
+	{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+             
+
+            {
+                    "templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+					"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+					"style":"position:absolute;text-align: center; top:70%",
+					"onClickPage":"choicePage"
+            }],
+    "q3-correct":[
+    {
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+		{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!! You answered correctly. Your money is increased.</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+           
+            {
+                    "templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+					"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+					"style":"position:absolute;text-align: center; top:70%",
+					"onClickPage":"choicePage"
+            }],
+    
+    //Question 4
+
+    "q4": [{
+        "templateId": 2,
+        "templateType": "decision",
+        "display_score":"true",
+        "question": "<div style='font-size:1.5vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like a Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Potato- Rs 34<br><br> <br> Can you tell how much money should you return?</div>", 
+        "options": [{
+                "optionName": "q2",
+                "optionValue": "Rs.200",
+                "id":"1",
+                "amount":-150
+            },
+            {
+                "optionName": "q2",
+                "optionValue": "Rs.150",
+                "id":"2",
+                "amount":150
+            },
+            {
+                "optionName": "q2",
+                "optionValue": "Rs.100",
+                "id":"3",
+                "amount":-150
+            }
+        ],
+        "optionPageMap": 
+        {
+            "1":"q4-vvwrong",
+            "2": "q4-correct" ,
+            "3": "q4-wrong"
+        },
+        "width": "col-lg-7 col-md-7 col-xs-7",
+        "style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+    },
+    {
+        "templateId":6,
+        "templateType":"timerTemp",
+        "time":21,
+        "divID":"countdowntimer",
+        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:13vw;",
+        "redirect":"choicePage"
+    }],
+    "q4-vvwrong":[
+    {
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+		{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+      
+        {
+                "templateId": 1,
+				"templateType": "static",
+				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage":"choicePage"
+        }],
+    "q4-wrong":[
+    		{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+		{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+           
+           
+            {
+                    "templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+					"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+					"style":"position:absolute;text-align: center; top:70%",
+					"onClickPage":"choicePage"
+            }],
+    "q4-correct":[
+    {
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+		{
+	        "templateId": 1,
+			"templateType": "static",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!! You answered correctly. Your money is increased.</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
+			"display_score":"true",
+			"score_animation_req":"true"
+	},	
+          
+            {
+                    "templateId": 1,
+					"templateType": "static",
+					"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+					"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+					"style":"position:absolute;text-align: center; top:70%",
+					"onClickPage":"choicePage"
+            }],
 		
  // "popup":[{
 	// 	"id":"wheelOfFortuneModal",
@@ -459,7 +810,7 @@
 			"answer":"0",
 			"templateType": "decision",
 			"display_score":true,
-			"question": "<div style='font-size:1.8vw;background-color:#ff6600;border-radius: 3vw;padding:2vw;'>Although, we give you an opportunity to recover part of the loss by taking a small quiz. If you answer correctly, then your loss will be reduced.</div><br><span style=' padding-left:2vw;text-shadow: 2px 2px 5px red;color:white'><i>Note:  If you answer incorrectly then your losses will further increase.</span></i><br><br>",			
+			"question": "<div style='font-size:1.8vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Although, we give you an opportunity to recover part of the loss by taking a small quiz. If you answer correctly, then your loss will be reduced.</div><br><span style=' padding-left:2vw;text-shadow: 2px 2px 5px red;color:white'><i>Note:  If you answer incorrectly then your losses will further increase.</span></i><br><br>",			
 			"options": [{
 					"optionName": "q1s2",
 					"optionValue": "Show license of shop, registration of shop with local authority, permit from food department to keep perishable items.",
@@ -494,7 +845,8 @@
 				"4":"q1s2w"
 			},
 			"width": "col-lg-7 col-md-7 col-xs-7",
-			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+			"radio_style":"visibility:hidden",
+			"style": "position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 		},
 		{
 			"templateId":6,
@@ -508,30 +860,40 @@
 
 	"q1s2c":[
 	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
+	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "Yay, you answered correct. Your balance increases by 100 Rupees.<br>Let's learn more about documentation." ,
-			"width": "col-lg-4 col-md-4 col-xs-4",
-			"style": "padding:5px;",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yay, you answered correct. Your balance increases by 100 Rupees.<br>Let's learn more about documentation.</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"display_score":"true",
 			"score_animation_req":"true"
 	},	
+	
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;"	
-	},
-	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<button type=\"button\" >Next Question!</button>",
-			"style": "padding:5px;position: relative; top:0; right:13vw;",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage":"choicePage"
-	}],
+	}
+	],
 
 	"q1s2dialog":[
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -541,23 +903,25 @@
 			"display_score":"true",
 			"score_animation_req":"true"
 	},	
+
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;"	
-	},
-	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<button type=\"button\" >Next Question!</button>",
-			"style": "padding:5px;position: relative; top:0; right:13vw;",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage":"choicePage"
 	}
 ],
 
 	"q1s2w":[
+	{
+		    "templateId": 1,
+			"templateType": "static",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"width": "col-lg-6 col-md-6 col-xs-6",
+			"style": "padding:5px;position:absolute;top:10%"	
+	},
 	{
 	        "templateId": 1,
 			"templateType": "static",
@@ -567,18 +931,13 @@
 			"display_score":"true",
 			"score_animation_req":"true"
 	},	
+
 	{
-		    "templateId": 1,
+		   "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIl1xsE1HRQM67ASuV1QgxTeVrJfl4SVhK5R-va_eFYg1dU4cs\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;"	
-	},
-	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<button type=\"button\" >Next Question!</button>",
-			"style": "padding:5px;position: relative; top:0; right:13vw;",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage":"choicePage"
 	}],
 

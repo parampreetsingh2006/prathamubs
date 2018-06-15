@@ -14,7 +14,7 @@ ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '		<div>'+
 '				'+
 '			{{#each options}}'+
-'			 <div style="color: white;background-color:rgb(204, 0, 255);border-radius: 2vw;padding:.5vw;font-size:1.3vw;"> <input type="radio" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
+'			 <div  style="color: black;background-color:rgb(153, 230, 255);border-radius: 2vw;padding:.5vw;font-size:1.3vw;"> <input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
 '<span style="display:none" id="{{id}}Amount">{{amount}}</span>' + 
 '			{{/each}}    '+
 '				'+

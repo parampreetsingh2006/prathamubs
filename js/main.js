@@ -79,6 +79,11 @@ ubsApp.renderPage = function(page) {
             preProcessScratchCardConfig(templateConfig);
          	html += scratchCardTemplate(templateConfig);
         }else if(templateType == "choiceTemplate"){
+        	if(ubsApp.areAllChoicesSelected() == true) {
+                choiceSelected={};
+                ubsApp.renderPageByName(templateConfig.nextPage);
+                return;
+            }
 			ubsApp.updateChoiceSelected(templateConfig);
 			if(templateConfig.display_score)
 			{
@@ -134,6 +139,21 @@ ubsApp.updateChoiceSelected = function(templateConfig) {
 	 
 	 }
 	}
+}
+
+ubsApp.areAllChoicesSelected= function(){
+
+    if(jQuery.isEmptyObject(choiceSelected)) {
+        return false;
+    }
+   let allSelected = true;
+    $.each(choiceSelected, function(key,value){
+     if(value == true) {
+        allSelected =  false;
+        return false;
+     }
+});
+    return allSelected;
 }
 ubsApp.checkSelected= function(){
 
