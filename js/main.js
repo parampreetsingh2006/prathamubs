@@ -25,7 +25,7 @@ $(document).ready(function(){
 	}
 	localStorage.score=1000;
 	ubsApp.intitializeTemplates();
-	ubsApp.renderPage(ubsApp.pages.Scene2);
+	ubsApp.renderPage(ubsApp.pages.InitPage);
 
 });
 
