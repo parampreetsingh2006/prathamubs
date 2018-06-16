@@ -146,7 +146,6 @@ ubsApp.updateChoiceSelected = function(templateConfig) {
 	}
 }
 
-
 ubsApp.areAllChoicesSelected= function(){
 
     if(jQuery.isEmptyObject(choiceSelected)) {

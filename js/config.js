@@ -147,33 +147,34 @@
 			"style": "padding:5px",
 			"wheelWidthInPercent" : "80",
 			"optionPageMap" : {
-				"300": "choicePage",
-				"450": "choicePage",
-				"600": "choicePage",
-				"300": "choicePage",
-				"450": "choicePage",
-				"600": "choicePage"
+				"Basic Screen": "choicePage",
+				"Customer Cheating": "choicePage",
+				"Expired Product": "choicePage",
+				"Basic Screen": "choicePage",
+				"Customer Cheating": "choicePage",
+				"Expired Product": "choicePage"
 			},
 			"settings" :{
                
                 'numSegments'     : 6,         // Specify number of segments.
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and test colour overridden on backrupt segments.
-                   {'fillStyle' : '#ee1c24', 'text' : '300'},
-                   {'fillStyle' : '#3cb878', 'text' : '450'},
-                   {'fillStyle' : '#f6989d', 'text' : '600'},
-				   {'fillStyle' : '#ee1c24', 'text' : '300'},
-				   {'fillStyle' : '#f6989d', 'text' : '600'},
-				   {'fillStyle' : '#ee1c24', 'text' : '300'}
+                   {'fillStyle' : '#ffcc00', 'text' : 'Basic Screen'},
+                   {'fillStyle' : '#ff6600', 'text' : 'Customer Cheating'},
+                   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'},
+				   {'fillStyle' : '#ffcc00', 'text' : 'Customer Cheating'},
+				   {'fillStyle' : '#ff6600', 'text' : 'Basic Screen'},
+				   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'}
     
                 ]
-            }			
+            },
+            "button_style":"background-color:#ff6600; padding:5px; border-radius:5px; border:0;",			
 		},
 		{
 		"templateId": 5,
 		"templateType":"popup",
 		"id":"wheelOfFortuneModal",
-		"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+		"msg_style":"width: 43vw; height: 14vw; background-color: wheat;padding: 1vw; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
 		"message":"Yay !!! Lets proceed to <span id=\"wheelOfFortuneIndicatedSegment\"> </span> section.",
 		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
 		"onClick":"ubsWheelOfFortune.resetWheel()"
@@ -194,6 +195,7 @@
 		"templateType": "choiceTemplate",
 		"display_score":"true",
 		"choiceHeightFactor" : 2,
+		"nextPage":"InitPage",
 		"choices":[
 	  	    {
 	  	    	"templateId": 1,
@@ -251,7 +253,7 @@
 					"id":1,
 					"amount":100,
 					//"radio_style":"visibility:hidden",
-					"for":"1"
+					//"for":"1"
 				},
 				{
 					"optionName": "q1",
@@ -259,7 +261,7 @@
 					"id":2,
 					"amount":-100,
 					//"radio_style":"visibility:hidden",
-					"for":"2"
+					//"for":"2"
 				},
 				{
 					"optionName":"q1",
@@ -267,7 +269,7 @@
 					"id":3,
 					"amount":-150,
 					//"radio_style":"visibility:hidden",
-					"for":"3"
+					//"for":"3"
 				}
 				
 			],
@@ -298,6 +300,7 @@
 			"templateType": "static",
 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
+			"completed":true,
 			"style": "padding:5px;position:absolute;top:10%"	
 	},
 	{
@@ -305,8 +308,7 @@
 			"templateType": "static",
 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yay, you answered correct. Your balance increases by 355. His new balance is 355</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":true,
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",	
 			"display_score":"true",
 			"score_animation_req":"true"
 	},	
@@ -460,10 +462,10 @@
                 "templateId": 1,
                 "templateType": "static",
                 "completed":"true",
-                "src": "Oops!! You answered incorrectly. Your money will be deducted!!" ,
+                "src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> " ,
                 "width": "col-lg-4 col-md-4 col-xs-4",
                 "completed":true,
-                "style": "padding:5px; color:red",
+                "style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
                 "display_score":"true",
                 "score_animation_req":"true",
                 "style": "padding:5px;"
@@ -680,13 +682,13 @@
         "redirect":"choicePage"
     }],
     "q4-vvwrong":[
-    {
+    	{
 		    "templateId": 1,
 			"templateType": "static",
 			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
 			"style": "padding:5px;position:absolute;top:10%"	
-	},
+		},
 		{
 	        "templateId": 1,
 			"templateType": "static",
@@ -696,24 +698,23 @@
 			"completed":true,
 			"display_score":"true",
 			"score_animation_req":"true"
-	},	
-      
+		},
         {
-                "templateId": 1,
-				"templateType": "static",
-				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
-				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-				"style":"position:absolute;text-align: center; top:70%",
-				"onClickPage":"choicePage"
+            "templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
+			"onClickPage":"choicePage"
         }],
     "q4-wrong":[
-    		{
+    	{
 		    "templateId": 1,
 			"templateType": "static",
 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
 			"style": "padding:5px;position:absolute;top:10%"	
-	},
+		},
 		{
 	        "templateId": 1,
 			"templateType": "static",
@@ -723,25 +724,24 @@
 			"completed":true,
 			"display_score":"true",
 			"score_animation_req":"true"
-	},	
-           
-           
-            {
-                    "templateId": 1,
-					"templateType": "static",
-					"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
-					"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-					"style":"position:absolute;text-align: center; top:70%",
-					"onClickPage":"choicePage"
-            }],
+		},	
+        {
+            "templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
+			"onClickPage":"choicePage"
+        }],
+
     "q4-correct":[
-    {
+    	{
 		    "templateId": 1,
 			"templateType": "static",
 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
 			"style": "padding:5px;position:absolute;top:10%"	
-	},
+		},
 		{
 	        "templateId": 1,
 			"templateType": "static",
@@ -751,24 +751,15 @@
 			"completed":true,
 			"display_score":"true",
 			"score_animation_req":"true"
-	},	
-          
-            {
-                    "templateId": 1,
-					"templateType": "static",
-					"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
-					"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-					"style":"position:absolute;text-align: center; top:70%",
-					"onClickPage":"choicePage"
-            }],
-		
- // "popup":[{
-	// 	"id":"wheelOfFortuneModal",
-	// 	"msg_style":"width: 300px; height: 60px; background-color: wheat;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
-	// 	"fortuneID":"wheelOfFortuneIndicatedSegment",
-	// 	"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
-	// 	"onClick":"ubsWheelOfFortune.resetWheel()"
-	// }],	
+		},	 
+        {
+            "templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style":"position:absolute;text-align: center; top:70%",
+			"onClickPage":"choicePage"
+        }],
 	
 	"score":[{
 		"textColor":"black",
@@ -779,13 +770,12 @@
 //Scenario 2 - Agricultue Sector
 
 	"Scene2":[
-	    	{
+	    {
 			
 			"templateId":15,
 			"templateType":"score",
 			"textColor":"red",
 			"abc":"xyz"
-
 		},
 		{
 			"templateId":1,
@@ -793,7 +783,6 @@
 			"style":"align:center;",
 			"display_score":true,
 			"src":"<img width=\"97%\" height=\"85%\" controls style=\"position:absolute;top:9%; z-index:-1;\" src=\"Images/dummy.gif\"  alt=\"A kid come to shop and asked for a packet of chips. You fetched one packet of chips and gave to the kid. Later that day, kid's parent came to the shop and complained that their kid is now ill after eating staled chips.<br>As the news spread, food inspector visited the shop to enquire about the matter. He asked for shop documents from you. Now as you have messed up big because there was no proper check related to the expiry of the products. So it is a loss and <b>300</b> rupees will be deducted.\" >",
-
 		},
 		{
 		    "templateId": 1,
@@ -804,8 +793,7 @@
 		}],
 
 	"q1s2":[ //question 1 scenario 2
-		
-			{
+		{
 			"templateId": 2,
 			"answer":"0",
 			"templateType": "decision",
@@ -897,13 +885,13 @@
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "Giving or taking bribe to/from government officer is punishable offence. Never do it." ,
-			"width": "col-lg-4 col-md-4 col-xs-4",
-			"style": "padding:5px;",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Giving or taking bribe to/from government officer is punishable offence. Never do it.</div> ",
+			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+			"completed":true,
 			"display_score":"true",
 			"score_animation_req":"true"
-	},	
-
+    },
 	{
 		    "templateId": 1,
 			"templateType": "static",
@@ -918,16 +906,16 @@
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
 			"style": "padding:5px;position:absolute;top:10%"	
 	},
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "Alas! that is a wrong choice." ,
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Alas! that is a wrong choice.</div> ",
 			"width": "col-lg-4 col-md-4 col-xs-4",
-			"style": "padding:5px;",
+			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"display_score":"true",
 			"score_animation_req":"true"
 	},	
@@ -958,11 +946,11 @@
  
 		},
 		{
-		    	"templateId": 1,
-				"templateType": "static",
-				"src": "<button type=\"button\" align:center; style=\"position:absolute;border-radius:2.5px;padding:6.5px;top:10%; left:46%;background-color:orange; color:white; border:0;\">Proceed to NextPage</button>",
-				"style": "padding:5px; position:absolute; top:94%; width:97%; align:center;",
-				"onClickPage":"customerCheatingResult"	
+	    	"templateId": 1,
+			"templateType": "static",
+			"src": "<button type=\"button\" align:center; style=\"position:absolute;border-radius:2.5px;padding:6.5px;top:10%; left:46%;background-color:orange; color:white; border:0;\">Proceed to NextPage</button>",
+			"style": "padding:5px; position:absolute; top:94%; width:97%; align:center;",
+			"onClickPage":"customerCheatingResult"	
 		}	],
 
 		"customerCheatingResult":[
@@ -972,15 +960,12 @@
 				"src": "<div style=\" text-align:center; color:white;\">Basic Screeen Maths</div>" ,
 				"style": "padding:8px;border-radius:2.5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
 			},
-		{
-			
-			"templateId":15,
-			"templateType":"score",
-			
-			"textColor":"white",
-			"abc":"xyz"
-			//"background":"sxdcfvgbh"
-		},
+			{
+				
+				"templateId":15,
+				"templateType":"score",
+				"textColor":"white",
+		    },
 			{
 				"templateId":1,
 				"templateType":"static",

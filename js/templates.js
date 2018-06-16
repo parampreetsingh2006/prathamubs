@@ -36,7 +36,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </canvas>'+
 ' </div>'+
 ' <div style="width:100%; text-align: center;">'+
-'	<button onclick="ubsWheelOfFortune.startSpin()" style="background-color:#ff6600; padding:5px; border-radius:5px; border:0;" >Spin </button>'+
+'	<button onclick="ubsWheelOfFortune.startSpin()"  style="background-color:#ff6600; padding:5px; border-radius:5px; border:0;" >Spin </button>'+
 ' </div>'+
 ' </div>'+
 ' '/*+
