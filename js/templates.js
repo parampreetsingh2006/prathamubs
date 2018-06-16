@@ -36,7 +36,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </canvas>'+
 ' </div>'+
 ' <div style="width:100%; text-align: center;">'+
-'	<button onclick="ubsWheelOfFortune.startSpin()" >Spin </button>'+
+'	<button onclick="ubsWheelOfFortune.startSpin()" style="background-color:#ff6600; padding:5px; border-radius:5px; border:0;" >Spin </button>'+
 ' </div>'+
 ' </div>'+
 ' '/*+
@@ -138,7 +138,7 @@ ubsApp.scoreTemplate= '<style>'+
 ubsApp.popupTemplate = '<div id="{{id}}"  style="display:none; padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%;">'+
 ' 	<div style="display: table-cell; vertical-align: middle;">'+
 ' 		'+
-' 		<div style="{{msg_style}}">'+
+' 		<div style="{{msg_style}};background-color:#0099ff;">'+
 '   			{{message}}'+
 '   			<div style="{{button_style}}" onClick="{{onClick}}"> Next </div>'+
 ' 		</div>'+
