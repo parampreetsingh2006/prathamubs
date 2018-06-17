@@ -15,7 +15,7 @@ ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '		<div>'+
 '				'+
 '			{{#each options}}'+
-'			 <div style="color: white;background-color:rgb(204, 0, 255);border-radius: 2vw;padding:.5vw;font-size:1.3vw;"> <input type="radio" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
+'			 <div  style="color: black;background-color:rgb(153, 230, 255);border-radius: 2vw;padding:.5vw;font-size:1.3vw;"> <input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
 '<span style="display:none" id="{{id}}Amount">{{amount}}</span>' + 
 '			{{/each}}    '+
 '				'+
@@ -38,9 +38,10 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </canvas>'+
 ' </div>'+
 ' <div style="width:100%; text-align: center;">'+
-'	<button onclick="ubsWheelOfFortune.startSpin()" style="background-color:#ff6600; padding:5px; border-radius:5px; border:0;" >Spin </button>'+
+'	<button onclick="ubsWheelOfFortune.startSpin()"  style="background-color:#ff6600; padding:5px; border-radius:5px; border:0;" >Spin </button>'+
 ' </div>'+
 ' </div>'+
+'<div id={{audioId}}></div>'+
 ' '/*+
 ' <div id= "wheelOfFortuneModal" style="display:none; padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%; ">'+
 ' <div style="    display: table-cell; vertical-align: middle;">'+
