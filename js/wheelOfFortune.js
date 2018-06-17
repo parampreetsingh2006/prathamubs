@@ -3,9 +3,9 @@
  ubsWheelOfFortune.defaultSettings = {
                 'outerRadius'     : 200,        // Set outer radius so wheel fits inside the background.
                 'innerRadius'     : 45,         // Make wheel hollow so segments don't go all way to center.
-                'textFontSize'    : 20,         // Set default font size for the segments.
-                'textOrientation' : 'vertical', // Make text vertial so goes down from the outside of wheel.
-                'textAlignment'   : 'outer',    // Align text to outside of wheel.
+                'textFontSize'    : 14,         // Set default font size for the segments.
+                'textOrientation' : 'horizontal', // Make text vertial so goes down from the outside of wheel.
+                'textAlignment'   : 'center',    // Align text to outside of wheel.
                 'numSegments'     : 6,         // Specify number of segments.
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and test colour overridden on backrupt segments.

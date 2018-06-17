@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 
-ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"  {{#if onClickPage}}onclick="ubsApp.renderPageByName(\'{{onClickPage}}\')">'+
+ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="ubsApp.renderPageByName(\'{{onClickPage}}\',\'{{amount}}\')">'+
 '		{{src}}'+
 ' </div>'+
 '<div id={{audioId}}></div>';
@@ -11,16 +11,18 @@ ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"  {{#if onClickP
 ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '			'+
 '		'+
-'		<div>{{question}}</div>'+
+'		<div>{{question}}<br></div>'+
 '		<div>'+
 '				'+
 '			{{#each options}}'+
-'			 <input type="radio" name="{{optionName}}" value="{{optionValue}}" > {{optionValue}}<br>'+
+'			 <div style="color: white;background-color:rgb(204, 0, 255);border-radius: 2vw;padding:.5vw;font-size:1.3vw;"> <input type="radio" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
+'<span style="display:none" id="{{id}}Amount">{{amount}}</span>' + 
 '			{{/each}}    '+
 '				'+
 '		</div>'+
-'		<div>'+
-'			<button onclick="ubsApp.renderDecisonTemplate(\'{{answer}}\')" >Submit</button>'+
+'		<div style="text-align:center">'+
+'			<button style=\'background-color: #b3e6ff;color:black;display:inline-block;text-decoration: none;border:1px solid blue;width:8vw;\' onclick="ubsApp.renderDecisonTemplate()" >Submit</button>'+
+
 '		</div>'+
 '		  '+
 '		'+
@@ -36,7 +38,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </canvas>'+
 ' </div>'+
 ' <div style="width:100%; text-align: center;">'+
-'	<button onclick="ubsWheelOfFortune.startSpin()" >Spin </button>'+
+'	<button onclick="ubsWheelOfFortune.startSpin()" style="background-color:#ff6600; padding:5px; border-radius:5px; border:0;" >Spin </button>'+
 ' </div>'+
 ' </div>'+
 ' '/*+
@@ -108,7 +110,7 @@ ubsApp.scoreTemplate= '<style>'+
 
 
 
-' .print_txt{ display:block;padding: 10px ; border-radius: 20px;font-weight: 500;font-size: 18px;width: 7%;} '+
+' .print_txt{ display:block;padding: 10px ; font-weight: 500;font-size: 18px;width: 7%;} '+
 
 
 ' @keyframes'+ 
@@ -120,14 +122,14 @@ ubsApp.scoreTemplate= '<style>'+
 ' </style>'+
 
 
-'<div style=\"position: absolute; top: 2%; left: 90%; {{#if textColor}}color:{{textColor}};{{/if}}\"\">'+		
+'<div style=\"position: absolute; top: 0%; left: 90%; {{#if textColor}}color:{{textColor}};{{/if}}\"\">'+		
 	'<div class=\"print_txt\" id=\"headId\" align=\"center\" > </div>'+
 
 '</div>'+
 
-'<div style=\"position: absolute; top: 2%; left: 95%; \"> '+
+'<div style=\"position: absolute; top: 0.5%; left: 95%; \"> '+
 	
-	'<div class=\"coin\" style=\"float:right; {{#if backgroundColor}}background-color:{{backgroundColor}};\">'+ 
+	'<div class=\"coin\" id=\"coin\" style=\"float:right; {{#if backgroundColor}}background-color:{{backgroundColor}};\">'+ 
 		'<div class=\"front\"></div>'+
 		'<div class=\"front_b\"></div>'+
 		'<div class=\"back\"></div>'+
@@ -139,7 +141,7 @@ ubsApp.scoreTemplate= '<style>'+
 ubsApp.popupTemplate = '<div id="{{id}}"  style="display:none; padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%;">'+
 ' 	<div style="display: table-cell; vertical-align: middle;">'+
 ' 		'+
-' 		<div style="{{msg_style}}">'+
+' 		<div style="{{msg_style}};background-color:#0099ff;">'+
 '   			{{message}}'+
 '   			<div style="{{button_style}}" onClick="{{onClick}}"> Next </div>'+
 ' 		</div>'+
