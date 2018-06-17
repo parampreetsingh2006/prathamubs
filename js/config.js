@@ -514,12 +514,11 @@
                 "templateType": "static",
                 "completed":"true",
                 "src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> " ,
-                "width": "col-lg-4 col-md-4 col-xs-4",
+			    "width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
                 "completed":true,
                 "style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
                 "display_score":"true",
                 "score_animation_req":"true",
-                "style": "padding:5px;",
                 "audioId":"q2-wrong-audio",
         },  
         
