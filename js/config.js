@@ -157,8 +157,8 @@
 			"settings" :{
                
                 'numSegments'     : 6,         // Specify number of segments.
-                'segments'        :             // Define segments including colour and text.
-                [                               // font size and test colour overridden on backrupt segments.
+                'segments'        :            // Define segments including colour and text.
+                [                              // font size and test colour overridden on backrupt segments.
                    {'fillStyle' : '#ffcc00', 'text' : 'Basic Screen'},
                    {'fillStyle' : '#ff6600', 'text' : 'Customer Cheating'},
                    {'fillStyle' : '#33cc33', 'text' : 'Expired Product'},
@@ -174,9 +174,9 @@
 		"templateId": 5,
 		"templateType":"popup",
 		"id":"wheelOfFortuneModal",
-		"msg_style":"width: 43vw; height: 14vw; background-color: wheat;padding: 1vw; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+		"msg_style":"width: 30vw; height: 7vw; background-color: wheat;padding: 1vw; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
 		"message":"Yay !!! Lets proceed to <span id=\"wheelOfFortuneIndicatedSegment\"> </span> section.",
-		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;     margin: auto;",
+		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 0.5vw;margin: auto;",
 		"onClick":"ubsWheelOfFortune.resetWheel()"
 	}
 	],
@@ -195,7 +195,7 @@
 		"templateType": "choiceTemplate",
 		"display_score":"true",
 		"choiceHeightFactor" : 2,
-		"nextPage":"InitPage",
+		"nextPage":"InitPage2",
 		"choices":[
 	  	    {
 	  	    	"templateId": 1,
@@ -244,14 +244,14 @@
 			"templateId": 2,
 			"templateType": "decision",
 			"display_score":"true",
-			"question": "<div style='font-size:1.8vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like one customer wants to purchase items:<br>1.1.5kg Rice<br>2.5kg Dal<br>1 kg rice<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?</div>",
+			"question": "<div style='font-size:1.8vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like one customer wants to purchase items:<br>1.5kg Rice<br>2.5kg Dal<br>1 kg Atta<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?</div>",
 			"answer":"355",
 			"options": [
 			    {
 					"optionName":"q1", 
 					"optionValue": "355",
 					"id":1,
-					"amount":100,
+					"amount":355,
 					//"radio_style":"visibility:hidden",
 					//"for":"1"
 				},
@@ -259,7 +259,7 @@
 					"optionName": "q1",
 					"optionValue": "255",
 					"id":2,
-					"amount":-100,
+					"amount":-355,
 					//"radio_style":"visibility:hidden",
 					//"for":"2"
 				},
@@ -267,7 +267,7 @@
 					"optionName":"q1",
 					"optionValue": "155",
 					"id":3,
-					"amount":-150,
+					"amount":-355,
 					//"radio_style":"visibility:hidden",
 					//"for":"3"
 				}
@@ -332,7 +332,7 @@
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered incorrect. You lost money. Your balance decreases by by 255. Your new balance is 1000-255=745.</div> ",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered incorrect. You lost money. Your balance decreases by 255.</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":true,
@@ -362,7 +362,7 @@
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered very much incorrect. You lost double money. Your balance decreases by by 2 x 255. Your new balance is 1000-510=490.</div> ",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered incorrect. You lost money. Your balance decreases by 255.</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":true,
@@ -382,32 +382,32 @@
 			"templateId": 2,
 			"templateType": "decision",
 			"display_score":"true",
-			"question": "<div style='font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should customer pay?</div>",			
+			"question": "<div style='font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should Sardarji return to customer?</div>",			
 			"options": [{
 					"optionName": "q2",
 					"optionValue": "65",
 					"id":"1",
-					"amount":100
+					"amount":-45
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "55",
 					"id":"2",
-					"amount":-100
+					"amount":-45
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "45",
 					"id":"3",
-					"amount":-100
+					"amount":45
 				}
 				
 			],
 			"optionPageMap": 
 			{
-				"1":"q2-correct",
+				"1":"q2-vvwrong",
 				"2": "q2-wrong" ,
-				"3": "q2-vvwrong"
+				"3": "q2-correct"
 			},
 			"width": "col-lg-7 col-md-7 col-xs-7",
 			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
@@ -433,7 +433,7 @@
 	{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly</div> ",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. You should do calculations more properly.</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":true,
@@ -491,7 +491,7 @@
 			{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!!! you answered correctly</div> ",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!!! you answered correctly. Seems like you are on the right path to be a Businessman.</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":true,
@@ -524,7 +524,7 @@
             },
             {
                 "optionName": "q2",
-                "optionValue": "Rs.5",
+                "optionValue": "Rs.11",
                 "id":"2",
                 "amount":-10
             },
@@ -644,7 +644,7 @@
         "templateId": 2,
         "templateType": "decision",
         "display_score":"true",
-        "question": "<div style='font-size:1.5vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like a Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Potato- Rs 34<br><br> <br> Can you tell how much money should you return?</div>", 
+        "question": "<div style='font-size:1.5vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like a Customer is back.he wants to return few items.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Potato- Rs 34<br><br> <br> Can you tell how much money will you return to customer?</div>", 
         "options": [{
                 "optionName": "q2",
                 "optionValue": "Rs.200",
@@ -767,6 +767,49 @@
 		"coinColor":"#f7941e"
 	}],
 
+	 "InitPage2": [
+		
+		{
+			"templateId": 3,
+			"templateType": "wheelOfFortune",
+			"width": "col-lg-12 col-md-12 col-xs-12",
+			"style": "padding:5px",
+			"wheelWidthInPercent" : "80",
+			"optionPageMap" : {
+				"Basic Screen": "Scene2",
+				"Customer Cheating": "Scene2",
+				"Expired Product": "Scene2",
+				"Basic Screen": "Scene2",
+				"Customer Cheating": "Scene2",
+				"Expired Product": "Scene2"
+			},
+			"settings" :{
+               
+                'numSegments'     : 6,         // Specify number of segments.
+                'segments'        :             // Define segments including colour and text.
+                [                               // font size and test colour overridden on backrupt segments.
+                   {'fillStyle' : '#ffcc00', 'text' : 'Basic Screen'},
+                   {'fillStyle' : '#ff6600', 'text' : 'Customer Cheating'},
+                   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'},
+				   {'fillStyle' : '#ffcc00', 'text' : 'Customer Cheating'},
+				   {'fillStyle' : '#ff6600', 'text' : 'Basic Screen'},
+				   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'}
+    
+                ]
+            },
+            "button_style":"background-color:#ff6600; padding:5px; border-radius:5px; border:0;",			
+		},
+		{
+		"templateId": 5,
+		"templateType":"popup",
+		"id":"wheelOfFortuneModal",
+		"msg_style":"width: 30vw; height: 7vw; background-color: wheat;padding: 1vw; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+		"message":"Yay !!! Lets proceed to <span id=\"wheelOfFortuneIndicatedSegment\"> </span> section.",
+		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 0.5vw;     margin: auto;",
+		"onClick":"ubsWheelOfFortune.resetWheel()"
+	}
+	],
+
 //Scenario 2 - Agricultue Sector
 
 	"Scene2":[
@@ -858,7 +901,7 @@
 	        "templateId": 1,
 			"templateType": "static",
 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yay, you answered correct. Your balance increases by 100 Rupees.<br>Let's learn more about documentation.</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"display_score":"true",
 			"score_animation_req":"true"
@@ -868,9 +911,9 @@
 		    "templateId": 1,
 			"templateType": "static",
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"width": "col-lg-6 col-md-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-md-offset-5",
 			"style":"position:absolute;text-align: center; top:70%",
-			"onClickPage":"choicePage"
+			"onClickPage":"InitPage3"
 	}
 	],
 
@@ -878,15 +921,15 @@
 	{
 		    "templateId": 1,
 			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+			"src": "<img style=\"height:40vw; width=15vw; \" src=\"images/Girl/girl-angry.gif\" >",
 			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
+			"style": "padding:5px;position:absolute;top:10%;"	
 	},
 	{
 	        "templateId": 1,
 			"templateType": "static",
 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Giving or taking bribe to/from government officer is punishable offence. Never do it.</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":true,
 			"display_score":"true",
@@ -896,9 +939,9 @@
 		    "templateId": 1,
 			"templateType": "static",
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
 			"style":"position:absolute;text-align: center; top:70%",
-			"onClickPage":"choicePage"
+			"onClickPage":"InitPage3"
 	}
 ],
 
@@ -914,7 +957,7 @@
 	        "templateId": 1,
 			"templateType": "static",
 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Alas! that is a wrong choice.</div> ",
-			"width": "col-lg-4 col-md-4 col-xs-4",
+			"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"display_score":"true",
 			"score_animation_req":"true"
@@ -924,12 +967,53 @@
 		   "templateId": 1,
 			"templateType": "static",
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+			"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
 			"style":"position:absolute;text-align: center; top:70%",
-			"onClickPage":"choicePage"
+			"onClickPage":"InitPage3"
 	}],
 
-
+	"InitPage3": [
+		
+		{
+			"templateId": 3,
+			"templateType": "wheelOfFortune",
+			"width": "col-lg-12 col-md-12 col-xs-12",
+			"style": "padding:5px",
+			"wheelWidthInPercent" : "80",
+			"optionPageMap" : {
+				"Basic Screen": "customerCheating",
+				"Customer Cheating": "customerCheating",
+				"Expired Product": "customerCheating",
+				"Basic Screen": "customerCheating",
+				"Customer Cheating": "customerCheating",
+				"Expired Product": "customerCheating"
+			},
+			"settings" :{
+               
+                'numSegments'     : 6,         // Specify number of segments.
+                'segments'        :             // Define segments including colour and text.
+                [                               // font size and test colour overridden on backrupt segments.
+                   {'fillStyle' : '#ffcc00', 'text' : 'Basic Screen'},
+                   {'fillStyle' : '#ff6600', 'text' : 'Customer Cheating'},
+                   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'},
+				   {'fillStyle' : '#ffcc00', 'text' : 'Customer Cheating'},
+				   {'fillStyle' : '#ff6600', 'text' : 'Basic Screen'},
+				   {'fillStyle' : '#33cc33', 'text' : 'Expired Product'}
+    
+                ]
+            },
+            "button_style":"background-color:#ff6600; padding:5px; border-radius:5px; border:0;",			
+		},
+		{
+		"templateId": 5,
+		"templateType":"popup",
+		"id":"wheelOfFortuneModal",
+		"msg_style":"width: 30vw; height: 7vw; background-color: wheat;padding: 1vw; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
+		"message":"Yay !!! Lets proceed to <span id=\"wheelOfFortuneIndicatedSegment\"> </span> section.",
+		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 0.5vw;     margin: auto;",
+		"onClick":"ubsWheelOfFortune.resetWheel()"
+	}
+	],
 			
 	"customerCheating":[
 		{
@@ -979,7 +1063,7 @@
 				"src": "<button type=\"button\" align:center; style=\"position:absolute;top:10%;border-radius:2.5px;padding:6.5px; left:46%;background-color:orange; color:white; border:0;\">Proceed to NextPage</button>",
 				"style": "padding:5px; position:absolute; top:94%; width:97%; align:center;",
 				"amount":"-100",
-				"onClickPage":"customerCheatingResult"	//write here the name of the next scenario
+				"onClickPage":""	//write here the name of the next scenario
 			}			
 		]
 
