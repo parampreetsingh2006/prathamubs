@@ -176,7 +176,7 @@
 		"id":"wheelOfFortuneModal",
 		"msg_style":"width: 300px; height: 80px; background-color:#0099ff;padding: 5px; margin: auto; text-align: center; overflow-x: auto;overflow-y: auto;",
 		"message":"Yay !!! Lets proceed to <span id=\"wheelOfFortuneIndicatedSegment\"> </span> section.",
-		"button_style":"border:1px solid;cursor: pointer; width: fit-content;padding: 3px;margin: auto;",
+		"button_style":"border:1px solid;cursor: pointer;border-radius:2px; width: fit-content;padding: 3px;margin: auto;",
 		"onClick":"ubsWheelOfFortune.resetWheel()"
 	}
 	],
