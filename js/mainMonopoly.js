@@ -16,6 +16,7 @@ var blockCategory=[];
 var scenariosArray=[];
 var tokens = ['Red', 'Blue', 'Green', 'Purple'];
 var flag2= false;
+
 var object={};
 object.numberOfTokens=[];
 
@@ -136,7 +137,8 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
-        user.setplayerColor( $("input[name='" + object.numberOfTokens[i].radioName + "'  ]:checked").attr("radioValue"));
+        var color=$('input[name=Radio'+i+']:checked').val();
+        user.setplayerColor(color.toLowerCase());
         var index=tokens.indexOf($('#list'+i+' option:selected').text());
         tokens.splice(index,1);
         user.setplayerId("p"+i);
@@ -151,14 +153,16 @@ monopoly.storePlayerDetails=function(){
 monopoly.initPlayers=function(){
     document.getElementById("take_input").innerHTML="";
     numplayers=document.getElementById("num_players").value;
+    
     if(numplayers<=4)
     {
         for(var i=0;i<numplayers;i++)
         {
-            
+            object={};
+            object.numberOfTokens=[];
             object.nameTitle="Name"+(i+1);
             object.nameId="name"+(i);
-            object.numberTokens = 4;
+             
             for (var j = 0; j<tokens.length; j++) {
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
