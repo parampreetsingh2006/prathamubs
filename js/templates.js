@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 
-ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="ubsApp.renderPageByName(\'{{onClickPage}}\',\'{{amount}}\')">'+
+ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}}>'+
 '		{{src}}'+
 ' </div>'+
 '<div id={{audioId}}></div>';
@@ -53,7 +53,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </div>'*/;
 ' ';
 
-ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div class="col-lg-12 col-md-12 col-xs-12">'+
+ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:35%; left:45%;">'+
 '  <div class="rollscene" id="rollscene" style= "height:{{diceSceneWidth}}px; display:table; margin:auto;"}>'+
 '    <div onclick="mainroll()" class="cube">'+
 '      <div id="class_1" class="cube_face_1">O</div>'+
@@ -149,10 +149,20 @@ ubsApp.popupTemplate = '<div id="{{id}}"  style="display:none; padding: 30px; ba
 ' 		'+
 ' 	</div>'+
 ' </div>';
-	
+
+ubsApp.modalTemplate = 	'<div class="modal animated zoomIn" id="scenarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">'+
+'  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">'+
+'    <div class="modal-content">'+
+'      <div class="modal-body">'+
+'      </div>  '+
+'    </div>'+
+'  </div>'+
+'</div>';
+    
 
 
-ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:16vw"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
+
+ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:6vw"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
 ''+
 '</div>';
 
@@ -161,6 +171,54 @@ ubsApp.audioTemplate = '<div >'+
 '	<audio id = "soundtrack">'+
 '		<source src={{audioSrc}} type="audio/mp3">'+
 '	</audio>'+
+'</div>';
+
+ubsApp.boardTemplate='<div class="responsive">'+
+    '<div class="mainSquare">'+
+        '<div class="row top">'+
+            '{{#each top_row}}'+
+                '<div class="square1">'+
+                    '<div class="header header-top {{color}}"></div>'+
+                    '<div class="firstLine firstLine-top rotation2" id={{id}}>'+'{{title}}'+
+                        '{{#if start}}'+
+                            '{{#each player}}'+
+                              '<div id="{{playerId}}"><span class="dot {{pc}}"></span></div>'+
+                              '{{/each}}'+
+                            '{{/if}}'+
+                    '</div>'+
+                '</div>'+
+            '{{/each}}'+
+        '</div>'+
+        
+        '<div class="row center">'+
+            '<div class="square2">'+ 
+                '{{#each left_col}}'+
+                    '<div class="squareSide">'+
+                        '<div class="headerSide header-left {{color}}"></div>'+
+                        '<div class="firstLine firstLine-left rotation1">'+'{{title}}'+'</div>'+
+                    '</div>'+
+                '{{/each}}'+
+            '</div>'+    
+            '<div class="square9"></div>'+
+            
+            '<div class="square2">'+
+                '{{#each right_col}}'+
+                    '<div class="squareSide">'+
+                        '<div class="headerSide header-left {{color}}"></div>'+
+                        '<div class="firstLine firstLine-right rotation3">'+'{{title}}'+'</div>'+
+                    '</div>'+
+                '{{/each}}'+
+            '</div>'+
+        '</div>'+
+        '<div class="row top">'+
+            '{{#each bottom_row}}'+
+                '<div class="square1">'+
+                    '<div class="header header-top {{color}}"></div>'+
+                    '<div class="firstLine firstLine-top rotation2">'+'{{title}}'+'</div>'+
+                '</div>'+
+            '{{/each}}'+
+        '</div>'+
+    '</div>'+
 '</div>';
 
 

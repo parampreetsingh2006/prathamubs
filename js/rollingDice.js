@@ -2,6 +2,7 @@
 var currentClass = '';
 var randomNumber = 0;
 var rollingDiceConfig = {};
+var diceVal = 0;
 
 $(document).ready(function() {
     var windowHeight =  $(window).height();
@@ -11,13 +12,14 @@ $(document).ready(function() {
 
 function changeSide() {
   var cube = document.querySelector('.cube');
-  var showClass = 'show-' + (Math.floor(Math.random()*6)+1);
+  diceVal = (Math.floor(Math.random()*6)+1);
+  var showClass = 'show-' + diceVal;
   if ( currentClass ) {
     cube.classList.remove( currentClass );
   }
   cube.classList.add( showClass );
   currentClass = showClass;
-  
+  return diceVal;
   
 }
 // set initial side
@@ -25,23 +27,14 @@ changeSide();
 
 
 function mainroll(){
+  var diceValue;
   for(var i = 0; i < 10; i++){
     setTimeout(function(){ 
-      changeSide();
-      randomNumber++;
-      if(randomNumber == 10){
-        getRandomNumber();
-      }
-     }, i*250);
+      diceValue = changeSide();
+     }, i*190);
   } 
+  return diceValue;
 }
 
-
-function getRandomNumber() {
-  rndNum = Math.floor((Math.random() * 8) + 1); 
-  alert("Congratulations, Lets Explore scenario: "+rndNum);
-  ubsApp.renderPage(ubsApp.pages[rollingDiceConfig.optionPageMap[rndNum]]);
-  randomNumber = 0;  
-}
 
 

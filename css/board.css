@@ -1,0 +1,292 @@
+.firstLine{
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.responsive {
+    background: #cde6d0;
+    width: 45.5vw;
+    height: 45.5vw;
+    margin: 10px auto;
+}
+
+.mainSquare {
+  height: 100%;
+  outline: 1px dashed #c2dec5;
+  outline-offset: -13px;
+}
+
+.row {
+  width: 100%;
+  margin-left: 0px;
+  margin-right:0px; 
+  display: flex;
+}
+
+.top {
+  height: 14.28571428571429%;
+}
+
+.center {
+  height: 71.42857142857142%;
+}
+.square1 {
+  outline: 1px solid black;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+
+.square2 {
+  flex-grow: 1;
+  outline: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.square9 {
+  flex-grow: 5;
+  outline: 1px solid black;
+  position: relative;
+}
+
+.squareSide {
+  outline: 1px solid black;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.header {
+  height: 100%;
+  position: absolute;
+  
+  background: grey;
+  /* width: 100%; */
+}
+
+.headerSide {
+  /* height: 100%; */
+  width: 100%;
+  position: absolute;
+  
+}
+
+.header-top {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.header-bottom {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.header-left {
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: grey;
+}
+
+.header-right {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: grey;
+}
+
+.firstLine {
+  position: absolute;
+  font-size: 0.7vw;
+  font-weight: 500;
+  line-height: 1vw;
+  text-align: center;
+}
+
+.firstLine-top {
+  left: 1px;
+  right: 1px;
+  bottom: 50%;
+  height: 10%;
+}
+
+.firstLine-top.no-color {
+  bottom: 50%;
+}
+
+.firstLine-left {
+  top: 0px;
+  bottom: 0px;
+  right: 60%;
+}
+
+.firstLine-left.no-color {
+  right: 55%;
+}
+
+.firstLine-right {
+  top: 0;
+  bottom: 0;
+  left: 60%;
+}
+
+.firstLine-right.no-color {
+  left: 60%;
+}
+
+.firstLine-bottom {
+  left: 0;
+  right: 0;
+  top: 40%;
+}
+
+.firstLine-bottom.no-color {
+  top: 50%;
+}
+
+.red {
+  background-color: #ed1b24;
+}
+
+.yellow {
+  background-color: #fef200;
+}
+
+.lightblue {
+  background-color: #aae0fa;
+}
+
+.brown {
+  background-color: #955436;
+}
+
+.blue {
+  background-color: #0072bb;
+}
+
+.green {
+  background-color: #1fb25a;
+}
+
+.orange {
+  background-color: #f7941d;
+}
+
+.purple {
+  background-color: #d93a96;
+}
+.dark-green{
+  background-color: #1a6821;
+}
+.pink{
+   background-color: #cc6699;
+}
+
+.rotation1 {
+  transform: rotate(90deg);
+}
+
+.rotation2 {
+  transform: rotate(0deg);
+}
+
+.rotation3 {
+  transform: rotate(-90deg);
+}
+
+
+.card-blue {
+  background: linear-gradient(#4ccaf4, #a3dff9);
+  transform: rotateZ(-45deg) translateX(-13%) translateY(66%);
+}
+
+.card-blue-inside {
+    background: linear-gradient(#a3dff9, #4ccaf4);
+    width: 94%;
+    height: 94%;
+    margin: 0.3vw auto;
+    position: relative;
+}
+
+.card-orange {
+  background: linear-gradient(#f99120, #f57420);
+  transform: rotateZ(-45deg) translateX(-13%) translateY(610%);
+}
+
+.card-orange-inside {
+    background: linear-gradient(#f57420, #f99120);
+    width: 94%;
+    height: 94%;
+    margin: 0.3vw auto;
+    position: relative;
+}
+
+.corner {
+  position: absolute;
+  text-align: center;
+  line-height: 8vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.corner1 {
+    transform: rotateZ(135deg) translateX(-66%) translateY(-15%);
+}
+
+.corner2 {
+    transform: rotateZ(-135deg) translateX(-30%) translateY(23%);
+    line-height: 9vw;
+}
+
+.corner3 {
+    transform: rotateZ(-45deg) translateX(-14%) translateY(26%);
+    line-height: 1.4vw;
+    font-size: 1vw;
+}
+
+.corner4 {
+    transform: rotateZ(45deg) translateX(-9%) translateY(-31%);
+    line-height: 7vw;
+}
+.dot {
+  height: 1vw;
+  width: 1vw;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.squareCorner {
+  height: 65%;
+  width: 65%;
+  border: 2px solid black;
+  right: -1px;
+  top: -1px;
+  position: absolute;
+}
+
+.corner4-left {
+  position: absolute;
+  transform: rotateZ(90deg) translateX(80%) translateY(-36%);
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.corner4-bottom {
+  position: absolute;
+  transform: translateX(112%) translateY(720%);
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.dot {
+  height: .5vw;
+  width: .5vw;
+  padding: 3px;
+  border-radius: 50%;
+  display: inline-block;
+}

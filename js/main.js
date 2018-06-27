@@ -10,6 +10,7 @@ let ubsTimerTemplate;
 let ubsAudioTemplate;
 let choiceSelected={};
 let timeVar;
+var playerChance = 0; 
 let ubsApp = {};
 var currentanswer=0;
 var answerselected=0;
@@ -18,6 +19,8 @@ var flag=false;
 var interval;
 let audioConfig = {};
 var count=0;
+let screenHeight = $(window).height();
+let screenWidth = $(window).width();
 $(document).ready(function(){
 	//$("#staticTemplate").load("templates/staticTemplate.html"); 
 	//$("#decisionTemplate").load("templates/decisionTemplate.html"); 
@@ -26,17 +29,26 @@ $(document).ready(function(){
 		localStorage.setItem("score","1000");
 		localStorage.setItem("currency","$");
 	}
-	localStorage.score=1000;
-	ubsApp.intitializeTemplates();
-	ubsApp.renderPage(ubsApp.pages.InitPage);
 
+	
+	ubsApp.intitializeTemplates();
 });
 
-
+ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
+if(hideScenarios == "true"){
+	playerChance+=1;
+	$('#templateBase').fadeOut();
+	$('#monopolyBase').fadeIn();
+}
+else ubsApp.renderPageByName(page,amount);
+}
 
 ubsApp.renderPage = function(page) {
 	let html = "";
 	let wheelConfig = {};
+	if(page.templates) {
+		page=page.templates;
+	}
 	flag=false;
 	let timerConfig = {};
 	let scratchCardTemplateConfig = undefined;
@@ -47,31 +59,27 @@ ubsApp.renderPage = function(page) {
 		
 		if(templateType == "static") {
 			html += ubsStaticTemplate(templateConfig);
-			if(templateConfig.display_score)
-			{
+			if(templateConfig.display_score){
 				html += ubsScoreTemplate(ubsApp.pages.score[0]); 
 			}
-			if(templateConfig.score_animation_req)
-			{
+			if(templateConfig.score_animation_req){
 				flag=true;
 			}
 		} else if(templateType == "decision") {
 			html += ubsDecisionTemplate(templateConfig);
 			ubsDecisionOption = templateConfig.options[0].optionName;
-			
-			if(templateConfig.display_score)
-			{ 
+			if(templateConfig.display_score){ 
 				html += ubsScoreTemplate(ubsApp.pages.score[0]); 
 			}
-			if(templateConfig.score_animation_req)
-			{
+			if(templateConfig.score_animation_req){
 				flag=true;
 			}
 			ubsDecisionOptionMap = templateConfig.optionPageMap;
 		} else if (templateType == "wheelOfFortune") {
 			ubsApp.updateTemplateForFortuneWheel(templateConfig, wheelConfig);
 			html += wheelOfFortuneTemplate(templateConfig);
-		} else if(templateType == "timerTemp") {
+		}
+		else if(templateType == "timerTemp") {
 			html+=ubsTimerTemplate(templateConfig)
 			timerConfig=templateConfig;
 		} else if (templateType == "popup") {
@@ -87,7 +95,14 @@ ubsApp.renderPage = function(page) {
         }else if(templateType == "choiceTemplate"){
         	if(ubsApp.areAllChoicesSelected() == true) {
                 choiceSelected={};
-                ubsApp.renderPageByName(templateConfig.nextPage);
+                if(templateConfig.nextPage.page){
+                	ubsApp.renderPageByName(templateConfig.nextPage.page);
+                }
+                else{
+                	playerChance+=1;
+					$('#templateBase').fadeOut();
+					$('#monopolyBase').fadeIn();
+                }
                 return;
             }
 			ubsApp.updateChoiceSelected(templateConfig);
@@ -123,8 +138,8 @@ ubsApp.renderPage = function(page) {
 			html += ubsScoreTemplate(templateConfig); 
 		 }
 	}
-	$("#templateBase").empty();
-	$("#templateBase").append(html);
+	$("#templateContent").empty();
+	$("#templateContent").append(html);
 		
 	if(wheelConfig.segments) {
 		wheelConfig.animation.callbackFinished = ubsWheelOfFortune.alertPrize;
@@ -168,7 +183,6 @@ ubsApp.updateChoiceSelected = function(templateConfig) {
 	 }
 	}
 }
-
 ubsApp.areAllChoicesSelected= function(){
 
     if(jQuery.isEmptyObject(choiceSelected)) {
@@ -182,6 +196,11 @@ ubsApp.areAllChoicesSelected= function(){
      }
 });
     return allSelected;
+}
+ubsApp.updateChoices = function(choiceId, pageName){
+	 ubsApp.renderPageByName(pageName);
+	 choiceSelected[choiceId]=false;
+
 }
 ubsApp.checkSelected= function(){
 
@@ -204,6 +223,7 @@ ubsApp.renderPageByName = function(pageName,amount) {
 	{
 		ubsApp.animate_score(amount);
 	}
+	pageName=pageName.trim();
 	this.renderPage(ubsApp.pages[pageName]);
 }
 
@@ -230,6 +250,8 @@ ubsApp.intitializeTemplates = function() {
 	ubsPopupTemplate = Template7.compile(ubsApp.popupTemplate);
 	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
 	ubsAudioTemplate = Template7.compile(ubsApp.audioTemplate);
+	ubsBoardtemplate = Template7.compile(ubsApp.boardTemplate);
+
 
 }
 
@@ -239,7 +261,8 @@ ubsApp.renderDecisonTemplate = function() {
   clearInterval(timeVar);
   clearInterval(interval);
   clearInterval(timeVar);
-  this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue]]);
+  
+  this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue].page]);
 
 }
 
@@ -250,57 +273,14 @@ ubsApp.updateRollingDiceTemplate = function(template){
     template.diceSceneWidth = windowHeight/3;
 }
 
-ubsApp.updateChoices = function(choiceId, pageName){
-	 ubsApp.renderPageByName(pageName);
-	 choiceSelected[choiceId]=false;
-}
-ubsApp.getScore=function()
-{
-	return parseInt(localStorage.score);
-}
+
 
 ubsApp.getCurrency=function()
 {
 	return localStorage.currency;
 }
 
-ubsApp.addScore=function (earnedScore)
-{
-	var currentScore=localStorage.score;
-	localStorage.score=parseInt(currentScore)+parseInt(earnedScore);
 
-}
-
-ubsApp.animate_score=function(amount)
-{
-	var sc=ubsApp.getScore(); 
-	var target_score=sc+parseInt(amount);
-	
-	if(amount<0)
-	{
-		
-		interval=window.setInterval(function () {
-		sc = sc-1;
-		document.getElementById("headId").innerHTML = sc;
-		if(sc==target_score)
-			clearInterval(interval);
-		}, parseInt(amount)/1000000);
-	}
-	else if(amount>0)
-	{
-
-			interval=window.setInterval(function () {
-			sc = sc+1;
-			document.getElementById("headId").innerHTML = sc;
-			if(sc==target_score)
-				clearInterval(interval);
-			}, parseInt(amount)/1000000);
-	}
-	ubsApp.addScore(parseInt(amount));
-	document.getElementById("headId").innerHTML=ubsApp.getScore();
-	
-	
-}
 
 ubsApp.startTimer=function(temp)
 {
@@ -315,3 +295,54 @@ ubsApp.startTimer=function(temp)
     	},1000);
 }
 
+ubsApp.getScore=function()
+{
+    ubsApp.initializeScoreBoard();
+    return userArray[playerChance].getplayerScore();
+}
+
+ubsApp.addScore=function (earnedScore)
+{
+    var currentScore=userArray[playerChance].getplayerScore();
+    userArray[playerChance].setplayerScore(parseInt(currentScore)+parseInt(earnedScore));
+}
+
+ubsApp.animate_score=function(amount)
+{
+    var sc=ubsApp.getScore(); 
+    var target_score=sc+parseInt(amount);
+    
+    if(amount<0)
+    {
+        
+        interval=window.setInterval(function () {
+        sc = sc-1;
+        document.getElementById("headId").innerHTML = sc;
+        if(sc==target_score)
+            clearInterval(interval);
+        }, parseInt(amount)/1000000);
+    }
+    else if(amount>0)
+    {
+
+            interval=window.setInterval(function () {
+            sc = sc+1;
+            document.getElementById("headId").innerHTML = sc;
+            if(sc==target_score)
+                clearInterval(interval);
+            }, parseInt(amount)/1000000);
+    }
+    ubsApp.addScore(parseInt(amount));
+    document.getElementById("headId").innerHTML=ubsApp.getScore();
+    
+    
+}
+
+ubsApp.initializeScoreBoard=function()
+{
+	document.getElementById("scoreBoard").innerHTML="";
+    for(var j=0;j<parseInt(numplayers);j++)
+    {
+        document.getElementById("scoreBoard").innerHTML+="<div style=\"border:2px solid;padding:2.5px;display:inline-block;width:100%; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;margin-top:2px;\">"+userArray[j].getplayerName()+"  </span>"+ "<span id=\"score\" style=\"float:right;color:white;\">"+userArray[j].getplayerScore()+"<img src=\"images/coin.png\" width=\"35\" height=\"35\" ></span></div><br><br>";
+    }
+}
