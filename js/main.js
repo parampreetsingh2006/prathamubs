@@ -18,7 +18,9 @@ ubsApp.wheelOfFortune = null;
 var flag=false;
 var interval;
 let audioConfig = {};
+
 var count=0;
+var level;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 $(document).ready(function(){
@@ -51,6 +53,7 @@ ubsApp.renderPage = function(page) {
 	}
 	flag=false;
 	let timerConfig = {};
+	let decisionConfig;
 	let scratchCardTemplateConfig = undefined;
 	
 	for(let i=0; i< page.length; i++) {
@@ -66,6 +69,7 @@ ubsApp.renderPage = function(page) {
 				flag=true;
 			}
 		} else if(templateType == "decision") {
+			decisionConfig = templateConfig;
 			html += ubsDecisionTemplate(templateConfig);
 			ubsDecisionOption = templateConfig.options[0].optionName;
 			if(templateConfig.display_score){ 
@@ -171,6 +175,10 @@ ubsApp.renderPage = function(page) {
 	if(Object.keys(timerConfig).length != 0){
 		ubsApp.startTimer(timerConfig);
 		timerConfig={};
+	}
+
+	if(computerRequired){
+		ubsApp.playDecisionTemplate(decisionConfig);
 	}
 }
 
@@ -345,4 +353,33 @@ ubsApp.initializeScoreBoard=function()
     {
         document.getElementById("scoreBoard").innerHTML+="<div style=\"border:2px solid;padding:2.5px;display:inline-block;width:100%; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;margin-top:2px;\">"+userArray[j].getplayerName()+"  </span>"+ "<span id=\"score\" style=\"float:right;color:white;\">"+userArray[j].getplayerScore()+"<img src=\"images/coin.png\" width=\"35\" height=\"35\" ></span></div><br><br>";
     }
+}
+
+
+//Computer Player
+
+ubsApp.chooseAnswer() = function(){
+
+}
+ubsApp.playDecisionTemplate =function(decisionConfig, level){
+
+	var setCorrectProbability;
+	setTimeout({
+    	if(level == "easy"){
+  	 		setCorrectProbability = (Math.floor(Math.random()*2)+2)*10;
+  	 		var currentFactor = 0 ; 
+  	 		var answer = chooseAnswer(decisionConfig, level, category);
+  	 		$("input[name='"+ubsDecisionOption+"'][value='"+answer+"']").attr('checked', true);;
+  	
+     
+     
+  	
+
+
+  }else if(level = "medium"){
+
+  }else if(level="hard"){
+
+  }
+  },2000);
 }

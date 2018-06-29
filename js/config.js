@@ -106,6 +106,7 @@
 						"optionValue": "355",
 						"id":1,
 						"amount":355,
+						"priority": 1
 						//"radio_style":"visibility:hidden",
 						//"for":"1"
 					},
@@ -114,6 +115,7 @@
 						"optionValue": "255",
 						"id":2,
 						"amount":-355,
+						"priority": 2
 						//"radio_style":"visibility:hidden",
 						//"for":"2"
 					},
@@ -122,6 +124,7 @@
 						"optionValue": "155",
 						"id":3,
 						"amount":-355,
+						"priority":3
 						//"radio_style":"visibility:hidden",
 						//"for":"3"
 					}	
@@ -285,17 +288,20 @@
 					"optionName": "q2",
 					"optionValue": "65",
 					"id":"1",
+					"priority":3,
 					"amount":-45
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "55",
 					"id":"2",
+					"priority": 2,
 					"amount":-45
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "45",
+					"priority": 1,
 					"id":"3",
 					"amount":45
 				}	
@@ -461,19 +467,22 @@
 	                "optionName": "q2",
 	                "optionValue": "Rs.30",
 	                "id":"1",
-	                "amount":-10
+	                "amount":-10,
+	                "priority":3
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.11",
 	                "id":"2",
-	                "amount":-10
+	                "amount":-10,
+	                "priority":2
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.10",
 	                "id":"3",
-	                "amount":10
+	                "amount":10,
+	                "priority":1
 	            }
 	        ],
 	        "optionPageMap": {
@@ -635,19 +644,22 @@
 	                "optionName": "q2",
 	                "optionValue": "Rs.200",
 	                "id":"1",
-	                "amount":-150
+	                "amount":-150,
+	                "priority":3
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.150",
 	                "id":"2",
-	                "amount":150
+	                "amount":150,
+	                "priority":1
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.100",
 	                "id":"3",
-	                "amount":-150
+	                "amount":-150,
+	                "priority":2
 	            }
 	        ],
 	        "optionPageMap": {
@@ -835,26 +847,30 @@
 					"optionName": "q1s2",
 					"optionValue": "Show license of shop, registration of shop with local authority, permit from food department to keep perishable items.",
 					"id":1,
-					"amount":100
+					"amount":100,
+					"priority":1
 
 				},
 				{
 					"optionName": "q1s2",
 					"optionValue": "Say to inspector that you don't have the documents and Bribe the inspector.",
 					"id":2,
-					"amount":0
+					"amount":0,
+					"priority":4
 				},
 				{
 					"optionName": "q1s2",
 					"optionValue": "Say that documentation is in progress and just show approval from local authority.",
 					"id":3,
-					"amount":0
+					"amount":0,
+					"priority":2
 				},
 				{
 					"optionName":"q1s2",
 					"optionValue":"None of the above",
 					"id":4,
-					"amount":0
+					"amount":0,
+					"priority":3
 				}
 				],
 			"optionPageMap": {
