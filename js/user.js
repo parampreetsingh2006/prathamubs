@@ -45,6 +45,17 @@ class User{
         return this.isComputer;
     }
 
+    setInventoryScore(inventoryScore)
+    {
+        this.inventoryScore=inventoryScore;
+    }
+
+    getInventoryScore()
+    {
+        return this.inventoryScore;
+    }
+
+    
     setSurpriseScenario(surpirseScenario)
     {
         this.surpriseScenarioArray = [];

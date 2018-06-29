@@ -49,8 +49,57 @@ monopoly.pages = {
             "templateId":1,
             "templateType":"static",
             "score_animation_req":"true",
-            "style":"background-color:black;position:absolute;border-radius:5px;top:10%;left:80%;width:20%;",
-            "src":"<div style=\"color:white; text-align:center;\">Score</div><hr style=\"color:white;\"><div id=\"scoreBoard\" style=\"margin-left:15px;\"></div>",
+            "style":"background-color:black;position:absolute;border-radius:2px;top:5%;left:90%;width:10%;",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" onclick=\"monopoly.openScoreBoard()\" id=\"scoreTitle\">Score</div>",
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 5%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"scoreBoard\" ></div>",
+            "id" : "scoreBoardParent"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "score_animation_req":"true",
+            "style":"background-color:black;position:absolute;border-radius:2px;top:20%;left:90%;width:10%;",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openInventory()\" id=\"inventoryTitle\">Inventory</div>",
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 20%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"inventoryBoard\" ></div>",
+            "id" : "inventoryBoardParent"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "score_animation_req":"true",
+            "style":"background-color:black;position:absolute;border-radius:2px;top:35%;left:90%;width:10%;",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openDocuments()\" id=\"documentTitle\">Documents</div>",
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 35%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"documentBoard\"  ></div>",
+            "id" : "documentBoardParent"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "score_animation_req":"true",
+            "style":"background-color:black;position:absolute;border-radius:2px;top:50%;left:90%;width:10%;",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openMerit()\" id=\"documentTitle\">Merits(Dummy)</div>",
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 50%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"meritBoard\"  ></div>",
+            "id" : "meritBoardParent"
         },
 
         {

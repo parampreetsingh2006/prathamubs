@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 
-ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}}>'+
+ubsApp.staticTemplate ='<div class="{{width}}" id="{{id}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}}>'+
 '		{{src}}'+
 ' </div>'+
 '<div id={{audioId}}></div>';

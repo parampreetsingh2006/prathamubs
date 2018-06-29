@@ -85,6 +85,9 @@ monopoly.renderPageforBoard = function(page) {
   if(flag2)
   {
     ubsApp.initializeScoreBoard();
+    ubsApp.initializeInventory();
+    ubsApp.initializeDocuments();
+    ubsApp.initializeMerit();
   }
 }
 monopoly.myMove = function(count, pId, currentPos) {
@@ -196,6 +199,7 @@ monopoly.initComputerDifficulty=function()
 {
   computerDifficulty={};
     computerDifficulty.difficulty=[];
+    document.getElementById("computerDetails").innerHTML="";
   if(document.getElementById("computer").checked)
   {
     for(var i=0;i<difficultyLevel.length;i++)
@@ -215,7 +219,6 @@ monopoly.initComputerDifficulty=function()
 monopoly.intitializeScenarios=function()
 {
     $.each(ubsApp.pages, function(key, value) {
-        
         if(value.category)
         {
             let scenario = new Scenarios();
@@ -230,4 +233,51 @@ monopoly.intitializeScenarios=function()
             scenariosArray[value.category].push(scenario);
     }
     });
+}
+monopoly.openScoreBoard=function()
+{
+    document.getElementById("scoreBoardParent").style.width= "15%";
+}
+monopoly.closeScoreBoard=function()
+{
+    document.getElementById("scoreBoardParent").style.width="0%";
+}
+
+
+monopoly.openInventory=function()
+{
+  document.getElementById("inventoryBoardParent").style.width="15%";
+}
+monopoly.closeInventory=function()
+{
+  document.getElementById("inventoryBoardParent").style.width="0%";
+}
+
+
+monopoly.openInventory=function()
+{
+  document.getElementById("inventoryBoardParent").style.width="15%";
+}
+monopoly.closeInventory=function()
+{
+  document.getElementById("inventoryBoardParent").style.width="0%";
+}
+
+
+monopoly.openDocuments=function()
+{
+  document.getElementById("documentBoardParent").style.width="15%";
+}
+monopoly.closeDocuments=function()
+{
+  document.getElementById("documentBoardParent").style.width="0%";
+}
+
+monopoly.openMerit=function()
+{
+  document.getElementById("meritBoardParent").style.width="15%";
+}
+monopoly.closeMerit=function()
+{
+  document.getElementById("meritBoardParent").style.width="0%";
 }
