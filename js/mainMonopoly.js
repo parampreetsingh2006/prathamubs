@@ -15,11 +15,13 @@ var surpriseScenarioArray=[];
 var blockCategory=[];
 var scenariosArray=[];
 var tokens = ['Red', 'Blue', 'Green', 'Purple'];
+var difficultyLevel=["Easy","Medium","Hard"];
 var flag2= false;
 
 var object={};
 object.numberOfTokens=[];
-
+var computerDifficulty={};
+computerDifficulty.difficulty=[];
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
   monopoly.intitializeScenarios();
@@ -132,6 +134,8 @@ monopoly.rollDice  = function(){
 }
 
 monopoly.storePlayerDetails=function(){
+    
+    let computerRequired=document.getElementById("computer").checked;
     for(var i=0;i<numplayers;i++)
     {
         let user=new User();
@@ -139,21 +143,32 @@ monopoly.storePlayerDetails=function(){
         user.setplayerScore(1000);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
-        var index=tokens.indexOf($('#list'+i+' option:selected').text());
-        tokens.splice(index,1);
         user.setplayerId("p"+i);
         user.setplayerCurrentPos(0);
         user.setScenarioArray(scenariosArray);
         userArray[i]=user;
+    }
+    if(computerRequired)
+    {
+      let user=new User();
+      user.setplayerName("Computer");
+      user.setplayerScore(1000);
+      user.setIsComputer(true);
+      var level=$('input[name=compRadioLevel]:checked').val();
+      user.setDifficultyLevel(level.toLowerCase());
+      user.setplayerCurrentPos(0);
+      user.setScenarioArray(scenariosArray);
+      user.setplayerColor(tokens[tokens.length-1]);
+      userArray.push(user);
+      numplayers++;
     }
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
 
 monopoly.initPlayers=function(){
-    document.getElementById("take_input").innerHTML="";
     numplayers=document.getElementById("num_players").value;
-    
+    document.getElementById("take_input").innerHTML="";
     if(numplayers<=4)
     {
         for(var i=0;i<numplayers;i++)
@@ -162,7 +177,7 @@ monopoly.initPlayers=function(){
             object.numberOfTokens=[];
             object.nameTitle="Name"+(i+1);
             object.nameId="name"+(i);
-             
+            
             for (var j = 0; j<tokens.length; j++) {
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
@@ -173,8 +188,29 @@ monopoly.initPlayers=function(){
             
             }
             document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
-    } 
+      }
+      
+    }
 }
+monopoly.initComputerDifficulty=function()
+{
+  computerDifficulty={};
+    computerDifficulty.difficulty=[];
+  if(document.getElementById("computer").checked)
+  {
+    for(var i=0;i<difficultyLevel.length;i++)
+    {
+        computerDifficulty.difficulty.push({
+          "radioName":"compRadioLevel",
+          "radioValue":difficultyLevel[i],
+          "radioId":"comp"+i,
+          "text":difficultyLevel[i]
+        }
+        );
+    }
+    document.getElementById("computerDetails").innerHTML+=ubsformTemplate(computerDifficulty);
+  }
+  
 }
 monopoly.intitializeScenarios=function()
 {

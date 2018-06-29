@@ -28,6 +28,23 @@ class User{
             this.salesScenarioArray[i]=salesScenario[i];
         }
     }
+    setIsComputer(isComputer)
+    {
+        this.isComputer=isComputer;
+    }
+    setDifficultyLevel(difficultyLevel)
+    {
+        this.difficultyLevel=difficultyLevel;
+    }
+    getDifficultyLevel()
+    {
+        return this.difficultyLevel;
+    }
+    getIsComputer()
+    {
+        return this.isComputer;
+    }
+
     setSurpriseScenario(surpirseScenario)
     {
         this.surpriseScenarioArray = [];

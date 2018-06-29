@@ -334,9 +334,8 @@ ubsApp.animate_score=function(amount)
     }
     ubsApp.addScore(parseInt(amount));
     document.getElementById("headId").innerHTML=ubsApp.getScore();
-    
-    
 }
+
 
 ubsApp.initializeScoreBoard=function()
 {

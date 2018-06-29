@@ -33,7 +33,7 @@ function mainroll(){
       diceValue = changeSide();
      }, i*190);
   } 
-  return diceValue;
+  
 }
 
 

@@ -67,7 +67,14 @@ monopoly.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="mo
 ' </div>'+
 '<div id={{audioId}}></div>';
 
-monopoly.formTemplate='<br><div class=\"title\" >{{nameTitle}}:</span><input type=\"text\" id=\"{{nameId}}\" style=\"margin-left:9px;\"></input><br><br>'+
-'{{#each numberOfTokens}}'+
-    '<input type=\"radio\" style="display:inline;padding-left:5em; margin-left:22px;" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+
-    '{{/each}}';
+monopoly.formTemplate='{{#if nameTitle}}<br><div class=\"title\" >{{nameTitle}}:</span><input type=\"text\" id=\"{{nameId}}\" style=\"margin-left:9px;\"></input><br><br>{{/if}}'+
+
+'{{#if numberOfTokens}}'+
+    '{{#each numberOfTokens}}'+
+        '<input type=\"radio\" style="display:inline;padding-left:5em; margin-left:22px;" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+
+    '{{/each}}'+
+'{{else}}'+
+    '{{#each difficulty}}'+
+        '<input type=\"radio\" style\"display:inline;padding-left:5em; margin-left:22px;\" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\">{{text}}</label>'+
+    '{{/each}}'+
+'{{/if}}';
