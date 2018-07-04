@@ -1,31 +1,31 @@
+
 body {
-	width: 100wh;
-	height: 90vh;
-	color: #fff;
-	background: linear-gradient(-225deg,rgb(232,199,103), rgb(166,190,101), rgb(85,177,180),rgb(111,182,223));
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 5s ease infinite;
-	-moz-animation: Gradient 5s ease infinite;
-	animation: Gradient 5s ease infinite;
+    width: 100wh;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-225deg,rgb(232,199,103), rgb(166,190,101), rgb(85,177,180),rgb(111,182,223));
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+    animation: Gradient 5s ease infinite;
 }
 
 @keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	20%{
-		background-position: 40% 50%
-	}
-	40%{
-		background-position: 70% 50%
-	}
-	60% {
-		background-position: 100% 50%
-	}
-	80%{
-		background-position: 50% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
+    0% {
+        background-position: 0% 50%
+    }
+    20%{
+        background-position: 40% 50%
+    }
+    40%{
+        background-position: 70% 50%
+    }
+    60% {
+        background-position: 100% 50%
+    }
+    80%{
+        background-position: 50% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
