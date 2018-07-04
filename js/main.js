@@ -22,6 +22,7 @@ var interval;
 let audioConfig = {};
 var count=0;
 var calculatorReq=false;
+
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 $(document).ready(function(){
@@ -40,10 +41,14 @@ $(document).ready(function(){
 ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
 if(hideScenarios == "true"){
 	playerChance+=1;
+
 	$('#monopolyBase').css("z-index",0)
 	$('#templateBase').css("z-index",0)
 	$('#templateContent').css("height",0+'px')
 	document.getElementById("templateContent").innerHTML="";
+
+	//$('#templateBase').fadeOut();
+	//$('#monopolyBase').fadeIn();
 }
 else ubsApp.renderPageByName(page,amount);
 }
@@ -107,10 +112,16 @@ ubsApp.renderPage = function(page) {
                 	ubsApp.renderPageByName(templateConfig.nextPage.page);
                 }
                 else{
+
 					playerChance+=1;
 					document.getElementById("templateContent").style.height="0px";
 					document.getElementById("templateContent").innerHTML="";
 					document.getElementById("templateBase").style.zIndex="0";
+
+                	playerChance+=1;
+					$('#templateBase').fadeOut();
+					$('#monopolyBase').fadeIn();
+
                 }
                 return;
             }
@@ -148,6 +159,7 @@ ubsApp.renderPage = function(page) {
 		 }
 	}
 	$("#templateContent").empty();
+
 	if(calculatorReq)
 	{
 		html+=ubsCalculatorTemplate();
@@ -279,7 +291,6 @@ ubsApp.renderDecisonTemplate = function() {
   clearInterval(timeVar);
   clearInterval(interval);
   clearInterval(timeVar);
- 
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue].page]);
 
 }
@@ -290,6 +301,7 @@ ubsApp.updateRollingDiceTemplate = function(template){
     //$('#rollscene').css('height',windowHeight/3+"px");
     template.diceSceneWidth = windowHeight/3;
 }
+
 
 ubsApp.startTimer=function(temp)
 {
@@ -346,17 +358,17 @@ ubsApp.animate_score=function(amount)
     document.getElementById("headId").innerHTML=ubsApp.getScore();
 }
 
-ubsApp.initializeMerit=function()
-{
-	document.getElementById("meritBoard").innerHTML="";
-	document.getElementById("meritBoard").innerHTML="<button onclick=\"monopoly.closeMerit()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br><br>";
-	for(var j=0;j<parseInt(numplayers);j++)
-    {
-		document.getElementById("meritBoard").innerHTML+="<div style=\"margin-top:7px;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"inventory\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+// ubsApp.initializeMerit=function()
+// {
+// 	document.getElementById("meritBoard").innerHTML="";
+// 	document.getElementById("meritBoard").innerHTML="<button onclick=\"monopoly.closeMerit()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br><br>";
+// 	for(var j=0;j<parseInt(numplayers);j++)
+//     {
+// 		document.getElementById("meritBoard").innerHTML+="<div style=\"margin-top:7px;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"inventory\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
 
-	}	
-	document.getElementById("meritBoard").innerHTML+="<br>";
-}
+// 	}	
+// 	document.getElementById("meritBoard").innerHTML+="<br>";
+// }
 
 ubsApp.openCalculator=function(){
 	document.write("Calculator Opened");
@@ -367,10 +379,6 @@ ubsApp.initializeLeaderBoard=function(category)
 {
 	let leaderBoardObject={}; //new
 	leaderBoardObject.title=category; //new
-	// document.getElementById("leaderBoardTitle").innerHTML=category;
-	// document.getElementById("leaderBoard").innerHTML="";
-	
-	//document.getElementById("leaderBoard").innerHTML="<button onclick=\"monopoly.closeLeaderBoard()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br>";
 	leaderBoardObject.array=[];
 	if(category=="Score")
 	{
@@ -381,7 +389,7 @@ ubsApp.initializeLeaderBoard=function(category)
 				"color":userArray[j].getplayerColor(),
 				"score":userArray[j].getplayerScore()
 			});
-			//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +userArray[j].getplayerScore()+ "<img src=\"images/coin.png\" width=\"25\" height=\"25\" ></span>"  +  "</div><br>";
+			
 		}
 	}
 	else if(category=="Document")
@@ -426,3 +434,103 @@ ubsApp.initializeLeaderBoard=function(category)
 
 	document.getElementById("leaderBoardParent").innerHTML=ubsLeaderBoardTemplate(leaderBoardObject);
 }
+
+ubsApp.startTimer=function(temp)
+{
+    var timeleft = temp.time;
+    timeVar = setInterval(function(){
+		    timeleft--;
+		    document.getElementById(temp.divID).innerHTML = timeleft;
+		    if(timeleft === 0 ){
+		        clearInterval(timeVar);
+		        ubsApp.renderPageByName(temp.redirect);
+		    }
+    	},1000);
+}
+
+ubsApp.getScore=function()
+{
+	ubsApp.initializeScoreBoard();
+	
+    return userArray[playerChance].getplayerScore();
+}
+
+ubsApp.addScore=function (earnedScore)
+{
+    var currentScore=userArray[playerChance].getplayerScore();
+    userArray[playerChance].setplayerScore(parseInt(currentScore)+parseInt(earnedScore));
+}
+
+ubsApp.animate_score=function(amount)
+{
+    var sc=ubsApp.getScore(); 
+    var target_score=sc+parseInt(amount);
+    
+    if(amount<0)
+    {
+        
+        interval=window.setInterval(function () {
+        sc = sc-1;
+        document.getElementById("headId").innerHTML = sc;
+        if(sc==target_score)
+            clearInterval(interval);
+        }, parseInt(amount)/1000000);
+    }
+    else if(amount>0)
+    {
+
+            interval=window.setInterval(function () {
+            sc = sc+1;
+            document.getElementById("headId").innerHTML = sc;
+            if(sc==target_score)
+                clearInterval(interval);
+            }, parseInt(amount)/1000000);
+    }
+    ubsApp.addScore(parseInt(amount));
+    document.getElementById("headId").innerHTML=ubsApp.getScore();
+}
+// ubsApp.initializeScoreBoard=function()
+// {
+// 	document.getElementById("scoreBoard").innerHTML="";
+// 	document.getElementById("scoreBoard").innerHTML="<button onclick=\"monopoly.closeScoreBoard()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br><br>";
+//     for(var j=0;j<parseInt(numplayers);j++)
+//     {
+//         document.getElementById("scoreBoard").innerHTML+="<div style=\"margin-top:7px;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +userArray[j].getplayerScore()+ "<img src=\"images/coin.png\" width=\"25\" height=\"25\" ></span>"  +  "</div><br>";
+// 	}
+// 	document.getElementById("scoreBoard").innerHTML+="<br>";
+// }
+
+// ubsApp.initializeInventory=function()
+// {
+// 	document.getElementById("inventoryBoard").innerHTML="";
+// 	document.getElementById("inventoryBoard").innerHTML="<button onclick=\"monopoly.closeInventory()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br><br>";
+// 	for(var j=0;j<parseInt(numplayers);j++)
+//     {
+// 		document.getElementById("inventoryBoard").innerHTML+="<div style=\"margin-top:7px;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"inventory\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+// 	}	
+// 	document.getElementById("inventoryBoard").innerHTML+="<br>";
+// }
+
+// ubsApp.initializeDocuments=function()
+// {
+// 	document.getElementById("documentBoard").innerHTML="";
+// 	document.getElementById("documentBoard").innerHTML="<button onclick=\"monopoly.closeDocuments()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br><br>";
+// 	for(var j=0;j<parseInt(numplayers);j++)
+//     {
+// 		document.getElementById("documentBoard").innerHTML+="<div style=\"margin-top:7px;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"inventory\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+// 	}	
+// 	document.getElementById("documentBoard").innerHTML+="<br>";
+// }
+
+// ubsApp.initializeMerit=function()
+// {
+// 	document.getElementById("meritBoard").innerHTML="";
+// 	document.getElementById("meritBoard").innerHTML="<button onclick=\"monopoly.closeMerit()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br><br>";
+// 	for(var j=0;j<parseInt(numplayers);j++)
+//     {
+// 		document.getElementById("meritBoard").innerHTML+="<div style=\"margin-top:7px;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"inventory\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+
+// 	}	
+// 	document.getElementById("meritBoard").innerHTML+="<br>";
+
+// }

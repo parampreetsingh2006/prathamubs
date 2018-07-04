@@ -62,7 +62,7 @@ monopoly.pages = {
             "templateId":1,
             "templateType":"static",
             "style":"width: 0px; position: fixed;z-index: 1;height:100%; white-space: nowrap;top: 0%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
-            "id" : "leaderBoardParent"
+            "id" : "leaderBoardParent",
         },
         {
             "templateId":1,
@@ -74,9 +74,24 @@ monopoly.pages = {
         {
             "templateId":1,
             "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 20%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"inventoryBoard\" ></div>",
+            "id" : "inventoryBoardParent"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:35%;left:90%;width:10%;",
             "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Document')\" id=\"documentTitle\">Documents</div>",
+
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 35%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"documentBoard\"  ></div>",
+            "id" : "documentBoardParent"
         },
         {
             "templateId":1,
@@ -84,6 +99,13 @@ monopoly.pages = {
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:50%;left:90%;width:10%;",
             "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Merit')\" id=\"documentTitle\">Merits(Dummy)</div>",
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 50%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"meritBoard\"  ></div>",
+            "id" : "meritBoardParent"
         },
         {
             "templateId": 3,
@@ -234,13 +256,13 @@ monopoly.pages = {
                     {
                     	"id"   : "13",
                         "color":"green",
-                        "title":"SAles",
+                        "title":"Sales",
                         "category" : "Sales"
                     },
                     {
                     	"id"   : "12",
                         "color":"yellow",
-                        "title":"Decision",
+                        "title":"Decision Making",
                         "category" : "Decision Making"
                     }
                     ],

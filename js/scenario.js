@@ -22,7 +22,6 @@ class Scenarios{
    {
        return this.calculator;
    }
-
     setPage(page){
         this.page=page;
     }

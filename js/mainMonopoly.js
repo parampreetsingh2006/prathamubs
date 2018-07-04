@@ -18,6 +18,7 @@ var scenario;
 var tokens = ['Red', 'Blue', 'Green', 'Purple'];
 var difficultyLevel=["Easy","Medium","Hard"];
 var languages=["English", "Hindi"];
+
 var flag2= false;
 
 var object={};
@@ -68,7 +69,8 @@ monopoly.renderPageforBoard = function(page) {
 			    "playerName" :userArray[i].getplayerName(),
 			    "score" : userArray[i].getplayerScore()
 			   });
-      monopoly.initialiseCategory();
+
+     // monopoly.initialiseCategory();
       }
       /*for(var j=0;j<templateConfig.bottom_row.length;j++){
         let key=templateConfig.bottom_row[j].title;
@@ -86,6 +88,8 @@ monopoly.renderPageforBoard = function(page) {
       }*/
       
       console.log(templateConfig);
+
+      monopoly.initialiseCategory();
 			html+=ubsBoardTemplate(templateConfig);
 		}else if(templateType == "rollingDice"){
 			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
@@ -102,6 +106,11 @@ monopoly.renderPageforBoard = function(page) {
   if(flag2)
   {
     ubsApp.initializeLeaderBoard("Score");
+
+    //ubsApp.initializeScoreBoard();
+    //ubsApp.initializeInventory();
+    ///ubsApp.initializeDocuments();
+    //ubsApp.initializeMerit();
   }
 }
 monopoly.myMove = function(count, pId, currentPos) {
@@ -121,23 +130,25 @@ monopoly.myMove = function(count, pId, currentPos) {
   }
   userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
   setTimeout(function(){
-  scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]
-  let currentTemplate=scenario.getTemplate();
-  if(currentTemplate[0].question){
-    //document.write(currentTemplate[0].question);
-    let key=currentTemplate[0].question;
-    monopoly.generateQuestion(key,currentTemplate);
-  }
-  ubsApp.renderPage(scenario.getTemplate());
-  $('#monopolyBase').css("z-index",-10)
-  $('#templateBase').css("z-index",10)
-  
-  document.getElementById("templateContent").style.opacity="0.95";
-  
-  $('#templateContent').css("height",(screenHeight)+'px')
-  $('#templateContent').css("width",(screenWidth-200)+'px')
- 
-}, 500*count+2500);
+        scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]
+        let currentTemplate=scenario.getTemplate();
+        if(currentTemplate[0].question){
+          //document.write(currentTemplate[0].question);
+          let key=currentTemplate[0].question;
+          monopoly.generateQuestion(key,currentTemplate);
+        }
+        console.log(scenario.getTemplate());
+        ubsApp.renderPage(scenario.getTemplate());
+        $('#monopolyBase').css("z-index",-10)
+        $('#templateBase').css("z-index",10)
+        
+        document.getElementById("templateContent").style.opacity="0.95";
+        
+        $('#templateContent').css("height",(screenHeight)+'px')
+        $('#templateContent').css("width",(screenWidth-250)+'px')
+      
+      // $('#templateBase').css("display", "table").fadeIn();
+      }, 500*count+2500);
 }
 
 
@@ -197,7 +208,7 @@ monopoly.storePlayerDetails=function(){
       jsElm.src = "js/"+language+".js";
       // finally insert the element to the body element in order to load the script
       document.head.appendChild(jsElm);  
-    
+
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
@@ -281,5 +292,7 @@ monopoly.generateQuestion=function(key,template){
     var question=ubsApp.translation[key];
     template[0].question=template[0].question.replace(key,question)
     console.log(question);
+    console.log("Hello World")
+    console.log(scenario);
     scenario.setTemplate(template);
 }

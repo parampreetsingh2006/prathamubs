@@ -163,6 +163,7 @@ ubsApp.modalTemplate = 	'<div class="modal animated zoomIn" id="scenarios" tabin
 
 
 ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:6%;"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
+
 ''+
 '</div>';
 
@@ -220,6 +221,7 @@ ubsApp.boardTemplate='<div class="responsive">'+
         '</div>'+
     '</div>'+
 '</div>';
+
 
 ubsApp.calculatorTemplate='<div id="calculator" style="position: absolute;bottom: 2%;left: 5%;">'+
                                 ' <button style="background: url(Images/calculator.png) no-repeat;" onclick="ubsApp.openCalculator()"></button>'+

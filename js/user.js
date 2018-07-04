@@ -268,7 +268,8 @@ getScenario(category,playerChance)
         let object;
         let removeFromUser=false;
         let removeFromAll=false;
-        if(this.scenariosArray==="undefined")
+
+        if(this.scenariosArray===undefined)
         {
             this.setScenarioArray(scenariosArray);
         }
@@ -282,6 +283,7 @@ getScenario(category,playerChance)
         {
             removeFromAll=true;
         }
+
         if(object.getIfCalculatorRequired())
         {
             calculatorReq=true;
@@ -298,7 +300,7 @@ getScenario(category,playerChance)
                 userArray[i].scenariosArray[category].splice(number,1);
             }
         }
-        return object; 
+        return object; //write code to return the object
     }
 
 }   

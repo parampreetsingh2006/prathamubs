@@ -26,7 +26,6 @@
 	// Actual Code Begins here for Monopoly Scenarios 
 	// scenario for sales = choicePage
 	"choicePage": {
-		
 		"repeatforuser":false,
 		"repeatforall":false,
 		"nextPage" :{
@@ -93,6 +92,7 @@
 	},
 	
 	"q1":{
+
 		"category":"Sales",
 		"repeatforuser":false,
 		"repeatforall":false,
@@ -280,18 +280,16 @@
 	},
 		
 	"q2":{
+
 		"category":"Sales",
     	"templates":[
     	{
 			"templateId": 2,
 			"templateType": "decision",
-
 			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
 			"question": "question2",
 			"questionTime":3000,
 			"optionsTime":2000,
-
-			
 			//"display_score":true,			
 			"options": [
 				{
@@ -453,6 +451,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
+
 				//"nextPage" : "choicePage",
 				"hideScenarios" : "true"
 			}
@@ -473,7 +472,6 @@
 			"questionTime":3000,
 			"optionsTime":2000,
 	        //"display_score":true,
-	                   
 	        "options": [
 	        	{
 	                "optionName": "q2",
@@ -517,6 +515,7 @@
 	        "time":21,
 	        "divID":"countdowntimer",
 	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%;",
+
 	        "redirect":"choicePage"
 	     }
     	]
@@ -544,6 +543,7 @@
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
 			//"display_score":true,
+
 			"score_animation_req":"true",
 			"audioId":"q3-wrong-audio",
 		},	 
@@ -595,6 +595,7 @@
 			"onClickPage": {
 				//"nextPage" : "choicePage",
 				"hideScenarios" : "true"
+
 			}
         }
     ]
@@ -696,8 +697,9 @@
 	        "templateId":6,
 	        "templateType":"timerTemp",
 	        "time":21,
-	        "divID":"countdowntimer",
+			"divID":"countdowntimer",
 	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%",
+
 	        "redirect":"choicePage"
 	    }
 	]
@@ -857,6 +859,7 @@
 			//"display_score":true,
 			"templateType": "decision",
 					"question": "<div style='font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Although, we give you an opportunity to recover part of the loss by taking a small quiz. If you answer correctly, then your loss will be reduced.</div><br><span style=' padding-left:2vw;text-shadow: 2px 2px 5px red;color:white'><i>Note:  If you answer incorrectly then your losses will further increase.</span></i><br><br>",			
+
 			"options": [{
 					"optionName": "q1s2",
 					"optionValue": "Show license of shop, registration of shop with local authority, permit from food department to keep perishable items.",
@@ -912,6 +915,7 @@
 			"time":21,
 			"divID":"countdowntimer",
 			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%",
+
 			"redirect":"choicePage"
 		}
 	],
