@@ -158,7 +158,7 @@ monopoly.updateRollingDiceTemplate = function(template){
 }
 
 monopoly.rollDice  = function(){
-  diceVal = mainroll();
+  diceVal = pointRoll();
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
 		playerChance=0;
