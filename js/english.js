@@ -8,5 +8,41 @@ ubsApp.translation={
         "pratham_title_luck":"Luck",
         "pratham_title_purchase":"Purchase",
         "pratham_title_start":"Start",
-        "pratham_title_decision":"Decision Making"
+        "pratham_title_decision":"Decision Making",
+        "close":"close",
+        "scoreSideBar":"Score",
+        "documentSideBar":"Document",
+        "inventorySideBar":"Inventory",
+        "meritSideBar":"Merit",
+
+        "enterPlayers":"Enter the number of Players",
+        "initPageTitle":"Welcome to the Game",
+        "storePlayerDetailsButton":"Next Page",
+        "computerRequiredTitle":"Computer Required?",
+        "playerNameTitle":"Player Name",
+        "diceValueTitle":"Dice Value",
+
+        "easy":"Easy",
+        "medium":"Medium",
+        "hard":"Hard",
+        "name":"Name",
+
+        "nextQuestion":"Next Question!",
+        
+        "q1-correct":"Yay, you answered correct. Your balance increases.",
+        "q1-wrong":">Oops!! you answered incorrect. You lost money.",
+        "q1-vvwrong":">Oops!! you answered incorrect. You lost money.",
+
+        "q2-correct":"Yay, you answered correct. Your balance increases.",
+        "q2-wrong":">Oops!! you answered incorrect. You lost money.",
+        "q2-vvwrong":">Oops!! you answered incorrect. You lost money.",
+
+        "q3-correct":"Yay, you answered correct. Your balance increases.",
+        "q3-wrong":">Oops!! you answered incorrect. You lost money.",
+        "q3-vvwrong":">Oops!! you answered incorrect. You lost money.",
+
+        "q4-correct":"Yay, you answered correct. Your balance increases.",
+        "q4-wrong":">Oops!! you answered incorrect. You lost money.",
+        "q4-vvwrong":">Oops!! you answered incorrect. You lost money.",
+
     }

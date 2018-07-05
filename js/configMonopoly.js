@@ -1,14 +1,35 @@
 monopoly.pages = {
+    "EnterLanguagePage":[
+    
+        {
+            "templateId":1,
+            "templateType":"static",
+            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label style=\"color:white\" for\"english\">English</label></div>",    
+            "style": "position:absolute;margin-left:5%;padding:10px;border-radius:5px; background-color:black; width:70%;top:30%;"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label style=\"color:white\" for\"hindi\">Hindi || हिंदी</label></div>",    
+            "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:50%;margin-left:5%; background-color:black;"
+        },
+        {
+            "templateId":2,
+            "templateType":"static",
+            "src":"<button onclick=\"monopoly.chooseLanguage()\" style=\"color:white;background-color:orange;border:0;padding:5px;\">Choose Language</button>",
+            "style": "position:absolute;padding:10px;border-radius:5px;top:80%;left:35%;margin-left:5%; "
+        }
+    ],
 "InitialisePlayers":[{
         "templateId":1,
         "templateType":"static",
-        "src": "<div style=\" text-align:center; color:white;\">Welcome to the Game</div>" ,
-        "style": "padding:8px;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+        "id":"initPageTitle",
     },
     {
         "templateId":1,
         "templateType":"static",
-        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\">Computer Required?",
+        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\"></label>",
         "style": "position:absolute; right:10%;top:10%;color:black;",
     },
     {
@@ -20,7 +41,7 @@ monopoly.pages = {
     {
         "templateId":1,
         "templateType":"static",
-        "src": "<div >Enter Number of Players</div>" ,
+        "src": "<div id=\"enterPlayers\">Enter Number of Players || खिलाड़ियों की संख्या दर्ज करें</div>" ,
         "style": "position:absolute; left:29%;top:10%;color:black;",
     },
     {
@@ -39,16 +60,15 @@ monopoly.pages = {
         "templateId":1,
         "templateType":"static",
         "style":" top:85%;left:45%;position:absolute;",
-        "src":"<button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\">Next Page</button>",
+        "src":"<button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\" id=\"storePlayerDetailsButton\">Next Page|| अगला पृष्ठ </button>",
     },
-    {
+    /*{
         "templateId":1,
         "templateType":"static",
         "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label for\"english\">English</label>&nbsp&nbsp<input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label for\"hindi\">Hindi</label></div>",
         "style": "position:absolute; left:44%;bottom:3%;"
-    }
+    }*/
 ],
-
 
 	"monopoly": [
         {
@@ -56,7 +76,7 @@ monopoly.pages = {
             "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:5%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" onclick=\"monopoly.openLeaderBoard('Score')\" id=\"scoreTitle\">Score</div>",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" onclick=\"monopoly.openLeaderBoard('Score')\" id=\"scoreSideBar\">Score</div>",
         },
         {
             "templateId":1,
@@ -69,7 +89,7 @@ monopoly.pages = {
             "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:20%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Inventory')\" id=\"inventoryTitle\">Inventory</div>",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Inventory')\" id=\"inventorySideBar\">Inventory</div>",
         },
         {
             "templateId":1,
@@ -83,7 +103,7 @@ monopoly.pages = {
             "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:35%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Document')\" id=\"documentTitle\">Documents</div>",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Document')\" id=\"documentSideBar\">Documents</div>",
 
         },
         {
@@ -91,14 +111,13 @@ monopoly.pages = {
             "templateType":"static",
             "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 35%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
             "src":"<div id=\"documentBoard\"  ></div>",
-            "id" : "documentBoardParent"
         },
         {
             "templateId":1,
             "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:50%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Merit')\" id=\"documentTitle\">Merits(Dummy)</div>",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Merit')\" id=\"meritSideBar\">Merits(Dummy)</div>",
         },
         {
             "templateId":1,
@@ -116,44 +135,44 @@ monopoly.pages = {
                 "players":[],
             	"id"   : "0",
                 "color":"yellow",
-                "title":"Start -->",
+                "title":"pratham_title_start",
                 "start": true
             },
             {
             	"id"   : "1",
                 "color":"green",
-                "title":"Sales",
+                "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
             	"id"   : "2",
                 "color":"green",
-                "title":"Sales",
+                "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
             	"id"   : "3",
                 "color":"dark-green",
-                "title":"Surprise",
+                "title":"pratham_title_surprise",
                 "category" : "Surprise"
             },
             {
             	"id"   : "4",
                 "color":"red",
-                "title":"Purchase",
+                "title":"pratham_title_purchase",
                 "category" : "Purchase"
 
             },
             {
             	"id"   : "5",
                 "color":"green",
-                "title":"Sales",
+                "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
             	"id"   : "6",
                 "color":"pink",
-                "title":"Luck",
+                "title":"pratham_title_luck",
                 "category" : "Luck"
             }
             ],
@@ -162,31 +181,31 @@ monopoly.pages = {
             {
             	"id"   : "23",
                 "color":"green",
-                "title":"Sales",
+                "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
             	"id"   : "22",
                 "color":"green",
-                "title":"Sales",
+                "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
             	"id"   : "21",
                 "color":"dark-green",
-                "title":"Surprise",
+                "title":"pratham_title_surprise",
                 "category" : "Surprise"
             },
             {
             	"id"   : "20",
                 "color":"red",
-                "title":"Purchase",
+                "title":"pratham_title_purchase",
                 "category" : "Purchase"
             },
             {
             	"id"   : "19",
                 "color":"green",
-                "title":"Sales",
+                "title":"pratham_title_sales",
                 "category" : "Sales"
             }
             ],
@@ -194,31 +213,31 @@ monopoly.pages = {
                 {
                 	"id"   : "7",
                     "color":"green",
-                    "title":"Sales",
+                    "title":"pratham_title_sales",
                     "category" : "Sales"
                 },
                 {
                 	"id"   : "8",
                     "color":"green",
-                    "title":"Sales",
+                    "title":"pratham_title_sales",
                     "category" : "Sales"
                 },
                 {
                 	"id"   : "9",
                     "color":"dark-green",
-                    "title":"Surprise",
+                    "title":"pratham_title_surprise",
                     "category" : "Surprise"
                 },
                 {
                 	"id"   : "10",
                     "color":"red",
-                    "title":"Purchase",
+                    "title":"pratham_title_purchase",
                     "category" : "Purchase"
                 },
                 {
                 	"id"   : "11",
                     "color":"green",
-                    "title":"Sales",
+                    "title":"pratham_title_sales",
                     "category" : "Sales"
                 }
                 ],
@@ -226,43 +245,43 @@ monopoly.pages = {
                     {
                     	"id"   : "18",
                         "color":"pink",
-                        "title":"Luck",
+                        "title":"pratham_title_luck",
                         "category" : "Luck"
                     },
                     {
                     	"id"   : "17",
                         "color":"green",
-                        "title":"Sales",
+                        "title":"pratham_title_sales",
                         "category" : "Sales"
                     },
                     {
                     	"id"   : "16",
                         "color":"red",
-                        "title":"Purchase",
+                        "title":"pratham_title_purchase",
                         "category" : "Purchase"
                     },
                     {
                     	"id"   : "15",
                         "color":"dark-green",
-                        "title":"Surprise",
+                        "title":"pratham_title_surprise",
                         "category" : "Surprise"
                     },
                     {
                     	"id"   : "14",
                         "color":"green",
-                        "title":"Sales",
+                        "title":"pratham_title_sales",
                         "category" : "Sales"
                     },
                     {
                     	"id"   : "13",
                         "color":"green",
-                        "title":"Sales",
+                        "title":"pratham_title_sales",
                         "category" : "Sales"
                     },
                     {
                     	"id"   : "12",
                         "color":"yellow",
-                        "title":"Decision Making",
+                        "title":"pratham_title_decision",
                         "category" : "Decision Making"
                     }
                     ],
@@ -272,7 +291,8 @@ monopoly.pages = {
             "templateId":1,
             "templateType":"static",
             "style":"position:absolute;top:50%;left:33%;",
-            "src":"<span> Player Name: <span id='player' style='padding: 1vw'></span></span>&nbsp;<span >Dice Value: <span id='diceval' style='padding: 1vw'></span></span>"
+            "id":"currentChanceDetails",
+            "src":"<span id\"playerNameTitle\"> Player Name: <span id='player' style='padding: 1vw'></span></span>&nbsp;<span id=\"diceValueTitle\">Dice Value: <span id='diceval' style='padding: 1vw'></span></span>"
         },
         {
             "templateId":4,

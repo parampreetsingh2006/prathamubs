@@ -64,7 +64,7 @@ ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div style="position:abso
 '      <div id="class_6" class="cube_face_6">O  O<br>O  O<br>O  O</div>'+
 '    </div>'+
 '    <div class="rollButton">'+
-     '<button onclick="mainroll()" >Roll it </button>'+
+     '<button onclick="mainroll()" id=\"rollItButton\">Roll it </button>'+
 '    </div>'+
 '  </div>'+
 '</div></body>';

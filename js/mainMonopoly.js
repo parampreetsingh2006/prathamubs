@@ -16,7 +16,7 @@ var blockCategory=[];
 var scenariosArray=[];
 var scenario;
 var tokens = ['Red', 'Blue', 'Green', 'Purple'];
-var difficultyLevel=["Easy","Medium","Hard"];
+var difficultyLevel=["easy","medium","hard"];
 var languages=["English", "Hindi"];
 
 var flag2= false;
@@ -28,7 +28,7 @@ computerDifficulty.difficulty=[];
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
   monopoly.intitializeScenarios();
-	monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
 monopoly.intitializeTemplates = function() {
@@ -72,7 +72,8 @@ monopoly.renderPageforBoard = function(page) {
 
      // monopoly.initialiseCategory();
       }
-      /*for(var j=0;j<templateConfig.bottom_row.length;j++){
+      //New Things added
+      for(var j=0;j<templateConfig.bottom_row.length;j++){
         let key=templateConfig.bottom_row[j].title;
         let translatedString=ubsApp.translation[key];
         templateConfig.bottom_row[j].title=translatedString;
@@ -85,7 +86,7 @@ monopoly.renderPageforBoard = function(page) {
       }
       for(var j=0;j<templateConfig.right_col.length;j++){
         templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
-      }*/
+      }
       
       console.log(templateConfig);
 
@@ -102,15 +103,13 @@ monopoly.renderPageforBoard = function(page) {
 
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
-	
+  
+
+  monopoly.translate();
+
   if(flag2)
   {
     ubsApp.initializeLeaderBoard("Score");
-
-    //ubsApp.initializeScoreBoard();
-    //ubsApp.initializeInventory();
-    ///ubsApp.initializeDocuments();
-    //ubsApp.initializeMerit();
   }
 }
 monopoly.myMove = function(count, pId, currentPos) {
@@ -200,15 +199,13 @@ monopoly.storePlayerDetails=function(){
       userArray.push(user);
       numplayers++;
     }
-    var language=$('input[name=languageRadio]:checked').val();
+    // var language=$('input[name=languageRadio]:checked').val();
    
-      var jsElm = document.createElement("script");
-      jsElm.type = "text/javascript";
-      // make the script element load file
-      jsElm.src = "js/"+language+".js";
-      // finally insert the element to the body element in order to load the script
-      document.head.appendChild(jsElm);  
-
+    //   // var jsElm = document.createElement("script");
+    //   // jsElm.type = "text/javascript";
+    //   // jsElm.src = "js/"+language+".js";
+    //   // document.head.appendChild(jsElm);  
+      //console.log(ubsApp.translation["pratham_title_start"]);
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
@@ -222,7 +219,7 @@ monopoly.initPlayers=function(){
         {
             object={};
             object.numberOfTokens=[];
-            object.nameTitle="Name"+(i+1);
+            object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.nameId="name"+(i);
             
             for (var j = 0; j<tokens.length; j++) {
@@ -252,7 +249,7 @@ monopoly.initComputerDifficulty=function()
           "radioName":"compRadioLevel",
           "radioValue":difficultyLevel[i],
           "radioId":"comp"+i,
-          "text":difficultyLevel[i]
+          "text":ubsApp.translation[difficultyLevel[i]]
         }
         );
     }
@@ -295,4 +292,46 @@ monopoly.generateQuestion=function(key,template){
     console.log("Hello World")
     console.log(scenario);
     scenario.setTemplate(template);
+}
+
+monopoly.chooseLanguage=function(){
+  var language=$('input[name=languageRadio]:checked').val();
+  var jsElm = document.createElement("script");
+  jsElm.type = "text/javascript";
+  jsElm.src = "js/"+language+".js";
+  document.head.appendChild(jsElm);
+  jsElm.onload=function(){
+    monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+  }
+}
+
+
+monopoly.translate=function(){
+  if(document.getElementById("scoreSideBar")){
+    document.getElementById("scoreSideBar").innerHTML=ubsApp.translation["scoreSideBar"];
+  document.getElementById("documentSideBar").innerHTML=ubsApp.translation["documentSideBar"];
+  document.getElementById("inventorySideBar").innerHTML=ubsApp.translation["inventorySideBar"];
+  document.getElementById("meritSideBar").innerHTML=ubsApp.translation["meritSideBar"];
+  }
+  
+  if(document.getElementById("initPageTitle"))
+  {
+    document.getElementById("initPageTitle").innerHTML=ubsApp.translation["initPageTitle"];
+  }
+  if(document.getElementById("enterPlayers"))
+    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["enterPlayers"]+":";
+  
+  if(document.getElementById("storePlayerDetailsButton"))
+    document.getElementById("storePlayerDetailsButton").innerHTML=ubsApp.translation["storePlayerDetailsButton"];
+
+  if(document.getElementById("computerRequiredTitle"))
+    document.getElementById("computerRequiredTitle").innerHTML=ubsApp.translation["computerRequiredTitle"];
+  if(document.getElementById("currentChanceDetails"))
+  {
+    let spanString=document.getElementById("currentChanceDetails").innerHTML;
+    spanString=spanString.replace(" Player Name: ",ubsApp.translation["playerNameTitle"]+": ");
+    spanString=spanString.replace("Dice Value: ",ubsApp.translation["diceValueTitle"]+":");
+    document.getElementById("currentChanceDetails").innerHTML=spanString;
+
+  }
 }

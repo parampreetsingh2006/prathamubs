@@ -71,7 +71,14 @@ ubsApp.renderPage = function(page) {
 			calculatorReq=true;
 		}
 		if(templateType == "static") {
+			if(templateConfig.resultId){
+				templateConfig.src=templateConfig.src.replace("Message",ubsApp.translation[templateConfig.resultId]);
+			}
+			if(templateConfig.buttonType){
+				templateConfig.src=templateConfig.src.replace("Message",ubsApp.translation[templateConfig.buttonType]);
+			}
 			html += ubsStaticTemplate(templateConfig);
+
 			if(templateConfig.display_score){
 				html += ubsScoreTemplate(ubsApp.pages.score[0]); 
 			}
@@ -378,10 +385,10 @@ ubsApp.openCalculator=function(){
 ubsApp.initializeLeaderBoard=function(category)
 {
 	let leaderBoardObject={}; //new
-	leaderBoardObject.title=category; //new
+	 //new
 	leaderBoardObject.array=[];
 	if(category=="Score")
-	{
+	{	leaderBoardObject.title=ubsApp.translation["scoreSideBar"];
 		for(var j=0;j<parseInt(numplayers);j++)
     	{ 	//new
 			leaderBoardObject.array.push({
@@ -394,6 +401,7 @@ ubsApp.initializeLeaderBoard=function(category)
 	}
 	else if(category=="Document")
 	{
+		leaderBoardObject.title=ubsApp.translation["documentSideBar"]
 		for(var j=0;j<parseInt(numplayers);j++)
     	{
 				//new
@@ -407,6 +415,7 @@ ubsApp.initializeLeaderBoard=function(category)
 	}
 	else if(category=="Inventory")
 	{
+		leaderBoardObject.title=ubsApp.translation["inventorySideBar"]
 		for(var j=0;j<parseInt(numplayers);j++)
     	{
 			//new
@@ -420,6 +429,7 @@ ubsApp.initializeLeaderBoard=function(category)
 	}
 	else if(category=="Merit")
 	{
+		leaderBoardObject.title=ubsApp.translation["meritSideBar"]
 		for(var j=0;j<parseInt(numplayers);j++)
     	{
 			//new

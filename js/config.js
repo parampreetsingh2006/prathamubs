@@ -148,7 +148,7 @@
 					}
 				},
 				//"width": "col-lg-8 col-md-8 col-xs-8",			
-				"style": "align:center; position:absolute; top:4%; right:20%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 			},
 			{
 				"templateId":6,
@@ -179,7 +179,8 @@
 		{
 		        "templateId": 1,
 				"templateType": "static",
-				"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yay, you answered correct. Your balance increases by 355. His new balance is 355</div> ",
+				"resultId":"q1-correct",
+				"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 				"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",	
 				//"display_score":true,
@@ -190,7 +191,8 @@
 		{
 			    "templateId": 1,
 				"templateType": "static",
-				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+				"buttonType":"nextQuestion",
+				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 				"style":"position:absolute;text-align: center; top:70%",
 				"onClickPage": {
@@ -218,7 +220,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered incorrect. You lost money. Your balance decreases by 255.</div> ",
+			"resultId":"q1-wrong",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -229,7 +232,8 @@
 		{
 		   "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -258,7 +262,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! you answered incorrect. You lost money. Your balance decreases by 255.</div> ",
+			"resultId":"q1-vvwrong",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -268,7 +273,8 @@
 		{
 		    "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -325,8 +331,8 @@
 					"popup":""
 				}
 			},
-			"width": "col-lg-7 col-md-7 col-xs-7",
-			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+			//"width": "col-lg-7 col-md-7 col-xs-7",
+			"style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 		},
 		{
 			"templateId":6,
@@ -356,7 +362,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. You should do calculations more properly.</div> ",
+			"resultId":"q2-vvwrong",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -367,7 +374,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -395,8 +403,9 @@
         {
             "templateId": 1,
             "templateType": "static",
-            "completed":"true",
-            "src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> " ,
+			"completed":"true",
+			"resultId":"q2-wrong",
+            "src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> " ,
 		    "width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
             "completed":"true",
             "style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
@@ -407,7 +416,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -436,7 +446,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!!! you answered correctly. Seems like you are on the right path to be a Businessman.</div> ",
+			"resultId":"q2-correct",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -447,7 +458,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -506,8 +518,8 @@
 					"popup":""
 				}
 	        },
-	        "width": "col-lg-7 col-md-7 col-xs-7",
-	        "style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+	        //"width": "col-lg-7 col-md-7 col-xs-7",
+	        "style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 	    },
 	    {
 	        "templateId":6,
@@ -538,7 +550,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"resultId":"q3-vvwrong",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -550,7 +563,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -578,7 +592,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"resultId":"q3-wrong",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":true,
@@ -589,7 +604,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -618,7 +634,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!! You answered correctly. Your money is increased.</div> ",
+			"resultId":"q3-correct",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":true,
@@ -629,7 +646,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -690,8 +708,8 @@
 					"popup":""
 				}
 	        },
-	        "width": "col-lg-7 col-md-7 col-xs-7",
-	        "style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+	        //"width": "col-lg-7 col-md-7 col-xs-7",
+	        "style": "align-items:center; position:absolute; top:4%; left:15%;width:70%; right:15%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 	    },
 	    {
 	        "templateId":6,
@@ -722,7 +740,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"resultId":"q4-vvwrong",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -733,7 +752,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -760,7 +780,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Oops!! You answered incorrectly. Your money will be deducted!!</div> ",
+			"resultId":"q4-wrong",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -771,7 +792,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
@@ -799,7 +821,8 @@
 		{
 	        "templateId": 1,
 			"templateType": "static",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Yayy!! You answered correctly. Your money is increased.</div> ",
+			"resultId":"q4-correct",
+			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
 			"completed":"true",
@@ -810,7 +833,8 @@
         {
             "templateId": 1,
 			"templateType": "static",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
+			"buttonType":"nextQuestion",
+			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {

@@ -85,5 +85,4 @@ monopoly.formTemplate='{{#if nameTitle}}<br><div class=\"title\" >{{nameTitle}}:
     '{{#each language}}'+
         '<input type=\"radio\" style\"display:inline;padding-left:5em; margin-left:22px;\" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\">{{text}}</label>'+
     '{{/each}}'+
-
 '{{/if}}';
