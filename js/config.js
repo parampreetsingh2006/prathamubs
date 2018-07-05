@@ -26,7 +26,7 @@
 	// Actual Code Begins here for Monopoly Scenarios 
 	// scenario for sales = choicePage
 	"choicePage": {
-		"category":"Sales",
+		//"category":"Sales",
 		"repeatforuser":false,
 		"repeatforall":false,
 		"nextPage" :{
@@ -42,10 +42,13 @@
 			// 				// },
 			{ 		
 				"templateId": 4,
-				"templateType": "choiceTemplate",
+				"templateType": "choice",
 				"display_score":true,
 				"choiceHeightFactor" : 2,
-				"nextPage":"SalesScenario2",
+				"nextPage" :{
+					   "page": "",
+					   "hideScenarios" : "false"		
+					},
 				"choices":[
 			  	    {
 			  	    	"templateId": 1,
@@ -93,6 +96,11 @@
 	},
 	
 	"q1":{
+		"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
 	 	"templates":[
 	 		{
 				"templateId": 2,
@@ -107,8 +115,6 @@
 						"id":1,
 						"amount":355,
 						"priority": 1
-						//"radio_style":"visibility:hidden",
-						//"for":"1"
 					},
 					{
 						"optionName": "q1",
@@ -116,8 +122,6 @@
 						"id":2,
 						"amount":-355,
 						"priority": 2
-						//"radio_style":"visibility:hidden",
-						//"for":"2"
 					},
 					{
 						"optionName":"q1",
@@ -125,8 +129,6 @@
 						"id":3,
 						"amount":-355,
 						"priority":3
-						//"radio_style":"visibility:hidden",
-						//"for":"3"
 					}	
 				],
 				"optionPageMap": {
@@ -153,7 +155,7 @@
 				"time":21,
 				"divID":"countdowntimer",
 				"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:3vw;",
-				"redirect":"choicePage"
+				"redirect":""
 			}
 		]
 	},
@@ -161,7 +163,7 @@
 	"q1-correct":{
 		"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/Buzzercorrect.mp3",
 			"audioId":"q1-correct-audio",
 		},
@@ -191,8 +193,8 @@
 				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 				"style":"position:absolute;text-align: center; top:70%",
 				"onClickPage": {
-					"nextPage" : "choicePage",
-					"hideScenarios" : "false",
+					"nextPage" : "",
+					"hideScenarios" : "true",
 				}
 		}
 	]
@@ -208,7 +210,7 @@
 			"style": "padding:5px;position:absolute;top:10%"	
 		},
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q1-wrong-audio",
 		},
@@ -230,8 +232,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
 		}
 	]
@@ -240,7 +242,7 @@
 	"q1-vvwrong":{
     	"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q1-wrong-audio",
 		},
@@ -269,14 +271,19 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
 		}
 	    ]
 	},
 		
 	"q2":{
+		"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
     	"templates":[
     	{
 			"templateId": 2,
@@ -337,7 +344,7 @@
 	"q2-vvwrong":{
     	"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q2-wrong-audio",
 		},
@@ -366,8 +373,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
 		}
         ]
@@ -376,7 +383,7 @@
     "q2-wrong":{
     	"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q2-wrong-audio",
 		},
@@ -406,8 +413,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
 		}
         ]
@@ -417,7 +424,7 @@
     	"templates":[
 
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/Buzzercorrect.mp3",
 			"audioId":"q2-correct-audio",
 		},
@@ -446,8 +453,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
 		}
         ]
@@ -456,6 +463,11 @@
     //Question 3 
 
     "q3": {
+    	"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
     	"templates":[
     	{
 	        "templateId": 2,
@@ -464,21 +476,21 @@
 	        "question": "<div style='font-size:1.35vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.He wants to return few items and purchase some new.<br>He wants to return<br>1kg Onion - Rs.19<br>1 kg of Potato- Rs 34<br><br> He wants to purchase <br>1.5kg Tomato<br> 1kg Cabbage<br>Per kg cost of tomato/cabbage is 26/24 rupees<br> Can you tell how much money should you return pay?</div>",           
 	        "options": [
 	        	{
-	                "optionName": "q2",
+	                "optionName": "q3",
 	                "optionValue": "Rs.30",
 	                "id":"1",
 	                "amount":-10,
 	                "priority":3
 	            },
 	            {
-	                "optionName": "q2",
+	                "optionName": "q3",
 	                "optionValue": "Rs.11",
 	                "id":"2",
 	                "amount":-10,
 	                "priority":2
 	            },
 	            {
-	                "optionName": "q2",
+	                "optionName": "q3",
 	                "optionValue": "Rs.10",
 	                "id":"3",
 	                "amount":10,
@@ -516,7 +528,7 @@
     "q3-vvwrong":{
     	"templates":[
 	    {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q3-wrong-audio",
 		},
@@ -545,8 +557,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
    		}
    	]
@@ -555,7 +567,7 @@
     "q3-wrong":{
     	"templates":[
 	    {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q3-wrong-audio",
 		},
@@ -584,8 +596,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
         }
     ]
@@ -594,7 +606,7 @@
     "q3-correct":{
     	"templates":[
     	{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/Buzzercorrect.mp3",
 			"audioId":"q3-correct-audio",
 		},
@@ -623,8 +635,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
         }
     ]
@@ -633,6 +645,11 @@
     //Question 4
 
     "q4": {
+    	"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
     	"templates":[
     	{
 	        "templateId": 2,
@@ -693,7 +710,7 @@
     "q4-vvwrong":{
     	"templates":[
         {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q4-wrong-audio",
 		},
@@ -722,8 +739,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
         }
    	]
@@ -731,7 +748,7 @@
     "q4-wrong":{
     	"templates":[
         {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q4-wrong-audio",
 		},
@@ -760,8 +777,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
         }
     ]
@@ -770,7 +787,7 @@
     "q4-correct":{
     	"templates":[
         {
-				"templateType":"audioTemplate",
+				"templateType":"audio",
 				"audioSrc":"audio/Buzzercorrect.mp3",
 				"audioId":"q4-correct-audio",
 		},
@@ -799,20 +816,215 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
         }
     ]
 },
+
+"q6":{
+		"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
+	 	"templates":[
+	 		{
+				"templateId": 2,
+				"templateType": "decision",
+				"question": "<div style='font-size:1.8vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like one customer wants to purchase items:<br>1.5kg Rice<br>2.5kg Dal<br>1 kg Atta<br><br> Cost of Rice/Dal/Atta per kg is 60/90/40 rupees respectively.<br> Can you tell how much money will you take from Customer?</div>",
+				"answer":"355",
+				"display_score":true,
+				"options": [
+				    {
+						"optionName":"q1", 
+						"optionValue": "355",
+						"id":1,
+						"amount":355,
+						"priority": 1
+						//"radio_style":"visibility:hidden",
+						//"for":"1"
+					},
+					{
+						"optionName": "q1",
+						"optionValue": "255",
+						"id":2,
+						"amount":-355,
+						"priority": 2
+						//"radio_style":"visibility:hidden",
+						//"for":"2"
+					},
+					{
+						"optionName":"q1",
+						"optionValue": "155",
+						"id":3,
+						"amount":-355,
+						"priority":3
+						//"radio_style":"visibility:hidden",
+						//"for":"3"
+					}	
+				],
+				"optionPageMap": {
+					"1":{
+						"page": "q1-correct",
+						"popup":""
+					},
+					"2": {
+						"page": "q1-wrong",
+						"popup":""
+					},
+					"3": {
+						"page": "q1-vvwrong",
+						"popup":""
+					}
+				},
+				"width": "col-lg-8 col-md-8 col-xs-8",
+				"asnwer":"355",			
+				"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+			},
+			{
+				"templateId":6,
+				"templateType":"timerTemp",
+				"time":21,
+				"divID":"countdowntimer",
+				"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:3vw;",
+				"redirect":""
+			}
+		]
+	},
 	
-	
+"q7": {
+    	"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
+    	"templates":[
+    	{
+	        "templateId": 2,
+	        "templateType": "decision",
+	        "display_score":true,
+	        "question": "<div style='font-size:1.35vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.He wants to return few items and purchase some new.<br>He wants to return<br>1kg Onion - Rs.19<br>1 kg of Potato- Rs 34<br><br> He wants to purchase <br>1.5kg Tomato<br> 1kg Cabbage<br>Per kg cost of tomato/cabbage is 26/24 rupees<br> Can you tell how much money should you return pay?</div>",           
+	        "options": [
+	        	{
+	                "optionName": "q3",
+	                "optionValue": "Rs.30",
+	                "id":"1",
+	                "amount":-10,
+	                "priority":3
+	            },
+	            {
+	                "optionName": "q3",
+	                "optionValue": "Rs.11",
+	                "id":"2",
+	                "amount":-10,
+	                "priority":2
+	            },
+	            {
+	                "optionName": "q3",
+	                "optionValue": "Rs.10",
+	                "id":"3",
+	                "amount":10,
+	                "priority":1
+	            }
+	        ],
+	        "optionPageMap": {
+	            "1":{
+					"page": "q3-vvwrong",
+					"popup":""
+				},
+				"2":{
+					"page": "q3-wrong",
+					"popup":""
+				},
+				"3":{
+					"page": "q3-correct",
+					"popup":""
+				}
+	        },
+	        "width": "col-lg-7 col-md-7 col-xs-7",
+	        "style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+	    },
+	    {
+	        "templateId":6,
+	        "templateType":"timerTemp",
+	        "time":21,
+	        "divID":"countdowntimer",
+	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:3vw;",
+	        "redirect":"choicePage"
+	     }
+    	]
+    },
+
+ "q8":{
+		"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
+    	"templates":[
+    	{
+			"templateId": 2,
+			"templateType": "decision",
+			"display_score":true,
+			"question": "<div style='font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - Rs.60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should Sardarji return to customer?</div>",			
+			"options": [
+				{
+					"optionName": "q2",
+					"optionValue": "65",
+					"id":"1",
+					"priority":3,
+					"amount":-45
+				},
+				{
+					"optionName": "q2",
+					"optionValue": "55",
+					"id":"2",
+					"priority": 2,
+					"amount":-45
+				},
+				{
+					"optionName": "q2",
+					"optionValue": "45",
+					"priority": 1,
+					"id":"3",
+					"amount":45
+				}	
+			],
+			"optionPageMap": {
+				"1":{
+					"page": "q2-vvwrong",
+					"popup":""
+				},
+				"2":{
+					"page": "q2-wrong",
+					"popup":""
+				},
+				"3":{
+					"page": "q2-correct",
+					"popup":""
+				}
+			},
+			"width": "col-lg-7 col-md-7 col-xs-7",
+			"style": "align:center; position:absolute; top:4%; right:20%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+		},
+		{
+			"templateId":6,
+			"templateType":"timerTemp",
+			"time":21,
+			"divID":"countdowntimer",
+			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:3vw;",
+			"redirect":"choicePage"
+		}
+		]
+	},
 
 //Scenario 2 - Agricultue Sector
 
 	"SalesScenario2":{
 
-		"category":"Sales",
+		//"category":"Sales",
 		"repeatforuser":false,
 		"repeatforall":false,
 		"templates":[
@@ -836,10 +1048,15 @@
 		]
 	},
 
-	"q1s2":[ //question 1 scenario 2
+	"q5":{ //question 1 scenario 2
+    	"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":false,
+		"questionTime":3000,
+		"optionsTime":2000,
+		"templates":[
 		{
 			"templateId": 2,
-			"answer":"0",
 			"display_score":true,
 			"templateType": "decision",
 					"question": "<div style='font-size:1.8vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;'>Although, we give you an opportunity to recover part of the loss by taking a small quiz. If you answer correctly, then your loss will be reduced.</div><br><span style=' padding-left:2vw;text-shadow: 2px 2px 5px red;color:white'><i>Note:  If you answer incorrectly then your losses will further increase.</span></i><br><br>",			
@@ -904,7 +1121,10 @@
 			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:3vw;",
 			"redirect":"choicePage"
 		}
-	],
+	]
+},
+
+
 
 	"q1s2c":{
     	"templates":[
@@ -1003,7 +1223,7 @@
 },
 			
 	"customerCheating":{
-		"category":"Sales",
+		//"category":"Sales",
 		"repeatforuser":false,
 		"repeatforall":false,
 		"templates":[

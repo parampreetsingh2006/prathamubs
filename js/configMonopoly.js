@@ -8,6 +8,18 @@ monopoly.pages = {
     {
         "templateId":1,
         "templateType":"static",
+        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\">Computer Required?",
+        "style": "position:absolute; right:10%;top:10%;color:black;",
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "src":"<div id=\"computerDetails\"></div>",
+        "style": "position:absolute; right:10%;top:20%;"
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
         "src": "<div >Enter Number of Players</div>" ,
         "style": "position:absolute; left:29%;top:10%;color:black;",
     },
@@ -15,7 +27,7 @@ monopoly.pages = {
         "templateId":1,
         "templateType":"static",
         "style":"position:absolute;left:45%;top:10%;",
-        "src":"<input type=\"number\"  id=\"num_players\"oninput=\"monopoly.initPlayers()\"></input><br><br>",
+        "src":"<input type=\"number\"  id=\"num_players\"   oninput=\"monopoly.initPlayers()\"></input><br><br>",
     },
     {
         "templateId":1,

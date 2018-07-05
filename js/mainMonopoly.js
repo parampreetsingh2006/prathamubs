@@ -1,21 +1,35 @@
-ubsApp.monopoly = {};
-var monopoly = ubsApp.monopoly;
-var ubsBoardTemplate;
-var ubsMonopolyStaticTemplate;
-var ubsformTemplate;
-var boardConfig;
-var numplayers ;
-var userArray=[];
-var salesScenarioArray=[];
-var luckScenarioArray=[];
-var playerChance=0;
-var purchaseScenarioArray=[];
-var done_initialising=false;
-var surpriseScenarioArray=[];
-var blockCategory=[];
-var scenariosArray=[];
-var tokens = ['Red', 'Blue', 'Green', 'Purple'];
-var flag2= false;
+monopoly.ubsBoardTemplate = undefined;
+monopoly.ubsMonopolyStaticTemplate =undefined;
+monopoly.ubsformTemplate = undefined;
+monopoly.boardConfig={};
+monopoly.salesScenarioArray=[];
+monopoly.luckScenarioArray=[];
+monopoly.purchaseScenarioArray=[];
+monopoly.done_initialising=false;
+monopoly.surpriseScenarioArray=[];
+monopoly.blockCategory=[];
+monopoly.scenariosArray=[];
+monopoly.tokens = ['Red', 'Blue', 'Green', 'Purple'];
+monopoly.difficultyLevel=["Easy","Medium","Hard"];
+monopoly.flag2= false;
+monopoly.computerDifficulty={};
+
+var ubsBoardTemplate = monopoly.ubsBoardTemplate;
+var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
+var ubsformTemplate= monopoly.ubsformTemplate;
+var boardConfig = monopoly.boardConfig;
+var salesScenarioArray=monopoly.salesScenarioArray;
+var luckScenarioArray=monopoly.luckScenarioArray;
+var purchaseScenarioArray=monopoly.purchaseScenarioArray;
+var done_initialising=monopoly.done_initialising;
+var surpriseScenarioArray=monopoly.surpriseScenarioArray;
+var blockCategory=monopoly.blockCategory;
+var scenariosArray=monopoly.scenariosArray;
+var tokens =monopoly.tokens;
+var difficultyLevel=monopoly.difficultyLevel;
+var flag2=monopoly.flag2;
+var computerDifficulty=monopoly.computerDifficulty;
+computerDifficulty.difficulty=[];
 
 
 $(document).ready(function(){
@@ -81,32 +95,44 @@ monopoly.renderPageforBoard = function(page) {
   if(flag2)
   {
     ubsApp.initializeScoreBoard();
+    $("#player").html(userArray[playerChance].getplayerName());
   }
+}
+// monopoly.playComputer = function(div){
+//     div.addEventListener('playComputer', function (e) {
+//         ubsApp.playDecisionTemplate(e.detail);
+//     });
+//   }
+
+
+monopoly.startScenarios = function(blockNo){
+  setTimeout(function(){
+      var scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
+      $("#monopolyBase").fadeOut();
+      $('#templateContent').css("height", screenHeight+'px')
+      $('#templateContent').css("width", screenWidth+'px')
+      $('#templateBase').css("display", "table").fadeIn();
+      ubsApp.renderPage(scenario.getTemplate());
+  },1000);
+
 }
 monopoly.myMove = function(count, pId, currentPos) {
   var temp="#p"+pId;
   var playerToken = $(temp);
   var blockNo = currentPos;   
   var movePlayer = setInterval(frame, 500);
-  function frame() {
-    if (blockNo == (currentPos+count)%boardConfig.blocks) {
+  function frame(){
+    if (blockNo == (currentPos+count)%boardConfig.blocks){
+      userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
       clearInterval(movePlayer);
-    } else {
+      monopoly.startScenarios(blockNo);
+    } 
+    else{
       blockNo++;
       blockNo %= boardConfig.blocks;
-      
       $("#" + blockNo).append(playerToken);
     }
   }
-  userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
-  setTimeout(function(){
-  var scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]
-  ubsApp.renderPage(scenario.getTemplate());
-  $("#monopolyBase").fadeOut();
-  $('#templateContent').css("height", screenHeight+'px')
-  $('#templateContent').css("width", screenWidth+'px')
-  $('#templateBase').css("display", "table").fadeIn();
-}, 500*count+2500);
 }
 
 
@@ -116,49 +142,65 @@ monopoly.updateRollingDiceTemplate = function(template){
 }
 
 monopoly.rollDice  = function(){
+  $('#rollIt').attr('disabled',true);
   diceVal = mainroll();
-	setTimeout(function(){ 
-	if(playerChance >= numplayers){
-		playerChance=0;
-	}
-	$("#player").html(userArray[playerChance].getplayerName());
-	$("#diceval").html(diceVal);	
-      monopoly.myMove(diceVal, playerChance, userArray[playerChance].getplayerCurrentPos());   //update Real time dice Value
-    },3000);
-  
-	
+	setTimeout(function(){
+    playerChance%=numplayers;
+    $("#player").html(userArray[playerChance].getplayerName()); 
+  	$("#diceval").html(diceVal);	
+    monopoly.myMove(diceVal, playerChance, userArray[playerChance].getplayerCurrentPos());  
+  },3000); 
 }
 
 monopoly.storePlayerDetails=function(){
-    for(var i=0;i<numplayers;i++)
+    var i=0;
+    let computerRequired=document.getElementById("computer").checked;
+    for( i=0;i<numplayers;i++)
     {
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
-        user.setplayerColor( $("input[name='Radio" +i+ "'  ]:checked").val());
-        var index=tokens.indexOf($('#list'+i+' option:selected').text());
-        tokens.splice(index,1);
+        var color=$('input[name=Radio'+i+']:checked').val();
+        user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
         user.setplayerCurrentPos(0);
         user.setScenarioArray(scenariosArray);
         userArray[i]=user;
+    }
+    if(computerRequired)
+    {
+      let user=new User();
+      user.setplayerName("Computer");
+      user.setplayerScore(1000);
+      user.setIsComputer(true);
+      var level=$('input[name=compRadioLevel]:checked').val();
+      user.setDifficultyLevel(level.toLowerCase());
+      user.setCorrectProbability(level);
+      user.setplayerCurrentPos(0);
+      user.setplayerId("p"+i);
+      user.setScenarioArray(scenariosArray);
+      user.setplayerColor(tokens[tokens.length-1]);
+      user.setCorrectAnswered(0);
+      userArray.push(user);
+      numplayers++;
     }
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
 
 monopoly.initPlayers=function(){
-    document.getElementById("take_input").innerHTML="";
     numplayers=document.getElementById("num_players").value;
+    document.getElementById("take_input").innerHTML="";
     if(numplayers<=4)
     {
         for(var i=0;i<numplayers;i++)
         {
+
             var object={};
             object.nameTitle="Name"+(i+1);
             object.numberOfTokens=[];
             object.nameId="name"+(i);
-            object.numberTokens = 4;
+            
             for (var j = 0; j<tokens.length; j++) {
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
@@ -169,9 +211,30 @@ monopoly.initPlayers=function(){
             
             }
             document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
-    } 
+      }
+      
+    }
 }
+monopoly.initComputerDifficulty=function()
+{
+  computerDifficulty={};
+    computerDifficulty.difficulty=[];
+  if(document.getElementById("computer").checked)
+  {
+    for(var i=0;i<difficultyLevel.length;i++)
+    {
+          computerDifficulty.difficulty.push({
+          "radioName":"compRadioLevel",
+          "radioValue":difficultyLevel[i],
+          "radioId":"comp"+i,
+          "text":difficultyLevel[i]
+        }
+        );
+    }
+    document.getElementById("computerDetails").innerHTML+=ubsformTemplate(computerDifficulty);
+  } 
 }
+
 monopoly.intitializeScenarios=function()
 {
     $.each(ubsApp.pages, function(key, value) {
@@ -182,12 +245,12 @@ monopoly.intitializeScenarios=function()
             scenario.setCategory(value.category);
             scenario.setTemplate(value.templates);
             scenario.setRepeatForAllUsers(true);
-            scenario.setRepeatforUser(false);
+            scenario.setRepeatforUser(true);
             if(scenariosArray[value.category]==null)
             {
                 scenariosArray[value.category]=[];
             }
             scenariosArray[value.category].push(scenario);
-    }
+        }
     });
 }
