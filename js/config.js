@@ -109,7 +109,7 @@
 
 	 	"templates":[
 	 		{
-				"templateId": 2,
+				"templateId": 1,
 				"templateType": "decision",
 				"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
 				"question": "question1",
@@ -201,6 +201,7 @@
 				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 				"style":"position:absolute;text-align: center; top:70%",
 				"id":"nextQuestion",
+				"conclusionTime":2000,
 				"onClickPage": {
 					"nextPage" : "",
 					"hideScenarios" : "true",
@@ -241,6 +242,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -281,6 +283,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -387,6 +390,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -428,6 +432,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -469,6 +474,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -489,7 +495,7 @@
 		"category":"Sales",
     	"templates":[
     	{
-	        "templateId": 2,
+	        "templateId": 3,
 			"templateType": "decision",
 			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
 			"question": "question3",
@@ -581,6 +587,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -620,6 +627,8 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -660,6 +669,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -679,7 +689,7 @@
 		"optionsTime":2000,
     	"templates":[
     	{
-	        "templateId": 2,
+	        "templateId": 4,
 			"templateType": "decision",
 			
 			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
@@ -773,6 +783,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -812,6 +823,7 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"id":"nextQuestion",
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
@@ -851,7 +863,8 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
+			"id":"nextQuestion",			
+			"conclusionTime":2000,
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"

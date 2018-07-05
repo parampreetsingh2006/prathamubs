@@ -489,7 +489,7 @@ ubsApp.chooseAnswer = function(decisionConfig, correctProbability, number){
 ubsApp.playStaticTemplate = function(staticConfig){
 	setTimeout(function(){
 		$('#'+staticConfig.id).trigger('click');
-	},2000);
+	},staticConfig.conclusionTime);
 }
 
 ubsApp.playDecisionTemplate =function(decisionConfig){
