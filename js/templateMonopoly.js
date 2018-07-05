@@ -24,7 +24,7 @@ monopoly.boardTemplate='<div class="responsive">'+
                     '</div>'+
                 '{{/each}}'+
             '</div>'+    
-            '<div class="square9"></div>'+
+            '<div class="square9" ></div>'+
             
             '<div class="square2">'+
                 '{{#each right_col}}'+
@@ -46,7 +46,8 @@ monopoly.boardTemplate='<div class="responsive">'+
     '</div>'+
 '</div>';
 
-monopoly.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:35%; left:45%;">'+
+monopoly.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:32%; left:37%;">'+
+
 '  <div class="rollscene" id="rollscene" style= "height:{{diceSceneWidth}}px; display:table; margin:auto;"}>'+
 '    <div onclick="mainroll()" class="cube">'+
 '      <div id="class_1" class="cube_face_1">O</div>'+
@@ -73,8 +74,16 @@ monopoly.formTemplate='{{#if nameTitle}}<br><div class=\"title\" >{{nameTitle}}:
     '{{#each numberOfTokens}}'+
         '<input type=\"radio\" style="display:inline;padding-left:5em; margin-left:22px;" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+
     '{{/each}}'+
-'{{else}}'+
+
+'{{/if}}'+
+'{{#if difficulty}}'+
     '{{#each difficulty}}'+
         '<input type=\"radio\" style\"display:inline;padding-left:5em; margin-left:22px;\" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\">{{text}}</label>'+
     '{{/each}}'+
+'{{/if}}'+
+'{{#if language}}'+
+    '{{#each language}}'+
+        '<input type=\"radio\" style\"display:inline;padding-left:5em; margin-left:22px;\" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\">{{text}}</label>'+
+    '{{/each}}'+
+
 '{{/if}}';

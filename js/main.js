@@ -10,12 +10,16 @@ let ubsScoreTemplate;
 let ubsPopupTemplate;
 let ubsTimerTemplate;
 let ubsAudioTemplate;
+let ubsCalculatorTemplate;
+let ubsLeaderBoardTemplate;
 let choiceSelected={};
 let timeVar;
 var answerselected=0;         //whyGlobal
 ubsApp.wheelOfFortune = null;
 var interval;				//whyGlobal
 let audioConfig = {};
+var count=0;
+var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
@@ -48,6 +52,9 @@ ubsApp.getStaticTemplate = function(templateConfig, tempVar){
 	}
 	if(templateConfig.score_animation_req){
 		tempVar.flag=true;
+	}
+	if(templateConfig.onClickPage){
+		tempVar.staticConfig = templateConfig;
 	}
 }
 
@@ -84,7 +91,6 @@ ubsApp.getRollingDiceTemplate = function(templateConfig, tempVar){
 	ubsApp.updateRollingDiceTemplate(templateConfig);
 	tempVar.html += rollingDiceTemplate(templateConfig);
 }
-
 ubsApp.getScratchCardTemplate = function(templateConfig, tempVar){
     scratchCardTemplateConfig=templateConfig;
     preProcessScratchCardConfig(templateConfig);
@@ -142,25 +148,33 @@ ubsApp.renderPage = function(page) {
 	tempVar.html = "";
 	tempVar.wheelConfig = {};
 	tempVar.timerConfig = {};
-	tempVar.scratchCardTemplateConfig = undefined;
+	tempVar.staticConfig = {};
 	tempVar.decisionConfig = {};
+	tempVar.scratchCardTemplateConfig = undefined;
 	tempVar.flag=false;
+
 
 	for(let i=0; i< page.length; i++) {
 		let templateConfig = page[i];
 		let templateType = templateConfig.templateType;
 		eval(templateMap[templateType])(templateConfig,tempVar);
+
 	}
 
 	$("#templateContent").empty();
+	if(calculatorReq)
+	{
+		tempVar.html+=ubsCalculatorTemplate();
+	}
 	$("#templateContent").append(tempVar.html);
-		
+
 	if(tempVar.wheelConfig.segments){
 		tempVar.wheelConfig.animation.callbackFinished = ubsWheelOfFortune.alertPrize;
 	    ubsApp.wheelOfFortune = new Winwheel(tempVar.wheelConfig, true);
 	} else if (tempVar.scratchCardTemplateConfig) {
 	    initScratchCard(tempVar.scratchCardTemplateConfig);
 	}
+	
 	if(audioConfig.audioSrc){
 		var divElement = document.getElementById(audioConfig.audioId);
 		if(divElement != null) {
@@ -174,19 +188,27 @@ ubsApp.renderPage = function(page) {
 
     if(Object.keys(tempVar.decisionConfig).length!=0 && userArray[playerChance].getIsComputer() ){
 		ubsApp.playDecisionTemplate(tempVar.decisionConfig);
+		tempVar.decisionConfig={};	
     }
 
-	if($('#headId').length > 0) {
-		if(tempVar.flag){
-				ubsApp.animate_score(answerselected);
-		}
-		document.getElementById("headId").innerHTML=ubsApp.getScore();
+    if(Object.keys(tempVar.staticConfig).length!=0 && userArray[playerChance].getIsComputer() ){
+    	ubsApp.playStaticTemplate(tempVar.staticConfig);
+    	tempVar.staticConfig={};
 	}
 		
 	if(Object.keys(tempVar.timerConfig).length != 0 && !userArray[playerChance].getIsComputer()	){
 		ubsApp.startTimer(tempVar.timerConfig);
-		tempVar.timerConfig={};
+		tempVar.timerConfig={};	
 	}
+
+	ubsApp.addScore(parseInt(answerselected));
+	answerselected=0;
+	/*if($('#headId').length > 0) {
+		if(flag){
+				ubsApp.animate_score(answerselected);
+		}
+		document.getElementById("headId").innerHTML=ubsApp.getScore();
+	}*/
 }
 
 ubsApp.mapTemplatetoFunction = function(){
@@ -277,8 +299,8 @@ ubsApp.intitializeTemplates = function() {
 	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
 	ubsAudioTemplate = Template7.compile(ubsApp.audioTemplate);
 	ubsBoardtemplate = Template7.compile(ubsApp.boardTemplate);
-
-
+	ubsCalculatorTemplate=Template7.compile(ubsApp.calculatorTemplate);
+	ubsLeaderBoardTemplate=Template7.compile(ubsApp.leaderBoardTemplate);
 }
 
 ubsApp.renderDecisonTemplate = function() {
@@ -287,7 +309,6 @@ ubsApp.renderDecisonTemplate = function() {
   clearInterval(timeVar);
   clearInterval(interval);
   clearInterval(timeVar);
-  
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue].page]);
 
 }
@@ -298,18 +319,79 @@ ubsApp.updateRollingDiceTemplate = function(template){
 }
 
 
-
-ubsApp.getCurrency=function()
-{
-	return localStorage.currency;
+ubsApp.openCalculator=function(){
+	document.write("Calculator Opened");
 }
 
 
+ubsApp.initializeLeaderBoard=function(category)
+{
+	let leaderBoardObject={}; //new
+	leaderBoardObject.title=category; //new
+	leaderBoardObject.array=[];
+	if(category=="Score")
+	{
+		leaderBoardObject.title = ubsApp.translation["scoreSideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{ 	//new
+			leaderBoardObject.array.push({
+				"name":userArray[j].getplayerName(),
+				"color":userArray[j].getplayerColor(),
+				"score":userArray[j].getplayerScore()
+			});
+			
+		}
+	}
+	else if(category=="Document")
+	{
+		leaderBoardObject.title = ubsApp.translation["documentSideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{
+				//new
+				leaderBoardObject.array.push({
+					"name":userArray[j].getplayerName(),
+					"color":userArray[j].getplayerColor(),
+					"document":"Dummy Text"
+				});
+        	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummt Text"+ "</span>"  +  "</div><br>";
+		}
+	}
+	else if(category=="Inventory")
+	{
+		leaderBoardObject.title = ubsApp.translation["inventorySideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{
+			//new
+			leaderBoardObject.array.push({
+				"name":userArray[j].getplayerName(),
+				"color":userArray[j].getplayerColor(),
+				"inventory":"Dummy Text"
+			});
+        	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+		}
+	}
+	else if(category=="Merit")
+	{
+		leaderBoardObject.title = ubsApp.translation["meritSideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{
+			//new
+			leaderBoardObject.array.push({
+				"name":userArray[j].getplayerName(),
+				"color":userArray[j].getplayerColor(),
+				"merit":"Dummy Text"
+			});
+        	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+		}
+	}
+
+	document.getElementById("leaderBoardParent").innerHTML=ubsLeaderBoardTemplate(leaderBoardObject);
+}
 
 ubsApp.startTimer=function(temp){
     var timeleft = temp.time;
     timeVar = setInterval(function(){
-	    timeleft++;
+	    timeleft--;
 	    document.getElementById(temp.divID).innerHTML = timeleft;
 	    if(timeleft === 0 ){
 	        clearInterval(timeVar);
@@ -321,8 +403,10 @@ ubsApp.startTimer=function(temp){
 ubsApp.nextMove = function(){
 			playerChance+=1;
 	        playerChance%=numplayers;
-			$('#templateBase').fadeOut();
-			$('#monopolyBase').fadeIn();
+			$('#monopolyBase').css("z-index",0)
+			$('#templateBase').css("z-index",0)
+			$('#templateContent').css("height",0+'px')
+			document.getElementById("templateContent").innerHTML="";
 			$('#rollIt').attr('disabled',false);
 			$("#player").html(userArray[playerChance].getplayerName());
 			$("#diceval").html(" ");
@@ -336,7 +420,8 @@ ubsApp.nextMove = function(){
 }
 ubsApp.getScore=function()
 {
-    ubsApp.initializeScoreBoard();
+	ubsApp.initializeScoreBoard();
+	
     return userArray[playerChance].getplayerScore();
 }
 
@@ -346,8 +431,7 @@ ubsApp.addScore=function (earnedScore)
     userArray[playerChance].setplayerScore(parseInt(currentScore)+parseInt(earnedScore));
 }
 
-ubsApp.animate_score=function(amount)
-{
+ubsApp.animate_score=function(amount){
     var sc=ubsApp.getScore(); 
     var target_score=sc+parseInt(amount);
     
@@ -376,16 +460,6 @@ ubsApp.animate_score=function(amount)
 }
 
 
-ubsApp.initializeScoreBoard=function()
-{
-	document.getElementById("scoreBoard").innerHTML="";
-    for(var j=0;j<parseInt(numplayers);j++)
-    {
-        document.getElementById("scoreBoard").innerHTML+="<div style=\"border:2px solid;padding:2.5px;display:inline-block;width:100%; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;margin-top:2px;\">"+userArray[j].getplayerName()+"  </span>"+ "<span id=\"score\" style=\"float:right;color:white;\">"+userArray[j].getplayerScore()+"<img src=\"images/coin.png\" width=\"35\" height=\"35\" ></span></div><br><br>";
-    }
-
-}
-
 
 //Computer Player
 
@@ -412,9 +486,12 @@ ubsApp.chooseAnswer = function(decisionConfig, correctProbability, number){
 		}
 	}	
 }
-ubsApp.playStaticTemplate = function(){
-	$('#nextQuestion').trigger('click');
+ubsApp.playStaticTemplate = function(staticConfig){
+	setTimeout(function(){
+		$('#'+staticConfig.id).trigger('click');
+	},2000);
 }
+
 ubsApp.playDecisionTemplate =function(decisionConfig){
     var player= userArray[playerChance];
 	var correctProbability = player.getCorrectProbability();
@@ -430,9 +507,7 @@ ubsApp.playDecisionTemplate =function(decisionConfig){
  			$('#submitQuestion').attr('disabled', false);
  			$("input[type=radio]").attr('disabled', false);
  			$('#submitQuestion').trigger('click');
- 			setTimeout(function(){
- 				ubsApp.playStaticTemplate();
- 			},2000);
  		},decisionConfig.optionsTime);
   	},decisionConfig.questionTime);
 }
+

@@ -47,6 +47,17 @@ class User{
     {
         return this.isComputer;
     }
+
+
+    setInventoryScore(inventoryScore)
+    {
+        this.inventoryScore=inventoryScore;
+    }
+
+    getInventoryScore()
+    {
+        return this.inventoryScore;
+    }
     setScenarioArray(scenariosArray)    
     {
         this.scenariosArray=[];
@@ -104,6 +115,7 @@ getScenario(category,playerChance)
         let object;
         let removeFromUser=false;
         let removeFromAll=false;
+
         if(this.scenariosArray===undefined)
         {
             this.setScenarioArray(scenariosArray);
@@ -117,6 +129,11 @@ getScenario(category,playerChance)
         if(object.getRepeatforAllUsers()==false)
         {
             removeFromAll=true;
+        }
+
+        if(object.getIfCalculatorRequired())
+        {
+            calculatorReq=true;
         }
         if(removeFromUser)
         {

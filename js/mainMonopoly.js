@@ -1,3 +1,4 @@
+
 monopoly.ubsBoardTemplate = undefined;
 monopoly.ubsMonopolyStaticTemplate =undefined;
 monopoly.ubsformTemplate = undefined;
@@ -13,6 +14,7 @@ monopoly.tokens = ['Red', 'Blue', 'Green', 'Purple'];
 monopoly.difficultyLevel=["Easy","Medium","Hard"];
 monopoly.flag2= false;
 monopoly.computerDifficulty={};
+monopoly.scenario = undefined;
 
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
@@ -29,13 +31,15 @@ var tokens =monopoly.tokens;
 var difficultyLevel=monopoly.difficultyLevel;
 var flag2=monopoly.flag2;
 var computerDifficulty=monopoly.computerDifficulty;
-computerDifficulty.difficulty=[];
+var scenario =  monopoly.scenario;
+
+
 
 
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
   monopoly.intitializeScenarios();
-	monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
 monopoly.intitializeTemplates = function() {
@@ -76,9 +80,24 @@ monopoly.renderPageforBoard = function(page) {
 			    "playerName" :userArray[i].getplayerName(),
 			    "score" : userArray[i].getplayerScore()
 			   });
+      }
+
+      for(var j=0;j<templateConfig.bottom_row.length;j++){
+        let key=templateConfig.bottom_row[j].title;
+        let translatedString=ubsApp.translation[key];
+        templateConfig.bottom_row[j].title=translatedString;
+      }
+      for(var j=0;j<templateConfig.top_row.length;j++){
+        templateConfig.top_row[j].title=ubsApp.translation[templateConfig.top_row[j].title];
+      }
+      for(var j=0;j<templateConfig.left_col.length;j++){
+        templateConfig.left_col[j].title=ubsApp.translation[templateConfig.left_col[j].title];
+      }
+      for(var j=0;j<templateConfig.right_col.length;j++){
+        templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
+      }
 
       monopoly.initialiseCategory();
-      }
 			html+=ubsBoardTemplate(templateConfig);
 		}else if(templateType == "rollingDice"){
 			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
@@ -89,14 +108,17 @@ monopoly.renderPageforBoard = function(page) {
 		}
   }
 
+
+
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
 	
-  if(flag2)
-  {
-    ubsApp.initializeScoreBoard();
-    $("#player").html(userArray[playerChance].getplayerName());
-  }
+	monopoly.translate();
+  if(flag2) {
+
+     ubsApp.initializeLeaderBoard("Score");
+     $("#player").html(userArray[playerChance].getplayerName()); 
+}
 }
 // monopoly.playComputer = function(div){
 //     div.addEventListener('playComputer', function (e) {
@@ -107,12 +129,21 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      var scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
-      $("#monopolyBase").fadeOut();
-      $('#templateContent').css("height", screenHeight+'px')
-      $('#templateContent').css("width", screenWidth+'px')
-      $('#templateBase').css("display", "table").fadeIn();
-      ubsApp.renderPage(scenario.getTemplate());
+      scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
+        let currentTemplate=scenario.getTemplate();
+        if(currentTemplate[0].question){
+          
+          let key=currentTemplate[0].question;
+          monopoly.generateQuestion(key,currentTemplate);
+        }
+        $('#monopolyBase').css("z-index",-10)
+        $('#templateBase').css("z-index",10)
+        
+        document.getElementById("templateContent").style.opacity="0.95";
+        
+        $('#templateContent').css("height",(screenHeight)+'px')
+        $('#templateContent').css("width",(screenWidth-250)+'px')
+        ubsApp.renderPage(scenario.getTemplate());
   },1000);
 
 }
@@ -184,6 +215,15 @@ monopoly.storePlayerDetails=function(){
       userArray.push(user);
       numplayers++;
     }
+    //var language=$('input[name=languageRadio]:checked').val();
+   
+      // var jsElm = document.createElement("script");
+      // jsElm.type = "text/javascript";
+      // // make the script element load file
+      // jsElm.src = "js/"+language+".js";
+      // // finally insert the element to the body element in order to load the script
+      // document.head.appendChild(jsElm);  
+
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
@@ -200,7 +240,7 @@ monopoly.initPlayers=function(){
             object.nameTitle="Name"+(i+1);
             object.numberOfTokens=[];
             object.nameId="name"+(i);
-            
+            object.numberOfTokens=[];
             for (var j = 0; j<tokens.length; j++) {
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
@@ -219,6 +259,7 @@ monopoly.initComputerDifficulty=function()
 {
   computerDifficulty={};
     computerDifficulty.difficulty=[];
+    document.getElementById("computerDetails").innerHTML="";
   if(document.getElementById("computer").checked)
   {
     for(var i=0;i<difficultyLevel.length;i++)
@@ -238,7 +279,6 @@ monopoly.initComputerDifficulty=function()
 monopoly.intitializeScenarios=function()
 {
     $.each(ubsApp.pages, function(key, value) {
-        
         if(value.category)
         {
             let scenario = new Scenarios();
@@ -246,6 +286,7 @@ monopoly.intitializeScenarios=function()
             scenario.setTemplate(value.templates);
             scenario.setRepeatForAllUsers(true);
             scenario.setRepeatforUser(true);
+            scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
             {
                 scenariosArray[value.category]=[];
@@ -253,4 +294,57 @@ monopoly.intitializeScenarios=function()
             scenariosArray[value.category].push(scenario);
         }
     });
+}
+
+monopoly.openLeaderBoard=function(category){
+  ubsApp.initializeLeaderBoard(category);
+  document.getElementById("leaderBoardParent").style.width="15%";
+}
+
+monopoly.closeLeaderBoard=function(){
+  document.getElementById("leaderBoardParent").style.width="0%";
+}
+
+monopoly.generateQuestion=function(key,template){
+    var question=ubsApp.translation[key];
+    template[0].question=template[0].question.replace(key,question)
+    // console.log(question);
+    // console.log("Hello World")
+    // console.log(scenario);
+    scenario.setTemplate(template);
+}
+monopoly.chooseLanguage=function(){
+  var language=$('input[name=languageRadio]:checked').val();
+  var jsElm = document.createElement("script");
+  jsElm.type = "text/javascript";
+  jsElm.src = "js/"+language+".js";
+  document.head.appendChild(jsElm);
+  monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+}
+
+monopoly.translate=function(){
+  if(document.getElementById("scoreSideBar")){
+    document.getElementById("scoreSideBar").innerHTML=ubsApp.translation["scoreSideBar"];
+  	document.getElementById("documentSideBar").innerHTML=ubsApp.translation["documentSideBar"];
+  	document.getElementById("inventorySideBar").innerHTML=ubsApp.translation["inventorySideBar"];
+  	document.getElementById("meritSideBar").innerHTML=ubsApp.translation["meritSideBar"];
+  }
+  if(document.getElementById("enterPlayers"))
+    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["playerNameTitle"];
+  
+  if(document.getElementById("initPageTitle"))
+    document.getElementById("initPageTitle").innerHTML=ubsApp.translation["initPageTitle"];
+
+  if(document.getElementById("storePlayerDetailsButton"))
+    document.getElementById("storePlayerDetailsButton").innerHTML=ubsApp.translation["storePlayerDetailsButton"];
+
+  if(document.getElementById("computer"))
+    document.getElementById("computer").innerHTML=ubsApp.translation["computer"];
+  if(document.getElementById("currentChanceDetails"))
+  {
+    let spanString=document.getElementById("currentChanceDetails").innerHTML;
+    spanString=spanString.replace(" Player Name: ",ubsApp.translation["playerNameTitle"]+": ");
+    spanString=spanString.replace("Dice Value: ",ubsApp.translation["diceValueTitle"]+":");
+    document.getElementById("currentChanceDetails").innerHTML=spanString;
+  }
 }

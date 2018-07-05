@@ -5,15 +5,21 @@
 
 .responsive {
     background: #cde6d0;
-    width: 45.5vw;
-    height: 45.5vw;
-    margin: 10px auto;
+    width: 80vw;
+    height: 46.5vw;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .mainSquare {
   height: 100%;
   outline: 1px dashed #c2dec5;
   outline-offset: -13px;
+}
+
+.square9{
+  background: #cde6d0;
 }
 
 .row {
@@ -101,8 +107,8 @@
 
 .firstLine {
   position: absolute;
-  font-size: 0.7vw;
-  font-weight: 500;
+  font-size: 0.8vw;
+  font-weight: 600;
   line-height: 1vw;
   text-align: center;
 }
@@ -125,13 +131,13 @@
 }
 
 .firstLine-left.no-color {
-  right: 55%;
+  right: 60%;
 }
 
 .firstLine-right {
   top: 0;
   bottom: 0;
-  left: 60%;
+  left: 60%!important;
 }
 
 .firstLine-right.no-color {

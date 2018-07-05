@@ -1,7 +1,7 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
+ubsApp.staticTemplate ='<div class="{{width}}" id="{{id}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}}>'+
 
-ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPage}} id = "nextQuestion" onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}}>'+
 '		{{src}}'+
 ' </div>'+
 '<div id={{audioId}}></div>';
@@ -11,12 +11,12 @@ ubsApp.staticTemplate ='<div class="{{width}}" style="{{style}}" {{#if onClickPa
 ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '			'+
 '		'+
-'		<div>{{question}}<br></div>'+
+'		<div style="{{questionStyle}}">{{question}}</div><br>'+
 '		<div>'+
 '				'+
 '			{{#each options}}'+
-'			 <div  style="color: black;background-color:rgb(153, 230, 255);border-radius: 2vw;padding:.5vw;font-size:1.3vw;"> <input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
-'            <span style="display:none" id="{{id}}Amount">{{amount}}</span>' + 
+'			 <div  style="color: black;background-color:rgb(153, 230, 255);border-radius: 2vw;padding:.5vw;font-size:0.9vw;"> <input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
+'<span style="display:none" id="{{id}}Amount">{{amount}}</span>' + 
 '			{{/each}}    '+
 '				'+
 '		</div>'+
@@ -161,7 +161,8 @@ ubsApp.modalTemplate = 	'<div class="modal animated zoomIn" id="scenarios" tabin
 
 
 
-ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:fixed; top:1vw; right:6vw"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
+ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:6%;"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
+
 ''+
 '</div>';
 
@@ -221,20 +222,26 @@ ubsApp.boardTemplate='<div class="responsive">'+
 '</div>';
 
 
+ubsApp.calculatorTemplate='<div id="calculator" style="position: absolute;bottom: 2%;left: 5%;">'+
+                                ' <button style="background: url(Images/calculator.png) no-repeat;" onclick="ubsApp.openCalculator()"></button>'+
+                            '</div>';
 
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
+ubsApp.leaderBoardTemplate=
+    '<div id=\"leaderBoardTitle\" style=\"color:white;\" >'+
+        '{{title}}'+
+    '</div>'+
+    '<hr style=\"color:white;\"><br>'+
+    '<div id=\"leaderBoard\" >'+
+        '<button onclick=\"monopoly.closeLeaderBoard()\" style=\"align:center;background-color:black;border:0;color:white;\">Close</button><br>'+
+        '{{#each array}}'+
+        '<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:{{color}};\">'+
+            '<span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">{{name}}:</span>'+
+            '<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">{{score}}{{inventory}}{{document}}{{merit}}'+
+            '{{#if score}}'+
+                '<img src=\"images/coin.png\" width=\"25\" height=\"25\" >'+
+            '{{/if}}'+
+            '</span>'+
+            '</div><br>'+
+        '{{/each}}'+
+        
+    '</div><br>';

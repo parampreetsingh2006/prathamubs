@@ -13,8 +13,15 @@ class Scenarios{
     {
         this.name=name;
     }
-   
+   setIfCalculatorRequired(calculator)
+   {
+       this.calculator=calculator;
+   }
 
+   getIfCalculatorRequired()
+   {
+       return this.calculator;
+   }
     setPage(page){
         this.page=page;
     }
