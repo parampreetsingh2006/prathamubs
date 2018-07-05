@@ -58,7 +58,7 @@ monopoly.boardTemplate='<div class="responsive">'+
 '      <div id="class_6" class="cube_face_6">O  O<br>O  O<br>O  O</div>'+
 '    </div>'+
 '    <div class="rollButton">'+
-     '<button onclick="monopoly.rollDice()" >Roll it </button>'+
+     '<button id ="rollIt" onclick="monopoly.rollDice()" >Roll it </button>'+
 '    </div>'+
 '  </div>'+
 '</div></body>';*/
@@ -103,7 +103,7 @@ monopoly.rollingDiceTemplate =
 '          <div class="divot six-6"></div>'+
 '        </div>'+
 '      </div>'+
-'  <button id=\'pointRollButton\' class=\'roll-button\' style="left: 15%;top: 45%;position: absolute;" onclick="monopoly.rollDice()">Roll it</button>'+
+'  <button id=\'rollIt\' class=\'roll-button\' style="left: 15%;top: 45%;position: absolute;" onclick="monopoly.rollDice()">Roll it</button>'+
 ''+
 ''+
 '    </div> '+

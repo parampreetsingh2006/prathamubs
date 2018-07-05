@@ -1,34 +1,45 @@
-ubsApp.monopoly = {};
-var monopoly = ubsApp.monopoly;
-var ubsBoardTemplate;
-var ubsMonopolyStaticTemplate;
-var ubsformTemplate;
-var boardConfig;
-var numplayers ;
-var userArray=[];
-var salesScenarioArray=[];
-var luckScenarioArray=[];
-var playerChance=0;
-var purchaseScenarioArray=[];
-var done_initialising=false;
-var surpriseScenarioArray=[];
-var blockCategory=[];
-var scenariosArray=[];
-var scenario;
-var tokens = ['Red', 'Blue', 'Green', 'Purple'];
-var difficultyLevel=["Easy","Medium","Hard"];
-var languages=["English", "Hindi"];
 
-var flag2= false;
+monopoly.ubsBoardTemplate = undefined;
+monopoly.ubsMonopolyStaticTemplate =undefined;
+monopoly.ubsformTemplate = undefined;
+monopoly.boardConfig={};
+monopoly.salesScenarioArray=[];
+monopoly.luckScenarioArray=[];
+monopoly.purchaseScenarioArray=[];
+monopoly.done_initialising=false;
+monopoly.surpriseScenarioArray=[];
+monopoly.blockCategory=[];
+monopoly.scenariosArray=[];
+monopoly.tokens = ['Red', 'Blue', 'Green', 'Purple'];
+monopoly.difficultyLevel=["Easy","Medium","Hard"];
+monopoly.flag2= false;
+monopoly.computerDifficulty={};
+monopoly.scenario = undefined;
 
-var object={};
-object.numberOfTokens=[];
-var computerDifficulty={};
-computerDifficulty.difficulty=[];
+var ubsBoardTemplate = monopoly.ubsBoardTemplate;
+var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
+var ubsformTemplate= monopoly.ubsformTemplate;
+var boardConfig = monopoly.boardConfig;
+var salesScenarioArray=monopoly.salesScenarioArray;
+var luckScenarioArray=monopoly.luckScenarioArray;
+var purchaseScenarioArray=monopoly.purchaseScenarioArray;
+var done_initialising=monopoly.done_initialising;
+var surpriseScenarioArray=monopoly.surpriseScenarioArray;
+var blockCategory=monopoly.blockCategory;
+var scenariosArray=monopoly.scenariosArray;
+var tokens =monopoly.tokens;
+var difficultyLevel=monopoly.difficultyLevel;
+var flag2=monopoly.flag2;
+var computerDifficulty=monopoly.computerDifficulty;
+var scenario =  monopoly.scenario;
+
+
+
+
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
   monopoly.intitializeScenarios();
-	monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
 monopoly.intitializeTemplates = function() {
@@ -69,10 +80,9 @@ monopoly.renderPageforBoard = function(page) {
 			    "playerName" :userArray[i].getplayerName(),
 			    "score" : userArray[i].getplayerScore()
 			   });
-
-     // monopoly.initialiseCategory();
       }
-      /*for(var j=0;j<templateConfig.bottom_row.length;j++){
+
+      for(var j=0;j<templateConfig.bottom_row.length;j++){
         let key=templateConfig.bottom_row[j].title;
         let translatedString=ubsApp.translation[key];
         templateConfig.bottom_row[j].title=translatedString;
@@ -85,9 +95,7 @@ monopoly.renderPageforBoard = function(page) {
       }
       for(var j=0;j<templateConfig.right_col.length;j++){
         templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
-      }*/
-      
-      console.log(templateConfig);
+      }
 
       monopoly.initialiseCategory();
 			html+=ubsBoardTemplate(templateConfig);
@@ -100,45 +108,34 @@ monopoly.renderPageforBoard = function(page) {
 		}
   }
 
+
+
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
 	
-  if(flag2)
-  {
-    ubsApp.initializeLeaderBoard("Score");
+	monopoly.translate();
+  if(flag2) {
 
-    //ubsApp.initializeScoreBoard();
-    //ubsApp.initializeInventory();
-    ///ubsApp.initializeDocuments();
-    //ubsApp.initializeMerit();
-  }
+     ubsApp.initializeLeaderBoard("Score");
+     $("#player").html(userArray[playerChance].getplayerName()); 
 }
-monopoly.myMove = function(count, pId, currentPos) {
-  var temp="#p"+pId;
-  var playerToken = $(temp);
-  var blockNo = currentPos;   
-  var movePlayer = setInterval(frame, 500);
-  function frame() {
-    if (blockNo == (currentPos+count)%boardConfig.blocks) {
-      clearInterval(movePlayer);
-    } else {
-      blockNo++;
-      blockNo %= boardConfig.blocks;
-      
-      $("#" + blockNo).append(playerToken);
-    }
-  }
-  userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
+}
+// monopoly.playComputer = function(div){
+//     div.addEventListener('playComputer', function (e) {
+//         ubsApp.playDecisionTemplate(e.detail);
+//     });
+//   }
+
+
+monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-        scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]
+      scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
         let currentTemplate=scenario.getTemplate();
         if(currentTemplate[0].question){
-          //document.write(currentTemplate[0].question);
+          
           let key=currentTemplate[0].question;
           monopoly.generateQuestion(key,currentTemplate);
         }
-        console.log(scenario.getTemplate());
-        ubsApp.renderPage(scenario.getTemplate());
         $('#monopolyBase').css("z-index",-10)
         $('#templateBase').css("z-index",10)
         
@@ -146,9 +143,27 @@ monopoly.myMove = function(count, pId, currentPos) {
         
         $('#templateContent').css("height",(screenHeight)+'px')
         $('#templateContent').css("width",(screenWidth-250)+'px')
-      
-      // $('#templateBase').css("display", "table").fadeIn();
-      }, 500*count+2500);
+        ubsApp.renderPage(scenario.getTemplate());
+  },1000);
+
+}
+monopoly.myMove = function(count, pId, currentPos) {
+  var temp="#p"+pId;
+  var playerToken = $(temp);
+  var blockNo = currentPos;   
+  var movePlayer = setInterval(frame, 500);
+  function frame(){
+    if (blockNo == (currentPos+count)%boardConfig.blocks){
+      userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
+      clearInterval(movePlayer);
+      monopoly.startScenarios(blockNo);
+    } 
+    else{
+      blockNo++;
+      blockNo %= boardConfig.blocks;
+      $("#" + blockNo).append(playerToken);
+    }
+  }
 }
 
 
@@ -158,6 +173,7 @@ monopoly.updateRollingDiceTemplate = function(template){
 }
 
 monopoly.rollDice  = function(){
+  //$('#rollIt').attr('disabled',true);
   diceVal = pointRoll();
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
@@ -167,14 +183,12 @@ monopoly.rollDice  = function(){
 	$("#diceval").html(diceVal);	
       monopoly.myMove(diceVal, playerChance, userArray[playerChance].getplayerCurrentPos());   //update Real time dice Value
     },3000);
-  
-	
 }
 
 monopoly.storePlayerDetails=function(){
-    
+    var i=0;
     let computerRequired=document.getElementById("computer").checked;
-    for(var i=0;i<numplayers;i++)
+    for( i=0;i<numplayers;i++)
     {
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
@@ -194,20 +208,23 @@ monopoly.storePlayerDetails=function(){
       user.setIsComputer(true);
       var level=$('input[name=compRadioLevel]:checked').val();
       user.setDifficultyLevel(level.toLowerCase());
+      user.setCorrectProbability(level);
       user.setplayerCurrentPos(0);
+      user.setplayerId("p"+i);
       user.setScenarioArray(scenariosArray);
       user.setplayerColor(tokens[tokens.length-1]);
+      user.setCorrectAnswered(0);
       userArray.push(user);
       numplayers++;
     }
-    var language=$('input[name=languageRadio]:checked').val();
+    //var language=$('input[name=languageRadio]:checked').val();
    
-      var jsElm = document.createElement("script");
-      jsElm.type = "text/javascript";
-      // make the script element load file
-      jsElm.src = "js/"+language+".js";
-      // finally insert the element to the body element in order to load the script
-      document.head.appendChild(jsElm);  
+      // var jsElm = document.createElement("script");
+      // jsElm.type = "text/javascript";
+      // // make the script element load file
+      // jsElm.src = "js/"+language+".js";
+      // // finally insert the element to the body element in order to load the script
+      // document.head.appendChild(jsElm);  
 
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
@@ -220,11 +237,12 @@ monopoly.initPlayers=function(){
     {
         for(var i=0;i<numplayers;i++)
         {
-            object={};
-            object.numberOfTokens=[];
+
+            var object={};
             object.nameTitle="Name"+(i+1);
+            object.numberOfTokens=[];
             object.nameId="name"+(i);
-            
+            object.numberOfTokens=[];
             for (var j = 0; j<tokens.length; j++) {
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
@@ -248,7 +266,7 @@ monopoly.initComputerDifficulty=function()
   {
     for(var i=0;i<difficultyLevel.length;i++)
     {
-        computerDifficulty.difficulty.push({
+          computerDifficulty.difficulty.push({
           "radioName":"compRadioLevel",
           "radioValue":difficultyLevel[i],
           "radioId":"comp"+i,
@@ -257,9 +275,9 @@ monopoly.initComputerDifficulty=function()
         );
     }
     document.getElementById("computerDetails").innerHTML+=ubsformTemplate(computerDifficulty);
-  }
-  
+  } 
 }
+
 monopoly.intitializeScenarios=function()
 {
     $.each(ubsApp.pages, function(key, value) {
@@ -269,14 +287,14 @@ monopoly.intitializeScenarios=function()
             scenario.setCategory(value.category);
             scenario.setTemplate(value.templates);
             scenario.setRepeatForAllUsers(true);
-            scenario.setRepeatforUser(false);
+            scenario.setRepeatforUser(true);
             scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
             {
                 scenariosArray[value.category]=[];
             }
             scenariosArray[value.category].push(scenario);
-    }
+        }
     });
 }
 
@@ -284,6 +302,7 @@ monopoly.openLeaderBoard=function(category){
   ubsApp.initializeLeaderBoard(category);
   document.getElementById("leaderBoardParent").style.width="15%";
 }
+
 monopoly.closeLeaderBoard=function(){
   document.getElementById("leaderBoardParent").style.width="0%";
 }
@@ -291,8 +310,43 @@ monopoly.closeLeaderBoard=function(){
 monopoly.generateQuestion=function(key,template){
     var question=ubsApp.translation[key];
     template[0].question=template[0].question.replace(key,question)
-    console.log(question);
-    console.log("Hello World")
-    console.log(scenario);
+    // console.log(question);
+    // console.log("Hello World")
+    // console.log(scenario);
     scenario.setTemplate(template);
+}
+monopoly.chooseLanguage=function(){
+  var language=$('input[name=languageRadio]:checked').val();
+  var jsElm = document.createElement("script");
+  jsElm.type = "text/javascript";
+  jsElm.src = "js/"+language+".js";
+  document.head.appendChild(jsElm);
+  monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+}
+
+monopoly.translate=function(){
+  if(document.getElementById("scoreSideBar")){
+    document.getElementById("scoreSideBar").innerHTML=ubsApp.translation["scoreSideBar"];
+  	document.getElementById("documentSideBar").innerHTML=ubsApp.translation["documentSideBar"];
+  	document.getElementById("inventorySideBar").innerHTML=ubsApp.translation["inventorySideBar"];
+  	document.getElementById("meritSideBar").innerHTML=ubsApp.translation["meritSideBar"];
+  }
+  if(document.getElementById("enterPlayers"))
+    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["playerNameTitle"];
+  
+  if(document.getElementById("initPageTitle"))
+    document.getElementById("initPageTitle").innerHTML=ubsApp.translation["initPageTitle"];
+
+  if(document.getElementById("storePlayerDetailsButton"))
+    document.getElementById("storePlayerDetailsButton").innerHTML=ubsApp.translation["storePlayerDetailsButton"];
+
+  if(document.getElementById("computer"))
+    document.getElementById("computer").innerHTML=ubsApp.translation["computer"];
+  if(document.getElementById("currentChanceDetails"))
+  {
+    let spanString=document.getElementById("currentChanceDetails").innerHTML;
+    spanString=spanString.replace(" Player Name: ",ubsApp.translation["playerNameTitle"]+": ");
+    spanString=spanString.replace("Dice Value: ",ubsApp.translation["diceValueTitle"]+":");
+    document.getElementById("currentChanceDetails").innerHTML=spanString;
+  }
 }

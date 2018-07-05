@@ -26,6 +26,9 @@
 	// Actual Code Begins here for Monopoly Scenarios 
 	// scenario for sales = choicePage
 	"choicePage": {
+
+		//"category":"Sales",
+
 		"repeatforuser":false,
 		"repeatforall":false,
 		"nextPage" :{
@@ -41,10 +44,15 @@
 			// 				// },
 			{ 		
 				"templateId": 4,
-				"templateType": "choiceTemplate",
+
+				"templateType": "choice",
 				//"display_score":true,
+
 				"choiceHeightFactor" : 2,
-				"nextPage":"SalesScenario2",
+				"nextPage" :{
+					   "page": "",
+					   "hideScenarios" : "false"		
+					},
 				"choices":[
 			  	    {
 			  	    	"templateId": 1,
@@ -92,11 +100,13 @@
 	},
 	
 	"q1":{
-
 		"category":"Sales",
 		"repeatforuser":false,
-		"repeatforall":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
 		"displayCalculator":true,
+
 	 	"templates":[
 	 		{
 				"templateId": 2,
@@ -113,24 +123,21 @@
 						"optionValue": "355",
 						"id":1,
 						"amount":355,
-						//"radio_style":"visibility:hidden",
-						//"for":"1"
+						"priority": 1
 					},
 					{
 						"optionName": "q1",
 						"optionValue": "255",
 						"id":2,
 						"amount":-355,
-						//"radio_style":"visibility:hidden",
-						//"for":"2"
+						"priority": 2
 					},
 					{
 						"optionName":"q1",
 						"optionValue": "155",
 						"id":3,
 						"amount":-355,
-						//"radio_style":"visibility:hidden",
-						//"for":"3"
+						"priority":3
 					}	
 				],
 				"optionPageMap": {
@@ -164,7 +171,7 @@
 	"q1-correct":{
 		"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/Buzzercorrect.mp3",
 			"audioId":"q1-correct-audio",
 		},
@@ -193,8 +200,9 @@
 				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 				"style":"position:absolute;text-align: center; top:70%",
+				"id":"nextQuestion",
 				"onClickPage": {
-					//"nextPage" : "choicePage",
+					"nextPage" : "",
 					"hideScenarios" : "true",
 				}
 		}
@@ -211,7 +219,7 @@
 			"style": "padding:5px;position:absolute;top:10%"	
 		},
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q1-wrong-audio",
 		},
@@ -232,8 +240,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
 		}
@@ -243,7 +252,7 @@
 	"q1-vvwrong":{
     	"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q1-wrong-audio",
 		},
@@ -271,8 +280,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
 		}
@@ -280,8 +290,11 @@
 	},
 		
 	"q2":{
-
 		"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
     	"templates":[
     	{
 			"templateId": 2,
@@ -296,17 +309,20 @@
 					"optionName": "q2",
 					"optionValue": "65",
 					"id":"1",
+					"priority":3,
 					"amount":-45
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "55",
 					"id":"2",
+					"priority": 2,
 					"amount":-45
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "45",
+					"priority": 1,
 					"id":"3",
 					"amount":45
 				}	
@@ -342,7 +358,7 @@
 	"q2-vvwrong":{
     	"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q2-wrong-audio",
 		},
@@ -370,8 +386,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
 		}
@@ -381,7 +398,7 @@
     "q2-wrong":{
     	"templates":[
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q2-wrong-audio",
 		},
@@ -410,8 +427,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
 		}
@@ -422,7 +440,7 @@
     	"templates":[
 
 		{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/Buzzercorrect.mp3",
 			"audioId":"q2-correct-audio",
 		},
@@ -450,9 +468,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
 		}
@@ -462,6 +480,12 @@
     //Question 3 
 
     "q3": {
+
+    	"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
 		"category":"Sales",
     	"templates":[
     	{
@@ -474,22 +498,25 @@
 	        //"display_score":true,
 	        "options": [
 	        	{
-	                "optionName": "q2",
+	                "optionName": "q3",
 	                "optionValue": "Rs.30",
 	                "id":"1",
-	                "amount":-10
+	                "amount":-10,
+	                "priority":3
 	            },
 	            {
-	                "optionName": "q2",
+	                "optionName": "q3",
 	                "optionValue": "Rs.11",
 	                "id":"2",
-	                "amount":-10
+	                "amount":-10,
+	                "priority":2
 	            },
 	            {
-	                "optionName": "q2",
+	                "optionName": "q3",
 	                "optionValue": "Rs.10",
 	                "id":"3",
-	                "amount":10
+	                "amount":10,
+	                "priority":1
 	            }
 	        ],
 	        "optionPageMap": {
@@ -524,7 +551,7 @@
     "q3-vvwrong":{
     	"templates":[
 	    {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q3-wrong-audio",
 		},
@@ -553,8 +580,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
    		}
@@ -564,7 +592,7 @@
     "q3-wrong":{
     	"templates":[
 	    {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q3-wrong-audio",
 		},
@@ -593,9 +621,8 @@
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
-
 			}
         }
     ]
@@ -604,7 +631,7 @@
     "q3-correct":{
     	"templates":[
     	{
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/Buzzercorrect.mp3",
 			"audioId":"q3-correct-audio",
 		},
@@ -632,8 +659,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
         }
@@ -643,7 +671,12 @@
     //Question 4
 
     "q4": {
-		"category":"Sales",
+
+    	"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
     	"templates":[
     	{
 	        "templateId": 2,
@@ -661,19 +694,22 @@
 	                "optionName": "q2",
 	                "optionValue": "Rs.200",
 	                "id":"1",
-	                "amount":-150
+	                "amount":-150,
+	                "priority":3
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.150",
 	                "id":"2",
-	                "amount":150
+	                "amount":150,
+	                "priority":1
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.100",
 	                "id":"3",
-	                "amount":-150
+	                "amount":-150,
+	                "priority":2
 	            }
 	        ],
 	        "optionPageMap": {
@@ -708,7 +744,7 @@
     "q4-vvwrong":{
     	"templates":[
         {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q4-wrong-audio",
 		},
@@ -736,8 +772,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
         }
@@ -746,7 +783,7 @@
     "q4-wrong":{
     	"templates":[
         {
-			"templateType":"audioTemplate",
+			"templateType":"audio",
 			"audioSrc":"audio/wrongbeat.mp3",
 			"audioId":"q4-wrong-audio",
 		},
@@ -774,8 +811,9 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				//"nextPage" : "choicePage",
+				"nextPage" : "",
 				"hideScenarios" : "true"
 			}
         }
@@ -785,7 +823,7 @@
     "q4-correct":{
     	"templates":[
         {
-				"templateType":"audioTemplate",
+				"templateType":"audio",
 				"audioSrc":"audio/Buzzercorrect.mp3",
 				"audioId":"q4-correct-audio",
 		},
@@ -813,15 +851,16 @@
 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Next Question!</button>",
 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
 			"style":"position:absolute;text-align: center; top:70%",
+			"id":"nextQuestion",
 			"onClickPage": {
-				"nextPage" : "choicePage",
-				"hideScenarios" : "false"
+				"nextPage" : "",
+				"hideScenarios" : "true"
 			}
         }
     ]
 },
-	
-	
+
+
 
 //Scenario 2 - Agricultue Sector
 
@@ -852,9 +891,16 @@
 		]
 	},
 
-	"q1s2":[ //question 1 scenario 2
+	"q5":{ //question 1 scenario 2
+    	//"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":false,
+		"questionTime":3000,
+		"optionsTime":2000,
+		"templates":[
 		{
 			"templateId": 2,
+
 			"answer":"0",
 			//"display_score":true,
 			"templateType": "decision",
@@ -864,26 +910,30 @@
 					"optionName": "q1s2",
 					"optionValue": "Show license of shop, registration of shop with local authority, permit from food department to keep perishable items.",
 					"id":1,
-					"amount":100
+					"amount":100,
+					"priority":1
 
 				},
 				{
 					"optionName": "q1s2",
 					"optionValue": "Say to inspector that you don't have the documents and Bribe the inspector.",
 					"id":2,
-					"amount":0
+					"amount":0,
+					"priority":4
 				},
 				{
 					"optionName": "q1s2",
 					"optionValue": "Say that documentation is in progress and just show approval from local authority.",
 					"id":3,
-					"amount":0
+					"amount":0,
+					"priority":2
 				},
 				{
 					"optionName":"q1s2",
 					"optionValue":"None of the above",
 					"id":4,
-					"amount":0
+					"amount":0,
+					"priority":3
 				}
 				],
 			"optionPageMap": {
@@ -918,7 +968,10 @@
 
 			"redirect":"choicePage"
 		}
-	],
+	]
+},
+
+
 
 	"q1s2c":{
     	"templates":[

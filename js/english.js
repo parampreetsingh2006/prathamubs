@@ -8,5 +8,17 @@ ubsApp.translation={
         "pratham_title_luck":"Luck",
         "pratham_title_purchase":"Purchase",
         "pratham_title_start":"Start",
-        "pratham_title_decision":"Decision Making"
+        "pratham_title_decision":"Decision Making",
+        "close":"close",
+        "scoreSideBar":"Score",
+        "documentSideBar":"Document",
+        "inventorySideBar":"Inventory",
+        "meritSideBar":"Merit",
+
+        "enterPlayers":"Enter the number of Players",
+        "initPageTitle":"Welcome to the Game",
+        "storePlayerDetailsButton":"Next Page",
+        "computer":"Computer Required?",
+        "playerNameTitle":"Player Name",
+        "diceValueTitle":"Dice Value",
     }

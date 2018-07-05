@@ -8,5 +8,18 @@ ubsApp.translation={
     "pratham_title_luck":"भाग्य",
     "pratham_title_purchase":"खरीद फरोख्त",
     "pratham_title_start":"प्रारंभ",
-    "pratham_title_decision":"निर्णय लेना"
+    "pratham_title_decision":"निर्णय लेना",
+    "close":"बंद करे",
+    "scoreSideBar":"स्कोर",
+    "documentSideBar":"दस्तावेज़",
+    "inventorySideBar":"इन्वेंटरी",
+    "meritSideBar":"योग्यता",
+
+    "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
+    "initPageTitle":"खेल में आपका स्वागत है",
+    "storePlayerDetailsButton":"अगला पृष्ठ",
+    "computer":"कंप्यूटर आवश्यक है?",
+
+    "playerNameTitle":"खिलाडि का नाम",
+    "diceValueTitle":"पासा मूल्य",
 }
