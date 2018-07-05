@@ -52,7 +52,7 @@ ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' </div>'*/;
 ' ';
 
-ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:35%; left:45%;">'+
+/*ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:35%; left:45%;">'+
 '  <div class="rollscene" id="rollscene" style= "height:{{diceSceneWidth}}px; display:table; margin:auto;"}>'+
 '    <div onclick="mainroll()" class="cube">'+
 '      <div id="class_1" class="cube_face_1">O</div>'+
@@ -66,7 +66,58 @@ ubsApp.rollingDiceTemplate = '<body class = "diceBody"><div style="position:abso
      '<button onclick="mainroll()" >Roll it </button>'+
 '    </div>'+
 '  </div>'+
-'</div></body>';
+'</div></body>';*/
+
+ubsApp.rollingDiceTemplate = '<link rel="stylesheet" href="roll_dice.css">'+
+'  <button id=\'pointRollButton\' class=\'roll-button\'>Roll it</button>'+
+'  <div class="dice-board">'+
+''+
+''+
+'    <div class="container-dice">'+
+'      <div id=\'dice1\' class="dice dice-one">'+
+'        <div id="dice-one-side-one" class=\'side one\'>'+
+'          <div class="divot one-1"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-two" class=\'side two\'>'+
+'          <div class="divot two-1"></div>'+
+'          <div class="divot two-2"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-three" class=\'side three\'>'+
+'          <div class="divot three-1"></div>'+
+'          <div class="divot three-2"></div>'+
+'          <div class="divot three-3"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-four" class=\'side four\'>'+
+'          <div class="divot four-1"></div>'+
+'          <div class="divot four-2"></div>'+
+'          <div class="divot four-3"></div>'+
+'          <div class="divot four-4"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-five" class=\'side five\'>'+
+'          <div class="divot five-1"></div>'+
+'          <div class="divot five-2"></div>'+
+'          <div class="divot five-3"></div>'+
+'          <div class="divot five-4"></div>'+
+'          <div class="divot five-5"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-six" class=\'side six\'>'+
+'          <div class="divot six-1"></div>'+
+'          <div class="divot six-2"></div>'+
+'          <div class="divot six-3"></div>'+
+'          <div class="divot six-4"></div>'+
+'          <div class="divot six-5"></div>'+
+'          <div class="divot six-6"></div>'+
+'        </div>'+
+'      </div>'+
+''+
+''+
+'    </div> '+
+''+
+''+
+'  </div>'+
+'    <script type="text/javascript" src="roll_dice.js"></script>';
+    
+
 
 ubsApp.scratchCard ='<canvas id="scratch_card_canvas"'+
                     '	height="{{height}}px"'+

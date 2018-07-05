@@ -46,7 +46,7 @@ monopoly.boardTemplate='<div class="responsive">'+
     '</div>'+
 '</div>';
 
-monopoly.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:32%; left:37%;">'+
+/*monopoly.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:32%; left:37%;">'+
 
 '  <div class="rollscene" id="rollscene" style= "height:{{diceSceneWidth}}px; display:table; margin:auto;"}>'+
 '    <div onclick="mainroll()" class="cube">'+
@@ -61,7 +61,55 @@ monopoly.rollingDiceTemplate = '<body class = "diceBody"><div style="position:ab
      '<button id ="rollIt" onclick="monopoly.rollDice()" >Roll it </button>'+
 '    </div>'+
 '  </div>'+
-'</div></body>';
+'</div></body>';*/
+
+monopoly.rollingDiceTemplate = 
+'  <div class="dice-board" style="position:absolute; top:57%; left:26%;">'+
+''+
+''+
+'    <div class="container-dice">'+
+'      <div id=\'dice1\' class="dice dice-one">'+
+'        <div id="dice-one-side-one" class=\'side one\'>'+
+'          <div class="divot one-1"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-two" class=\'side two\'>'+
+'          <div class="divot two-1"></div>'+
+'          <div class="divot two-2"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-three" class=\'side three\'>'+
+'          <div class="divot three-1"></div>'+
+'          <div class="divot three-2"></div>'+
+'          <div class="divot three-3"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-four" class=\'side four\'>'+
+'          <div class="divot four-1"></div>'+
+'          <div class="divot four-2"></div>'+
+'          <div class="divot four-3"></div>'+
+'          <div class="divot four-4"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-five" class=\'side five\'>'+
+'          <div class="divot five-1"></div>'+
+'          <div class="divot five-2"></div>'+
+'          <div class="divot five-3"></div>'+
+'          <div class="divot five-4"></div>'+
+'          <div class="divot five-5"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-six" class=\'side six\'>'+
+'          <div class="divot six-1"></div>'+
+'          <div class="divot six-2"></div>'+
+'          <div class="divot six-3"></div>'+
+'          <div class="divot six-4"></div>'+
+'          <div class="divot six-5"></div>'+
+'          <div class="divot six-6"></div>'+
+'        </div>'+
+'      </div>'+
+'  <button id=\'rollIt\' class=\'roll-button\' style="left: 15%;top: 45%;position: absolute;" onclick="monopoly.rollDice()">Roll it</button>'+
+''+
+''+
+'    </div> '+
+''+
+''+
+'  </div>';
 
 monopoly.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="monopoly.renderPageforBoard(\'{{onClickPage}}\',\'{{amount}}\')">'+
 '       {{src}}'+

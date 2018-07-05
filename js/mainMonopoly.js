@@ -181,14 +181,16 @@ monopoly.updateRollingDiceTemplate = function(template){
 }
 
 monopoly.rollDice  = function(){
-  $('#rollIt').attr('disabled',true);
-  diceVal = mainroll();
-	setTimeout(function(){
-    playerChance%=numplayers;
-    $("#player").html(userArray[playerChance].getplayerName()); 
-  	$("#diceval").html(diceVal);	
-    monopoly.myMove(diceVal, playerChance, userArray[playerChance].getplayerCurrentPos());  
-  },3000); 
+  //$('#rollIt').attr('disabled',true);
+  diceVal = pointRoll();
+	setTimeout(function(){ 
+	if(playerChance >= numplayers){
+		playerChance=0;
+	}
+	$("#player").html(userArray[playerChance].getplayerName());
+	$("#diceval").html(diceVal);	
+      monopoly.myMove(diceVal, playerChance, userArray[playerChance].getplayerCurrentPos());   //update Real time dice Value
+    },3000);
 }
 
 monopoly.storePlayerDetails=function(){
