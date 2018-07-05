@@ -1,4 +1,18 @@
+var rollingDiceConfig = {};
 
+function pointRoll() {
+  var elDiceOne       = document.getElementById('dice1');
+  var diceValue   = Math.floor((Math.random() * 6) + 1);
+  console.log("diceValue:"+diceValue);
+  for (var i = 1; i <= 6; i++) {
+    elDiceOne.classList.remove('show-' + i);
+    if (diceValue === i) {
+      elDiceOne.classList.add('show-' + i);
+    }
+  }
+  return diceValue;
+}
+/*
 var currentClass = '';
 var randomNumber = 0;
 var rollingDiceConfig = {};
@@ -38,3 +52,4 @@ function mainroll(){
 
 
 
+*/

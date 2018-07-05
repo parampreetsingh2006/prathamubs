@@ -34,15 +34,15 @@ ubsApp.translation={
         "q1-vvwrong":">Oops!! you answered incorrect. You lost money.",
 
         "q2-correct":"Yay, you answered correct. Your balance increases.",
-        "q2-wrong":">Oops!! you answered incorrect. You lost money.",
-        "q2-vvwrong":">Oops!! you answered incorrect. You lost money.",
+        "q2-wrong":"Oops!! you answered incorrect. You lost money.",
+        "q2-vvwrong":"Oops!! you answered incorrect. You lost money.",
 
         "q3-correct":"Yay, you answered correct. Your balance increases.",
-        "q3-wrong":">Oops!! you answered incorrect. You lost money.",
-        "q3-vvwrong":">Oops!! you answered incorrect. You lost money.",
+        "q3-wrong":"Oops!! you answered incorrect. You lost money.",
+        "q3-vvwrong":"Oops!! you answered incorrect. You lost money.",
 
         "q4-correct":"Yay, you answered correct. Your balance increases.",
-        "q4-wrong":">Oops!! you answered incorrect. You lost money.",
-        "q4-vvwrong":">Oops!! you answered incorrect. You lost money.",
+        "q4-wrong":"Oops!! you answered incorrect. You lost money.",
+        "q4-vvwrong":"Oops!! you answered incorrect. You lost money.",
 
     }

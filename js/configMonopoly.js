@@ -1,5 +1,5 @@
 monopoly.pages = {
-    "EnterLanguagePage":[
+"EnterLanguagePage":[
     
         {
             "templateId":1,
@@ -127,50 +127,58 @@ monopoly.pages = {
             "id" : "meritBoardParent"
         },
         {
+            "templateId":1,
+            "templateType":"static",
+            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 80%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+            "src":"<div id=\"calculator\"  ></div>",
+            "id" : "calculatorParent"
+        },
+        
+        {
             "templateId": 3,
             "templateType": "board",
             "blocks":24,
             "top_row":[
             {
                 "players":[],
-            	"id"   : "0",
+                "id"   : "0",
                 "color":"yellow",
                 "title":"pratham_title_start",
                 "start": true
             },
             {
-            	"id"   : "1",
+                "id"   : "1",
                 "color":"green",
                 "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
-            	"id"   : "2",
+                "id"   : "2",
                 "color":"green",
                 "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
-            	"id"   : "3",
+                "id"   : "3",
                 "color":"dark-green",
                 "title":"pratham_title_surprise",
                 "category" : "Surprise"
             },
             {
-            	"id"   : "4",
+                "id"   : "4",
                 "color":"red",
                 "title":"pratham_title_purchase",
                 "category" : "Purchase"
 
             },
             {
-            	"id"   : "5",
+                "id"   : "5",
                 "color":"green",
                 "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
-            	"id"   : "6",
+                "id"   : "6",
                 "color":"pink",
                 "title":"pratham_title_luck",
                 "category" : "Luck"
@@ -179,31 +187,31 @@ monopoly.pages = {
 
             "left_col":[
             {
-            	"id"   : "23",
+                "id"   : "23",
                 "color":"green",
                 "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
-            	"id"   : "22",
+                "id"   : "22",
                 "color":"green",
                 "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
-            	"id"   : "21",
+                "id"   : "21",
                 "color":"dark-green",
                 "title":"pratham_title_surprise",
                 "category" : "Surprise"
             },
             {
-            	"id"   : "20",
+                "id"   : "20",
                 "color":"red",
                 "title":"pratham_title_purchase",
                 "category" : "Purchase"
             },
             {
-            	"id"   : "19",
+                "id"   : "19",
                 "color":"green",
                 "title":"pratham_title_sales",
                 "category" : "Sales"
@@ -211,31 +219,31 @@ monopoly.pages = {
             ],
             "right_col":[
                 {
-                	"id"   : "7",
+                    "id"   : "7",
                     "color":"green",
                     "title":"pratham_title_sales",
                     "category" : "Sales"
                 },
                 {
-                	"id"   : "8",
+                    "id"   : "8",
                     "color":"green",
                     "title":"pratham_title_sales",
                     "category" : "Sales"
                 },
                 {
-                	"id"   : "9",
+                    "id"   : "9",
                     "color":"dark-green",
                     "title":"pratham_title_surprise",
                     "category" : "Surprise"
                 },
                 {
-                	"id"   : "10",
+                    "id"   : "10",
                     "color":"red",
                     "title":"pratham_title_purchase",
                     "category" : "Purchase"
                 },
                 {
-                	"id"   : "11",
+                    "id"   : "11",
                     "color":"green",
                     "title":"pratham_title_sales",
                     "category" : "Sales"
@@ -243,43 +251,43 @@ monopoly.pages = {
                 ],
             "bottom_row":[
                     {
-                    	"id"   : "18",
+                        "id"   : "18",
                         "color":"pink",
                         "title":"pratham_title_luck",
                         "category" : "Luck"
                     },
                     {
-                    	"id"   : "17",
+                        "id"   : "17",
                         "color":"green",
                         "title":"pratham_title_sales",
                         "category" : "Sales"
                     },
                     {
-                    	"id"   : "16",
+                        "id"   : "16",
                         "color":"red",
                         "title":"pratham_title_purchase",
                         "category" : "Purchase"
                     },
                     {
-                    	"id"   : "15",
+                        "id"   : "15",
                         "color":"dark-green",
                         "title":"pratham_title_surprise",
                         "category" : "Surprise"
                     },
                     {
-                    	"id"   : "14",
+                        "id"   : "14",
                         "color":"green",
                         "title":"pratham_title_sales",
                         "category" : "Sales"
                     },
                     {
-                    	"id"   : "13",
+                        "id"   : "13",
                         "color":"green",
                         "title":"pratham_title_sales",
                         "category" : "Sales"
                     },
                     {
-                    	"id"   : "12",
+                        "id"   : "12",
                         "color":"yellow",
                         "title":"pratham_title_decision",
                         "category" : "Decision Making"
@@ -297,16 +305,6 @@ monopoly.pages = {
         {
             "templateId":4,
             "templateType":"rollingDice",
-            "optionPageMap" : {
-                "1": "page2",
-                "2": "page3",
-                "3": "page2",
-                "4": "page3",
-                "5": "page2",
-                "6": "page3",
-                "7": "page2",
-                "8": "page3",
-            },
         }
             
     ]

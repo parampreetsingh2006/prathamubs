@@ -4,7 +4,7 @@ class User{
     {
 
     }*/
-    
+
     setplayerName(name){
         this.name=name;
     }
@@ -12,7 +12,10 @@ class User{
         this.score=score;
     }
     setplayerColor(color){
-        this.color=color;
+        this.color=color.toLowerCase();
+    }
+    setCorrectAnswered(number){
+        this.correctAnswered = number;
     }
     setplayerCurrentPos(currentPos){
         this.currentPos=currentPos;
@@ -45,6 +48,7 @@ class User{
         return this.isComputer;
     }
 
+
     setInventoryScore(inventoryScore)
     {
         this.inventoryScore=inventoryScore;
@@ -53,32 +57,6 @@ class User{
     getInventoryScore()
     {
         return this.inventoryScore;
-    }
-
-    
-    setSurpriseScenario(surpirseScenario)
-    {
-        this.surpriseScenarioArray = [];
-        for(var i=0;i<surpirseScenario.length;i++)
-        {
-            this.surpriseScenarioArray[i]=surpirseScenario[i];
-        }
-    }
-    setPurchaseScenario(purchaseScenario)
-    {
-        this.purchaseScenarioArray=[];
-        for(var i=0;i<purchaseScenario.length;i++)
-        {
-            this.purchaseScenarioArray[i]=purchaseScenario[i];
-        }
-    }
-    setLuckScenario(luckScenario)
-    {
-        this.luckScenarioArray=[];
-        for(var i=0;i<luckScenario.length;i++)
-        {
-            this.luckScenarioArray[i]=luckScenario[i];
-        }
     }
     setScenarioArray(scenariosArray)    
     {
@@ -94,6 +72,18 @@ class User{
                 this.scenariosArray[key][iterator]=scenariosArray[key][iterator];
             }
         }
+    }
+    setCorrectProbability(level){
+        if(level.toLowerCase()=="easy"){
+            this.correctProbability = (Math.random()*2)*0.1+0.2;
+        }else if(level.toLowerCase() == "medium"){
+            this.correctProbability = (Math.random()*2)*0.1+0.5;
+        }else if(level.toLowerCase() == "difficult"){
+            this.correctProbability = (Math.random()*2)*0.1+0.8;
+        }
+    }
+    getCorrectProbability(){
+        return this.correctProbability;
     }
     getplayerName(){
         return this.name;
@@ -114,151 +104,8 @@ class User{
     // updatequestions(questionId){
     //     this.questionsDone.push(questionId);
     //}
-    getSalesScenario(playerChance)
-    {
-        var number;
-        let object;
-        let removeFromUser=false;
-        let removeFromAll=false;
-        if(this.salesScenarioArray.length==0)
-        {
-            this.setSalesScenario(salesScenarioArray);
-        }
-        number=(Math.floor(Math.random() * 100) + 1)%(this.salesScenarioArray.length);
-        object=this.salesScenarioArray[number];
-        
-        if(object.getRepeatforUser()==false)
-        {
-            removeFromUser=true;
-            //this.salesScenarioArray.splice(number,1);
-           // document.write(JSON.stringify(templates));
-        }
-        if(object.getRepeatforAllUsers()==false)
-        {
-            removeFromAll=true;
-        }
-        if(removeFromUser)
-        {
-            this.salesScenarioArray.splice(number,1);
-        }
-        if(removeFromAll)
-        {
-            for(var i=0;i<userArray.length;i++)
-            {
-                if(playerChance!=i)
-                userArray[i].salesScenarioArray.splice(number,1);
-            }
-        }
-        return object;
-    }
-    getLuckScenario(playerChance)
-    {
-        var number;
-        let object;
-        let removeFromUser=false;
-        let removeFromAll=false;
-        if(this.luckScenarioArray.length==0)
-        {
-            this.setLuckScenario(luckScenarioArray);
-        }
-        number=(Math.floor(Math.random() * 100) + 1)%(this.luckScenarioArray.length);
-        object=this.luckScenarioArray[number];
-        
-        if(object.getRepeatforUser()==false)
-        {
-            removeFromUser=true;
-        }
-        if(object.getRepeatforAllUsers()==false)
-        {
-            removeFromAll=true;
-        }
-        if(removeFromUser)
-        {
-            this.luckScenarioArray.splice(number,1);
-        }
-        if(removeFromAll)
-        {
-            for(var i=0;i<userArray.length;i++)
-            {
-                if(playerChance!=i)
-                userArray[i].luckScenarioArray.splice(number,1);
-            }
-        }
-        return object;
-    }
-
-    getSurpriseScenario(playerChance)
-    {
-        var number;
-        let object;
-        let removeFromUser=false;
-        let removeFromAll=false;
-        if(this.surpriseScenarioArray.length==0)
-        {
-            this.setSurpriseScenario(surpriseScenarioArray);
-        }
-        number=(Math.floor(Math.random() * 100) + 1)%(this.surpriseScenarioArray.length);
-        object=this.luckScenarioArray[number];
-        
-        if(object.getRepeatforUser()==false)
-        {
-            removeFromUser=true;
-            //this.salesScenarioArray.splice(number,1);
-           // document.write(JSON.stringify(templates));
-        }
-        if(object.getRepeatforAllUsers()==false)
-        {
-            removeFromAll=true;
-        }
-        if(removeFromUser)
-        {
-            this.surpriseScenarioArray.splice(number,1);
-        }
-        if(removeFromAll)
-        {
-            for(var i=0;i<userArray.length;i++)
-            {
-                if(playerChance!=i)
-                userArray[i].surpriseScenarioArray.splice(number,1);
-            }
-        }
-        return object;
-    }
-
-    getPurchaseScenario(playerChance)
-    {
-        var number;
-        let object;
-        let removeFromUser=false;
-        let removeFromAll=false;
-        if(this.purchaseScenarioArray.length==0)
-        {
-            this.setPurchaseScenario(purchaseScenarioArray);
-        }
-        number=(Math.floor(Math.random() * 100) + 1)%(this.surpriseScenarioArray.length);
-        object=this.luckScenarioArray[number];
-        
-        if(object.getRepeatforUser()==false)
-        {
-            removeFromUser=true;
-        }
-        if(object.getRepeatforAllUsers()==false)
-        {
-            removeFromAll=true;
-        }
-        if(removeFromUser)
-        {
-            this.purchaseScenarioArray.splice(number,1);
-        }
-        if(removeFromAll)
-        {
-            for(var i=0;i<userArray.length;i++)
-            {
-                if(playerChance!=i)
-                userArray[i].purchaseScenarioArray.splice(number,1);
-            }
-        }
-        return object;
+    getCorrectAnswered(){
+        return this.correctAnswered;
     }
 
 getScenario(category,playerChance)
