@@ -73,6 +73,10 @@ class User{
             }
         }
     }
+
+    setWeeks(weeks){
+    	this.noOfWeeks = weeks;
+    }
     setCorrectProbability(level){
         if(level.toLowerCase()=="easy"){
             this.correctProbability = (Math.random()*2)*0.1+0.2;
@@ -108,6 +112,9 @@ class User{
         return this.correctAnswered;
     }
 
+    getWeeks(){
+    	return this.noOfWeeks;
+    }
 getScenario(category,playerChance)
     {
         

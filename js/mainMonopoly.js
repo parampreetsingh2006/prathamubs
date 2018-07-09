@@ -160,6 +160,10 @@ monopoly.myMove = function(count, pId, currentPos) {
   var playerToken = $(temp);
   var blockNo = currentPos;   
   var movePlayer = setInterval(frame, 500);
+  if(currentPos+count >= boardConfig.blocks){
+    let x = userArray[pId].getWeeks();
+    userArray[pId].setWeeks(++x);
+  }
   function frame(){
     if (blockNo == (currentPos+count)%boardConfig.blocks){
       userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
@@ -181,7 +185,7 @@ monopoly.updateRollingDiceTemplate = function(template){
 }
 
 monopoly.rollDice  = function(){
-  //$('#rollIt').attr('disabled',true);
+  $('#rollIt').attr('disabled',true);
   diceVal = pointRoll();
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
@@ -206,6 +210,7 @@ monopoly.storePlayerDetails=function(){
         user.setplayerId("p"+i);
         user.setplayerCurrentPos(0);
         user.setScenarioArray(scenariosArray);
+        user.setWeeks(0);
         userArray[i]=user;
     }
     if(computerRequired)
@@ -219,6 +224,7 @@ monopoly.storePlayerDetails=function(){
       user.setCorrectProbability(level);
       user.setplayerCurrentPos(0);
       user.setplayerId("p"+i);
+      user.setWeeks(0);
       user.setScenarioArray(scenariosArray);
       user.setplayerColor(tokens[tokens.length-1]);
       user.setCorrectAnswered(0);
