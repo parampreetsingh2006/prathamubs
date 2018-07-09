@@ -15,6 +15,8 @@ let ubsLeaderBoardTemplate;
 let choiceSelected={};
 let timeVar;
 var answerselected=0;         //whyGlobal
+var inventoryToBeUpdated=0;
+var minimumInventoryScoreRequired=0;
 ubsApp.wheelOfFortune = null;
 var interval;				//whyGlobal
 let audioConfig = {};
@@ -32,10 +34,6 @@ let playerChance = monopoly.playerChance;
 
 
 $(document).ready(function(){	
-	if (typeof(Storage) == "undefined") {
-		localStorage.setItem("score","1000");
-		localStorage.setItem("currency","$");
-	}
 	ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
 });
@@ -147,6 +145,11 @@ ubsApp.getScoreTemplate = function(templateConfig, tempVar){
 }
 
 ubsApp.renderPage = function(page) {
+	monopoly.closeLeaderBoard();
+	if(page.minimumInventoryScoreRequired){
+		minimumInventoryScoreRequired=page.minimumInventoryScoreRequired;
+	}
+
 	if(page.templates) {
 		page=page.templates;
 	}
@@ -210,6 +213,8 @@ ubsApp.renderPage = function(page) {
 
 	ubsApp.addScore(parseInt(answerselected));
 	answerselected=0;
+	ubsApp.addInventory(parseInt(inventoryToBeUpdated));
+	inventoryToBeUpdated=0;
 	/*if($('#headId').length > 0) {
 		if(flag){
 				ubsApp.animate_score(answerselected);
@@ -225,11 +230,12 @@ ubsApp.mapTemplatetoFunction = function(){
 	}
 }
 ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
+	
 	if(hideScenarios == "true"){
         ubsApp.nextMove();
 	}
 	else {
-		ubsApp.renderPageByName(page,amount);
+		ubsApp.renderPageByName(page);/*,amount);*/
 	}
 }
 
@@ -271,13 +277,13 @@ ubsApp.checkSelected= function(){
 });
 	return allSelected;
 }
-ubsApp.renderPageByName = function(pageName,amount) {
+ubsApp.renderPageByName = function(pageName)/*,amount)*/ {
 	clearInterval(interval);
-	if(amount === undefined || amount === null|| amount.length===0){	
+	/*if(amount === undefined || amount === null|| amount.length===0){	
 	}
 	else{
 		ubsApp.animate_score(amount);
-	}
+	}*/
 	pageName=pageName.trim();
 	this.renderPage(ubsApp.pages[pageName]);
 }
@@ -313,6 +319,7 @@ ubsApp.intitializeTemplates = function() {
 ubsApp.renderDecisonTemplate = function() {
   let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
   answerselected=$("#" + checkedValue + "Amount").text(); 
+  inventoryToBeUpdated=$("#" + checkedValue + "Inventory").text();
   clearInterval(timeVar);
   clearInterval(interval);
   clearInterval(timeVar);
@@ -372,7 +379,7 @@ ubsApp.initializeLeaderBoard=function(category)
 			leaderBoardObject.array.push({
 				"name":userArray[j].getplayerName(),
 				"color":userArray[j].getplayerColor(),
-				"inventory":"Dummy Text"
+				"inventory":userArray[j].getInventoryScore()+"%",
 			});
         	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
 		}
@@ -437,6 +444,11 @@ ubsApp.addScore=function (earnedScore)
 {
     var currentScore=userArray[playerChance].getplayerScore();
     userArray[playerChance].setplayerScore(parseInt(currentScore)+parseInt(earnedScore));
+}
+
+ubsApp.addInventory=function(inventoryPoints){
+	var currentInventory=userArray[playerChance].getInventoryScore();
+	userArray[playerChance].setInventoryScore(inventoryPoints+currentInventory);
 }
 
 ubsApp.animate_score=function(amount){

@@ -106,7 +106,8 @@
 		"questionTime":3000,
 		"optionsTime":2000,
 		"displayCalculator":true,
-
+		"minimumInventoryScoreRequired":"10",
+		"inventoryScoreToBeChanged":"10",
 	 	"templates":[
 	 		{
 				"templateId": 2,
@@ -123,6 +124,7 @@
 						"optionValue": "355",
 						"id":1,
 						"amount":355,
+						"inventoryScoreToBeChanged":-10,
 						"priority": 1
 					},
 					{
@@ -130,6 +132,7 @@
 						"optionValue": "255",
 						"id":2,
 						"amount":-355,
+						"inventoryScoreToBeChanged":-5,
 						"priority": 2
 					},
 					{
@@ -137,6 +140,7 @@
 						"optionValue": "155",
 						"id":3,
 						"amount":-355,
+						"inventoryScoreToBeChanged":-5,
 						"priority":3
 					}	
 				],
@@ -301,6 +305,8 @@
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
+		"minimumInventoryScoreRequired":"10",
+		"inventoryScoreToBeChanged":"-20",
     	"templates":[
     	{
 			"templateId": 2,
@@ -316,21 +322,24 @@
 					"optionValue": "65",
 					"id":"1",
 					"priority":3,
-					"amount":-45
+					"amount":-45,
+					"inventoryScoreToBeChanged":-5,
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "55",
 					"id":"2",
 					"priority": 2,
-					"amount":-45
+					"amount":-45,
+					"inventoryScoreToBeChanged":-5,
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "45",
 					"priority": 1,
 					"id":"3",
-					"amount":45
+					"amount":45,
+					"inventoryScoreToBeChanged":-10,
 				}	
 			],
 			"optionPageMap": {
@@ -493,12 +502,14 @@
 
     "q3": {
 
-    	"category":"Sales",
+    
 		"repeatforuser":false,
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
 		"category":"Sales",
+		"minimumInventoryScoreRequired":"85",
+		"inventoryScoreToBeChanged":"-20",
     	"templates":[
     	{
 	        "templateId": 2,
@@ -513,21 +524,24 @@
 	                "optionName": "q3",
 	                "optionValue": "Rs.30",
 	                "id":"1",
-	                "amount":-10,
+					"amount":-10,
+					"inventoryScoreToBeChanged":-2,
 	                "priority":3
 	            },
 	            {
 	                "optionName": "q3",
 	                "optionValue": "Rs.11",
 	                "id":"2",
-	                "amount":-10,
+					"amount":-10,
+					"inventoryScoreToBeChanged":-2,
 	                "priority":2
 	            },
 	            {
 	                "optionName": "q3",
 	                "optionValue": "Rs.10",
 	                "id":"3",
-	                "amount":10,
+					"amount":10,
+					"inventoryScoreToBeChanged":-5,
 	                "priority":1
 	            }
 	        ],
@@ -695,6 +709,8 @@
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
+		"minimumInventoryScoreRequired":"90",
+		"inventoryScoreToBeChanged":"-20",
     	"templates":[
     	{
 	        "templateId": 2,
@@ -712,21 +728,24 @@
 	                "optionName": "q2",
 	                "optionValue": "Rs.200",
 	                "id":"1",
-	                "amount":-150,
-	                "priority":3
+					"amount":-150,
+					"inventoryScoreToBeChanged":-5,
+	                "priority":3,
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.150",
 	                "id":"2",
-	                "amount":150,
+					"amount":150,
+					"inventoryScoreToBeChanged":-10,
 	                "priority":1
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.100",
 	                "id":"3",
-	                "amount":-150,
+					"amount":-150,
+					"inventoryScoreToBeChanged":-5,
 	                "priority":2
 	            }
 	        ],

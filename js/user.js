@@ -58,6 +58,11 @@ class User{
     {
         return this.inventoryScore;
     }
+
+    /*updateInventoryScore(amount){
+        this.inventoryScore=this.inventoryScore+amount;
+    }*/
+
     setScenarioArray(scenariosArray)    
     {
         this.scenariosArray=[];
@@ -108,6 +113,7 @@ class User{
         return this.correctAnswered;
     }
 
+
 getScenario(category,playerChance)
     {
         
@@ -116,12 +122,34 @@ getScenario(category,playerChance)
         let removeFromUser=false;
         let removeFromAll=false;
 
-        if(this.scenariosArray===undefined)
+        if(this.scenariosArray[category].length==0)
         {
             this.setScenarioArray(scenariosArray);
         }
-        number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
-        object=this.scenariosArray[category][number];
+        var scenariosApplicable=[];
+        for(var i=0;i<this.scenariosArray[category].length;i++){
+            if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
+                scenariosApplicable.push(this.scenariosArray[category][i]);
+            }
+        }
+        if(scenariosApplicable.length==0){
+            this.setScenarioArray(scenariosArray);
+            for(var i=0;i<this.scenariosArray[category].length;i++){
+                if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
+                    scenariosApplicable.push(this.scenariosArray[category][i]);
+                }
+            }
+        }
+        
+        number=(Math.floor(Math.random() * 100) + 1)%(scenariosApplicable.length);
+        object=scenariosApplicable[number];
+
+
+        /*while(ubsApp.pages[object.getName()].minimumInventoryScoreRequired>=userArray[playerChance].getInventoryScore())
+        {
+            number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
+            object=this.scenariosArray[category][number];
+        }*/
         if(object.getRepeatforUser()==false)
         {
             removeFromUser=true;
@@ -147,7 +175,6 @@ getScenario(category,playerChance)
                 userArray[i].scenariosArray[category].splice(number,1);
             }
         }
-        return object; //write code to return the object
+        return object; 
     }
-
-}   
+}

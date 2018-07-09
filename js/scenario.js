@@ -13,6 +13,10 @@ class Scenarios{
     {
         this.name=name;
     }
+    getName()
+    {
+        return this.name;
+    }
    setIfCalculatorRequired(calculator)
    {
        this.calculator=calculator;

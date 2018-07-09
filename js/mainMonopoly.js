@@ -37,7 +37,7 @@ var scenario =  monopoly.scenario;
 
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
-  monopoly.intitializeScenarios();
+  monopoly.initializeScenarios();
 	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
@@ -131,10 +131,10 @@ monopoly.renderPageforBoard = function(page) {
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
       scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
-        let currentTemplate=scenario.getTemplate();
-        if(currentTemplate[0].question){
-          
-          let key=currentTemplate[0].question;
+        let currentTemplateName=scenario.getName();
+        let currentTemplate=ubsApp.pages[currentTemplateName].templates;
+        let key=ubsApp.pages[currentTemplateName].templates[0].question;
+        if(key){
           monopoly.generateQuestion(key,currentTemplate);
         }
         $('#monopolyBase').css("z-index",-10)
@@ -144,7 +144,7 @@ monopoly.startScenarios = function(blockNo){
         
         $('#templateContent').css("height",(screenHeight)+'px')
         $('#templateContent').css("width",(screenWidth-250)+'px')
-        ubsApp.renderPage(scenario.getTemplate());
+        ubsApp.renderPageByName(scenario.getName());
   },1000);
 
 }
@@ -195,6 +195,7 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
+        user.setInventoryScore(100);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
@@ -207,6 +208,7 @@ monopoly.storePlayerDetails=function(){
       let user=new User();
       user.setplayerName("Computer");
       user.setplayerScore(1000);
+      user.setInventoryScore(100);
       user.setIsComputer(true);
       var level=$('input[name=compRadioLevel]:checked').val();
       user.setDifficultyLevel(level.toLowerCase());
@@ -219,14 +221,6 @@ monopoly.storePlayerDetails=function(){
       userArray.push(user);
       numplayers++;
     }
-    // var language=$('input[name=languageRadio]:checked').val();
-   
-    //   // var jsElm = document.createElement("script");
-    //   // jsElm.type = "text/javascript";
-    //   // jsElm.src = "js/"+language+".js";
-    //   // document.head.appendChild(jsElm);  
-      //console.log(ubsApp.translation["pratham_title_start"]);
-
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
@@ -243,7 +237,7 @@ monopoly.initPlayers=function(){
             object.nameTitle=ubsApp.translation["name"]+(i+1);
 
             var object={};
-            object.nameTitle="Name"+(i+1);
+            object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.numberOfTokens=[];
 
             object.nameId="name"+(i);
@@ -283,16 +277,17 @@ monopoly.initComputerDifficulty=function()
   } 
 }
 
-monopoly.intitializeScenarios=function()
+monopoly.initializeScenarios=function()
 {
     $.each(ubsApp.pages, function(key, value) {
         if(value.category)
         {
             let scenario = new Scenarios();
             scenario.setCategory(value.category);
-            scenario.setTemplate(value.templates);
-            scenario.setRepeatForAllUsers(true);
-            scenario.setRepeatforUser(true);
+            scenario.setName(key);
+            //scenario.setTemplate(value.templates);
+            scenario.setRepeatForAllUsers(false);
+            scenario.setRepeatforUser(false);
             scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
             {
@@ -315,10 +310,7 @@ monopoly.closeLeaderBoard=function(){
 monopoly.generateQuestion=function(key,template){
     var question=ubsApp.translation[key];
     template[0].question=template[0].question.replace(key,question)
-    // console.log(question);
-    // console.log("Hello World")
-    // console.log(scenario);
-    scenario.setTemplate(template);
+    
 }
 
 monopoly.chooseLanguage=function(){
@@ -341,7 +333,7 @@ monopoly.translate=function(){
   	document.getElementById("meritSideBar").innerHTML=ubsApp.translation["meritSideBar"];
   }
   if(document.getElementById("enterPlayers"))
-    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["playerNameTitle"];
+    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["enterPlayers"];
   
   if(document.getElementById("initPageTitle"))
     document.getElementById("initPageTitle").innerHTML=ubsApp.translation["initPageTitle"];
