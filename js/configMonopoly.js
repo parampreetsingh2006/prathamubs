@@ -23,13 +23,13 @@ monopoly.pages = {
 "InitialisePlayers":[{
         "templateId":1,
         "templateType":"static",
-        "src": "<div style=\" text-align:center; color:white;\"`id=\"initPageTitle\">Welcome to the Game|| खेल में आपका स्वागत है</div>" ,
-        "style": "padding:8px;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+        "id":"initPageTitle",
     },
     {
         "templateId":1,
         "templateType":"static",
-        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\">Computer Required? || कंप्यूटर आवश्यक है?",
+        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\"></label>",
         "style": "position:absolute; right:10%;top:10%;color:black;",
     },
     {
@@ -42,7 +42,7 @@ monopoly.pages = {
         "templateId":1,
         "templateType":"static",
         "src": "<div id=\"enterPlayers\">Enter Number of Players || खिलाड़ियों की संख्या दर्ज करें</div>" ,
-        "style": "position:absolute; left:19%;top:10%;color:black;",
+        "style": "position:absolute; left:29%;top:10%;color:black;",
     },
     {
         "templateId":1,
@@ -70,7 +70,7 @@ monopoly.pages = {
     }*/
 ],
 
-    "monopoly": [
+	"monopoly": [
         {
             "templateId":1,
             "templateType":"static",
@@ -133,6 +133,7 @@ monopoly.pages = {
             "src":"<div id=\"calculator\"  ></div>",
             "id" : "calculatorParent"
         },
+        
         {
             "templateId": 3,
             "templateType": "board",
@@ -297,7 +298,7 @@ monopoly.pages = {
         {
             "templateId":1,
             "templateType":"static",
-            "style":"position:absolute;top:55%;left:33%;",
+            "style":"position:absolute;top:65%;left:33%;",
             "id":"currentChanceDetails",
             "src":"<span id\"playerNameTitle\"> Player Name: <span id='player' style='padding: 1vw'></span></span>&nbsp;<span id=\"diceValueTitle\">Dice Value: <span id='diceval' style='padding: 1vw'></span></span>"
         },

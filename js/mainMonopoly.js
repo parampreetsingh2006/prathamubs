@@ -1,4 +1,3 @@
-
 monopoly.ubsBoardTemplate = undefined;
 monopoly.ubsMonopolyStaticTemplate =undefined;
 monopoly.ubsformTemplate = undefined;
@@ -11,7 +10,7 @@ monopoly.surpriseScenarioArray=[];
 monopoly.blockCategory=[];
 monopoly.scenariosArray=[];
 monopoly.tokens = ['Red', 'Blue', 'Green', 'Purple'];
-monopoly.difficultyLevel=["Easy","Medium","Hard"];
+monopoly.difficultyLevel=["easy","medium","hard"];
 monopoly.flag2= false;
 monopoly.computerDifficulty={};
 monopoly.scenario ={};
@@ -81,7 +80,7 @@ monopoly.renderPageforBoard = function(page) {
 			    "score" : userArray[i].getplayerScore()
 			   });
       }
-
+      //New Things added
       for(var j=0;j<templateConfig.bottom_row.length;j++){
         let key=templateConfig.bottom_row[j].title;
         let translatedString=ubsApp.translation[key];
@@ -96,6 +95,7 @@ monopoly.renderPageforBoard = function(page) {
       for(var j=0;j<templateConfig.right_col.length;j++){
         templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
       }
+      console.log(templateConfig);
 
       monopoly.initialiseCategory();
 			html+=ubsBoardTemplate(templateConfig);
@@ -116,6 +116,7 @@ monopoly.renderPageforBoard = function(page) {
 
      ubsApp.initializeLeaderBoard("Score");
      $("#player").html(userArray[playerChance].getplayerName()); 
+
 }
 }
 // monopoly.playComputer = function(div){
@@ -194,7 +195,7 @@ monopoly.rollDice  = function(){
 	$("#player").html(userArray[playerChance].getplayerName());
 	$("#diceval").html(diceVal);	
       monopoly.myMove(diceVal, playerChance, userArray[playerChance].getplayerCurrentPos());   //update Real time dice Value
-    },3000);
+    },1000);
 }
 
 monopoly.storePlayerDetails=function(){
@@ -231,14 +232,13 @@ monopoly.storePlayerDetails=function(){
       userArray.push(user);
       numplayers++;
     }
-    //var language=$('input[name=languageRadio]:checked').val();
+    // var language=$('input[name=languageRadio]:checked').val();
    
-      // var jsElm = document.createElement("script");
-      // jsElm.type = "text/javascript";
-      // // make the script element load file
-      // jsElm.src = "js/"+language+".js";
-      // // finally insert the element to the body element in order to load the script
-      // document.head.appendChild(jsElm);  
+    //   // var jsElm = document.createElement("script");
+    //   // jsElm.type = "text/javascript";
+    //   // jsElm.src = "js/"+language+".js";
+    //   // document.head.appendChild(jsElm);  
+      //console.log(ubsApp.translation["pratham_title_start"]);
 
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
@@ -251,10 +251,14 @@ monopoly.initPlayers=function(){
     {
         for(var i=0;i<numplayers;i++)
         {
+            object={};
+            object.numberOfTokens=[];
+            object.nameTitle=ubsApp.translation["name"]+(i+1);
 
             var object={};
             object.nameTitle="Name"+(i+1);
             object.numberOfTokens=[];
+
             object.nameId="name"+(i);
             object.numberOfTokens=[];
             for (var j = 0; j<tokens.length; j++) {
@@ -284,7 +288,7 @@ monopoly.initComputerDifficulty=function()
           "radioName":"compRadioLevel",
           "radioValue":difficultyLevel[i],
           "radioId":"comp"+i,
-          "text":difficultyLevel[i]
+          "text":ubsApp.translation[difficultyLevel[i]]
         }
         );
     }
@@ -321,14 +325,18 @@ monopoly.closeLeaderBoard=function(){
   document.getElementById("leaderBoardParent").style.width="0%";
 }
 
+
 monopoly.chooseLanguage=function(){
   var language=$('input[name=languageRadio]:checked').val();
   var jsElm = document.createElement("script");
   jsElm.type = "text/javascript";
   jsElm.src = "js/"+language+".js";
   document.head.appendChild(jsElm);
-  monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+  jsElm.onload=function(){
+    monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+  }
 }
+
 
 monopoly.translate=function(){
   if(document.getElementById("scoreSideBar")){
@@ -346,8 +354,8 @@ monopoly.translate=function(){
   if(document.getElementById("storePlayerDetailsButton"))
     document.getElementById("storePlayerDetailsButton").innerHTML=ubsApp.translation["storePlayerDetailsButton"];
 
-  if(document.getElementById("computer"))
-    document.getElementById("computer").innerHTML=ubsApp.translation["computer"];
+  if(document.getElementById("computerRequiredTitle"))
+    document.getElementById("computerRequiredTitle").innerHTML=ubsApp.translation["computerRequiredTitle"];
   if(document.getElementById("currentChanceDetails"))
   {
     let spanString=document.getElementById("currentChanceDetails").innerHTML;

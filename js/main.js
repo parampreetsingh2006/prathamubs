@@ -46,9 +46,15 @@ $(document).ready(function(){
 		// string => JSON = templateConfig;
 
 ubsApp.getStaticTemplate = function(templateConfig, tempVar){
-	tempVar.html += ubsStaticTemplate(templateConfig);
+	
 	if(templateConfig.display_score){
 		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]); 
+	}
+	if(templateConfig.resultId){
+		templateConfig.src=templateConfig.src.replace("Message",ubsApp.translation[templateConfig.resultId]);
+	}
+	if(templateConfig.buttonType){
+		templateConfig.src=templateConfig.src.replace("Message",ubsApp.translation[templateConfig.buttonType]);
 	}
 	if(templateConfig.score_animation_req){
 		tempVar.flag=true;
@@ -56,6 +62,7 @@ ubsApp.getStaticTemplate = function(templateConfig, tempVar){
 	if(templateConfig.onClickPage){
 		tempVar.staticConfig = templateConfig;
 	}
+	tempVar.html += ubsStaticTemplate(templateConfig);
 }
 
 ubsApp.getDecisionTemplate = function(templateConfig, tempVar){
@@ -77,8 +84,9 @@ ubsApp.getWheelOfFortuneTemplate = function(templateConfig, tempVar){
 }
 
 ubsApp.getTimerTempTemplate = function(templateConfig, tempVar){
-	tempVar.html+=ubsTimerTemplate(templateConfig)
-	tempVar.timerConfig=templateConfig;
+	if(!userArray[playerChance].getIsComputer())
+	{tempVar.html+=ubsTimerTemplate(templateConfig);
+	tempVar.timerConfig=templateConfig;}
 }
 
 ubsApp.getPopupTemplate = function(templateConfig, tempVar){
@@ -153,7 +161,7 @@ ubsApp.renderPage = function(page) {
 	tempVar.scratchCardTemplateConfig = undefined;
 	tempVar.flag=false;
 
-
+	
 	for(let i=0; i< page.length; i++) {
 		let templateConfig = page[i];
 		let templateType = templateConfig.templateType;
@@ -327,7 +335,7 @@ ubsApp.openCalculator=function(){
 ubsApp.initializeLeaderBoard=function(category)
 {
 	let leaderBoardObject={}; //new
-	leaderBoardObject.title=category; //new
+	 //new
 	leaderBoardObject.array=[];
 	if(category=="Score")
 	{
@@ -392,7 +400,8 @@ ubsApp.startTimer=function(temp){
     var timeleft = temp.time;
     timeVar = setInterval(function(){
 	    timeleft--;
-	    document.getElementById(temp.divID).innerHTML = timeleft;
+		if(document.getElementById(temp.divID))
+		document.getElementById(temp.divID).innerHTML = timeleft;
 	    if(timeleft === 0 ){
 	        clearInterval(timeVar);
 	        ubsApp.nextMove();

@@ -71,14 +71,25 @@ nav li:hover {
 
 /* BUTTONS */
 .roll-button {
-  margin: 15px auto; 
+  margin: 15px ; 
+  padding: 5px 8px;
+  left: 39%;
+  top: 55%;
+  position: absolute;
   color: #ffffcc;
   background: #AA4F39;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 3px #802915;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 3px #d8725b;
  }
+.roll-button:hover {background-color: #AA4F39}
 
+.roll-button:active {
+  background-color: #AA4F39;
+  box-shadow: 0 1px #d36a52;
+  transform: translateY(4px);
+}
 /*button {
   padding: 10px 50px;
   color: #ffffcc;
@@ -92,20 +103,26 @@ nav li:hover {
 /*button:hover, button:active {
   outline: none;
   background: #802915;
-  cursor: pointer;
+ 
   padding: 11px 50px 9px 50px;
   margin-top: 15px; }*/
 
 .dice-board {
-  width: 100%;
-  height: 50%; }
+  width: 20%;
+  height: 20%;
+  position:absolute; 
+  top:25%; 
+  left:28%; 
+}
 
 /*########## DICE THINGS ###########*/
 .container-dice {
   display: inline-block;
   margin-top: 100px;
   width: 300px;
-  margin: 50px auto 0 auto; }
+  margin: 50px auto 0 auto;
+  cursor:pointer; 
+}
 
 .dice {
   position: relative;
@@ -120,7 +137,7 @@ nav li:hover {
   height: 19%;
   margin: -10px 0 0 -5px;
   border-radius: 20px;
-  background: #000; }
+  background: white; }
 
 .dice-one {
   margin-left: 150px; }
@@ -129,7 +146,7 @@ nav li:hover {
   margin-left: 150px; }
 
 .side {
-  background-color: rgba(255, 255, 204, 0.97);
+  background-color: rgba(204, 0, 0, 0.97);
   position: absolute;
   width: 80px;
   height: 80px;
