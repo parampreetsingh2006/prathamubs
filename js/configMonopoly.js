@@ -298,7 +298,7 @@ monopoly.pages = {
         {
             "templateId":1,
             "templateType":"static",
-            "style":"position:absolute;top:50%;left:33%;",
+            "style":"position:absolute;top:65%;left:33%;",
             "id":"currentChanceDetails",
             "src":"<span id\"playerNameTitle\"> Player Name: <span id='player' style='padding: 1vw'></span></span>&nbsp;<span id=\"diceValueTitle\">Dice Value: <span id='diceval' style='padding: 1vw'></span></span>"
         },

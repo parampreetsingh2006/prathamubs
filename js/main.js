@@ -82,8 +82,9 @@ ubsApp.getWheelOfFortuneTemplate = function(templateConfig, tempVar){
 }
 
 ubsApp.getTimerTempTemplate = function(templateConfig, tempVar){
-	tempVar.html+=ubsTimerTemplate(templateConfig)
-	tempVar.timerConfig=templateConfig;
+	if(!userArray[playerChance].getIsComputer())
+	{tempVar.html+=ubsTimerTemplate(templateConfig);
+	tempVar.timerConfig=templateConfig;}
 }
 
 ubsApp.getPopupTemplate = function(templateConfig, tempVar){
@@ -509,7 +510,7 @@ ubsApp.chooseAnswer = function(decisionConfig, correctProbability, number){
 ubsApp.playStaticTemplate = function(staticConfig){
 	setTimeout(function(){
 		$('#'+staticConfig.id).trigger('click');
-	},2000);
+	},staticConfig.conclusionTime);
 }
 
 ubsApp.playDecisionTemplate =function(decisionConfig){

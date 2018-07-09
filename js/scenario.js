@@ -29,8 +29,6 @@ class Scenarios{
     setPage(page){
         this.page=page;
     }
-
-    
     getPage(page)
     {
         return this.page;
@@ -60,7 +58,7 @@ class Scenarios{
 
     getRepeatforAllUsers()
     {
-        return false;
+        return this.repeat_for_all;
     }
     setRepeatforUser(repeat)
     {
@@ -70,17 +68,4 @@ class Scenarios{
     {
         return this.repeat;
     }
-   /* openScenario(pid)
-    {
-        if(this.players_answered_this_scenario.includes(pid))
-        {
-            return -1;
-        }
-        else
-        {
-            this.players_answered_this_scenario.push(pid);
-            ubsApp.renderPageByName(page);
-        }
-            
-    }*/
 }

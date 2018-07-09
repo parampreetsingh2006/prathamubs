@@ -13,7 +13,7 @@ monopoly.tokens = ['Red', 'Blue', 'Green', 'Purple'];
 monopoly.difficultyLevel=["easy","medium","hard"];
 monopoly.flag2= false;
 monopoly.computerDifficulty={};
-monopoly.scenario = undefined;
+monopoly.scenario ={};
 
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
@@ -108,8 +108,6 @@ monopoly.renderPageforBoard = function(page) {
 		}
   }
 
-
-
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
 	
@@ -144,15 +142,31 @@ monopoly.startScenarios = function(blockNo){
         
         $('#templateContent').css("height",(screenHeight)+'px')
         $('#templateContent').css("width",(screenWidth-250)+'px')
+
         ubsApp.renderPageByName(scenario.getName());
+
+        currentTemplate[0].question=key;
+       
   },1000);
 
 }
+
+
+monopoly.generateQuestion=function(key,template){
+    var question=ubsApp.translation[key];
+    template[0].question=question;
+    scenario.setTemplate(template);
+}
+
 monopoly.myMove = function(count, pId, currentPos) {
   var temp="#p"+pId;
   var playerToken = $(temp);
   var blockNo = currentPos;   
   var movePlayer = setInterval(frame, 500);
+  if(currentPos+count >= boardConfig.blocks){
+    let x = userArray[pId].getWeeks();
+    userArray[pId].setWeeks(++x);
+  }
   function frame(){
     if (blockNo == (currentPos+count)%boardConfig.blocks){
       userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
@@ -175,7 +189,6 @@ monopoly.updateRollingDiceTemplate = function(template){
 
 monopoly.rollDice  = function(){
   $('#rollIt').attr('disabled',true);
-
   diceVal = pointRoll();
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
@@ -201,6 +214,7 @@ monopoly.storePlayerDetails=function(){
         user.setplayerId("p"+i);
         user.setplayerCurrentPos(0);
         user.setScenarioArray(scenariosArray);
+        user.setWeeks(0);
         userArray[i]=user;
     }
     if(computerRequired)
@@ -215,6 +229,7 @@ monopoly.storePlayerDetails=function(){
       user.setCorrectProbability(level);
       user.setplayerCurrentPos(0);
       user.setplayerId("p"+i);
+      user.setWeeks(0);
       user.setScenarioArray(scenariosArray);
       user.setplayerColor(tokens[tokens.length-1]);
       user.setCorrectAnswered(0);
@@ -287,7 +302,7 @@ monopoly.initializeScenarios=function()
             scenario.setName(key);
             //scenario.setTemplate(value.templates);
             scenario.setRepeatForAllUsers(false);
-            scenario.setRepeatforUser(false);
+            scenario.setRepeatforUser(true);
             scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
             {
@@ -307,11 +322,6 @@ monopoly.closeLeaderBoard=function(){
   document.getElementById("leaderBoardParent").style.width="0%";
 }
 
-monopoly.generateQuestion=function(key,template){
-    var question=ubsApp.translation[key];
-    template[0].question=template[0].question.replace(key,question)
-    
-}
 
 monopoly.chooseLanguage=function(){
   var language=$('input[name=languageRadio]:checked').val();

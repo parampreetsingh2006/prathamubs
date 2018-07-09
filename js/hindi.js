@@ -19,7 +19,6 @@ ubsApp.translation={
     "initPageTitle":"खेल में आपका स्वागत है",
     "storePlayerDetailsButton":"अगला पृष्ठ",
     "computerRequiredTitle":"कंप्यूटर आवश्यक है?",
-
     "playerNameTitle":"खिलाडि का नाम",
     "diceValueTitle":"पासा मूल्य",
     "easy":"आसान",
