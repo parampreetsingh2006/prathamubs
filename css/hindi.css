@@ -1,0 +1,78 @@
+*{font-size: 1.05vw !important}
+
+#insuranceContent{
+    font-weight:700;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:31.5%;
+    left:86% ;
+}
+#inventoryContent{
+    font-weight:700;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:24.5%;
+    left:86% ;
+}
+#lastBalanceContent{
+    font-weight:700;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:17%;
+    left:89% ;
+}
+#reputationContent{
+    font-weight:700;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:40%;
+    left:88% ;
+}
+
+
+/*title starts*/
+
+#weekTitle{
+    font-size: 1.1vw !important;
+    left:82%;
+    position:absolute;
+    top:10%;
+    font-weight:700;
+}
+
+#lastBalanceTitle{
+    left:82%;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:17%;
+    font-weight:700;
+}
+
+#inventoryTitle{
+    left:82%;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:25%;
+    font-weight:700;
+}
+#insuranceTitle{
+    left:82%;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:32%;
+    font-weight:700;
+}
+#reputationTitle{
+    left:82%;
+    font-size: 1.1vw !important;
+    position:absolute;
+    top:40.5%;
+    font-weight:700;
+}
+
+#weekContent{
+    left:86%;
+    position:absolute;
+    top:10%;
+    font-size: 1.1vw !important;
+}

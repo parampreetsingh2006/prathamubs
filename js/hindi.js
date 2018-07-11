@@ -14,7 +14,9 @@ ubsApp.translation={
     "documentSideBar":"दस्तावेज़",
     "inventorySideBar":"इन्वेंटरी",
     "meritSideBar":"योग्यता",
-
+    "cash":"कैश",
+    "rollit":"घुमाओ",
+    "endGame":"अंत खेल",
     "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
     "initPageTitle":"खेल में आपका स्वागत है",
     "storePlayerDetailsButton":"अगला पृष्ठ",
@@ -25,7 +27,14 @@ ubsApp.translation={
     "medium":"मध्यम",
     "hard":"कठिन",
     "name":"नाम",
+    //This is where new addition started
+    "inventoryTitle":"इन्वेंटरी",
+    "weekTitle":"सप्ताह",
+    "lastBalanceTitle":"अंतिम संतुलन",
+    "insuranceTitle":"बीमा",  //   इनश्योरेंस
+    "reputationTitle":" प्रतिष्ठा अंक", // नेकनामी  अंक
 
+    //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
 
     "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",

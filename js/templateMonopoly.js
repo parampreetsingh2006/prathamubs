@@ -67,8 +67,8 @@ monopoly.rollingDiceTemplate =
 '  <div class="dice-board">'+
 ''+
 ''+
-'    <div class="container-dice" onclick="monopoly.rollDice()" >'+
-'      <div id=\'dice1\' class="dice dice-one">'+
+'    <div class="container-dice" >'+
+'      <div id=\'dice1\' class="dice dice-one" style="float:left;">'+
 '        <div id="dice-one-side-one" class=\'side one\'>'+
 '          <div class="divot one-1"></div>'+
 '        </div>'+
@@ -103,7 +103,46 @@ monopoly.rollingDiceTemplate =
 '          <div class="divot six-6"></div>'+
 '        </div>'+
 '      </div>'+
+
+
+'      <div id=\'dice2\' style=" float:right;" class="dice dice-one">'+
+'        <div id="dice-one-side-one" class=\'side one\'>'+
+'          <div class="divot one-1"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-two" class=\'side two\'>'+
+'          <div class="divot two-1"></div>'+
+'          <div class="divot two-2"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-three" class=\'side three\'>'+
+'          <div class="divot three-1"></div>'+
+'          <div class="divot three-2"></div>'+
+'          <div class="divot three-3"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-four" class=\'side four\'>'+
+'          <div class="divot four-1"></div>'+
+'          <div class="divot four-2"></div>'+
+'          <div class="divot four-3"></div>'+
+'          <div class="divot four-4"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-five" class=\'side five\'>'+
+'          <div class="divot five-1"></div>'+
+'          <div class="divot five-2"></div>'+
+'          <div class="divot five-3"></div>'+
+'          <div class="divot five-4"></div>'+
+'          <div class="divot five-5"></div>'+
+'        </div>'+
+'        <div id="dice-one-side-six" class=\'side six\'>'+
+'          <div class="divot six-1"></div>'+
+'          <div class="divot six-2"></div>'+
+'          <div class="divot six-3"></div>'+
+'          <div class="divot six-4"></div>'+
+'          <div class="divot six-5"></div>'+
+'          <div class="divot six-6"></div>'+
+'        </div>'+
+'      </div>'+
+
 '  '+
+
 ''+
 ''+
 '    </div> '+

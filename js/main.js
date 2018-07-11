@@ -212,10 +212,21 @@ ubsApp.renderPage = function(page) {
 		tempVar.timerConfig={};	
 	}
 
-	ubsApp.addScore(parseInt(answerselected));
-	answerselected=0;
-	ubsApp.addInventory(parseInt(inventoryToBeUpdated));
-	inventoryToBeUpdated=0;
+	if(answerselected!=0)
+	{
+		ubsApp.addScore(parseInt(answerselected));
+		document.getElementById("lastBalanceContent").innerHTML="₹"+userArray[playerChance].getplayerScore();
+		answerselected=0;
+	}	
+	if(inventoryToBeUpdated!=0)
+	{
+		ubsApp.addInventory(parseInt(inventoryToBeUpdated));
+		document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
+		//ubsApp.animate_score(parseInt(inventoryToBeUpdated),document.getElementById("inventoryContent"));
+		inventoryToBeUpdated=0;
+	}
+		
+	
 	/*if($('#headId').length > 0) {
 		if(flag){
 				ubsApp.animate_score(answerselected);
@@ -424,8 +435,10 @@ ubsApp.nextMove = function(){
 			$('#templateContent').css("height",0+'px')
 			document.getElementById("templateContent").innerHTML="";
 			$('#rollIt').attr('disabled',false);
-			$("#player").html(userArray[playerChance].getplayerName());
+			
+			this.currentPlayerContents();
 			$("#diceval").html(" ");
+			//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
 			if(userArray[playerChance].getIsComputer()){
 				decisionConfig={};
 				setTimeout( function(){
@@ -453,15 +466,17 @@ ubsApp.addInventory=function(inventoryPoints){
 }
 
 ubsApp.animate_score=function(amount){
-    var sc=ubsApp.getScore(); 
+
+	ubsApp.addScore(parseInt(amount));
+    var sc=userArray[playerChance].getplayerScore(); 
     var target_score=sc+parseInt(amount);
-    
+    var element=document.getElementById("lastBalanceContent");
     if(amount<0)
     {
         
         interval=window.setInterval(function () {
         sc = sc-1;
-        document.getElementById("headId").innerHTML = sc;
+        element.innerHTML = "Rs."+sc;
         if(sc==target_score)
             clearInterval(interval);
         }, parseInt(amount)/1000000);
@@ -471,13 +486,54 @@ ubsApp.animate_score=function(amount){
 
             interval=window.setInterval(function () {
             sc = sc+1;
-            document.getElementById("headId").innerHTML = sc;
+            element.innerHTML = "Rs."+sc;
             if(sc==target_score)
                 clearInterval(interval);
             }, parseInt(amount)/1000000);
     }
-    ubsApp.addScore(parseInt(amount));
-    document.getElementById("headId").innerHTML=ubsApp.getScore();
+    
+	//element.innerHTML=userArray[playerChance].getplayerScore();
+	
+}
+
+
+
+
+
+/*
+ubsApp.animateMoney=function(amount){
+
+    var sc=userArray[playerChance].getplayerScore(); 
+    var target_score=sc+parseInt(amount);
+	var element=document.getElementById("lastBalanceContent");
+	var temp=amount;
+    if(amount<0)
+    {
+        
+        interval=window.setInterval(function () {
+        sc = sc-1;
+		if(sc>target_score){
+			userArray[playerChance].setplayerScore(target_score);
+			clearInterval(interval);
+		}
+		element.innerHTML = "Rs."+target_score;
+        }, target_score/1000000);
+    }
+    else if(amount>0)
+    {
+
+            interval=window.setInterval(function () {
+            sc = sc+1;
+           
+			if(sc>target_score){
+				userArray[playerChance].setplayerScore(target_score);	
+				clearInterval(interval);
+			}
+			element.innerHTML = "Rs."+target_score;
+            }, target_score/1000000);
+    }
+    //ubsApp.addScore(parseInt(amount));
+	//element.innerHTML=userArray[playerChance].getplayerScore();
 }
 
 
@@ -531,4 +587,12 @@ ubsApp.playDecisionTemplate =function(decisionConfig){
  		},decisionConfig.optionsTime);
   	},decisionConfig.questionTime);
 }
-
+*/
+ubsApp.currentPlayerContents=function(){
+	$("#player").html(userArray[playerChance].getplayerName());
+	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();	
+	document.getElementById("lastBalanceContent").innerHTML="₹"+userArray[playerChance].getplayerScore();
+	document.getElementById("insuranceContent").innerHTML="No";
+	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
+	document.getElementById("reputationContent").innerHTML=15;
+}

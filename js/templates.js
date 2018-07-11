@@ -120,6 +120,8 @@ ubsApp.rollingDiceTemplate = '<link rel="stylesheet" href="roll_dice.css">'+
     
 
 
+
+
 ubsApp.scratchCard ='<canvas id="scratch_card_canvas"'+
                     '	height="{{height}}px"'+
                     '	width="{{width}}px"'+
