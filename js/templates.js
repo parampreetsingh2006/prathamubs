@@ -303,7 +303,7 @@ ubsApp.leaderBoardTemplate=
 
 ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.js"></script>'+
 '<link rel="stylesheet" type="text/css" href="css/calculator.css">'+
-'<div id="calculator">'+
+'<div id="calculator" style="display:none">'+           //remove display None
 '   <div id="rateCard"> Rate Card</div>'+
 '   <input type="text" id="numberInput">'+
 '   <input id="calcButton" type="button" value="7" onclick="addToDisplay(7)">'+

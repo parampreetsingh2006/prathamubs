@@ -222,13 +222,13 @@ monopoly.pages = {
             "src":"<div id=\"meritBoard\"  ></div>",
             "id" : "meritBoardParent"
         },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 80%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
-            "src":"<div id=\"calculator\"  ></div>",
-            "id" : "calculatorParent"
-        },
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 80%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+        //     "src":"<div id=\"calculator\"  ></div>",
+        //     "id" : "calculatorParent"
+        // },
         
         {
             "templateId": 3,
