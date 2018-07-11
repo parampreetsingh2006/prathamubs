@@ -299,3 +299,29 @@ ubsApp.leaderBoardTemplate=
         '{{/each}}'+
         
     '</div><br>';
+
+
+ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.js"></script>'+
+'<link rel="stylesheet" type="text/css" href="css/calculator.css">'+
+'<div id="calculator">'+
+'   <div id="rateCard"> Rate Card</div>'+
+'   <input type="text" id="numberInput">'+
+'   <input id="calcButton" type="button" value="7" onclick="addToDisplay(7)">'+
+'   <input id="calcButton" type="button" value="8" onclick="addToDisplay(8)">'+
+'   <input id="calcButton" type="button" value="9" onclick="addToDisplay(9)">'+
+'   <input id="calcButton" type="button" value="/" onclick="addToDisplay(\'/\')">'+
+'   <input id="calcButton" type="button" value="4" onclick="addToDisplay(4)">'+
+'   <input id="calcButton" type="button" value="5" onclick="addToDisplay(5)">'+
+'   <input id="calcButton" type="button" value="6" onclick="addToDisplay(6)">'+
+'   <input id="calcButton" type="button" value="*" onclick="addToDisplay(\'*\')">'+
+'   <input id="calcButton" type="button" value="1" onclick="addToDisplay(1)">'+
+'   <input id="calcButton" type="button" value="2" onclick="addToDisplay(2)">'+
+'   <input id="calcButton" type="button" value="3" onclick="addToDisplay(3)">'+
+'   <input id="calcButton" type="button" value="+" onclick="addToDisplay(\'+\')">'+
+'   <input id="calcButton" type="button" value="C" onclick="addToDisplay(\'C\')">'+
+'   <input id="calcButton" type="button" value="0" onclick="addToDisplay(0)">'+
+'   <input id="calcButton" type="button" value="=" onclick="addToDisplay(\'=\')">'+
+'   <input id="calcButton" type="button" value="-" onclick="addToDisplay(\'-\')">'+
+'</div>';
+    
+
