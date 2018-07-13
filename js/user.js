@@ -48,7 +48,6 @@ class User{
         return this.isComputer;
     }
 
-
     setInventoryScore(inventoryScore)
     {
         this.inventoryScore=inventoryScore;

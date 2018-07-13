@@ -272,11 +272,6 @@ ubsApp.boardTemplate='<div class="responsive">'+
     '</div>'+
 '</div>';
 
-
-ubsApp.calculatorTemplate='<div id="calculator" style="position: absolute;bottom: 2%;left: 5%;">'+
-                                ' <button style="background: url(Images/calculator.png) no-repeat;" onclick="ubsApp.openCalculator()"></button>'+
-                            '</div>';
-
 ubsApp.leaderBoardTemplate=
     '<div id=\"leaderBoardTitle\" style=\"color:white;\" >'+
         '{{title}}'+
@@ -296,3 +291,156 @@ ubsApp.leaderBoardTemplate=
         '{{/each}}'+
         
     '</div><br>';
+
+    ubsApp.salesTemplate=
+    '<div class="row" style="height:100%;width:100%">'+
+'    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
+'       <div class = "heading" >'+
+'           Customer'+
+'       </div>'+
+'       <br>'+
+'       <div id="profile" >'+
+'           <img src="{{profilePicture}}.png" class="photo" >'+
+'       </div>'+
+'           <br>'+
+'       <div id="order">'+
+'           <center><b>Order</b></center>'+
+'           <div id="orderList">'+
+'               <table class="table table-sm">'+
+'                   <tbody>'+
+'                       {{#each order}}'+
+'                         <tr>'+
+'                           <td>{{item}}</td>'+
+'                           <td>{{amount}}</td>'+
+'                         </tr>'+
+'                       {{/each}}'+
+'                   </tbody>'+
+'               </table>'+
+'           </div>'+
+'       </div>'+
+'    </div>'+
+'    <div class="col-md-6 col-sm-6 col-xs-6 receipt-gen">'+
+'       <div class = "heading">'+
+'           Receipt Generation'+
+'       </div>'+
+'       <br>'+
+'       <div class="receipt">'+
+'           <div id="title">Super Market Receipt</div>'+
+'       '+
+'           <div id="bill">'+
+'               <div class="table-responsive">          '+
+'                 <table class="table table-bordered">'+
+'                   <thead>'+
+'                     <tr>'+
+'                       <th>#</th>'+
+'                       <th>Items</th>'+
+'                       <th>Quantity</th>'+
+'                       <th>Rate</th>'+
+'                       <th>Amount</th>'+
+'                     </tr>'+
+'                   </thead>'+
+'                   <tbody>'+
+'                       {{#each order}}'+
+'                     <tr class = "row{{no}}" data-toggle="tooltip" data-placement="bottom" title="" >'+
+'                       <td>{{no}}</td>'+
+'                       <td>{{item}}</td>'+
+'                       <td id="itemPrice{{no}}">{{amount}}</td>'+
+'                       <td>{{rate}}</td>'+
+'                       <td ><input id = "input{{no}}" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()"></td>  '+
+'                     </tr>'+
+'                       {{/each}}'+
+'                     <tr>'+
+'                       <td></td>'+
+'                       <td></td>'+
+'                       <td></td>'+
+'                       <td><b>Total</b></td>'+
+'                       <td><input type="number"  id="receiptTotal" class="amount" ></td>    '+
+'                     </tr>'+
+'                   </tbody>'+
+'                 </table>'+
+'               </div>'+
+'           </div>'+
+'       </div>'+
+'    </div>'+
+'   <div class="col-md-4 col-sm-4 col-xs-4 tools">'+
+'       <div class = "heading">'+
+'           Tools'+
+'       </div>'+
+// '       <div id="rateCard">'+
+// '           <center><b>Rate Card</b></center>'+
+// '           <div id="rateList">'+
+// '               <table class="table table-sm">'+
+// '                   <thead>'+
+// '                     <tr>'+
+// '                       <th>Items</th>'+
+// '                       <th>Rate</th>'+
+// '                     </tr>'+
+// '                 </thead>'+
+// '                   <tbody>'+
+// '                     {{#each itemRate}}'+
+// '                     <tr>'+
+// '                       <td>{{item}}</td>'+
+// '                       <td>{{rate}}</td>'+
+// '                     </tr>'+
+// '                     {{/each}}'+
+// '                   </tbody>'+
+// '                 </table>'+
+// '           </div>'+
+// '       </div>'+
+// '       <div id="inventory">'+
+// '           <center><b>Inventory</b></center>'+
+// '           <div id="inventoryList">'+
+// '               <table class="table table-sm">'+
+// '                   <thead>'+
+// '                     <tr>'+
+// '                       <th>Items</th>'+
+// '                       <th>Amount</th>'+
+// '                     </tr>'+
+// '                 </thead>'+
+// '                   <tbody>'+
+// '                       {{#each inventory}}'+
+// '                     <tr>'+
+// '                       <td>{{item}}</td>'+
+// '                       <td>{{amount}}</td>'+
+// '                     </tr>'+
+// '                     {{/each}}'+
+// '                   </tbody>'+
+// '                 </table>'+
+// ''+
+// '           </div>'+
+// '       </div>'+
+'           '+
+'       <div id="calculator">'+
+'           <input type="text" readonly size="10" maxlength="7" id="numberInput">'+
+'           <input id="calcButton" class="button gray" type="button" value="7" onclick="addToDisplay(7)">'+
+'           <input id="calcButton" class="button gray" type="button" value="8" onclick="addToDisplay(8)">'+
+'           <input id="calcButton" class="button gray" type="button" value="9" onclick="addToDisplay(9)">'+
+'           <input id="calcButton" class="button pink" type="button" value="/" onclick="addToDisplay(\'/\')">'+
+'           <input id="calcButton" class="button gray" type="button" value="4" onclick="addToDisplay(4)">'+
+'           <input id="calcButton" class="button gray" type="button" value="5" onclick="addToDisplay(5)">'+
+'           <input id="calcButton" class="button gray" type="button" value="6" onclick="addToDisplay(6)">'+
+'           <input id="calcButton" class="button pink" type="button" value="*" onclick="addToDisplay(\'*\')">'+
+'           <input id="calcButton" class="button gray" type="button" value="1" onclick="addToDisplay(1)">'+
+'           <input id="calcButton" class="button gray" type="button" value="2" onclick="addToDisplay(2)">'+
+'           <input id="calcButton" class="button gray" type="button" value="3" onclick="addToDisplay(3)">'+
+'           <input id="calcButton" class="button pink" type="button" value="+" onclick="addToDisplay(\'+\')">'+
+'           <input id="calcButton" class="button orange" type="button" value="C" onclick="addToDisplay(\'C\')">'+
+'           <input id="calcButton" class="button gray" type="button" value="0" onclick="addToDisplay(0)">'+
+'           <input id="calcButton" class="button orange" type="button" value="=" onclick="addToDisplay(\'=\')">'+
+'           <input id="calcButton" class="button pink" type="button" value="-" onclick="addToDisplay(\'-\')">'+
+'       </div>'+
+'       <span id = "minutes">00'+
+'           '+
+'       </span>'+
+'       <span id="colon">'+
+'           :'+
+'       </span>'+
+'       <span id = "seconds">'+
+'           '+
+'       </span>'+
+'       <img class="butt" id="help" src="C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/help.png" />'+
+'       <img class="butt" id="done" src="C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/done.png" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}} />    '+
+'   </div>'+
+'  </div>';
+    
+

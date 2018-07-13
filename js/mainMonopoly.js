@@ -141,7 +141,8 @@ monopoly.startScenarios = function(blockNo){
         document.getElementById("templateContent").style.opacity="0.95";
         
         $('#templateContent').css("height",(screenHeight)+'px')
-        $('#templateContent').css("width",(screenWidth-250)+'px')
+        $('#templateContent').css("width",(screenWidth)+'px')
+        console.log(screenWidth);
         ubsApp.renderPage(scenario.getTemplate());
         currentTemplate[0].question=key;
         scenario.setTemplate(currentTemplate);
@@ -209,6 +210,7 @@ monopoly.storePlayerDetails=function(){
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
+        user.setInventoryScore(100);
         user.setplayerCurrentPos(0);
         user.setScenarioArray(scenariosArray);
         user.setWeeks(0);
@@ -222,6 +224,7 @@ monopoly.storePlayerDetails=function(){
       user.setIsComputer(true);
       var level=$('input[name=compRadioLevel]:checked').val();
       user.setDifficultyLevel(level.toLowerCase());
+      user.setInventoryScore(100);
       user.setCorrectProbability(level);
       user.setplayerCurrentPos(0);
       user.setplayerId("p"+i);
@@ -304,8 +307,8 @@ monopoly.intitializeScenarios=function()
             let scenario = new Scenarios();
             scenario.setCategory(value.category);
             scenario.setTemplate(value.templates);
-            scenario.setRepeatForAllUsers(true);
-            scenario.setRepeatforUser(true);
+            scenario.setRepeatForAllUsers(value.repeatforall);
+            scenario.setRepeatforUser(value.repeatforuser);
             scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
             {
