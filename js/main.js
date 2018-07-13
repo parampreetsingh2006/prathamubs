@@ -16,6 +16,8 @@ let ubsOrdertemplate;
 let choiceSelected={};
 let timeVar;
 var answerselected=0;         //whyGlobal
+var inventoryToBeUpdated=0;
+var minimumInventoryScoreRequired=0;
 ubsApp.wheelOfFortune = null;
 var interval;				//whyGlobal
 let audioConfig = {};
@@ -32,11 +34,8 @@ monopoly.playerChance = 0;
 let playerChance = monopoly.playerChance;
 
 
-$(document).ready(function(){
-	// if (typeof(Storage) == "undefined") {
-	// 	localStorage.setItem("score","1000");
-	// 	localStorage.setItem("currency","$");
-	// }
+
+$(document).ready(function(){	
 	ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
     
@@ -156,6 +155,11 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 }
 
 ubsApp.renderPage = function(page) {
+	monopoly.closeLeaderBoard();
+	if(page.minimumInventoryScoreRequired){
+		minimumInventoryScoreRequired=page.minimumInventoryScoreRequired;
+	}
+
 	if(page.templates) {
 		page=page.templates;
 	}
@@ -222,8 +226,22 @@ ubsApp.renderPage = function(page) {
 		ubsApp.selectAvailableItems(tempVar.salesConfig);
 		ubsApp.startTimer(tempVar.salesConfig);
 	}
-	ubsApp.addScore(parseInt(answerselected));
-	answerselected=0;
+
+
+	if(answerselected!=0)
+	{
+		ubsApp.addScore(parseInt(answerselected));
+		document.getElementById("lastBalanceContent").innerHTML="₹"+userArray[playerChance].getplayerScore();
+		answerselected=0;
+	}	
+	if(inventoryToBeUpdated!=0)
+	{
+		ubsApp.addInventory(parseInt(inventoryToBeUpdated));
+		document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
+		//ubsApp.animate_score(parseInt(inventoryToBeUpdated),document.getElementById("inventoryContent"));
+		inventoryToBeUpdated=0;
+	}
+
 	/*if($('#headId').length > 0) {
 		if(flag){
 				ubsApp.animate_score(answerselected);
@@ -294,11 +312,12 @@ ubsApp.mapTemplatetoFunction = function(){
 	}
 }
 ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
+	
 	if(hideScenarios == "true"){
         ubsApp.nextMove();
 	}
 	else {
-		ubsApp.renderPageByName(page,amount);
+		ubsApp.renderPageByName(page);/*,amount);*/
 	}
 }
 
@@ -340,13 +359,15 @@ ubsApp.checkSelected= function(){
 });
 	return allSelected;
 }
-ubsApp.renderPageByName = function(pageName,amount) {
+ubsApp.renderPageByName = function(pageName)/*,amount)*/ {
 	clearInterval(interval);
-	if(amount === undefined || amount === null|| amount.length===0){
+
+	/*if(amount === undefined || amount === null|| amount.length===0){	
+
 	}
 	else{
 		ubsApp.animate_score(amount);
-	}
+	}*/
 	pageName=pageName.trim();
 	this.renderPage(ubsApp.pages[pageName]);
 }
@@ -384,7 +405,9 @@ ubsApp.intitializeTemplates = function() {
 
 ubsApp.renderDecisonTemplate = function() {
   let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
-  answerselected=$("#" + checkedValue + "Amount").text();
+  answerselected=$("#" + checkedValue + "Amount").text(); 
+  inventoryToBeUpdated=$("#" + checkedValue + "Inventory").text();
+
   clearInterval(timeVar);
   clearInterval(interval);
   clearInterval(timeVar);
@@ -444,7 +467,7 @@ ubsApp.initializeLeaderBoard=function(category)
 			leaderBoardObject.array.push({
 				"name":userArray[j].getplayerName(),
 				"color":userArray[j].getplayerColor(),
-				"inventory":"Dummy Text"
+				"inventory":userArray[j].getInventoryScore()+"%",
 			});
         	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
 		}
@@ -488,8 +511,10 @@ ubsApp.nextMove = function(){
 			$('#templateContent').css("height",0+'px')
 			document.getElementById("templateContent").innerHTML="";
 			$('#rollIt').attr('disabled',false);
-			$("#player").html(userArray[playerChance].getplayerName());
+			
+			this.currentPlayerContents();
 			$("#diceval").html(" ");
+			//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
 			if(userArray[playerChance].getIsComputer()){
 				decisionConfig={};
 				setTimeout( function(){
@@ -511,36 +536,78 @@ ubsApp.addScore=function (earnedScore)
     userArray[playerChance].setplayerScore(parseInt(currentScore)+parseInt(earnedScore));
 }
 
-ubsApp.animate_score=function(amount){
-    var sc=ubsApp.getScore();
-    var target_score=sc+parseInt(amount);
+ubsApp.addInventory=function(inventoryPoints){
+	var currentInventory=userArray[playerChance].getInventoryScore();
+	userArray[playerChance].setInventoryScore(inventoryPoints+currentInventory);
+}
 
+// ubsApp.animate_score=function(amount){
+
+
+// 	ubsApp.addScore(parseInt(amount));
+//     var sc=userArray[playerChance].getplayerScore(); 
+//     var target_score=sc+parseInt(amount);
+//     var element=document.getElementById("lastBalanceContent");
+
+//     if(amount<0)
+//     {
+
+//         interval=window.setInterval(function () {
+//         sc = sc-1;
+//         element.innerHTML = "Rs."+sc;
+//         if(sc==target_score)
+//             clearInterval(interval);
+//         }, parseInt(amount)/1000000);
+//     }
+//     else if(amount>0)
+//     {
+
+//             interval=window.setInterval(function () {
+//             sc = sc+1;
+//             element.innerHTML = "Rs."+sc;
+//             if(sc==target_score)
+//                 clearInterval(interval);
+//             }, parseInt(amount)/1000000);
+//     }
+    
+// 	element.innerHTML=userArray[playerChance].getplayerScore();
+	
+// }
+
+ubsApp.animateMoney=function(amount){
+
+    var sc=userArray[playerChance].getplayerScore(); 
+    var target_score=sc+parseInt(amount);
+	var element=document.getElementById("lastBalanceContent");
+	var temp=amount;
     if(amount<0)
     {
-
+        
         interval=window.setInterval(function () {
         sc = sc-1;
-        document.getElementById("headId").innerHTML = sc;
-        if(sc==target_score)
-            clearInterval(interval);
-        }, parseInt(amount)/1000000);
+		if(sc>target_score){
+			userArray[playerChance].setplayerScore(target_score);
+			clearInterval(interval);
+		}
+		element.innerHTML = "Rs."+target_score;
+        }, target_score/1000000);
     }
     else if(amount>0)
     {
 
             interval=window.setInterval(function () {
             sc = sc+1;
-            document.getElementById("headId").innerHTML = sc;
-            if(sc==target_score)
-                clearInterval(interval);
-            }, parseInt(amount)/1000000);
+           
+			if(sc>target_score){
+				userArray[playerChance].setplayerScore(target_score);	
+				clearInterval(interval);
+			}
+			element.innerHTML = "Rs."+target_score;
+            }, target_score/1000000);
     }
-    ubsApp.addScore(parseInt(amount));
-    document.getElementById("headId").innerHTML=ubsApp.getScore();
+    //ubsApp.addScore(parseInt(amount));
+	//element.innerHTML=userArray[playerChance].getplayerScore();
 }
-
-
-
 //Computer Player
 
 ubsApp.chooseAnswer = function(decisionConfig, correctProbability, number){
@@ -590,3 +657,14 @@ ubsApp.playDecisionTemplate =function(decisionConfig){
  		},decisionConfig.optionsTime);
   	},decisionConfig.questionTime);
 }
+
+
+ubsApp.currentPlayerContents=function(){
+	$("#player").html(userArray[playerChance].getplayerName());
+	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();	
+	document.getElementById("lastBalanceContent").innerHTML="₹"+userArray[playerChance].getplayerScore();
+	document.getElementById("insuranceContent").innerHTML="No";
+	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
+	document.getElementById("reputationContent").innerHTML=15;
+}
+

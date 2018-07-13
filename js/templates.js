@@ -16,7 +16,8 @@ ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
 '				'+
 '			{{#each options}}'+
 '			 <div  style="color: black;background-color:rgb(153, 230, 255);border-radius: 2vw;padding:.5vw;font-size:0.9vw;"> <input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
-'<span style="display:none" id="{{id}}Amount">{{amount}}</span>' + 
+'<span style="display:none" id="{{id}}Amount">{{amount}}</span>' +
+'<span style="display:none" id="{{id}}Inventory">{{inventoryScoreToBeChanged}}</span>'+
 '			{{/each}}    '+
 '				'+
 '		</div>'+
@@ -117,6 +118,8 @@ ubsApp.rollingDiceTemplate = '<link rel="stylesheet" href="roll_dice.css">'+
 '  </div>'+
 '    <script type="text/javascript" src="roll_dice.js"></script>';
     
+
+
 
 
 ubsApp.scratchCard ='<canvas id="scratch_card_canvas"'+
@@ -432,7 +435,7 @@ ubsApp.leaderBoardTemplate=
 '       <span id = "minutes">00'+
 '           '+
 '       </span>'+
-'       <span id="colon">'+
+'       <span id = "colon">'+
 '           :'+
 '       </span>'+
 '       <span id = "seconds">'+
@@ -442,5 +445,6 @@ ubsApp.leaderBoardTemplate=
 '       <img class="butt" id="done" src="C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/done.png" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}} />    '+
 '   </div>'+
 '  </div>';
+
     
 

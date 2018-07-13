@@ -74,9 +74,105 @@ monopoly.pages = {
         {
             "templateId":1,
             "templateType":"static",
+            "id":"weekTitle",
+            "style":"",
+            "src":"WEEK:"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"weekContent",
+            "style":"background-color:yellow;border:1px solid black; padding:1px; ",
+            "src":"1"
+        },
+
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"lastBalanceTitle",
+            "style":"",
+            "src":"LAST BALANCE:"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"lastBalanceContent",
+            "style":"background-color:yellow;border:1px solid black; padding:1px;",
+            "src":"Rs. 250,000"
+        },
+
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"inventoryTitle",
+            "style":"",
+            "src":"INVENTORY:"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"inventoryContent",
+            "style":"background-color:yellow;border:1px solid black; padding:1px;",
+            "src":"50%"
+        },
+
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"insuranceTitle",
+            "style":"",
+            "src":"INSURANCE:"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"insuranceContent",
+            "style":"background-color:yellow;border:1px solid black; padding:1px;",
+            "src":"YES"
+        },
+
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"reputationTitle",
+            "style":"",
+            "src":"REPUTATION PTS:"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"reputationContent",
+            "style":"background-color:yellow;border:1px solid black; padding:1px;",
+            "src":"10"
+        },
+
+        {
+            "templateId":1,
+            "templateType":"static",
+            "id":"cardWallet",
+            "style":"position:absolute;top:47.5%;left:82%;background-repeat: no-repeat;",
+            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:15px; color:red; font-weight:650; border:0; background:orange;border-radius:5px; background-size: 60%; background-repeat:no-repeat; background-position: center;background-image: url(images/wallet3.png);\">Card Wallet</button>"
+        },
+        {
+            "templateId":"1",
+            "templateType":"static",
+            "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
+            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Cash</button>"
+        },
+        {
+            "templateId":"1",
+            "templateType":"static",
+            "style":"position:absolute;bottom:10%;left:90%;width:7%;",
+            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+        },
+
+        //Previous was from here
+        {
+            "templateId":1,
+            "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:5%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" onclick=\"monopoly.openLeaderBoard('Score')\" id=\"scoreSideBar\">Score</div>",
+            "src":"<div style=\"color:white;display:none; text-align:center;padding:7px; cursor:pointer;\" onclick=\"monopoly.openLeaderBoard('Score')\" id=\"scoreSideBar\">Score</div>",
         },
         {
             "templateId":1,
@@ -85,11 +181,11 @@ monopoly.pages = {
             "id" : "leaderBoardParent",
         },
         {
-            "templateId":1,
+            "templateId":1, //display none is there
             "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:20%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Inventory')\" id=\"inventorySideBar\">Inventory</div>",
+            "src":"<div style=\"color:white; text-align:center;padding:7px;display:none;  cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Inventory')\" id=\"inventorySideBar\">Inventory</div>",
         },
         {
             "templateId":1,
@@ -99,11 +195,11 @@ monopoly.pages = {
             "id" : "inventoryBoardParent"
         },
         {
-            "templateId":1,
+            "templateId":1, //display none is there
             "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:35%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Document')\" id=\"documentSideBar\">Documents</div>",
+            "src":"<div style=\"color:white; text-align:center;padding:7px;display:none; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Document')\" id=\"documentSideBar\">Documents</div>",
 
         },
         {
@@ -113,11 +209,11 @@ monopoly.pages = {
             "src":"<div id=\"documentBoard\"  ></div>",
         },
         {
-            "templateId":1,
+            "templateId":1, //display none is there
             "templateType":"static",
             "score_animation_req":"true",
             "style":"background-color:black;position:absolute;border-radius:2px;top:50%;left:90%;width:10%;",
-            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Merit')\" id=\"meritSideBar\">Merits(Dummy)</div>",
+            "src":"<div style=\"color:white; text-align:center;padding:7px; cursor:pointer; display:none;\" vertical-align: text-top; onclick=\"monopoly.openLeaderBoard('Merit')\" id=\"meritSideBar\">Merits(Dummy)</div>",
         },
         {
             "templateId":1,
@@ -126,13 +222,13 @@ monopoly.pages = {
             "src":"<div id=\"meritBoard\"  ></div>",
             "id" : "meritBoardParent"
         },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 80%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
-            "src":"<div id=\"calculator\"  ></div>",
-            "id" : "calculatorParent"
-        },
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 80%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
+        //     "src":"<div id=\"calculator\"  ></div>",
+        //     "id" : "calculatorParent"
+        // },
         
         {
             "templateId": 3,
@@ -305,7 +401,8 @@ monopoly.pages = {
         {
             "templateId":4,
             "templateType":"rollingDice",
-        }
+        },
+        
             
     ]
 }

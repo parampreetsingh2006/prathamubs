@@ -37,7 +37,7 @@ var scenario =  monopoly.scenario;
 
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
-    monopoly.intitializeScenarios();
+  monopoly.initializeScenarios();
 	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
@@ -80,7 +80,7 @@ monopoly.renderPageforBoard = function(page) {
 			    "score" : userArray[i].getplayerScore()
 			   });
       }
-      //New Things added
+     
       for(var j=0;j<templateConfig.bottom_row.length;j++){
         let key=templateConfig.bottom_row[j].title;
         let translatedString=ubsApp.translation[key];
@@ -115,7 +115,8 @@ monopoly.renderPageforBoard = function(page) {
   if(flag2) {
 
      ubsApp.initializeLeaderBoard("Score");
-     $("#player").html(userArray[playerChance].getplayerName()); 
+     ubsApp.currentPlayerContents();
+     //$("#player").html(userArray[playerChance].getplayerName()); 
 
 }
 }
@@ -128,24 +129,24 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-  	    let key;
-      	scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
-        let currentTemplate=scenario.getTemplate();
-        if(currentTemplate[0].question){
-          key=currentTemplate[0].question;
+      scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
+        let currentTemplateName=scenario.getName();
+        let currentTemplate=ubsApp.pages[currentTemplateName].templates;
+        let key=ubsApp.pages[currentTemplateName].templates[0].question;
+        if(key){
           monopoly.generateQuestion(key,currentTemplate);
         }
-        $('#monopolyBase').css("z-index",-10)
-        $('#templateBase').css("z-index",10)
+        $('#monopolyBase').css("z-index",-10);
+        $('#templateBase').css("z-index",10);
         
         document.getElementById("templateContent").style.opacity="0.95";
         
-        $('#templateContent').css("height",(screenHeight)+'px')
-        $('#templateContent').css("width",(screenWidth)+'px')
-        console.log(screenWidth);
-        ubsApp.renderPage(scenario.getTemplate());
+        $('#templateContent').css("height",(screenHeight)+'px');
+        $('#templateContent').css("width",(screenWidth)+'px');
+
+        ubsApp.renderPageByName(scenario.getName());
         currentTemplate[0].question=key;
-        scenario.setTemplate(currentTemplate);
+       
   },1000);
 
 }
@@ -174,7 +175,11 @@ monopoly.myMove = function(count, pId, currentPos) {
     } 
     else{
       blockNo++;
+      
       blockNo %= boardConfig.blocks;
+      if(blockNo==0){
+        document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
+      }
       $("#" + blockNo).append(playerToken);
     }
   }
@@ -188,6 +193,8 @@ monopoly.updateRollingDiceTemplate = function(template){
 
 monopoly.rollDice  = function(){
   $('#rollIt').attr('disabled',true);
+  $("#container-dice").css("pointer-events","none");
+  
   diceVal = pointRoll();
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
@@ -207,6 +214,7 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
+        user.setInventoryScore(100);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
@@ -221,6 +229,7 @@ monopoly.storePlayerDetails=function(){
       let user=new User();
       user.setplayerName("Computer");
       user.setplayerScore(1000);
+      user.setInventoryScore(100);
       user.setIsComputer(true);
       var level=$('input[name=compRadioLevel]:checked').val();
       user.setDifficultyLevel(level.toLowerCase());
@@ -235,14 +244,6 @@ monopoly.storePlayerDetails=function(){
       userArray.push(user);
       numplayers++;
     }
-    // var language=$('input[name=languageRadio]:checked').val();
-   
-    //   // var jsElm = document.createElement("script");
-    //   // jsElm.type = "text/javascript";
-    //   // jsElm.src = "js/"+language+".js";
-    //   // document.head.appendChild(jsElm);  
-      //console.log(ubsApp.translation["pratham_title_start"]);
-
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
@@ -259,7 +260,7 @@ monopoly.initPlayers=function(){
             object.nameTitle=ubsApp.translation["name"]+(i+1);
 
             var object={};
-            object.nameTitle="Name"+(i+1);
+            object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.numberOfTokens=[];
 
             object.nameId="name"+(i);
@@ -299,16 +300,18 @@ monopoly.initComputerDifficulty=function()
   } 
 }
 
-monopoly.intitializeScenarios=function()
+monopoly.initializeScenarios=function()
 {
     $.each(ubsApp.pages, function(key, value) {
         if(value.category)
         {
             let scenario = new Scenarios();
             scenario.setCategory(value.category);
-            scenario.setTemplate(value.templates);
+
             scenario.setRepeatForAllUsers(value.repeatforall);
             scenario.setRepeatforUser(value.repeatforuser);
+            scenario.setName(key);
+            //scenario.setTemplate(value.templates);
             scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
             {
@@ -335,6 +338,15 @@ monopoly.chooseLanguage=function(){
   jsElm.type = "text/javascript";
   jsElm.src = "js/"+language+".js";
   document.head.appendChild(jsElm);
+  var link  = document.createElement('link');
+  
+  link.rel  = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'css/'+language+'.css';
+  document.head.appendChild(link);
+  link.onload=function(){
+    console.log("Language css file loaded");
+  }
   jsElm.onload=function(){
     monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
   }
@@ -342,14 +354,24 @@ monopoly.chooseLanguage=function(){
 
 
 monopoly.translate=function(){
-  if(document.getElementById("scoreSideBar")){
+  
+  if(document.getElementById("weekTitle")){
+    document.getElementById("weekTitle").innerHTML=ubsApp.translation["weekTitle"]+":";
+    document.getElementById("insuranceTitle").innerHTML=ubsApp.translation["insuranceTitle"]+":";
+    document.getElementById("inventoryTitle").innerHTML=ubsApp.translation["inventoryTitle"]+":";
+    document.getElementById("reputationTitle").innerHTML=ubsApp.translation["reputationTitle"]+":";
+    document.getElementById("lastBalanceTitle").innerHTML=ubsApp.translation["lastBalanceTitle"]+":";
+    
+  }
+  
+  /*if(document.getElementById("scoreSideBar")){
     document.getElementById("scoreSideBar").innerHTML=ubsApp.translation["scoreSideBar"];
   	document.getElementById("documentSideBar").innerHTML=ubsApp.translation["documentSideBar"];
   	document.getElementById("inventorySideBar").innerHTML=ubsApp.translation["inventorySideBar"];
   	document.getElementById("meritSideBar").innerHTML=ubsApp.translation["meritSideBar"];
-  }
+  }*/
   if(document.getElementById("enterPlayers"))
-    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["playerNameTitle"];
+    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["enterPlayers"];
   
   if(document.getElementById("initPageTitle"))
     document.getElementById("initPageTitle").innerHTML=ubsApp.translation["initPageTitle"];

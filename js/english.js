@@ -15,6 +15,15 @@ ubsApp.translation={
         "inventorySideBar":"Inventory",
         "meritSideBar":"Merit",
 
+        //This is where new addition started
+        "inventoryTitle":"INVENTORY",
+        "weekTitle":"WEEK",
+        "lastBalanceTitle":"LAST BALANCE",
+        "insuranceTitle":"INSURANCE",
+        "reputationTitle":"REPUTATION PTS",
+
+    //This is where the new addition ended
+
         "enterPlayers":"Enter the number of Players",
         "initPageTitle":"Welcome to the Game",
         "storePlayerDetailsButton":"Next Page",

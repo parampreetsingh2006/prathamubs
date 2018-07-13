@@ -105,8 +105,9 @@
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
-		
-
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"10",
+		"inventoryScoreToBeChanged":"10",
 	 	"templates":[
 	 		{
 				"templateId": 1,
@@ -123,6 +124,7 @@
 						"optionValue": "355",
 						"id":1,
 						"amount":355,
+						"inventoryScoreToBeChanged":-10,
 						"priority": 1
 					},
 					{
@@ -130,6 +132,7 @@
 						"optionValue": "255",
 						"id":2,
 						"amount":-355,
+						"inventoryScoreToBeChanged":-5,
 						"priority": 2
 					},
 					{
@@ -137,6 +140,7 @@
 						"optionValue": "155",
 						"id":3,
 						"amount":-355,
+						"inventoryScoreToBeChanged":-5,
 						"priority":3
 					}	
 				],
@@ -155,7 +159,7 @@
 					}
 				},
 				//"width": "col-lg-8 col-md-8 col-xs-8",			
-				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 			},
 			{
 				"templateId":6,
@@ -304,6 +308,8 @@
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
+		"minimumInventoryScoreRequired":"10",
+		"inventoryScoreToBeChanged":"-20",
     	"templates":[
     	{
 			"templateId": 2,
@@ -319,21 +325,24 @@
 					"optionValue": "65",
 					"id":"1",
 					"priority":3,
-					"amount":-45
+					"amount":-45,
+					"inventoryScoreToBeChanged":-5,
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "55",
 					"id":"2",
 					"priority": 2,
-					"amount":-45
+					"amount":-45,
+					"inventoryScoreToBeChanged":-5,
 				},
 				{
 					"optionName": "q2",
 					"optionValue": "45",
 					"priority": 1,
 					"id":"3",
-					"amount":45
+					"amount":45,
+					"inventoryScoreToBeChanged":-10,
 				}	
 			],
 			"optionPageMap": {
@@ -351,7 +360,7 @@
 				}
 			},
 			//"width": "col-lg-7 col-md-7 col-xs-7",
-			"style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+			"style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 		},
 		{
 			"templateId":6,
@@ -499,12 +508,14 @@
 
     "q3": {
 
-    	"category":"Sales",
+		"category":"Sales",
 		"repeatforuser":false,
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
 		"category":"Sales",
+		"minimumInventoryScoreRequired":"85",
+		"inventoryScoreToBeChanged":"-20",
     	"templates":[
     	{
 	        "templateId": 3,
@@ -519,21 +530,24 @@
 	                "optionName": "q3",
 	                "optionValue": "Rs.30",
 	                "id":"1",
-	                "amount":-10,
+					"amount":-10,
+					"inventoryScoreToBeChanged":-2,
 	                "priority":3
 	            },
 	            {
 	                "optionName": "q3",
 	                "optionValue": "Rs.11",
 	                "id":"2",
-	                "amount":-10,
+					"amount":-10,
+					"inventoryScoreToBeChanged":-2,
 	                "priority":2
 	            },
 	            {
 	                "optionName": "q3",
 	                "optionValue": "Rs.10",
 	                "id":"3",
-	                "amount":10,
+					"amount":10,
+					"inventoryScoreToBeChanged":-5,
 	                "priority":1
 	            }
 	        ],
@@ -552,7 +566,7 @@
 				}
 	        },
 	        //"width": "col-lg-7 col-md-7 col-xs-7",
-	        "style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+	        "style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 	    },
 	    {
 	        "templateId":6,
@@ -705,6 +719,8 @@
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
+		"minimumInventoryScoreRequired":"90",
+		"inventoryScoreToBeChanged":"-20",
     	"templates":[
     	{
 	        "templateId": 4,
@@ -722,21 +738,24 @@
 	                "optionName": "q2",
 	                "optionValue": "Rs.200",
 	                "id":"1",
-	                "amount":-150,
-	                "priority":3
+					"amount":-150,
+					"inventoryScoreToBeChanged":-5,
+	                "priority":3,
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.150",
 	                "id":"2",
-	                "amount":150,
+					"amount":150,
+					"inventoryScoreToBeChanged":-10,
 	                "priority":1
 	            },
 	            {
 	                "optionName": "q2",
 	                "optionValue": "Rs.100",
 	                "id":"3",
-	                "amount":-150,
+					"amount":-150,
+					"inventoryScoreToBeChanged":-5,
 	                "priority":2
 	            }
 	        ],
@@ -755,7 +774,7 @@
 				}
 	        },
 	        //"width": "col-lg-7 col-md-7 col-xs-7",
-	        "style": "align-items:center; position:absolute; top:4%; left:15%;width:70%; right:15%; height:80%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+	        "style": "align-items:center; position:absolute; top:4%; left:15%;width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
 	    },
 	    {
 	        "templateId":6,

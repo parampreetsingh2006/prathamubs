@@ -1,16 +1,36 @@
 var rollingDiceConfig = {};
-
+rollingDiceConfig.currentRandomDiceOne=0;
+rollingDiceConfig.currentRandomDiceTwo=0;
 function pointRoll() {
+
   var elDiceOne       = document.getElementById('dice1');
-  var diceValue   = Math.floor((Math.random() * 6) + 1);
-  console.log("diceValue:"+diceValue);
+  var elDiceTwo       =document.getElementById('dice2')
+  var diceValueTwo=Math.floor((Math.random() * 6) + 1);
+  console.log(elDiceOne.classList);
+  console.log(elDiceTwo.classList["2"]);
+  var diceValueOne   = Math.floor((Math.random() * 6) + 1);
+  while(diceValueOne==rollingDiceConfig.currentRandomDiceOne){
+    diceValueOne   = Math.floor((Math.random() * 6) + 1);
+  }
+
+  while(diceValueTwo==rollingDiceConfig.currentRandomDiceTwo){
+    diceValueTwo   = Math.floor((Math.random() * 6) + 1);
+  }
+  rollingDiceConfig.currentRandomDiceOne=diceValueOne;
+  rollingDiceConfig.currentRandomDiceTwo=diceValueTwo;
+  console.log("diceValueone:"+diceValueOne);
+  console.log("diceValuetwo:"+diceValueTwo);
   for (var i = 1; i <= 6; i++) {
     elDiceOne.classList.remove('show-' + i);
-    if (diceValue === i) {
+    elDiceTwo.classList.remove('show-'+ i);
+    if (diceValueOne === i) {
       elDiceOne.classList.add('show-' + i);
     }
+    if(diceValueTwo===i){
+      elDiceTwo.classList.add('show-' + i);
+    }
   }
-  return diceValue;
+  return diceValueOne+diceValueTwo;
 }
 /*
 var currentClass = '';
