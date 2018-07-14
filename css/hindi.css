@@ -1,4 +1,13 @@
+#minutes, #seconds{
+	font-size: 3vw !important;
+}
+
+.timer{
+	font-size: 2vw !important;
+}
+
 *{font-size: 1.05vw !important}
+
 
 #insuranceContent{
     font-weight:700;
@@ -26,7 +35,7 @@
     font-size: 1.1vw !important;
     position:absolute;
     top:40%;
-    left:88% ;
+    left:88%;
 }
 
 

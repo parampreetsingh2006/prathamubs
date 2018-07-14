@@ -215,7 +215,7 @@ ubsApp.modalTemplate = 	'<div class="modal animated zoomIn" id="scenarios" tabin
 
 
 
-ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:6%;"> Timer: </div>'+'<div style="{{style}}" id="{{divID}}" >'+
+ubsApp.timerTemplate = '<div style="color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:6%;" class="timer"> Timer: </div>'+'<div class="timer" style="{{style}}" id="{{divID}}" >'+
 
 ''+
 '</div>';

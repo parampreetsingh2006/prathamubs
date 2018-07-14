@@ -19,7 +19,7 @@ var answerselected=0;         //whyGlobal
 var inventoryToBeUpdated=0;
 var minimumInventoryScoreRequired=0;
 ubsApp.wheelOfFortune = null;
-var interval;				//whyGlobal
+var interval;				
 let audioConfig = {};
 var count=0;
 var calculatorReq=false;
@@ -312,7 +312,7 @@ ubsApp.mapTemplatetoFunction = function(){
 	}
 }
 ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
-	
+	clearInterval(timeVar);
 	if(hideScenarios == "true"){
         ubsApp.nextMove();
 	}
@@ -408,7 +408,7 @@ ubsApp.renderDecisonTemplate = function() {
   answerselected=$("#" + checkedValue + "Amount").text(); 
   inventoryToBeUpdated=$("#" + checkedValue + "Inventory").text();
 
-  clearInterval(timeVar);
+  
   clearInterval(interval);
   clearInterval(timeVar);
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue].page]);
