@@ -108,6 +108,7 @@
 		"displayCalculator":true,
 		"minimumInventoryScoreRequired":"10",
 		"inventoryScoreToBeChanged":"10",
+		"videoLink":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\"> </img>",
 	 	"templates":[
 	 		{
 				"templateId": 1,
@@ -168,6 +169,12 @@
 				"divID":"countdowntimer",
 				"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:3%;",
 				//"redirect":"choicePage"
+			},
+			{
+				"tempalteId":1,
+				"templateType":"static",
+				"style":"position:absolute;bottom:5%;",
+				"src":"<button onclick=\"ubsApp.generateVideo()\" id=\"helpButton\">Help</button>"
 			}
 		]
 	},
@@ -310,6 +317,7 @@
 		"optionsTime":2000,
 		"minimumInventoryScoreRequired":"10",
 		"inventoryScoreToBeChanged":"-20",
+		"videoLink":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\"> </img>",
     	"templates":[
     	{
 			"templateId": 2,
@@ -369,6 +377,12 @@
 			"divID":"countdowntimer",
 			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%;",
 			"redirect":"choicePage"
+		},
+		{
+			"tempalteId":1,
+			"templateType":"static",
+			"style":"position:absolute;bottom:5%;",
+			"src":"<button onclick=\"ubsApp.generateVideo()\" id=\"helpButton\">Help</button>"
 		}
 		]
 	},
@@ -516,6 +530,7 @@
 		"category":"Sales",
 		"minimumInventoryScoreRequired":"85",
 		"inventoryScoreToBeChanged":"-20",
+		"videoLink":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\"> </img>",
     	"templates":[
     	{
 	        "templateId": 3,
@@ -576,7 +591,13 @@
 	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%;",
 
 	        "redirect":"choicePage"
-	     }
+		 },
+		 {
+			"tempalteId":1,
+			"templateType":"static",
+			"style":"position:absolute;bottom:5%;",
+			"src":"<button onclick=\"ubsApp.generateVideo()\">Help</button>"
+		}
     	]
     },
 
@@ -721,6 +742,7 @@
 		"optionsTime":2000,
 		"minimumInventoryScoreRequired":"90",
 		"inventoryScoreToBeChanged":"-20",
+		"videoLink":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\"> </img>",
     	"templates":[
     	{
 	        "templateId": 4,
@@ -782,9 +804,15 @@
 	        "time":21,
 			"divID":"countdowntimer",
 	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%",
-
+			
 	        "redirect":"choicePage"
-	    }
+		},
+		{
+			"tempalteId":1,
+			"templateType":"static",
+			"style":"position:absolute;bottom:5%;",
+			"src":"<button onclick=\"ubsApp.generateVideo()\" id=\"helpButton\">Help</button>"
+		}
 	]
 },
 
@@ -1158,7 +1186,81 @@
 			}
 		],	
 	},
+	"purchaseScenario":{
+		"category":"Purchase",
+		"templates":[
+			{
+				"templateId":8,
+				"templateType":"purchase",
+			}
+		]
 
+	},
+	"luckyUnluckyScenario1":{
+		"category":"Luck",
+		"templates":[
+		{
+			"templateId":9,
+			"templateType":"luck",
+			"question":"luckQuestion1",//question Key
+			"amount":1000,
+		}
+	]
+	},
+
+	"luckyUnluckyScenario2":{
+		"category":"Luck",
+		"templates":[
+		{
+			"templateId":9,
+			"templateType":"luck",
+			"question":"luckQuestion2",//question Key
+			"amount":-1000,
+		}
+	]
+	},
+	
+	"paymentScenario1":{
+		"category":"Payment",
+		
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"question":"paymentQuestion1",//question Key
+			"amount":-1000,
+		}
+	]
+
+	},
+
+	
+	"paymentScenario2":{
+		"category":"Payment",
+		
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"question":"paymentQuestion2",//question Key
+			"amount":-1000,
+		}
+	]
+
+	},
+	
+	"PayOffScenario":{
+		"category":"PayOff",
+		
+		"templates":[
+		{
+			"templateId":11,
+			"templateType":"payOff",
+		}
+	]
+
+	},
+	
 
 	"customerCheatingResult":{
     	"templates":[

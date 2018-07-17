@@ -104,7 +104,7 @@ monopoly.rollingDiceTemplate =
 '        </div>'+
 '      </div>'+
 
-
+/*
 '      <div id=\'dice2\' style=" float:right;" class="dice dice-one">'+
 '        <div id="dice-one-side-one" class=\'side one\'>'+
 '          <div class="divot one-1"></div>'+
@@ -141,7 +141,7 @@ monopoly.rollingDiceTemplate =
 '        </div>'+
 '      </div>'+
 
-'  '+
+'  '+*/
 
 ''+
 ''+

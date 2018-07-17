@@ -33,6 +33,7 @@ class Scenarios{
     {
         return this.page;
     }
+    
     setCategory(category)
     {
         this.category=category;

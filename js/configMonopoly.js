@@ -115,7 +115,6 @@ monopoly.pages = {
             "style":"background-color:yellow;border:1px solid black; padding:1px;",
             "src":"50%"
         },
-
         {
             "templateId":1,
             "templateType":"static",
@@ -130,7 +129,6 @@ monopoly.pages = {
             "style":"background-color:yellow;border:1px solid black; padding:1px;",
             "src":"YES"
         },
-
         {
             "templateId":1,
             "templateType":"static",
@@ -145,7 +143,6 @@ monopoly.pages = {
             "style":"background-color:yellow;border:1px solid black; padding:1px;",
             "src":"10"
         },
-
         {
             "templateId":1,
             "templateType":"static",
@@ -157,14 +154,15 @@ monopoly.pages = {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
-            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Cash</button>"
+            "src":"<button onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:90%;width:7%;",
-            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+            "src":"<button onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
         },
+        
 
         //Previous was from here
         {

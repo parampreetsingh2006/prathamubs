@@ -129,7 +129,7 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
+      scenario = userArray[playerChance].getScenario("PayOff",playerChance);   //   blockCategory[blockNo]
         let currentTemplateName=scenario.getName();
         let currentTemplate=ubsApp.pages[currentTemplateName].templates;
         let key=ubsApp.pages[currentTemplateName].templates[0].question;
@@ -142,7 +142,7 @@ monopoly.startScenarios = function(blockNo){
         document.getElementById("templateContent").style.opacity="0.95";
         
         $('#templateContent').css("height",(screenHeight)+'px')
-        $('#templateContent').css("width",(screenWidth-250)+'px')
+        $('#templateContent').css("width",(screenWidth)+'px')
 
         ubsApp.renderPageByName(scenario.getName());
 
@@ -215,11 +215,16 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
-        user.setInventoryScore(100);
+        user.setInventoryScore(60);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
         user.setplayerCurrentPos(0);
+        user.setBankBalance(250000);
+        user.setReputationPts(10);
+        user.setCredit(0);
+        user.setWildCard(0);
+        user.setCreditLimit(15000);
         user.setScenarioArray(scenariosArray);
         user.setWeeks(0);
         userArray[i]=user;
@@ -233,7 +238,7 @@ monopoly.storePlayerDetails=function(){
       user.setIsComputer(true);
       var level=$('input[name=compRadioLevel]:checked').val();
       user.setDifficultyLevel(level.toLowerCase());
-      user.setCorrectProbability(level);
+      user.setCorrectProbability(level.toLowerCase());
       user.setplayerCurrentPos(0);
       user.setplayerId("p"+i);
       user.setWeeks(0);
@@ -307,6 +312,7 @@ monopoly.initializeScenarios=function()
             let scenario = new Scenarios();
             scenario.setCategory(value.category);
             scenario.setName(key);
+            
             //scenario.setTemplate(value.templates);
             scenario.setRepeatForAllUsers(false);
             scenario.setRepeatforUser(false);
