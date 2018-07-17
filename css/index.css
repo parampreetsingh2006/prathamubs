@@ -1,7 +1,10 @@
 
+html{
+    height: 100%;
+    width: 100%;
+}
 body {
-    width: 100wh;
-    height: 90vh;
+    height: 100%;
     color: #fff;
     background: linear-gradient(-225deg,rgb(232,199,103), rgb(166,190,101), rgb(85,177,180),rgb(111,182,223));
     background-size: 400% 400%;

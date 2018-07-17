@@ -1290,5 +1290,197 @@
 			}	//write here the name of the next scenario
 		}			
 	]
+}, 
+
+"receiptPage":{
+		"category":"Sales",
+		
+		
+		"repeatforuser":true,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
+    	"templates":[
+    	{
+	        "templateId": 4,
+			"templateType": "sales",
+			"profilePicture":"images/download",
+			"time":"31",
+			"divID":"seconds",
+			"tooltipMessage":"This item is not available in your Inventory",
+			"order":[
+			{
+				"no":1,
+				"item":"Wheat",
+				"amount":"4 Kg",
+				"rate":"Rs.32/kg"
+			},
+			{
+				"no":2,
+				"item":"Sugar",
+				"amount":"1 Kg",
+				"rate":"Rs.40/kg"
+			},
+			{
+				"no":3,
+				"item":"Bajra",
+				"amount":"4 Kg",
+				"rate":"Rs.25/kg"
+			},
+			{
+				"no":4,
+				"item":"Rice",
+				"amount":"4 Kg",
+				"rate":"Rs.43/kg"
+			},
+			{
+				"no":5,
+				"item":"Jowar",
+				"amount":"4 Kg",
+				"rate":"Rs.23/kg"
+			},
+			{
+				"no":6,
+				"item":"Milk",
+				"amount":"1 Litre",
+				"rate":"Rs.50/litre"
+			},
+			{
+				"no":7,
+				"item":"Eggs",
+				"amount":"1.5 dozen",
+				"rate":"Rs.5/piece"
+			},
+			{
+				"no":8,
+				"item":"Oil",
+				"amount":"1 Litre",
+				"rate":"Rs.100/litre"
+			},
+			{
+				"no":9,
+				"item":"Jowar",
+				"amount":"4 Kg",
+				"rate":"Rs.28/kg"
+			},
+			{
+				"no":10,
+				"item":"Milk",
+				"amount":"1 Litre",
+				"rate":"Rs.50/litre"
+			},
+			{
+				"no":11,
+				"item":"Eggs",
+				"amount":"1 dozen",
+				"rate":"Rs.5/piece"
+			},
+			{
+				"no":12,
+				"item":"Oil",
+				"amount":"1 Litre",
+				"rate":"Rs.100/litre"
+			},
+			{
+				"no":13,
+				"item":"Banana",
+				"amount":"1 dozen",
+				"rate":"Rs 5/piece"
+			}
+			],
+
+	"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+
+		// "itemRate":[
+		// {
+		// 	"item":"Wheat",
+			
+		// },
+		// {
+		// 	"item":"Sugar",
+			
+		// },
+
+		// {
+		// 	"item":"Eggs",
+			
+		// },
+		// {
+		// 	"item":"Bajra",
+			
+		// },
+		// {
+		// 	"item":"Jowar",
+			
+		// },
+		// {
+		// 	"item":"Rice",
+			
+		// },
+		// {
+		// 	"item":"Oil",
+			
+		// },
+		// {
+		// 	"item":"Milk",
+			
+		// }
+
+		// ],
+		// "inventory":[
+		// {
+		// 		"no":1,
+		// 		"item":"Wheat",
+		// 		"amount":"400 Kg",
+		// 	},
+		// 	{
+		// 		"no":2,
+		// 		"item":"Sugar",
+		// 		"amount":"100 Kg",
+		// 	},
+		// 	{
+		// 		"no":3,
+		// 		"item":"Bajra",
+		// 		"amount":"200 Kg",
+		// 	},
+		// 	{
+		// 		"no":4,
+		// 		"item":"Rice",
+		// 		"amount":"400 Kg",
+		// 	},
+		// 	{
+		// 		"no":5,
+		// 		"item":"Jowar",
+		// 		"amount":"40 Kg",
+		// 	},
+		// 	{
+		// 		"no":6,
+		// 		"item":"Milk",
+		// 		"amount":"80 Litre",
+		// 	},
+		// 	{
+		// 		"no":7,
+		// 		"item":"Eggs",
+		// 		"amount":"10 dozen",
+		// 	},
+		// 	{
+		// 		"no":8,
+		// 		"item":"Oil",
+		// 		"amount":"50 Litre",
+		// 	},
+		// 	{
+		// 		"no":9,
+		// 		"item":"Jowar",
+		// 		"amount":"90 Kg",
+		// 	},
+		// 	{
+		// 		"no":13,
+		// 		"item":"Banana",
+		// 		"amount":"10 dozen"
+		// 	}]
+	}]
 }
 }

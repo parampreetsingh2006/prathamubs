@@ -178,24 +178,23 @@ getScenario(category,playerChance)
         {
             this.setScenarioArray(scenariosArray);
         }
-        var scenariosApplicable=[];
-        for(var i=0;i<this.scenariosArray[category].length;i++){
-            
-                scenariosApplicable.push(this.scenariosArray[category][i]);
-            
-        }
-        if(scenariosApplicable.length==0){
-            this.setScenarioArray(scenariosArray);
-            for(var i=0;i<this.scenariosArray[category].length;i++){
-                if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
-                    scenariosApplicable.push(this.scenariosArray[category][i]);
-                }
-            }
-        }
+        // var scenariosApplicable=[];
+        // for(var i=0;i<this.scenariosArray[category].length;i++){
+        //     if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
+        //         scenariosApplicable.push(this.scenariosArray[category][i]);
+        //     }
+        // }
+        // if(scenariosApplicable.length==0){
+        //     this.setScenarioArray(scenariosArray);
+        //     for(var i=0;i<this.scenariosArray[category].length;i++){
+        //         if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
+        //             scenariosApplicable.push(this.scenariosArray[category][i]);
+        //         }
+        //     }
+        // }
         
-        number=(Math.floor(Math.random() * 100) + 1)%(scenariosApplicable.length);
-        object=scenariosApplicable[number];
-
+        number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
+        object=this.scenariosArray[category][number];
 
         /*while(ubsApp.pages[object.getName()].minimumInventoryScoreRequired>=userArray[playerChance].getInventoryScore())
         {

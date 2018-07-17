@@ -80,7 +80,7 @@ monopoly.renderPageforBoard = function(page) {
 			    "score" : userArray[i].getplayerScore()
 			   });
       }
-      //New Things added
+     
       for(var j=0;j<templateConfig.bottom_row.length;j++){
         let key=templateConfig.bottom_row[j].title;
         let translatedString=ubsApp.translation[key];
@@ -129,15 +129,15 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      scenario = userArray[playerChance].getScenario("PayOff",playerChance);   //   blockCategory[blockNo]
+      scenario = userArray[playerChance].getScenario("Sales",playerChance);   //   blockCategory[blockNo]
         let currentTemplateName=scenario.getName();
         let currentTemplate=ubsApp.pages[currentTemplateName].templates;
         let key=ubsApp.pages[currentTemplateName].templates[0].question;
         if(key){
           monopoly.generateQuestion(key,currentTemplate);
         }
-        $('#monopolyBase').css("z-index",-10)
-        $('#templateBase').css("z-index",10)
+        $('#monopolyBase').css("z-index",-10);
+        $('#templateBase').css("z-index",10);
         
         document.getElementById("templateContent").style.opacity="0.95";
         
@@ -145,7 +145,6 @@ monopoly.startScenarios = function(blockNo){
         $('#templateContent').css("width",(screenWidth)+'px')
 
         ubsApp.renderPageByName(scenario.getName());
-
         currentTemplate[0].question=key;
        
   },1000);
@@ -219,6 +218,7 @@ monopoly.storePlayerDetails=function(){
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
+        user.setInventoryScore(60);
         user.setplayerCurrentPos(0);
         user.setBankBalance(250000);
         user.setReputationPts(10);
@@ -238,7 +238,8 @@ monopoly.storePlayerDetails=function(){
       user.setIsComputer(true);
       var level=$('input[name=compRadioLevel]:checked').val();
       user.setDifficultyLevel(level.toLowerCase());
-      user.setCorrectProbability(level.toLowerCase());
+      user.setInventoryScore(100);
+      user.setCorrectProbability(level);
       user.setplayerCurrentPos(0);
       user.setplayerId("p"+i);
       user.setWeeks(0);
@@ -311,11 +312,12 @@ monopoly.initializeScenarios=function()
         {
             let scenario = new Scenarios();
             scenario.setCategory(value.category);
+
+            scenario.setRepeatForAllUsers(value.repeatforall);
+            scenario.setRepeatforUser(value.repeatforuser);
             scenario.setName(key);
             
             //scenario.setTemplate(value.templates);
-            scenario.setRepeatForAllUsers(false);
-            scenario.setRepeatforUser(false);
             scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
             {

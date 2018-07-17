@@ -15,6 +15,7 @@ let ubsLeaderBoardTemplate;
 let ubsPurchaseTemplate;
 let	ubsLuckTemplate;
 let ubsPayOffTemplate;
+let ubsOrdertemplate;
 let choiceSelected={};
 let timeVar;
 var answerselected=0;         //whyGlobal
@@ -23,31 +24,35 @@ var minimumInventoryScoreRequired=0;
 ubsApp.wheelOfFortune = null;
 var scenarioVideo;
 var interval;				//whyGlobal
+var interval;				
 let audioConfig = {};
 var count=0;
 var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision","purchase","luck","pay","payOff", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score"];
+let templateName = ["static", "decision","purchase","luck","pay","payOff", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
 monopoly.numplayers=0;
 let numplayers = monopoly.numplayers;
-monopoly.playerChance = 0; 
+monopoly.playerChance = 0;
 let playerChance = monopoly.playerChance;
+
 
 
 $(document).ready(function(){	
 	ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
+    
+	
 });
 
 
 ubsApp.getStaticTemplate = function(templateConfig, tempVar){
-	
+
 	if(templateConfig.display_score){
-		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]); 
+		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]);
 	}
 	if(templateConfig.resultId){
 		templateConfig.src=templateConfig.src.replace("Message",ubsApp.translation[templateConfig.resultId]);
@@ -68,12 +73,12 @@ ubsApp.getDecisionTemplate = function(templateConfig, tempVar){
 	tempVar.decisionConfig = templateConfig;
 	tempVar.html += ubsDecisionTemplate(templateConfig);
 	ubsDecisionOption = templateConfig.options[0].optionName;
-	if(templateConfig.display_score){ 
-		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]); 
+	if(templateConfig.display_score){
+		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]);
 	}
 	if(templateConfig.score_animation_req){
 		tempVar.flag=true;
-	}	
+	}
 	ubsDecisionOptionMap = templateConfig.optionPageMap;
 }
 ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
@@ -167,18 +172,18 @@ ubsApp.getChoiceTemplate = function(templateConfig, tempVar){
     }
 	ubsApp.updateChoiceSelected(templateConfig);
 	if(templateConfig.display_score){
-		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]); 
+		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]);
 	}
 	let containerHeight = $(window).innerHeight() - 50;
 	for(let i=0; i< templateConfig.choices.length; i++)  {
 		templateConfig.choices[i].display = choiceSelected[i];
 		templateConfig.choices[i].choiceHeight = (containerHeight / templateConfig.choiceHeightFactor) + 'px';
 	}
-	templateConfig.containerHeight= $(window).innerHeight() +'px';		  
+	templateConfig.containerHeight= $(window).innerHeight() +'px';
   	html += ubschoiceTemplate(templateConfig);
   	if(templateConfig.audioSrc){
   		audioConfig = templateConfig;
-  		tempVar.html+= ubsAudioTemplate(templateConfig);	
+  		tempVar.html+= ubsAudioTemplate(templateConfig);
 	}
 }
 
@@ -193,7 +198,12 @@ ubsApp.getScoreTemplate = function(templateConfig, tempVar){
 	 if(templateConfig.score_animation_req){
 		flag=true;
 	 }
-	tempVar.html += ubsScoreTemplate(templateConfig); 
+	tempVar.html += ubsScoreTemplate(templateConfig);
+}
+
+ubsApp.getSalesTemplate = function(templateConfig, tempVar){
+	tempVar.salesConfig = templateConfig;
+	tempVar.html += ubsOrdertemplate(templateConfig);
 }
 
 ubsApp.renderPage = function(page) {
@@ -211,6 +221,7 @@ ubsApp.renderPage = function(page) {
 	let html = "";
 	let tempVar = {};
 	tempVar.html = "";
+	tempVar.salesConfig = "";
 	tempVar.wheelConfig = {};
 	tempVar.timerConfig = {};
 	tempVar.staticConfig = {};
@@ -218,7 +229,7 @@ ubsApp.renderPage = function(page) {
 	tempVar.scratchCardTemplateConfig = undefined;
 	tempVar.flag=false;
 
-	
+
 	for(let i=0; i< page.length; i++) {
 		let templateConfig = page[i];
 		let templateType = templateConfig.templateType;
@@ -227,10 +238,10 @@ ubsApp.renderPage = function(page) {
 	}
 
 	$("#templateContent").empty();
-	if(calculatorReq)
-	{
-		tempVar.html+=ubsCalculatorTemplate();
-	}
+	// if(calculatorReq)
+	// {
+	// 	tempVar.html+=ubsCalculatorTemplate();
+	// }
 	$("#templateContent").append(tempVar.html);
 
 	if(tempVar.wheelConfig.segments){
@@ -239,7 +250,7 @@ ubsApp.renderPage = function(page) {
 	} else if (tempVar.scratchCardTemplateConfig) {
 	    initScratchCard(tempVar.scratchCardTemplateConfig);
 	}
-	
+
 	if(audioConfig.audioSrc){
 		var divElement = document.getElementById(audioConfig.audioId);
 		if(divElement != null) {
@@ -253,18 +264,24 @@ ubsApp.renderPage = function(page) {
 
     if(Object.keys(tempVar.decisionConfig).length!=0 && userArray[playerChance].getIsComputer() ){
 		ubsApp.playDecisionTemplate(tempVar.decisionConfig);
-		tempVar.decisionConfig={};	
+		tempVar.decisionConfig={};
     }
 
     if(Object.keys(tempVar.staticConfig).length!=0 && userArray[playerChance].getIsComputer() ){
     	ubsApp.playStaticTemplate(tempVar.staticConfig);
     	tempVar.staticConfig={};
 	}
-		
+
 	if(Object.keys(tempVar.timerConfig).length != 0 && !userArray[playerChance].getIsComputer()	){
 		ubsApp.startTimer(tempVar.timerConfig);
-		tempVar.timerConfig={};	
+		tempVar.timerConfig={};
 	}
+
+	if(Object.keys(tempVar.salesConfig).length != 0){
+		ubsApp.selectAvailableItems(tempVar.salesConfig);
+		ubsApp.startTimer(tempVar.salesConfig);
+	}
+
 
 	if(answerselected!=0)
 	{
@@ -279,8 +296,7 @@ ubsApp.renderPage = function(page) {
 		//ubsApp.animate_score(parseInt(inventoryToBeUpdated),document.getElementById("inventoryContent"));
 		inventoryToBeUpdated=0;
 	}
-		
-	
+
 	/*if($('#headId').length > 0) {
 		if(flag){
 				ubsApp.animate_score(answerselected);
@@ -289,14 +305,69 @@ ubsApp.renderPage = function(page) {
 	}*/
 }
 
+ubsApp.calculateBill = function(){
+	let total=0;
+	var item = document.getElementsByName('amt');
+	for(var i=0;i<item.length;i++){
+        if(parseInt(item[i].value))
+            total += parseInt(parseInt(item[i].value));
+    }
+	document.getElementById("receiptTotal").value=total;
+}
+
+ubsApp.selectAvailableItems = function(config){
+	let percent = ubsApp.checkInventory();
+	percent = 1 - percent;
+	let noOfItems =config.order.length;
+	console.log(noOfItems);
+	var notAvailable = Math.floor(percent*noOfItems);
+	var arr = [];
+	while(arr.length < notAvailable){
+	    var randomNumber = Math.floor(Math.random()*noOfItems);
+	    if(arr.indexOf(randomNumber) > -1) continue;
+	    arr[arr.length] = randomNumber;
+	}
+	for(let i = 0; i<arr.length;i++){
+		let itemNo = config.order[arr[i]].no;
+		$(".row"+itemNo).addClass("strikeout");
+		$(".row"+itemNo).attr('title', config.tooltipMessage);
+		$("#input"+itemNo).attr('value', 0);
+		$("#input"+itemNo).attr('disabled', true);
+	}
+}
+
+ubsApp.checkInventory=function(){
+
+	let percent = 0;
+	let invLevel = userArray[playerChance].getInventoryScore();
+
+    if(invLevel > 80 ){
+       percent = (Math.random()*1)*0.1+0.9;
+    }
+    else  if(invLevel >60 ){
+       percent = (Math.random()*2)*0.1+0.8;
+    }
+    else  if(invLevel > 40 ){
+       percent = (Math.random()*2)*0.1+0.6;
+    }
+    else  if(invLevel > 20 ){
+       percent = (Math.random()*2)*0.1+0.4;
+    }
+    else  if(invLevel < 20 ){
+       percent = (Math.random()*2)*0.1+0.2;
+    }
+
+    return percent;
+}
+
 ubsApp.mapTemplatetoFunction = function(){
-	
+
 	for(let i=0; i<templateName.length; i++){
 	   templateMap[templateName[i]]= "ubsApp.get"+templateName[i].charAt(0).toUpperCase()+templateName[i].substring(1)+"Template";
 	}
 }
 ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
-	
+	clearInterval(timeVar);
 	if(hideScenarios == "true"){
         ubsApp.nextMove();
 	}
@@ -307,9 +378,9 @@ ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
 
 ubsApp.updateChoiceSelected = function(templateConfig) {
 	if(jQuery.isEmptyObject(choiceSelected)){
-	 for(let i=0; i< templateConfig.choices.length; i++) { 
+	 for(let i=0; i< templateConfig.choices.length; i++) {
 	 choiceSelected[templateConfig.choices[i].choiceID] = true;
-	 
+
 	 }
 	}
 }
@@ -345,7 +416,9 @@ ubsApp.checkSelected= function(){
 }
 ubsApp.renderPageByName = function(pageName)/*,amount)*/ {
 	clearInterval(interval);
+
 	/*if(amount === undefined || amount === null|| amount.length===0){	
+
 	}
 	else{
 		ubsApp.animate_score(amount);
@@ -363,8 +436,9 @@ ubsApp.updateTemplateForFortuneWheel = function(template, wheelConfig) {
 	template.settings.textFontSize = template.settings.innerRadius / 5.5;
 	ubsWheelOfFortune.optionPageMap = template.optionPageMap;
 	wheelConfig = $.extend(true, wheelConfig, ubsWheelOfFortune.defaultSettings, template.settings);
-		
+
 }
+
 
 ubsApp.intitializeTemplates = function() {
 	ubsStaticTemplate = Template7.compile(ubsApp.staticTemplate);
@@ -378,18 +452,21 @@ ubsApp.intitializeTemplates = function() {
 	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
 	ubsAudioTemplate = Template7.compile(ubsApp.audioTemplate);
 	ubsBoardtemplate = Template7.compile(ubsApp.boardTemplate);
-	ubsCalculatorTemplate=Template7.compile(ubsApp.calculatorTemplate);
+	// ubsCalculatorTemplate=Template7.compile(ubsApp.calculatorTemplate);
 	ubsLeaderBoardTemplate=Template7.compile(ubsApp.leaderBoardTemplate);
 	ubsPurchaseTemplate=Template7.compile(ubsApp.purchaseTemplate);
 	ubsLuckTemplate=Template7.compile(ubsApp.luckyUnluckyTemplate);
 	ubsPayOffTemplate=Template7.compile(ubsApp.payOffTemplate);
+	ubsOrdertemplate = Template7.compile(ubsApp.salesTemplate);
+
 }
 
 ubsApp.renderDecisonTemplate = function() {
   let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
   answerselected=$("#" + checkedValue + "Amount").text(); 
   inventoryToBeUpdated=$("#" + checkedValue + "Inventory").text();
-  clearInterval(timeVar);
+
+  
   clearInterval(interval);
   clearInterval(timeVar);
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue].page]);
@@ -422,7 +499,7 @@ ubsApp.initializeLeaderBoard=function(category)
 				"color":userArray[j].getplayerColor(),
 				"score":userArray[j].getplayerScore()
 			});
-			
+
 		}
 	}
 	else if(category=="Document")
@@ -507,7 +584,7 @@ ubsApp.nextMove = function(){
 ubsApp.getScore=function()
 {
 	ubsApp.initializeScoreBoard();
-	
+
     return userArray[playerChance].getplayerScore();
 }
 
@@ -522,77 +599,74 @@ ubsApp.addInventory=function(inventoryPoints){
 	userArray[playerChance].setInventoryScore(inventoryPoints+currentInventory);
 }
 
-ubsApp.animate_score=function(amount){
+// ubsApp.animate_score=function(amount){
 
-	ubsApp.addScore(parseInt(amount));
-    var sc=userArray[playerChance].getplayerScore(); 
-    var target_score=sc+parseInt(amount);
-    var element=document.getElementById("lastBalanceContent");
-    if(amount<0)
-    {
-        
-        interval=window.setInterval(function () {
-        sc = sc-1;
-        element.innerHTML = "Rs."+sc;
-        if(sc==target_score)
-            clearInterval(interval);
-        }, parseInt(amount)/1000000);
-    }
-    else if(amount>0)
-    {
 
-            interval=window.setInterval(function () {
-            sc = sc+1;
-            element.innerHTML = "Rs."+sc;
-            if(sc==target_score)
-                clearInterval(interval);
-            }, parseInt(amount)/1000000);
-    }
+// 	ubsApp.addScore(parseInt(amount));
+//     var sc=userArray[playerChance].getplayerScore(); 
+//     var target_score=sc+parseInt(amount);
+//     var element=document.getElementById("lastBalanceContent");
+
+//     if(amount<0)
+//     {
+
+//         interval=window.setInterval(function () {
+//         sc = sc-1;
+//         element.innerHTML = "Rs."+sc;
+//         if(sc==target_score)
+//             clearInterval(interval);
+//         }, parseInt(amount)/1000000);
+//     }
+//     else if(amount>0)
+//     {
+
+//             interval=window.setInterval(function () {
+//             sc = sc+1;
+//             element.innerHTML = "Rs."+sc;
+//             if(sc==target_score)
+//                 clearInterval(interval);
+//             }, parseInt(amount)/1000000);
+//     }
     
-	//element.innerHTML=userArray[playerChance].getplayerScore();
+// 	element.innerHTML=userArray[playerChance].getplayerScore();
 	
-}
+// }
 
+// ubsApp.animateMoney=function(amount){
 
-
-
-
-/*
-ubsApp.animateMoney=function(amount){
-
-    var sc=userArray[playerChance].getplayerScore(); 
-    var target_score=sc+parseInt(amount);
-	var element=document.getElementById("lastBalanceContent");
-	var temp=amount;
-    if(amount<0)
-    {
+//     var sc=userArray[playerChance].getplayerScore(); 
+//     var target_score=sc+parseInt(amount);
+// 	var element=document.getElementById("lastBalanceContent");
+// 	var temp=amount;
+//     if(amount<0)
+//     {
         
-        interval=window.setInterval(function () {
-        sc = sc-1;
-		if(sc>target_score){
-			userArray[playerChance].setplayerScore(target_score);
-			clearInterval(interval);
-		}
-		element.innerHTML = "Rs."+target_score;
-        }, target_score/1000000);
-    }
-    else if(amount>0)
-    {
+//         interval=window.setInterval(function () {
+//         sc = sc-1;
+// 		if(sc>target_score){
+// 			userArray[playerChance].setplayerScore(target_score);
+// 			clearInterval(interval);
+// 		}
+// 		element.innerHTML = "Rs."+target_score;
+//         }, target_score/1000000);
+//     }
+//     else if(amount>0)
+//     {
 
-            interval=window.setInterval(function () {
-            sc = sc+1;
+//             interval=window.setInterval(function () {
+//             sc = sc+1;
            
-			if(sc>target_score){
-				userArray[playerChance].setplayerScore(target_score);	
-				clearInterval(interval);
-			}
-			element.innerHTML = "Rs."+target_score;
-            }, target_score/1000000);
-    }
-    //ubsApp.addScore(parseInt(amount));
-	//element.innerHTML=userArray[playerChance].getplayerScore();
-}
-*/
+// 			if(sc>target_score){
+// 				userArray[playerChance].setplayerScore(target_score);	
+// 				clearInterval(interval);
+// 			}
+// 			element.innerHTML = "Rs."+target_score;
+//             }, target_score/1000000);
+//     }
+//     //ubsApp.addScore(parseInt(amount));
+// 	//element.innerHTML=userArray[playerChance].getplayerScore();
+// }
+
 
 
 //Computer Player
@@ -618,7 +692,7 @@ ubsApp.chooseAnswer = function(decisionConfig, correctProbability, number){
 					return decisionConfig.options[i].optionValue;
 			}
 		}
-	}	
+	}
 }
 ubsApp.playStaticTemplate = function(staticConfig){
 	setTimeout(function(){
