@@ -123,7 +123,15 @@
     border: 0; 
     padding:10px;
     border-radius: 20px;
+    cursor :pointer;
+	box-shadow: 2px 2px orangered;
 }
+.purchaseScreenButton:active {
+ 
+    box-shadow: 1px 2px orangered;
+    transform: translateY(2px) translateX(2px);;
+  
+  }
 .enterAmountText{
     width:20%;
     border:1px solid black;

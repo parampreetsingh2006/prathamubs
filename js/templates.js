@@ -516,19 +516,19 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-col
 '       <div id="scenario" style="border:1px solid black; background-color:{{background}};font-weight:600; color:{{color}}; position:absolute;left:25%;right:25%;top:30%; padding:1%;">'+
 '          {{scenario}}<br>'+
 '       {{#if helpRequired}}'+
-'       <button style="padding:5px;float:right;border:0; border-radius:20px;">HELP</button>'+
+'       <button  style="padding:5px;float:right;border:0; border-radius:20px;">HELP</button>'+
 '       {{/if}}'+
 '       </div>'+
 '       <div id="result" style="position:absolute;left:40%;bottom:3%; color:red; font-weight:600;"></div>'+
 '       <div style="font-weight:600;width:15%; position:absolute;left:24%;top:45%; padding:1%;">'+
 '          {{payMessage}}'+
-'       <button style="padding:7px;border:0; width:55%;background-color:red; border-radius:20px; color:white;" onclick="ubsApp.payFromBank({{amount}})">PAY</button>'+
+'       <button  style="padding:7px;border:0; width:55%;background-color:red; border-radius:20px; color:white;" onclick="ubsApp.payFromBank({{amount}})">PAY</button>'+
 '       </div>'+
 '       <div style="font-weight:600;width:45%; position:absolute;left:24%;top:55%; padding:1%;">'+
 '          {{alternalteMessage}}'+
-'       <button style="padding:7px;border:0; width:25%;background-color:orangered; border-radius:20px; color:white;">TAKE A QUIZ</button>'+
+'       <button  style="padding:7px;border:0; width:25%;background-color:orangered; border-radius:20px; color:white;">TAKE A QUIZ</button>'+
 '       {{#if wildCard}}'+
-'       OR   <button style="padding:7px;border:0; width:25%;background-color:green; border-radius:20px; color:white;">CHECK WILD CARD</button>    '+
+'       OR   <button class="butt" style="padding:7px;border:0; width:25%;background-color:green; border-radius:20px; color:white;">CHECK WILD CARD</button>    '+
 '       {{/if}}'+
 '       </div>'+
 '</div>';
