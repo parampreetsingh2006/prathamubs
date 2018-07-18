@@ -13,6 +13,7 @@ let ubsAudioTemplate;
 let ubsCalculatorTemplate;
 let ubsLeaderBoardTemplate;
 let ubsOrdertemplate;
+let ubsQuizTemplate;
 let choiceSelected={};
 let timeVar;
 var answerselected=0;         //whyGlobal
@@ -26,7 +27,7 @@ var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales"];
+let templateName = ["static", "decision", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz"];
 let templateMap = {};
 monopoly.numplayers=0;
 let numplayers = monopoly.numplayers;
@@ -91,6 +92,13 @@ ubsApp.getTimerTempTemplate = function(templateConfig, tempVar){
 	tempVar.timerConfig=templateConfig;}
 }
 
+ubsApp.getQuizTemplate = function(templateConfig, tempVar){
+	if(templateConfig.options!=undefined){
+		ubsDecisionOption = templateConfig.options[0].optionName;
+	}
+	tempVar.html+=ubsQuizTemplate(templateConfig);
+}
+
 ubsApp.getPopupTemplate = function(templateConfig, tempVar){
 
 	tempVar.html+=ubsPopupTemplate(templateConfig);
@@ -151,6 +159,7 @@ ubsApp.getScoreTemplate = function(templateConfig, tempVar){
 
 ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	tempVar.salesConfig = templateConfig;
+	ubsApp.selectAvailableItems(templateConfig);
 	tempVar.html += ubsOrdertemplate(templateConfig);
 }
 
@@ -223,7 +232,6 @@ ubsApp.renderPage = function(page) {
 	}
 
 	if(Object.keys(tempVar.salesConfig).length != 0){
-		ubsApp.selectAvailableItems(tempVar.salesConfig);
 		ubsApp.startTimer(tempVar.salesConfig);
 	}
 
@@ -250,6 +258,153 @@ ubsApp.renderPage = function(page) {
 	}*/
 }
 
+ubsApp.updateChoiceSelected = function(noOfQuestions) {
+	if(jQuery.isEmptyObject(choiceSelected)){
+	 for(let i=0; i< noOfQuestions; i++) {
+	 choiceSelected[0] = false;
+	 }
+	}
+}
+ubsApp.areAllChoicesSelected= function(){
+
+    if(jQuery.isEmptyObject(choiceSelected)) {
+        return 0;
+    }
+   let x=0;
+    $.each(choiceSelected, function(key,value){
+     if(value == true) {
+        x++;
+     }
+});
+    return x;
+}
+
+ubsApp.updateChoices = function(choiceId){
+	 choiceSelected[choiceId]=true;
+}
+
+ubsApp.runQuizTemplate=function(){
+	questionNo = ubsApp.initializeQuiz();
+	$('#monopolyBase').css("z-index",-10);
+    $('#templateBase').css("z-index",10);
+    
+    document.getElementById("templateContent").style.opacity="0.95";
+    
+    $('#templateContent').css("height",(screenHeight)+'px');
+    $('#templateContent').css("width",(screenWidth)+'px');
+
+    ubsApp.renderPageByName(questionNo);
+	$("#correctAnswers").text("0");
+	$("#quizQuestionNumber").text("1");
+}
+ubsApp.atleastOneSelected= function(name){
+	var radio = document.getElementsByName(name);
+  	for (var i=0; i<radio.length; i++) {
+   
+    if (radio[i].checked) {
+      return true;
+    } 
+  }
+  return false;
+}
+ubsApp.nextQuizQuestion=function(page, answer, name){
+
+  if(ubsApp.atleastOneSelected(name)){
+  	  var c = $("#correctAnswers").html();
+	  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
+	  let questionNo = $("#quizQuestionNumber").html();
+
+	  if(checkedValue==answer){
+	  	c = parseInt(c);
+	  	c=c+1;
+	  	ubsApp.updateChoices(questionNo);
+	  }
+
+	  else{
+	  	console.log("Answer is wrong");
+	  }
+	  ubsApp.renderPageByName(page);
+	  if(page!="quizResult"){
+
+		  questionNo = parseInt(questionNo);
+		  questionNo=questionNo+1;
+		  $("#quizQuestionNumber").text(questionNo); 
+	  }
+	  else{
+	  		var correctAnswers = ubsApp.areAllChoicesSelected();
+	  		var percent = correctAnswers*100/5.0;
+	  		if(percent>=80){												//I have to put minimum cap in every question in config
+	   			$("#quizResult").text("Passed with "+percent+"% ");
+	  		}
+	  		else{
+	  			$("#quizResult").text("Failed with "+percent+"% ");
+	  		}
+	  }
+	  $("#correctAnswers").text(c);
+  }
+  else{
+  	console.log("option not slected");
+  }
+}
+
+ubsApp.doneQuiz=function(){
+		if(ubsApp.areAllChoicesSelected()>3){
+			
+			console.log("Passed the Quiz");
+		}
+		else{
+			console.log("Failed in Quiz");
+		}
+	choiceSelected = {};
+	$('#monopolyBase').css("z-index",0)
+	$('#templateBase').css("z-index",0)
+	$('#templateContent').css("height",0+'px')
+	document.getElementById("templateContent").innerHTML="";
+}
+
+ubsApp.cancelQuiz=function(){
+	choiceSelected = {};
+	$('#monopolyBase').css("z-index",0)
+	$('#templateBase').css("z-index",0)
+	$('#templateContent').css("height",0+'px')
+	document.getElementById("templateContent").innerHTML="";
+}
+
+ubsApp.initializeQuiz=function(){
+	var arr = [];
+	let noOfQuestions = 5;
+	ubsApp.updateChoiceSelected(noOfQuestions);
+	while(arr.length < noOfQuestions){
+	    var randomNumber = Math.floor(Math.random()*5+1);
+	    if(arr.indexOf(randomNumber) > -1) continue;
+	    arr[arr.length] = randomNumber;
+	}
+	for(let i=0;i<arr.length-1;i++){
+		ubsApp.pages["quizQ"+arr[i]].templates[0].onClickPage.nextPage = "quizQ"+arr[i+1];
+	}
+	ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].onClickPage.nextPage = "quizResult";
+	return "quizQ"+arr[0];
+}
+
+ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
+	time = totalTime - $("#seconds").html();
+	reduce = 0.85*total/1000;                                  //Multiplier from Inventory % to cash is 1000
+	var x = userArray[playerChance].getInventoryScore();
+	x=x-reduce;
+	userArray[playerChance].setInventoryScore(x);
+
+	var userTotal = $("#receiptTotal").val();
+
+	if(userTotal==total){
+		console.log("Time taken: "+time+"\nAnswer is right :"+total)
+		//use time taken to decide how many points to give
+	}else{
+		console.log("Time taken: "+time+"\nAnswer is wrong :"+total)
+		//decreaseInventory
+	}
+	ubsApp.checkPageorBoard(page,amount,hideScenarios);
+}
+
 ubsApp.calculateBill = function(){
 	let total=0;
 	var item = document.getElementsByName('amt');
@@ -264,7 +419,6 @@ ubsApp.selectAvailableItems = function(config){
 	let percent = ubsApp.checkInventory();
 	percent = 1 - percent;
 	let noOfItems =config.order.length;
-	console.log(noOfItems);
 	var notAvailable = Math.floor(percent*noOfItems);
 	var arr = [];
 	while(arr.length < notAvailable){
@@ -273,12 +427,16 @@ ubsApp.selectAvailableItems = function(config){
 	    arr[arr.length] = randomNumber;
 	}
 	for(let i = 0; i<arr.length;i++){
-		let itemNo = config.order[arr[i]].no;
-		$(".row"+itemNo).addClass("strikeout");
-		$(".row"+itemNo).attr('title', config.tooltipMessage);
-		$("#input"+itemNo).attr('value', 0);
-		$("#input"+itemNo).attr('disabled', true);
+		config.order[arr[i]].exclude = true;
 	}
+	let val=0;
+	for(let i=0;i<noOfItems;i++)
+	{
+		if(config.order[i].exclude==false){
+			val+=config.order[i].amt * config.order[i].rt;
+		}
+	}
+	config["tempTotal"] = val;
 }
 
 ubsApp.checkInventory=function(){
@@ -301,7 +459,6 @@ ubsApp.checkInventory=function(){
     else  if(invLevel < 20 ){
        percent = (Math.random()*2)*0.1+0.2;
     }
-
     return percent;
 }
 
@@ -311,6 +468,7 @@ ubsApp.mapTemplatetoFunction = function(){
 	   templateMap[templateName[i]]= "ubsApp.get"+templateName[i].charAt(0).toUpperCase()+templateName[i].substring(1)+"Template";
 	}
 }
+
 ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
 	clearInterval(timeVar);
 	if(hideScenarios == "true"){
@@ -321,33 +479,6 @@ ubsApp.checkPageorBoard= function(page,amount,hideScenarios){
 	}
 }
 
-ubsApp.updateChoiceSelected = function(templateConfig) {
-	if(jQuery.isEmptyObject(choiceSelected)){
-	 for(let i=0; i< templateConfig.choices.length; i++) {
-	 choiceSelected[templateConfig.choices[i].choiceID] = true;
-
-	 }
-	}
-}
-ubsApp.areAllChoicesSelected= function(){
-
-    if(jQuery.isEmptyObject(choiceSelected)) {
-        return false;
-    }
-   let allSelected = true;
-    $.each(choiceSelected, function(key,value){
-     if(value == true) {
-        allSelected =  false;
-        return false;
-     }
-});
-    return allSelected;
-}
-ubsApp.updateChoices = function(choiceId, pageName){
-	 ubsApp.renderPageByName(pageName);
-	 choiceSelected[choiceId]=false;
-
-}
 ubsApp.checkSelected= function(){
 
    let allSelected = true;
@@ -397,6 +528,7 @@ ubsApp.intitializeTemplates = function() {
 	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
 	ubsAudioTemplate = Template7.compile(ubsApp.audioTemplate);
 	ubsBoardtemplate = Template7.compile(ubsApp.boardTemplate);
+	ubsQuizTemplate = Template7.compile(ubsApp.quizTemplate);
 	// ubsCalculatorTemplate=Template7.compile(ubsApp.calculatorTemplate);
 	ubsLeaderBoardTemplate=Template7.compile(ubsApp.leaderBoardTemplate);
 	ubsOrdertemplate = Template7.compile(ubsApp.salesTemplate);
@@ -493,40 +625,40 @@ ubsApp.initializeLeaderBoard=function(category)
 ubsApp.startTimer=function(temp){
     var timeleft = temp.time;
     timeVar = setInterval(function(){
-	    timeleft--;
 		if(document.getElementById(temp.divID))
 		document.getElementById(temp.divID).innerHTML = timeleft;
+		timeleft--;
 	    if(timeleft === 0 ){
 	        clearInterval(timeVar);
+	        choiceSelected={};
 	        ubsApp.nextMove();
 	    }
     },1000);
 }
 
 ubsApp.nextMove = function(){
-			playerChance+=1;
-	        playerChance%=numplayers;
-			$('#monopolyBase').css("z-index",0)
-			$('#templateBase').css("z-index",0)
-			$('#templateContent').css("height",0+'px')
-			document.getElementById("templateContent").innerHTML="";
-			$('#rollIt').attr('disabled',false);
-			
-			this.currentPlayerContents();
-			$("#diceval").html(" ");
-			//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
-			if(userArray[playerChance].getIsComputer()){
-				decisionConfig={};
-				setTimeout( function(){
-					$('#rollIt').trigger('click');
-					$('#rollIt').attr('disabled',true);
-				},2000);
-			}
+	playerChance+=1;
+    playerChance%=numplayers;
+	$('#monopolyBase').css("z-index",0)
+	$('#templateBase').css("z-index",0)
+	$('#templateContent').css("height",0+'px')
+	document.getElementById("templateContent").innerHTML="";
+	$('#rollIt').attr('disabled',false);
+	
+	this.currentPlayerContents();
+	$("#diceval").html(" ");
+	//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
+	if(userArray[playerChance].getIsComputer()){
+		decisionConfig={};
+		setTimeout( function(){
+			$('#rollIt').trigger('click');
+			$('#rollIt').attr('disabled',true);
+		},2000);
+	}
 }
 ubsApp.getScore=function()
 {
 	ubsApp.initializeScoreBoard();
-
     return userArray[playerChance].getplayerScore();
 }
 

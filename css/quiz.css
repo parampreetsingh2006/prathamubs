@@ -1,0 +1,99 @@
+#quiz{
+	border: 2px solid black;
+	background-color: white;
+	height: auto;
+	width: 80%;	
+	margin: 6% 9%;
+	padding: 1%;
+	overflow: hidden;
+}
+
+#quizTitle{
+	height: 10%;
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+#quizEmoji{
+	position: absolute;
+	height: 6%;
+	width: 6%;
+	background: url('C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/quizEmoji.png') no-repeat;
+  	background-size:contain;
+}
+
+#score{
+	position: absolute;
+	margin-top: 1%;
+	right: 12%;
+	font-size: 1.2vw;
+
+}
+#quizHeading{
+	position: absolute;
+	margin: 0 0 0 4%;
+	height: 6%;
+	width: 5%;
+    padding: 0.7% 1%;
+	background-color:#ccff66;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.2vw;
+	font-weight: bold;
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+#questionHeading{
+	margin-top: 3%;
+ 	text-align: center;
+ 	font-size: 1.5vw;
+}
+
+#question_answer{
+	height: auto;
+	overflow: hidden;
+	width: 80%;
+	background-color: #ccff66;
+	padding: 1vw;
+	margin: 1% 10% 3% 10%;
+}
+
+#quizQuestion{
+	margin: 1%;
+}
+
+#quizResult{
+	margin: 2% 1% 1% 1%;
+}
+
+#quizQuestionNo{
+	float: right;
+}
+
+#quizOptions{
+	margin: 2%;
+}
+
+.quizButtons{
+  margin-right: 1%;
+  height: 5%;
+  width: 8%;
+  padding: 5px 8px;
+  float: right;
+  display: inline-block;
+  color: #ffffcc;
+  background: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  box-shadow: 0 3px #333333;
+}
+
+.quizButtons:active{
+
+  box-shadow: 1px 1px  #333333;
+  transform: translateY(3px);
+}
+
+button[class="quizButtons"]:focus {outline:0;}
+
+input[class="quizButtons"]:focus {outline:0;}

@@ -157,7 +157,7 @@ monopoly.pages = {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
-            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Cash</button>"
+            "src":"<button onclick=\"ubsApp.runQuizTemplate()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Cash</button>"
         },
         {
             "templateId":"1",

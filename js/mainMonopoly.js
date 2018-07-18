@@ -218,7 +218,7 @@ monopoly.storePlayerDetails=function(){
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
-        user.setInventoryScore(100);
+        user.setInventoryScore(60);
         user.setplayerCurrentPos(0);
         user.setScenarioArray(scenariosArray);
         user.setWeeks(0);
@@ -233,7 +233,7 @@ monopoly.storePlayerDetails=function(){
       user.setIsComputer(true);
       var level=$('input[name=compRadioLevel]:checked').val();
       user.setDifficultyLevel(level.toLowerCase());
-      user.setInventoryScore(100);
+      user.setInventoryScore(60);
       user.setCorrectProbability(level);
       user.setplayerCurrentPos(0);
       user.setplayerId("p"+i);

@@ -146,7 +146,7 @@ class User{
         //     }
         // }
         
-        number=(Math.floor(Math.random() * 100) + 1)%(Object.keys(this.scenariosArray).length);
+        number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
         object=this.scenariosArray[category][number];
 
         /*while(ubsApp.pages[object.getName()].minimumInventoryScoreRequired>=userArray[playerChance].getInventoryScore())

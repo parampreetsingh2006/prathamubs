@@ -99,822 +99,822 @@
 		]
 	},
 	
-	"q1":{
-		"category":"Sales",
-		"repeatforuser":false,
-		"repeatforall":true,
-		"questionTime":3000,
-		"optionsTime":2000,
-		"displayCalculator":true,
-		"minimumInventoryScoreRequired":"10",
-		"inventoryScoreToBeChanged":"10",
-	 	"templates":[
-	 		{
-				"templateId": 1,
-				"templateType": "decision",
-				"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
-				"question": "question1",
-				"questionTime":3000,
-				"optionsTime":2000,
-				//"answer":"355",
-				//"display_score":true,
-				"options": [
-				    {
-						"optionName":"q1", 
-						"optionValue": "355",
-						"id":1,
-						"amount":355,
-						"inventoryScoreToBeChanged":-10,
-						"priority": 1
-					},
-					{
-						"optionName": "q1",
-						"optionValue": "255",
-						"id":2,
-						"amount":-355,
-						"inventoryScoreToBeChanged":-5,
-						"priority": 2
-					},
-					{
-						"optionName":"q1",
-						"optionValue": "155",
-						"id":3,
-						"amount":-355,
-						"inventoryScoreToBeChanged":-5,
-						"priority":3
-					}	
-				],
-				"optionPageMap": {
-					"1":{
-						"page": "q1-correct",
-						"popup":""
-					},
-					"2": {
-						"page": "q1-wrong",
-						"popup":""
-					},
-					"3": {
-						"page": "q1-vvwrong",
-						"popup":""
-					}
-				},
-				//"width": "col-lg-8 col-md-8 col-xs-8",			
-				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
-			},
-			{
-				"templateId":6,
-				"templateType":"timerTemp",
-				"time":21,
-				"divID":"countdowntimer",
-				"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:3%;",
-				//"redirect":"choicePage"
-			}
-		]
-	},
+// 	"q1":{
+// 		"category":"Sales",
+// 		"repeatforuser":false,
+// 		"repeatforall":true,
+// 		"questionTime":3000,
+// 		"optionsTime":2000,
+// 		"displayCalculator":true,
+// 		"minimumInventoryScoreRequired":"10",
+// 		"inventoryScoreToBeChanged":"10",
+// 	 	"templates":[
+// 	 		{
+// 				"templateId": 1,
+// 				"templateType": "decision",
+// 				"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
+// 				"question": "question1",
+// 				"questionTime":3000,
+// 				"optionsTime":2000,
+// 				//"answer":"355",
+// 				//"display_score":true,
+// 				"options": [
+// 				    {
+// 						"optionName":"q1", 
+// 						"optionValue": "355",
+// 						"id":1,
+// 						"amount":355,
+// 						"inventoryScoreToBeChanged":-10,
+// 						"priority": 1
+// 					},
+// 					{
+// 						"optionName": "q1",
+// 						"optionValue": "255",
+// 						"id":2,
+// 						"amount":-355,
+// 						"inventoryScoreToBeChanged":-5,
+// 						"priority": 2
+// 					},
+// 					{
+// 						"optionName":"q1",
+// 						"optionValue": "155",
+// 						"id":3,
+// 						"amount":-355,
+// 						"inventoryScoreToBeChanged":-5,
+// 						"priority":3
+// 					}	
+// 				],
+// 				"optionPageMap": {
+// 					"1":{
+// 						"page": "q1-correct",
+// 						"popup":""
+// 					},
+// 					"2": {
+// 						"page": "q1-wrong",
+// 						"popup":""
+// 					},
+// 					"3": {
+// 						"page": "q1-vvwrong",
+// 						"popup":""
+// 					}
+// 				},
+// 				//"width": "col-lg-8 col-md-8 col-xs-8",			
+// 				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+// 			},
+// 			{
+// 				"templateId":6,
+// 				"templateType":"timerTemp",
+// 				"time":21,
+// 				"divID":"countdowntimer",
+// 				"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:3%;",
+// 				//"redirect":"choicePage"
+// 			}
+// 		]
+// 	},
 	
-	"q1-correct":{
-		"templates":[
-		{
-			"templateType":"audio",
-			"audioSrc":"audio/Buzzercorrect.mp3",
-			"audioId":"q1-correct-audio",
-		},
-		{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"completed":"true",
-			"style": "padding:5px;position:absolute;top:10%",	
-		},
-		{
-		        "templateId": 1,
-				"templateType": "static",
-				"resultId":"q1-correct",
-				"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-				"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",	
-				//"display_score":true,
-				"score_animation_req":"true",
-				"audioId":"q1-correct-audio",
-				"completed":"true",
-		},	
-		{
-			    "templateId": 1,
-				"templateType": "static",
-				"buttonType":"nextQuestion",
-				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-				"style":"position:absolute;text-align: center; top:70%",
-				"id":"nextQuestion",
-				"conclusionTime":2000,
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : "true",
-				}
-		}
-	]
-},
+// 	"q1-correct":{
+// 		"templates":[
+// 		{
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/Buzzercorrect.mp3",
+// 			"audioId":"q1-correct-audio",
+// 		},
+// 		{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"completed":"true",
+// 			"style": "padding:5px;position:absolute;top:10%",	
+// 		},
+// 		{
+// 		        "templateId": 1,
+// 				"templateType": "static",
+// 				"resultId":"q1-correct",
+// 				"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 				"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",	
+// 				//"display_score":true,
+// 				"score_animation_req":"true",
+// 				"audioId":"q1-correct-audio",
+// 				"completed":"true",
+// 		},	
+// 		{
+// 			    "templateId": 1,
+// 				"templateType": "static",
+// 				"buttonType":"nextQuestion",
+// 				"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 				"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 				"style":"position:absolute;text-align: center; top:70%",
+// 				"id":"nextQuestion",
+// 				"conclusionTime":2000,
+// 				"onClickPage": {
+// 					"nextPage" : "",
+// 					"hideScenarios" : "true",
+// 				}
+// 		}
+// 	]
+// },
 
-    "q1-wrong":{
-    	"templates":[
-	 	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q1-wrong-audio",
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q1-wrong",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q1-wrong-audio",
-		},	
-		{
-		   "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-		}
-	]
-},
+//     "q1-wrong":{
+//     	"templates":[
+// 	 	{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q1-wrong-audio",
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q1-wrong",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q1-wrong-audio",
+// 		},	
+// 		{
+// 		   "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+// 		}
+// 	]
+// },
 	
-	"q1-vvwrong":{
-    	"templates":[
-		{
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q1-wrong-audio",
-		},
+// 	"q1-vvwrong":{
+//     	"templates":[
+// 		{
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q1-wrong-audio",
+// 		},
 	
-		{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q1-vvwrong",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
-			"score_animation_req":"true"
-		},	
-		{
-		    "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-		}
-	    ]
-	},
+// 		{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q1-vvwrong",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
+// 			"score_animation_req":"true"
+// 		},	
+// 		{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+// 		}
+// 	    ]
+// 	},
 		
-	"q2":{
-		"category":"Sales",
-		"repeatforuser":false,
-		"repeatforall":true,
-		"questionTime":3000,
-		"optionsTime":2000,
-		"minimumInventoryScoreRequired":"10",
-		"inventoryScoreToBeChanged":"-20",
-    	"templates":[
-    	{
-			"templateId": 2,
-			"templateType": "decision",
-			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
-			"question": "question2",
-			"questionTime":3000,
-			"optionsTime":2000,
-			//"display_score":true,			
-			"options": [
-				{
-					"optionName": "q2",
-					"optionValue": "65",
-					"id":"1",
-					"priority":3,
-					"amount":-45,
-					"inventoryScoreToBeChanged":-5,
-				},
-				{
-					"optionName": "q2",
-					"optionValue": "55",
-					"id":"2",
-					"priority": 2,
-					"amount":-45,
-					"inventoryScoreToBeChanged":-5,
-				},
-				{
-					"optionName": "q2",
-					"optionValue": "45",
-					"priority": 1,
-					"id":"3",
-					"amount":45,
-					"inventoryScoreToBeChanged":-10,
-				}	
-			],
-			"optionPageMap": {
-				"1":{
-					"page": "q2-vvwrong",
-					"popup":""
-				},
-				"2":{
-					"page": "q2-wrong",
-					"popup":""
-				},
-				"3":{
-					"page": "q2-correct",
-					"popup":""
-				}
-			},
-			//"width": "col-lg-7 col-md-7 col-xs-7",
-			"style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
-		},
-		{
-			"templateId":6,
-			"templateType":"timerTemp",
-			"time":21,
-			"divID":"countdowntimer",
-			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%;",
-			"redirect":"choicePage"
-		}
-		]
-	},
+// 	"q2":{
+// 		"category":"Sales",
+// 		"repeatforuser":false,
+// 		"repeatforall":true,
+// 		"questionTime":3000,
+// 		"optionsTime":2000,
+// 		"minimumInventoryScoreRequired":"10",
+// 		"inventoryScoreToBeChanged":"-20",
+//     	"templates":[
+//     	{
+// 			"templateId": 2,
+// 			"templateType": "decision",
+// 			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
+// 			"question": "question2",
+// 			"questionTime":3000,
+// 			"optionsTime":2000,
+// 			//"display_score":true,			
+// 			"options": [
+// 				{
+// 					"optionName": "q2",
+// 					"optionValue": "65",
+// 					"id":"1",
+// 					"priority":3,
+// 					"amount":-45,
+// 					"inventoryScoreToBeChanged":-5,
+// 				},
+// 				{
+// 					"optionName": "q2",
+// 					"optionValue": "55",
+// 					"id":"2",
+// 					"priority": 2,
+// 					"amount":-45,
+// 					"inventoryScoreToBeChanged":-5,
+// 				},
+// 				{
+// 					"optionName": "q2",
+// 					"optionValue": "45",
+// 					"priority": 1,
+// 					"id":"3",
+// 					"amount":45,
+// 					"inventoryScoreToBeChanged":-10,
+// 				}	
+// 			],
+// 			"optionPageMap": {
+// 				"1":{
+// 					"page": "q2-vvwrong",
+// 					"popup":""
+// 				},
+// 				"2":{
+// 					"page": "q2-wrong",
+// 					"popup":""
+// 				},
+// 				"3":{
+// 					"page": "q2-correct",
+// 					"popup":""
+// 				}
+// 			},
+// 			//"width": "col-lg-7 col-md-7 col-xs-7",
+// 			"style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+// 		},
+// 		{
+// 			"templateId":6,
+// 			"templateType":"timerTemp",
+// 			"time":21,
+// 			"divID":"countdowntimer",
+// 			"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%;",
+// 			"redirect":"choicePage"
+// 		}
+// 		]
+// 	},
 
-	"q2-vvwrong":{
-    	"templates":[
-		{
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q2-wrong-audio",
-		},
-		{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q2-vvwrong",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q2-wrong-audio",
-		},	
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-		}
-        ]
-    },
+// 	"q2-vvwrong":{
+//     	"templates":[
+// 		{
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q2-wrong-audio",
+// 		},
+// 		{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q2-vvwrong",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q2-wrong-audio",
+// 		},	
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+// 		}
+//         ]
+//     },
 
-    "q2-wrong":{
-    	"templates":[
-		{
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q2-wrong-audio",
-		},
-	    {
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-        {
-            "templateId": 1,
-            "templateType": "static",
-			"completed":"true",
-			"resultId":"q2-wrong",
-            "src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> " ,
-		    "width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-            "completed":"true",
-            "style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-           // "display_score":true,
-            "score_animation_req":"true",
-            "audioId":"q2-wrong-audio",
-        },       
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-		}
-        ]
-    },
+//     "q2-wrong":{
+//     	"templates":[
+// 		{
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q2-wrong-audio",
+// 		},
+// 	    {
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+//         {
+//             "templateId": 1,
+//             "templateType": "static",
+// 			"completed":"true",
+// 			"resultId":"q2-wrong",
+//             "src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> " ,
+// 		    "width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+//             "completed":"true",
+//             "style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+//            // "display_score":true,
+//             "score_animation_req":"true",
+//             "audioId":"q2-wrong-audio",
+//         },       
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+// 		}
+//         ]
+//     },
         
-    "q2-correct":{
-    	"templates":[
+//     "q2-correct":{
+//     	"templates":[
 
-		{
-			"templateType":"audio",
-			"audioSrc":"audio/Buzzercorrect.mp3",
-			"audioId":"q2-correct-audio",
-		},
-		{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; height:40vw; \" src=\"images/Girl/Girl_Happy.gif\" >",
-			"width": "col-lg-6 col-md-6 col-md-offset-1 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q2-correct",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q2-correct-audio",
-		},	
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-		}
-        ]
-    },         
+// 		{
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/Buzzercorrect.mp3",
+// 			"audioId":"q2-correct-audio",
+// 		},
+// 		{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; height:40vw; \" src=\"images/Girl/Girl_Happy.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-md-offset-1 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q2-correct",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q2-correct-audio",
+// 		},	
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+// 		}
+//         ]
+//     },         
     
-    //Question 3 
+//     //Question 3 
 
-    "q3": {
+//     "q3": {
 
-		"category":"Sales",
-		"repeatforuser":false,
-		"repeatforall":true,
-		"questionTime":3000,
-		"optionsTime":2000,
-		"category":"Sales",
-		"minimumInventoryScoreRequired":"85",
-		"inventoryScoreToBeChanged":"-20",
-    	"templates":[
-    	{
-	        "templateId": 3,
-			"templateType": "decision",
-			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
-			"question": "question3",
-			"questionTime":3000,
-			"optionsTime":2000,
-	        //"display_score":true,
-	        "options": [
-	        	{
-	                "optionName": "q3",
-	                "optionValue": "Rs.30",
-	                "id":"1",
-					"amount":-10,
-					"inventoryScoreToBeChanged":-2,
-	                "priority":3
-	            },
-	            {
-	                "optionName": "q3",
-	                "optionValue": "Rs.11",
-	                "id":"2",
-					"amount":-10,
-					"inventoryScoreToBeChanged":-2,
-	                "priority":2
-	            },
-	            {
-	                "optionName": "q3",
-	                "optionValue": "Rs.10",
-	                "id":"3",
-					"amount":10,
-					"inventoryScoreToBeChanged":-5,
-	                "priority":1
-	            }
-	        ],
-	        "optionPageMap": {
-	            "1":{
-					"page": "q3-vvwrong",
-					"popup":""
-				},
-				"2":{
-					"page": "q3-wrong",
-					"popup":""
-				},
-				"3":{
-					"page": "q3-correct",
-					"popup":""
-				}
-	        },
-	        //"width": "col-lg-7 col-md-7 col-xs-7",
-	        "style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
-	    },
-	    {
-	        "templateId":6,
-	        "templateType":"timerTemp",
-	        "time":21,
-	        "divID":"countdowntimer",
-	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%;",
+// 		"category":"Sales",
+// 		"repeatforuser":false,
+// 		"repeatforall":true,
+// 		"questionTime":3000,
+// 		"optionsTime":2000,
+// 		"category":"Sales",
+// 		"minimumInventoryScoreRequired":"85",
+// 		"inventoryScoreToBeChanged":"-20",
+//     	"templates":[
+//     	{
+// 	        "templateId": 3,
+// 			"templateType": "decision",
+// 			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
+// 			"question": "question3",
+// 			"questionTime":3000,
+// 			"optionsTime":2000,
+// 	        //"display_score":true,
+// 	        "options": [
+// 	        	{
+// 	                "optionName": "q3",
+// 	                "optionValue": "Rs.30",
+// 	                "id":"1",
+// 					"amount":-10,
+// 					"inventoryScoreToBeChanged":-2,
+// 	                "priority":3
+// 	            },
+// 	            {
+// 	                "optionName": "q3",
+// 	                "optionValue": "Rs.11",
+// 	                "id":"2",
+// 					"amount":-10,
+// 					"inventoryScoreToBeChanged":-2,
+// 	                "priority":2
+// 	            },
+// 	            {
+// 	                "optionName": "q3",
+// 	                "optionValue": "Rs.10",
+// 	                "id":"3",
+// 					"amount":10,
+// 					"inventoryScoreToBeChanged":-5,
+// 	                "priority":1
+// 	            }
+// 	        ],
+// 	        "optionPageMap": {
+// 	            "1":{
+// 					"page": "q3-vvwrong",
+// 					"popup":""
+// 				},
+// 				"2":{
+// 					"page": "q3-wrong",
+// 					"popup":""
+// 				},
+// 				"3":{
+// 					"page": "q3-correct",
+// 					"popup":""
+// 				}
+// 	        },
+// 	        //"width": "col-lg-7 col-md-7 col-xs-7",
+// 	        "style": "align:center; position:absolute; top:4%; left:10%;width:80%; right:10%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+// 	    },
+// 	    {
+// 	        "templateId":6,
+// 	        "templateType":"timerTemp",
+// 	        "time":21,
+// 	        "divID":"countdowntimer",
+// 	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%;",
 
-	        "redirect":"choicePage"
-	     }
-    	]
-    },
+// 	        "redirect":"choicePage"
+// 	     }
+//     	]
+//     },
 
-    "q3-vvwrong":{
-    	"templates":[
-	    {
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q3-wrong-audio",
-		},
-	    {
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q3-vvwrong",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
+//     "q3-vvwrong":{
+//     	"templates":[
+// 	    {
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q3-wrong-audio",
+// 		},
+// 	    {
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q3-vvwrong",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
 
-			"score_animation_req":"true",
-			"audioId":"q3-wrong-audio",
-		},	 
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-   		}
-   	]
-   },
+// 			"score_animation_req":"true",
+// 			"audioId":"q3-wrong-audio",
+// 		},	 
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+//    		}
+//    	]
+//    },
     
-    "q3-wrong":{
-    	"templates":[
-	    {
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q3-wrong-audio",
-		},
-	    {
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q3-wrong",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":true,
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q3-wrong-audio",
-		},	   
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-        }
-    ]
-},
+//     "q3-wrong":{
+//     	"templates":[
+// 	    {
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q3-wrong-audio",
+// 		},
+// 	    {
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q3-wrong",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":true,
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q3-wrong-audio",
+// 		},	   
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+//         }
+//     ]
+// },
     
-    "q3-correct":{
-    	"templates":[
-    	{
-			"templateType":"audio",
-			"audioSrc":"audio/Buzzercorrect.mp3",
-			"audioId":"q3-correct-audio",
-		},
-    	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q3-correct",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":true,
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q3-correct-audio",
-		},	
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-        }
-    ]
-},
+//     "q3-correct":{
+//     	"templates":[
+//     	{
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/Buzzercorrect.mp3",
+// 			"audioId":"q3-correct-audio",
+// 		},
+//     	{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q3-correct",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":true,
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q3-correct-audio",
+// 		},	
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+//         }
+//     ]
+// },
     
-    //Question 4
+//     //Question 4
 
-    "q4": {
+//     "q4": {
 
-    	"category":"Sales",
-		"repeatforuser":false,
-		"repeatforall":true,
-		"questionTime":3000,
-		"optionsTime":2000,
-		"minimumInventoryScoreRequired":"90",
-		"inventoryScoreToBeChanged":"-20",
-    	"templates":[
-    	{
-	        "templateId": 4,
-			"templateType": "decision",
+//     	"category":"Sales",
+// 		"repeatforuser":false,
+// 		"repeatforall":true,
+// 		"questionTime":3000,
+// 		"optionsTime":2000,
+// 		"minimumInventoryScoreRequired":"90",
+// 		"inventoryScoreToBeChanged":"-20",
+//     	"templates":[
+//     	{
+// 	        "templateId": 4,
+// 			"templateType": "decision",
 			
-			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
-			"question": "question4",
-			"questionTime":3000,
-			"optionsTime":2000,
+// 			"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
+// 			"question": "question4",
+// 			"questionTime":3000,
+// 			"optionsTime":2000,
 
-	        //"display_score":true,
+// 	        //"display_score":true,
 	         
-	        "options": [
-	        	{
-	                "optionName": "q2",
-	                "optionValue": "Rs.200",
-	                "id":"1",
-					"amount":-150,
-					"inventoryScoreToBeChanged":-5,
-	                "priority":3,
-	            },
-	            {
-	                "optionName": "q2",
-	                "optionValue": "Rs.150",
-	                "id":"2",
-					"amount":150,
-					"inventoryScoreToBeChanged":-10,
-	                "priority":1
-	            },
-	            {
-	                "optionName": "q2",
-	                "optionValue": "Rs.100",
-	                "id":"3",
-					"amount":-150,
-					"inventoryScoreToBeChanged":-5,
-	                "priority":2
-	            }
-	        ],
-	        "optionPageMap": {
-	            "1":{
-						"page": "q4-vvwrong",
-						"popup":""
-				},
-				"2":{
-					"page": "q4-correct",
-					"popup":""
-				},
-				"3":{
-					"page": "q4-wrong",
-					"popup":""
-				}
-	        },
-	        //"width": "col-lg-7 col-md-7 col-xs-7",
-	        "style": "align-items:center; position:absolute; top:4%; left:15%;width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
-	    },
-	    {
-	        "templateId":6,
-	        "templateType":"timerTemp",
-	        "time":21,
-			"divID":"countdowntimer",
-	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%",
+// 	        "options": [
+// 	        	{
+// 	                "optionName": "q2",
+// 	                "optionValue": "Rs.200",
+// 	                "id":"1",
+// 					"amount":-150,
+// 					"inventoryScoreToBeChanged":-5,
+// 	                "priority":3,
+// 	            },
+// 	            {
+// 	                "optionName": "q2",
+// 	                "optionValue": "Rs.150",
+// 	                "id":"2",
+// 					"amount":150,
+// 					"inventoryScoreToBeChanged":-10,
+// 	                "priority":1
+// 	            },
+// 	            {
+// 	                "optionName": "q2",
+// 	                "optionValue": "Rs.100",
+// 	                "id":"3",
+// 					"amount":-150,
+// 					"inventoryScoreToBeChanged":-5,
+// 	                "priority":2
+// 	            }
+// 	        ],
+// 	        "optionPageMap": {
+// 	            "1":{
+// 						"page": "q4-vvwrong",
+// 						"popup":""
+// 				},
+// 				"2":{
+// 					"page": "q4-correct",
+// 					"popup":""
+// 				},
+// 				"3":{
+// 					"page": "q4-wrong",
+// 					"popup":""
+// 				}
+// 	        },
+// 	        //"width": "col-lg-7 col-md-7 col-xs-7",
+// 	        "style": "align-items:center; position:absolute; top:4%; left:15%;width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+// 	    },
+// 	    {
+// 	        "templateId":6,
+// 	        "templateType":"timerTemp",
+// 	        "time":21,
+// 			"divID":"countdowntimer",
+// 	        "style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:2%",
 
-	        "redirect":"choicePage"
-	    }
-	]
-},
+// 	        "redirect":"choicePage"
+// 	    }
+// 	]
+// },
 
-    "q4-vvwrong":{
-    	"templates":[
-        {
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q4-wrong-audio",
-		},
-    	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q4-vvwrong",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q4-wrong-audio",
-		},
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-        }
-   	]
-   },
-    "q4-wrong":{
-    	"templates":[
-        {
-			"templateType":"audio",
-			"audioSrc":"audio/wrongbeat.mp3",
-			"audioId":"q4-wrong-audio",
-		},
-    	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q4-wrong",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q4-wrong-audio",
-		},	
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-        }
-    ]
-},
+//     "q4-vvwrong":{
+//     	"templates":[
+//         {
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q4-wrong-audio",
+// 		},
+//     	{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Girl/girl-angry.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q4-vvwrong",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q4-wrong-audio",
+// 		},
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+//         }
+//    	]
+//    },
+//     "q4-wrong":{
+//     	"templates":[
+//         {
+// 			"templateType":"audio",
+// 			"audioSrc":"audio/wrongbeat.mp3",
+// 			"audioId":"q4-wrong-audio",
+// 		},
+//     	{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Angry-1.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q4-wrong",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q4-wrong-audio",
+// 		},	
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+//         }
+//     ]
+// },
 
-    "q4-correct":{
-    	"templates":[
-        {
-				"templateType":"audio",
-				"audioSrc":"audio/Buzzercorrect.mp3",
-				"audioId":"q4-correct-audio",
-		},
-    	{
-		    "templateId": 1,
-			"templateType": "static",
-			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
-			"width": "col-lg-6 col-md-6 col-xs-6",
-			"style": "padding:5px;position:absolute;top:10%"	
-		},
-		{
-	        "templateId": 1,
-			"templateType": "static",
-			"resultId":"q4-correct",
-			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
-			"completed":"true",
-			//"display_score":true,
-			"score_animation_req":"true",
-			"audioId":"q4-correct-audio",
-		},	 
-        {
-            "templateId": 1,
-			"templateType": "static",
-			"buttonType":"nextQuestion",
-			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
-			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
-			"style":"position:absolute;text-align: center; top:70%",
-			"id":"nextQuestion",			
-			"conclusionTime":2000,
-			"onClickPage": {
-				"nextPage" : "",
-				"hideScenarios" : "true"
-			}
-        }
-    ]
-},
+//     "q4-correct":{
+//     	"templates":[
+//         {
+// 				"templateType":"audio",
+// 				"audioSrc":"audio/Buzzercorrect.mp3",
+// 				"audioId":"q4-correct-audio",
+// 		},
+//     	{
+// 		    "templateId": 1,
+// 			"templateType": "static",
+// 			"src": "<img style=\"max-width: 100%; \" src=\"images/Boy/Boy-Happy-1.gif\" >",
+// 			"width": "col-lg-6 col-md-6 col-xs-6",
+// 			"style": "padding:5px;position:absolute;top:10%"	
+// 		},
+// 		{
+// 	        "templateId": 1,
+// 			"templateType": "static",
+// 			"resultId":"q4-correct",
+// 			"src": "<div style='color: white;background-color:rgb(204, 0, 255);border-radius: 1vw;text-align:center;padding:.9vw;font-size:1.3vw;'>Message</div> ",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style": "position:absolute; top:30%;background-color:rgb(61, 0, 153);border-radius: 2vw;padding:2vw;",
+// 			"completed":"true",
+// 			//"display_score":true,
+// 			"score_animation_req":"true",
+// 			"audioId":"q4-correct-audio",
+// 		},	 
+//         {
+//             "templateId": 1,
+// 			"templateType": "static",
+// 			"buttonType":"nextQuestion",
+// 			"src": "<button type=\"button\" style=\"color:black;display: inline-block; padding:.7vw;background-color:#ff99ff;border:1px solid rgb(230, 0, 230)\">Message</button>",
+// 			"width": "col-lg-6 col-md-offset-5  col-md-4  col-xs-6",
+// 			"style":"position:absolute;text-align: center; top:70%",
+// 			"id":"nextQuestion",			
+// 			"conclusionTime":2000,
+// 			"onClickPage": {
+// 				"nextPage" : "",
+// 				"hideScenarios" : "true"
+// 			}
+//         }
+//     ]
+// },
 
 
 
@@ -1192,8 +1192,6 @@
 
 "receiptPage":{
 		"category":"Sales",
-		
-		
 		"repeatforuser":true,
 		"repeatforall":true,
 		"questionTime":3000,
@@ -1203,87 +1201,127 @@
 	        "templateId": 4,
 			"templateType": "sales",
 			"profilePicture":"C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/download",
-			"time":"31",
+			"time":"60",
 			"divID":"seconds",
 			"tooltipMessage":"This item is not available in your Inventory",
+			"tempTotal":"",
 			"order":[
 			{
 				"no":1,
 				"item":"Wheat",
 				"amount":"4 Kg",
-				"rate":"Rs.32/kg"
+				"rate":"Rs.32/kg",
+				"amt":4,
+				"rt":32,
+				"exclude":false
 			},
 			{
 				"no":2,
 				"item":"Sugar",
 				"amount":"1 Kg",
-				"rate":"Rs.40/kg"
+				"rate":"Rs.40/kg",
+				"amt":1,
+				"rt":40,
+				"exclude":false
 			},
 			{
 				"no":3,
 				"item":"Bajra",
 				"amount":"4 Kg",
-				"rate":"Rs.25/kg"
+				"rate":"Rs.25/kg",
+				"amt":4,
+				"rt":25,
+				"exclude":false
 			},
 			{
 				"no":4,
 				"item":"Rice",
 				"amount":"4 Kg",
-				"rate":"Rs.43/kg"
+				"rate":"Rs.43/kg",
+				"amt":4,
+				"rt":43,
+				"exclude":false
 			},
 			{
 				"no":5,
 				"item":"Jowar",
 				"amount":"4 Kg",
-				"rate":"Rs.23/kg"
+				"rate":"Rs.23/kg",
+				"amt":4,
+				"rt":23,
+				"exclude":false
 			},
 			{
 				"no":6,
 				"item":"Milk",
 				"amount":"1 Litre",
-				"rate":"Rs.50/litre"
+				"rate":"Rs.50/litre",
+				"amt":1,
+				"rt":50,
+				"exclude":false
 			},
 			{
 				"no":7,
 				"item":"Eggs",
 				"amount":"1.5 dozen",
-				"rate":"Rs.5/piece"
+				"rate":"Rs.5/piece",
+				"amt":18,
+				"rt":5,
+				"exclude":false
 			},
 			{
 				"no":8,
 				"item":"Oil",
 				"amount":"1 Litre",
-				"rate":"Rs.100/litre"
+				"rate":"Rs.100/litre",
+				"amt":1,
+				"rt":100,
+				"exclude":false
 			},
 			{
 				"no":9,
 				"item":"Jowar",
 				"amount":"4 Kg",
-				"rate":"Rs.28/kg"
+				"rate":"Rs.28/kg",
+				"amt":4,
+				"rt":28,
+				"exclude":false
 			},
 			{
 				"no":10,
 				"item":"Milk",
 				"amount":"1 Litre",
-				"rate":"Rs.50/litre"
+				"rate":"Rs.50/litre",
+				"amt":1,
+				"rt":50,
+				"exclude":false
 			},
 			{
 				"no":11,
 				"item":"Eggs",
 				"amount":"1 dozen",
-				"rate":"Rs.5/piece"
+				"rate":"Rs.5/piece",
+				"amt":12,
+				"rt":5,
+				"exclude":false
 			},
 			{
 				"no":12,
 				"item":"Oil",
 				"amount":"1 Litre",
-				"rate":"Rs.100/litre"
+				"rate":"Rs.100/litre",
+				"amt":1,
+				"rt":100,
+				"exclude":false
 			},
 			{
 				"no":13,
 				"item":"Banana",
 				"amount":"1 dozen",
-				"rate":"Rs 5/piece"
+				"rate":"Rs 5/piece",
+				"amt":12,
+				"rt":5,
+				"exclude":false
 			}
 			],
 
@@ -1380,5 +1418,260 @@
 		// 		"amount":"10 dozen"
 		// 	}]
 	}]
-}
+},
+
+// "quizTemplate":{
+// 	"category":"Quiz",
+// 	"templates":[
+// 	 		{
+	 			
+// 	 			}}
+
+// },
+
+"quizQ1":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST1 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q1",
+				"options": [
+				    {
+						"optionName":"q1", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q1",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q1",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ2":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST1 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q2",
+				"options": [
+				    {
+						"optionName":"q2", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q2",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q2",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ3":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST1 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q3",
+				"options": [
+				    {
+						"optionName":"q3", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q3",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q3",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ4":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST4 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q4",
+				"options": [
+				    {
+						"optionName":"q4", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q4",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q4",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ5":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST5 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName": "q5",
+				"options": [
+				    {
+						"optionName":"q5", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q5",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q5",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+
+	"quizResult":{
+		"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "Your Result is: ",
+				"quizResult":true,
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"Result",
+				"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+			}
+		]	
+	}
 }
