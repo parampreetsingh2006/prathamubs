@@ -53,5 +53,18 @@ ubsApp.translation={
         "q4-correct":"Yay, you answered correct. Your balance increases.",
         "q4-wrong":"Oops!! you answered incorrect. You lost money.",
         "q4-vvwrong":"Oops!! you answered incorrect. You lost money.",
-
+        "paymentQuestion1":"You have been fined for not having driving license.",
+        "paymentQuestion2":"You have been fined Rs.1000 for not having shop License.",
+        "luckQuestion1":"You have gained Rs. 1000 for paying income tax.",
+        "luckQuestion2":"You have lost Rs. 1000 for not paying income tax.",
+        
+        //new
+        "validAmount":"PLEASE ENTER A VALID AMOUNT",
+        "lessMoney":"YOU HAVE ENTERED LESS MONEY",
+        "moreMoney":"YOU HAVE ENTERED MORE MONEY",
+        "moreCash":"YOU HAVE ENTERED MORE CASH THAN YOU HAVE",
+        "bankBalance":"YOU HAVE INSUFFICIENT BANK BALANCE",
+        "lotDebt":"YOU HAVE A LOT OF DEBT",
+        "pleaseConfirm":"Please confirm the amount you want",
+        "noDebt":"YOU DON'T HAVE ANY DEBTS.",
     }

@@ -85,3 +85,54 @@
     top:10%;
     font-size: 1.1vw !important;
 }
+
+
+/*idr se new*/
+.screenTitle{
+    position:absolute;
+    top:3%;
+    left:5%;
+    padding:10px;
+    font-weight:600;
+}
+#percent{
+    background-color: black; 
+    color:white;
+    padding:10px;
+    position: absolute;
+    top: 50%;
+    left:10%;
+}
+#value{
+    background-color: black; 
+    color:white;
+    padding:10px;
+    position: absolute;
+    top: 50%;
+    left:25%;
+}
+#result{
+    position:absolute;
+    left:40%;
+    bottom:3%; 
+    color:red;
+    font-weight:600;
+}
+.purchaseScreenButton{
+    background-color: orangered; 
+    border: 0; 
+    padding:10px;
+    border-radius: 20px;
+    cursor :pointer;
+	box-shadow: 2px 2px orangered;
+}
+.purchaseScreenButton:active {
+ 
+    box-shadow: 1px 2px orangered;
+    transform: translateY(2px) translateX(2px);;
+  
+  }
+.enterAmountText{
+    width:20%;
+    border:1px solid black;
+}

@@ -115,7 +115,6 @@ monopoly.pages = {
             "style":"background-color:yellow;border:1px solid black; padding:1px;",
             "src":"50%"
         },
-
         {
             "templateId":1,
             "templateType":"static",
@@ -130,7 +129,6 @@ monopoly.pages = {
             "style":"background-color:yellow;border:1px solid black; padding:1px;",
             "src":"YES"
         },
-
         {
             "templateId":1,
             "templateType":"static",
@@ -145,7 +143,6 @@ monopoly.pages = {
             "style":"background-color:yellow;border:1px solid black; padding:1px;",
             "src":"10"
         },
-
         {
             "templateId":1,
             "templateType":"static",
@@ -156,15 +153,33 @@ monopoly.pages = {
         {
             "templateId":"1",
             "templateType":"static",
-            "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
-            "src":"<button onclick=\"ubsApp.runQuizTemplate()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Cash</button>"
+            "style":"position:absolute;bottom:18%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; background:#73e600; border-radius:5px; \">Roll it</button>"
+
         },
         {
             "templateId":"1",
             "templateType":"static",
-            "style":"position:absolute;bottom:10%;left:90%;width:7%;",
-            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+            "style":"position:absolute;bottom:18%;left:90%; whitedth:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='boardButtons' onclick=\"ubsApp.runQuizTemplate()\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; border-radius:5px; \">Take Exam</button>"
+
         },
+        {
+            "templateId":"1",
+            "templateType":"static",
+            "style":"position:absolute;bottom:10%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='boardButtons' onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
+
+        },
+        {
+            "templateId":"1",
+            "templateType":"static",
+            "style":"position:absolute;bottom:10%;left:90%;width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='boardButtons' onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+        },
+        
+        // 
+        
 
         //Previous was from here
         {
@@ -406,3 +421,4 @@ monopoly.pages = {
             
     ]
 }
+

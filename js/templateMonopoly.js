@@ -104,7 +104,7 @@ monopoly.rollingDiceTemplate =
 '        </div>'+
 '      </div>'+
 
-
+/*
 '      <div id=\'dice2\' style=" float:right;" class="dice dice-one">'+
 '        <div id="dice-one-side-one" class=\'side one\'>'+
 '          <div class="divot one-1"></div>'+
@@ -141,15 +141,9 @@ monopoly.rollingDiceTemplate =
 '        </div>'+
 '      </div>'+
 
-'  '+
+'  '+*/
 
-''+
-''+
-'    </div> '+
-''+
-''+
-'  </div>'+
-'<button id=\'rollIt\' class=\'roll-button\' onclick="monopoly.rollDice()">Roll it</button>';
+'';
 
 monopoly.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="monopoly.renderPageforBoard(\'{{onClickPage}}\',\'{{amount}}\')">'+
 '       {{src}}'+

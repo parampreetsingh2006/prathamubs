@@ -144,36 +144,36 @@ ubsApp.choiceTemplate =  '<div id = "choiceTemplate" style="height:{{containerHe
 ''+
 '			{{/each}}' + '</div>'+
 ' <div id={{audioId}}></div>';
-	
-ubsApp.scoreTemplate= '<style>'+ 
+    
+ubsApp.scoreTemplate= //'<style>'+ 
  
-' .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; }'+
+// ' .coin{display:block ; width: 35px; height: 35px; -ms-transform-style:preserve-3d;-webkit-transform-style:preserve-3d; transform-style:preserve-3d;  animation: coin 2s linear infinite; }'+
 
-' .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; }'+
+// ' .coin .front{ width: 100%; height: 100%; border-radius: 50%; position: absolute; top: 0; left: 0; z-index: -1; }'+
 
-' .coin .back{ width: 100%; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; }'+
+// ' .coin .back{ width: 100%; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} border-radius: 50%; transform: rotateY(180deg)translateZ(10px); -webkit-transform:rotateY(180deg)translateZ(10px); -ms-transform:rotateY(180deg)translateZ(10px); position: absolute; top: 0; left: 0; z-index: 1; }'+
 
-' .coin .front_b{ width: 100%; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;}'+
+// ' .coin .front_b{ width: 100%; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} border-radius: 50%; transform: translateZ(-1px); -webkit-transform:translateZ(-1px); position: absolute; top:0; left: 0; z-index: 2;}'+
 
-' .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;}'+
+// ' .coin:before{ content: \"\"; margin-left: -5px; width: 10px; height: 100%; {{#if coinColor}}background:{{coinColor}};{{else}}background:#f7941e;{{/if}} position: absolute; top: 0; left: 50%; z-index:1; -webkit-transform:rotateY(-90deg); -webkit-transform-origin:100% 50%; transform:  rotateY(-90deg); transform-origin: 100% 50%;}'+
 
-' .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; }'+ 
-
-
-' .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;}'+
+// ' .coin .front_b:before{ content: \"\"; width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 3; }'+ 
 
 
-
-' .print_txt{ display:block;padding: 10px ; font-weight: 500;font-size: 18px;width: 7%;} '+
-
-
-' @keyframes'+ 
-' coin{'+ 
-	'0%{}'+ 
-	'100%{-webkit-transform: rotateY(360deg);}}'+ 
+// ' .coin .back:before{content: \"\";width: 100%; height: 100%; border:10px solid #fbb041; border-radius: 50%; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: -3;}'+
 
 
-' </style>'+
+
+// ' .print_txt{ display:block;padding: 10px ; font-weight: 500;font-size: 18px;width: 7%;} '+
+
+
+// ' @keyframes'+ 
+// ' coin{'+ 
+// 	'0%{}'+ 
+// 	'100%{-webkit-transform: rotateY(360deg);}}'+ 
+
+
+// ' </style>'+
 
 
 '<div style=\"position: absolute; top: 0%; left: 90%; {{#if textColor}}color:{{textColor}};{{/if}}\"\">'+		
@@ -192,7 +192,7 @@ ubsApp.scoreTemplate= '<style>'+
 '</div>'
 
 
-ubsApp.popupTemplate = '<div id="{{id}}"  style="display:none; padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%;">'+
+ubsApp.popupTemplate = '<div id="{{id}}"  style=" padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%;">'+
 ' 	<div style="display: table-cell; vertical-align: middle;">'+
 ' 		'+
 ' 		<div style="{{msg_style}};background-color:#0099ff;">'+
@@ -441,8 +441,8 @@ ubsApp.leaderBoardTemplate=
 '       <span id = "seconds">'+
 '           '+
 '       </span>'+
-'       <img class="butt" id="help" src="C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/help.png" />'+
-'       <img class="butt" id="done" src="C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/done.png" {{#if onClickPage}} onclick="ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')" {{/if}} />    '+
+'       <img class="butt" id="help" src="images/help.png" />'+
+'       <img class="butt" id="done" src="images/done.png" {{#if onClickPage}} onclick="ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')" {{/if}} />    '+
 '   </div>'+
 '  </div>';
 
@@ -470,5 +470,106 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   <button id="quizCancel" class=\'quizButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
 '</div>';
 
+ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.js"></script>'+
+'<link rel="stylesheet" type="text/css" >'+ //href="css/calculator.css"
+'<div id="calculator" style="display:none">'+           //remove display None
+'   <div id="rateCard"> Rate Card</div>'+
+'   <input type="text" id="numberInput">'+
+'   <input id="calcButton" type="button" value="7" onclick="addToDisplay(7)">'+
+'   <input id="calcButton" type="button" value="8" onclick="addToDisplay(8)">'+
+'   <input id="calcButton" type="button" value="9" onclick="addToDisplay(9)">'+
+'   <input id="calcButton" type="button" value="/" onclick="addToDisplay(\'/\')">'+
+'   <input id="calcButton" type="button" value="4" onclick="addToDisplay(4)">'+
+'   <input id="calcButton" type="button" value="5" onclick="addToDisplay(5)">'+
+'   <input id="calcButton" type="button" value="6" onclick="addToDisplay(6)">'+
+'   <input id="calcButton" type="button" value="*" onclick="addToDisplay(\'*\')">'+
+'   <input id="calcButton" type="button" value="1" onclick="addToDisplay(1)">'+
+'   <input id="calcButton" type="button" value="2" onclick="addToDisplay(2)">'+
+'   <input id="calcButton" type="button" value="3" onclick="addToDisplay(3)">'+
+'   <input id="calcButton" type="button" value="+" onclick="addToDisplay(\'+\')">'+
+'   <input id="calcButton" type="button" value="C" onclick="addToDisplay(\'C\')">'+
+'   <input id="calcButton" type="button" value="0" onclick="addToDisplay(0)">'+
+'   <input id="calcButton" type="button" value="=" onclick="addToDisplay(\'=\')">'+
+'   <input id="calcButton" type="button" value="-" onclick="addToDisplay(\'-\')">'+
+'</div>';
     
 
+ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
+
+'       <div style="width:50%;height:100%;float:left; border-right:2px solid black; background-color:white;">'+
+'           <div  class="screenTitle" style=" background-color:#ff6600; ">'+
+'               {{purchase}}'+
+'           </div>'+
+'           <div  style="padding:10px;position: absolute;top: 48%;left:0%;">CURRENT <br>INVENTORY<br> LEVEL</div>'+
+'           <div id="percent" style="{{style}}">{{sliderValue}}%</div>'+
+'           <input type="range" value="{{sliderValue}}" id="mySlider"  oninput="ubsApp.updateInventoryLevel(this.value)">'+
+'           <div id="value" style="{{style}}">Rs. {{inventoryValue}}</div>'+
+'           <div style="position:absolute; bottom:3%;left:14.5%; font-weight:600;">'+
+'               INVENTORY'+
+'           </div>'+
+'       </div>'+
+'       <div id="result" ></div>'+
+'       <button class="purchaseScreenButton" style="position: absolute;top: 50%;left: 46%;" onclick="ubsApp.fillUp() ">CONFIRM>></button>'+
+'       <div style="width:50%;height:100%;float:right;background-color: #ffcc00;">'+
+'           <div style="position:absolute; top:0%;right:0%;padding:10px; background-color:orangered; font-weight:600;">'+
+'               BANK BALANCE: '+'<span id="bankBalanceValue">{{bankBalance}}</span><br>'+
+'               CASH:'+ '<span id="cashValue">{{cash}}</span><br>'+
+'               CREDIT: '+'<span id="creditValue">{{credit}}</span><br>'+
+'               CREDIT LIMIT:'+'<span id="creditLimitValue">{{creditLimit}}</span><br>'+
+'           </div>'+
+
+'       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:10%;" onclick="">HELP</button>'+
+'       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:5%;" onclick="ubsApp.pay()">DONE</button>'+
+'       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:15%;" onclick="ubsApp.nextMove()">NO, THANKS</button>'+
+'       </div>'+
+'       <div style="left:65%;top:45%;position: absolute;" >'+
+'           NEW INVENTORY LEVEL:  <input type="text" id="newInventoryLevelText" style="width: 40px; border: 1px solid black;" readonly="readonly"><br><br>'+
+'           COST: <input type="text" id="newCostText" style="width: 90px; border: 1px solid black;" readonly="readonly"><br><br>'+
+'           <div id="parent1" ">PAY BY: <select style="border:1px solid black" id="pay1" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select>&nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" id="amount1" min="0">&nbsp&nbsp<button class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()" style="">Add Mode</button></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+'           <div id="parent2" style="display:none;">PAY BY: <select style="border:1px solid black" id="pay2" style="display:none;" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select> &nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" min="0"   id="amount2"></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+'           <div id="parent3" style="display:none;">PAY BY: <select style="border:1px solid black" id="pay3" style="display:none;" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select>&nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" min="0" id="amount3"></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+'       </div>'+
+
+
+'</div>';
+
+ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-color:white;">'+
+'       <div class="screenTitle" style="background-color:{{background}}; color:{{color}}">'+
+'            {{title}}'+
+'       </div>'+
+'       <div id="scenario" style="border:1px solid black; background-color:{{background}};font-weight:600; color:{{color}}; position:absolute;left:25%;right:25%;top:30%; padding:1%;">'+
+'          {{scenario}}<br>'+
+'       {{#if helpRequired}}'+
+'       <button  style="padding:5px;float:right;border:0; border-radius:20px;">HELP</button>'+
+'       {{/if}}'+
+'       </div>'+
+'       <div id="result" style="position:absolute;left:40%;bottom:3%; color:red; font-weight:600;"></div>'+
+'       <div style="font-weight:600;width:15%; position:absolute;left:24%;top:45%; padding:1%;">'+
+'          {{payMessage}}'+
+'       <button  style="padding:7px;border:0; width:55%;background-color:red; border-radius:20px; color:white;" onclick="ubsApp.payFromBank({{amount}})">PAY</button>'+
+'       </div>'+
+'       <div style="font-weight:600;width:45%; position:absolute;left:24%;top:55%; padding:1%;">'+
+'          {{alternalteMessage}}'+
+'       <button  onclick="ubsApp.runQuizTemplate()" style="padding:7px;border:0; width:25%;background-color:orangered; border-radius:20px; color:white;">TAKE A QUIZ</button>'+
+'       {{#if wildCard}}'+
+'       OR   <button style="padding:7px;border:0; width:25%;background-color:green; border-radius:20px; color:white;">CHECK WILD CARD</button>    '+
+'       {{/if}}'+
+'       </div>'+
+'</div>';
+
+ubsApp.payOffTemplate='<div style="width:100%; height:100%; ">'+
+'                <div style="background-color:#ffe62d;border:1px solid black;position:absolute;left:30%;top:25%;widht:40%; height:35%;right:30%;">'+
+'                      <div style="widht:100%;font-weight:600; padding:1%;" align="center">{{title}}</div><br>'+
+'                      <div><span style="position:absolute; left:10%;"> CASH: Rs. {{cash}}</span>'+
+'                      <span style="position:absolute; left:45%;"> BANK BALANCE: Rs. {{bankBalance}}</span><br></div>'+
+'                      <div><span style="position:absolute;left:10%;">Debt Amount:</span>'+
+'                      <span style="position:absolute; left:45%;">Rs. {{debt}}</span><br></div>'+
+'                      <span style="position:absolute; left:10%;">Amount to {{#if payOff}}pay:{{else}}transfer:{{/if}} </span>'+
+'                      <span style="position:absolute;left:45%;"><input type="number" id="debtPaymentText" style="border:1px solid black;"></span><br><br>'+
+'                      {{#if payOff}}<span style="position:absolute;left:10%;">Mode of Payment</span>{{/if}}'+
+'                      {{#if payOff}}<span style="position:absolute;left:45%;"><select style="border:1px solid black" id="payOffDropDown"><option value="cash">CASH</option><option value="cheque">CHEQUE</option></select> </span><br><br>{{/if}}'+
+'                      <div style="width:15%;position:absolute;left:30%;"><button style="width:100%;background-color:black;border:0;color:#ffe62d;  border-radius:10px;padding:0.5%;" {{#if payOff}}onclick="ubsApp.payDebt()" {{else}}onclick="ubsApp.transferToBank()"{{/if}}>{{#if payOff}}PAY{{else}}TRANSFER{{/if}}</button></div>'+
+'                      <div style="width:15%;position:absolute;left:40%;"><button style="width:100%;background-color:black;color:#ffe62d;border:0;position:absolute;left:50%; border-radius:10px;padding:0.5%;" onclick="ubsApp.nextMove()" >CANCEL</button></div>'+
+'                </div>'+
+'       <div id="result" style="position:absolute;left:40%;bottom:3%; color:red; font-weight:600;"></div>'+
+'</div>';

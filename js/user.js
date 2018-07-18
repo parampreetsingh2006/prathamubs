@@ -8,7 +8,7 @@ class User{
     setplayerName(name){
         this.name=name;
     }
-    setplayerScore(score){
+    setplayerScore(score){ ///this is the cash 
         this.score=score;
     }
     setplayerColor(color){
@@ -39,6 +39,9 @@ class User{
     {
         this.difficultyLevel=difficultyLevel;
     }
+    setBankBalance(bankBalance){
+        this.bankBalance=bankBalance;
+    }
     getDifficultyLevel()
     {
         return this.difficultyLevel;
@@ -48,6 +51,24 @@ class User{
         return this.isComputer;
     }
 
+    getBankBalance(){
+        return this.bankBalance;
+    }
+
+    setCredit(credit){
+        this.credit=credit;
+    }
+    
+    setCreditLimit(creditLimit){
+        this.creditLimit=creditLimit;
+    }
+
+    getCredit(){
+        return this.credit; 
+    }
+    getCreditLimit(){
+        return this.creditLimit;
+    }
     setInventoryScore(inventoryScore)
     {
         this.inventoryScore=inventoryScore;
@@ -78,26 +99,36 @@ class User{
         }
     }
 
+    setReputationPts(reputationPts){
+        this.reputationPts=reputationPts;
+    }
+    getReputationPts(){
+        return this.reputationPts;
+    }
     setWeeks(weeks){
     	this.noOfWeeks = weeks;
     }
     setCorrectProbability(level){
         if(level.toLowerCase()=="easy"){
-            this.correctProbability = (Math.random()*2)*0.1+0.2;
+            this.correctProbability = (Math.random()*2)*0.1+0.15;
+            console.log(this.correctProbability);
         }else if(level.toLowerCase() == "medium"){
             this.correctProbability = (Math.random()*2)*0.1+0.5;
-        }else if(level.toLowerCase() == "difficult"){
+            console.log(this.correctProbability);
+        }else if(level.toLowerCase() == "hard"){
             this.correctProbability = (Math.random()*2)*0.1+0.8;
+            console.log(this.correctProbability);
         }
     }
     getCorrectProbability(){
+        console.log(this.correctProbability);
         return this.correctProbability;
     }
     getplayerName(){
         return this.name;
     }
 
-    getplayerScore(){
+    getplayerScore(){   ///this is the cash 
         return this.score;
     }
     getplayerColor(){
@@ -116,10 +147,26 @@ class User{
         return this.correctAnswered;
     }
 
+    setPayOffDeadline(deadline){
+        if(this.deadline==0||!this.deadline)
+            this.deadline=deadline;
+    }
+    getPayOffDeadline(){
+        return this.deadline;
+    }
+
     getWeeks(){
     	return this.noOfWeeks;
     }
-    getScenario(category,playerChance)
+
+    setWildCard(numberOfWildCard){
+        this.numberOfWildCard=numberOfWildCard;
+    }
+    
+    getWildCard(){
+        return this.numberOfWildCard;
+    }
+getScenario(category,playerChance)
     {
         
         var number;

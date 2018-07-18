@@ -129,7 +129,7 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      scenario = userArray[playerChance].getScenario("Sales",playerChance);   //blockCategory[blockNo]   
+      scenario = userArray[playerChance].getScenario(blockCategory[blockNo],playerChance);   //   blockCategory[blockNo]
         let currentTemplateName=scenario.getName();
         let currentTemplate=ubsApp.pages[currentTemplateName].templates;
         let key=ubsApp.pages[currentTemplateName].templates[0].question;
@@ -141,8 +141,8 @@ monopoly.startScenarios = function(blockNo){
         
         document.getElementById("templateContent").style.opacity="0.95";
         
-        $('#templateContent').css("height",(screenHeight)+'px');
-        $('#templateContent').css("width",(screenWidth)+'px');
+        $('#templateContent').css("height",(screenHeight)+'px')
+        $('#templateContent').css("width",(screenWidth)+'px')
 
         ubsApp.renderPageByName(scenario.getName());
         currentTemplate[0].question=key;
@@ -214,12 +214,17 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
-        user.setInventoryScore(100);
+        user.setInventoryScore(60);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
         user.setInventoryScore(60);
         user.setplayerCurrentPos(0);
+        user.setBankBalance(250000);
+        user.setReputationPts(10);
+        user.setCredit(0);
+        user.setWildCard(0);
+        user.setCreditLimit(15000);
         user.setScenarioArray(scenariosArray);
         user.setWeeks(0);
         userArray[i]=user;
@@ -311,6 +316,7 @@ monopoly.initializeScenarios=function()
             scenario.setRepeatForAllUsers(value.repeatforall);
             scenario.setRepeatforUser(value.repeatforuser);
             scenario.setName(key);
+            
             //scenario.setTemplate(value.templates);
             scenario.setIfCalculatorRequired(true);
             if(scenariosArray[value.category]==null)
