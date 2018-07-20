@@ -88,6 +88,7 @@ nav li:hover {
 .roll-button:active {
   background-color: #AA4F39;
   box-shadow: 0 1px #d36a52;
+  
   transform: translateY(4px);
 }
 /*button {

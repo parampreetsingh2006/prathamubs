@@ -72,95 +72,91 @@ monopoly.pages = {
 
 	"monopoly": [
         {
+            "weekDeadLine":4,
+        },
+        
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "id":"weekTitle",
+        //     "style":"",
+        //     "src":"WEEK: <span id=\"weekContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+        // },
+        {
             "templateId":1,
             "templateType":"static",
             "id":"weekTitle",
             "style":"",
-            "src":"WEEK:"
+            "src":"weekTitle: <span id=\"weekContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "id":"weekContent",
-            "style":"background-color:yellow;border:1px solid black; padding:1px; ",
-            "src":"1"
-        },
-
-        {
-            "templateId":1,
-            "templateType":"static",
-            "id":"lastBalanceTitle",
-            "style":"",
-            "src":"LAST BALANCE:"
-        },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "id":"lastBalanceContent",
-            "style":"background-color:yellow;border:1px solid black; padding:1px;",
-            "src":"Rs. 250,000"
-        },
-
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "id":"weekContent",
+        //     "style":"background-color:yellow;border:1px solid black; padding-left:1px;padding-right:1px; ",
+        //     "src":"1"
+        // },
         {
             "templateId":1,
             "templateType":"static",
             "id":"inventoryTitle",
             "style":"",
-            "src":"INVENTORY:"
+            "src":"inventoryTitle: <span id=\"inventoryContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "id":"inventoryContent",
-            "style":"background-color:yellow;border:1px solid black; padding:1px;",
-            "src":"50%"
-        },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "id":"insuranceTitle",
-            "style":"",
-            "src":"INSURANCE:"
-        },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "id":"insuranceContent",
-            "style":"background-color:yellow;border:1px solid black; padding:1px;",
-            "src":"YES"
-        },
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "id":"inventoryContent",
+        //     "style":"background-color:yellow;border:1px solid black; padding:1px;",
+        //     "src":"50%"
+        // },
+       
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "id":"inventoryValueContent",
+        //     "style":"background-color:yellow;border:1px solid black; padding:1px;",
+        //     "src":"Rs. 250,000"
+        // },
         {
             "templateId":1,
             "templateType":"static",
             "id":"reputationTitle",
             "style":"",
-            "src":"REPUTATION PTS:"
+            "src":"reputationTitle: <span id=\"reputationContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
         {
             "templateId":1,
             "templateType":"static",
-            "id":"reputationContent",
-            "style":"background-color:yellow;border:1px solid black; padding:1px;",
-            "src":"10"
+            "id":"inventoryValueTitle",
+            "style":"",
+            "src":"inventoryValueTitle: <span id=\"inventoryValueContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "id":"reputationContent",
+        //     "style":"background-color:yellow;border:1px solid black; padding:1px;",
+        //     "src":"10"
+        // },
         {
             "templateId":1,
             "templateType":"static",
             "id":"cardWallet",
             "style":"position:absolute;top:47.5%;left:82%;background-repeat: no-repeat;",
-            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:15px; color:red; font-weight:650; border:0; background:orange;border-radius:5px; background-size: 60%; background-repeat:no-repeat; background-position: center;background-image: url(images/wallet3.png);\">Card Wallet</button>"
+            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:15px; color:red;font-size:1.1vw; font-weight:650; border:0; background:orange;border-radius:5px; background-size: 60%; background-repeat:no-repeat; background-position: center;background-image: url(images/wallet3.png);\">Card Wallet</button>"
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
-            "src":"<button onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
+            "src":"<button onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; font-size:1.1vw; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:90%;width:7%;",
-            "src":"<button onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+            "src":"<button onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0;font-size:1.1vw; background:red; border-radius:5px; \">End Game</button>"
         },
         
 
@@ -389,16 +385,20 @@ monopoly.pages = {
                     ],
                     
         },
-        {
-            "templateId":1,
-            "templateType":"static",
-            "style":"position:absolute;top:65%;left:33%;",
-            "id":"currentChanceDetails",
-            "src":"<span id\"playerNameTitle\"> Player Name: <span id='player' style='padding: 1vw'></span></span>&nbsp;<span id=\"diceValueTitle\">Dice Value: <span id='diceval' style='padding: 1vw'></span></span>"
-        },
+        // {
+        //     "templateId":1,
+        //     "templateType":"static",
+        //     "style":"position:absolute;top:65%;left:33%;",
+        //     "id":"currentChanceDetails",
+        //     "src":"<span id\"playerNameTitle\"> Player Name: <span id='player' style='padding: 1vw'></span></span>&nbsp;<span id=\"diceValueTitle\">Dice Value: <span id='diceval' style='padding: 1vw'></span></span>"
+        // },
         {
             "templateId":4,
             "templateType":"rollingDice",
+        },
+        {
+            "templateId":12,
+            "templateType":"centerScoreBoard",
         },
         
             

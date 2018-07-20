@@ -1186,82 +1186,6 @@
 			}
 		],	
 	},
-	"purchaseScenario":{
-		"category":"Purchase",
-		"templates":[
-			{
-				"templateId":8,
-				"templateType":"purchase",
-			}
-		]
-
-	},
-	"luckyUnluckyScenario1":{
-		"category":"Luck",
-		"templates":[
-		{
-			"templateId":9,
-			"templateType":"luck",
-			"question":"luckQuestion1",//question Key
-			"amount":1000,
-		}
-	]
-	},
-
-	"luckyUnluckyScenario2":{
-		"category":"Luck",
-		"templates":[
-		{
-			"templateId":9,
-			"templateType":"luck",
-			"question":"luckQuestion2",//question Key
-			"amount":-1000,
-		}
-	]
-	},
-	
-	"paymentScenario1":{
-		"category":"Payment",
-		
-		"templates":[
-		{
-			"templateId":10,
-			"templateType":"pay",
-			"question":"paymentQuestion1",//question Key
-			"amount":-1000,
-		}
-	]
-
-	},
-
-	
-	"paymentScenario2":{
-		"category":"Payment",
-		
-		"templates":[
-		{
-			"templateId":10,
-			"templateType":"pay",
-			"question":"paymentQuestion2",//question Key
-			"amount":-1000,
-		}
-	]
-
-	},
-	
-	"PayOffScenario":{
-		"category":"PayOff",
-		
-		"templates":[
-		{
-			"templateId":11,
-			"templateType":"payOff",
-		}
-	]
-
-	},
-	
-
 	"customerCheatingResult":{
     	"templates":[
 		{
@@ -1484,3 +1408,9 @@
 	}]
 }
 }
+
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.transferToBankConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.payOffConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.purchaseConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.paymentConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.luckConfig);

@@ -1,0 +1,11 @@
+ubsApp.transferToBankConfig={
+    "transferToBank":{
+		"category":"TransferToBank",
+		"templates":[
+		{
+			"templateId":11,
+			"templateType":"transfer",
+		}
+	]
+	},
+}

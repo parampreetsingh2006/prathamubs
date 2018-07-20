@@ -18,6 +18,8 @@ let ubsPayOffTemplate;
 let ubsOrdertemplate;
 let choiceSelected={};
 let timeVar;
+let numberOfPaymentModes=3;
+var numberOfWeeksDeadline=0;
 var answerselected=0;         //whyGlobal
 var inventoryToBeUpdated=0;
 var minimumInventoryScoreRequired=0;
@@ -27,11 +29,12 @@ var interval;				//whyGlobal
 var interval;				
 let audioConfig = {};
 var count=0;
+var languageSelected="hindi";
 var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision","purchase","luck","pay","payOff", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales"];
+let templateName = ["static", "decision","purchase","luck","pay","payOff","transfer", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
 monopoly.numplayers=0;
@@ -81,55 +84,7 @@ ubsApp.getDecisionTemplate = function(templateConfig, tempVar){
 	}
 	ubsDecisionOptionMap = templateConfig.optionPageMap;
 }
-ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
-	var object={};
-	object.purchase="PURCHASE";
-	object.bankBalance="Rs. "+userArray[playerChance].getBankBalance();
-	object.cash="Rs. "+userArray[playerChance].getplayerScore();
-	object.credit="Rs. "+userArray[playerChance].getCredit();
-	object.sliderValue=userArray[playerChance].getInventoryScore();
-	
-	object.inventoryValue=userArray[playerChance].getInventoryScore()*1000;
-	object.creditLimit="Rs. "+userArray[playerChance].getCreditLimit();
-	tempVar.html+=ubsPurchaseTemplate(object);
-}
 
-ubsApp.getLuckTemplate=function(templateConfig,tempVar){
-	var object={};
-	object.title="LUCK";
-	object.color="black";
-	object.background="#4DAF7C";
-	object.wildCard="true";
-	object.helpRequired="true";
-	object.scenario=templateConfig.question;
-	object.payMessage="YOU CAN";
-	object.amount=templateConfig.amount;
-	object.alternalteMessage="OR TO WAIVE FINE YOU CAN ";
-	tempVar.html+=ubsLuckTemplate(object);
-}
-ubsApp.getPayTemplate=function(templateConfig,tempVar){
-	var object={};
-	object.title="PAYMENT";
-	object.color="white";
-	object.background="#000";
-	object.scenario=templateConfig.question;
-	object.amount=templateConfig.amount;
-	object.payMessage="YOU CAN";
-	object.alternalteMessage="OR TO WAIVE FINE YOU CAN ";
-	tempVar.html+=ubsLuckTemplate(object);
-}
-
-
-ubsApp.getPayOffTemplate=function(templateConfig,tempVar){
-	var object={};
-	object.title="PAY DEBT";
-	
-	object.cash=userArray[playerChance].getplayerScore();
-	object.bankBalance=userArray[playerChance].getBankBalance();
-	object.debt=userArray[playerChance].getCredit();
-	object.payOff="true";
-	tempVar.html+=ubsPayOffTemplate(object);
-}
 
 ubsApp.getWheelOfFortuneTemplate = function(templateConfig, tempVar){
 	ubsApp.updateTemplateForFortuneWheel(templateConfig, tempVar.wheelConfig);
@@ -564,14 +519,15 @@ ubsApp.startTimer=function(temp){
 ubsApp.nextMove = function(){
 			playerChance+=1;
 	        playerChance%=numplayers;
-			$('#monopolyBase').css("z-index",0)
-			$('#templateContent').css("z-index",0)
-			$('#templateContent').css("height",0+'px')
-			document.getElementById("templateContent").innerHTML="";
-			$('#rollIt').attr('disabled',false);
 			
+			ubsApp.closeCurrentScenario();
 			this.currentPlayerContents();
+			
 			$("#diceval").html(" ");
+			if(userArray[playerChance].getPayOffDeadline()==0){
+				ubsApp.startCurrentScenario();
+				ubsApp.renderPageByName("PayOffScenario");
+			}
 			//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
 			if(userArray[playerChance].getIsComputer()){
 				decisionConfig={};
@@ -721,9 +677,11 @@ ubsApp.playDecisionTemplate =function(decisionConfig){
 
 ubsApp.currentPlayerContents=function(){
 	$("#player").html(userArray[playerChance].getplayerName());
-	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();	
-	document.getElementById("lastBalanceContent").innerHTML="₹"+userArray[playerChance].getplayerScore();
-	document.getElementById("insuranceContent").innerHTML="No";
+	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
+	document.getElementById("bankBalance").innerHTML="Rs. "+userArray[playerChance].getBankBalance();
+	document.getElementById("cash").innerHTML="Rs. "+userArray[playerChance].getplayerScore();
+	document.getElementById("debt").innerHTML="Rs. "+userArray[playerChance].getCredit();
+	document.getElementById("inventoryValueContent").innerHTML="Rs. "+(userArray[playerChance].getInventoryScore()*1000);
 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
 	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
 }
@@ -739,343 +697,15 @@ ubsApp.generateVideo=function(){
 	$('#helpButton').attr('disabled',false);
 }
 
-
-ubsApp.updateInventoryLevel=function(value){
-		if(value<userArray[playerChance].getInventoryScore()){	//instead of 20 write userArray[playerChance].getInventoryScore()
-			document.getElementById("mySlider").value=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
-			document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore()+"%";	//userArray[playerChance].getInventoryScore()
-        	document.getElementById("value").innerHTML="Rs. "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
-		}
-		else{
-			document.getElementById("percent").innerHTML=value+"%";
-        	document.getElementById("value").innerHTML="Rs. "+parseInt(value*1000); 
-		}
-		
-}
-ubsApp.fillUp=function(){
-	var temp=document.getElementById("value").innerHTML;
-	document.getElementById("newInventoryLevelText").value=document.getElementById("percent").innerHTML;
-	document.getElementById("newCostText").value="Rs. "+(parseInt(temp.substring(4))-userArray[playerChance].getInventoryScore()*1000);//-userArray[playerChance].getInventoryScore()*1000;
+ubsApp.closeCurrentScenario=function(){
+	$('#monopolyBase').css("z-index",0)
+	$('#templateContent').css("z-index",0)
+	$('#templateContent').css("height",0+'px')
+	document.getElementById("templateContent").innerHTML="";
+	$('#rollIt').attr('disabled',false);
 }
 
-
-
-ubsApp.pay=function(){
-	var paymentDone=false;
-	var cost=document.getElementById("newCostText").value;
-	cost=parseInt(cost.substring(4));
-	if(cost){
-	var creditChanged=userArray[playerChance].getCredit();
-	var bankBalanceChanged=userArray[playerChance].getBankBalance();
-	var cashChanged=userArray[playerChance].getplayerScore();
-	var newLevel=document.getElementById("newInventoryLevelText").value;
-	newLevel=parseInt(newLevel.substring(0,newLevel.length));
-	var totalAmountEntered=0;
-	for(var i=1;i<4;i++){
-		if(document.getElementById("parent"+i).style.display!="none"){
-			if(document.getElementById("amount"+i).value)
-			totalAmountEntered+=parseInt(document.getElementById("amount"+i).value);
-			else{
-				document.getElementById("result").innerHTML=ubsApp.translation["validAmount"];
-				break;		
-			}
-		}
-	}
-	if(totalAmountEntered<cost){
-		document.getElementById("result").innerHTML=ubsApp.translation["lessMoney"];
-	}
-	
-	else if(totalAmountEntered>cost){
-		document.getElementById("result").innerHTML=ubsApp.translation["moreMoney"];
-	}
-	else{
-		document.getElementById("result").innerHTML="";
-		for(var i=1;i<4;i++){
-			if(document.getElementById("parent"+i).style.display!="none"){
-			var dropDown=document.getElementById("pay"+i);
-			var paymentMode=dropDown.options[dropDown.selectedIndex].value;
-			var amount=parseInt(document.getElementById("amount"+i).value);
-			if(paymentMode=="cash"){
-				if(amount<=userArray[playerChance].getplayerScore()){
-					
-					cashChanged=userArray[playerChance].getplayerScore()-amount;
-					totalAmountEntered-=amount;
-					//userArray[playerChance].setplayerScore();
-				}
-				else{
-					document.getElementById("result").innerHTML=ubsApp.translation["moreCash"];
-					break;
-				}
-			}
-			else if(paymentMode=="cheque"){
-				if(amount<=userArray[playerChance].getBankBalance()){
-					//userArray[playerChance].setInventoryScore(newLevel);
-					bankBalanceChanged=userArray[playerChance].getBankBalance()-amount;
-					totalAmountEntered-=amount;
-					//userArray[playerChance].setBankBalance();
-				}
-				else{
-					document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];
-					break;
-				}
-			}
-			else if(paymentMode=="credit"){
-				if(amount<=userArray[playerChance].getCreditLimit()-userArray[playerChance].getCredit()){
-					//userArray[playerChance].setInventoryScore(newLevel);
-					creditChanged=userArray[playerChance].getCredit()+amount;
-					totalAmountEntered-=amount;
-					//userArray[playerChance].setCredit();
-				}
-				else{
-					document.getElementById("result").innerHTML=ubsApp.translation["lotDebt"];
-					break;
-				}
-			}
-		}
-		}
-		if(totalAmountEntered==0)
-		{
-			paymentDone=true;
-		}
-		if(paymentDone){
-			userArray[playerChance].setInventoryScore(newLevel);
-			userArray[playerChance].setplayerScore(cashChanged);
-			userArray[playerChance].setBankBalance(bankBalanceChanged);
-			userArray[playerChance].setCredit(creditChanged);
-			var temptimer;
-			var temptime=20;	
-			temptimer = setInterval(function(){
-				temptime--;
-				
-			document.getElementById("bankBalanceValue").innerHTML="Rs. "+userArray[playerChance].getBankBalance();
-			document.getElementById("cashValue").innerHTML="Rs. "+userArray[playerChance].getplayerScore();
-			document.getElementById("creditValue").innerHTML="Rs. "+userArray[playerChance].getCredit();
-			document.getElementById("creditLimitValue").innerHTML="Rs. "+userArray[playerChance].getCreditLimit();
-				if(temptime === 0 ){
-					clearInterval(temptimer);
-					if(!offlinePurchaseClicked)
-						ubsApp.nextMove();
-					else{
-						$('#monopolyBase').css("z-index",0)
-						$('#templateContent').css("z-index",0)
-						$('#templateContent').css("height",0+'px')
-						document.getElementById("templateContent").innerHTML="";
-						$('#rollIt').attr('disabled',false);
-						ubsApp.currentPlayerContents();
-						offlinePurchaseClicked=false;
-					}		
-				}
-			},50);
-			// document.getElementById("bankBalanceValue").innerHTML=userArray[playerChance].getBankBalance();
-			// document.getElementById("cashValue").innerHTML=userArray[playerChance].getplayerScore();
-			// document.getElementById("creditValue").innerHTML=userArray[playerChance].getCredit();
-			// document.getElementById("creditLimitValue").innerHTML=userArray[playerChance].getCreditLimit();
-			// ubsApp.wait(3000);
-			
-			//setTimeout(ubsApp.nextMove(), 3000);
-			
-		}
-			
-	}
-}
-else{
-	document.getElementById("result").innerHTML=ubsApp.translation["pleaseConfirm"];
-}
-/*	var cost=document.getElementById("newCostText").value;
-	cost=parseInt(cost.substring(4));
-	var newLevel=document.getElementById("newInventoryLevelText").value;
-	newLevel=parseInt(newLevel.substring(0,newLevel.length));
-	var cash,balance,credit,creditLimit;
-	var i=0;
-	for(i=1;i<4;i++){
-
-		if(document.getElementById("parent"+i).style.display!="none"){
-			var dropDown=document.getElementById("pay"+i);
-			var paymentMode=dropDown.options[dropDown.selectedIndex].value;
-			if(paymentMode=="cash"){
-					cash=userArray[playerChance].getplayerScore()-cost;
-					if(cash<0){
-						if(i<3){
-							if(document.getElementById("parent"+(i+1)).style.display=="none")
-							{
-								document.getElementById("parent"+(i+1)).style.display="";
-								break;
-							}
-							else{
-								cost=cost-userArray[playerChance].getplayerScore();
-								cash=0;
-							}
-						}
-						
-					}
-					else{
-						cost=0;
-						userArray[playerChance].setInventoryScore(newLevel);
-						break;
-					}
-					
-			}
-			else if(paymentMode=="cheque"){
-				balance=250000;
-				balance=balance-cost;
-				if(balance<0){
-					if(i<3){
-						if(document.getElementById("parent"+(i+1)).style.display=="none"){
-							document.getElementById("parent"+(i+1)).style.display="";
-							break;
-						}
-						else{
-								cost=cost-balance;
-								balance=0;
-							}
-					}
-				
-				}
-				else{
-					cost=0;
-					userArray[playerChance].setInventoryScore(newLevel);
-					break;
-				}
-
-			}
-			else if(paymentMode=="credit"){
-				creditLimit=userArray[playerChance].getCreditLimit();
-				credit=userArray[playerChance].getCredit();
-				credit=credit+cost;
-				if(creditLimit<credit){
-					if(i<3){
-						if(document.getElementById("parent"+(i+1)).style.display=="none")
-						{
-							document.getElementById("parent"+(i+1)).style.display="";
-							break;
-						}
-												
-					}
-					else{
-						cost=0;
-					}
-				}
-				else{
-					cost=0;
-					userArray[playerChance].setInventoryScore(newLevel);
-					break;
-				}
-
-			}
-		}
-	}
-	if(cost!=0){
-		if(i>3){
-			console.log("Please Select Sensible Amount");
-		}
-		console.log("Insufficient Amount");
-	}
-	else if(cost==0){
-		if(cash)
-		{
-			console.log("Cash");
-			
-		userArray[playerChance].setplayerScore(cash);
-		}
-		if(balance)
-		userArray[playerChance].setBankBalance(balance);
-		if(credit)
-		userArray[playerChance].setCredit(credit);
-		if(creditLimit)	
-		userArray[playerChance].setCreditLimit(creditLimit);
-		this.nextMove();
-	}*/
-}
-
-// ubsApp.showScore=function(){
-// 	var element=document.getElementById("purchaseLeaderBoard");
-// 	elem
-// }
-		
-ubsApp.addPaymentMode=function(){
-	for(var i=1;i<4;i++){
-		if(document.getElementById("parent"+i).style.display=="none"){
-			document.getElementById("parent"+i).style.display="";
-			break;
-		}
-	}
-}
-
-ubsApp.wait=function(ms){
-	var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-  }
-}
-
-ubsApp.payFromBank=function(amount){
-
-		if(userArray[playerChance].getBankBalance()<amount){
-			document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];
-		}
-		else{
-			userArray[playerChance].setBankBalance(userArray[playerChance].getBankBalance()+amount);
-			ubsApp.nextMove();
-		}
-	
-}
-
-// ubsApp.setAmountTextLimit=function(number){
-// 	var element=document.getElementById("amount"+number);
-// 	var x = document.getElementById("pay"+number).value;
-//     if(x=="cash"||x=="Cash"){
-// 		element.max=""+userArray[playerChance].getplayerScore();
-// 	}
-// 	else if(x=="cheque"||x=="Cheque"){
-// 		element.max=""+userArray[playerChance].getBankBalance();
-// 	}
-// 	else if(x=="credit"||x=="Credit"){
-// 		element.max=""+userArray[playerChance].creditLimit()-userArray[playerChance].getCredit();
-// 	}
-// }
-
-
-ubsApp.payDebt=function(){
-	var amountEntered=document.getElementById("debtPaymentText").value;
-	if(userArray[playerChance].getCredit>0){
-		if(amountEntered){
-			if(amountEntered<userArray[playerChance].getCredit()){
-				var dropDown=document.getElementById("pay"+i);
-				var paymentMode=dropDown.options[dropDown.selectedIndex].value;
-				if(paymentMode=="cash"){
-					if(amountEntered<=userArray[playerChance].getplayerScore()){
-						userArray[playerChance].setplayerScore(userArray[playerChance].getplayerScore()-amountEntered);
-						userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+3);
-					}
-					else{
-						document.getElementById("result").innerHTML=ubsApp.translation["moreCash"];		
-					}
-				}
-				else if(paymentMode=="cheque"){
-					if(amountEntered<=userArray[playerChance].getBankBalance()){
-						userArray[playerChance].setBankBalance(userArray[playerChance].getBankBalance()-amountEntered);
-						userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+3);
-					}
-					else{
-						document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];		
-					}
-				}
-				
-			}
-			else{
-				document.getElementById("result").innerHTML=ubsApp.translation["moreMoney"];
-			}
-		}
-		
-	}
-	else{
-			document.getElementById("result").innerHTML=ubsApp.translation["noDebt"]; //break;
-	}
-}
-
-ubsApp.openPurchaseScenario=function(){
-	offlinePurchaseClicked=true;
+ubsApp.startCurrentScenario=function(){
 	$('#monopolyBase').css("z-index",-10)
 	$('#templateBase').css("z-index",10)
 	
@@ -1083,5 +713,4 @@ ubsApp.openPurchaseScenario=function(){
 	
 	$('#templateContent').css("height",(screenHeight)+'px')
 	$('#templateContent').css("width",(screenWidth)+'px')
-	ubsApp.renderPageByName("purchaseScenario");
 }

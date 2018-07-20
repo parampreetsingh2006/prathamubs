@@ -106,6 +106,9 @@ class User{
         return this.reputationPts;
     }
     setWeeks(weeks){
+        if(this.deadline>0){
+            this.deadline--;
+        }
     	this.noOfWeeks = weeks;
     }
     setCorrectProbability(level){
@@ -148,7 +151,7 @@ class User{
     }
 
     setPayOffDeadline(deadline){
-        if(this.deadline==0||!this.deadline)
+        if(this.deadline==-1||!this.deadline)
             this.deadline=deadline;
     }
     getPayOffDeadline(){

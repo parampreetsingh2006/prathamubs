@@ -1,6 +1,7 @@
 monopoly.ubsBoardTemplate = undefined;
 monopoly.ubsMonopolyStaticTemplate =undefined;
 monopoly.ubsformTemplate = undefined;
+monopoly.centerScoreBoardTemplate=undefined;
 monopoly.boardConfig={};
 monopoly.salesScenarioArray=[];
 monopoly.luckScenarioArray=[];
@@ -18,6 +19,7 @@ monopoly.scenario ={};
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
 var ubsformTemplate= monopoly.ubsformTemplate;
+var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
 var boardConfig = monopoly.boardConfig;
 var salesScenarioArray=monopoly.salesScenarioArray;
 var luckScenarioArray=monopoly.luckScenarioArray;
@@ -41,12 +43,13 @@ $(document).ready(function(){
 	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
-monopoly.intitializeTemplates = function() {
+monopoly.intitializeTemplates = function(){
 
 	ubsBoardTemplate = Template7.compile(monopoly.boardTemplate);
 	rollingDiceTemplate = Template7.compile(monopoly.rollingDiceTemplate);
   ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
   ubsformTemplate = Template7.compile(monopoly.formTemplate);
+  ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
 }
 monopoly.initialiseCategory = function(){
       for(let block = 0; block<boardConfig.top_row.length; block++){
@@ -66,7 +69,10 @@ monopoly.initialiseCategory = function(){
 monopoly.renderPageforBoard = function(page) {
 	let html = "";
 	for(let i=0; i< page.length; i++) {
-		let templateConfig = page[i];
+    let templateConfig = page[i];
+    if(templateConfig.weekDeadLine){
+      numberOfWeeksDeadline=templateConfig.weekDeadLine;
+    }
 		let templateType = templateConfig.templateType;
 		if(templateType == "board"){
       flag2=true;
@@ -105,7 +111,21 @@ monopoly.renderPageforBoard = function(page) {
 			html += rollingDiceTemplate(templateConfig);
 		}else if(templateType == "static") {
 			html += ubsStaticTemplate(templateConfig);
-		}
+    }
+    else if(templateType=="centerScoreBoard"){
+      var object={};
+      object.bankBalanceTitle=ubsApp.translation["bankBalanceTitle"]+":  ";
+      object.bankBalanceAmount="Rs. "+userArray[playerChance].getBankBalance();
+      object.cashAmount="Rs. "+userArray[playerChance].getplayerScore();
+      object.cashTitle=ubsApp.translation["cashTitle"]+": ";
+      object.debtTitle=ubsApp.translation["debtTitle"]+": ";
+      object.transferTitle=ubsApp.translation["transferTitle"];
+      object.payOffTitle=ubsApp.translation["payOffTitle"];
+      object.debtAmount="Rs. "+userArray[playerChance].getCredit();
+      object.playerNameLabel=ubsApp.translation["playerNameTitle"];
+      object.diceValueLabel=ubsApp.translation["diceValueTitle"];
+      html+=ubsCenterScoreBoardTemplate(object);
+    }
   }
 
 	$("#monopolyBase").empty();
@@ -129,7 +149,7 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      scenario = userArray[playerChance].getScenario("Sales",playerChance);   //   blockCategory[blockNo]
+      scenario = userArray[playerChance].getScenario("Payment",playerChance);   //   blockCategory[blockNo]
         let currentTemplateName=scenario.getName();
         let currentTemplate=ubsApp.pages[currentTemplateName].templates;
         let key=ubsApp.pages[currentTemplateName].templates[0].question;
@@ -345,7 +365,7 @@ monopoly.chooseLanguage=function(){
   jsElm.src = "js/"+language+".js";
   document.head.appendChild(jsElm);
   var link  = document.createElement('link');
-  
+  languageSelected=language;
   link.rel  = 'stylesheet';
   link.type = 'text/css';
   link.href = 'css/'+language+'.css';
@@ -362,11 +382,15 @@ monopoly.chooseLanguage=function(){
 monopoly.translate=function(){
   
   if(document.getElementById("weekTitle")){
-    document.getElementById("weekTitle").innerHTML=ubsApp.translation["weekTitle"]+":";
-    document.getElementById("insuranceTitle").innerHTML=ubsApp.translation["insuranceTitle"]+":";
-    document.getElementById("inventoryTitle").innerHTML=ubsApp.translation["inventoryTitle"]+":";
-    document.getElementById("reputationTitle").innerHTML=ubsApp.translation["reputationTitle"]+":";
-    document.getElementById("lastBalanceTitle").innerHTML=ubsApp.translation["lastBalanceTitle"]+":";
+    document.getElementById("weekTitle").innerHTML=document.getElementById("weekTitle").innerHTML.replace("weekTitle",ubsApp.translation["weekTitle"]);
+    document.getElementById("inventoryTitle").innerHTML=document.getElementById("inventoryTitle").innerHTML.replace("inventoryTitle",ubsApp.translation["inventoryTitle"]);
+    document.getElementById("reputationTitle").innerHTML=document.getElementById("reputationTitle").innerHTML.replace("reputationTitle",ubsApp.translation["reputationTitle"]);
+    document.getElementById("inventoryValueTitle").innerHTML=document.getElementById("inventoryValueTitle").innerHTML.replace("inventoryValueTitle",ubsApp.translation["inventoryValueTitle"]);
+    
+    // document.getElementById("insuranceTitle").innerHTML=ubsApp.translation["insuranceTitle"]+":";
+    //document.getElementById("inventoryTitle").innerHTML=ubsApp.translation["inventoryTitle"]+":";
+    //document.getElementById("reputationTitle").innerHTML=ubsApp.translation["reputationTitle"]+":";
+    // document.getElementById("lastBalanceTitle").innerHTML=ubsApp.translation["lastBalanceTitle"]+":";
     
   }
   

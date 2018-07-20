@@ -15,6 +15,8 @@ ubsApp.translation={
     "inventorySideBar":"इन्वेंटरी",
     "meritSideBar":"योग्यता",
     "cash":"कैश",
+    "cheque":"चेक",
+    
     "rollit":"घुमाओ",
     "endGame":"अंत खेल",
     "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
@@ -27,16 +29,21 @@ ubsApp.translation={
     "medium":"मध्यम",
     "hard":"कठिन",
     "name":"नाम",
+    
     //This is where new addition started
     "inventoryTitle":"इन्वेंटरी",
     "weekTitle":"सप्ताह",
     "lastBalanceTitle":"अंतिम संतुलन",
     "insuranceTitle":"बीमा",  //   इनश्योरेंस
     "reputationTitle":" प्रतिष्ठा अंक", // नेकनामी  अंक
-
+    "inventoryValueTitle":"इन्वेंटरी मूल्य",
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
-
+    "bankBalanceTitle":"बैंक राशि",
+    "debtTitle":"का कर्ज",
+    "cashTitle":"कैश",
+    "creditTitle":"श्रेय",
+    "creditLimitTitle":"श्रेय सीमा",
     "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
     "q1-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
     "q1-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
@@ -62,4 +69,43 @@ ubsApp.translation={
     "luckQuestion1":"आपने रु। आयकर का भुगतान करने के लिए 1000।",
     "luckQuestion2":"आपने रु। आयकर का भुगतान नहीं करने के लिए 1000।",
     "validAmount":"कृपया एक वैध राशि दर्ज करें",
+
+
+
+    "transferTitle":"ट्रांसफर ",
+    "payOffTitle":"भुगतान करें",
+
+    "payDebtTitle":"पाय डेब्ट",
+    "transferToBankTitle":"ट्रांसफर कैश तो बैंक ",
+    "payTitle":"पाय ",
+    "debtAmountTitle":"डेब्ट राशि",
+    "cancelTitle":"कैंसिल ",
+    "amountToPayTitle":"राशि तो पाय",
+    "amountToTransferTitle":"राशि तो ट्रांसफर",   
+    "modeOfPaymentTitle":"भुगतान का प्रकार",
+    "helpTitle":"मदद",
+    "gainTitle":"लाभ",
+    "youCan":"आप ऐसा कर सकते हैं",
+    "alternateMessage":"या ठीक करने के लिए",
+    "takeQuizTitle":"कोई क्विज लें",
+    "checkWildCard":"वाइल्ड कार्ड की जांच करें",
+    "noDebt":"आपके पास कोई डेब्ट नहीं है",
+    "level":"स्तर",
+    "current":"वर्तमान",
+    "confirmTitle":"कन्फर्म",
+    "newInventoryLevelTitle":"नई इन्वेंटरी स्तर",
+    "costTitle":"कॉस्ट",
+    "amountTitle":"राशि",
+    "payBytitle":"पाय द्वारा",
+    "addModeTitle":"मोड जोड़ें",
+    "doneTitle":"ठीक है",
+    "noThanksTitle":"जी नहीं, धन्यवाद",
+    "or":"या",
+
+    "lessMoney":"आपने कम पैसा दिया है",
+    "moreMoney":"आपने अधिक पैसा लगाया है",
+    "moreCash":"आपने अधिक कैश लगाया है",
+    "bankBalance":"आपके पास असंतुलित बैंक बैलेंस है",
+    "lotDebt":"आपके पास बहुत डेब्ट है",
+    "pleaseConfirm":"कृपया जो राशि आप चाहते हैं उसे पुष्टि करें",
 }
