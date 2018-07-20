@@ -143,13 +143,7 @@ monopoly.rollingDiceTemplate =
 
 '  '+*/
 
-''+
-''+
-'    </div> '+
-''+
-''+
-'  </div>'+
-'<button id=\'rollIt\' class=\'roll-button\' onclick="monopoly.rollDice()">Roll it</button>';
+'</div></div>';
 
 monopoly.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="monopoly.renderPageforBoard(\'{{onClickPage}}\',\'{{amount}}\')">'+
 '       {{src}}'+

@@ -108,4 +108,9 @@ ubsApp.translation={
     "bankBalance":"आपके पास असंतुलित बैंक बैलेंस है",
     "lotDebt":"आपके पास बहुत डेब्ट है",
     "pleaseConfirm":"कृपया जो राशि आप चाहते हैं उसे पुष्टि करें",
+    //Sales
+
+    "This item is not available in your Inventory":"यह आइटम आपके इन्वेंटरी में उपलब्ध नहीं है",
+    "Wheat":"गेहूँ",
+    "Sugar":"चीनी",
 }

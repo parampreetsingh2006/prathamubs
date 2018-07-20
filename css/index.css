@@ -324,3 +324,4 @@ body {
     top:65%;
     left:40%;
 }
+button:focus {outline:0;}

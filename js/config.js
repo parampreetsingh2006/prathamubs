@@ -99,6 +99,7 @@
 		]
 	},
 	
+
 	"q1":{
 		"category":"Sales",
 		"repeatforuser":false,
@@ -178,6 +179,7 @@
 			}
 		]
 	},
+
 	
 	"q1-correct":{
 		"templates":[
@@ -309,6 +311,7 @@
 	    ]
 	},
 		
+
 	"q2":{
 		"category":"Sales",
 		"repeatforuser":false,
@@ -386,6 +389,7 @@
 		}
 		]
 	},
+
 
 	"q2-vvwrong":{
     	"templates":[
@@ -521,7 +525,6 @@
     //Question 3 
 
     "q3": {
-
 		"category":"Sales",
 		"repeatforuser":false,
 		"repeatforall":true,
@@ -600,6 +603,7 @@
 		}
     	]
     },
+
 
     "q3-vvwrong":{
     	"templates":[
@@ -731,10 +735,9 @@
     ]
 },
     
-    //Question 4
+//     //Question 4
 
     "q4": {
-
     	"category":"Sales",
 		"repeatforuser":false,
 		"repeatforall":true,
@@ -754,7 +757,6 @@
 			"optionsTime":2000,
 
 	        //"display_score":true,
-	         
 	        "options": [
 	        	{
 	                "optionName": "q2",
@@ -815,6 +817,7 @@
 		}
 	]
 },
+
 
     "q4-vvwrong":{
     	"templates":[
@@ -1218,8 +1221,6 @@
 
 "receiptPage":{
 		"category":"Sales",
-		
-		
 		"repeatforuser":true,
 		"repeatforall":true,
 		"questionTime":3000,
@@ -1229,87 +1230,127 @@
 	        "templateId": 4,
 			"templateType": "sales",
 			"profilePicture":"images/download",
-			"time":"31",
+			"time":"60",
 			"divID":"seconds",
 			"tooltipMessage":"This item is not available in your Inventory",
+			"tempTotal":"",
 			"order":[
 			{
 				"no":1,
 				"item":"Wheat",
 				"amount":"4 Kg",
-				"rate":"Rs.32/kg"
+				"rate":"Rs.32/kg",
+				"amt":4,
+				"rt":32,
+				"exclude":false
 			},
 			{
 				"no":2,
 				"item":"Sugar",
 				"amount":"1 Kg",
-				"rate":"Rs.40/kg"
+				"rate":"Rs.40/kg",
+				"amt":1,
+				"rt":40,
+				"exclude":false
 			},
 			{
 				"no":3,
 				"item":"Bajra",
 				"amount":"4 Kg",
-				"rate":"Rs.25/kg"
+				"rate":"Rs.25/kg",
+				"amt":4,
+				"rt":25,
+				"exclude":false
 			},
 			{
 				"no":4,
 				"item":"Rice",
 				"amount":"4 Kg",
-				"rate":"Rs.43/kg"
+				"rate":"Rs.43/kg",
+				"amt":4,
+				"rt":43,
+				"exclude":false
 			},
 			{
 				"no":5,
 				"item":"Jowar",
 				"amount":"4 Kg",
-				"rate":"Rs.23/kg"
+				"rate":"Rs.23/kg",
+				"amt":4,
+				"rt":23,
+				"exclude":false
 			},
 			{
 				"no":6,
 				"item":"Milk",
 				"amount":"1 Litre",
-				"rate":"Rs.50/litre"
+				"rate":"Rs.50/litre",
+				"amt":1,
+				"rt":50,
+				"exclude":false
 			},
 			{
 				"no":7,
 				"item":"Eggs",
 				"amount":"1.5 dozen",
-				"rate":"Rs.5/piece"
+				"rate":"Rs.5/piece",
+				"amt":18,
+				"rt":5,
+				"exclude":false
 			},
 			{
 				"no":8,
 				"item":"Oil",
 				"amount":"1 Litre",
-				"rate":"Rs.100/litre"
+				"rate":"Rs.100/litre",
+				"amt":1,
+				"rt":100,
+				"exclude":false
 			},
 			{
 				"no":9,
 				"item":"Jowar",
 				"amount":"4 Kg",
-				"rate":"Rs.28/kg"
+				"rate":"Rs.28/kg",
+				"amt":4,
+				"rt":28,
+				"exclude":false
 			},
 			{
 				"no":10,
 				"item":"Milk",
 				"amount":"1 Litre",
-				"rate":"Rs.50/litre"
+				"rate":"Rs.50/litre",
+				"amt":1,
+				"rt":50,
+				"exclude":false
 			},
 			{
 				"no":11,
 				"item":"Eggs",
 				"amount":"1 dozen",
-				"rate":"Rs.5/piece"
+				"rate":"Rs.5/piece",
+				"amt":12,
+				"rt":5,
+				"exclude":false
 			},
 			{
 				"no":12,
 				"item":"Oil",
 				"amount":"1 Litre",
-				"rate":"Rs.100/litre"
+				"rate":"Rs.100/litre",
+				"amt":1,
+				"rt":100,
+				"exclude":false
 			},
 			{
 				"no":13,
 				"item":"Banana",
 				"amount":"1 dozen",
-				"rate":"Rs 5/piece"
+				"rate":"Rs 5/piece",
+				"amt":12,
+				"rt":5,
+				"exclude":false
 			}
 			],
 
@@ -1406,7 +1447,262 @@
 		// 		"amount":"10 dozen"
 		// 	}]
 	}]
-}
+},
+
+// "quizTemplate":{
+// 	"category":"Quiz",
+// 	"templates":[
+// 	 		{
+	 			
+// 	 			}}
+
+// },
+
+"quizQ1":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST1 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q1",
+				"options": [
+				    {
+						"optionName":"q1", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q1",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q1",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ2":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST1 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q2",
+				"options": [
+				    {
+						"optionName":"q2", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q2",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q2",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ3":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST1 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q3",
+				"options": [
+				    {
+						"optionName":"q3", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q3",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q3",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ4":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST4 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName":"q4",
+				"options": [
+				    {
+						"optionName":"q4", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q4",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q4",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+	"quizQ5":{
+		"category":"Quiz",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "GST5 stands for: ",
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"GST",
+				"answer":"3",
+				"optionName": "q5",
+				"options": [
+				    {
+						"optionName":"q5", 
+						"optionValue": "Government Sales Tax",
+						"id":1,
+						"priority": 3
+					},
+					{
+						"optionName": "q5",
+						"optionValue": "Goods and Sales Tax",
+						"id":2,
+						"priority": 2
+					},
+					{
+						"optionName":"q5",
+						"optionValue": "Goods and Service Tax",
+						"id":3,
+						"priority":1
+					}	
+				],
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : false
+				}		
+			}
+		]
+	},
+
+	"quizResult":{
+		"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "Your Result is: ",
+				"quizResult":true,
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"Result",
+				"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+			}
+		]	
+	}
 }
 
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.transferToBankConfig);

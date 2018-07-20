@@ -344,12 +344,12 @@ ubsApp.leaderBoardTemplate=
 '                   </thead>'+
 '                   <tbody>'+
 '                       {{#each order}}'+
-'                     <tr class = "row{{no}}" data-toggle="tooltip" data-placement="bottom" title="" >'+
+'                     <tr class = "row{{no}} {{#if exclude}}strikeout{{/if}}" data-toggle="tooltip" data-placement="bottom" {{#if exclude}}title="This item is not available in your Inventory"{{/if}} >'+
 '                       <td>{{no}}</td>'+
 '                       <td>{{item}}</td>'+
 '                       <td id="itemPrice{{no}}">{{amount}}</td>'+
 '                       <td>{{rate}}</td>'+
-'                       <td ><input id = "input{{no}}" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()"></td>  '+
+'                       <td ><input id = "input{{no}}" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()" {{#if exclude}}disabled{{/if}} {{#if exclude}}value="0"{{/if}}></td>  '+
 '                     </tr>'+
 '                       {{/each}}'+
 '                     <tr>'+
@@ -442,9 +442,33 @@ ubsApp.leaderBoardTemplate=
 '           '+
 '       </span>'+
 '       <img class="butt" id="help" src="images/help.png" />'+
-'       <img class="butt" id="done" src="images/done.png" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}} />    '+
+'       <img class="butt" id="done" src="images/done.png" {{#if onClickPage}} onclick="ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')" {{/if}} />    '+
 '   </div>'+
 '  </div>';
+
+ubsApp.quizTemplate = '<div id="quiz">'+
+'   <div id="quizTitle">'+
+'       <span id="quizEmoji"></span>    '+
+'       <span id="quizHeading">Quiz</span>'+
+'       <span id="score"> SCORE: <span id="correctAnswers"></span>/5 </span>'+
+'   </div>'+
+'   <div id="questionHeading">{{questionHeading}}</div>'+
+'   <div id="question_answer">'+
+'       <span id="quizQuestion">{{question}}</span>'+
+'       {{#if quizResult}}<br><b><span id="quizResult"></span></b>{{/if}}'+
+'       {{#if options}}'+
+'       <span id ="quizQuestionNo">Question <span id="quizQuestionNumber"></span></span>'+
+'       <div id="quizOptions">'+
+'           {{#each options}}'+
+'           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
+'           {{/each}}'+
+'       </div>'+
+'       <div id="quizOk"><input type="submit" class=\'quizButtons\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
+'       {{/if}}'+
+'   </div>'+
+'   <button id="quizDone" class=\'quizButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
+'   <button id="quizCancel" class=\'quizButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
+'</div>';
 
 ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.js"></script>'+
 '<link rel="stylesheet" type="text/css" >'+ //href="css/calculator.css"
@@ -577,7 +601,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-col
 '       </div>'+
 '       {{#if negative}}<div class="alternateMessageContainer">'+
 '          {{alternalteMessage}}'+
-'           <button  class="takeQuizWildCardButton" style="background-color:orangered; ">{{takeQuizTitle}}</button>'+
+'           <button  class="takeQuizWildCardButton" style="background-color:orangered;" onclick="ubsApp.runQuizTemplate()">{{takeQuizTitle}}</button>'+
 '           {{or}}   <button class="takeQuizWildCardButton" style="background-color:green;">{{checkWildCard}}</button>    '+
 '       {{/if}}'+
 '       </div>'+

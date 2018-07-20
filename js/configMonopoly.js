@@ -149,15 +149,36 @@ monopoly.pages = {
         {
             "templateId":"1",
             "templateType":"static",
-            "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
-            "src":"<button onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; font-size:1.1vw; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
+            "style":"position:absolute;bottom:18%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            // "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
+            "src":"<button id='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; background:#73e600; border-radius:5px; \">Roll it</button>"
+            //"src":"<button onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; font-size:1.1vw; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>",
+            
+            //
+
         },
         {
             "templateId":"1",
             "templateType":"static",
-            "style":"position:absolute;bottom:10%;left:90%;width:7%;",
-            "src":"<button onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0;font-size:1.1vw; background:red; border-radius:5px; \">End Game</button>"
+            "style":"position:absolute;bottom:18%;left:90%; whitedth:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='boardButtons' onclick=\"ubsApp.runQuizTemplate()\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; border-radius:5px; \">Take Exam</button>"
+
         },
+        {
+            "templateId":"1",
+            "templateType":"static",
+            "style":"position:absolute;bottom:10%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='boardButtons' onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
+
+        },
+        {
+            "templateId":"1",
+            "templateType":"static",
+            "style":"position:absolute;bottom:10%;left:90%;width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='boardButtons' onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+        },
+        
+        // 
         
 
         //Previous was from here
@@ -404,3 +425,4 @@ monopoly.pages = {
             
     ]
 }
+
