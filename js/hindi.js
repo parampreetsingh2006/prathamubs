@@ -96,7 +96,7 @@ ubsApp.translation={
     "newInventoryLevelTitle":"नई इन्वेंटरी स्तर",
     "costTitle":"कॉस्ट",
     "amountTitle":"राशि",
-    "payBytitle":"पाय द्वारा",
+    "payByTitle":"पाय द्वारा",
     "addModeTitle":"मोड जोड़ें",
     "doneTitle":"ठीक है",
     "noThanksTitle":"जी नहीं, धन्यवाद",

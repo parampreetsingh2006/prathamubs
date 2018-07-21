@@ -6,11 +6,9 @@ html{
 body {
     height: 100%;
     color: #fff;
-    background: linear-gradient(-225deg,rgb(232,199,103), rgb(166,190,101), rgb(85,177,180),rgb(111,182,223));
+    /* background: linear-gradient(-225deg,rgb(232,199,103), rgb(166,190,101), rgb(85,177,180),rgb(111,182,223)); */
     background-size: 400% 400%;
-    -webkit-animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
-    animation: Gradient 5s ease infinite;
+    
 }
 .borderB1{
     border:1px solid black;
@@ -170,6 +168,12 @@ body {
 .enterAmountText{
     width:20%;
     border:1px solid black;
+}
+.iconContainer{
+    width:3%;height: 3%;
+    top:3%;
+    left:1%;
+    position: absolute;
 }
 
 .purchaseScreenButton:active {

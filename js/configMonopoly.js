@@ -25,11 +25,12 @@ monopoly.pages = {
         "templateType":"static",
         "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
         "id":"initPageTitle",
+        "src":"{{initPageTitle}}",
     },
     {
         "templateId":1,
         "templateType":"static",
-        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\"></label>",
+        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\">{{computerRequiredTitle}}</label>",
         "style": "position:absolute; right:10%;top:10%;color:black;",
     },
     {
@@ -41,8 +42,8 @@ monopoly.pages = {
     {
         "templateId":1,
         "templateType":"static",
-        "src": "<div id=\"enterPlayers\">Enter Number of Players || खिलाड़ियों की संख्या दर्ज करें</div>" ,
-        "style": "position:absolute; left:29%;top:10%;color:black;",
+        "src": "<div id=\"enterPlayers\">{{enterPlayers}}</div>" ,
+        "style": "position:absolute; left:25%;top:10%;color:black;",
     },
     {
         "templateId":1,
@@ -60,7 +61,7 @@ monopoly.pages = {
         "templateId":1,
         "templateType":"static",
         "style":" top:85%;left:45%;position:absolute;",
-        "src":"<button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\" id=\"storePlayerDetailsButton\">Next Page|| अगला पृष्ठ </button>",
+        "src":"<button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button>",
     },
     /*{
         "templateId":1,
@@ -87,7 +88,7 @@ monopoly.pages = {
             "templateType":"static",
             "id":"weekTitle",
             "style":"",
-            "src":"weekTitle: <span id=\"weekContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+            "src":"{{weekTitle}}: <span id=\"weekContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
         // {
         //     "templateId":1,
@@ -101,7 +102,7 @@ monopoly.pages = {
             "templateType":"static",
             "id":"inventoryTitle",
             "style":"",
-            "src":"inventoryTitle: <span id=\"inventoryContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+            "src":"{{inventoryTitle}}: <span id=\"inventoryContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
         // {
         //     "templateId":1,
@@ -123,14 +124,14 @@ monopoly.pages = {
             "templateType":"static",
             "id":"reputationTitle",
             "style":"",
-            "src":"reputationTitle: <span id=\"reputationContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+            "src":"{{reputationTitle}}: <span id=\"reputationContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
         {
             "templateId":1,
             "templateType":"static",
             "id":"inventoryValueTitle",
             "style":"",
-            "src":"inventoryValueTitle: <span id=\"inventoryValueContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+            "src":"{{inventoryValueTitle}}: <span id=\"inventoryValueContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
         // {
         //     "templateId":1,
@@ -153,9 +154,6 @@ monopoly.pages = {
             // "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
             "src":"<button id='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; background:#73e600; border-radius:5px; \">Roll it</button>"
             //"src":"<button onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; font-size:1.1vw; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>",
-            
-            //
-
         },
         {
             "templateId":"1",
@@ -248,161 +246,173 @@ monopoly.pages = {
         {
             "templateId": 3,
             "templateType": "board",
-            "blocks":24,
+            "blocks":26,
             "top_row":[
             {
                 "players":[],
                 "id"   : "0",
-                "color":"yellow",
-                "title":"pratham_title_start",
+                "backgroundImage":"images/start.png",
+                //"title":"pratham_title_start",
                 "start": true
             },
             {
                 "id"   : "1",
                 "color":"green",
-                "title":"pratham_title_sales",
-                "category" : "Sales"
+                "backgroundImage":"images/receipt-easy.png",
+                "category":"Sales",
             },
             {
                 "id"   : "2",
                 "color":"green",
-                "title":"pratham_title_sales",
+                "backgroundImage":"images/receipt-medium.png",
+                // "title":"pratham_title_sales",
                 "category" : "Sales"
             },
             {
                 "id"   : "3",
-                "color":"dark-green",
-                "title":"pratham_title_surprise",
-                "category" : "Surprise"
-            },
-            {
-                "id"   : "4",
                 "color":"red",
-                "title":"pratham_title_purchase",
+                // "title":"pratham_title_purchase",
+                "backgroundImage":"images/purchase.png",
                 "category" : "Purchase"
 
             },
             {
+                "id"   : "4",
+                "color":"yellow",
+                "backgroundImage":"images/decision-making.png",
+                "category" : "Decision Making"
+            },
+            {
                 "id"   : "5",
                 "color":"green",
-                "title":"pratham_title_sales",
+                // "title":"pratham_title_sales",
+                "backgroundImage":"images/receipt-medium-hard.png",
                 "category" : "Sales"
             },
             {
                 "id"   : "6",
                 "color":"pink",
-                "title":"pratham_title_luck",
+                "backgroundImage":"images/luck.png",
                 "category" : "Luck"
+            },
+            {
+                "id"   : "7",
+                "color":"red",
+                // "title":"pratham_title_purchase",
+                "backgroundImage":"images/purchase.png",
+                "category" : "Purchase"
+            },
+            {
+                "id"   : "8",
+                "color":"green",
+                // "title":"pratham_title_sales",
+                "backgroundImage":"images/receipt-hard.png",
+                "category" : "Sales"
             }
             ],
 
             "left_col":[
             {
-                "id"   : "23",
+                "id"   : "25",
                 "color":"green",
-                "title":"pratham_title_sales",
+                "backgroundImage":"images/receipt-hard.png",
+                "category" : "Sales"
+            },
+            {
+                "id"   : "24",
+                "backgroundImage":"images/decision-making.png",
+                "category" : "Decision"
+            },
+            {
+                "id"   : "23",
+                "backgroundImage":"images/receipt-easy.png",
                 "category" : "Sales"
             },
             {
                 "id"   : "22",
-                "color":"green",
-                "title":"pratham_title_sales",
-                "category" : "Sales"
-            },
-            {
-                "id"   : "21",
-                "color":"dark-green",
-                "title":"pratham_title_surprise",
-                "category" : "Surprise"
-            },
-            {
-                "id"   : "20",
-                "color":"red",
-                "title":"pratham_title_purchase",
+                "backgroundImage":"images/purchase.png",
                 "category" : "Purchase"
             },
-            {
-                "id"   : "19",
-                "color":"green",
-                "title":"pratham_title_sales",
-                "category" : "Sales"
-            }
             ],
             "right_col":[
                 {
-                    "id"   : "7",
-                    "color":"green",
-                    "title":"pratham_title_sales",
-                    "category" : "Sales"
-                },
-                {
-                    "id"   : "8",
-                    "color":"green",
-                    "title":"pratham_title_sales",
-                    "category" : "Sales"
-                },
-                {
                     "id"   : "9",
-                    "color":"dark-green",
-                    "title":"pratham_title_surprise",
-                    "category" : "Surprise"
+                    "backgroundImage":"images/receipt-easy.png",
+                    "category" : "Sales"
                 },
                 {
                     "id"   : "10",
-                    "color":"red",
-                    "title":"pratham_title_purchase",
-                    "category" : "Purchase"
+                    "backgroundImage":"images/decision-making.png",
+                    "category" : "Decision"
                 },
                 {
                     "id"   : "11",
-                    "color":"green",
-                    "title":"pratham_title_sales",
+                    
+                    "backgroundImage":"images/purchase.png",
+                    
+                    "category" : "Purchase"
+                },
+                {
+                    "id"   : "12",
+                    "backgroundImage":"images/receipt-medium.png",
                     "category" : "Sales"
-                }
+                },
                 ],
             "bottom_row":[
                     {
-                        "id"   : "18",
-                        "color":"pink",
-                        "title":"pratham_title_luck",
+                        "id"   : "21",
+                        "backgroundImage":"images/receipt-medium-hard.png",
+                        "category":"Sales",
+                    },
+                    {
+                        "id"   : "20",
+                        
+                        "backgroundImage":"images/luck.png",
                         "category" : "Luck"
                     },
                     {
+                        "id"   : "19",
+                        
+                        "backgroundImage":"images/purchase.png",
+                        "category" : "Purchase"
+                    },
+                    {
+                        "id"   : "18",
+                        
+                        "backgroundImage":"images/receipt-medium.png",
+                        
+                        "category" : "Sales"
+                    },
+                    {
                         "id"   : "17",
-                        "color":"green",
-                        "title":"pratham_title_sales",
+                        "backgroundImage":"images/receipt-hard.png",
                         "category" : "Sales"
                     },
                     {
                         "id"   : "16",
-                        "color":"red",
-                        "title":"pratham_title_purchase",
-                        "category" : "Purchase"
+                        
+                        "backgroundImage":"images/payment.png",
+                        
+                        "category" : "Payment"
                     },
+                    
                     {
                         "id"   : "15",
-                        "color":"dark-green",
-                        "title":"pratham_title_surprise",
-                        "category" : "Surprise"
+                        
+                        "backgroundImage":"images/receipt-medium-hard.png",
+                        "category" : "Sales"
                     },
                     {
                         "id"   : "14",
-                        "color":"green",
-                        "title":"pratham_title_sales",
-                        "category" : "Sales"
+                        
+                        "backgroundImage":"images/purchase.png",
+                        "category" : "Purchase"
                     },
                     {
                         "id"   : "13",
-                        "color":"green",
-                        "title":"pratham_title_sales",
-                        "category" : "Sales"
+                        "backgroundImage":"images/luck.png",
+                        "category" : "Luck"
                     },
-                    {
-                        "id"   : "12",
-                        "color":"yellow",
-                        "title":"pratham_title_decision",
-                        "category" : "Decision Making"
-                    }
                     ],
                     
         },

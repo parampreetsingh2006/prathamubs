@@ -48,7 +48,6 @@ let playerChance = monopoly.playerChance;
 $(document).ready(function(){	
 	ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
-    
 	
 });
 
@@ -246,19 +245,19 @@ ubsApp.renderPage = function(page) {
 	}
 
 
-	if(answerselected!=0)
-	{
-		ubsApp.addScore(parseInt(answerselected));
-		document.getElementById("lastBalanceContent").innerHTML="₹"+userArray[playerChance].getplayerScore();
-		answerselected=0;
-	}	
-	if(inventoryToBeUpdated!=0)
-	{
-		ubsApp.addInventory(parseInt(inventoryToBeUpdated));
-		document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
-		//ubsApp.animate_score(parseInt(inventoryToBeUpdated),document.getElementById("inventoryContent"));
-		inventoryToBeUpdated=0;
-	}
+	// if(answerselected!=0)
+	// {
+	// 	ubsApp.addScore(parseInt(answerselected));
+	// 	document.getElementById("lastBalanceContent").innerHTML="₹"+userArray[playerChance].getplayerScore();
+	// 	answerselected=0;
+	// }	
+	// if(inventoryToBeUpdated!=0)
+	// {
+	// 	ubsApp.addInventory(parseInt(inventoryToBeUpdated));
+	// 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
+	// 	//ubsApp.animate_score(parseInt(inventoryToBeUpdated),document.getElementById("inventoryContent"));
+	// 	inventoryToBeUpdated=0;
+	// }
 
 	/*if($('#headId').length > 0) {
 		if(flag){
@@ -845,4 +844,54 @@ ubsApp.startCurrentScenario=function(){
 	
 	$('#templateContent').css("height",(screenHeight)+'px')
 	$('#templateContent').css("width",(screenWidth)+'px')
+}
+
+
+ubsApp.translateScenarios=function(){
+	$.each(ubsApp.pages, function(key, value) {
+		if(value.templates!=null){
+			
+			$.each(value.templates, function( index, arrayValue ) {
+				
+				$.each(value.templates[index], function( subKey, subValue ) {
+					
+						
+						if(typeof(subValue)=='string'){
+							if(subValue.indexOf("{{") >= 0){
+								let translationKey=subValue.substring(subValue.indexOf("{{")+2,subValue.indexOf("}}"));
+								console.log(translationKey);
+								let stringToBeReplaced="{{"+translationKey+"}}";
+								ubsApp.pages[key].templates[index][subKey]=ubsApp.pages[key].templates[index][subKey].replace(stringToBeReplaced,ubsApp.translation[translationKey]);
+								console.log(value.templates[index].subKey)
+							}
+						}
+						
+				});
+		  });
+		}
+		
+	});
+
+	$.each(monopoly.pages, function(key, value) {
+
+			$.each(value, function( index, arrayValue ) {
+				
+				$.each(value[index], function( subKey, subValue ) {
+					
+						
+						if(typeof(subValue)=='string'){
+							if(subValue.indexOf("{{") >= 0){
+								let translationKey=subValue.substring(subValue.indexOf("{{")+2,subValue.indexOf("}}"));
+								console.log(translationKey);
+								let stringToBeReplaced="{{"+translationKey+"}}";
+								monopoly.pages[key][index][subKey]=monopoly.pages[key][index][subKey].replace(stringToBeReplaced,ubsApp.translation[translationKey]);
+							}
+						}
+						
+				});
+		  });
+		
+	});
+
+	
 }

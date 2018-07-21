@@ -536,6 +536,9 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
 
 '       <div  class="purchaseLeftContainer">'+
+'           <div class="iconContainer">'+
+'               <img src="images/purchase.png" style="object-fit: cover;">'+
+'           </div>'+
 '           <div  class="purchaseScreenTitle screenTitle">'+
 '               {{purchase}}'+
 '           </div>'+

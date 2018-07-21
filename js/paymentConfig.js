@@ -6,8 +6,22 @@ ubsApp.paymentConfig={
 		{
 			"templateId":10,
 			"templateType":"pay",
-			"question":"paymentQuestion1",//question Key
+			"scenario":"{{paymentQuestion1}}",//question Key
 			"amount":-1000,
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",
+			"checkWildCard":"{{checkWildCard}}",
+			"takeQuizTitle":"{{takeQuizTitle}}",
+			"or":"{{or}}",
+			"payTitle":"{{payTitle}}",
+			"alternalteMessage":"{{alternateMessage}}",
+			"color":"white",
+			"background":"#000",
+			"wildCard":"true",
+			
+			"negative":"true",
+			"helpRequired":"true",
 		}
 	]
 
@@ -21,8 +35,22 @@ ubsApp.paymentConfig={
 		{
 			"templateId":10,
 			"templateType":"pay",
-			"question":"paymentQuestion2",//question Key
+			"scenario":"{{paymentQuestion2}}",//question Key
 			"amount":-1000,
+			"negative":"true",
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",
+			"checkWildCard":"{{checkWildCard}}",
+			"takeQuizTitle":"{{takeQuizTitle}}",
+			"or":"{{or}}",
+			"payTitle":"{{payTitle}}",
+			"alternalteMessage":"{{alternateMessage}}",
+			"color":"white",
+			"background":"#000",
+			"wildCard":"true",
+			"negative":"true",
+			
 		}
 	]
 

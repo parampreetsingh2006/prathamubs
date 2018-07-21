@@ -3,7 +3,7 @@ monopoly.boardTemplate='<div class="responsive">'+
         '<div class="row top">'+
             '{{#each top_row}}'+
                 '<div class="square1">'+
-                    '<div class="header header-top {{color}}"></div>'+
+                    '<div class="header header-top {{color}}" style="background-image: url(\'{{backgroundImage}}\');background-size: 100% 100%;"></div>'+
                     '<div class="firstLine firstLine-top rotation2" id={{id}}>'+'{{title}}'+'<br>'+
                         '{{#if start}}'+
                             '{{#each players}}'+
@@ -19,7 +19,7 @@ monopoly.boardTemplate='<div class="responsive">'+
             '<div class="square2">'+ 
                 '{{#each left_col}}'+
                     '<div class="squareSide">'+
-                        '<div class="headerSide header-left {{color}}"></div>'+
+                        '<div class="headerSide header-left {{color}}" style="background-image: url(\'{{backgroundImage}}\');background-size: 100% 100%;"></div>'+
                         '<div class="firstLine firstLine-left rotation1" id={{id}}>'+'{{title}}'+'<br>'+'</div>'+
                     '</div>'+
                 '{{/each}}'+
@@ -29,7 +29,7 @@ monopoly.boardTemplate='<div class="responsive">'+
             '<div class="square2">'+
                 '{{#each right_col}}'+
                     '<div class="squareSide">'+
-                        '<div class="headerSide header-left {{color}}"></div>'+
+                        '<div class="headerSide header-left {{color}}" style="background-image: url(\'{{backgroundImage}}\');background-size: 100% 100%;"></div>'+
                         '<div class="firstLine firstLine-right rotation3" id={{id}}>'+'{{title}}'+'<br>'+'</div>'+
                     '</div>'+
                 '{{/each}}'+
@@ -38,7 +38,7 @@ monopoly.boardTemplate='<div class="responsive">'+
         '<div class="row top">'+
             '{{#each bottom_row}}'+
                 '<div class="square1">'+
-                    '<div class="header header-top {{color}}"></div>'+
+                    '<div class="header header-top {{color}}" style="background-image: url(\'{{backgroundImage}}\');background-size: 100% 100%;"></div>'+
                     '<div class="firstLine firstLine-top rotation2" id={{id}}>'+'{{title}}'+'<br>'+'</div>'+
                 '</div>'+
             '{{/each}}'+

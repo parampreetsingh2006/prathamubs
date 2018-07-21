@@ -99,7 +99,7 @@ ubsApp.translation={
         "newInventoryLevelTitle":"NEW INVENTORY LEVEL",
         "costTitle":"COST",
         "amountTitle":"AMOUNT",
-        "payBytitle":"PAY BY",
+        "payByTitle":"PAY BY",
         "addModeTitle":"ADD MODE",
         "doneTitle":"DONE",
         "noThanksTitle":"NO THANKS",

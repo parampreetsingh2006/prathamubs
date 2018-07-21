@@ -76,7 +76,7 @@ class User{
 
     getInventoryScore()
     {
-        return this.inventoryScore;
+        return this.inventoryScore.toFixed(2);
     }
 
     /*updateInventoryScore(amount){

@@ -1,21 +1,22 @@
 ubsApp.getTransferTemplate=function(templateConfig,tempVar){
 	var object={};
-	object.title=ubsApp.translation["transferToBankTitle"];
-	object.cashTitle=ubsApp.translation["cashTitle"];
-	object.bankBalanceTitle=ubsApp.translation["bankBalanceTitle"];
+	//object.title=ubsApp.translation["transferToBankTitle"];
+	//object.cashTitle=ubsApp.translation["cashTitle"];
+	//object.bankBalanceTitle=ubsApp.translation["bankBalanceTitle"];
 	object.color=userArray[playerChance].getplayerColor();
 	object.cash=userArray[playerChance].getplayerScore();
 	object.bankBalance=userArray[playerChance].getBankBalance();
-	object.transferTitle=ubsApp.translation["transferTitle"];
-	object.cashTitle=ubsApp.translation["cashTitle"];
-	object.chequeTitle=ubsApp.translation["cheque"];
-	object.amountToTransferTitle=ubsApp.translation["amountToTransferTitle"];
-	object.cancelTitle=ubsApp.translation["cancelTitle"];
+	//object.transferTitle=ubsApp.translation["transferTitle"];
+	//object.cashTitle=ubsApp.translation["cashTitle"];
+	//object.chequeTitle=ubsApp.translation["cheque"];
+	//object.amountToTransferTitle=ubsApp.translation["amountToTransferTitle"];
+	//object.cancelTitle=ubsApp.translation["cancelTitle"];
 	// object.debt=userArray[playerChance].getCredit();
 	if(languageSelected=="hindi"){
 		object.hindi=true;
 	}
-	tempVar.html+=ubsPayOffTemplate(object);
+	templateConfig=$.extend(templateConfig,object);
+	tempVar.html+=ubsPayOffTemplate(templateConfig);
 }
 
 ubsApp.transferToBank=function(){

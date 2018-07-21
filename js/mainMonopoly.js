@@ -131,7 +131,7 @@ monopoly.renderPageforBoard = function(page) {
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
 	
-	monopoly.translate();
+	
   if(flag2) {
 
      ubsApp.initializeLeaderBoard("Score");
@@ -149,13 +149,11 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      scenario = userArray[playerChance].getScenario(blockCategory[blockNo],playerChance);   //   blockCategory[blockNo]
+      scenario = userArray[playerChance].getScenario("Payment",playerChance);   //   blockCategory[blockNo]
         let currentTemplateName=scenario.getName();
         let currentTemplate=ubsApp.pages[currentTemplateName].templates;
         let key=ubsApp.pages[currentTemplateName].templates[0].question;
-        if(key){
-          monopoly.generateQuestion(key,currentTemplate);
-        }
+        
         $('#monopolyBase').css("z-index",-10);
         $('#templateBase').css("z-index",10);
         
@@ -169,13 +167,6 @@ monopoly.startScenarios = function(blockNo){
        
   },1000);
 
-}
-
-
-monopoly.generateQuestion=function(key,template){
-    var question=ubsApp.translation[key];
-    template[0].question=question;
-    scenario.setTemplate(template);
 }
 
 monopoly.myMove = function(count, pId, currentPos) {
@@ -364,6 +355,7 @@ monopoly.chooseLanguage=function(){
   jsElm.type = "text/javascript";
   jsElm.src = "js/"+language+".js";
   document.head.appendChild(jsElm);
+  
   var link  = document.createElement('link');
   languageSelected=language;
   link.rel  = 'stylesheet';
@@ -372,50 +364,12 @@ monopoly.chooseLanguage=function(){
   document.head.appendChild(link);
   link.onload=function(){
     console.log("Language css file loaded");
+    
   }
   jsElm.onload=function(){
+    ubsApp.translateScenarios();
     monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
   }
 }
 
 
-monopoly.translate=function(){
-  
-  if(document.getElementById("weekTitle")){
-    document.getElementById("weekTitle").innerHTML=document.getElementById("weekTitle").innerHTML.replace("weekTitle",ubsApp.translation["weekTitle"]);
-    document.getElementById("inventoryTitle").innerHTML=document.getElementById("inventoryTitle").innerHTML.replace("inventoryTitle",ubsApp.translation["inventoryTitle"]);
-    document.getElementById("reputationTitle").innerHTML=document.getElementById("reputationTitle").innerHTML.replace("reputationTitle",ubsApp.translation["reputationTitle"]);
-    document.getElementById("inventoryValueTitle").innerHTML=document.getElementById("inventoryValueTitle").innerHTML.replace("inventoryValueTitle",ubsApp.translation["inventoryValueTitle"]);
-    
-    // document.getElementById("insuranceTitle").innerHTML=ubsApp.translation["insuranceTitle"]+":";
-    //document.getElementById("inventoryTitle").innerHTML=ubsApp.translation["inventoryTitle"]+":";
-    //document.getElementById("reputationTitle").innerHTML=ubsApp.translation["reputationTitle"]+":";
-    // document.getElementById("lastBalanceTitle").innerHTML=ubsApp.translation["lastBalanceTitle"]+":";
-    
-  }
-  
-  /*if(document.getElementById("scoreSideBar")){
-    document.getElementById("scoreSideBar").innerHTML=ubsApp.translation["scoreSideBar"];
-  	document.getElementById("documentSideBar").innerHTML=ubsApp.translation["documentSideBar"];
-  	document.getElementById("inventorySideBar").innerHTML=ubsApp.translation["inventorySideBar"];
-  	document.getElementById("meritSideBar").innerHTML=ubsApp.translation["meritSideBar"];
-  }*/
-  if(document.getElementById("enterPlayers"))
-    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["enterPlayers"];
-  
-  if(document.getElementById("initPageTitle"))
-    document.getElementById("initPageTitle").innerHTML=ubsApp.translation["initPageTitle"];
-
-  if(document.getElementById("storePlayerDetailsButton"))
-    document.getElementById("storePlayerDetailsButton").innerHTML=ubsApp.translation["storePlayerDetailsButton"];
-
-  if(document.getElementById("computerRequiredTitle"))
-    document.getElementById("computerRequiredTitle").innerHTML=ubsApp.translation["computerRequiredTitle"];
-  if(document.getElementById("currentChanceDetails"))
-  {
-    let spanString=document.getElementById("currentChanceDetails").innerHTML;
-    spanString=spanString.replace(" Player Name: ",ubsApp.translation["playerNameTitle"]+": ");
-    spanString=spanString.replace("Dice Value: ",ubsApp.translation["diceValueTitle"]+":");
-    document.getElementById("currentChanceDetails").innerHTML=spanString;
-  }
-}

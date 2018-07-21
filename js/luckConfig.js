@@ -5,8 +5,18 @@ ubsApp.luckConfig={
 		{
 			"templateId":9,
 			"templateType":"luck",
-			"question":"luckQuestion1",//question Key
+			"scenario":"{{luckQuestion1}}",//question Key
 			"amount":1000,
+			"scenarioTitle":"{{pratham_title_luck}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",
+			"checkWildCard":"{{checkWildCard}}",
+			"takeQuizTitle":"{{takeQuizTitle}}",
+			"or":"{{or}}",
+			"alternalteMessage":"{{alternateMessage}}",
+			"color":"black",
+			"background":"#4DAF7C",
+			"wildCard":"true",
 			
 		}
 	]
@@ -18,9 +28,20 @@ ubsApp.luckConfig={
 		{
 			"templateId":9,
 			"templateType":"luck",
-			"question":"luckQuestion2",//question Key
+			"scenario":"{{luckQuestion2}}",//question Key
 			"amount":-1000,
 			"negative":"true",
+			"scenarioTitle":"{{pratham_title_luck}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",
+			"checkWildCard":"{{checkWildCard}}",
+			"takeQuizTitle":"{{takeQuizTitle}}",
+			"or":"{{or}}",
+			"alternalteMessage":"{{alternateMessage}}",
+			"color":"black",
+			"background":"#4DAF7C",
+			"wildCard":"true",
+			
 		}
 	]
 	},

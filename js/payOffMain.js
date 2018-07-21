@@ -1,23 +1,16 @@
 ubsApp.getPayOffTemplate=function(templateConfig,tempVar){
 	var object={};
-	object.title=ubsApp.translation["payDebtTitle"];
-	object.cashTitle=ubsApp.translation["cashTitle"];
-	object.bankBalanceTitle=ubsApp.translation["bankBalanceTitle"];
-	object.debtAmountTitle=ubsApp.translation["debtAmountTitle"];
+	
 	object.color=userArray[playerChance].getplayerColor();
 	object.cash=userArray[playerChance].getplayerScore();
 	object.bankBalance=userArray[playerChance].getBankBalance();
 	object.debt=userArray[playerChance].getCredit();
-	object.payTitle=ubsApp.translation["payTitle"];
 	object.payOff="true";
-	object.chequeTitle=ubsApp.translation["cheque"];
-	object.modeOfPaymentTitle=ubsApp.translation["modeOfPaymentTitle"];
-	object.amountToPayTitle=ubsApp.translation["amountToPayTitle"];
-	object.cancelTitle=ubsApp.translation["cancelTitle"];
 	if(languageSelected=="hindi"){
 		object.hindi=true;
 	}
-	tempVar.html+=ubsPayOffTemplate(object);
+	templateConfig=$.extend(templateConfig,object);
+	tempVar.html+=ubsPayOffTemplate(templateConfig);
 }
 
 ubsApp.payDebt=function(){
