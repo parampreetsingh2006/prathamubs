@@ -148,34 +148,34 @@ monopoly.pages = {
             "templateType":"static",
             "id":"cardWallet",
             "style":"position:absolute;top:47.5%;left:82%;background-repeat: no-repeat;",
-            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:15px; color:red; font-weight:650; border:0; background:orange;border-radius:5px; background-size: 60%; background-repeat:no-repeat; background-position: center;background-image: url(images/wallet3.png);\">Card Wallet</button>"
+            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:15px; color:red; font-weight:650; border:0; background:orange;border-radius:5px; font-size:1.05vw;background-size: 60%; background-repeat:no-repeat; background-position: center;background-image: url(images/wallet3.png);\">Card Wallet</button>"
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:18%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; background:#73e600; border-radius:5px; \">Roll it</button>"
+            "src":"<button id='rollIt' class='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; font-size:1.05vw;background:#73e600; border-radius:5px; \">Roll it</button>"
 
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:18%;left:90%; whitedth:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='boardButtons' onclick=\"ubsApp.runQuizTemplate()\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; border-radius:5px; \">Take Exam</button>"
+            "src":"<button class='boardButtons' onclick=\"ubsApp.runQuizTemplate()\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; font-size:1.05vw;border-radius:5px; \">Take Exam</button>"
 
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='boardButtons' onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
+            "src":"<button class='boardButtons' onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange;font-size:1.05vw; border-radius:5px; \">Purchase</button>"
 
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:90%;width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='boardButtons' onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+            "src":"<button class='boardButtons' onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; font-size:1.05vw;background:red; border-radius:5px; \">End Game</button>"
         },
         
         // 

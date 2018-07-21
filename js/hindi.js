@@ -63,9 +63,55 @@ ubsApp.translation={
     "luckQuestion2":"आपने रु। आयकर का भुगतान नहीं करने के लिए 1000।",
     "validAmount":"कृपया एक वैध राशि दर्ज करें",
 
+    //Main Screen
+    "Card Wallet":"बटुआ",
+    "Roll it":"पासा घुमाओ",
+    "Purchase":"खरीद फरोख्त",
+    "Take Exam":"परीक्षा दें",
+    "Rs": "₹",
+
     //Sales
 
     "This item is not available in your Inventory":"यह आइटम आपके इन्वेंटरी में उपलब्ध नहीं है",
     "Wheat":"गेहूँ",
     "Sugar":"चीनी",
+    "Dal":"दाल",
+    "Rice":"चावल",
+    "Rope":"रस्सी",
+    "Milk":"Milk",
+    "Eggs":"अंडे",
+    "egg":"अंडा",
+    "Oil":"तेल",
+    "Chocolate":"चॉकलेट",
+    "chocolate":"चॉकलेट",
+    "Biscuits":"बिस्कुट",
+    "Soap":"साबुन",
+    "Shampoo":"शैम्पू",
+    "shampoo":"शैम्पू",
+    "Detergent":"डिटर्जेंट",
+    "Packet":"पैकेट",
+
+    "Order":"किराना सूची",
+    "Super Market Receipt":"सुपर मार्केट रसीद",
+    "Quantity":"मात्रा",
+    "Rate":"भाव",
+    "Amount":"रकम",
+    "Discount":"छूट",
+    "Customer":"ग्राहक",
+
+    "itemRateHindi":{
+            "Wheat":"₹ 50/kg",
+            "Rice":"₹ 50/kg",
+            "Dal":"₹ 80/kg",
+            "Sugar":"₹ 110/kg",
+            "Milk":"₹ 45/litre",
+            "Oil":"₹ 125/litre",
+            "Rope":"₹ 35/10 m",
+            "Chocolate":"₹ 40/चॉकलेट",
+            "Eggs":5.5"₹ 5.5/अंडा",
+            "Biscuits":"₹ 25/पैकेट",
+            "Soap":"₹ 27/साबुन",
+            "Shampoo":"₹ 45/100ml",
+            "Detergent":"₹ 37/500gm"
+        }
 }

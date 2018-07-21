@@ -14,7 +14,7 @@ ubsApp.translation={
         "documentSideBar":"Document",
         "inventorySideBar":"Inventory",
         "meritSideBar":"Merit",
-
+        "Rs": "₹",
         //This is where new addition started
         "inventoryTitle":"INVENTORY",
         "weekTitle":"WEEK",
@@ -67,4 +67,20 @@ ubsApp.translation={
         "lotDebt":"YOU HAVE A LOT OF DEBT",
         "pleaseConfirm":"Please confirm the amount you want",
         "noDebt":"YOU DON'T HAVE ANY DEBTS.",
+
+        "itemRateEnglish":{
+            "Wheat":"₹ 50/kg",
+            "Rice":"₹ 50/kg",
+            "Dal":"₹ 80/kg",
+            "Sugar":"₹ 110/kg",
+            "Milk":"₹ 45/litre",
+            "Oil":"₹ 125/litre",
+            "Rope":"₹ 35/10 m",
+            "Chocolate":"₹ 40/chocolate",
+            "Eggs":"₹ 5.5/egg",
+            "Biscuits":"₹ 25/packet",
+            "Soap":"₹ 27/soap",
+            "Shampoo":"₹ 45/100ml",
+            "Detergent":"₹ 37/500gm"
+        }
     }

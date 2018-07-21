@@ -1295,245 +1295,6 @@
 	]
 }, 
 
-"receiptPage":{
-		"category":"Sales",
-		"repeatforuser":true,
-		"repeatforall":true,
-		"questionTime":3000,
-		"optionsTime":2000,
-    	"templates":[
-    	{
-	        "templateId": 4,
-			"templateType": "sales",
-			"profilePicture":"images/download",
-			"time":"60",
-			"divID":"seconds",
-			"tooltipMessage":"This item is not available in your Inventory",
-			"tempTotal":"",
-			"order":[
-			{
-				"no":1,
-				"item":"Wheat",
-				"amount":"4 Kg",
-				"rate":"Rs.32/kg",
-				"amt":4,
-				"rt":32,
-				"exclude":false
-			},
-			{
-				"no":2,
-				"item":"Sugar",
-				"amount":"1 Kg",
-				"rate":"Rs.40/kg",
-				"amt":1,
-				"rt":40,
-				"exclude":false
-			},
-			{
-				"no":3,
-				"item":"Bajra",
-				"amount":"4 Kg",
-				"rate":"Rs.25/kg",
-				"amt":4,
-				"rt":25,
-				"exclude":false
-			},
-			{
-				"no":4,
-				"item":"Rice",
-				"amount":"4 Kg",
-				"rate":"Rs.43/kg",
-				"amt":4,
-				"rt":43,
-				"exclude":false
-			},
-			{
-				"no":5,
-				"item":"Jowar",
-				"amount":"4 Kg",
-				"rate":"Rs.23/kg",
-				"amt":4,
-				"rt":23,
-				"exclude":false
-			},
-			{
-				"no":6,
-				"item":"Milk",
-				"amount":"1 Litre",
-				"rate":"Rs.50/litre",
-				"amt":1,
-				"rt":50,
-				"exclude":false
-			},
-			{
-				"no":7,
-				"item":"Eggs",
-				"amount":"1.5 dozen",
-				"rate":"Rs.5/piece",
-				"amt":18,
-				"rt":5,
-				"exclude":false
-			},
-			{
-				"no":8,
-				"item":"Oil",
-				"amount":"1 Litre",
-				"rate":"Rs.100/litre",
-				"amt":1,
-				"rt":100,
-				"exclude":false
-			},
-			{
-				"no":9,
-				"item":"Jowar",
-				"amount":"4 Kg",
-				"rate":"Rs.28/kg",
-				"amt":4,
-				"rt":28,
-				"exclude":false
-			},
-			{
-				"no":10,
-				"item":"Milk",
-				"amount":"1 Litre",
-				"rate":"Rs.50/litre",
-				"amt":1,
-				"rt":50,
-				"exclude":false
-			},
-			{
-				"no":11,
-				"item":"Eggs",
-				"amount":"1 dozen",
-				"rate":"Rs.5/piece",
-				"amt":12,
-				"rt":5,
-				"exclude":false
-			},
-			{
-				"no":12,
-				"item":"Oil",
-				"amount":"1 Litre",
-				"rate":"Rs.100/litre",
-				"amt":1,
-				"rt":100,
-				"exclude":false
-			},
-			{
-				"no":13,
-				"item":"Banana",
-				"amount":"1 dozen",
-				"rate":"Rs 5/piece",
-				"amt":12,
-				"rt":5,
-				"exclude":false
-			}
-			],
-
-	"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-
-		// "itemRate":[
-		// {
-		// 	"item":"Wheat",
-			
-		// },
-		// {
-		// 	"item":"Sugar",
-			
-		// },
-
-		// {
-		// 	"item":"Eggs",
-			
-		// },
-		// {
-		// 	"item":"Bajra",
-			
-		// },
-		// {
-		// 	"item":"Jowar",
-			
-		// },
-		// {
-		// 	"item":"Rice",
-			
-		// },
-		// {
-		// 	"item":"Oil",
-			
-		// },
-		// {
-		// 	"item":"Milk",
-			
-		// }
-
-		// ],
-		// "inventory":[
-		// {
-		// 		"no":1,
-		// 		"item":"Wheat",
-		// 		"amount":"400 Kg",
-		// 	},
-		// 	{
-		// 		"no":2,
-		// 		"item":"Sugar",
-		// 		"amount":"100 Kg",
-		// 	},
-		// 	{
-		// 		"no":3,
-		// 		"item":"Bajra",
-		// 		"amount":"200 Kg",
-		// 	},
-		// 	{
-		// 		"no":4,
-		// 		"item":"Rice",
-		// 		"amount":"400 Kg",
-		// 	},
-		// 	{
-		// 		"no":5,
-		// 		"item":"Jowar",
-		// 		"amount":"40 Kg",
-		// 	},
-		// 	{
-		// 		"no":6,
-		// 		"item":"Milk",
-		// 		"amount":"80 Litre",
-		// 	},
-		// 	{
-		// 		"no":7,
-		// 		"item":"Eggs",
-		// 		"amount":"10 dozen",
-		// 	},
-		// 	{
-		// 		"no":8,
-		// 		"item":"Oil",
-		// 		"amount":"50 Litre",
-		// 	},
-		// 	{
-		// 		"no":9,
-		// 		"item":"Jowar",
-		// 		"amount":"90 Kg",
-		// 	},
-		// 	{
-		// 		"no":13,
-		// 		"item":"Banana",
-		// 		"amount":"10 dozen"
-		// 	}]
-	}]
-},
-
-// "quizTemplate":{
-// 	"category":"Quiz",
-// 	"templates":[
-// 	 		{
-	 			
-// 	 			}}
-
-// },
-
 "quizQ1":{
 		"category":"Quiz",
 		"repeatforuser":false,
@@ -1778,5 +1539,26 @@
 				}
 			}
 		]	
-	}
+	},
+
+	"decisionInsurance":{
+		"category":"Decision Making",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+		"templates":[{
+				"templateId": 1,
+				"templateType": "decisionInsurance",
+				"dmQuestion":"An Insurance Advisor is offering you comprehensive shop insurance that covers fire, theft and  natural disasters.<br><br>Premium: Between Rs.15000 and Rs. 24,000 anuallly based on cover SumAssured: Between 3,00,000 and 5,00,000<br><br>Would you like to buy insurance?",			
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+	}]
+},
 }
+
+ubsApp.pages = $.extend(ubsApp.pages, ubsApp.salesConfig);

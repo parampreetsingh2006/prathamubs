@@ -71,7 +71,7 @@ class User{
     }
     setInventoryScore(inventoryScore)
     {
-        this.inventoryScore=inventoryScore;
+        this.inventoryScore=inventoryScore.toFixed(2);
     }
 
     getInventoryScore()
@@ -173,59 +173,58 @@ getScenario(category,playerChance)
         let object;
         let removeFromUser=false;
         let removeFromAll=false;
-
         if(this.scenariosArray[category].length==0)
-        {
-            this.setScenarioArray(scenariosArray);
-        }
-        // var scenariosApplicable=[];
-        // for(var i=0;i<this.scenariosArray[category].length;i++){
-        //     if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
-        //         scenariosApplicable.push(this.scenariosArray[category][i]);
-        //     }
-        // }
-        // if(scenariosApplicable.length==0){
-        //     this.setScenarioArray(scenariosArray);
-        //     for(var i=0;i<this.scenariosArray[category].length;i++){
-        //         if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
-        //             scenariosApplicable.push(this.scenariosArray[category][i]);
-        //         }
-        //     }
-        // }
-        
-        number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
-        object=this.scenariosArray[category][number];
-
-        /*while(ubsApp.pages[object.getName()].minimumInventoryScoreRequired>=userArray[playerChance].getInventoryScore())
-        {
-            number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
-            object=this.scenariosArray[category][number];
-        }*/
-        if(object.getRepeatforUser()==false)
-        {
-            removeFromUser=true;
-        }
-        if(object.getRepeatforAllUsers()==false)
-        {
-            removeFromAll=true;
-        }
-
-        if(object.getIfCalculatorRequired())
-        {
-            calculatorReq=true;
-        }
-        if(removeFromUser)
-        {
-            this.scenariosArray[category].splice(number,1);
-        }
-        if(removeFromAll)
-        {
-            for(var i=0;i<userArray.length;i++)
-            {
-                if(playerChance!=i)
-                userArray[i].scenariosArray[category].splice(number,1);
-            }
-        }
-        return object; 
-    }
+               {
+                   this.setScenarioArray(scenariosArray);
+               }
+               // var scenariosApplicable=[];
+               // for(var i=0;i<this.scenariosArray[category].length;i++){
+               //     if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
+               //         scenariosApplicable.push(this.scenariosArray[category][i]);
+               //     }
+               // }
+               // if(scenariosApplicable.length==0){
+               //     this.setScenarioArray(scenariosArray);
+               //     for(var i=0;i<this.scenariosArray[category].length;i++){
+               //         if(ubsApp.pages[this.scenariosArray[category][i].getName()].minimumInventoryScoreRequired<=userArray[playerChance].getInventoryScore()){
+               //             scenariosApplicable.push(this.scenariosArray[category][i]);
+               //         }
+               //     }
+               // }
+               
+               number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
+               object=this.scenariosArray[category][number];
+       
+               /*while(ubsApp.pages[object.getName()].minimumInventoryScoreRequired>=userArray[playerChance].getInventoryScore())
+               {
+                   number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
+                   object=this.scenariosArray[category][number];
+               }*/
+               if(object.getRepeatforUser()==false)
+               {
+                   removeFromUser=true;
+               }
+               if(object.getRepeatforAllUsers()==false)
+               {
+                   removeFromAll=true;
+               }
+       
+               if(object.getIfCalculatorRequired())
+               {
+                   calculatorReq=true;
+               }
+               if(removeFromUser)
+               {
+                   this.scenariosArray[category].splice(number,1);
+               }
+               if(removeFromAll)
+               {
+                   for(var i=0;i<userArray.length;i++)
+                   {
+                       if(playerChance!=i)
+                       userArray[i].scenariosArray[category].splice(number,1);
+                   }
+               }
+               return object; 
+           }
 }

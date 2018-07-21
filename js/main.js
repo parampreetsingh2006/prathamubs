@@ -11,6 +11,7 @@ let ubsPopupTemplate;
 let ubsTimerTemplate;
 let ubsAudioTemplate;
 let ubsCalculatorTemplate;
+let ubsDecisionInsuranceTemplate;
 let ubsLeaderBoardTemplate;
 let ubsPurchaseTemplate;
 let	ubsLuckTemplate;
@@ -32,7 +33,7 @@ var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision","purchase","luck","pay","payOff", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz"];
+let templateName = ["static", "decision","purchase","luck","pay","payOff", "wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","decisionInsurance"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
 monopoly.numplayers=0;
@@ -89,7 +90,6 @@ ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 	object.cash="Rs. "+userArray[playerChance].getplayerScore();
 	object.credit="Rs. "+userArray[playerChance].getCredit();
 	object.sliderValue=userArray[playerChance].getInventoryScore();
-	
 	object.inventoryValue=userArray[playerChance].getInventoryScore()*1000;
 	object.creditLimit="Rs. "+userArray[playerChance].getCreditLimit();
 	tempVar.html+=ubsPurchaseTemplate(object);
@@ -132,6 +132,17 @@ ubsApp.getPayOffTemplate=function(templateConfig,tempVar){
 	tempVar.html+=ubsPayOffTemplate(object);
 }
 
+ubsApp.getDecisionInsuranceTemplate=function(templateConfig,tempVar){
+var object={};
+object.balance = userArray[playerChance].getBankBalance();
+object.cash = userArray[playerChance].getplayerScore();
+object.debt = userArray[playerChance].getCredit();
+object.inventory = userArray[playerChance].getInventoryScore();
+object.inventoryValue = (userArray[playerChance].getInventoryScore()*1000);
+object.reputationPts = userArray[playerChance].getReputationPts();
+object = $.extend(true, templateConfig, object);
+tempVar.html+=ubsDecisionInsuranceTemplate(object);
+}
 ubsApp.getWheelOfFortuneTemplate = function(templateConfig, tempVar){
 	ubsApp.updateTemplateForFortuneWheel(templateConfig, tempVar.wheelConfig);
 	tempVar.html += wheelOfFortuneTemplate(templateConfig);
@@ -397,9 +408,6 @@ ubsApp.nextQuizQuestion=function(page, answer, name){
 	  }
 	  $("#correctAnswers").text(c);
   }
-  else{
-  	console.log("option not slected");
-  }
 }
 
 ubsApp.doneQuiz=function(){
@@ -442,20 +450,34 @@ ubsApp.initializeQuiz=function(){
 }
 
 ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
-	time = totalTime - $("#seconds").html();
-	reduce = 0.85*total/1000;                                  //Multiplier from Inventory % to cash is 1000
-	var x = userArray[playerChance].getInventoryScore();
-	x=x-reduce;
-	userArray[playerChance].setInventoryScore(x);
 
+	let time = totalTime - $("#seconds").html();
+	let c = userArray[playerChance].getplayerScore();
+	let r = userArray[playerChance].getReputationPts();                           
+	let s = userArray[playerChance].getInventoryScore();
+
+	s-=0.85*total/(1000);									//Multiplier from Inventory % to cash is 1000
+	userArray[playerChance].setInventoryScore(s);
 	var userTotal = $("#receiptTotal").val();
-
 	if(userTotal==total){
-		console.log("Time taken: "+time+"\nAnswer is right :"+total)
-		//use time taken to decide how many points to give
+
+		userArray[playerChance].setplayerScore(c+total*31);
+
+		if(time*100.0/totalTime<100/3.0)r+=3;
+		else if (time*100.0/totalTime<200/3.0)r+=2;
+		else if (time*100.0/totalTime<100)r+=1;
+
+		userArray[playerChance].setReputationPts(r);
+
 	}else{
-		console.log("Time taken: "+time+"\nAnswer is wrong :"+total)
-		//decreaseInventory
+
+		if(userTotal>total){
+			userArray[playerChance].setReputationPts(r-1);
+			userArray[playerChance].setplayerScore(c+total*31);
+		}
+		else{
+			userArray[playerChance].setplayerScore(c+userTotal*31);
+		}
 	}
 	ubsApp.checkPageorBoard(page,amount,hideScenarios);
 }
@@ -465,7 +487,7 @@ ubsApp.calculateBill = function(){
 	var item = document.getElementsByName('amt');
 	for(var i=0;i<item.length;i++){
         if(parseInt(item[i].value))
-            total += parseInt(parseInt(item[i].value));
+            total += parseFloat(item[i].value);
     }
 	document.getElementById("receiptTotal").value=total;
 }
@@ -485,10 +507,9 @@ ubsApp.selectAvailableItems = function(config){
 		config.order[arr[i]].exclude = true;
 	}
 	let val=0;
-	for(let i=0;i<noOfItems;i++)
-	{
+	for(let i=0;i<noOfItems;i++){
 		if(config.order[i].exclude==false){
-			val+=config.order[i].amt * config.order[i].rt;
+			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[config.order[i].item];
 		}
 	}
 	config["tempTotal"] = val;
@@ -590,6 +611,7 @@ ubsApp.intitializeTemplates = function() {
 	ubsLuckTemplate=Template7.compile(ubsApp.luckyUnluckyTemplate);
 	ubsPayOffTemplate=Template7.compile(ubsApp.payOffTemplate);
 	ubsOrdertemplate = Template7.compile(ubsApp.salesTemplate);
+	ubsDecisionInsuranceTemplate = Template7.compile(ubsApp.decisionInsuranceTemplate);
 
 }
 
