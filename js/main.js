@@ -873,10 +873,10 @@ ubsApp.playDecisionTemplate =function(decisionConfig){
 ubsApp.currentPlayerContents=function(){
 	$("#player").html(userArray[playerChance].getplayerName());
 	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
-	document.getElementById("bankBalance").innerHTML="Rs. "+userArray[playerChance].getBankBalance();
-	document.getElementById("cash").innerHTML="Rs. "+userArray[playerChance].getplayerScore();
-	document.getElementById("debt").innerHTML="Rs. "+userArray[playerChance].getCredit();
-	document.getElementById("inventoryValueContent").innerHTML="Rs. "+(userArray[playerChance].getInventoryScore()*1000);
+	document.getElementById("bankBalance").innerHTML="₹ "+userArray[playerChance].getBankBalance();
+	document.getElementById("cash").innerHTML="₹ "+userArray[playerChance].getplayerScore();
+	document.getElementById("debt").innerHTML="₹ "+userArray[playerChance].getCredit();
+	document.getElementById("inventoryValueContent").innerHTML="₹ "+(userArray[playerChance].getInventoryScore()*1000);
 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
 	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
 }

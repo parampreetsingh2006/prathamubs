@@ -42,7 +42,7 @@ ubsApp.translation={
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
     "bankBalanceTitle":"बैंक राशि",
-    "debtTitle":"का कर्ज",
+    "debtTitle":"कर्ज",
     "cashTitle":"कैश",
     "creditTitle":"श्रेय",
     "creditLimitTitle":"श्रेय सीमा",
@@ -171,8 +171,11 @@ ubsApp.translation={
 
     //Decision
 
+    "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",
     "inventory":"इन्वेंटरी",
     "invVal":"प्रतिष्ठा अंक",
     "repPoints":"इन्वेंटरी मूल्य",
     "Decision":"निर्णय",
+    "yes":"हाँ",
+    "no":"नहीं",
 }

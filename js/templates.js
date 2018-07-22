@@ -708,7 +708,7 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
 '   <div id="decisionTitle">'+
 '       <span id="decisionEmoji"></span>    '+
-'       <span id="decisionHeading">Decision</span>'+
+'       <span id="decisionHeading">{{Decision}}</span>'+
 '   </div>'+
 ''+
 '   <div id="question_answer_decision">'+
@@ -716,8 +716,8 @@ ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
 '           {{dmQuestion}}'+
 '       </div>'+
 '       <div id="yes_no">'+
-'           <span id="decisionYes"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">YES</button></span>'+
-'           <span id="decisionNo"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">No</button></span>'+
+'           <span id="decisionYes"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">{{YES}}</button></span>'+
+'           <span id="decisionNo"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">{{NO}}</button></span>'+
 '       </div>'+
 '   </div>'+
 '       '+
