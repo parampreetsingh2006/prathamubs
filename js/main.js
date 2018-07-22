@@ -928,7 +928,7 @@ ubsApp.translateScenarios=function(){
 						}
 					}
 
-					if(subKey == "order" && typeof subValue === 'object' && subValue.constructor === Array){
+					if(subKey && typeof subValue === 'object' && subValue.constructor === Array){
 
 						$.each(value.templates[index][subKey], function( superSubIndex, superArrayValue ) {
 
