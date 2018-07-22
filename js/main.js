@@ -505,7 +505,7 @@ ubsApp.selectAvailableItems = function(config){
 	let val=0;
 	for(let i=0;i<noOfItems;i++){
 		if(config.order[i].exclude==false){
-			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[config.order[i].item];
+			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[config.order[i].itemId];
 		}
 	}
 	config["tempTotal"] = val;

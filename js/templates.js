@@ -363,7 +363,7 @@ ubsApp.leaderBoardTemplate=
 '                       <td></td>'+
 '                       <td></td>'+
 '                       <td><b>Total</b></td>'+
-'                       <td><input type="number"  id="receiptTotal" class="amount" ></td>    '+
+'                       <td><input type="number"  value="0" id="receiptTotal" class="amount" ></td>    '+
 '                     </tr>'+
 '                   </tbody>'+
 '                 </table>'+
@@ -723,9 +723,9 @@ ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
 '       '+
 '       <div class="row" id="leftInfo">'+
 '           <div class="col-md-6">'+
-'               BANK BALANCE  <br>'+
-'               CASH          <br>'+
-'               DEBT          <br>'+
+'               {{bankBalanceTitle}}  <br>'+
+'               {{cashTitle}}          <br>'+
+'               {{debtTitle}}          <br>'+
 '           </div>'+
 '           <div class="col-md-1">'+
 '               : <br>'+
@@ -733,16 +733,16 @@ ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
 '               : <br>'+
 '           </div>'+
 '           <div class="col-md-5">'+
-'               <span>Rs. {{balance}}</span><br>'+
-'               <span>Rs. {{cash}}</span><br>'+
-'               <span>Rs. {{debt}}</span><br>'+
+'               <span>₹ {{balance}}</span><br>'+
+'               <span>₹ {{cash}}</span><br>'+
+'               <span>₹ {{debt}}</span><br>'+
 '           </div>'+
 '       </div>'+
 '       <div class="row" id="rightInfo">'+
 '           <div class="col-md-7" >'+
-'               INVENTORY         <br>'+
-'               INVENTORY VALUE   <br>'+
-'               REPUTATION POINTS <br>'+
+'               {{inventoryTitle}}         <br>'+
+'               {{invVal}}   <br>'+
+'               {{repPoints}} <br>'+
 '           </div>'+
 '           <div class="col-md-1">'+
 '               : <br>'+

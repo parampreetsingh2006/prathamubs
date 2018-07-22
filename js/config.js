@@ -1499,6 +1499,13 @@
 		"templates":[{
 				"templateId": 1,
 				"templateType": "decisionInsurance",
+				"Decision":"{{Decision}}",
+				"bankBalanceTitle":"{{bankBalanceTitle}}",
+				"debtTitle":"{{debtTitle}}",
+				"cashTitle":"{{cashTitle}}",
+				"inventoryTitle":"{{inventoryTitle}}",
+				"invVal":"{{invVal}}",
+				"repPoints":"{{repPoints}}",
 				"dmQuestion":"An Insurance Advisor is offering you comprehensive shop insurance that covers fire, theft and  natural disasters.<br><br>Premium: Between Rs.15000 and Rs. 24,000 anuallly based on cover SumAssured: Between 3,00,000 and 5,00,000<br><br>Would you like to buy insurance?",			
 				"onClickPage": {
 					"nextPage" : "",

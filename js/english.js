@@ -78,9 +78,9 @@ ubsApp.translation={
         "itemRateDisplay":{
 
             "Wheat":"₹ 50/kg",
-            "Rice":"₹ 50/kg",
+            "Rice":"₹ 110/kg",
             "Dal":"₹ 80/kg",
-            "Sugar":"₹ 110/kg",
+            "Sugar":"₹ 50/kg",
             "Milk":"₹ 45/litre",
             "Oil":"₹ 125/litre",
             "Rope":"₹ 35/10 m",
@@ -148,7 +148,12 @@ ubsApp.translation={
         "Biscuits":"Biscuits",
         "Soap":"Soap",
         "Shampoo":"Shampoo",
-        "Detergent":"Detergent"
+        "Detergent":"Detergent",
+
+        //Decision
+        "invVal":"INVENTORY VALUE",
+        "repPoints":"REPUTATION POINTS",
+        "Decision":"Decision",
 
 
     }
