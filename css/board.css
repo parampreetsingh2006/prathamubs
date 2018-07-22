@@ -44,7 +44,7 @@
 }
 
 .square2 {
-  flex-grow: 1;
+  flex-grow: 0.715;
   outline: 1px solid black;
   display: flex;
   flex-direction: column;

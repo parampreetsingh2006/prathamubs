@@ -1,4 +1,84 @@
  ubsApp.pages = {
+	"q1":{
+		"category":"Sales",
+		"repeatforuser":false,
+		"repeatforall":true,
+		"questionTime":3000,
+		"optionsTime":2000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"10",
+		"inventoryScoreToBeChanged":"10",
+		"videoLink":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\"> </img>",
+	 	"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "decision",
+				"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
+				"question": "{{question1}}",
+				"questionTime":3000,
+				"optionsTime":2000,
+				//"answer":"355",
+				//"display_score":true,
+				"options": [
+				    {
+						"optionName":"q1", 
+						"optionValue": "355",
+						"id":1,
+						"amount":355,
+						"inventoryScoreToBeChanged":-10,
+						"priority": 1
+					},
+					{
+						"optionName": "q1",
+						"optionValue": "255",
+						"id":2,
+						"amount":-355,
+						"inventoryScoreToBeChanged":-5,
+						"priority": 2
+					},
+					{
+						"optionName":"q1",
+						"optionValue": "155",
+						"id":3,
+						"amount":-355,
+						"inventoryScoreToBeChanged":-5,
+						"priority":3
+					}	
+				],
+				"optionPageMap": {
+					"1":{
+						"page": "q1-correct",
+						"popup":""
+					},
+					"2": {
+						"page": "q1-wrong",
+						"popup":""
+					},
+					"3": {
+						"page": "q1-vvwrong",
+						"popup":""
+					}
+				},
+				//"width": "col-lg-8 col-md-8 col-xs-8",			
+				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
+			},
+			{
+				"templateId":6,
+				"templateType":"timerTemp",
+				"time":21,
+				"divID":"countdowntimer",
+				"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:3%;",
+				//"redirect":"choicePage"
+			},
+			{
+				"tempalteId":1,
+				"templateType":"static",
+				"style":"position:absolute;bottom:5%;",
+				"src":"<button onclick=\"ubsApp.generateVideo()\" id=\"helpButton\">Help</button>"
+			}
+		]
+	},
+
 	
 	"rollingDice":[
 		{
@@ -100,86 +180,7 @@
 	},
 	
 
-	"q1":{
-		"category":"Sales",
-		"repeatforuser":false,
-		"repeatforall":true,
-		"questionTime":3000,
-		"optionsTime":2000,
-		"displayCalculator":true,
-		"minimumInventoryScoreRequired":"10",
-		"inventoryScoreToBeChanged":"10",
-		"videoLink":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\"> </img>",
-	 	"templates":[
-	 		{
-				"templateId": 1,
-				"templateType": "decision",
-				"questionStyle":"font-size:1.3vw;background-color:#99ff66;border-radius: 3vw;padding:2vw;",
-				"question": "question1",
-				"questionTime":3000,
-				"optionsTime":2000,
-				//"answer":"355",
-				//"display_score":true,
-				"options": [
-				    {
-						"optionName":"q1", 
-						"optionValue": "355",
-						"id":1,
-						"amount":355,
-						"inventoryScoreToBeChanged":-10,
-						"priority": 1
-					},
-					{
-						"optionName": "q1",
-						"optionValue": "255",
-						"id":2,
-						"amount":-355,
-						"inventoryScoreToBeChanged":-5,
-						"priority": 2
-					},
-					{
-						"optionName":"q1",
-						"optionValue": "155",
-						"id":3,
-						"amount":-355,
-						"inventoryScoreToBeChanged":-5,
-						"priority":3
-					}	
-				],
-				"optionPageMap": {
-					"1":{
-						"page": "q1-correct",
-						"popup":""
-					},
-					"2": {
-						"page": "q1-wrong",
-						"popup":""
-					},
-					"3": {
-						"page": "q1-vvwrong",
-						"popup":""
-					}
-				},
-				//"width": "col-lg-8 col-md-8 col-xs-8",			
-				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
-			},
-			{
-				"templateId":6,
-				"templateType":"timerTemp",
-				"time":21,
-				"divID":"countdowntimer",
-				"style":"color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;font-size:2vw ;position:absolute; top:5%; right:3%;",
-				//"redirect":"choicePage"
-			},
-			{
-				"tempalteId":1,
-				"templateType":"static",
-				"style":"position:absolute;bottom:5%;",
-				"src":"<button onclick=\"ubsApp.generateVideo()\" id=\"helpButton\">Help</button>"
-			}
-		]
-	},
-
+	
 	
 	"q1-correct":{
 		"templates":[
@@ -1189,82 +1190,6 @@
 			}
 		],	
 	},
-	"purchaseScenario":{
-		"category":"Purchase",
-		"templates":[
-			{
-				"templateId":8,
-				"templateType":"purchase",
-			}
-		]
-
-	},
-	"luckyUnluckyScenario1":{
-		"category":"Luck",
-		"templates":[
-		{
-			"templateId":9,
-			"templateType":"luck",
-			"question":"luckQuestion1",//question Key
-			"amount":1000,
-		}
-	]
-	},
-
-	"luckyUnluckyScenario2":{
-		"category":"Luck",
-		"templates":[
-		{
-			"templateId":9,
-			"templateType":"luck",
-			"question":"luckQuestion2",//question Key
-			"amount":-1000,
-		}
-	]
-	},
-	
-	"paymentScenario1":{
-		"category":"Payment",
-		
-		"templates":[
-		{
-			"templateId":10,
-			"templateType":"pay",
-			"question":"paymentQuestion1",//question Key
-			"amount":-1000,
-		}
-	]
-
-	},
-
-	
-	"paymentScenario2":{
-		"category":"Payment",
-		
-		"templates":[
-		{
-			"templateId":10,
-			"templateType":"pay",
-			"question":"paymentQuestion2",//question Key
-			"amount":-1000,
-		}
-	]
-
-	},
-	
-	"PayOffScenario":{
-		"category":"PayOff",
-		
-		"templates":[
-		{
-			"templateId":11,
-			"templateType":"payOff",
-		}
-	]
-
-	},
-	
-
 	"customerCheatingResult":{
     	"templates":[
 		{
@@ -1521,7 +1446,7 @@
 		]
 	},
 
-	"quizResult":{
+	"generalQuizResult":{
 		"templates":[
 	 		{
 				"templateId": 1,
@@ -1530,6 +1455,7 @@
 				"quizResult":true,
 				"questionTime":3000,
 				"optionsTime":2000,
+				"points":1,
 				"questionHeading":"Result",
 				"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
 				"style":"position:absolute;text-align: center; top:70%",
@@ -1541,9 +1467,30 @@
 		]	
 	},
 
+	"luckQuizResult":{
+		"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "Your Result is: ",
+				"quizResult":true,
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"Result",
+				"amount":"",
+				"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+			}
+		]	
+	},
+
 	"decisionInsurance":{
-		"category":"Decision Making",
-		"repeatforuser":false,
+		"category":"Decision",
+		"repeatforuser":true,
 		"repeatforall":true,
 		"questionTime":3000,
 		"displayCalculator":true,
@@ -1561,4 +1508,9 @@
 },
 }
 
-ubsApp.pages = $.extend(ubsApp.pages, ubsApp.salesConfig);
+ubsApp.pages=$.extend(ubsApp.pages, ubsApp.salesConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.transferToBankConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.payOffConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.purchaseConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.paymentConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.luckConfig);

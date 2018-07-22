@@ -94,6 +94,12 @@
   transform: translateY(3px);
 }
 
+button[class="quizButtons"]:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 button[class="quizButtons"]:focus {outline:0;}
 
 input[class="quizButtons"]:focus {outline:0;}

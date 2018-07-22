@@ -324,7 +324,7 @@ ubsApp.leaderBoardTemplate=
 '    </div>'+
 '    <div class="col-md-6 col-sm-6 col-xs-6 receipt-gen">'+
 '       <div class = "heading">'+
-'           Receipt Generation'+
+'           {{receiptGen}}'+
 '       </div>'+
 '       <br>'+
 '       <div class="receipt">'+
@@ -354,7 +354,8 @@ ubsApp.leaderBoardTemplate=
 '                       {{/each}}'+
 '                     {{#if discount}}'+
 '                     <tr>'+
-'                       <td colspan="5" style="color:#009933;vertical-align:middle;"><i> Discount: &nbsp;&nbsp;{{discount}}</i></td>'+
+'                       <td colspan="4" style="color:#009933;vertical-align:middle;"><i> Discount: &nbsp;&nbsp;{{discount}}</i></td>'+
+'                       <td ><input id = "discount" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()" ></td>  '+
 '                     </tr>'+
 '                     {{/if}}'+
 '                     <tr>'+
@@ -372,7 +373,7 @@ ubsApp.leaderBoardTemplate=
 '    </div>'+
 '   <div class="col-md-4 col-sm-4 col-xs-4 tools">'+
 '       <div class = "heading">'+
-'           Tools'+
+'           {{Tools}}'+
 '       </div>'+
 // '       <div id="rateCard">'+
 // '           <center><b>Rate Card</b></center>'+
@@ -436,6 +437,10 @@ ubsApp.leaderBoardTemplate=
 '           <input id="calcButton" class="button gray" type="button" value="0" onclick="addToDisplay(0)">'+
 '           <input id="calcButton" class="button orange" type="button" value="=" onclick="addToDisplay(\'=\')">'+
 '           <input id="calcButton" class="button pink" type="button" value="-" onclick="addToDisplay(\'-\')">'+
+'           <input id="calcButton" class="button orange" type="button" value="DEL" onclick="addToDisplay(\'DEL\')">'+
+'           <input id="calcButton" class="button gray" type="button" value="." onclick="addToDisplay(\'.\')">'+
+'           <input id="calcButton" class="button orange" type="button" value="TBD" disabled onclick="addToDisplay(\'\')">'+
+'           <input id="calcButton" class="button pink" type="button" value="%" onclick="addToDisplay(\'%\')">'+
 '       </div>'+
 '       <span id = "minutes">00'+
 '           '+
@@ -455,7 +460,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   <div id="quizTitle">'+
 '       <span id="quizEmoji"></span>    '+
 '       <span id="quizHeading">Quiz</span>'+
-'       <span id="score"> SCORE: <span id="correctAnswers"></span>/5 </span>'+
+'       <span id="score"> SCORE: <span id="correctAnswers"></span>/3 </span>'+
 '   </div>'+
 '   <div id="questionHeading">{{questionHeading}}</div>'+
 '   <div id="question_answer">'+
@@ -471,7 +476,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       <div id="quizOk"><input type="submit" class=\'quizButtons\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
-'   <button id="quizDone" class=\'quizButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
+'   <button id="quizDone" disabled class=\'quizButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
 '   <button id="quizCancel" class=\'quizButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
 '</div>';
 
@@ -499,85 +504,206 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 '</div>';
     
 
+// ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
+
+// '       <div style="width:50%;height:100%;float:left; border-right:2px solid black; background-color:white;">'+
+// '           <div  class="screenTitle" style=" background-color:#ff6600; ">'+
+// '               {{purchase}}'+
+// '           </div>'+
+// '           <div  style="padding:10px;position: absolute;top: 48%;left:0%;">CURRENT <br>INVENTORY<br> LEVEL</div>'+
+// '           <div id="percent" style="{{style}}">{{sliderValue}}%</div>'+
+// '           <input type="range" value="{{sliderValue}}" id="mySlider"  oninput="ubsApp.updateInventoryLevel(this.value)">'+
+// '           <div id="value" style="{{style}}">Rs. {{inventoryValue}}</div>'+
+// '           <div style="position:absolute; bottom:3%;left:14.5%; font-weight:600;">'+
+// '               INVENTORY'+
+// '           </div>'+
+// '       </div>'+
+// '       <div id="result" ></div>'+
+// '       <button class="purchaseScreenButton" style="position: absolute;top: 50%;left: 46%;" onclick="ubsApp.fillUp() ">CONFIRM>></button>'+
+// '       <div style="width:50%;height:100%;float:right;background-color: #ffcc00;">'+
+// '           <div style="position:absolute; top:0%;right:0%;padding:10px; background-color:orangered; font-weight:600;">'+
+// '               BANK BALANCE: '+'<span id="bankBalanceValue">{{bankBalance}}</span><br>'+
+// '               CASH:'+ '<span id="cashValue">{{cash}}</span><br>'+
+// '               CREDIT: '+'<span id="creditValue">{{credit}}</span><br>'+
+// '               CREDIT LIMIT:'+'<span id="creditLimitValue">{{creditLimit}}</span><br>'+
+// '           </div>'+
+
+// '       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:10%;" onclick="">HELP</button>'+
+// '       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:5%;" onclick="ubsApp.pay()">DONE</button>'+
+// '       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:15%;" onclick="ubsApp.closeCurrentScenario()">NO, THANKS</button>'+
+// '       </div>'+
+// '       <div style="left:65%;top:45%;position: absolute;" >'+
+// '           NEW INVENTORY LEVEL:  <input type="text" id="newInventoryLevelText" style="width: 40px; border: 1px solid black;" readonly="readonly"><br><br>'+
+// '           COST: <input type="text" id="newCostText" style="width: 90px; border: 1px solid black;" readonly="readonly"><br><br>'+
+// '           <div id="parent1" ">PAY BY: <select style="border:1px solid black" id="pay1" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select>&nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" id="amount1" min="0">&nbsp&nbsp<button class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()" style="">Add Mode</button></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+// '           <div id="parent2" style="display:none;">PAY BY: <select style="border:1px solid black" id="pay2" style="display:none;" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select> &nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" min="0"   id="amount2"></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+// '           <div id="parent3" style="display:none;">PAY BY: <select style="border:1px solid black" id="pay3" style="display:none;" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select>&nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" min="0" id="amount3"></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+// '       </div>'+
+
+
+// '</div>';
+
 ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
 
-'       <div style="width:50%;height:100%;float:left; border-right:2px solid black; background-color:white;">'+
-'           <div  class="screenTitle" style=" background-color:#ff6600; ">'+
+'       <div  class="purchaseLeftContainer">'+
+'           <div class="iconContainer">'+
+'               <img src="images/purchase.png" style="object-fit: cover;">'+
+'           </div>'+
+'           <div  class="purchaseScreenTitle screenTitle">'+
 '               {{purchase}}'+
 '           </div>'+
-'           <div  style="padding:10px;position: absolute;top: 48%;left:0%;">CURRENT <br>INVENTORY<br> LEVEL</div>'+
-'           <div id="percent" style="{{style}}">{{sliderValue}}%</div>'+
+'           <div class="currentInventoryTitle">{{current}} <br>{{inventoryTitle}}<br> {{level}}</div>'+
+'           <div id="percent">{{sliderValue}}%</div>'+
 '           <input type="range" value="{{sliderValue}}" id="mySlider"  oninput="ubsApp.updateInventoryLevel(this.value)">'+
-'           <div id="value" style="{{style}}">Rs. {{inventoryValue}}</div>'+
-'           <div style="position:absolute; bottom:3%;left:14.5%; font-weight:600;">'+
-'               INVENTORY'+
+'           <div id="value">Rs. {{inventoryValue}}</div>'+
+'           <div class="purchaseInventoryLabel">'+
+'               {{inventoryTitle}}'+
 '           </div>'+
 '       </div>'+
-'       <div id="result" ></div>'+
-'       <button class="purchaseScreenButton" style="position: absolute;top: 50%;left: 46%;" onclick="ubsApp.fillUp() ">CONFIRM>></button>'+
-'       <div style="width:50%;height:100%;float:right;background-color: #ffcc00;">'+
-'           <div style="position:absolute; top:0%;right:0%;padding:10px; background-color:orangered; font-weight:600;">'+
-'               BANK BALANCE: '+'<span id="bankBalanceValue">{{bankBalance}}</span><br>'+
-'               CASH:'+ '<span id="cashValue">{{cash}}</span><br>'+
-'               CREDIT: '+'<span id="creditValue">{{credit}}</span><br>'+
-'               CREDIT LIMIT:'+'<span id="creditLimitValue">{{creditLimit}}</span><br>'+
-'           </div>'+
+'       <div id="result"></div>'+
+'       <div><button class="purchaseScreenButton confirmButton" onclick="ubsApp.fillUp() ">{{confirmTitle}}>></button></div>'+
+'       <div class="purchaseRightContainer">'+
+'           <div style="width:100%;height:40%;">'+
+'               <div class="purchaseTopRightScoreBoard">{{bankBalanceTitle}}: '+'<span id="bankBalanceValue">{{bankBalance}}</span><br>'+
+'               <span>{{cashTitle}}:</span>'+ '<span id="cashValue">{{cash}}</span><br>'+
+'               <span>{{creditTitle}}:</span>'+'<span id="creditValue">{{credit}}</span><br>'+
+'               <span>{{creditLimitTitle}}:</span>'+'<span id="creditLimitValue">{{creditLimit}}</span><br>'+
+'           </div></div>'+
+'       <div class="purchaseInputForm">'+
+'           <div style="margin-left:20%;">'+
+'           <span>{{newInventoryLevelTitle}}:</span> '+
+'           <input type="text" id="newInventoryLevelText" style="width: 40px;" class="borderB1" readonly="readonly"><br><br>'+
+'           <span>{{costTitle}}: <span><input type="text" id="newCostText" style="width: 90px;" class="borderB1" readonly="readonly"><br><br>'+
+'           <div id="parent1" >'+
+'               {{payByTitle}}: <select class="borderB1" id="pay1" ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText" id="amount1" min="0">&nbsp&nbsp<button class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()" style="">{{addModeTitle}}</button>'+
+'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+'           <div id="parent2" style="display:none;">'+
+'               {{payByTitle}}: <select class="borderB1" id="pay2"  ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select> &nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText"  id="amount2">'+
+'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+'           <div id="parent3" style="display:none;">'+
+'               {{payByTitle}}: <select class="borderB1" id="pay3"  ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText" id="amount3">'+
+'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+'       </div></div>'+
+'       <div class="purchaseDivBottomThreeButton" >'+
+'           <button class="purchaseScreenButton bottomButton"  onclick="">{{helpTitle}}</button>'+
+'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.pay()">{{doneTitle}}</button>'+
+'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.closeCurrentScenario()">{{noThanksTitle}}</button>'+
+'       </div>'+
+'</div>'+
 
-'       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:10%;" onclick="">HELP</button>'+
-'       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:5%;" onclick="ubsApp.pay()">DONE</button>'+
-'       <button class="purchaseScreenButton" style="position:absolute;bottom:2%;right:15%;" onclick="ubsApp.nextMove()">NO, THANKS</button>'+
-'       </div>'+
-'       <div style="left:65%;top:45%;position: absolute;" >'+
-'           NEW INVENTORY LEVEL:  <input type="text" id="newInventoryLevelText" style="width: 40px; border: 1px solid black;" readonly="readonly"><br><br>'+
-'           COST: <input type="text" id="newCostText" style="width: 90px; border: 1px solid black;" readonly="readonly"><br><br>'+
-'           <div id="parent1" ">PAY BY: <select style="border:1px solid black" id="pay1" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select>&nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" id="amount1" min="0">&nbsp&nbsp<button class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()" style="">Add Mode</button></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
-'           <div id="parent2" style="display:none;">PAY BY: <select style="border:1px solid black" id="pay2" style="display:none;" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select> &nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" min="0"   id="amount2"></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
-'           <div id="parent3" style="display:none;">PAY BY: <select style="border:1px solid black" id="pay3" style="display:none;" ><option value="cash">CASH</option><option value="cheque">CHEQUE</option><option value="credit">CREDIT</option></select>&nbsp&nbsp AMOUNT:<input type="number" class="enterAmountText" min="0" id="amount3"></div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
-'       </div>'+
 
 
 '</div>';
 
 ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-color:white;">'+
 '       <div class="screenTitle" style="background-color:{{background}}; color:{{color}}">'+
-'            {{title}}'+
+'            {{scenarioTitle}}'+
 '       </div>'+
-'       <div id="scenario" style="border:1px solid black; background-color:{{background}};font-weight:600; color:{{color}}; position:absolute;left:25%;right:25%;top:30%; padding:1%;">'+
-'          {{scenario}}<br>'+
-'       {{#if helpRequired}}'+
-'       <button  style="padding:5px;float:right;border:0; border-radius:20px;">HELP</button>'+
-'       {{/if}}'+
+'       <div id="scenario" class="borderB1" style="background-color:{{background}}; color:{{color}};">'+
+'           {{scenario}}<br>'+
+'           {{#if helpRequired}}'+
+'               <button class="luckHelpButton">{{helpTitle}}</button>'+
+'           {{/if}}'+
 '       </div>'+
-'       <div id="result" style="position:absolute;left:40%;bottom:3%; color:red; font-weight:600;"></div>'+
-'       <div style="font-weight:600;width:15%; position:absolute;left:24%;top:45%; padding:1%;">'+
-'          {{payMessage}}'+
-'       <button  style="padding:7px;border:0; width:55%;background-color:red; border-radius:20px; color:white;" onclick="ubsApp.payFromBank({{amount}})">PAY</button>'+
+'       <div id="result"></div>'+
+'       <div class="luckYouCanPayContainer">'+
+'          <div style="display:inline-block;">{{payMessage}}</div>'+
+'           <div style="display:inline-block; width:43%;">'+
+'               <button class="luckPayButton" onclick="ubsApp.payFromBank({{amount}})">{{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}</button>'+
+'           </div>'+
 '       </div>'+
-'       <div style="font-weight:600;width:45%; position:absolute;left:24%;top:55%; padding:1%;">'+
+'       {{#if negative}}<div class="alternateMessageContainer">'+
 '          {{alternalteMessage}}'+
-'       <button  onclick="ubsApp.runQuizTemplate()" style="padding:7px;border:0; width:25%;background-color:orangered; border-radius:20px; color:white;">TAKE A QUIZ</button>'+
-'       {{#if wildCard}}'+
-'       OR   <button style="padding:7px;border:0; width:25%;background-color:green; border-radius:20px; color:white;">CHECK WILD CARD</button>    '+
+'           <button  class="takeQuizWildCardButton" style="background-color:orangered;" onclick="ubsApp.runQuizTemplate(\'{{amount}}\',\'{{quizType}}\')">{{takeQuizTitle}}</button>'+
+'           {{or}}   <button class="takeQuizWildCardButton" style="background-color:green;">{{checkWildCard}}</button>    '+
 '       {{/if}}'+
 '       </div>'+
 '</div>';
 
-ubsApp.payOffTemplate='<div style="width:100%; height:100%; ">'+
-'                <div style="background-color:#ffe62d;border:1px solid black;position:absolute;left:30%;top:25%;widht:40%; height:35%;right:30%;">'+
-'                      <div style="widht:100%;font-weight:600; padding:1%;" align="center">{{title}}</div><br>'+
-'                      <div><span style="position:absolute; left:10%;"> CASH: Rs. {{cash}}</span>'+
-'                      <span style="position:absolute; left:45%;"> BANK BALANCE: Rs. {{bankBalance}}</span><br></div>'+
-'                      <div><span style="position:absolute;left:10%;">Debt Amount:</span>'+
-'                      <span style="position:absolute; left:45%;">Rs. {{debt}}</span><br></div>'+
-'                      <span style="position:absolute; left:10%;">Amount to {{#if payOff}}pay:{{else}}transfer:{{/if}} </span>'+
-'                      <span style="position:absolute;left:45%;"><input type="number" id="debtPaymentText" style="border:1px solid black;"></span><br><br>'+
-'                      {{#if payOff}}<span style="position:absolute;left:10%;">Mode of Payment</span>{{/if}}'+
-'                      {{#if payOff}}<span style="position:absolute;left:45%;"><select style="border:1px solid black" id="payOffDropDown"><option value="cash">CASH</option><option value="cheque">CHEQUE</option></select> </span><br><br>{{/if}}'+
-'                      <div style="width:15%;position:absolute;left:30%;"><button style="width:100%;background-color:black;border:0;color:#ffe62d;  border-radius:10px;padding:0.5%;" {{#if payOff}}onclick="ubsApp.payDebt()" {{else}}onclick="ubsApp.transferToBank()"{{/if}}>{{#if payOff}}PAY{{else}}TRANSFER{{/if}}</button></div>'+
-'                      <div style="width:15%;position:absolute;left:40%;"><button style="width:100%;background-color:black;color:#ffe62d;border:0;position:absolute;left:50%; border-radius:10px;padding:0.5%;" onclick="ubsApp.nextMove()" >CANCEL</button></div>'+
+ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:white; ">'+
+'                <span class="imageContainer"><img class="payOffImageToken" src="images/{{color}}.png"></img></span>'+
+'                <div class="payOffContainer">'+
+'                      <div class="payOffTitle" align="center">'+
+'                           {{title}}'+
+'                      </div><br><br>'+
+'                      <div>'+
+'                           <span class="payOffSubTitleLeft">'+
+'                               {{cashTitle}}: '+
+'                               <span id="cashValue" >Rs. {{cash}}</span>'+
+'                           </span>'+
+'                           <span class="payOffSubTitleRight">'+
+'                               {{bankBalanceTitle}}:'+
+'                               <span id="bankBalanceValue">Rs. {{bankBalance}}</span>'+
+'                           </span>'+
+'                      </div><br>'+
+'                      {{#if #payOff}}'+
+'                           <div>'+
+'                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
+'                                    <span class="payOffLeftSubTitleValue">Rs. <span id="debtValue">{{debt}}<span>'+
+'                               </span><br>'+
+'                           </div><br>'+
+'                      {{/if}}'+
+'                      <span class="payOffSubTitleLeft">'+
+'                           {{#if payOff}}'+
+'                               {{amountToPayTitle}}:'+
+'                           {{else}}'+
+'                               {{amountToTransferTitle}}:'+
+'                           {{/if}}'+
+'                      </span>'+
+'                      <span class="payOffLeftSubTitleValue">'+
+'                           <input type="number" id="debtPaymentText" class="borderB1">'+
+'                      </span><br><br>'+
+'                      {{#if payOff}}'+
+'                           <span class="payOffSubTitleLeft">'+
+'                               {{modeOfPaymentTitle}}:'+
+'                           </span>'+
+'                      {{/if}}'+
+'                      {{#if payOff}}'+
+'                           <span class="payOffLeftSubTitleValue">'+
+'                               <select class="borderB1" id="payOffDropDown">'+
+'                                   <option value="cash">{{cashTitle}}</option>'+
+'                                   <option value="cheque">{{chequeTitle}}</option>'+
+'                               </select>'+
+'                           </span><br><br>'+
+'                      {{/if}}'+
+'                      <div class="payOffButtonContainer" style="left:30%;">'+
+'                           <button class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()" {{else}}onclick="ubsApp.transferToBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{else}}{{transferTitle}}{{/if}}</button>'+
+'                      </div>'+
+'                      <div style="left:40%;" class="payOffButtonContainer">'+
+'                           <button class="payOffButton" style="margin-left:50%;" onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
+'                      </div>'+
 '                </div>'+
-'       <div id="result" style="position:absolute;left:40%;bottom:3%; color:red; font-weight:600;"></div>'+
+'       <div id="result"></div>'+
 '</div>';
+
+
+ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
+'   <div style="height: 100%;width:100%;">'+
+'   <div class="centerScoreBoardContainer" style="margin:0 auto; ">'+
+'                <div class="centerScoreBoardContainerDiv1">'+
+'                   {{bankBalanceTitle}} '+
+'                   <span id="bankBalance">{{bankBalanceAmount}}</span>'+
+'               </div>'+
+'                <div class="centerScoreBoardContainerDiv2">'+
+'                   {{cashTitle}} '+
+'                   <span id="cash">{{cashAmount}}</span>'+
+'                   <button class="centerScoreBoardButton" onclick="ubsApp.openTransferToBank(\'transferToBank\')">{{transferTitle}}</button>'+
+'                </div>'+
+'                <div class="centerScoreBoardContainerDiv3">'+
+'                   {{debtTitle}}'+
+'                   <span id="debt">{{debtAmount}}</span>'+
+'                   <button class="centerScoreBoardButton" onclick="ubsApp.openPayOffScenario(\'PayOffScenario\')">'+
+'                       {{payOffTitle}}'+
+'                   </button>'+
+'               </div>'+
+'   </div>'+
+'   <div id="currentChanceDetails">'+
+'       <span id"playernametitle">{{playerNameLabel}}:<span id="player" style="padding: 1vw">masbd</span></span>&nbsp;'+
+'       <span id="diceValueTitle">{{diceValueLabel}}:<span id="diceval" style="padding: 1vw"></span></span>'+
+'   </div>'+
+'  </div>'+
+'</div>';
+
 
 ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
 '   <div id="decisionTitle">'+
@@ -630,4 +756,3 @@ ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
 '           </div>'+
 '       </div>'+
 '</div>';
-    

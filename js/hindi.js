@@ -15,6 +15,8 @@ ubsApp.translation={
     "inventorySideBar":"इन्वेंटरी",
     "meritSideBar":"योग्यता",
     "cash":"कैश",
+    "cheque":"चेक",
+    
     "rollit":"घुमाओ",
     "endGame":"अंत खेल",
     "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
@@ -27,16 +29,21 @@ ubsApp.translation={
     "medium":"मध्यम",
     "hard":"कठिन",
     "name":"नाम",
+    
     //This is where new addition started
     "inventoryTitle":"इन्वेंटरी",
     "weekTitle":"सप्ताह",
     "lastBalanceTitle":"अंतिम संतुलन",
     "insuranceTitle":"बीमा",  //   इनश्योरेंस
     "reputationTitle":" प्रतिष्ठा अंक", // नेकनामी  अंक
-
+    "inventoryValueTitle":"इन्वेंटरी मूल्य",
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
-
+    "bankBalanceTitle":"बैंक राशि",
+    "debtTitle":"का कर्ज",
+    "cashTitle":"कैश",
+    "creditTitle":"श्रेय",
+    "creditLimitTitle":"श्रेय सीमा",
     "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
     "q1-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
     "q1-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
@@ -63,12 +70,53 @@ ubsApp.translation={
     "luckQuestion2":"आपने रु। आयकर का भुगतान नहीं करने के लिए 1000।",
     "validAmount":"कृपया एक वैध राशि दर्ज करें",
 
+
     //Main Screen
     "Card Wallet":"बटुआ",
     "Roll it":"पासा घुमाओ",
     "Purchase":"खरीद फरोख्त",
     "Take Exam":"परीक्षा दें",
     "Rs": "₹",
+
+
+
+
+    "transferTitle":"ट्रांसफर ",
+    "payOffTitle":"भुगतान करें",
+
+    "payDebtTitle":"पाय डेब्ट",
+    "transferToBankTitle":"ट्रांसफर कैश तो बैंक ",
+    "payTitle":"पाय ",
+    "debtAmountTitle":"डेब्ट राशि",
+    "cancelTitle":"कैंसिल ",
+    "amountToPayTitle":"राशि तो पाय",
+    "amountToTransferTitle":"राशि तो ट्रांसफर",   
+    "modeOfPaymentTitle":"भुगतान का प्रकार",
+    "helpTitle":"मदद",
+    "gainTitle":"लाभ",
+    "youCan":"आप ऐसा कर सकते हैं",
+    "alternateMessage":"या ठीक करने के लिए",
+    "takeQuizTitle":"कोई क्विज लें",
+    "checkWildCard":"वाइल्ड कार्ड की जांच करें",
+    "noDebt":"आपके पास कोई डेब्ट नहीं है",
+    "level":"स्तर",
+    "current":"वर्तमान",
+    "confirmTitle":"कन्फर्म",
+    "newInventoryLevelTitle":"नई इन्वेंटरी स्तर",
+    "costTitle":"कॉस्ट",
+    "amountTitle":"राशि",
+    "payByTitle":"पाय द्वारा",
+    "addModeTitle":"मोड जोड़ें",
+    "doneTitle":"ठीक है",
+    "noThanksTitle":"जी नहीं, धन्यवाद",
+    "or":"या",
+
+    "lessMoney":"आपने कम पैसा दिया है",
+    "moreMoney":"आपने अधिक पैसा लगाया है",
+    "moreCash":"आपने अधिक कैश लगाया है",
+    "bankBalance":"आपके पास असंतुलित बैंक बैलेंस है",
+    "lotDebt":"आपके पास बहुत डेब्ट है",
+    "pleaseConfirm":"कृपया जो राशि आप चाहते हैं उसे पुष्टि करें",
 
     //Sales
 
@@ -78,7 +126,7 @@ ubsApp.translation={
     "Dal":"दाल",
     "Rice":"चावल",
     "Rope":"रस्सी",
-    "Milk":"Milk",
+    "Milk":"दूध",
     "Eggs":"अंडे",
     "egg":"अंडा",
     "Oil":"तेल",
@@ -92,26 +140,29 @@ ubsApp.translation={
     "Packet":"पैकेट",
 
     "Order":"किराना सूची",
-    "Super Market Receipt":"सुपर मार्केट रसीद",
+    "receiptHeading":"सुपर मार्केट रसीद",
+    "receiptGen":"किराने का बिल",
     "Quantity":"मात्रा",
     "Rate":"भाव",
+    "Items":"वस्तु का नाम",
     "Amount":"रकम",
     "Discount":"छूट",
     "Customer":"ग्राहक",
+    "Tools":"उपकरण",
 
-    "itemRateHindi":{
-            "Wheat":"₹ 50/kg",
-            "Rice":"₹ 50/kg",
-            "Dal":"₹ 80/kg",
-            "Sugar":"₹ 110/kg",
-            "Milk":"₹ 45/litre",
-            "Oil":"₹ 125/litre",
-            "Rope":"₹ 35/10 m",
-            "Chocolate":"₹ 40/चॉकलेट",
-            "Eggs":5.5"₹ 5.5/अंडा",
-            "Biscuits":"₹ 25/पैकेट",
-            "Soap":"₹ 27/साबुन",
-            "Shampoo":"₹ 45/100ml",
-            "Detergent":"₹ 37/500gm"
+    "itemRateDisplay":{
+            "गेहूँ":"₹ 50/kg",
+            "चावल":"₹ 50/kg",
+            "दाल":"₹ 80/kg",
+            "चीनी":"₹ 110/kg",
+            "दूध":"₹ 45/litre",
+            "तेल":"₹ 125/litre",
+            "रस्सी":"₹ 35/10 m",
+            "चॉकलेट":"₹ 40/चॉकलेट",
+            "अंडे":"₹ 5.5/अंडा",
+            "बिस्कुट":"₹ 25/पैकेट",
+            "साबुन":"₹ 27/साबुन",
+            "शैम्पू":"₹ 45/100ml",
+            "डिटर्जेंट":"₹ 37/500gm"
         }
 }

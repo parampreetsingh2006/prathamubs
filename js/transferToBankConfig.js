@@ -1,0 +1,18 @@
+ubsApp.transferToBankConfig={
+    "transferToBank":{
+		"category":"TransferToBank",
+		"templates":[
+		{
+			"templateId":11,
+			"templateType":"transfer",
+			"title":"{{transferToBankTitle}}",
+			"cashTitle":"{{cashTitle}}",
+			"bankBalanceTitle":"{{bankBalanceTitle}}",
+			"transferTitle":"{{transferTitle}}",
+			"chequeTitle":"{{cheque}}",			
+			"amountToTransferTitle":"{{amountToTransferTitle}}",
+			"cancelTitle":"{{cancelTitle}}"
+		}
+	]
+	},
+}

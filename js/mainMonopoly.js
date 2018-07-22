@@ -1,6 +1,7 @@
 monopoly.ubsBoardTemplate = undefined;
 monopoly.ubsMonopolyStaticTemplate =undefined;
 monopoly.ubsformTemplate = undefined;
+monopoly.centerScoreBoardTemplate=undefined;
 monopoly.boardConfig={};
 monopoly.salesScenarioArray=[];
 monopoly.luckScenarioArray=[];
@@ -18,6 +19,7 @@ monopoly.scenario ={};
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
 var ubsformTemplate= monopoly.ubsformTemplate;
+var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
 var boardConfig = monopoly.boardConfig;
 var salesScenarioArray=monopoly.salesScenarioArray;
 var luckScenarioArray=monopoly.luckScenarioArray;
@@ -41,12 +43,13 @@ $(document).ready(function(){
 	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
-monopoly.intitializeTemplates = function() {
+monopoly.intitializeTemplates = function(){
 
 	ubsBoardTemplate = Template7.compile(monopoly.boardTemplate);
 	rollingDiceTemplate = Template7.compile(monopoly.rollingDiceTemplate);
   ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
   ubsformTemplate = Template7.compile(monopoly.formTemplate);
+  ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
 }
 monopoly.initialiseCategory = function(){
       for(let block = 0; block<boardConfig.top_row.length; block++){
@@ -66,7 +69,10 @@ monopoly.initialiseCategory = function(){
 monopoly.renderPageforBoard = function(page) {
 	let html = "";
 	for(let i=0; i< page.length; i++) {
-		let templateConfig = page[i];
+    let templateConfig = page[i];
+    if(templateConfig.weekDeadLine){
+      numberOfWeeksDeadline=templateConfig.weekDeadLine;
+    }
 		let templateType = templateConfig.templateType;
 		if(templateType == "board"){
       flag2=true;
@@ -105,13 +111,27 @@ monopoly.renderPageforBoard = function(page) {
 			html += rollingDiceTemplate(templateConfig);
 		}else if(templateType == "static") {
 			html += ubsStaticTemplate(templateConfig);
-		}
+    }
+    else if(templateType=="centerScoreBoard"){
+      var object={};
+      object.bankBalanceTitle=ubsApp.translation["bankBalanceTitle"]+":  ";
+      object.bankBalanceAmount="Rs. "+userArray[playerChance].getBankBalance();
+      object.cashAmount="Rs. "+userArray[playerChance].getplayerScore();
+      object.cashTitle=ubsApp.translation["cashTitle"]+": ";
+      object.debtTitle=ubsApp.translation["debtTitle"]+": ";
+      object.transferTitle=ubsApp.translation["transferTitle"];
+      object.payOffTitle=ubsApp.translation["payOffTitle"];
+      object.debtAmount="Rs. "+userArray[playerChance].getCredit();
+      object.playerNameLabel=ubsApp.translation["playerNameTitle"];
+      object.diceValueLabel=ubsApp.translation["diceValueTitle"];
+      html+=ubsCenterScoreBoardTemplate(object);
+    }
   }
 
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
 	
-	monopoly.translate();
+	
   if(flag2) {
 
      ubsApp.initializeLeaderBoard("Score");
@@ -133,9 +153,7 @@ monopoly.startScenarios = function(blockNo){
         let currentTemplateName=scenario.getName();
         let currentTemplate=ubsApp.pages[currentTemplateName].templates;
         let key=ubsApp.pages[currentTemplateName].templates[0].question;
-        if(key){
-          monopoly.generateQuestion(key,currentTemplate);
-        }
+        
         $('#monopolyBase').css("z-index",-10);
         $('#templateBase').css("z-index",10);
         
@@ -149,13 +167,6 @@ monopoly.startScenarios = function(blockNo){
        
   },1000);
 
-}
-
-
-monopoly.generateQuestion=function(key,template){
-    var question=ubsApp.translation[key];
-    template[0].question=question;
-    scenario.setTemplate(template);
 }
 
 monopoly.myMove = function(count, pId, currentPos) {
@@ -214,11 +225,10 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
-        user.setInventoryScore(60);
+        user.setInventoryScore(60.00);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
-        user.setInventoryScore(60);
         user.setplayerCurrentPos(0);
         user.setBankBalance(250000);
         user.setReputationPts(10);
@@ -344,54 +354,21 @@ monopoly.chooseLanguage=function(){
   jsElm.type = "text/javascript";
   jsElm.src = "js/"+language+".js";
   document.head.appendChild(jsElm);
-  var link  = document.createElement('link');
   
+  var link  = document.createElement('link');
+  languageSelected=language;
   link.rel  = 'stylesheet';
   link.type = 'text/css';
   link.href = 'css/'+language+'.css';
   document.head.appendChild(link);
   link.onload=function(){
-    console.log("Language css file loaded");
+    
+    
   }
   jsElm.onload=function(){
+    ubsApp.translateScenarios();
     monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
   }
 }
 
 
-monopoly.translate=function(){
-  
-  if(document.getElementById("weekTitle")){
-    document.getElementById("weekTitle").innerHTML=ubsApp.translation["weekTitle"]+":";
-    document.getElementById("insuranceTitle").innerHTML=ubsApp.translation["insuranceTitle"]+":";
-    document.getElementById("inventoryTitle").innerHTML=ubsApp.translation["inventoryTitle"]+":";
-    document.getElementById("reputationTitle").innerHTML=ubsApp.translation["reputationTitle"]+":";
-    document.getElementById("lastBalanceTitle").innerHTML=ubsApp.translation["lastBalanceTitle"]+":";
-    
-  }
-  
-  /*if(document.getElementById("scoreSideBar")){
-    document.getElementById("scoreSideBar").innerHTML=ubsApp.translation["scoreSideBar"];
-  	document.getElementById("documentSideBar").innerHTML=ubsApp.translation["documentSideBar"];
-  	document.getElementById("inventorySideBar").innerHTML=ubsApp.translation["inventorySideBar"];
-  	document.getElementById("meritSideBar").innerHTML=ubsApp.translation["meritSideBar"];
-  }*/
-  if(document.getElementById("enterPlayers"))
-    document.getElementById("enterPlayers").innerHTML=ubsApp.translation["enterPlayers"];
-  
-  if(document.getElementById("initPageTitle"))
-    document.getElementById("initPageTitle").innerHTML=ubsApp.translation["initPageTitle"];
-
-  if(document.getElementById("storePlayerDetailsButton"))
-    document.getElementById("storePlayerDetailsButton").innerHTML=ubsApp.translation["storePlayerDetailsButton"];
-
-  if(document.getElementById("computerRequiredTitle"))
-    document.getElementById("computerRequiredTitle").innerHTML=ubsApp.translation["computerRequiredTitle"];
-  if(document.getElementById("currentChanceDetails"))
-  {
-    let spanString=document.getElementById("currentChanceDetails").innerHTML;
-    spanString=spanString.replace(" Player Name: ",ubsApp.translation["playerNameTitle"]+": ");
-    spanString=spanString.replace("Dice Value: ",ubsApp.translation["diceValueTitle"]+":");
-    document.getElementById("currentChanceDetails").innerHTML=spanString;
-  }
-}

@@ -152,6 +152,7 @@ tr.strikeout td:before {
 #order:hover, #rateCard:hover, #inventory:hover, #bill:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
 #minutes{
 	left: 37%;
 }
@@ -161,7 +162,7 @@ tr.strikeout td:before {
 
 #colon{
 	left:51%;
-	top:67%;
+	top:69%;
 	position: absolute;
 	font-size: 5%;
 	color: #e5e6e8;
@@ -169,7 +170,7 @@ tr.strikeout td:before {
 
 #minutes, #seconds{
 	position: absolute;
-	top:70%;
+	top:72%;
 	height: 11%;
 	width: 14%;
 	border: .1vw solid black;
@@ -188,7 +189,7 @@ tr.strikeout td:before {
 }
 .butt{
 	position: absolute;
-	top: 83%;
+	top: 85%;
 	height: 11%;
 	width: 14%;
 	border: .05vw solid #505050;

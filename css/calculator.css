@@ -2,10 +2,11 @@
 	background-color:#3d4543;
 	border-radius:.8vw;
 	width: 90%;
-	height: 50%; 
+	height: 56%; 
 	margin:10% 5%;
 	border: .4rem solid black;
 	padding: 6%;
+	padding-left:7%;
 	font-size:1vw;
 }
 
@@ -13,7 +14,7 @@
 	width: 88%; 
 	height: 16%; 
 	margin-left:5%; 
-	margin-top: 5%;
+	margin-top: 3%;
 	border: 2px solid black; 
 	text-align: right;
 	background-color:#bccd95;
@@ -24,7 +25,7 @@
 
 #calcButton{
 	width:17%;
-	height: 13%; 
+	height: 11%; 
 	margin-left: 5%;
 	margin-top: 5%;
 	cursor:pointer;
