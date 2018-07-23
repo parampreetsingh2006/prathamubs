@@ -537,7 +537,7 @@ ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
 
 '       <div  class="purchaseLeftContainer">'+
 '           <div class="iconContainer">'+
-'               <img src="images/purchase.png" style="object-fit: cover;">'+
+'               <img src="images/purchase.png" class="icon">'+
 '           </div>'+
 '           <div  class="purchaseScreenTitle screenTitle">'+
 '               {{purchase}}'+
@@ -562,8 +562,8 @@ ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
 '       <div class="purchaseInputForm">'+
 '           <div style="margin-left:20%;">'+
 '           <span>{{newInventoryLevelTitle}}:</span> '+
-'           <input type="text" id="newInventoryLevelText" style="width: 40px;" class="borderB1" readonly="readonly"><br><br>'+
-'           <span>{{costTitle}}: <span><input type="text" id="newCostText" style="width: 90px;" class="borderB1" readonly="readonly"><br><br>'+
+'           <input type="text" id="newInventoryLevelText"  class="borderB1" readonly="readonly"><br><br>'+
+'           <span>{{costTitle}}: <span><input type="text" id="newCostText" class="borderB1" readonly="readonly"><br><br>'+
 '           <div id="parent1" >'+
 '               {{payByTitle}}: <select class="borderB1" id="pay1" ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText" id="amount1" min="0">&nbsp&nbsp<button class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()" style="">{{addModeTitle}}</button>'+
 '           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
@@ -589,6 +589,9 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-col
 '       <div class="screenTitle" style="background-color:{{background}}; color:{{color}}">'+
 '            {{scenarioTitle}}'+
 '       </div>'+
+'           {{#if icon}}<div class="iconContainer">'+
+'               <img src="images/{{icon}}.png" class="icon" style="">'+
+'           </div>{{/if}}'+
 '       <div id="scenario" class="borderB1" style="background-color:{{background}}; color:{{color}};">'+
 '           {{scenario}}<br>'+
 '           {{#if helpRequired}}'+

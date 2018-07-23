@@ -1,6 +1,6 @@
  ubsApp.pages = {
 	"q1":{
-		"category":"Sales",
+		
 		"repeatforuser":false,
 		"repeatforall":true,
 		"questionTime":3000,
@@ -57,7 +57,7 @@
 					"3": {
 						"page": "q1-vvwrong",
 						"popup":""
-					}
+					},
 				},
 				//"width": "col-lg-8 col-md-8 col-xs-8",			
 				"style": "align:center; position:absolute; top:4%; left:15%; width:70%; right:15%; height:85%; color:black; background-color:rgba(8,8,8,1); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5vw; padding:2vw 2vw 1vw 2vw;"
@@ -173,9 +173,9 @@
 						"style": "padding:1px;",
 						"display":"false",
 						"onClickPage": "q4"
-					}
+					},
 				]
-			}
+			},
 		]
 	},
 	
@@ -221,7 +221,7 @@
 				"onClickPage": {
 					"nextPage" : "",
 					"hideScenarios" : "true",
-				}
+				},
 		}
 	]
 },
@@ -264,7 +264,7 @@
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
-			}
+			},
 		}
 	]
 },
@@ -307,14 +307,14 @@
 			"onClickPage": {
 				"nextPage" : "",
 				"hideScenarios" : "true"
-			}
+			},
 		}
 	    ]
 	},
 		
 
 	"q2":{
-		"category":"Sales",
+		
 		"repeatforuser":false,
 		"repeatforall":true,
 		"questionTime":3000,
@@ -526,12 +526,12 @@
     //Question 3 
 
     "q3": {
-		"category":"Sales",
+		
 		"repeatforuser":false,
 		"repeatforall":true,
 		"questionTime":3000,
 		"optionsTime":2000,
-		"category":"Sales",
+		
 		"minimumInventoryScoreRequired":"85",
 		"inventoryScoreToBeChanged":"-20",
 		"videoLink":"<img width=\"97%\"  height=\"85%\" controls style=\"position:absolute;top:6%; \" src=\"videos/store.gif\"> </img>",
@@ -739,7 +739,7 @@
 //     //Question 4
 
     "q4": {
-    	"category":"Sales",
+    	
 		"repeatforuser":false,
 		"repeatforall":true,
 		"questionTime":3000,
@@ -1450,14 +1450,7 @@
 	}]
 },
 
-// "quizTemplate":{
-// 	"category":"Quiz",
-// 	"templates":[
-// 	 		{
-	 			
-// 	 			}}
 
-// },
 
 "quizQ1":{
 		"category":"Quiz",

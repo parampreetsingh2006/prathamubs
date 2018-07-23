@@ -1,5 +1,5 @@
 ubsApp.getPayTemplate=function(templateConfig,tempVar){
-	var object={};
+	// var object={};
 	//object.scenarioTitle=ubsApp.translation["payTitle"];
 	//object.color="white";
 	// object.background="#000";

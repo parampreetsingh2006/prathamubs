@@ -19,9 +19,7 @@ ubsApp.paymentConfig={
 			"color":"white",
 			"background":"#000",
 			"wildCard":"true",
-			
 			"negative":"true",
-			"helpRequired":"true",
 		}
 	]
 

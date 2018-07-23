@@ -170,12 +170,16 @@ body {
     border:1px solid black;
 }
 .iconContainer{
-    width:3%;height: 3%;
+    width:3.5%;height: 6.5%;
     top:3%;
     left:1%;
     position: absolute;
 }
 
+.icon{
+    height:100%; 
+    width:100%;
+}
 .purchaseScreenButton:active {
     box-shadow: 1px 2px orangered;
     transform: translateY(2px) translateX(2px);;
@@ -221,6 +225,12 @@ body {
     padding:1vw; 
     background-color:orangered; 
     font-weight:600;
+}
+#newInventoryLevelText{
+    width: 50px;
+}
+#newCostText{
+    width: 90px;
 }
 .purchaseInputForm{
     width:100%; 

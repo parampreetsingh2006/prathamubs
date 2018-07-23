@@ -15,6 +15,7 @@ ubsApp.luckConfig={
 			"or":"{{or}}",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
+			"icon":"luck",
 			"background":"#4DAF7C",
 			"wildCard":"true",
 			
@@ -40,6 +41,7 @@ ubsApp.luckConfig={
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
 			"background":"#4DAF7C",
+			"icon":"luck",
 			"wildCard":"true",
 			
 		}

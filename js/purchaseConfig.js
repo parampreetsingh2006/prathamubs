@@ -21,11 +21,10 @@ ubsApp.purchaseConfig={
 				"addModeTitle":"{{addModeTitle}}",
 				"helpTitle":"{{helpTitle}}",
 				"doneTitle":"{{doneTitle}}",
-				"chequeTitle":"{{chequeTitle}}",
+				"chequeTitle":"{{cheque}}",
 				"creditTitle":"{{creditTitle}}",
 				"noThanksTitle":"{{noThanksTitle}}",
 			}
 		]
-
 	},
 }
