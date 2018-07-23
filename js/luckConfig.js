@@ -7,6 +7,7 @@ ubsApp.luckConfig={
 			"templateType":"luck",
 			"scenario":"{{luckQuestion1}}",//question Key
 			"amount":1000,
+			"quizType":"luck",
 			"scenarioTitle":"{{pratham_title_luck}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
@@ -31,6 +32,7 @@ ubsApp.luckConfig={
 			"templateType":"luck",
 			"scenario":"{{luckQuestion2}}",//question Key
 			"amount":-1000,
+			"quizType":"luck",
 			"negative":"true",
 			"scenarioTitle":"{{pratham_title_luck}}",
 			"helpTitle":"{{helpTitle}}",

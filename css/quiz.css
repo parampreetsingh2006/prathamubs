@@ -18,7 +18,7 @@
 	position: absolute;
 	height: 6%;
 	width: 6%;
-	background: url('C:/Users/UBS/Documents/prathamubs-master/prathamUbs/images/quizEmoji.png') no-repeat;
+	background: url('../images/quizEmoji.png') no-repeat;
   	background-size:contain;
 }
 
@@ -92,6 +92,12 @@
 
   box-shadow: 1px 1px  #333333;
   transform: translateY(3px);
+}
+
+button[class="quizButtons"]:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 
 button[class="quizButtons"]:focus {outline:0;}

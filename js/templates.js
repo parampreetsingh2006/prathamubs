@@ -299,7 +299,7 @@ ubsApp.leaderBoardTemplate=
     '<div class="row" style="height:100%;width:100%">'+
 '    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
 '       <div class = "heading" >'+
-'           Customer'+
+'           {{Customer}}'+
 '       </div>'+
 '       <br>'+
 '       <div id="profile" >'+
@@ -307,7 +307,7 @@ ubsApp.leaderBoardTemplate=
 '       </div>'+
 '           <br>'+
 '       <div id="order">'+
-'           <center><b>Order</b></center>'+
+'           <center><b>{{Order}}</b></center>'+
 '           <div id="orderList">'+
 '               <table class="table table-sm">'+
 '                   <tbody>'+
@@ -324,11 +324,11 @@ ubsApp.leaderBoardTemplate=
 '    </div>'+
 '    <div class="col-md-6 col-sm-6 col-xs-6 receipt-gen">'+
 '       <div class = "heading">'+
-'           Receipt Generation'+
+'           {{receiptGen}}'+
 '       </div>'+
 '       <br>'+
 '       <div class="receipt">'+
-'           <div id="title">Super Market Receipt</div>'+
+'           <div id="title">{{receiptHeading}}</div>'+
 '       '+
 '           <div id="bill">'+
 '               <div class="table-responsive">          '+
@@ -336,10 +336,10 @@ ubsApp.leaderBoardTemplate=
 '                   <thead>'+
 '                     <tr>'+
 '                       <th>#</th>'+
-'                       <th>Items</th>'+
-'                       <th>Quantity</th>'+
-'                       <th>Rate</th>'+
-'                       <th>Amount</th>'+
+'                       <th>{{Items}}</th>'+
+'                       <th>{{Quantity}}</th>'+
+'                       <th>{{Rate}}</th>'+
+'                       <th>{{Amount}}</th>'+
 '                     </tr>'+
 '                   </thead>'+
 '                   <tbody>'+
@@ -352,12 +352,18 @@ ubsApp.leaderBoardTemplate=
 '                       <td ><input id = "input{{no}}" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()" {{#if exclude}}disabled{{/if}} {{#if exclude}}value="0"{{/if}}></td>  '+
 '                     </tr>'+
 '                       {{/each}}'+
+'                     {{#if discount}}'+
+'                     <tr>'+
+'                       <td colspan="4" style="color:#009933;vertical-align:middle;"><i> Discount: &nbsp;&nbsp;{{discount}}</i></td>'+
+'                       <td ><input id = "discount" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()" ></td>  '+
+'                     </tr>'+
+'                     {{/if}}'+
 '                     <tr>'+
 '                       <td></td>'+
 '                       <td></td>'+
 '                       <td></td>'+
 '                       <td><b>Total</b></td>'+
-'                       <td><input type="number"  id="receiptTotal" class="amount" ></td>    '+
+'                       <td><input type="number"  value="0" id="receiptTotal" class="amount" ></td>    '+
 '                     </tr>'+
 '                   </tbody>'+
 '                 </table>'+
@@ -367,7 +373,7 @@ ubsApp.leaderBoardTemplate=
 '    </div>'+
 '   <div class="col-md-4 col-sm-4 col-xs-4 tools">'+
 '       <div class = "heading">'+
-'           Tools'+
+'           {{Tools}}'+
 '       </div>'+
 // '       <div id="rateCard">'+
 // '           <center><b>Rate Card</b></center>'+
@@ -431,6 +437,10 @@ ubsApp.leaderBoardTemplate=
 '           <input id="calcButton" class="button gray" type="button" value="0" onclick="addToDisplay(0)">'+
 '           <input id="calcButton" class="button orange" type="button" value="=" onclick="addToDisplay(\'=\')">'+
 '           <input id="calcButton" class="button pink" type="button" value="-" onclick="addToDisplay(\'-\')">'+
+'           <input id="calcButton" class="button orange" type="button" value="DEL" onclick="addToDisplay(\'DEL\')">'+
+'           <input id="calcButton" class="button gray" type="button" value="." onclick="addToDisplay(\'.\')">'+
+'           <input id="calcButton" class="button orange" type="button" value="TBD" disabled onclick="addToDisplay(\'\')">'+
+'           <input id="calcButton" class="button pink" type="button" value="%" onclick="addToDisplay(\'%\')">'+
 '       </div>'+
 '       <span id = "minutes">00'+
 '           '+
@@ -450,7 +460,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   <div id="quizTitle">'+
 '       <span id="quizEmoji"></span>    '+
 '       <span id="quizHeading">Quiz</span>'+
-'       <span id="score"> SCORE: <span id="correctAnswers"></span>/5 </span>'+
+'       <span id="score"> SCORE: <span id="correctAnswers"></span>/3 </span>'+
 '   </div>'+
 '   <div id="questionHeading">{{questionHeading}}</div>'+
 '   <div id="question_answer">'+
@@ -466,7 +476,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       <div id="quizOk"><input type="submit" class=\'quizButtons\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
-'   <button id="quizDone" class=\'quizButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
+'   <button id="quizDone" disabled class=\'quizButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
 '   <button id="quizCancel" class=\'quizButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
 '</div>';
 
@@ -607,7 +617,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-col
 '       </div>'+
 '       {{#if negative}}<div class="alternateMessageContainer">'+
 '          {{alternalteMessage}}'+
-'           <button  class="takeQuizWildCardButton" style="background-color:orangered;" onclick="ubsApp.runQuizTemplate()">{{takeQuizTitle}}</button>'+
+'           <button  class="takeQuizWildCardButton" style="background-color:orangered;" onclick="ubsApp.runQuizTemplate(\'{{amount}}\',\'{{quizType}}\')">{{takeQuizTitle}}</button>'+
 '           {{or}}   <button class="takeQuizWildCardButton" style="background-color:green;">{{checkWildCard}}</button>    '+
 '       {{/if}}'+
 '       </div>'+
@@ -695,4 +705,57 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 '       <span id="diceValueTitle">{{diceValueLabel}}:<span id="diceval" style="padding: 1vw"></span></span>'+
 '   </div>'+
 '  </div>'+
+'</div>';
+
+
+ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
+'   <div id="decisionTitle">'+
+'       <span id="decisionEmoji"></span>    '+
+'       <span id="decisionHeading">{{Decision}}</span>'+
+'   </div>'+
+''+
+'   <div id="question_answer_decision">'+
+'       <div id="Decision Description">'+
+'           {{dmQuestion}}'+
+'       </div>'+
+'       <div id="yes_no">'+
+'           <span id="decisionYes"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">{{YES}}</button></span>'+
+'           <span id="decisionNo"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">{{NO}}</button></span>'+
+'       </div>'+
+'   </div>'+
+'       '+
+'       <div class="row" id="leftInfo">'+
+'           <div class="col-md-6">'+
+'               {{bankBalanceTitle}}  <br>'+
+'               {{cashTitle}}          <br>'+
+'               {{debtTitle}}          <br>'+
+'           </div>'+
+'           <div class="col-md-1">'+
+'               : <br>'+
+'               : <br>'+
+'               : <br>'+
+'           </div>'+
+'           <div class="col-md-5">'+
+'               <span>₹ {{balance}}</span><br>'+
+'               <span>₹ {{cash}}</span><br>'+
+'               <span>₹ {{debt}}</span><br>'+
+'           </div>'+
+'       </div>'+
+'       <div class="row" id="rightInfo">'+
+'           <div class="col-md-7" >'+
+'               {{inventoryTitle}}         <br>'+
+'               {{invVal}}   <br>'+
+'               {{repPoints}} <br>'+
+'           </div>'+
+'           <div class="col-md-1">'+
+'               : <br>'+
+'               : <br>'+
+'               : <br>'+
+'           </div>'+
+'           <div class="col-md-4">'+
+'               <span id="decisionMakingInv">{{inventory}}%</span><br>'+
+'               <span id="decisionMakingInvValue">Rs. {{inventoryValue}}</span><br>'+
+'               <span id="decisionMakingReputation">{{reputationPts}}</span><br>'+
+'           </div>'+
+'       </div>'+
 '</div>';

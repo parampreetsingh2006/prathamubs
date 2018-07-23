@@ -1220,238 +1220,6 @@
 	]
 }, 
 
-"receiptPage":{
-		"category":"Sales",
-		"repeatforuser":true,
-		"repeatforall":true,
-		"questionTime":3000,
-		"optionsTime":2000,
-    	"templates":[
-    	{
-	        "templateId": 4,
-			"templateType": "sales",
-			"profilePicture":"images/download",
-			"time":"60",
-			"divID":"seconds",
-			"tooltipMessage":"This item is not available in your Inventory",
-			"tempTotal":"",
-			"order":[
-			{
-				"no":1,
-				"item":"Wheat",
-				"amount":"4 Kg",
-				"rate":"Rs.32/kg",
-				"amt":4,
-				"rt":32,
-				"exclude":false
-			},
-			{
-				"no":2,
-				"item":"Sugar",
-				"amount":"1 Kg",
-				"rate":"Rs.40/kg",
-				"amt":1,
-				"rt":40,
-				"exclude":false
-			},
-			{
-				"no":3,
-				"item":"Bajra",
-				"amount":"4 Kg",
-				"rate":"Rs.25/kg",
-				"amt":4,
-				"rt":25,
-				"exclude":false
-			},
-			{
-				"no":4,
-				"item":"Rice",
-				"amount":"4 Kg",
-				"rate":"Rs.43/kg",
-				"amt":4,
-				"rt":43,
-				"exclude":false
-			},
-			{
-				"no":5,
-				"item":"Jowar",
-				"amount":"4 Kg",
-				"rate":"Rs.23/kg",
-				"amt":4,
-				"rt":23,
-				"exclude":false
-			},
-			{
-				"no":6,
-				"item":"Milk",
-				"amount":"1 Litre",
-				"rate":"Rs.50/litre",
-				"amt":1,
-				"rt":50,
-				"exclude":false
-			},
-			{
-				"no":7,
-				"item":"Eggs",
-				"amount":"1.5 dozen",
-				"rate":"Rs.5/piece",
-				"amt":18,
-				"rt":5,
-				"exclude":false
-			},
-			{
-				"no":8,
-				"item":"Oil",
-				"amount":"1 Litre",
-				"rate":"Rs.100/litre",
-				"amt":1,
-				"rt":100,
-				"exclude":false
-			},
-			{
-				"no":9,
-				"item":"Jowar",
-				"amount":"4 Kg",
-				"rate":"Rs.28/kg",
-				"amt":4,
-				"rt":28,
-				"exclude":false
-			},
-			{
-				"no":10,
-				"item":"Milk",
-				"amount":"1 Litre",
-				"rate":"Rs.50/litre",
-				"amt":1,
-				"rt":50,
-				"exclude":false
-			},
-			{
-				"no":11,
-				"item":"Eggs",
-				"amount":"1 dozen",
-				"rate":"Rs.5/piece",
-				"amt":12,
-				"rt":5,
-				"exclude":false
-			},
-			{
-				"no":12,
-				"item":"Oil",
-				"amount":"1 Litre",
-				"rate":"Rs.100/litre",
-				"amt":1,
-				"rt":100,
-				"exclude":false
-			},
-			{
-				"no":13,
-				"item":"Banana",
-				"amount":"1 dozen",
-				"rate":"Rs 5/piece",
-				"amt":12,
-				"rt":5,
-				"exclude":false
-			}
-			],
-
-	"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-
-		// "itemRate":[
-		// {
-		// 	"item":"Wheat",
-			
-		// },
-		// {
-		// 	"item":"Sugar",
-			
-		// },
-
-		// {
-		// 	"item":"Eggs",
-			
-		// },
-		// {
-		// 	"item":"Bajra",
-			
-		// },
-		// {
-		// 	"item":"Jowar",
-			
-		// },
-		// {
-		// 	"item":"Rice",
-			
-		// },
-		// {
-		// 	"item":"Oil",
-			
-		// },
-		// {
-		// 	"item":"Milk",
-			
-		// }
-
-		// ],
-		// "inventory":[
-		// {
-		// 		"no":1,
-		// 		"item":"Wheat",
-		// 		"amount":"400 Kg",
-		// 	},
-		// 	{
-		// 		"no":2,
-		// 		"item":"Sugar",
-		// 		"amount":"100 Kg",
-		// 	},
-		// 	{
-		// 		"no":3,
-		// 		"item":"Bajra",
-		// 		"amount":"200 Kg",
-		// 	},
-		// 	{
-		// 		"no":4,
-		// 		"item":"Rice",
-		// 		"amount":"400 Kg",
-		// 	},
-		// 	{
-		// 		"no":5,
-		// 		"item":"Jowar",
-		// 		"amount":"40 Kg",
-		// 	},
-		// 	{
-		// 		"no":6,
-		// 		"item":"Milk",
-		// 		"amount":"80 Litre",
-		// 	},
-		// 	{
-		// 		"no":7,
-		// 		"item":"Eggs",
-		// 		"amount":"10 dozen",
-		// 	},
-		// 	{
-		// 		"no":8,
-		// 		"item":"Oil",
-		// 		"amount":"50 Litre",
-		// 	},
-		// 	{
-		// 		"no":9,
-		// 		"item":"Jowar",
-		// 		"amount":"90 Kg",
-		// 	},
-		// 	{
-		// 		"no":13,
-		// 		"item":"Banana",
-		// 		"amount":"10 dozen"
-		// 	}]
-	}]
-},
-
-
-
 "quizQ1":{
 		"category":"Quiz",
 		"repeatforuser":false,
@@ -1678,7 +1446,7 @@
 		]
 	},
 
-	"quizResult":{
+	"generalQuizResult":{
 		"templates":[
 	 		{
 				"templateId": 1,
@@ -1687,6 +1455,7 @@
 				"quizResult":true,
 				"questionTime":3000,
 				"optionsTime":2000,
+				"points":1,
 				"questionHeading":"Result",
 				"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
 				"style":"position:absolute;text-align: center; top:70%",
@@ -1696,9 +1465,59 @@
 				}
 			}
 		]	
-	}
+	},
+
+	"luckQuizResult":{
+		"templates":[
+	 		{
+				"templateId": 1,
+				"templateType": "quiz",
+				"question": "Your Result is: ",
+				"quizResult":true,
+				"questionTime":3000,
+				"optionsTime":2000,
+				"questionHeading":"Result",
+				"amount":"",
+				"width": "col-lg-6 col-lg-offset-5  col-md-4 col-md-offset-5 col-xs-6 col-xs-offset-5",
+				"style":"position:absolute;text-align: center; top:70%",
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+			}
+		]	
+	},
+
+	"decisionInsurance":{
+		"category":"Decision",
+		"repeatforuser":true,
+		"repeatforall":true,
+		"questionTime":3000,
+		"displayCalculator":true,
+		"minimumInventoryScoreRequired":"0",
+		"inventoryScoreToBeChanged":"0",
+		"templates":[{
+				"templateId": 1,
+				"templateType": "decisionInsurance",
+				"Decision":"{{Decision}}",
+				"bankBalanceTitle":"{{bankBalanceTitle}}",
+				"debtTitle":"{{debtTitle}}",
+				"cashTitle":"{{cashTitle}}",
+				"inventoryTitle":"{{inventoryTitle}}",
+				"invVal":"{{invVal}}",
+				"repPoints":"{{repPoints}}",
+				"YES":"{{yes}}",
+				"NO":"{{no}}",
+				"dmQuestion":"{{questionDecisionInsurance}}",
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+	}]
+},
 }
 
+ubsApp.pages=$.extend(ubsApp.pages, ubsApp.salesConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.transferToBankConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.payOffConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.purchaseConfig);

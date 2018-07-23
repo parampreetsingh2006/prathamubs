@@ -8,6 +8,7 @@ ubsApp.paymentConfig={
 			"templateType":"pay",
 			"scenario":"{{paymentQuestion1}}",//question Key
 			"amount":-1000,
+			"quizType":"luck",
 			"scenarioTitle":"{{payTitle}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
@@ -35,6 +36,7 @@ ubsApp.paymentConfig={
 			"templateType":"pay",
 			"scenario":"{{paymentQuestion2}}",//question Key
 			"amount":-1000,
+			"quizType":"luck",
 			"negative":"true",
 			"scenarioTitle":"{{payTitle}}",
 			"helpTitle":"{{helpTitle}}",
@@ -47,7 +49,6 @@ ubsApp.paymentConfig={
 			"color":"white",
 			"background":"#000",
 			"wildCard":"true",
-			"negative":"true",
 			
 		}
 	]

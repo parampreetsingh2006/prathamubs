@@ -225,11 +225,10 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(1000);
-        user.setInventoryScore(60);
+        user.setInventoryScore(60.00);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
-        user.setInventoryScore(60);
         user.setplayerCurrentPos(0);
         user.setBankBalance(250000);
         user.setReputationPts(10);
@@ -363,7 +362,7 @@ monopoly.chooseLanguage=function(){
   link.href = 'css/'+language+'.css';
   document.head.appendChild(link);
   link.onload=function(){
-    console.log("Language css file loaded");
+    
     
   }
   jsElm.onload=function(){

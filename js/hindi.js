@@ -16,6 +16,8 @@ ubsApp.translation={
     "meritSideBar":"योग्यता",
     "cash":"कैश",
     "cheque":"चेक",
+
+
     
     "rollit":"घुमाओ",
     "endGame":"अंत खेल",
@@ -40,7 +42,7 @@ ubsApp.translation={
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
     "bankBalanceTitle":"बैंक राशि",
-    "debtTitle":"का कर्ज",
+    "debtTitle":"कर्ज",
     "cashTitle":"कैश",
     "creditTitle":"श्रेय",
     "creditLimitTitle":"श्रेय सीमा",
@@ -69,6 +71,15 @@ ubsApp.translation={
     "luckQuestion1":"आपने रु। आयकर का भुगतान करने के लिए 1000।",
     "luckQuestion2":"आपने रु। आयकर का भुगतान नहीं करने के लिए 1000।",
     "validAmount":"कृपया एक वैध राशि दर्ज करें",
+
+
+    //Main Screen
+    "Card Wallet":"बटुआ",
+    "Roll it":"पासा घुमाओ",
+    "Purchase":"खरीद फरोख्त",
+    "Take Exam":"परीक्षा दें",
+    "Rs": "₹",
+
 
 
 
@@ -108,9 +119,63 @@ ubsApp.translation={
     "bankBalance":"आपके पास असंतुलित बैंक बैलेंस है",
     "lotDebt":"आपके पास बहुत डेब्ट है",
     "pleaseConfirm":"कृपया जो राशि आप चाहते हैं उसे पुष्टि करें",
+
     //Sales
 
     "This item is not available in your Inventory":"यह आइटम आपके इन्वेंटरी में उपलब्ध नहीं है",
     "Wheat":"गेहूँ",
     "Sugar":"चीनी",
+    "Dal":"दाल",
+    "Rice":"चावल",
+    "Rope":"रस्सी",
+    "Milk":"दूध",
+    "Eggs":"अंडे",
+    "egg":"अंडा",
+    "Oil":"तेल",
+    "Chocolate":"चॉकलेट",
+    "chocolate":"चॉकलेट",
+    "Biscuits":"बिस्कुट",
+    "Soap":"साबुन",
+    "Shampoo":"शैम्पू",
+    "shampoo":"शैम्पू",
+    "Detergent":"डिटर्जेंट",
+    "Packet":"पैकेट",
+
+    "Order":"किराना सूची",
+    "receiptHeading":"सुपर मार्केट रसीद",
+    "receiptGen":"किराने का बिल",
+    "Quantity":"मात्रा",
+    "Rate":"भाव",
+    "Items":"वस्तु का नाम",
+    "Amount":"रकम",
+    "Discount":"छूट",
+    "Customer":"ग्राहक",
+    "Tools":"उपकरण",
+
+    "itemRateDisplay":{
+            "गेहूँ":"₹ 50/kg",
+            "चावल":"₹ 110/kg",
+            "दाल":"₹ 80/kg",
+            "चीनी":"₹ 50/kg",
+            "दूध":"₹ 45/litre",
+            "तेल":"₹ 125/litre",
+            "रस्सी":"₹ 35/10 m",
+            "चॉकलेट":"₹ 40/चॉकलेट",
+            "अंडे":"₹ 5.5/अंडा",
+            "बिस्कुट":"₹ 25/पैकेट",
+            "साबुन":"₹ 27/साबुन",
+            "शैम्पू":"₹ 45/100ml",
+            "डिटर्जेंट":"₹ 37/500gm"
+        },
+
+
+    //Decision
+
+    "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",
+    "inventory":"इन्वेंटरी",
+    "invVal":"प्रतिष्ठा अंक",
+    "repPoints":"इन्वेंटरी मूल्य",
+    "Decision":"निर्णय",
+    "yes":"हाँ",
+    "no":"नहीं",
 }

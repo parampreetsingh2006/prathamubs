@@ -146,34 +146,35 @@ monopoly.pages = {
             "id":"cardWallet",
             "style":"position:absolute;top:47.5%;left:82%;background-repeat: no-repeat;",
             "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:15px; color:red;font-size:1.1vw; font-weight:650; border:0; background:orange;border-radius:5px; background-size: 60%; background-repeat:no-repeat; background-position: center;background-image: url(images/wallet3.png);\">Card Wallet</button>"
+
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:18%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            // "style":"position:absolute;bottom:10%;left:83%; width:6.5%;",
-            "src":"<button id='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; background:#73e600; border-radius:5px; \">Roll it</button>"
-            //"src":"<button onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; font-size:1.1vw; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>",
+            "src":"<button id='rollIt' class='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; font-size:1.05vw;background:#73e600; border-radius:5px; \">Roll it</button>"
+
+
         },
         {
             "templateId":"1",
             "templateType":"static",
-            "style":"position:absolute;bottom:18%;left:90%; whitedth:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='boardButtons' onclick=\"ubsApp.runQuizTemplate()\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; border-radius:5px; \">Take Exam</button>"
+            "style":"position:absolute;bottom:18%;left:90%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button class='boardButtons' onclick=\"ubsApp.runQuizTemplate('ubsApp.pages.generalQuizResult.templates[0].points')\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; font-size:1.05vw;border-radius:5px; \">Take Exam</button>"
 
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='boardButtons' onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange; border-radius:5px; \">Purchase</button>"
+            "src":"<button class='boardButtons' onclick=\"ubsApp.openPurchaseScenario()\" style=\"padding:5px; color:white;width:100%; border:0; background:orange;font-size:1.05vw; border-radius:5px; \">Purchase</button>"
 
         },
         {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:90%;width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='boardButtons' onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; background:red; border-radius:5px; \">End Game</button>"
+            "src":"<button class='boardButtons' onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; font-size:1.05vw;background:red; border-radius:5px; \">End Game</button>"
         },
         
         // 
@@ -259,14 +260,14 @@ monopoly.pages = {
                 "id"   : "1",
                 "color":"green",
                 "backgroundImage":"images/receipt-easy.png",
-                "category":"Sales",
+                "category":"salesSimple",
             },
             {
                 "id"   : "2",
                 "color":"green",
                 "backgroundImage":"images/receipt-medium.png",
                 // "title":"pratham_title_sales",
-                "category" : "Sales"
+                "category" : "salesEasy"
             },
             {
                 "id"   : "3",
@@ -280,14 +281,14 @@ monopoly.pages = {
                 "id"   : "4",
                 "color":"yellow",
                 "backgroundImage":"images/decision-making.png",
-                "category" : "Decision Making"
+                "category" : "Decision"
             },
             {
                 "id"   : "5",
                 "color":"green",
                 // "title":"pratham_title_sales",
                 "backgroundImage":"images/receipt-medium-hard.png",
-                "category" : "Sales"
+                "category" : "salesModerate"
             },
             {
                 "id"   : "6",
@@ -307,7 +308,7 @@ monopoly.pages = {
                 "color":"green",
                 // "title":"pratham_title_sales",
                 "backgroundImage":"images/receipt-hard.png",
-                "category" : "Sales"
+                "category" : "salesDifficult"
             }
             ],
 
@@ -316,7 +317,7 @@ monopoly.pages = {
                 "id"   : "25",
                 "color":"green",
                 "backgroundImage":"images/receipt-hard.png",
-                "category" : "Sales"
+                "category" : "salesDifficult"
             },
             {
                 "id"   : "24",
@@ -326,7 +327,7 @@ monopoly.pages = {
             {
                 "id"   : "23",
                 "backgroundImage":"images/receipt-easy.png",
-                "category" : "Sales"
+                "category" : "salesSimple"
             },
             {
                 "id"   : "22",
@@ -338,7 +339,7 @@ monopoly.pages = {
                 {
                     "id"   : "9",
                     "backgroundImage":"images/receipt-easy.png",
-                    "category" : "Sales"
+                    "category" : "salesSimple"
                 },
                 {
                     "id"   : "10",
@@ -347,22 +348,20 @@ monopoly.pages = {
                 },
                 {
                     "id"   : "11",
-                    
                     "backgroundImage":"images/purchase.png",
-                    
                     "category" : "Purchase"
                 },
                 {
                     "id"   : "12",
                     "backgroundImage":"images/receipt-medium.png",
-                    "category" : "Sales"
+                    "category" : "salesEasy"
                 },
                 ],
             "bottom_row":[
                     {
                         "id"   : "21",
                         "backgroundImage":"images/receipt-medium-hard.png",
-                        "category":"Sales",
+                        "category":"salesModerate",
                     },
                     {
                         "id"   : "20",
@@ -381,12 +380,12 @@ monopoly.pages = {
                         
                         "backgroundImage":"images/receipt-medium.png",
                         
-                        "category" : "Sales"
+                        "category" : "salesEasy"
                     },
                     {
                         "id"   : "17",
                         "backgroundImage":"images/receipt-hard.png",
-                        "category" : "Sales"
+                        "category" : "salesDifficult"
                     },
                     {
                         "id"   : "16",
@@ -400,7 +399,7 @@ monopoly.pages = {
                         "id"   : "15",
                         
                         "backgroundImage":"images/receipt-medium-hard.png",
-                        "category" : "Sales"
+                        "category" : "salesModerate"
                     },
                     {
                         "id"   : "14",

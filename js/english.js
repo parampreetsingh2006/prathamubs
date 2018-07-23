@@ -14,7 +14,7 @@ ubsApp.translation={
         "documentSideBar":"Document",
         "inventorySideBar":"Inventory",
         "meritSideBar":"Merit",
-
+        "Rs": "₹",
         //This is where new addition started
         "inventoryTitle":"INVENTORY",
         "weekTitle":"WEEK",
@@ -73,6 +73,25 @@ ubsApp.translation={
         "lotDebt":"YOU HAVE A LOT OF DEBT",
         "pleaseConfirm":"PLEASE CONFIRM THE AMOUNT YOU WANT",
         "noDebt":"YOU DON'T HAVE ANY DEBTS.",
+
+
+        "itemRateDisplay":{
+
+            "Wheat":"₹ 50/kg",
+            "Rice":"₹ 110/kg",
+            "Dal":"₹ 80/kg",
+            "Sugar":"₹ 50/kg",
+            "Milk":"₹ 45/litre",
+            "Oil":"₹ 125/litre",
+            "Rope":"₹ 35/10 m",
+            "Chocolate":"₹ 40/chocolate",
+            "Eggs":"₹ 5.5/egg",
+            "Biscuits":"₹ 25/packet",
+            "Soap":"₹ 27/soap",
+            "Shampoo":"₹ 45/100ml",
+            "Detergent":"₹ 37/500gm"
+        },
+
         "payDebtTitle":"PAY DEBT",
         "transferToBank":"TRANSFER CASH TO BANK",
         "payment":"PAYMENT",
@@ -105,4 +124,38 @@ ubsApp.translation={
         "noThanksTitle":"NO THANKS",
         "or":"OR",
         "cheque":"CHEQUE",
+
+        //Sales
+
+        "receiptHeading":"Super Market Receipt",
+        "receiptGen":"Receipt Generation",
+        "Order":"Order",
+        "Customer":"Customer",
+        "Items":"Items",
+        "Quantity":"Quantity",
+        "Rate":"Rate",
+        "Amount":"Amount",
+        "Tools":"Tools",
+        "Wheat":"Wheat",
+        "Rice":"Rice",
+        "Dal":"Dal",
+        "Sugar":"Sugar",
+        "Milk":"Milk",
+        "Oil":"Oil",
+        "Rope":"Rope",
+        "Chocolate":"Chocolate",
+        "Eggs":"Eggs",
+        "Biscuits":"Biscuits",
+        "Soap":"Soap",
+        "Shampoo":"Shampoo",
+        "Detergent":"Detergent",
+
+        //Decision
+        "invVal":"INVENTORY VALUE",
+        "repPoints":"REPUTATION POINTS",
+        "Decision":"Decision",
+        "questionDecisionInsurance":"An Insurance Advisor is offering you comprehensive shop insurance that covers fire, theft and  natural disasters.<br><br>Premium: Between Rs.15000 and Rs. 24,000 anuallly based on cover SumAssured: Between 3,00,000 and 5,00,000<br><br>Would you like to buy insurance?",
+        "yes":"YES",
+        "no":"NO",
+
     }
