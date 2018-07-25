@@ -1523,3 +1523,7 @@ ubsApp.pages=$.extend(ubsApp.pages,ubsApp.payOffConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.purchaseConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.paymentConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.luckConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.advantageCardConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.centerScoreBoardConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.withdrawFromBankConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.helpConfig);

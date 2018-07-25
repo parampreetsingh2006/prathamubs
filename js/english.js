@@ -61,8 +61,7 @@ ubsApp.translation={
         "q4-vvwrong":"Oops!! you answered incorrect. You lost money.",
         "paymentQuestion1":"You have been fined for not having driving license.",
         "paymentQuestion2":"You have been fined Rs.1000 for not having shop License.",
-        "luckQuestion1":"You have gained Rs. 1000 for paying income tax.",
-        "luckQuestion2":"You have lost Rs. 1000 for not paying income tax.",
+       
         
         //new
         "validAmount":"PLEASE ENTER A VALID AMOUNT",
@@ -91,7 +90,7 @@ ubsApp.translation={
             "Shampoo":"₹ 45/100ml",
             "Detergent":"₹ 37/500gm"
         },
-
+        //center ScoreBoard and transfer to bank
         "payDebtTitle":"PAY DEBT",
         "transferToBank":"TRANSFER CASH TO BANK",
         "payment":"PAYMENT",
@@ -104,7 +103,9 @@ ubsApp.translation={
         "transferToBankTitle":"TRANSFER CASH TO BANK",
         "debtAmountTitle":"Debt Amount",
         "cancelTitle":"CANCEL",
-
+        "withdrawTitle":"WITHDRAW",
+        
+        //purchase
         "amountToPayTitle":"AMOUNT TO PAY",
         "amountToTransferTitle":"AMOUNT TO TRANSFER",
         "modeOfPaymentTitle":"MODE OF PAYMENT",
@@ -158,4 +159,87 @@ ubsApp.translation={
         "yes":"YES",
         "no":"NO",
 
+
+
+        //luck scenario
+        "luckQuestion1":"There is an offer going on where if you buy a 20 kg of SURF brand of washing powder then you get a scratch card. You took the offer and in scratch card you won crazy prize of 500 rupees.",
+        "luckQuestion2":"There is an offer going on where if you buy a 20 kg of SURF brand of washing powder then you get a scratch card. You took the offer and in scratch card you won crazy prize of 100 rupees.",
+        "luckQuestion3":"There is an offer going on where if you buy a 20 litre of AMUL Ice-cream then you get another 10 litre of AMUL Ice-cream at 50%. Due to it being summer you could sell all the ice-cream and make 2500 rupees. ",
+        "luckQuestion4":"There is an offer going on where if you nuy a 20 litre of milk then you get another 10 litre of milk at 50%. Due to some power cuts you have to dum all the milk worth of Rs. 1800. ",
+        "luckQuestion5":"You do regular stock check. During the check you found that most of the chocolates and toffees that are out of stock and you didn't receive money for that. On close inspection you found that some kids are stealing chocolates from your shop. You lost chocolates worth of Rs.700",
+        "luckQuestion6":"You observed that some products are getting reduced day by day but there is no sale for it.  On observation you founds that there was  the thief who was stealing from the shop. You lost Rs 3800 worth of the stock.",
+        "luckQuestion7":"The government has decided to decrease the GST on certain products that sell in your store. You gain Rs. 500 per month due to a decrease in GST.",
+        "luckQuestion8":"The government has decided to increase the GST on certain products that sell in your store. You lose Rs. 500 per month due to increased GST.",
+        "luckQuestion9":"You have availed a loan of Rs. 50000 with the State Bank of India. The bank has decided to increase the interest rates by 0.5%.you incur extra interest costs of Rs. 250 per month",
+        "luckQuestion10":"You have availed a loan of Rs. 50000 with the State Bank of India. The bank has decided to decrease the interest rates by 0.5%.Fortunately for you, the decreased interest rates will help you save Rs. 250 per month in interest payments",
+        "luckQuestion11":"There was flood in the city due to which some stock of grains is spoilt. You have to throw it all. Cost for the same is Rs. 7800. ",
+        "luckQuestion12":"Refrigerator in your shop broke down and you lost stock worth of 3800 rs.",
+        "luckQuestion13":"There was leak in your shop which you ignored, due to heavy rains it became worst. You lost grains worth of 5000 rs",
+        "luckQuestion14":"You are fined Rs, 12,000 for fire safety violation ",
+        "luckQuestion15":"You were awarded the best entrepreneur in your town due to your customer services and zero violations. Got a cash price of Rs 5000.",
+        "luckQuestion16":"The sales were very good during Diwali! You are making good money and your cash balance increased in day by Rs. 10000",
+        "luckQuestion17":"This year sales during Diwali were affected due to sickness at your home, you could not concentrate for 3 days. Your profit reduced by Rs.15000",
+        "luckQuestion18":"You received a GST refund of Rs. 8,000",
+        "luckQuestion19":"You have to pay fine of 1000 rs for late filling of GST",
+        "luckQuestion20":"The Chips Rack outside the store broke and all the goods got damaged. Repair cost was Rs.800",
+        "luckQuestion21":"You got Income tax refund of Rs. 8700.",
+        "luckQuestion22":"Your shop won the Go Green Initiative . Cash Price was Rs 3000. and 20 reputation points.",
+        "luckQuestion23":"You had an accident and you had to keep the shop close for 3 days. You lost profit of Rs.20000",
+        "luckQuestion24":"Your driving license had expired , and while during delivery police caught you . You had to pay fine of Rs. 500.",
+        "luckQuestion25":"The government has decided to reduce tax bracket for shop owners like you by 5%. This will increase your savings by Rs. 18000",
+        "luckQuestion26":"The government has decided to subsidize rice by Rs. 2 per kg.You gained profit of Rs 4000",
+        "luckQuestion27":"A village fair is being organized close to your store which will definitely increase the demand for chocolates and candies to twice the current sales numbers. You will have cashflow of Rs.3000",
+        "luckQuestion28":"The government has decided to increase the GST on certain products that sell in your store. Although the increased taxes are usually passed on to the customers, this time you are going to bear some losses as well. You lost Rs 7800.",
+        "luckQuestion29":"The government has decided to decrease the GST on certain products that sell in your store. Although the benefits of reduced taxes are usually passed on to the customers as well, this time you are going to see a rise in profits. You gained Rs 7800.",
+        "luckQuestion30":"There was theft in your shop. You lose your entire cash balance!",
+        "luckQuestion31":"There were riots in your city, there was mob who broke in to your shop and goods worth Rs 12000 got damaged. No insurance is available for communal violence",
+        "luckQuestion32":"One of your whole seller was shutting his business , he gave all the stock to you @ 50% discount. This resulted in sales worth Rs. 7000",
+        "luckQuestion33":"Harnam Singh's aunt from the village sent you a gift of Rs. 10000 to invest in the business",
+        "luckQuestion34":"Your Delivery Vehicle didn’t stop at traffic light ,you had to pay fine of Rs. 500",
+        "luckQuestion35":"Your have been very prompt with your services to customer. You get 20 reputation points.",
+        "luckQuestion36":"There was a new office building opened next door which increased you profits for this week by Rs. 2000",
+        "luckQuestion37":"You started doing home delivery due to rainy season , your clients were very happy. You got 15 reputation points.",
+       
+        "convertTitle":"CONVERT",
+
+        // Advantage Card
+        "advantageCardTitle":"ADVANTAGE CARDS",
+        "reputationPointAvailableTitle":"Reputation Points Available",
+        "numberToConvertTitle":"Number to convert",
+        "numberOfAdvantageCardTitle":"Number of Advantage Cards",
+        "reputationPointBalance":"Reputation Point Balance",
+        "conversionTitle":"15 POINTS = 1 CARD",
+        "checkTitle":"CHECK",
+        "enterInMultipleOf15":"Please enter number in the multiple of 15.",
+        "You have entered more points than you have":"You have entered more points than you have.",
+        "validReputationPts":"Please enter a valid reputation point.",
+
+
+        //withdraw from bank
+        
+        "withdrawFromBankTitle":"Withdraw From Bank",
+        "amountToWithdrawTitle":"Amount To Withdraw",
+
+        //payment Scenarios
+        "paymentQuestion1":"Electricity Bill of Rs. 500 is due next week.",
+        "paymentQuestion2":"You need to urgently file tax returns and the chartered accountant fee is Rs.1000.",
+        "paymentQuestion3":"Refrigerator has broken down owing to excessive usage this summer.",
+        "paymentQuestion4":"Shop entrance need renovation. Rs. 800.",
+        "paymentQuestion5":"GST department has levied Rs.1500 fine for incorrect filing last year.",
+        "paymentQuestion6":"Many customers want digital payment options and you need to enrol with a digital wallet provider. Enrolment fee is Rs.500",
+        "paymentQuestion7":"Need to find additional help for the shop a the cost of Rs.1000",
+        "paymentQuestion8":"You have to spend on printing and distributing pamphlets to promote an upcoming sale. Rs. 1000",
+        "paymentQuestion9":"Pay your ontribution for planting more tress in the locatlity. Rs. 500",
+        "paymentQuestion10":"Owing to increased parking space usage, the landlord has asked for Rs.5000 as additional advance for the shop rental.",
+        "paymentQuestion11":"Cockroaches infested the shop via one of the goods consignment. Exterminate for Rs.800",
+        "paymentQuestion12":"Your shop has been disposing garbage improperly. Hence corporation has charged a fine of Rs.1000",
+        "paymentQuestion13":"You owe a one time commission for a sales person. Rs. 500",
+        "paymentQuestion14":"To increase sales duing festival season, you have to install an additional stall in the shop. Rs.2500",
+        "paymentQuestion15":"The shutter door of the shop is rusted and needs replacement. Rs.1200",
+        "paymentQuestion16":"The delivery van of the shop broke down and requires repair. Rs. 2200",
+        "paymentQuestion17":"Owing to recent government regulation, you need to procure a bulk lot of non-plastic carry bags. Rs.10000",
+        "paymentQuestion18":"The display cabinet accidentally broke and needs fixing. Rs.1300",
+        "paymentQuestion19":"Recent rains had caused damage to the shop roof. Need fixing. Cost Rs.750",
+        "paymentQuestion20":"Installation of CCTV camera",
+        
     }

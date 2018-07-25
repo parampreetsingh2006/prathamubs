@@ -158,3 +158,9 @@ select{
 #currentChanceDetails{
     font-size: 1.3vw;
 }
+
+/*advantage card*/
+#advantageCardScenario
+{
+    font-size: 1.1vw;
+}

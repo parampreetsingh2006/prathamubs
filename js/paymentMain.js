@@ -1,29 +1,40 @@
 ubsApp.getPayTemplate=function(templateConfig,tempVar){
-	// var object={};
-	//object.scenarioTitle=ubsApp.translation["payTitle"];
-	//object.color="white";
-	// object.background="#000";
-	// object.negative="true";
-	//object.or=ubsApp.translation["or"];
-	// object.scenario=templateConfig.question;
-	// object.amount=templateConfig.amount;
-	// object.helpTitle=ubsApp.translation["helpTitle"];
-	// object.payTitle=ubsApp.translation["payTitle"];
-	// object.checkWildCard=ubsApp.translation["checkWildCard"];
-	// object.takeQuizTitle=ubsApp.translation["takeQuizTitle"];
-	// object.payMessage=ubsApp.translation["youCan"];
-	// object.alternalteMessage=ubsApp.translation["alternateMessage"];
 	tempVar.html+=ubsLuckTemplate(templateConfig);
 }
 
-ubsApp.payFromBank=function(amount){
+ubsApp.payFromBank=function(pageName){
 
-    if(userArray[playerChance].getBankBalance()<amount){
-        document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];
-    }
-    else{
-        userArray[playerChance].setBankBalance(userArray[playerChance].getBankBalance()+amount);
-        ubsApp.nextMove();
-    }
+    var credit=ubsApp.pages[pageName].templates[0].credit;
+    $.each(credit, function(key, value) {
+        if(key=="balance"){
+            userArray[playerChance].setBankBalance(userArray[playerChance].getBankBalance()+value);     
+                if(userArray[playerChance].getBankBalance()<0){
+                    
+                    let difference=userArray[playerChance].getBankBalance();
+                    userArray[playerChance].setBankBalance(0);
+                    
+                    
+                    difference=userArray[playerChance].getInventoryScore();
+                    userArray[playerChance].setInventoryScore(0);
+                    if(userArray[playerChance].getCredit()+(difference*(-1))<=userArray[playerChance].getCreditLimit()){
+                        userArray[playerChance].setCredit(userArray[playerChance].getCredit()+(difference*(-1)));
+                    }
+                    else{
+                        userArray[playerChance].setCredit(userArray[playerChance].getCreditLimit());
+                    }
+                }
+        }
+        else if(key=="reputation"){
+            userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+value);
+        }
+    });
+
+    // if(userArray[playerChance].getBankBalance()<amount){
+    //     document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];
+    // }
+    // else{
+    //     userArray[playerChance].setBankBalance(userArray[playerChance].getBankBalance()+amount);
+    //     ubsApp.nextMove();
+    // }
 
 }

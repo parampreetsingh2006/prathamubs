@@ -1,57 +1,407 @@
 ubsApp.paymentConfig={
     "paymentScenario1":{
 		"category":"Payment",
-		
 		"templates":[
 		{
 			"templateId":10,
 			"templateType":"pay",
 			"scenario":"{{paymentQuestion1}}",//question Key
-			"amount":-1000,
 			"quizType":"luck",
+			"credit":{"balance":-500},
 			"scenarioTitle":"{{payTitle}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
-			"checkWildCard":"{{checkWildCard}}",
-			"takeQuizTitle":"{{takeQuizTitle}}",
-			"or":"{{or}}",
-			"payTitle":"{{payTitle}}",
-			"alternalteMessage":"{{alternateMessage}}",
+			"scenarioName":"paymentScenario1",
+			"negative":true,	
 			"color":"white",
+			"payTitle":"{{payTitle}}",
 			"background":"#000",
-			"wildCard":"true",
-			"negative":"true",
 		}
 	]
 
 	},
-
-	
 	"paymentScenario2":{
 		"category":"Payment",
-		
 		"templates":[
 		{
 			"templateId":10,
 			"templateType":"pay",
 			"scenario":"{{paymentQuestion2}}",//question Key
-			"amount":-1000,
 			"quizType":"luck",
-			"negative":"true",
+			"credit":{"balance":-1000},
+			"payTitle":"{{payTitle}}",
+			"scenarioName":"paymentScenario2",
 			"scenarioTitle":"{{payTitle}}",
 			"helpTitle":"{{helpTitle}}",
-			"payMessage":"{{youCan}}",
-			"checkWildCard":"{{checkWildCard}}",
-			"takeQuizTitle":"{{takeQuizTitle}}",
-			"or":"{{or}}",
-			"payTitle":"{{payTitle}}",
-			"alternalteMessage":"{{alternateMessage}}",
+			"payMessage":"{{youCan}}",	
 			"color":"white",
+			"negative":true,
 			"background":"#000",
-			"wildCard":"true",
-			
 		}
 	]
 
+	},
+	"paymentScenario3":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion3}}",//question Key
+			"quizType":"luck",
+			"payTitle":"{{payTitle}}",
+			"credit":{"balance":-1200},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario3",
+			"background":"#000",
+		}
+	]
+
+	},
+	"paymentScenario4":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion4}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-800},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario4",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+
+	},
+	"paymentScenario5":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion5}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-1500,"reputation":-2},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario5",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario6":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion6}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-500},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"scenarioName":"paymentScenario6",
+			"payTitle":"{{payTitle}}",
+			"negative":true,
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario7":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"payTitle":"{{payTitle}}",
+			"scenario":"{{paymentQuestion7}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-1000},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"scenarioName":"paymentScenario7",
+			"negative":true,
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario8":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion8}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-1000,"reputation":2},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario8",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario9":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion9}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-500,"reputation":3},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"scenarioName":"paymentScenario9",
+			"negative":true,
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario10":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion10}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-5000},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario10",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario11":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion11}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-800,"reputation":-1},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"scenarioName":"paymentScenario11",
+			"payTitle":"{{payTitle}}",
+			"negative":true,
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario12":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion12}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-1000,"reputation":-2},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"payTitle":"{{payTitle}}",
+			"scenarioName":"paymentScenario12",
+			"negative":true,
+			"background":"#000",
+		}
+	]
+	},
+
+	"paymentScenario13":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion13}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-500},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario13",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario14":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion14}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-2500},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"scenarioName":"paymentScenario14",
+			"payTitle":"{{payTitle}}",
+			"negative":true,
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario15":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion15}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-1200},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario15",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario16":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion16}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-2200,"reputation":-1},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario16",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario17":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion17}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-10000,"reputation":2},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario17",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario18":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion18}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-1300},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario18",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario19":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion19}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-750},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario19",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
+	},
+	"paymentScenario20":{
+		"category":"Payment",
+		"templates":[
+		{
+			"templateId":10,
+			"templateType":"pay",
+			"scenario":"{{paymentQuestion20}}",//question Key
+			"quizType":"luck",
+			"credit":{"balance":-5000},
+			"scenarioTitle":"{{payTitle}}",
+			"helpTitle":"{{helpTitle}}",
+			"payMessage":"{{youCan}}",	
+			"color":"white",
+			"negative":true,
+			"scenarioName":"paymentScenario20",
+			"payTitle":"{{payTitle}}",
+			"background":"#000",
+		}
+	]
 	},
 }

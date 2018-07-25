@@ -143,9 +143,9 @@ monopoly.pages = {
         {
             "templateId":1,
             "templateType":"static",
-            "id":"cardWallet",
-            "style":"position:absolute;top:47.5%;left:82%;background-repeat: no-repeat;",
-            "src":"<button onclick=\"ubsApp.openCardWallet()\" style=\"padding:15px; color:red;font-size:1.1vw; font-weight:650; border:0; background:orange;border-radius:5px; background-size: 60%; background-repeat:no-repeat; background-position: center;background-image: url(images/wallet3.png);\">Card Wallet</button>"
+            "id":"convertToAdvantage",
+            "style":"position:absolute;top:47.5%;left:90%;background-repeat: no-repeat;",
+            "src":"<button onclick=\"ubsApp.openAdvantageCard()\" style=\"padding:7px; color:white;font-size:1.1vw; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{convertTitle}}</button>"
 
         },
         {
