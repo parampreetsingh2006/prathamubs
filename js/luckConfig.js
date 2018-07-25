@@ -459,7 +459,7 @@ ubsApp.luckConfig={
 			"scenario":"{{luckQuestion16}}",//question Key
 			// "value":-1800,
 			// "type":"inventory",
-			"credit":{"cash":5000},
+			"credit":{"cash":10000},
 			"quizType":"luck",
 			"resultPage":"quizQ2",
 			"scenarioTitle":"{{pratham_title_luck}}",
@@ -822,7 +822,7 @@ ubsApp.luckConfig={
 			"scenario":"{{luckQuestion29}}",//question Key
 			// "value":-1800,
 			// "type":"inventory",
-			"credit":{"balance":7800},  //dbt
+			"credit":{"balance":7800}, 
 			"quizType":"luck",
 			"resultPage":"quizQ4",
 			"scenarioName":"luckyUnluckyScenario29",
