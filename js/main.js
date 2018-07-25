@@ -47,6 +47,10 @@ monopoly.playerChance = 0;
 let playerChance = monopoly.playerChance;
 
 let cashTransfered=false;
+var initialPlayerCash=1000;
+var initialPlayerBankBalance=250000;
+var initialInventoryScore=60;
+var initialReputation=45;
 
 $(document).ready(function(){	
 	ubsApp.intitializeTemplates();
@@ -886,6 +890,7 @@ ubsApp.currentPlayerContents=function(){
 	document.getElementById("inventoryValueContent").innerHTML="₹ "+(userArray[playerChance].getInventoryScore()*1000);
 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
 	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
+	document.getElementById("advantageCardContent").innerHTML=userArray[playerChance].getAdvantageCardNumber(); 
 }
 
 
@@ -973,3 +978,44 @@ ubsApp.closeHelp=function(){
 	helpScenarioOpen=false;
 }
 
+
+ubsApp.endGame=function(){
+	var arr=[];
+	
+	for(var i=0;i<numplayers;i++){
+		var harnamProjectedScore=userArray[i].getWeeks()*harnamSinghProfit;
+		let currentPlayerProfit=0;
+		currentPlayerProfit+=(userArray[i].getplayerScore()-initialPlayerCash);
+		currentPlayerProfit+=(userArray[i].getBankBalance()-initialPlayerBankBalance);
+		currentPlayerProfit-=userArray[i].getCredit();
+		currentPlayerProfit=currentPlayerProfit*0.15;
+		if(currentPlayerProfit<harnamProjectedScore)
+		{
+			arr[i]=false;
+		} 
+		else{
+			arr[i]=true;
+		}
+	}
+	
+		var winnerName="";
+		var currentHighScore=0;
+		var atleastOne=false;
+		for(var i=0;i<numplayers;i++)
+		{
+			if(arr[i])
+			{
+				atleastOne=true;
+				var consolidatedScore=userArray[i].getplayerScore()+userArray[i].getBankBalance()-userArray[i].getCredit()+userArray[i].getReputationPts();
+				if(consolidatedScore>currentHighScore){
+					currentHighScore=consolidatedScore;
+					winnerName=userArray[i].getplayerName();
+				}
+			}
+		}
+		
+		if(!atleastOne){
+		winnerName="No One Wins"
+	}
+	console.log(winnerName);
+}

@@ -92,6 +92,13 @@ body {
     left: 10%; 
     font-weight:600;
 }
+#advantageCardTitle{
+    left: 82%;
+    font-weight: 700;
+    position: absolute;
+    font-size: 1.1vw;
+    top: 34.5%;
+}
 
 .payOffSubTitleRight{
     position:absolute;;

@@ -439,7 +439,7 @@ ubsApp.leaderBoardTemplate=
 '           <input id="calcButton" class="button pink" type="button" value="-" onclick="addToDisplay(\'-\')">'+
 '           <input id="calcButton" class="button orange" type="button" value="DEL" onclick="addToDisplay(\'DEL\')">'+
 '           <input id="calcButton" class="button gray" type="button" value="." onclick="addToDisplay(\'.\')">'+
-'           <input id="calcButton" class="button orange" type="button" value="TBD" disabled onclick="addToDisplay(\'\')">'+
+'           <input id="calcButton" class="button orange" type="button" value="+/-" disabled onclick="addToDisplay(\'\')">'+
 '           <input id="calcButton" class="button pink" type="button" value="%" onclick="addToDisplay(\'%\')">'+
 '       </div>'+
 '       <span id = "minutes">00'+

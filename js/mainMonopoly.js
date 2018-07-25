@@ -15,7 +15,7 @@ monopoly.difficultyLevel=["easy","medium","hard"];
 monopoly.flag2= false;
 monopoly.computerDifficulty={};
 monopoly.scenario ={};
-
+var harnamSinghProfit=11000;
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
 var ubsformTemplate= monopoly.ubsformTemplate;
@@ -33,8 +33,6 @@ var difficultyLevel=monopoly.difficultyLevel;
 var flag2=monopoly.flag2;
 var computerDifficulty=monopoly.computerDifficulty;
 var scenario =  monopoly.scenario;
-
-
 
 
 $(document).ready(function(){
@@ -145,7 +143,7 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      scenario = userArray[playerChance].getScenario("Luck",playerChance);   //   blockCategory[blockNo]
+      scenario = userArray[playerChance].getScenario(blockCategory[blockNo],playerChance);   //   blockCategory[blockNo]
         let currentTemplateName=scenario.getName();
         let currentTemplate=ubsApp.pages[currentTemplateName].templates;
         let key=ubsApp.pages[currentTemplateName].templates[0].question;
@@ -228,20 +226,21 @@ monopoly.storePlayerDetails=function(){
     {
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
-        user.setplayerScore(1000);
+        user.setplayerScore(initialPlayerCash);
         user.setInventoryScore(60.00);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
         user.setplayerId("p"+i);
         user.setplayerCurrentPos(0);
-        user.setBankBalance(250000);
-        user.setReputationPts(45);
+        user.setAdvantageCardNumber(0);
+        user.setBankBalance(initialPlayerBankBalance);
+        user.setReputationPts(initialReputation);
         user.setCredit(0);
         user.setWildCard(0);
         user.setCreditLimit(15000);
         user.setTransferReminderOpened(true);
         user.setScenarioArray(scenariosArray);
-        user.setWeeks(0);
+        user.setWeeks(1);
         userArray[i]=user;
     }
     if(computerRequired)

@@ -129,6 +129,13 @@ monopoly.pages = {
         {
             "templateId":1,
             "templateType":"static",
+            "id":"advantageCardTitle",
+            "style":"",
+            "src":"{{advantageCardTitle}}: <span id=\"advantageCardContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+        },
+        {
+            "templateId":1,
+            "templateType":"static",
             "id":"inventoryValueTitle",
             "style":"",
             "src":"{{inventoryValueTitle}}: <span id=\"inventoryValueContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
@@ -174,7 +181,7 @@ monopoly.pages = {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:90%;width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button class='boardButtons' onclick=\"\" style=\"padding:5px;width:100%; color:white; border:0; font-size:1.05vw;background:red; border-radius:5px; \">End Game</button>"
+            "src":"<button class='boardButtons' onclick=\"ubsApp.endGame()\" style=\"padding:5px;width:100%; color:white; border:0; font-size:1.05vw;background:red; border-radius:5px; \">End Game</button>"
         },
         
         // 
