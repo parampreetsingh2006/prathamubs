@@ -77,19 +77,19 @@ ubsApp.translation={
 
         "itemRateDisplay":{
 
-            "Wheat":"₹ 50/kg",
-            "Rice":"₹ 110/kg",
-            "Dal":"₹ 80/kg",
-            "Sugar":"₹ 50/kg",
-            "Milk":"₹ 45/litre",
-            "Oil":"₹ 125/litre",
-            "Rope":"₹ 35/10 m",
-            "Chocolate":"₹ 40/chocolate",
-            "Eggs":"₹ 5.5/egg",
-            "Biscuits":"₹ 25/packet",
-            "Soap":"₹ 27/soap",
-            "Shampoo":"₹ 45/100ml",
-            "Detergent":"₹ 37/500gm"
+            "1":"₹ 50/kg",
+            "2":"₹ 110/kg",
+            "3":"₹ 80/kg",
+            "4":"₹ 50/kg",
+            "5":"₹ 45/litre",
+            "6":"₹ 125/litre",
+            "7":"₹ 35/10 m",
+            "8":"₹ 40/chocolate",
+            "9":"₹ 5.5/egg",
+            "10":"₹ 25/packet",
+            "11":"₹ 27/soap",
+            "12":"₹ 45/100ml",
+            "13":"₹ 37/500gm"
         },
 
         "payDebtTitle":"PAY DEBT",
@@ -158,4 +158,53 @@ ubsApp.translation={
         "yes":"YES",
         "no":"NO",
 
+        "decisionQ1":"Food inspector visits your shop and it is found that you have some products that are expired but still kept for sale.<br>Food inspector raises objection. He asks for shop documents. You don't have all documents.<br>",
+        "decisionQ2":"Last year during extremely heavy rains, there was immense flooding and water logging in your area which led to partial or complete damage of the food items in your shop. <br> of the neighbouring shops were also affected. Your insurance agent has come for purchase of your policy? Premium cost will between Rs 3000 - Rs 6800 per year. <br>Will you purchase it ?",
+        "decisionQ3":"You need funds to repair the broken ceiling in your store. The cost to repair the ceiling is Rs. 10000. Would you - ",
+        "decisionQ4":"You decide not to pay taxes at all in spite of having a significant income. <br>Income tax officer has sent you a notice for payment of Rs.20000 and fine of Rs.3500.",
+        "decisionQ5":"A customer purchases goods worth 1200. He gives you a ₹ 2000 note. You return 700 rupees. The customer doesn't count the money and leaves. Later you realize that you didn't return 100 rupees. Will you return 100 rupees to customer when they visit your shop again.",
+        "decisionQ6":"You need to buy a weighing machine. The electronic machine works on electricity but can also be battery operated. It will cost Rs. 1200. It measures accurate quantities of products.  A Conventional one will cost you Rs. 500 Which one will you buy?",
+        "decisionQ7":"You heard about security camera that will continuously monitor and record the activities in shop. It will cost you Rs. 5000. Will you install it.",
+        "decisionQ8":"A sales man came to your shop and said that there is an offer going on where if you buy 20 kg of washing powder worth Rs 1000, you will get Rs 500 cash back. The washing powder was nonbranded and not packaged properly. Will you buy it?",
+        "decisionQ9":"Your uncle in village is ill and alone. Will you go to look after him? Shut shop for 7 days. Lose profit of 7,000 but gain 20 merit points.",
+        "decisionQ10":"Will you give discount on packet of chips to sale off the existing stock which is expired. You will get a profit 500 Rs if you sell them.",
+        "decisionQ11":"Your delivery van was stopped for breaking the signal ,You are late for a big order. What would you do.",
+        "decisionQ12":"You have refrigerator in your shop. It needs servicing. One service costs Rs. 750. A service man gives you an offer where you will get one service free when you pay advance money for 3 regular service. ",
+        "decisionQ13":"Since, there are voltage fluctuations in your area. You purchased voltage stablizer to safeguard refrigerator, electric weighing balace. It cost you Rs. 3000. This will save you from damaging stock worth Rs. 700 in this week and more in the future. Will you purchase it?",
+        "decisionQ14":"3 new grocery shops have opened in the 5 km vicinity. <br>To make your store known, you can send out pamphlets that will cost you Rs. 1000 to print and distribute. This could result in sales increase between Rs. 500 - 3000. <br>Will you do it?",
+        "decisionQ15":"The shop also sells SIM cards. A customer offers you Rs. 2000 to sell him a SIM card without KYC documents. Do you accept?",
+
+
+        "decisionQ1O1":"Do you bribe the inspector Rs. 1000? ",
+        "decisionQ1O2":"Do you pay the fine Rs. 1500 and documentation fees of Rs. 1000?",
+
+        "decisionQ3O1":"avail of a loan from Punjab National Bank?",
+        "decisionQ3O2":"take money from friend?",
+        "decisionQ3O3":"take money from an unauthorised dealer?",
+
+        "decisionQ4O1":"Would you pay the tax and fine?",
+        "decisionQ4O2":"would you ignore it.",
+        "decisionQ4O3":"would you bribe the tax officer of Rs 5000?",
+
+        "decisionQ6O1":"Electronic Machine",
+        "decisionQ6O2":"Conventional Machine",
+        
+
+        "decisionQ11O1":"Do you bribe the police Rs 100 and rush for delivery. ",
+        "decisionQ11O2":"Pay the fine of Rs 500 by going to the police station and get late for the delivery",
+
+            //Insurance
+
+        "insuranceType":"Select Insurance Type(s):",
+        "Insurance":"Insurance",
+        "insurance1":"Theft",
+        "insurance2":"Accident",
+        "insurance3":"Natural Calamities",
+        "premium":"Annual Premium :",
+        "sumAssured":"Sum Assured:",
+        "buy":"Buy",
+        "cancel":"Cancel",
+        "cashTitleName":"CASH",
+        "chequeTitleName":"CHEQUE",
+        "mode":"Mode of Payment :",
     }

@@ -37,7 +37,7 @@
 				"Rate":"{{Rate}}",
 				"Amount":"{{Amount}}",
 				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
+				"tooltipMessage":"{{This item is not available in your Inventory}}",
 				"tempTotal":"",
 				"order":[
 				{

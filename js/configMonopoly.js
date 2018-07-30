@@ -160,7 +160,7 @@ monopoly.pages = {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:18%;left:90%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button class='boardButtons' onclick=\"ubsApp.runQuizTemplate('ubsApp.pages.generalQuizResult.templates[0].points')\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; font-size:1.05vw;border-radius:5px; \">Take Exam</button>"
+            "src":"<button class='boardButtons' onclick=\"ubsApp.renderPageByName('generalQuizStarter')\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; font-size:1.05vw;border-radius:5px; \">Take Exam</button>"
 
         },
         {

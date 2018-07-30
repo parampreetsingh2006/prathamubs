@@ -11,7 +11,6 @@ let ubsPopupTemplate;
 let ubsTimerTemplate;
 let ubsAudioTemplate;
 let ubsCalculatorTemplate;
-let ubsDecisionInsuranceTemplate;
 let ubsLeaderBoardTemplate;
 let ubsPurchaseTemplate;
 let	ubsLuckTemplate;
@@ -22,12 +21,11 @@ let choiceSelected={};
 let timeVar;
 let numberOfPaymentModes=3;
 var numberOfWeeksDeadline=0;
-var answerselected=0;         //whyGlobal
+var answerselected=0;       
 var inventoryToBeUpdated=0;
 var minimumInventoryScoreRequired=0;
 ubsApp.wheelOfFortune = null;
 var scenarioVideo;
-var interval;				//whyGlobal
 var interval;				
 let audioConfig = {};
 var count=0;
@@ -36,7 +34,7 @@ var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision","purchase","luck","pay","payOff", "transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","decisionInsurance"];
+let templateName = ["static", "decision","purchase","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
 monopoly.numplayers=0;
@@ -73,20 +71,20 @@ ubsApp.getStaticTemplate = function(templateConfig, tempVar){
 	tempVar.html += ubsStaticTemplate(templateConfig);
 }
 
-ubsApp.getDecisionTemplate = function(templateConfig, tempVar){
-	tempVar.decisionConfig = templateConfig;
-	tempVar.html += ubsDecisionTemplate(templateConfig);
-	ubsDecisionOption = templateConfig.options[0].optionName;
-	if(templateConfig.display_score){
-		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]);
-	}
-	if(templateConfig.score_animation_req){
-		tempVar.flag=true;
-	}
-	ubsDecisionOptionMap = templateConfig.optionPageMap;
-}
+// ubsApp.getDecisionTemplate = function(templateConfig, tempVar){
+// 	tempVar.decisionConfig = templateConfig;
+// 	tempVar.html += ubsDecisionTemplate(templateConfig);
+// 	ubsDecisionOption = templateConfig.options[0].optionName;
+// 	if(templateConfig.display_score){
+// 		tempVar.html += ubsScoreTemplate(ubsApp.pages.score[0]);
+// 	}
+// 	if(templateConfig.score_animation_req){
+// 		tempVar.flag=true;
+// 	}
+// 	ubsDecisionOptionMap = templateConfig.optionPageMap;
+// }
 
-ubsApp.getDecisionInsuranceTemplate=function(templateConfig,tempVar){
+ubsApp.getDecisionTemplate=function(templateConfig,tempVar){
 var object={};
 object.balance = userArray[playerChance].getBankBalance();
 object.cash = userArray[playerChance].getplayerScore();
@@ -95,7 +93,7 @@ object.inventory = userArray[playerChance].getInventoryScore();
 object.inventoryValue = (userArray[playerChance].getInventoryScore()*1000);
 object.reputationPts = userArray[playerChance].getReputationPts();
 object = $.extend(true, templateConfig, object);
-tempVar.html+=ubsDecisionInsuranceTemplate(object);
+tempVar.html+=ubsDecisionTemplate(object);
 }
 
 ubsApp.getWheelOfFortuneTemplate = function(templateConfig, tempVar){
@@ -175,10 +173,27 @@ ubsApp.getScoreTemplate = function(templateConfig, tempVar){
 	tempVar.html += ubsScoreTemplate(templateConfig);
 }
 
+ubsApp.getInsuranceTemplate = function(templateConfig, tempVar){
+	var object={};
+	object.balance = userArray[playerChance].getBankBalance();
+	object.cash = userArray[playerChance].getplayerScore();
+	object.debt = userArray[playerChance].getCredit();
+	object.inventory = userArray[playerChance].getInventoryScore();
+	object.inventoryValue = (userArray[playerChance].getInventoryScore()*1000);
+	object.reputationPts = userArray[playerChance].getReputationPts();
+	object = $.extend(true, templateConfig, object);
+	tempVar.html += ubsInsuranceTemplate(templateConfig);
+}
+
 ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	tempVar.salesConfig = templateConfig;
 	ubsApp.selectAvailableItems(templateConfig);
 	tempVar.html += ubsOrdertemplate(templateConfig);
+}
+ubsApp.getQuizStarterTemplate = function(templateConfig, tempVar){
+
+	tempVar.quizConfig = templateConfig;
+	ubsApp.generalQuiz(tempVar.quizConfig);
 }
 
 ubsApp.renderPage = function(page) {
@@ -197,6 +212,7 @@ ubsApp.renderPage = function(page) {
 	let tempVar = {};
 	tempVar.html = "";
 	tempVar.salesConfig = "";
+	tempVar.quizConfig = {};
 	tempVar.wheelConfig = {};
 	tempVar.timerConfig = {};
 	tempVar.staticConfig = {};
@@ -212,12 +228,17 @@ ubsApp.renderPage = function(page) {
 
 	}
 
-	$("#templateContent").empty();
+	if(tempVar.html) {
+		$("#templateContent").empty();
 	// if(calculatorReq)
 	// {
 	// 	tempVar.html+=ubsCalculatorTemplate();
 	// }
 	$("#templateContent").append(tempVar.html);
+
+	}
+
+	
 
 	if(tempVar.wheelConfig.segments){
 		tempVar.wheelConfig.animation.callbackFinished = ubsWheelOfFortune.alertPrize;
@@ -278,30 +299,106 @@ ubsApp.renderPage = function(page) {
 		document.getElementById("headId").innerHTML=ubsApp.getScore();
 	}*/
 }
+    
+ubsApp.increasePremium = function(){
+	let sum=0;
+	let premium = 0;
+	
+	$("input[name='insuranceTypes']:checked").each(function(){
+      premium += parseInt($(this).val());
+      sum += parseInt($("input[id='sum"+$(this).attr("id") + "']").val());
+    });
+    document.getElementById("annualPremium").value=premium;
+	document.getElementById("sumAssured").value=sum;
+}
 
-ubsApp.updateChoiceSelected = function(noOfQuestions) {
-	if(jQuery.isEmptyObject(choiceSelected)){
-	 for(let i=0; i< noOfQuestions; i++) {
-	 choiceSelected[i] = false;
-	 }
+ubsApp.buyInsurance = function(page){
+
+	
+	let premium = parseInt($("#annualPremium").val());
+	if(premium!=0){
+		let sumAssured = parseInt($("#sumAssured").val());
+		let e = document.getElementById("modeOfPaymentOptions");
+		let option = e.options[e.selectedIndex].value;
+		if(option=="cash"){
+			let playerCash = userArray[playerChance].getplayerScore();
+			if(playerCash>=premium){
+				userArray[playerChance].setplayerScore(playerCash-premium);    //have to check if balance is low or not 
+			}else{
+				let playerBankBalance = userArray[playerChance].getBankBalance();
+				if(playerBankBalance > premium){
+					userArray[playerChance].setBankBalance(playerBankBalance-premium);
+				}else{
+					let playerDebt = userArray[playerChance].getCredit();
+					userArray[playerChance].setCredit(premium + playerDebt);
+				}
+			}
+
+		}else if(option=="cheque"){
+			let playerBankBalance = userArray[playerChance].getBankBalance();
+			if(playerBankBalance > premium){
+					userArray[playerChance].setBankBalance(playerBankBalance-premium);
+			}else{
+				let playerDebt = userArray[playerChance].getCredit();
+				userArray[playerChance].setCredit(premium + playerDebt);
+			}
+		}
+		userArray[playerChance].setInsurance(true);
+		userArray[playerChance].setSumAssured(sumAssured);
+		userArray[playerChance].setPremium(premium);
+
+		ubsApp.pages[page].repeatforuser = false;
+        
+        //code for premium payment or set insurance to false 
+		ubsApp.nextMove();
 	}
 }
-ubsApp.areAllChoicesSelected= function(){
 
-    if(jQuery.isEmptyObject(choiceSelected)) {
-        return 0;
-    }
+ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, page="", pamphlet=false){
+
+	let playerRepPoints = userArray[playerChance].getReputationPts();
+	userArray[playerChance].setReputationPts(playerRepPoints+parseInt(reputationPts));
+	let playerBankBalance = userArray[playerChance].getBankBalance();
+	userArray[playerChance].setBankBalance(playerBankBalance+parseInt(bankBalance));
+	if(insurance == "true"){
+	 ubsApp.renderPageByName(page);
+	}
+	else if(pamphlet == "true"){
+		let profit = Math.floor(Math.random() * 2500) + 500;  
+		let playerBankBalance = userArray[playerChance].getBankBalance();
+		userArray[playerChance].setBankBalance(playerBankBalance+profit);
+		ubsApp.nextMove();
+	}
+
+	else{
+		ubsApp.nextMove();
+	}
+}
+
+ubsApp.initializeQuizQuestions = function(questionNo, credit) {
+
+	 choiceSelected.answers[questionNo] = false;
+	 choiceSelected.credit.push({
+	 	"inventory":credit.inventory,
+	 	 "bankBalance":credit.bankBalance,
+	     "cash":credit.cash,
+	     "reputationPoints":credit.reputationPoints
+	});
+}
+
+ubsApp.getTotalCorrectAnswers= function(){
+
    let x=0;
-    $.each(choiceSelected, function(key,value){
-     if(value == true) {
+   for(let i=0; i<choiceSelected.answers.length;i++){
+     if(choiceSelected.answers[i] == true) {
         x++;
      }
-});
+	}
     return x;
 }
 
-ubsApp.updateChoices = function(choiceId){
-	 choiceSelected[choiceId]=true;
+ubsApp.updateAnswers = function(questionNo){
+	 choiceSelected.answers[questionNo]=true;
 }
 
 
@@ -316,16 +413,15 @@ ubsApp.atleastOneSelected= function(name){
   return false;
 }
 
+ubsApp.emptyQuizQuestions = function(){
+	choiceSelected={};
+	choiceSelected.page ="";
+	choiceSelected.answers =[];
+	choiceSelected.credit=[];
+}
 
 ubsApp.doneQuiz=function(){
 	this.currentPlayerContents();
-	if(ubsApp.areAllChoicesSelected()>1){
-		
-		console.log("Passed the Quiz");
-	}
-	else{
-		console.log("Failed in Quiz");
-	}
 	ubsApp.cancelQuiz();
 }
 
@@ -339,8 +435,39 @@ ubsApp.cancelQuiz=function(){
 	$('#templateContent').css("height",0+'px')
 	document.getElementById("templateContent").innerHTML="";
 }
-ubsApp.runQuizTemplate=function( credits=1, type="general"){   //credits can be amount or points depending on type of quiz
-	questionNo = ubsApp.initializeQuiz(type, credits);
+
+ubsApp.generalQuiz=function(config){   //credits can be amount or points depending on type of quiz
+	
+	ubsApp.emptyQuizQuestions();
+
+	let arr = [];
+	let noOfQuestions = config.noOfQuestions;
+    choiceSelected.page=config.resultPage;
+
+	while(arr.length < noOfQuestions){
+	    var randomNumber = Math.floor(Math.random()*5+1);
+	    if(arr.indexOf(randomNumber) > -1) continue;
+	    arr[arr.length] = randomNumber;
+	}
+
+	for(let i=0;i<arr.length-1;i++){
+		ubsApp.pages["quizQ"+arr[i]].templates[0].onClickPage.nextPage = "quizQ"+arr[i+1];
+		ubsApp.initializeQuizQuestions(i, ubsApp.pages["quizQ"+arr[i]].templates[0].credit);
+		ubsApp.pages["quizQ"+arr[i]].templates[0].noOfQuestions = noOfQuestions;
+	}
+	
+
+	ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].onClickPage.nextPage = config.resultPage;
+	ubsApp.initializeQuizQuestions(arr.length-1, ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].credit);
+	ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].noOfQuestions = config.noOfQuestions;    			//noOfQuestions to be put in quiz config
+	ubsApp.pages[config.resultPage].templates[0].noOfQuestions = noOfQuestions;
+	ubsApp.renderFirstQuizPage("quizQ"+arr[0]);
+
+	
+}
+
+ubsApp.renderFirstQuizPage = function(page){
+
 	$('#monopolyBase').css("z-index",-10);
     $('#templateBase').css("z-index",10);
     
@@ -349,35 +476,29 @@ ubsApp.runQuizTemplate=function( credits=1, type="general"){   //credits can be 
     $('#templateContent').css("height",(screenHeight)+'px');
     $('#templateContent').css("width",(screenWidth)+'px');
 
-    ubsApp.renderPageByName(questionNo);
+    ubsApp.renderPageByName(page);
 	$("#correctAnswers").text("0");
 	$("#quizQuestionNumber").text("1");
+
 }
 
-ubsApp.checkLuckorGeneral=function(page, percent){
+ubsApp.luckPaymentQuiz=function(page){    
+	
+	ubsApp.emptyQuizQuestions();
+	let config = ubsApp.pages[page].templates[0];
+	let noOfQuestions = 1;
+	choiceSelected.page = page;
+	ubsApp.initializeQuizQuestions(0, config.credit);
 
-	if(page=="luckQuizResult"){
- 		if(percent>=200/3){
-   			$("#quizResult").text("Congratulaions!! You passed the quiz with "+percent+"%.\nYour Fine is waived off.");
-  		}
-  		else{
-  			$("#quizResult").text("Oops you couldn't pass the quiz. You got "+percent+"%.\n Your Fine is not Waived off.");
-  			var  v =userArray[playerChance].getBankBalance()+parseInt(ubsApp.pages[page].templates[0].amount);
-  			userArray[playerChance].setBankBalance(v);
-		}
-	}
-	else if(page=="generalQuizResult"){
-		if(percent>=200/3){
-  			var pts=ubsApp.pages[page].templates[0].points;
-   			$("#quizResult").text("Congratulaions!! You passed the quiz with "+percent+"%.\nYour Reputation points is increased by "+pts+".");
-   			var v = userArray[playerChance].getReputationPts()+pts;
-   			userArray[playerChance].setReputationPts(v);
-  		}
-  		else{
-  			$("#quizResult").text("Oops!! you couldn't pass the quiz. You got "+percent+"%. \n Your Reputation points won't increase.");
-	  	}
-	}
+	let quizPage = ubsApp.pages[config.resultpage].templates[0];
+	quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
+	quizPage.noOfQuestions = noOfQuestions;
+	ubsApp.pages[quizPage.onClickPage.nextPage].templates[0].noOfQuestions = noOfQuestions;
+
+    ubsApp.renderFirstQuizPage(config.resultpage);
 }
+
+
 
 ubsApp.nextQuizQuestion=function(page, answer, name){
 
@@ -389,7 +510,7 @@ ubsApp.nextQuizQuestion=function(page, answer, name){
 	  if(checkedValue==answer){
 	  	c = parseInt(c);
 	  	c=c+1;
-	  	ubsApp.updateChoices(questionNo-1);
+	  	ubsApp.updateAnswers(questionNo-1);
 	  }
 	  else{
 	  	// console.log("Answer is wrong");
@@ -397,13 +518,16 @@ ubsApp.nextQuizQuestion=function(page, answer, name){
 
 	  ubsApp.renderPageByName(page);
 
-	  if(page=="luckQuizResult" || page=="generalQuizResult"){
+	  if(ubsApp.pages[page].templates[0].quizResult){															
  
-  		$("#quizCancel").attr("disabled", true);
-  		$("#quizDone").attr("disabled", false);
-  		var correctAnswers = ubsApp.areAllChoicesSelected();
-  		var percent = correctAnswers*100/3.0;
-  		ubsApp.checkLuckorGeneral(page, percent.toFixed(2) );
+	  		$("#quizCancel").attr("disabled", true);
+	  		$("#quizDone").attr("disabled", false);
+	  		if(page == "luckQuizResult"){
+	  			ubsApp.luckQuizResult();
+	  		}
+	  		else if(page == "generalQuizResult"){
+	  			ubsApp.generalQuizResult();
+	  		}
 	  }
 	  else{
 		  	questionNo=parseInt(questionNo)+1;
@@ -412,30 +536,67 @@ ubsApp.nextQuizQuestion=function(page, answer, name){
 	  $("#correctAnswers").text(c);
   }
 }
-ubsApp.initializeQuiz=function(type,credits){
-	var arr = [];
-	let noOfQuestions = 3;
-	ubsApp.updateChoiceSelected(noOfQuestions);
-	while(arr.length < noOfQuestions){
-	    var randomNumber = Math.floor(Math.random()*3+1);
-	    if(arr.indexOf(randomNumber) > -1) continue;
-	    arr[arr.length] = randomNumber;
+
+ubsApp.luckQuizResult=function(){
+
+	let infoPage = ubsApp.pages[choiceSelected.page].templates[0];
+	let inventory = 0;
+	let bankBalance =0;
+	let reputationPoints = 0;
+	let cash = 0;
+	let correctAnswers = ubsApp.getTotalCorrectAnswers();
+	for(let i=0;i<choiceSelected.answers.length;i++){
+		if(choiceSelected.answers[i]==false){
+		   inventory += choiceSelected.credit[i].inventory;
+		   bankBalance += choiceSelected.credit[i].bankBalance;
+		   reputationPoints += choiceSelected.credit[i].reputationPoints;
+		   cash += choiceSelected.credit[i].cash;
+		}
 	}
-	for(let i=0;i<arr.length-1;i++){
-		ubsApp.pages["quizQ"+arr[i]].templates[0].onClickPage.nextPage = "quizQ"+arr[i+1];
-	}
-	var str="";
-	if(type=="luck"){
-		str = "luckQuizResult";
-		ubsApp.pages[str].templates[0].amount = credits;
-	}
-	else if(type=="general") {  
-		//no use of credits here
-		str ="generalQuizResult";
-	}
-	ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].onClickPage.nextPage = str;
-	return "quizQ"+arr[0];
+	let playerRepPoints = userArray[playerChance].getReputationPts();
+	userArray[playerChance].setReputationPts(playerRepPoints+reputationPoints);
+
+	let playerCash = userArray[playerChance].getplayerScore();
+	userArray[playerChance].setplayerScore(playerCash+cash);
+
+	let playerBankBalance = userArray[playerChance].getBankBalance();
+	userArray[playerChance].setBankBalance(playerBankBalance+bankBalance);
+
+	let playerInventory = userArray[playerChance].getInventoryScore();
+	userArray[playerChance].setInventoryScore(playerInventory+inventory);
+
+	if(correctAnswers == 1){
+		$("#quizResult").text(infoPage.positiveMsg);
+
+	}else{
+		$("#quizResult").text(infoPage.negativeMsg);
+		}
+
 }
+
+ubsApp.generalQuizResult=function(page){
+
+	let resultPage = ubsApp.pages[choiceSelected.page].templates[0];
+	let inventory = 0;
+	let bankBalance =0;
+	let reputationPoints = 0;
+	let cash = 0;
+
+	let correctAnswers = ubsApp.getTotalCorrectAnswers();
+	for(let i=0;i<choiceSelected.answers.length;i++){
+		if(choiceSelected.answers[i]==true){
+		   inventory += choiceSelected.credit[i].inventory;
+		   bankBalance += choiceSelected.credit[i].bankBalance;
+		   reputationPoints += choiceSelected.credit[i].reputationPoints;
+		   cash += choiceSelected.credit[i].cash;
+		}
+	}
+	let playerRepPoints = userArray[playerChance].getReputationPts();
+	userArray[playerChance].setReputationPts(playerRepPoints+reputationPoints);
+
+	$("#quizResult").text(resultPage.msg1 + correctAnswers + resultPage.msg2 + reputationPoints); 
+}
+
 
 ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
@@ -451,21 +612,23 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 		userArray[playerChance].setplayerScore(c+total*31);
 
-		if(time*100.0/totalTime<100/3.0)r+=3;
-		else if (time*100.0/totalTime<200/3.0)r+=2;
-		else if (time*100.0/totalTime<100)r+=1;
+		if(time*100.0/totalTime<=20)r+=4;
+		else if (time*100.0/totalTime<=40)r+=3;
+		else if (time*100.0/totalTime<=60)r+=2;
+		else if (time*100.0/totalTime<=80)r+=1;
+		else if (time*100.0/totalTime<=100)r+=0;
 
 		userArray[playerChance].setReputationPts(r);
 
 	}else{
 
 		if(userTotal>total){
-			userArray[playerChance].setReputationPts(r-1);
+			userArray[playerChance].setReputationPts(r-4);
 			userArray[playerChance].setplayerScore(c+total*31);
 		}
 		else{
 			userArray[playerChance].setplayerScore(c+userTotal*31);
-		}
+		}	
 	}
 	ubsApp.checkPageorBoard(page,amount,hideScenarios);
 }
@@ -485,27 +648,26 @@ ubsApp.calculateBill = function(){
 ubsApp.selectAvailableItems = function(config){
 
 	let noOfItems =config.order.length;
-	for(var i=0;i<noOfItems;i++){
-		var x = config.order[i].item;
-		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
-	}
-	let percent = ubsApp.checkInventory();
-	percent = 1 - percent;
-	
-	var notAvailable = Math.floor(percent*noOfItems);
-	var arr = [];
+	let val=0;
+	let percent = 1-ubsApp.checkInventory();
+	let notAvailable = Math.floor(percent*noOfItems);
+	let arr = [];
+
 	while(arr.length < notAvailable){
 	    var randomNumber = Math.floor(Math.random()*noOfItems);
 	    if(arr.indexOf(randomNumber) > -1) continue;
 	    arr[arr.length] = randomNumber;
 	}
+
 	for(let i = 0; i<arr.length;i++){
 		config.order[arr[i]].exclude = true;
 	}
-	let val=0;
-	for(let i=0;i<noOfItems;i++){
+
+	for(var i=0;i<noOfItems;i++){
+		var x = config.order[i].itemId;
+		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
 		if(config.order[i].exclude==false){
-			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[config.order[i].itemId];
+			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[x];
 		}
 	}
 	config["tempTotal"] = val;
@@ -607,7 +769,7 @@ ubsApp.intitializeTemplates = function() {
 	ubsLuckTemplate=Template7.compile(ubsApp.luckyUnluckyTemplate);
 	ubsPayOffTemplate=Template7.compile(ubsApp.payOffTemplate);
 	ubsOrdertemplate = Template7.compile(ubsApp.salesTemplate);
-	ubsDecisionInsuranceTemplate = Template7.compile(ubsApp.decisionInsuranceTemplate);
+	ubsInsuranceTemplate = Template7.compile(ubsApp.insuranceTemplate);
 
 }
 

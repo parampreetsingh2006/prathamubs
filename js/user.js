@@ -83,6 +83,32 @@ class User{
         this.inventoryScore=this.inventoryScore+amount;
     }*/
 
+    getInsurance()
+    {
+      return this.insurance
+    }
+
+    setInsurance(insurance){
+      this.insurance=insurance;
+    }
+
+    setPremium(premium){
+      this.premium = premium;
+    }
+
+    getPremium(){
+      return this.premium;
+    }
+
+    setSumAssured(sum){
+      this.sumAssured = sum;
+    }
+
+    getSumAssured(){
+      return this.sumAssured;
+    }
+
+
     setScenarioArray(scenariosArray)    
     {
         this.scenariosArray=[];

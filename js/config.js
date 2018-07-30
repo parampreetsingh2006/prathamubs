@@ -1232,10 +1232,17 @@
 	 		{
 				"templateId": 1,
 				"templateType": "quiz",
+				"noOfQuestions":"",
 				"question": "GST1 stands for: ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"credit":{
+					"inventory":0,
+					"bankBalance":0,
+					"reputationPoints":1,
+					"cash":0,
+				},
 				"answer":"3",
 				"optionName":"q1",
 				"options": [
@@ -1277,10 +1284,17 @@
 	 		{
 				"templateId": 1,
 				"templateType": "quiz",
+				"noOfQuestions":"",
 				"question": "GST1 stands for: ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"credit":{
+					"inventory":0,
+					"bankBalance":0,
+					"reputationPoints":1,
+					"cash":0,
+				},
 				"answer":"3",
 				"optionName":"q2",
 				"options": [
@@ -1322,10 +1336,17 @@
 	 		{
 				"templateId": 1,
 				"templateType": "quiz",
+				"noOfQuestions":"",
 				"question": "GST1 stands for: ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"credit":{
+					"inventory":0,
+					"bankBalance":0,
+					"reputationPoints":1,
+					"cash":0,
+				},
 				"answer":"3",
 				"optionName":"q3",
 				"options": [
@@ -1367,10 +1388,17 @@
 	 		{
 				"templateId": 1,
 				"templateType": "quiz",
+				"noOfQuestions":"",
 				"question": "GST4 stands for: ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"credit":{
+					"inventory":0,
+					"bankBalance":0,
+					"reputationPoints":1,
+					"cash":0,
+				},
 				"answer":"3",
 				"optionName":"q4",
 				"options": [
@@ -1412,10 +1440,17 @@
 	 		{
 				"templateId": 1,
 				"templateType": "quiz",
+				"noOfQuestions":"",
 				"question": "GST5 stands for: ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"credit":{
+					"inventory":0,
+					"bankBalance":0,
+					"reputationPoints":1,
+					"cash":0,
+				},
 				"answer":"3",
 				"optionName": "q5",
 				"options": [
@@ -1445,13 +1480,24 @@
 			}
 		]
 	},
+	"generalQuizStarter":{
+		"templates":[{	
+			"templateId": 1,
+			"templateType": "quizStarter",
+			"noOfQuestions":3,
+			"resultPage":"generalQuizResult",
+		}]
+	},
 
 	"generalQuizResult":{
 		"templates":[
 	 		{
 				"templateId": 1,
 				"templateType": "quiz",
+				"noOfQuestions":"",
 				"question": "Your Result is: ",
+				"msg1":"You answered ",
+				"msg2":" questions correctly. Your Repuation Points increases by ",
 				"quizResult":true,
 				"questionTime":3000,
 				"optionsTime":2000,
@@ -1473,6 +1519,7 @@
 				"templateId": 1,
 				"templateType": "quiz",
 				"question": "Your Result is: ",
+				"noOfQuestions":"",
 				"quizResult":true,
 				"questionTime":3000,
 				"optionsTime":2000,
@@ -1489,7 +1536,6 @@
 	},
 
 	"decisionInsurance":{
-		"category":"Decision",
 		"repeatforuser":true,
 		"repeatforall":true,
 		"questionTime":3000,
@@ -1498,7 +1544,19 @@
 		"inventoryScoreToBeChanged":"0",
 		"templates":[{
 				"templateId": 1,
-				"templateType": "decisionInsurance",
+				"templateType": "insurance",
+				"insuranceType":"{{insuranceType}}",
+		        "Insurance":"{{Insurance}}",
+		        "insurance1":"{{insurance1}}",
+		        "insurance2":"{{insurance2}}",
+		        "insurance3":"{{insurance3}}",
+		        "premium":"{{premium}}",
+		        "sumAssured":"{{sumAssured}}",
+		        "buy":"{{buy}}",
+		        "cancel":"{{cancel}}",
+		        "cashTitleName":"{{cashTitleName}}",
+		        "chequeTitleName":"{{chequeTitleName}}",
+		        "mode":"{{mode}}",
 				"Decision":"{{Decision}}",
 				"bankBalanceTitle":"{{bankBalanceTitle}}",
 				"debtTitle":"{{debtTitle}}",
@@ -1506,9 +1564,13 @@
 				"inventoryTitle":"{{inventoryTitle}}",
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
-				"YES":"{{yes}}",
-				"NO":"{{no}}",
-				"dmQuestion":"{{questionDecisionInsurance}}",
+				"page":"decision2",
+				"premium1":10000,
+				"premium2":20000,
+				"premium3":30000,
+				"sumAssuredvalue1":200000,
+				"sumAssuredvalue2":400000,
+				"sumAssuredvalue3":600000,
 				"onClickPage": {
 					"nextPage" : "",
 					"hideScenarios" : true
@@ -1518,6 +1580,7 @@
 }
 
 ubsApp.pages=$.extend(ubsApp.pages, ubsApp.salesConfig);
+ubsApp.pages=$.extend(ubsApp.pages, ubsApp.decisionConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.transferToBankConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.payOffConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.purchaseConfig);

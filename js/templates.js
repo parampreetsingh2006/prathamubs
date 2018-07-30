@@ -8,27 +8,27 @@ ubsApp.staticTemplate ='<div class="{{width}}" id="{{id}}" style="{{style}}" {{#
 	
 	
 
-ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
-'			'+
-'		'+
-'		<div style="{{questionStyle}}">{{question}}</div><br>'+
-'		<div>'+
-'				'+
-'			{{#each options}}'+
-'			 <div  style="color: black;background-color:rgb(153, 230, 255);border-radius: 2vw;padding:.5vw;font-size:0.9vw;"> <input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
-'<span style="display:none" id="{{id}}Amount">{{amount}}</span>' +
-'<span style="display:none" id="{{id}}Inventory">{{inventoryScoreToBeChanged}}</span>'+
-'			{{/each}}    '+
-'				'+
-'		</div>'+
-'		<div style="text-align:center">'+
-'			<button id = "submitQuestion" style=\'background-color: #b3e6ff;color:black;display:inline-block;text-decoration: none;border:1px solid blue;width:8vw;\' onclick="ubsApp.renderDecisonTemplate()" >Submit</button>'+
-'		</div>'+
-'		  '+
-'		'+
-'			'+
-'		</div>' +
-'<div id={{audioId}}></div>';
+// ubsApp.decisionTemplate = '	 <div class="{{width}}" style="{{style}}">'+
+// '			'+
+// '		'+
+// '		<div style="{{questionStyle}}">{{question}}</div><br>'+
+// '		<div>'+
+// '				'+
+// '			{{#each options}}'+
+// '			 <div  style="color: black;background-color:rgb(153, 230, 255);border-radius: 2vw;padding:.5vw;font-size:0.9vw;"> <input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id={{id}}> {{optionValue}}</div><br>'+
+// '<span style="display:none" id="{{id}}Amount">{{amount}}</span>' +
+// '<span style="display:none" id="{{id}}Inventory">{{inventoryScoreToBeChanged}}</span>'+
+// '			{{/each}}    '+
+// '				'+
+// '		</div>'+
+// '		<div style="text-align:center">'+
+// '			<button id = "submitQuestion" style=\'background-color: #b3e6ff;color:black;display:inline-block;text-decoration: none;border:1px solid blue;width:8vw;\' onclick="ubsApp.renderDecisonTemplate()" >Submit</button>'+
+// '		</div>'+
+// '		  '+
+// '		'+
+// '			'+
+// '		</div>' +
+// '<div id={{audioId}}></div>';
 
 ubsApp.wheelOfFortuneTemplate =   '<div style="{{style}}"  class="{{width}}" >'+
 ' <div style="width:100%; text-align: center;">'+
@@ -460,7 +460,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   <div id="quizTitle">'+
 '       <span id="quizEmoji"></span>    '+
 '       <span id="quizHeading">Quiz</span>'+
-'       <span id="score"> SCORE: <span id="correctAnswers"></span>/3 </span>'+
+'       <span id="score"> SCORE: <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
 '   </div>'+
 '   <div id="questionHeading">{{questionHeading}}</div>'+
 '   <div id="question_answer">'+
@@ -614,7 +614,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-col
 '       </div>'+
 '       {{#if negative}}<div class="alternateMessageContainer">'+
 '          {{alternalteMessage}}'+
-'           <button  class="takeQuizWildCardButton" style="background-color:orangered;" onclick="ubsApp.runQuizTemplate(\'{{amount}}\',\'{{quizType}}\')">{{takeQuizTitle}}</button>'+
+'           <button  class="takeQuizWildCardButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
 '           {{or}}   <button class="takeQuizWildCardButton" style="background-color:green;">{{checkWildCard}}</button>    '+
 '       {{/if}}'+
 '       </div>'+
@@ -704,8 +704,81 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 '  </div>'+
 '</div>';
 
+ubsApp.insuranceTemplate = '<div id="decisonInsurance">'+
+'   <div id="insuranceHeaderTitle">'+
+'       <span id="insuranceEmoji"></span>    '+
+'       <span id="insuranceHeading">{{Insurance}}</span>'+
+'   </div>'+
+''+
+'   <div id="insuranceSelection">'+
+'           <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
+'           <div id="typesOfInsurance">'+
+'           <fieldset id="insuranceTypesSelection">'+
+'               <label for="insurance1" class="col-md-3"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium1}}" id="insurance1" name="insuranceTypes">{{insurance1}}</label>'+
+'               <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue1}} id="suminsurance1">'+
+'               <label for="insurance2" class="col-md-3"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium2}}" id="insurance2" name="insuranceTypes">{{insurance2}}</label>'+
+'               <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue2}} id="suminsurance2">'+
+'               <label for="insurance3" class="col-md-4"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium3}}" id="insurance3" name="insuranceTypes">{{insurance3}}</label>'+
+'               <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue3}} id="suminsurance3">'+
 
-ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
+'           </fieldset>'+
+'       </div>'+
+'       <div id="insurancePayment" class="row">'+
+'           <label for="annualPremium" class="insuranceValue">{{premium}}</label>'+
+'           <input type="number" id="annualPremium" name="premium" value="0" readonly >'+
+'           <label for="annualPremium" class="insuranceValue">{{sumAssured}}</label>'+
+'           <input type="number" id="sumAssured" name="sum"  value="0" readonly >'+
+'       </div>'+
+'       <div id="modeOfPayment">'+
+'           <span id="modeOfPaymentTitle">{{mode}}</span>'+
+'           <select id="modeOfPaymentOptions">'+
+'             <option value="cash"><span id="cashInsurance">{{cashTitleName}}</span></option>'+
+'             <option value="cheque"><span id="chequeInsurance">{{chequeTitleName}}</span></option>'+
+'           </select>'+
+'       </div>'+
+'           <div id="buy_cancel">'+
+'           <span id="decisionBuy"><button  class=\'insuranceButtons\' onclick="ubsApp.buyInsurance(\'{{page}}\')">{{buy}}</button></span>'+
+'           <span id="decisionCancel"><button  class=\'insuranceButtons\' onclick="ubsApp.nextMove()">{{cancel}}</button></span>'+
+'           </div>'+
+'       </div>'+
+'       '+
+'       <div class="row" id="leftInfo">'+
+'           <div class="col-md-6">'+
+'               {{bankBalanceTitle}}  <br>'+
+'               {{cashTitle}}          <br>'+
+'               {{debtTitle}}          <br>'+
+'           </div>'+
+'           <div class="col-md-1">'+
+'               : <br>'+
+'               : <br>'+
+'               : <br>'+
+'           </div>'+
+'           <div class="col-md-5">'+
+'               <span>₹ {{balance}}</span><br>'+
+'               <span>₹ {{cash}}</span><br>'+
+'               <span>₹ {{debt}}</span><br>'+
+'           </div>'+
+'       </div>'+
+'       <div class="row" id="rightInfo">'+
+'           <div class="col-md-7" >'+
+'               {{inventoryTitle}}         <br>'+
+'               {{invVal}}   <br>'+
+'               {{repPoints}} <br>'+
+'           </div>'+
+'           <div class="col-md-1">'+
+'               : <br>'+
+'               : <br>'+
+'               : <br>'+
+'           </div>'+
+'           <div class="col-md-4">'+
+'               <span id="decisionMakingInv">{{inventory}}%</span><br>'+
+'               <span id="decisionMakingInvValue">{{inventoryValue}}</span><br>'+
+'               <span id="decisionMakingReputation">{{reputationPts}}</span><br>'+
+'           </div>'+
+'       </div>'+
+'</div>';
+
+ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '   <div id="decisionTitle">'+
 '       <span id="decisionEmoji"></span>    '+
 '       <span id="decisionHeading">{{Decision}}</span>'+
@@ -713,12 +786,19 @@ ubsApp.decisionInsuranceTemplate = '<div id="decisonMaking">'+
 ''+
 '   <div id="question_answer_decision">'+
 '       <div id="Decision Description">'+
-'           {{dmQuestion}}'+
+'           {{question}}'+
 '       </div>'+
+'       {{#if inline}}'+
 '       <div id="yes_no">'+
-'           <span id="decisionYes"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">{{YES}}</button></span>'+
-'           <span id="decisionNo"><button  class=\'decisionButtons\' onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')">{{NO}}</button></span>'+
+'       {{#each options}}'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}})">{{optionValue}}</button></span>'+
+'       {{/each}}'+
 '       </div>'+
+'       {{else}}'+
+'       {{#each options}}'+
+'           <span id="option{{id}}"><button  class=\'inlineDecisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\')">{{optionValue}}</button></span>'+
+'       {{/each}}'+
+'       {{/if}}'+
 '   </div>'+
 '       '+
 '       <div class="row" id="leftInfo">'+
