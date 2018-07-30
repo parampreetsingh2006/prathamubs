@@ -219,9 +219,10 @@ monopoly.rollDice  = function(){
     },1000);
 }
 
+
 monopoly.storePlayerDetails=function(){
     var i=0;
-    let computerRequired=document.getElementById("computer").checked;
+    let computerRequired=false;  //document.getElementById("computer").checked;
     for( i=0;i<numplayers;i++)
     {
         let user=new User();
@@ -356,7 +357,7 @@ monopoly.chooseLanguage=function(){
   var language=$('input[name=languageRadio]:checked').val();
   var jsElm = document.createElement("script");
   jsElm.type = "text/javascript";
-  jsElm.src = "js/"+language+".js";
+  jsElm.src = "js/language_translations/"+language+".js";
   document.head.appendChild(jsElm);
   
   var link  = document.createElement('link');
@@ -369,10 +370,166 @@ monopoly.chooseLanguage=function(){
     
     
   }
-  jsElm.onload=function(){
-    ubsApp.translateScenarios();
-    monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+   jsElm.onload=function(){
+      ubsApp.translateScenarios();
+      monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+    }
+
   }
+
+ ubsApp.endGame=function(){
+  	var arr=[];
+
+  	for(var i=0;i<numplayers;i++){
+  		var harnamProjectedScore=userArray[i].getWeeks()*harnamSinghProfit;
+  		let currentPlayerProfit=0;
+  		currentPlayerProfit+=(userArray[i].getplayerScore()-initialPlayerCash);
+  		currentPlayerProfit+=(userArray[i].getBankBalance()-initialPlayerBankBalance);
+  		currentPlayerProfit-=userArray[i].getCredit();
+  		currentPlayerProfit=currentPlayerProfit*0.15;
+  		if(currentPlayerProfit<harnamProjectedScore)
+  		{
+  			arr[i]=false;
+  		}
+  		else{
+  			arr[i]=true;
+  		}
+  	}
+
+  		var winnerName="";
+  		var currentHighScore=0;
+  		var atleastOne=false;
+  		for(var i=0;i<numplayers;i++)
+  		{
+  			if(arr[i])
+  			{
+  				atleastOne=true;
+  				var consolidatedScore=userArray[i].getplayerScore()+userArray[i].getBankBalance()-userArray[i].getCredit()+userArray[i].getReputationPts();
+  				if(consolidatedScore>currentHighScore){
+  					currentHighScore=consolidatedScore;
+  					winnerName=userArray[i].getplayerName();
+  				}
+  			}
+  		}
+
+  		if(!atleastOne){
+  		winnerName="No One Wins"
+  	}
+  	console.log(winnerName);
+  }
+
+ubsApp.nextMove = function(){
+			playerChance+=1;
+	        playerChance%=numplayers;
+
+			ubsApp.closeCurrentScenario();
+			this.currentPlayerContents();
+
+			$("#diceval").html(" ");
+
+
+			//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
+			if(userArray[playerChance].getIsComputer()){
+				decisionConfig={};
+				setTimeout( function(){
+					$('#rollIt').trigger('click');
+					$('#rollIt').attr('disabled',true);
+				},2000);
+			}
+}
+ubsApp.getScore=function()
+{
+	ubsApp.initializeScoreBoard();
+    return userArray[playerChance].getplayerScore();
+}
+
+ubsApp.addScore=function (earnedScore)
+{
+    var currentScore=userArray[playerChance].getplayerScore();
+    userArray[playerChance].setplayerScore(parseInt(currentScore)+parseInt(earnedScore));
+}
+
+ubsApp.addInventory=function(inventoryPoints){
+	var currentInventory=userArray[playerChance].getInventoryScore();
+	userArray[playerChance].setInventoryScore(inventoryPoints+currentInventory);
 }
 
 
+ubsApp.currentPlayerContents=function(){
+	$("#player").html(userArray[playerChance].getplayerName());
+	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
+	document.getElementById("bankBalance").innerHTML="₹ "+userArray[playerChance].getBankBalance();
+	document.getElementById("cash").innerHTML="₹ "+userArray[playerChance].getplayerScore();
+	document.getElementById("debt").innerHTML="₹ "+userArray[playerChance].getCredit();
+	document.getElementById("inventoryValueContent").innerHTML="₹ "+(userArray[playerChance].getInventoryScore()*1000);
+	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
+	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
+	document.getElementById("advantageCardContent").innerHTML=userArray[playerChance].getAdvantageCardNumber();
+}
+
+
+
+
+ubsApp.initializeLeaderBoard=function(category)
+{
+	let leaderBoardObject={}; //new
+	 //new
+	leaderBoardObject.array=[];
+	if(category=="Score")
+	{
+		leaderBoardObject.title = ubsApp.translation["scoreSideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{ 	//new
+			leaderBoardObject.array.push({
+				"name":userArray[j].getplayerName(),
+				"color":userArray[j].getplayerColor(),
+				"score":userArray[j].getplayerScore()
+			});
+
+		}
+	}
+	else if(category=="Document")
+	{
+		leaderBoardObject.title = ubsApp.translation["documentSideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{
+				//new
+				leaderBoardObject.array.push({
+					"name":userArray[j].getplayerName(),
+					"color":userArray[j].getplayerColor(),
+					"document":"Dummy Text"
+				});
+        	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummt Text"+ "</span>"  +  "</div><br>";
+		}
+	}
+	else if(category=="Inventory")
+	{
+		leaderBoardObject.title = ubsApp.translation["inventorySideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{
+			//new
+			leaderBoardObject.array.push({
+				"name":userArray[j].getplayerName(),
+				"color":userArray[j].getplayerColor(),
+				"inventory":userArray[j].getInventoryScore()+"%",
+			});
+        	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+		}
+	}
+	else if(category=="Merit")
+	{
+		leaderBoardObject.title = ubsApp.translation["meritSideBar"];
+		for(var j=0;j<parseInt(numplayers);j++)
+    	{
+			//new
+			leaderBoardObject.array.push({
+				"name":userArray[j].getplayerName(),
+				"color":userArray[j].getplayerColor(),
+				"merit":"Dummy Text"
+			});
+        	//document.getElementById("leaderBoard").innerHTML+="<div style=\"margin-top:15%;border:2px solid;display: block; white-space: nowrap; width:100%;padding:7px;display:inline-block; color:"+userArray[j].getplayerColor()+";\"><span style=\"color:white;white-space: nowrap; transition: width 2s;margin-top:2px;\">"+userArray[j].getplayerName()+": "+ "</span>"+ "<span id=\"score\" style=\"white-space: nowrap;margin-left:1%;margin-left:5%;color:white;\">" +"Dummy Text"+ "</span>"  +  "</div><br>";
+		}
+	}
+
+	document.getElementById("leaderBoardParent").innerHTML=ubsLeaderBoardTemplate(leaderBoardObject);
+}

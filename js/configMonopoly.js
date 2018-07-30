@@ -27,18 +27,18 @@ monopoly.pages = {
         "id":"initPageTitle",
         "src":"{{initPageTitle}}",
     },
-    {
-        "templateId":1,
-        "templateType":"static",
-        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\">{{computerRequiredTitle}}</label>",
-        "style": "position:absolute; right:10%;top:10%;color:black;",
-    },
-    {
-        "templateId":1,
-        "templateType":"static",
-        "src":"<div id=\"computerDetails\"></div>",
-        "style": "position:absolute; right:10%;top:20%;"
-    },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\">{{computerRequiredTitle}}</label>",
+//        "style": "position:absolute; right:10%;top:10%;color:black;",
+//    },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "src":"<div id=\"computerDetails\"></div>",
+//        "style": "position:absolute; right:10%;top:20%;"
+//    },
     {
         "templateId":1,
         "templateType":"static",

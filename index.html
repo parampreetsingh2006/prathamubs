@@ -6,43 +6,51 @@
     <script src="js/lib/jquery-3.3.1.min.js"></script>
     <script src="js/lib/template7.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
-    <script src="js/lib/Winwheel.js"></script>
+    <!-- <script src="js/lib/Winwheel.js"></script>
     <script src="js/lib/TweenMax.min.js"></script>
-    <script src="js/wheelOfFortune.js"></script>
-    <script src="js/rollingDice.js"></script>
+    <script src="js/wheelOfFortune.js"></script> -->
+    <script src="js/dice_template/rollingDice.js"></script>
     <script src="js/audioMain.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/transferToBankConfig.js"></script>
-    <script src="js/payOffConfig.js"></script>
-    <script src="js/purchaseConfig.js"></script>
-    <script src="js/helpConfig.js"></script>
-    <script src="js/paymentConfig.js"></script>
-    <script src="js/withdrawFromBankConfig.js"></script>
+    <script src="js/transfertobank_template/transferToBankConfig.js"></script>
+    <script src="js/payoff_template/payOffConfig.js"></script>
+    <script src="js/purchase_template/purchaseConfig.js"></script>
+    <script src="js/help_template/helpConfig.js"></script>
+    <script src="js/quiz_template/quizConfig.js"></script>
+    <script src="js/payment_template/paymentConfig.js"></script>
+    <script src="js/withdrawfrombank_template/withdrawFromBankConfig.js"></script>
     <script src="js/centerScoreBoardConfig.js"></script>
-    <script src="js/luckConfig.js"></script>
-    <script src="js/salesConfig.js"></script>
-    <script src="js/decisionConfig.js"></script>
-    <script src="js/advantageCardConfig.js"></script>
+    <script src="js/luck_template/luckConfig.js"></script>
+    <script src="js/sales_template/salesConfig.js"></script>
+    <script src="js/decision_template/decisionConfig.js"></script>
+    <script src="js/advantagecard_template/advantageCardConfig.js"></script>
     <script src="js/mainMonopoly.js"></script>
     <script src="js/templates.js"></script>
     <script src="js/templateMonopoly.js"></script>
     <script src="js/config.js"></script>
-    <script src="js/luckMain.js"></script>
-    <script src="js/purchaseMain.js"></script>
-    <script src="js/paymentMain.js"></script>
-    <script src="js/payOffMain.js"></script>
-    
-    <script src="js/advantageCardMain.js"></script>
-    <script src="js/withdrawFromBankMain.js"></script>
-    <script src="js/transferToBankMain.js"></script>
+    <script src="js/static_template/staticMain.js"></script>
+    <script src="js/sales_template/salesMain.js"></script>
+    <script src="js/luck_template/luckMain.js"></script>
+    <script src="js/purchase_template/purchaseMain.js"></script>
+    <script src="js/payment_template/paymentMain.js"></script>
+    <script src="js/dice_template/rollingdiceMain.js"></script>
+    <script src="js/payoff_template/payOffMain.js"></script>
+    <script src="js/help_template/helpMain.js"></script>
+    <script src="js/quiz_template/quizMain.js"></script>
+    <script src="js/quiz_template/quizStarterMain.js"></script>
+    <script src="js/insurance_template/insuranceMain.js"></script>
+    <script src="js/decision_template/decisionMain.js"></script>
+    <script src="js/advantagecard_template/advantageCardMain.js"></script>
+    <script src="js/withdrawfrombank_template/withdrawFromBankMain.js"></script>
+    <script src="js/transfertobank_template/transferToBankMain.js"></script>
     <script src="js/configMonopoly.js"></script>
-    <script src="js/scratchCardLib.js"></script>
-    <script src="js/scratchCard.js"></script>   
-    <script src="js/user.js"></script> 
-    <script src="js/scenario.js"></script> 
+    <!--<script src="js/scratchCardLib.js"></script>
+    <script src="js/scratchCard.js"></script>   -->
+    <script src="js/user.js"></script>
+    <script src="js/scenario.js"></script>
     <script src="js/calculator.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/rollingDice.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -55,23 +63,27 @@
     <link rel="stylesheet" href="css/receipt.css">
     <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" type="text/css" href="css/quiz.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css"/>
 </head>
 
 <body>
 
-<div id="helpBase" class="container-fluid" style="position:relative;z-index:1000;margin:0px; margin-left: 0px; margin-right: 0px; padding: 0px;">
-    <div id="helpContent" style="height:0; transition: height 0.5s;position: absolute;margin:0px;background-color:	rgb(105,105,105); opacity: 0.0;" >
-        
+<div id="helpBase" class="container-fluid"
+     style="position:relative;z-index:1000;margin:0px; margin-left: 0px; margin-right: 0px; padding: 0px;">
+    <div id="helpContent"
+         style="height:0; transition: height 0.5s;position: absolute;margin:0px;background-color:	rgb(105,105,105); opacity: 0.0;">
+
     </div>
 </div>
-        
-<div id="templateBase" class="container-fluid" style="position:relative;z-index:0;margin:0px; margin-left: 0px; margin-right: 0px; padding: 0px;  ">
-    <div id="templateContent" style="height:0; transition: height 0.5s;position: absolute;margin:0px;background-color:	rgb(105,105,105); opacity: 0.0;" >
-   
-           
+
+<div id="templateBase" class="container-fluid"
+     style="position:relative;z-index:0;margin:0px; margin-left: 0px; margin-right: 0px; padding: 0px;  ">
+    <div id="templateContent"
+         style="height:0; transition: height 0.5s;position: absolute;margin:0px;background-color:	rgb(105,105,105); opacity: 0.0;">
+
+
     </div>
-    
+
 </div>
 
 <div id="monopolyBase" class="container-fluid">

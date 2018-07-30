@@ -1,16 +1,18 @@
 <div id="choiceTemplate" style="height:{{containerHeight}}">
-			{{#each choices}}		
-				
-				<div class="{{width}}" style="{{style}} ; height: {{choiceHeight}}; {{#if display}} ;cursor:pointer;{{/if}}" {{#if onClickPage}} {{#if display}} onclick="ubsApp.updateChoices(\'{{choiceID}}\', \'{{onClickPage}}\')" {{/if}}{{/if}}>
-					{{#if display}} 
+    {{#each choices}}
 
-					      {{notSelectedSrc}}
-					
-					{{else}}
-							{{selectedSrc}}
-					{{/if}}
-	            </div>			
+    <div class="{{width}}" style="{{style}} ; height: {{choiceHeight}}; {{#if display}} ;cursor:pointer;{{/if}}" {{#if
+         onClickPage}} {{#if display}} onclick="ubsApp.updateChoices(\'{{choiceID}}\', \'{{onClickPage}}\')" {{
+    /if}}{{/if}}>
+    {{#if display}}
 
-			{{/each}}	
- </div>
- <div id={{audioId}}></div>
+    {{notSelectedSrc}}
+
+    {{else}}
+    {{selectedSrc}}
+    {{/if}}
+</div>
+
+{{/each}}
+</div>
+<div id={{audioId}}></div>
