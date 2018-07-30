@@ -1,28 +1,11 @@
 ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 	var object={};
-	//object.purchase=ubsApp.translation["pratham_title_purchase"];
-	//object.inventoryTitle=ubsApp.translation["inventoryTitle"];
-	//object.current=ubsApp.translation["current"];
-	//object.level=ubsApp.translation["level"];
+
 	object.bankBalance="Rs. "+userArray[playerChance].getBankBalance();
 	object.cash="Rs. "+userArray[playerChance].getplayerScore();
 	object.credit="Rs. "+userArray[playerChance].getCredit();
 	object.sliderValue=userArray[playerChance].getInventoryScore();
-	//object.bankBalanceTitle=ubsApp.translation["bankBalanceTitle"];
-	//object.cashTitle=ubsApp.translation["cashTitle"];
-	//object.creditTitle=ubsApp.translation["creditTitle"];
-	//object.creditLimitTitle=ubsApp.translation["creditLimitTitle"];
-	//object.newInventoryLevelTitle=ubsApp.translation["newInventoryLevelTitle"];
-	//object.costTitle=ubsApp.translation["costTitle"];
-	//object.amountTitle=ubsApp.translation["amountTitle"];
-	//object.payByTitle=ubsApp.translation["payBytitle"];
-	//object.confirmTitle=ubsApp.translation["confirmTitle"];
-	//object.addModeTitle=ubsApp.translation["addModeTitle"];
-	//object.helpTitle=ubsApp.translation["helpTitle"];
-	//object.doneTitle=ubsApp.translation["doneTitle"];
-	//object.chequeTitle=ubsApp.translation["cheque"];
-	//object.creditTitle=ubsApp.translation["creditTitle"];
-	//object.noThanksTitle=ubsApp.translation["noThanksTitle"];
+	
 	object.inventoryValue=userArray[playerChance].getInventoryScore()*1000;
     object.creditLimit="Rs. "+userArray[playerChance].getCreditLimit();
     templateConfig=$.extend(templateConfig,object);
@@ -31,13 +14,13 @@ ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 
 
 ubsApp.updateInventoryLevel=function(value){
-    if(value<userArray[playerChance].getInventoryScore()){	//instead of 20 write userArray[playerChance].getInventoryScore()
+    if(parseFloat(value)<parseFloat(userArray[playerChance].getInventoryScore())){	//instead of 20 write userArray[playerChance].getInventoryScore()
         document.getElementById("mySlider").value=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
-        document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore()+"%";	//userArray[playerChance].getInventoryScore()
+        document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore().toFixed(2)+"%";	//userArray[playerChance].getInventoryScore()
         document.getElementById("value").innerHTML="Rs. "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
     }
     else{
-        document.getElementById("percent").innerHTML=value+"%";
+        document.getElementById("percent").innerHTML=parseFloat(value).toFixed(2)+"%";
         document.getElementById("value").innerHTML="Rs. "+parseInt(value*1000); 
     }
     
@@ -47,8 +30,6 @@ var temp=document.getElementById("value").innerHTML;
 document.getElementById("newInventoryLevelText").value=document.getElementById("percent").innerHTML;
 document.getElementById("newCostText").value="Rs. "+(parseInt(temp.substring(4))-userArray[playerChance].getInventoryScore()*1000);//-userArray[playerChance].getInventoryScore()*1000;
 }
-
-
 
 ubsApp.pay=function(){
 document.getElementById("result").innerHTML="";

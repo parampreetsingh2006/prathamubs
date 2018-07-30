@@ -25,8 +25,13 @@ ubsApp.transferToBank=function(){
 	if(amount){
 		if(amount<=userArray[playerChance].getplayerScore()){
 			userArray[playerChance].setplayerScore(userArray[playerChance].getplayerScore()-amount);
-			userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+1);
+			
 			userArray[playerChance].setBankBalance(parseInt(userArray[playerChance].getBankBalance())+parseInt(amount));
+			if(!cashTransfered&&userArray[playerChance].getTransferReminderOpened()){
+				userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+5);
+			}
+			cashTransfered=true;
+			
 			var temptimer;
 			var temptime=20;
 			temptimer = setInterval(function(){
@@ -56,7 +61,7 @@ ubsApp.transferToBank=function(){
 	}
 }
 
-ubsApp.openTransferToBank=function(page){
+ubsApp.openTransferToBank=function(){
 	ubsApp.startCurrentScenario();
-	ubsApp.renderPageByName(page);
+	ubsApp.renderPageByName("transferToBank");
 }

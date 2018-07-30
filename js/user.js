@@ -11,6 +11,12 @@ class User{
     setplayerScore(score){ ///this is the cash 
         this.score=score;
     }
+    setTransferReminderOpened(flag){
+        this.reminderForThisWeekShown=flag;
+    }
+    getTransferReminderOpened(){
+        return this.reminderForThisWeekShown;
+    }
     setplayerColor(color){
         this.color=color.toLowerCase();
     }
@@ -71,7 +77,7 @@ class User{
     }
     setInventoryScore(inventoryScore)
     {
-        this.inventoryScore=inventoryScore.toFixed(2);
+        this.inventoryScore=parseFloat(inventoryScore).toFixed(2);
     }
 
     getInventoryScore()
@@ -136,6 +142,18 @@ class User{
             this.deadline--;
         }
     	this.noOfWeeks = weeks;
+    }
+    setAdvantageCardNumber(advantageCardNumber){
+        if(this.advantageCardNumber==null)
+        {
+            this.advantageCardNumber=advantageCardNumber;
+        }
+        else{
+            this.advantageCardNumber+=advantageCardNumber;
+        }
+    }
+    getAdvantageCardNumber(){
+        return this.advantageCardNumber;
     }
     setCorrectProbability(level){
         if(level.toLowerCase()=="easy"){

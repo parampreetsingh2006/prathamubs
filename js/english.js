@@ -61,8 +61,7 @@ ubsApp.translation={
         "q4-vvwrong":"Oops!! you answered incorrect. You lost money.",
         "paymentQuestion1":"You have been fined for not having driving license.",
         "paymentQuestion2":"You have been fined Rs.1000 for not having shop License.",
-        "luckQuestion1":"You have gained Rs. 1000 for paying income tax.",
-        "luckQuestion2":"You have lost Rs. 1000 for not paying income tax.",
+       
         
         //new
         "validAmount":"PLEASE ENTER A VALID AMOUNT",
@@ -91,7 +90,7 @@ ubsApp.translation={
             "12":"₹ 45/100ml",
             "13":"₹ 37/500gm"
         },
-
+        //center ScoreBoard and transfer to bank
         "payDebtTitle":"PAY DEBT",
         "transferToBank":"TRANSFER CASH TO BANK",
         "payment":"PAYMENT",
@@ -104,7 +103,9 @@ ubsApp.translation={
         "transferToBankTitle":"TRANSFER CASH TO BANK",
         "debtAmountTitle":"Debt Amount",
         "cancelTitle":"CANCEL",
-
+        "withdrawTitle":"WITHDRAW",
+        
+        //purchase
         "amountToPayTitle":"AMOUNT TO PAY",
         "amountToTransferTitle":"AMOUNT TO TRANSFER",
         "modeOfPaymentTitle":"MODE OF PAYMENT",
@@ -158,6 +159,7 @@ ubsApp.translation={
         "yes":"YES",
         "no":"NO",
 
+
         "decisionQ1":"Food inspector visits your shop and it is found that you have some products that are expired but still kept for sale.<br>Food inspector raises objection. He asks for shop documents. You don't have all documents.<br>",
         "decisionQ2":"Last year during extremely heavy rains, there was immense flooding and water logging in your area which led to partial or complete damage of the food items in your shop. <br> of the neighbouring shops were also affected. Your insurance agent has come for purchase of your policy? Premium cost will between Rs 3000 - Rs 6800 per year. <br>Will you purchase it ?",
         "decisionQ3":"You need funds to repair the broken ceiling in your store. The cost to repair the ceiling is Rs. 10000. Would you - ",
@@ -207,4 +209,89 @@ ubsApp.translation={
         "cashTitleName":"CASH",
         "chequeTitleName":"CHEQUE",
         "mode":"Mode of Payment :",
+
+
+
+        //luck scenario
+        "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",
+        "luckQuestion2":"Scratch Card Cash Prize: Rs. 100",
+        "luckQuestion3":"Extra icecream sold in summer. Profit: Rs. 2500 ",
+        "luckQuestion4":"Power cut. Milk goes bad. Lose inventory of Rs. 1800. ",
+        "luckQuestion5":"Theft in store! Lose inventory worth Rs. 700",
+        "luckQuestion6":"Theft in store! Lose inventory worth Rs. 3800.",
+        "luckQuestion7":"Decrease in GST. Save Rs.500.",
+        "luckQuestion8":"Increase in GST. Lose Rs.500",
+        "luckQuestion9":"Increase in bank interest rate. Lose Rs. 250.",
+        "luckQuestion10":"Decrease in bank interest rate. Gain Rs. 250",
+        "luckQuestion11":"Stock damaged in rain Storm. Lose inventory worth Rs. 7800 or claim insurance.",
+        "luckQuestion12":"Refrigerator break down. Lose inventory worth Rs. 3800",
+        "luckQuestion13":"Leak in shop. Lose inventory worth Rs. 5000",
+        "luckQuestion14":"Fire hazard in shop. Fine Rs. 12000",
+        "luckQuestion15":"Cash Prize. Rs. 5000",
+        "luckQuestion16":"Good Diwali sales! Earnings: Rs. 10000",
+        "luckQuestion17":"Sick Leave for 3 days. Your profit reduced by Rs.15000",
+        "luckQuestion18":"GST refund. Rs. 8,000",
+        "luckQuestion19":"Fine for late payment of GST. Rs. 1000",
+        "luckQuestion20":"In store repairs. Cost: Rs.800",
+        "luckQuestion21":"Income tax refund.  Rs. 8700.",
+        "luckQuestion22":"Go Green Cash Prize. Rs 3000 +  20 reputation points.",
+        "luckQuestion23":"Admitted to hospital for 3 days. Loss: Rs.20000",
+        "luckQuestion24":"License expired. Fine: Rs. 500",
+        "luckQuestion25":"Tax bracket reduced. Savings increase: Rs.18000.",
+        "luckQuestion26":"Government subsidy: Profit: Rs 4000",
+        "luckQuestion27":"Increased Demand. Profit: Rs. 3000",
+        "luckQuestion28":"GST increase. Lose Rs. 7800.",
+        "luckQuestion29":"GST Decrease. Gain Rs. 7800.",
+        "luckQuestion30":"Theft in store! Lose all cash!",
+        "luckQuestion31":"Arson. Lose inventory of Rs 12000",
+        "luckQuestion32":"Whole seller discount. Sales: Rs. 7000",
+        "luckQuestion33":"Investor Gift. Rs. 10000",
+        "luckQuestion34":"RTO fine. Pay Rs. 500",
+        "luckQuestion35":"Great Customer Service! You get 20 reputation points.",
+        "luckQuestion36":"Increased business!  Rs. 2000",
+        "luckQuestion37":"Home delivery service started! You got 15 reputation points.",
+       
+        "convertTitle":"CONVERT",
+
+        // Advantage Card
+        "advantageCardTitle":"ADVANTAGE CARDS",
+        "reputationPointAvailableTitle":"Reputation Points Available",
+        "numberToConvertTitle":"Number to convert",
+        "numberOfAdvantageCardTitle":"Number of Advantage Cards",
+        "reputationPointBalance":"Reputation Point Balance",
+        "conversionTitle":"15 POINTS = 1 CARD",
+        "checkTitle":"CHECK",
+        "enterInMultipleOf15":"Please enter number in the multiple of 15.",
+        "You have entered more points than you have":"You have entered more points than you have.",
+        "validReputationPts":"Please enter a valid reputation point.",
+
+
+        //withdraw from bank
+        
+        "withdrawFromBankTitle":"Withdraw From Bank",
+        "amountToWithdrawTitle":"Amount To Withdraw",
+
+        //payment Scenarios
+        "paymentQuestion1":"Electricity Bill of Rs. 500 is due next week.",
+        "paymentQuestion2":"You need to urgently file tax returns and the chartered accountant fee is Rs.1000.",
+        "paymentQuestion3":"Refrigerator has broken down owing to excessive usage this summer.",
+        "paymentQuestion4":"Shop entrance need renovation. Rs. 800.",
+        "paymentQuestion5":"GST department has levied Rs.1500 fine for incorrect filing last year.",
+        "paymentQuestion6":"Many customers want digital payment options and you need to enrol with a digital wallet provider. Enrolment fee is Rs.500",
+        "paymentQuestion7":"Need to find additional help for the shop a the cost of Rs.1000",
+        "paymentQuestion8":"You have to spend on printing and distributing pamphlets to promote an upcoming sale. Rs. 1000",
+        "paymentQuestion9":"Pay your ontribution for planting more tress in the locatlity. Rs. 500",
+        "paymentQuestion10":"Owing to increased parking space usage, the landlord has asked for Rs.5000 as additional advance for the shop rental.",
+        "paymentQuestion11":"Cockroaches infested the shop via one of the goods consignment. Exterminate for Rs.800",
+        "paymentQuestion12":"Your shop has been disposing garbage improperly. Hence corporation has charged a fine of Rs.1000",
+        "paymentQuestion13":"You owe a one time commission for a sales person. Rs. 500",
+        "paymentQuestion14":"To increase sales duing festival season, you have to install an additional stall in the shop. Rs.2500",
+        "paymentQuestion15":"The shutter door of the shop is rusted and needs replacement. Rs.1200",
+        "paymentQuestion16":"The delivery van of the shop broke down and requires repair. Rs. 2200",
+        "paymentQuestion17":"Owing to recent government regulation, you need to procure a bulk lot of non-plastic carry bags. Rs.10000",
+        "paymentQuestion18":"The display cabinet accidentally broke and needs fixing. Rs.1300",
+        "paymentQuestion19":"Recent rains had caused damage to the shop roof. Need fixing. Cost Rs.750",
+        "paymentQuestion20":"Installation of CCTV camera",
+        
+
     }

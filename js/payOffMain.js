@@ -63,7 +63,7 @@ ubsApp.payDebt=function(){
 	}
 }
 
-ubsApp.openPayOffScenario=function(page){
+ubsApp.openPayOffScenario=function(){
 	ubsApp.startCurrentScenario();
-	ubsApp.renderPageByName(page);
+	ubsApp.renderPageByName("PayOffScenario");
 }

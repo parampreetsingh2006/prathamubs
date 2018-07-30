@@ -108,3 +108,12 @@
   #currentChanceDetails{
     font-size: 1.05vw;
   }
+
+  /*advantage card*/
+#advantageCardScenario
+{
+    font-size: 1.05vw;
+}
+#advantageCardTitle{
+    font-size: 1.1vw;
+}

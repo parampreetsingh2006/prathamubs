@@ -16,9 +16,11 @@ let ubsPurchaseTemplate;
 let	ubsLuckTemplate;
 let ubsPayOffTemplate;
 let ubsOrdertemplate;
+let ubsAdvantageCardTemplate;
 let ubsQuizTemplate;
 let choiceSelected={};
 let timeVar;
+var helpScenarioOpen=false;
 let numberOfPaymentModes=3;
 var numberOfWeeksDeadline=0;
 var answerselected=0;       
@@ -34,7 +36,7 @@ var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision","purchase","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter"];
+let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
 monopoly.numplayers=0;
@@ -42,7 +44,11 @@ let numplayers = monopoly.numplayers;
 monopoly.playerChance = 0;
 let playerChance = monopoly.playerChance;
 
-
+let cashTransfered=false;
+var initialPlayerCash=1000;
+var initialPlayerBankBalance=250000;
+var initialInventoryScore=60;
+var initialReputation=45;
 
 $(document).ready(function(){	
 	ubsApp.intitializeTemplates();
@@ -763,6 +769,7 @@ ubsApp.intitializeTemplates = function() {
 	ubsAudioTemplate = Template7.compile(ubsApp.audioTemplate);
 	ubsBoardtemplate = Template7.compile(ubsApp.boardTemplate);
 	ubsQuizTemplate = Template7.compile(ubsApp.quizTemplate);
+	ubsAdvantageCardTemplate=Template7.compile(ubsApp.advantageCardTemplate);
 	// ubsCalculatorTemplate=Template7.compile(ubsApp.calculatorTemplate);
 	ubsLeaderBoardTemplate=Template7.compile(ubsApp.leaderBoardTemplate);
 	ubsPurchaseTemplate=Template7.compile(ubsApp.purchaseTemplate);
@@ -861,17 +868,23 @@ ubsApp.initializeLeaderBoard=function(category)
 }
 
 ubsApp.startTimer=function(temp){
-    var timeleft = temp.time;
+	var timeleft = temp.time;
+	
+
     timeVar = setInterval(function(){
 		if(document.getElementById(temp.divID))
 		document.getElementById(temp.divID).innerHTML = timeleft;
-		timeleft--;
+		if(!helpScenarioOpen){
+			timeleft--;
+		}
+
 	    if(timeleft === 0 ){
 	        clearInterval(timeVar);
 	        choiceSelected={};
 	        ubsApp.nextMove();
 	    }
-    },1000);
+	},1000);
+
 }
 
 ubsApp.nextMove = function(){
@@ -882,10 +895,8 @@ ubsApp.nextMove = function(){
 			this.currentPlayerContents();
 			
 			$("#diceval").html(" ");
-			if(userArray[playerChance].getPayOffDeadline()==0){
-				ubsApp.startCurrentScenario();
-				ubsApp.renderPageByName("PayOffScenario");
-			}
+			
+			
 			//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
 			if(userArray[playerChance].getIsComputer()){
 				decisionConfig={};
@@ -1041,18 +1052,19 @@ ubsApp.currentPlayerContents=function(){
 	document.getElementById("inventoryValueContent").innerHTML="₹ "+(userArray[playerChance].getInventoryScore()*1000);
 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
 	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
+	document.getElementById("advantageCardContent").innerHTML=userArray[playerChance].getAdvantageCardNumber(); 
 }
 
 
-ubsApp.generateVideo=function(){
-	var videoConfiguration={};
-	videoConfiguration.message=scenarioVideo;
-	console.log(videoConfiguration.message);
-	videoConfiguration.msg_style="z-index:100;"
+// ubsApp.generateVideo=function(){
+// 	var videoConfiguration={};
+// 	videoConfiguration.message=scenarioVideo;
+// 	console.log(videoConfiguration.message);
+// 	videoConfiguration.msg_style="z-index:100;"
 	
-	document.getElementById("templateBase").innerHTML+=ubsPopupTemplate(videoConfiguration);
-	$('#helpButton').attr('disabled',false);
-}
+// 	document.getElementById("templateBase").innerHTML+=ubsPopupTemplate(videoConfiguration);
+// 	$('#helpButton').attr('disabled',false);
+// }
 
 ubsApp.closeCurrentScenario=function(){
 	$('#monopolyBase').css("z-index",0)
@@ -1060,6 +1072,13 @@ ubsApp.closeCurrentScenario=function(){
 	$('#templateContent').css("height",0+'px')
 	document.getElementById("templateContent").innerHTML="";
 	$('#rollIt').attr('disabled',false);
+	if(userArray[playerChance].getTransferReminderOpened()==false){
+		userArray[playerChance].setTransferReminderOpened(true);
+		ubsApp.openTransferToBank();
+	}
+	if(userArray[playerChance].getPayOffDeadline()==0){
+		ubsApp.openPayOffScenario();
+	}
 }
 
 ubsApp.startCurrentScenario=function(){
@@ -1074,62 +1093,91 @@ ubsApp.startCurrentScenario=function(){
 
 
 ubsApp.translateScenarios=function(){
-	$.each(ubsApp.pages, function(key, value) {
-		if(value.templates!=null){
-			
-			$.each(value.templates, function( index, arrayValue ) {
-				
-				$.each(value.templates[index], function( subKey, subValue ) {
-						
-					if(typeof(subValue)=='string'){
-						if(subValue.indexOf("{{") >= 0){
-							let translationKey=subValue.substring(subValue.indexOf("{{")+2,subValue.indexOf("}}"));
-					
-							let stringToBeReplaced="{{"+translationKey+"}}";
-							ubsApp.pages[key].templates[index][subKey]=ubsApp.pages[key].templates[index][subKey].replace(stringToBeReplaced,ubsApp.translation[translationKey]);
-						}
-					}
-
-					if(subKey && typeof subValue === 'object' && subValue.constructor === Array){
-
-						$.each(value.templates[index][subKey], function( superSubIndex, superArrayValue ) {
-
-						   $.each(value.templates[index][subKey][superSubIndex], function( superSubKey, superSubValue ) {
-								if(typeof(superSubValue)=='string'){
-									if(superSubValue.indexOf("{{") >= 0){
-										let translationKey=superSubValue.substring(superSubValue.indexOf("{{")+2,superSubValue.indexOf("}}"));
-										let stringToBeReplaced="{{"+translationKey+"}}";
-										ubsApp.pages[key].templates[index][subKey][superSubIndex][superSubKey]=ubsApp.pages[key].templates[index][subKey][superSubIndex][superSubKey].replace(stringToBeReplaced,ubsApp.translation[translationKey]);	
-									}
-								}
-							});
-						});
-					}	   
-				});
-		  	});
-		}	
-	});
-
-	$.each(monopoly.pages, function(key, value) {
-
-			$.each(value, function( index, arrayValue ) {
-				
-				$.each(value[index], function( subKey, subValue ) {
-					
-						
-						if(typeof(subValue)=='string'){
-							if(subValue.indexOf("{{") >= 0){
-								let translationKey=subValue.substring(subValue.indexOf("{{")+2,subValue.indexOf("}}"));
-								console.log(translationKey);
-								let stringToBeReplaced="{{"+translationKey+"}}";
-								monopoly.pages[key][index][subKey]=monopoly.pages[key][index][subKey].replace(stringToBeReplaced,ubsApp.translation[translationKey]);
-							}
-						}
-						
-				});
-		  });
-		
-	});
+	var string=JSON.stringify(ubsApp.pages);
 
 	
+	while(string.indexOf("{{")>=0){
+		let translationKey= string.substring(string.indexOf("{{") + 2,string.indexOf("}}",string.indexOf("{{")));//string.substring(string.indexOf("{{")+2,string.indexOf("}}"));
+		
+		let stringToBeReplaced="{{"+translationKey+"}}";
+		string=string.replace(stringToBeReplaced,ubsApp.translation[translationKey]);
+	}
+	ubsApp.pages=JSON.parse(string);
+	string=JSON.stringify(monopoly.pages);
+	while(string.indexOf("{{")>=0){
+		let translationKey= string.substring(string.indexOf("{{") + 2,string.indexOf("}}",string.indexOf("{{")));//string.substring(string.indexOf("{{")+2,string.indexOf("}}"));
+		
+		let stringToBeReplaced="{{"+translationKey+"}}";
+		string=string.replace(stringToBeReplaced,ubsApp.translation[translationKey]);
+	}
+	
+	monopoly.pages=JSON.parse(string);
+}
+ubsApp.startHelp=function(pageName){
+	
+	document.getElementById("helpContent").style.opacity="0.95";
+	$('#helpContent').css("height",(screenHeight)+'px')
+	$('#helpContent').css("width",(screenWidth)+'px')
+	helpScenarioOpen=true;
+	ubsApp.renderHelpPage(ubsApp.pages[pageName].templates);
+}
+
+ubsApp.renderHelpPage=function(template){
+	let html = "";
+	for(let i=0; i< template.length; i++) {
+		let templateConfig = template[i];
+		if(templateConfig.templateType=="static"){
+			html+=ubsStaticTemplate(templateConfig);
+		}
+	}
+	document.getElementById("helpContent").innerHTML+=html;
+}
+
+ubsApp.closeHelp=function(){
+	
+	$('#helpContent').css("height",0+'px')
+	document.getElementById("helpContent").innerHTML="";
+	helpScenarioOpen=false;
+}
+
+
+ubsApp.endGame=function(){
+	var arr=[];
+	
+	for(var i=0;i<numplayers;i++){
+		var harnamProjectedScore=userArray[i].getWeeks()*harnamSinghProfit;
+		let currentPlayerProfit=0;
+		currentPlayerProfit+=(userArray[i].getplayerScore()-initialPlayerCash);
+		currentPlayerProfit+=(userArray[i].getBankBalance()-initialPlayerBankBalance);
+		currentPlayerProfit-=userArray[i].getCredit();
+		currentPlayerProfit=currentPlayerProfit*0.15;
+		if(currentPlayerProfit<harnamProjectedScore)
+		{
+			arr[i]=false;
+		} 
+		else{
+			arr[i]=true;
+		}
+	}
+	
+		var winnerName="";
+		var currentHighScore=0;
+		var atleastOne=false;
+		for(var i=0;i<numplayers;i++)
+		{
+			if(arr[i])
+			{
+				atleastOne=true;
+				var consolidatedScore=userArray[i].getplayerScore()+userArray[i].getBankBalance()-userArray[i].getCredit()+userArray[i].getReputationPts();
+				if(consolidatedScore>currentHighScore){
+					currentHighScore=consolidatedScore;
+					winnerName=userArray[i].getplayerName();
+				}
+			}
+		}
+		
+		if(!atleastOne){
+		winnerName="No One Wins"
+	}
+	console.log(winnerName);
 }

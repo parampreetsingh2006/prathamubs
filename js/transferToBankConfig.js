@@ -8,10 +8,10 @@ ubsApp.transferToBankConfig={
 			"title":"{{transferToBankTitle}}",
 			"cashTitle":"{{cashTitle}}",
 			"bankBalanceTitle":"{{bankBalanceTitle}}",
-			"transferTitle":"{{transferTitle}}",
-			"chequeTitle":"{{cheque}}",			
+			"transferTitle":"{{transferTitle}}",		
 			"amountToTransferTitle":"{{amountToTransferTitle}}",
-			"cancelTitle":"{{cancelTitle}}"
+			"cancelTitle":"{{cancelTitle}}",
+			"transfer":true,
 		}
 	]
 	},
