@@ -1,8 +1,10 @@
-ubsApp.getSuccessErrorTemplate = function(templateConfig, tempVar){
-	templateConfig.errorPage = ubsApp.errorPage;
-    templateConfig.successErrorMessage = ubsApp.successErrorMessage;
+ubsApp.getPopupTemplate = function(templateConfig, tempVar){
+    let popupConfig = ubsApp.popupConfig;
+	templateConfig.headerStyle = popupConfig.headerStyle;
+    templateConfig.message = popupConfig.message;
+    templateConfig.Close = ubsApp.getTranslation("Close");
     if(ubsApp.successErrorMessageHeader) {
-        templateConfig.header = ubsApp.successErrorMessageHeader
+        templateConfig.header = ubsApp.successErrorMessageHeader;
     } else if(templateConfig.errorPage) {
         templateConfig.header = templateConfig.ERROR;
     } else {
@@ -17,4 +19,5 @@ ubsApp.getSuccessErrorTemplate = function(templateConfig, tempVar){
         $('#templateContent').css("width",(screenWidth)+'px');
 
 	tempVar.html += ubsSuccessErrortemplate(templateConfig);
+	ubsApp.popupConfig = {};
 }
