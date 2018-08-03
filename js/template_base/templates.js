@@ -587,7 +587,7 @@ ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
 '       <div class="purchaseDivBottomThreeButton" >'+
 '           <button class="purchaseScreenButton bottomButton"  onclick="">{{helpTitle}}</button>'+
 '           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.pay()">{{doneTitle}}</button>'+
-'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.closeCurrentScenario()">{{noThanksTitle}}</button>'+
+'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</button>'+
 '       </div>'+
 '</div>'+
 
@@ -857,3 +857,22 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 '       </div>'+
 '       <div id="result"></div>'+
 '</div>';
+
+
+
+ubsApp.successErrorTemplate = '<div style="{{style}}">'+
+'    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
+''+
+'            {{#if errorPage}}'+
+'                <div style="text-align: center;     color: red; font-weight: 700; font-size: 3vw;">{{header}}</div>'+
+'            {{else}}'+
+'                <div style="text-align: center;  color: green; font-weight: 700; font-size: 3vw;">{{header}}</div>'+
+'            {{/if}}'+
+''+
+'        <div>'+
+''+
+'            <div style="    text-align: center;     padding-top: 19px;">{{successErrorMessage}}</div>'+
+'        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >Close</button> </div>'+
+'    </div>'+
+'</div>';
+

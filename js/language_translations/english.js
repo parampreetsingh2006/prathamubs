@@ -292,6 +292,10 @@ ubsApp.translation={
         "paymentQuestion18":"The display cabinet accidentally broke and needs fixing. Rs.1300",
         "paymentQuestion19":"Recent rains had caused damage to the shop roof. Need fixing. Cost Rs.750",
         "paymentQuestion20":"Installation of CCTV camera",
-        
+        "quizLimitReachedForWeek": "Quiz limit reached for the week. Wait till next week.",
+        "SUCCESS": "SUCCESS",
+        "ERROR": "ERROR",
+        "gameFinishedForAUser" : "game is finished now.",
+        "NOTICE": "NOTICE",
 
     }

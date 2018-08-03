@@ -33,6 +33,7 @@ var difficultyLevel=monopoly.difficultyLevel;
 var flag2=monopoly.flag2;
 var computerDifficulty=monopoly.computerDifficulty;
 var scenario =  monopoly.scenario;
+ubsApp.maxNumOfWeeks = 12;
 
 
 $(document).ready(function(){
@@ -167,25 +168,41 @@ monopoly.myMove = function(count, pId, currentPos) {
   var temp="#p"+pId;
   var playerToken = $(temp);
   var blockNo = currentPos;   
-  var movePlayer = setInterval(frame, 500);
+
+   var movePlayer = setInterval(frame, 500);
   if(currentPos+count >= boardConfig.blocks){
     let x = userArray[pId].getWeeks();
-    
-    userArray[pId].setWeeks(++x);
-    if(cashTransfered){
-      cashTransfered=false;
-      userArray[pId].setTransferReminderOpened(true);
+    if(x < ubsApp.maxNumOfWeeks) {
+          userArray[pId].setWeeks(++x);
+            if(cashTransfered){
+              cashTransfered=false;
+              userArray[pId].setTransferReminderOpened(true);
+            }
+            else{
+              userArray[pId].setTransferReminderOpened(false);
+            }
+    } else {
+        userArray[pId].setWeeks(++x);
+        playerToken.remove();
+        clearInterval(movePlayer);
+        let message = userArray[pId].getplayerName() + " "  + ubsApp.getTranslation("gameFinishedForAUser");
+        ubsApp.closeCurrentScenario();
+        ubsApp.openSuccessPage({ "message" : message,
+                                  "heading" : ubsApp.getTranslation("NOTICE")
+                                       });
+        setTimeout(function() {ubsApp.nextMove();}, 5000);
+
     }
-    else{
-      userArray[pId].setTransferReminderOpened(false);
-    }
+
 
   }
   function frame(){
     if (blockNo == (currentPos+count)%boardConfig.blocks){
       userArray[pId].setplayerCurrentPos((currentPos+count)%boardConfig.blocks);
       clearInterval(movePlayer);
-      monopoly.startScenarios(blockNo);
+      if(userArray[pId].getWeeks() <= ubsApp.maxNumOfWeeks) {
+        monopoly.startScenarios(blockNo);
+      }
     } 
     else{
       blockNo++;
@@ -195,10 +212,18 @@ monopoly.myMove = function(count, pId, currentPos) {
         document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
       }
       $("#" + blockNo).append(playerToken);
+
     }
   }
 }
 
+ubsApp.getTranslation = function(key) {
+  if(ubsApp.translation[key]) {
+    return ubsApp.translation[key];
+  }
+
+  return "";
+}
 monopoly.updateRollingDiceTemplate = function(template){
 	let windowHeight =  $(window).height();
     template.diceSceneWidth = windowHeight/3;
@@ -208,7 +233,7 @@ monopoly.rollDice  = function(){
   $('#rollIt').attr('disabled',true);
   $("#container-dice").css("pointer-events","none");
   
-  diceVal = pointRoll();
+    diceVal = pointRoll();
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
 		playerChance=0;
@@ -421,13 +446,28 @@ monopoly.chooseLanguage=function(){
 ubsApp.nextMove = function(){
 			playerChance+=1;
 	        playerChance%=numplayers;
+	        let count = 0;
+	        let atleastOnePlayerPlaying = false;
+
+            while(!userArray[playerChance].isPlayerEligibleToPlay() && count <= numplayers) {
+                count++;
+                playerChance+=1;
+                playerChance%=numplayers;
+            }
+
+            if(count <= numplayers) {
+                atleastOnePlayerPlaying = true;
+            }
 
 			ubsApp.closeCurrentScenario();
 			this.currentPlayerContents();
 
 			$("#diceval").html(" ");
 
+            if(!atleastOnePlayerPlaying) {
 
+                ubsApp.endGame();
+            }
 			//$('#lastBalanceContent').html("Rs."+userArray[playerChance].getplayerScore());
 			if(userArray[playerChance].getIsComputer()){
 				decisionConfig={};
@@ -532,4 +572,18 @@ ubsApp.initializeLeaderBoard=function(category)
 	}
 
 	document.getElementById("leaderBoardParent").innerHTML=ubsLeaderBoardTemplate(leaderBoardObject);
+}
+
+
+ubsApp.openQuizIfValid = function() {
+
+    if(userArray[playerChance].canUserTakeQuiz()) {
+        userArray[playerChance].incrementQuizCount();
+        ubsApp.renderPageByName('generalQuizStarter');
+    } else {
+        ubsApp.openErrorPage({
+        "message" : ubsApp.translation["quizLimitReachedForWeek"]
+        })
+    }
+
 }

@@ -41,6 +41,18 @@
 				}
 	}]
 },
+    "successErrorPage" : {
+        "templates" : [
+             {
+                "templateId":60,
+                "templateType":"successError",
+                "SUCCESS" : "{{SUCCESS}}",
+                "ERROR" : "{{ERROR}}",
+                "style" : "background-image: url('images/errorpopup.png'); margin: 0 auto;padding: 10px;     margin-top: 10%;position: relative;     width: 50%;    "
+
+             }
+        ]
+    }
 }
 
 ubsApp.pages=$.extend(ubsApp.pages, ubsApp.salesConfig);

@@ -5,6 +5,17 @@ class User{
 
     }*/
 
+    canUserTakeQuiz() {
+     if(this.quizTakenInCurrentWeek < 2) {
+        return true;
+     }
+
+     return false;
+    }
+
+    incrementQuizCount() {
+        this.quizTakenInCurrentWeek++;
+    }
     setplayerName(name){
         this.name=name;
     }
@@ -142,6 +153,7 @@ class User{
             this.deadline--;
         }
     	this.noOfWeeks = weeks;
+    	this.quizTakenInCurrentWeek = 0;
     }
     setAdvantageCardNumber(advantageCardNumber){
         if(this.advantageCardNumber==null)
@@ -175,6 +187,12 @@ class User{
         return this.name;
     }
 
+    isPlayerEligibleToPlay() {
+        if(this.getWeeks() > ubsApp.maxNumOfWeeks) {
+            return false;
+        }
+        return true;
+    }
     getplayerScore(){   ///this is the cash 
         return this.score;
     }

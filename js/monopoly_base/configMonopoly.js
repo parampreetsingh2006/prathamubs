@@ -4,7 +4,7 @@ monopoly.pages = {
         {
             "templateId":1,
             "templateType":"static",
-            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label style=\"color:white\" for\"english\">English</label></div>",    
+            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label style=\"color:white\" for\"english\">English</label></div>",
             "style": "position:absolute;margin-left:5%;padding:10px;border-radius:5px; background-color:black; width:70%;top:30%;"
         },
         {
@@ -167,7 +167,7 @@ monopoly.pages = {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:18%;left:90%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button class='boardButtons' onclick=\"ubsApp.renderPageByName('generalQuizStarter')\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; font-size:1.05vw;border-radius:5px; \">Take Exam</button>"
+            "src":"<button class='boardButtons' onclick=\"ubsApp.openQuizIfValid()\" style=\"padding:5px; color:white;width:100%; border:0; background:blue; font-size:1.05vw;border-radius:5px; \">Take Exam</button>"
 
         },
         {

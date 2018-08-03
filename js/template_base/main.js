@@ -6,6 +6,7 @@ let ubsDecisionTemplate;
 let ubsDecisionOption;
 let ubsDecisionOptionMap;
 let wheelOfFortuneTemplate;
+let ubsSuccessErrortemplate;
 let ubsScoreTemplate;
 let ubsPopupTemplate;
 let ubsTimerTemplate;
@@ -36,7 +37,7 @@ var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter"];
+let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "successError"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
 monopoly.numplayers=0;
@@ -49,6 +50,9 @@ var initialPlayerCash=1000;
 var initialPlayerBankBalance=250000;
 var initialInventoryScore=60;
 var initialReputation=45;
+ubsApp.errorPage = false;
+ubsApp.successErrorMessage = "";
+ubsApp.successErrorMessageHeader = "";
 
 $(document).ready(function(){	
 	ubsApp.intitializeTemplates();
@@ -247,6 +251,7 @@ ubsApp.intitializeTemplates = function() {
 	ubsPayOffTemplate=Template7.compile(ubsApp.payOffTemplate);
 	ubsOrdertemplate = Template7.compile(ubsApp.salesTemplate);
 	ubsInsuranceTemplate = Template7.compile(ubsApp.insuranceTemplate);
+	ubsSuccessErrortemplate = Template7.compile(ubsApp.successErrorTemplate);
 
 }
 
@@ -331,6 +336,24 @@ ubsApp.translateScenarios=function(){
 	monopoly.pages=JSON.parse(string);
 }
 
+
+ubsApp.openErrorPage = function(config) {
+    ubsApp.errorPage = true;
+    ubsApp.successErrorMessage = config.message;
+    if(config.heading) {
+       ubsApp.successErrorMessageHeader = config.heading;
+     }
+    ubsApp.renderPageByName("successErrorPage");
+}
+
+ubsApp.openSuccessPage = function(config) {
+    ubsApp.errorPage = false;
+    ubsApp.successErrorMessage = config.message;
+    if(config.heading) {
+        ubsApp.successErrorMessageHeader = config.heading;
+    }
+    ubsApp.renderPageByName("successErrorPage");
+}
 
 
 // ubsApp.animate_score=function(amount){
