@@ -19,6 +19,7 @@ let ubsPayOffTemplate;
 let ubsOrdertemplate;
 let ubsAdvantageCardTemplate;
 let ubsQuizTemplate;
+let ubsWeekSummarytemplate;
 let choiceSelected={};
 let timeVar;
 var helpScenarioOpen=false;
@@ -37,7 +38,7 @@ var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 let userArray=[];
-let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "successError"];
+let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "popup", "weekSummary"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
 monopoly.numplayers=0;
@@ -50,9 +51,7 @@ var initialPlayerCash=1000;
 var initialPlayerBankBalance=250000;
 var initialInventoryScore=60;
 var initialReputation=45;
-ubsApp.errorPage = false;
-ubsApp.successErrorMessage = "";
-ubsApp.successErrorMessageHeader = "";
+ubsApp.popupConfig = {};
 
 $(document).ready(function(){	
 	ubsApp.intitializeTemplates();
@@ -65,13 +64,6 @@ ubsApp.getTimerTempTemplate = function(templateConfig, tempVar){
 	if(!userArray[playerChance].getIsComputer())
 	{tempVar.html+=ubsTimerTemplate(templateConfig);
 	tempVar.timerConfig=templateConfig;}
-}
-
-
-
-ubsApp.getPopupTemplate = function(templateConfig, tempVar){
-
-	tempVar.html+=ubsPopupTemplate(templateConfig);
 }
 
 
@@ -238,12 +230,12 @@ ubsApp.intitializeTemplates = function() {
 	scratchCardTemplate = Template7.compile(ubsApp.scratchCard);
 	ubschoiceTemplate = Template7.compile(ubsApp.choiceTemplate);
 	ubsScoreTemplate=Template7.compile(ubsApp.scoreTemplate);
-	ubsPopupTemplate = Template7.compile(ubsApp.popupTemplate);
 	ubsTimerTemplate = Template7.compile(ubsApp.timerTemplate);
 	ubsAudioTemplate = Template7.compile(ubsApp.audioTemplate);
 	ubsBoardtemplate = Template7.compile(ubsApp.boardTemplate);
 	ubsQuizTemplate = Template7.compile(ubsApp.quizTemplate);
 	ubsAdvantageCardTemplate=Template7.compile(ubsApp.advantageCardTemplate);
+	ubsWeekSummarytemplate=Template7.compile(ubsApp.weekSummaryTemplate);
 	// ubsCalculatorTemplate=Template7.compile(ubsApp.calculatorTemplate);
 	ubsLeaderBoardTemplate=Template7.compile(ubsApp.leaderBoardTemplate);
 	ubsPurchaseTemplate=Template7.compile(ubsApp.purchaseTemplate);
@@ -251,7 +243,7 @@ ubsApp.intitializeTemplates = function() {
 	ubsPayOffTemplate=Template7.compile(ubsApp.payOffTemplate);
 	ubsOrdertemplate = Template7.compile(ubsApp.salesTemplate);
 	ubsInsuranceTemplate = Template7.compile(ubsApp.insuranceTemplate);
-	ubsSuccessErrortemplate = Template7.compile(ubsApp.successErrorTemplate);
+	ubsPopupTemplate = Template7.compile(ubsApp.popUpTemplate);
 
 }
 
@@ -294,13 +286,20 @@ ubsApp.closeCurrentScenario=function(){
 	$('#templateContent').css("height",0+'px')
 	document.getElementById("templateContent").innerHTML="";
 	$('#rollIt').attr('disabled',false);
-	if(userArray[playerChance].getTransferReminderOpened()==false){
-		userArray[playerChance].setTransferReminderOpened(true);
-		ubsApp.openTransferToBank();
+
+	if(userArray[playerChance].isOpenWeekSummary()) {
+        ubsApp.openWeekSummary();
 	}
-	if(userArray[playerChance].getPayOffDeadline()==0){
-		ubsApp.openPayOffScenario();
+	else{
+	    if(userArray[playerChance].getTransferReminderOpened()==false){
+        		userArray[playerChance].setTransferReminderOpened(true);
+        		ubsApp.openTransferToBank();
+        	}
+        if(userArray[playerChance].getPayOffDeadline()==0){
+        		ubsApp.openPayOffScenario();
+        }
 	}
+
 }
 
 ubsApp.startCurrentScenario=function(){
@@ -337,23 +336,12 @@ ubsApp.translateScenarios=function(){
 }
 
 
-ubsApp.openErrorPage = function(config) {
-    ubsApp.errorPage = true;
-    ubsApp.successErrorMessage = config.message;
-    if(config.heading) {
-       ubsApp.successErrorMessageHeader = config.heading;
-     }
-    ubsApp.renderPageByName("successErrorPage");
+ubsApp.openPopup = function(config) {
+   ubsApp.popupConfig = $.extend({}, config);
+   ubsApp.renderPageByName("generalPopUp");
 }
 
-ubsApp.openSuccessPage = function(config) {
-    ubsApp.errorPage = false;
-    ubsApp.successErrorMessage = config.message;
-    if(config.heading) {
-        ubsApp.successErrorMessageHeader = config.heading;
-    }
-    ubsApp.renderPageByName("successErrorPage");
-}
+
 
 
 // ubsApp.animate_score=function(amount){

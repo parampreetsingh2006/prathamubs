@@ -10,6 +10,7 @@ ubsApp.translation={
     "pratham_title_start":"प्रारंभ",
     "pratham_title_decision":"निर्णय लेना",
     "close":"बंद करे",
+     "Close":"बंद करे",
     "scoreSideBar":"स्कोर",
     "documentSideBar":"दस्तावेज़",
     "inventorySideBar":"इन्वेंटरी",
@@ -42,9 +43,12 @@ ubsApp.translation={
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
     "bankBalanceTitle":"बैंक राशि",
+    "BankBalance":"बैंक राशि",
     "debtTitle":"कर्ज",
     "cashTitle":"कैश",
     "creditTitle":"श्रेय",
+    "Credit":"श्रेय",
+
     "creditLimitTitle":"श्रेय सीमा",
     "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
     "q1-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
@@ -228,6 +232,7 @@ ubsApp.translation={
     "buy":"खरीदें",
     "cancel":"रद्द करना",
     "cash":"कैश",
+    "Cash":"कैश",
     "cheque":"चेक",
     "mode":"भुगतान का प्रकार :",
 
@@ -285,7 +290,9 @@ ubsApp.translation={
      "enterInMultipleOf15":"कृपया 15 के एकाधिक में नंबर दर्ज करें।",
      "You have entered more points than you have":"आपने अपने से अधिक अंक दर्ज किए हैं।",
      "validReputationPts":"कृपया वैध प्रतिष्ठा बिंदु दर्ज करें।",
-
+     "LastWeek":"पिछले सप्ताह",
+     "CurrentWeek":"यह सप्ताह",
+     "WeeklySummary" : "साप्ताहिक सारांश",
     //withdraw from bank
     "withdrawFromBankTitle":"बैंक से निकालें",
     "amountToWithdrawTitle":"राशि वापस लेने के लिए",

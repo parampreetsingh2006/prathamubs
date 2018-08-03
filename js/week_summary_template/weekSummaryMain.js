@@ -10,22 +10,18 @@ ubsApp.getWeekSummaryTemplate = function(templateConfig, tempVar){
     templateConfig.currentWeekReputationPts = userArray[playerChance].getReputationPts();
     templateConfig.currentWeekCredit = userArray[playerChance].getCredit();
     templateConfig.currentWeekAdvantageCard = userArray[playerChance].getAdvantageCardNumber();
-
-
-    $('#monopolyBase').css("z-index",-10);
-        $('#templateBase').css("z-index",10);
-
-        document.getElementById("templateContent").style.opacity="0.95";
-
-        $('#templateContent').css("height",(screenHeight)+'px');
-        $('#templateContent').css("width",(screenWidth)+'px');
-
-    tempVar.html += ubsWeekSummarytemplate(templateConfig);
+    userArray[playerChance].setOpenWeekSummary(false);
     userArray[playerChance].copyCurrentSummaryToLastWeek();
+    tempVar.html += ubsWeekSummarytemplate(templateConfig);
+
 }
 
 
-ubsApp.openWeekSummary() = function() {
+ubsApp.openWeekSummary = function() {
 
+    if(userArray[playerChance].getWeeks() > 1) {
+         ubsApp.startCurrentScenario();
+         ubsApp.renderPageByName("weekSummaryPage");
+    }
 
 }

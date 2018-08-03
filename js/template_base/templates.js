@@ -192,16 +192,16 @@ ubsApp.scoreTemplate= //'<style>'+
 '</div>'
 
 
-ubsApp.popupTemplate = '<div id="{{id}}"  style=" padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%;">'+
-' 	<div style="display: table-cell; vertical-align: middle;">'+
-' 		'+
-' 		<div style="{{msg_style}};background-color:#0099ff;">'+
-'   			{{message}}'+
-'   			<div style="{{button_style}}" onClick="{{onClick}}"> Next </div>'+
-' 		</div>'+
-' 		'+
-' 	</div>'+
-' </div>';
+//ubsApp.popupTemplate = '<div id="{{id}}"  style=" padding: 30px; background-color: rgba(255, 255, 255, 0.8);position:fixed; z-index:100; width:100%; height:100%;">'+
+//' 	<div style="display: table-cell; vertical-align: middle;">'+
+//' 		'+
+//' 		<div style="{{msg_style}};background-color:#0099ff;">'+
+//'   			{{message}}'+
+//'   			<div style="{{button_style}}" onClick="{{onClick}}"> Next </div>'+
+//' 		</div>'+
+//' 		'+
+//' 	</div>'+
+//' </div>';
 
 ubsApp.modalTemplate = 	'<div class="modal animated zoomIn" id="scenarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">'+
 '  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">'+
@@ -860,19 +860,80 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 
-ubsApp.successErrorTemplate = '<div style="{{style}}">'+
-'    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
-''+
-'            {{#if errorPage}}'+
-'                <div style="text-align: center;     color: red; font-weight: 700; font-size: 3vw;">{{header}}</div>'+
-'            {{else}}'+
-'                <div style="text-align: center;  color: green; font-weight: 700; font-size: 3vw;">{{header}}</div>'+
-'            {{/if}}'+
-''+
-'        <div>'+
-''+
-'            <div style="    text-align: center;     padding-top: 19px;">{{successErrorMessage}}</div>'+
-'        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >Close</button> </div>'+
-'    </div>'+
-'</div>';
+ubsApp.popUpTemplate = '<div style="{{style}}">'+
+                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
+                       ''+
+                       '        <div>'+
+                       ''+
+                       '            <div style="{{headerStyle}}" >{{header}}</div>'+
+                       ''+
+                       '        </div>'+
+                       ''+
+                       '        <div>'+
+                       ''+
+                       '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
+                       '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
+                       '        </div>'+
+                       '    </div>'+
+                       '</div>';
+
+
+
+
+
+ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
+                             '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
+                             ''+
+                             '        <div>'+
+                             ''+
+                             '            <div style="{{headerStyle}}" >{{WeeklySummary}}</div>'+
+                             ''+
+                             '        </div>'+
+                             ''+
+                             ''+
+                             '        <div>'+
+                             '            <table class="table table-bordered">'+
+                             '                <thead>'+
+                             '                <tr>'+
+                             '                    <th></th>'+
+                             '                    <th>{{LastWeek}}</th>'+
+                             '                    <th>{{CurrentWeek}}</th>'+
+                             '                </tr>'+
+                             '                </thead>'+
+                             '                <tbody>'+
+                             '                <tr>'+
+                             '                    <td>{{Cash}}</td>'+
+                             '                    <td>{{lastWeekCash}}</td>'+
+                             '                    <td>{{currentWeekCash}}</td>'+
+                             '                </tr>'+
+                             '                <tr>'+
+                             '                    <td>{{BankBalance}}</td>'+
+                             '                    <td>{{lastWeekBankBalance}}</td>'+
+                             '                    <td>{{currentWeekBankBalance}}</td>'+
+                             '                </tr>'+
+                             '                <tr>'+
+                             '                    <td>{{Credit}}</td>'+
+                             '                    <td>{{lastWeekCredit}}</td>'+
+                             '                    <td>{{currentWeekCredit}}</td>'+
+                             '                </tr>'+
+                             '                <tr>'+
+                             '                    <td>{{ReputationPoints}}</td>'+
+                             '                    <td>{{lastWeekReputationPts}}</td>'+
+                             '                    <td>{{currentWeekReputationPts}}</td>'+
+                             '                </tr>'+
+                             '                <tr>'+
+                             '                    <td>{{AdvantageCard}}</td>'+
+                             '                    <td>{{lastWeekAdvantageCard}}</td>'+
+                             '                    <td>{{currentWeekAdvantageCard}}</td>'+
+                             '                </tr>'+
+                             '                </tbody>'+
+                             '            </table>'+
+                             '        </div>'+
+                             ''+
+                             '        <div>'+
+                             ''+
+                             '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
+                             '    </div>'+
+                             '</div>'+
+                             '</div>';
 
