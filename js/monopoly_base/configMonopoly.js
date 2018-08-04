@@ -261,107 +261,131 @@ monopoly.pages = {
                 "id"   : "0",
                 "backgroundImage":"images/start.png",
                 //"title":"pratham_title_start",
-                "start": true
+                "start": true,
+                "footerColor" : "White",
+                "footerText" : "GO"
             },
             {
                 "id"   : "1",
-                "color":"green",
                 "backgroundImage":"images/receipt-easy.png",
                 "category":"salesSimple",
+                "footerColor" : "White",
+                "footerText" : "SELL"
             },
             {
                 "id"   : "2",
-                "color":"green",
                 "backgroundImage":"images/receipt-medium.png",
                 // "title":"pratham_title_sales",
-                "category" : "salesEasy"
+                "category" : "salesEasy",
+                "footerColor" : "Grey",
+                "footerText" : "SELL"
             },
             {
                 "id"   : "3",
-                "color":"red",
                 // "title":"pratham_title_purchase",
                 "backgroundImage":"images/purchase.png",
-                "category" : "Purchase"
-
+                "category" : "Purchase",
+                "footerColor" : "White",
+                "footerText" : "BUY"
             },
             {
                 "id"   : "4",
-                "color":"yellow",
                 "backgroundImage":"images/decision-making.png",
-                "category" : "Decision"
+                "category" : "Decision",
+                "footerColor" : "BlackText",
+                "footerText" : "DECISION"
             },
             {
                 "id"   : "5",
-                "color":"green",
                 // "title":"pratham_title_sales",
                 "backgroundImage":"images/receipt-medium-hard.png",
-                "category" : "salesModerate"
+                "category" : "salesModerate",
+                "footerColor" : "White",
+                "footerText" : "SELL"
             },
             {
                 "id"   : "6",
-                "color":"pink",
                 "backgroundImage":"images/luck.png",
-                "category" : "Luck"
+                "category" : "Luck",
+                "footerColor" : "Grey",
+                "footerText" : "LUCK"
             },
             {
                 "id"   : "7",
-                "color":"red",
                 // "title":"pratham_title_purchase",
                 "backgroundImage":"images/purchase.png",
-                "category" : "Purchase"
+                "category" : "Purchase",
+                "footerColor" : "White",
+                "footerText" : "BUY"
             },
             {
                 "id"   : "8",
-                "color":"green",
                 // "title":"pratham_title_sales",
                 "backgroundImage":"images/receipt-hard.png",
-                "category" : "salesDifficult"
+                "category" : "salesDifficult",
+                "footerColor" : "Grey",
+                "footerText" : "SELL"
             }
             ],
 
             "left_col":[
             {
                 "id"   : "25",
-                "color":"green",
                 "backgroundImage":"images/receipt-hard.png",
-                "category" : "salesDifficult"
+                "category" : "salesDifficult",
+                "footerColor" : "Grey",
+                "footerText" : "SELL"
             },
             {
                 "id"   : "24",
                 "backgroundImage":"images/decision-making.png",
-                "category" : "Decision"
+                "category" : "Decision",
+                "footerColor" : "BlackText",
+                "footerText" : "DECISION"
             },
             {
                 "id"   : "23",
                 "backgroundImage":"images/receipt-easy.png",
-                "category" : "salesSimple"
+                "category" : "salesSimple",
+                "footerColor" : "Grey",
+                "footerText" : "SELL"
             },
             {
                 "id"   : "22",
                 "backgroundImage":"images/purchase.png",
-                "category" : "Purchase"
+                "category" : "Purchase",
+                "footerColor" : "Grey",
+                "footerText" : "BUY"
             },
             ],
             "right_col":[
                 {
                     "id"   : "9",
                     "backgroundImage":"images/receipt-easy.png",
-                    "category" : "salesSimple"
+                    "category" : "salesSimple",
+                    "footerColor" : "Grey",
+                    "footerText" : "SELL"
                 },
                 {
                     "id"   : "10",
                     "backgroundImage":"images/decision-making.png",
-                    "category" : "Decision"
+                    "category" : "Decision",
+                    "footerColor" : "BlackText",
+                    "footerText" : "DECISION"
                 },
                 {
                     "id"   : "11",
                     "backgroundImage":"images/purchase.png",
-                    "category" : "Purchase"
+                    "category" : "Purchase",
+                    "footerColor" : "Grey",
+                    "footerText" : "BUY"
                 },
                 {
                     "id"   : "12",
                     "backgroundImage":"images/receipt-medium.png",
-                    "category" : "salesEasy"
+                    "category" : "salesEasy",
+                    "footerColor" : "Grey",
+                    "footerText" : "SELL"
                 },
                 ],
             "bottom_row":[
@@ -369,58 +393,68 @@ monopoly.pages = {
                         "id"   : "21",
                         "backgroundImage":"images/receipt-medium-hard.png",
                         "category":"salesModerate",
+                        "footerColor" : "Grey",
+                        "footerText" : "SELL"
                     },
                     {
                         "id"   : "20",
-                        
                         "backgroundImage":"images/luck.png",
-                        "category" : "Luck"
+                        "category" : "Luck",
+                        "footerColor" : "White",
+                        "footerText" : "LUCK"
                     },
                     {
                         "id"   : "19",
-                        
                         "backgroundImage":"images/purchase.png",
-                        "category" : "Purchase"
+                        "category" : "Purchase",
+                        "footerColor" : "Grey",
+                        "footerText" : "BUY"
                     },
                     {
                         "id"   : "18",
-                        
                         "backgroundImage":"images/receipt-medium.png",
-                        
-                        "category" : "salesEasy"
+                        "category" : "salesEasy",
+                        "footerColor" : "White",
+                        "footerText" : "SELL"
                     },
                     {
                         "id"   : "17",
                         "backgroundImage":"images/receipt-hard.png",
-                        "category" : "salesDifficult"
+                        "category" : "salesDifficult",
+                        "footerColor" : "Grey",
+                        "footerText" : "SELL"
                     },
                     {
                         "id"   : "16",
-                        
                         "backgroundImage":"images/payment.png",
-                        
-                        "category" : "Payment"
+                        "category" : "Payment",
+                        "footerColor" : "BlackTextWhiteBg",
+                        "footerText" : "PAYMENT"
                     },
                     
                     {
                         "id"   : "15",
-                        
                         "backgroundImage":"images/receipt-medium-hard.png",
-                        "category" : "salesModerate"
+                        "category" : "salesModerate",
+                        "footerColor" : "Grey",
+                        "footerText" : "SELL"
                     },
                     {
                         "id"   : "14",
-                        
                         "backgroundImage":"images/purchase.png",
-                        "category" : "Purchase"
+                        "category" : "Purchase",
+                        "footerColor" : "White",
+                        "footerText" : "BUY"
                     },
                     {
                         "id"   : "13",
                         "backgroundImage":"images/luck.png",
-                        "category" : "Luck"
+                        "category" : "Luck",
+                        "footerColor" : "Grey",
+                        "footerText" : "LUCK"
                     },
                     ],
-                    
+
         },
         // {
         //     "templateId":1,

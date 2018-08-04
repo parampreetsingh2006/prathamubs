@@ -7,8 +7,9 @@ body {
     height: 100%;
     color: #fff;
     /* background: linear-gradient(-225deg,rgb(232,199,103), rgb(166,190,101), rgb(85,177,180),rgb(111,182,223)); */
-    background-size: 400% 400%;
-    
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center;
 }
 .borderB1{
     border:1px solid black;
