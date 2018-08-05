@@ -263,14 +263,14 @@ monopoly.pages = {
                 //"title":"pratham_title_start",
                 "start": true,
                 "footerColor" : "White",
-                "footerText" : "GO"
+                "footerText" : "{{start}}"
             },
             {
                 "id"   : "1",
                 "backgroundImage":"images/receipt-easy.png",
                 "category":"salesSimple",
                 "footerColor" : "White",
-                "footerText" : "SELL"
+                "footerText" : "{{sale}}"
             },
             {
                 "id"   : "2",
@@ -278,7 +278,7 @@ monopoly.pages = {
                 // "title":"pratham_title_sales",
                 "category" : "salesEasy",
                 "footerColor" : "Grey",
-                "footerText" : "SELL"
+                "footerText" : "{{sale}}"
             },
             {
                 "id"   : "3",
@@ -286,14 +286,14 @@ monopoly.pages = {
                 "backgroundImage":"images/purchase.png",
                 "category" : "Purchase",
                 "footerColor" : "White",
-                "footerText" : "BUY"
+                "footerText" : "{{purchase}}"
             },
             {
                 "id"   : "4",
                 "backgroundImage":"images/decision-making.png",
                 "category" : "Decision",
                 "footerColor" : "BlackText",
-                "footerText" : "DECISION"
+                "footerText" : "{{decision}}"
             },
             {
                 "id"   : "5",
@@ -301,7 +301,7 @@ monopoly.pages = {
                 "backgroundImage":"images/receipt-medium-hard.png",
                 "category" : "salesModerate",
                 "footerColor" : "White",
-                "footerText" : "SELL"
+                "footerText" : "{{sale}}"
             },
             {
                 "id"   : "6",
@@ -316,7 +316,7 @@ monopoly.pages = {
                 "backgroundImage":"images/purchase.png",
                 "category" : "Purchase",
                 "footerColor" : "White",
-                "footerText" : "BUY"
+                "footerText" : "{{purchase}}"
             },
             {
                 "id"   : "8",
@@ -324,7 +324,7 @@ monopoly.pages = {
                 "backgroundImage":"images/receipt-hard.png",
                 "category" : "salesDifficult",
                 "footerColor" : "Grey",
-                "footerText" : "SELL"
+                "footerText" : "{{sale}}"
             }
             ],
 
@@ -334,28 +334,28 @@ monopoly.pages = {
                 "backgroundImage":"images/receipt-hard.png",
                 "category" : "salesDifficult",
                 "footerColor" : "Grey",
-                "footerText" : "SELL"
+                "footerText" : "{{sale}}"
             },
             {
                 "id"   : "24",
                 "backgroundImage":"images/decision-making.png",
                 "category" : "Decision",
                 "footerColor" : "BlackText",
-                "footerText" : "DECISION"
+                "footerText" : "{{decision}}"
             },
             {
                 "id"   : "23",
                 "backgroundImage":"images/receipt-easy.png",
                 "category" : "salesSimple",
                 "footerColor" : "Grey",
-                "footerText" : "SELL"
+                "footerText" : "{{sale}}"
             },
             {
                 "id"   : "22",
                 "backgroundImage":"images/purchase.png",
                 "category" : "Purchase",
                 "footerColor" : "Grey",
-                "footerText" : "BUY"
+                "footerText" : "{{purchase}}"
             },
             ],
             "right_col":[
@@ -364,28 +364,28 @@ monopoly.pages = {
                     "backgroundImage":"images/receipt-easy.png",
                     "category" : "salesSimple",
                     "footerColor" : "Grey",
-                    "footerText" : "SELL"
+                    "footerText" : "{{sale}}"
                 },
                 {
                     "id"   : "10",
                     "backgroundImage":"images/decision-making.png",
                     "category" : "Decision",
                     "footerColor" : "BlackText",
-                    "footerText" : "DECISION"
+                    "footerText" : "{{decision}}"
                 },
                 {
                     "id"   : "11",
                     "backgroundImage":"images/purchase.png",
                     "category" : "Purchase",
                     "footerColor" : "Grey",
-                    "footerText" : "BUY"
+                    "footerText" : "{{purchase}}"
                 },
                 {
                     "id"   : "12",
                     "backgroundImage":"images/receipt-medium.png",
                     "category" : "salesEasy",
                     "footerColor" : "Grey",
-                    "footerText" : "SELL"
+                    "footerText" : "{{sale}}"
                 },
                 ],
             "bottom_row":[
@@ -394,7 +394,7 @@ monopoly.pages = {
                         "backgroundImage":"images/receipt-medium-hard.png",
                         "category":"salesModerate",
                         "footerColor" : "Grey",
-                        "footerText" : "SELL"
+                        "footerText" : "{{sale}}"
                     },
                     {
                         "id"   : "20",
@@ -408,28 +408,28 @@ monopoly.pages = {
                         "backgroundImage":"images/purchase.png",
                         "category" : "Purchase",
                         "footerColor" : "Grey",
-                        "footerText" : "BUY"
+                        "footerText" : "{{purchase}}"
                     },
                     {
                         "id"   : "18",
                         "backgroundImage":"images/receipt-medium.png",
                         "category" : "salesEasy",
                         "footerColor" : "White",
-                        "footerText" : "SELL"
+                        "footerText" : "{{sale}}"
                     },
                     {
                         "id"   : "17",
                         "backgroundImage":"images/receipt-hard.png",
                         "category" : "salesDifficult",
                         "footerColor" : "Grey",
-                        "footerText" : "SELL"
+                        "footerText" : "{{sale}}"
                     },
                     {
                         "id"   : "16",
                         "backgroundImage":"images/payment.png",
                         "category" : "Payment",
                         "footerColor" : "BlackTextWhiteBg",
-                        "footerText" : "PAYMENT"
+                        "footerText" : "{{payment}}"
                     },
                     
                     {
@@ -437,14 +437,14 @@ monopoly.pages = {
                         "backgroundImage":"images/receipt-medium-hard.png",
                         "category" : "salesModerate",
                         "footerColor" : "Grey",
-                        "footerText" : "SELL"
+                        "footerText" : "{{sale}}"
                     },
                     {
                         "id"   : "14",
                         "backgroundImage":"images/purchase.png",
                         "category" : "Purchase",
                         "footerColor" : "White",
-                        "footerText" : "BUY"
+                        "footerText" : "{{purchase}}"
                     },
                     {
                         "id"   : "13",

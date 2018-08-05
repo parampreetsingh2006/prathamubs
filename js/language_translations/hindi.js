@@ -32,7 +32,15 @@ ubsApp.translation={
     "medium":"मध्यम",
     "hard":"कठिन",
     "name":"नाम",
-    
+
+// Monopoly main board
+    // board footer caption
+    "start":"प्रारंभ",
+    "purchase":"खरीद",
+    "sale":"बेचना",
+    "payment":"भुगतान",
+    "decision":"फेसला",
+
     //This is where new addition started
     "inventoryTitle":"इन्वेंटरी",
     "weekTitle":"सप्ताह",

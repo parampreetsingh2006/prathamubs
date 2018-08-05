@@ -38,6 +38,14 @@ ubsApp.translation={
         "hard":"Hard",
         "name":"Name",
 
+    // Monopoly main board
+        // board footer caption
+        "start":"GO",
+        "purchase":"BUY",
+        "sale":"SELL",
+        "payment":"PAYMENT",
+        "decision":"DECISION",
+
         "bankBalanceTitle":"BANK BALANCE",
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
