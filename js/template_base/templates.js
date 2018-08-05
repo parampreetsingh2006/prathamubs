@@ -628,7 +628,9 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                <div class="payOffContainer">'+
 '                      <div class="payOffTitle" align="center">'+
 '                           {{title}}'+
-'                      </div><br><br>'+
+'                      </div>'+
+'                      <div align="center"><img class="" src="images/redheadersellreceipt.png"></div>'+
+'                      <br><br>'+
 '                      <div>'+
 '                           <span class="payOffSubTitleLeft">'+
 '                               {{cashTitle}}: '+
