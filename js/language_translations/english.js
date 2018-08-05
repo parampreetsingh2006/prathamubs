@@ -10,6 +10,7 @@ ubsApp.translation={
         "pratham_title_start":"Start",
         "pratham_title_decision":"Decision Making",
         "close":"close",
+        "Close":"Close",
         "scoreSideBar":"Score",
         "documentSideBar":"Document",
         "inventorySideBar":"Inventory",
@@ -37,7 +38,16 @@ ubsApp.translation={
         "hard":"Hard",
         "name":"Name",
 
+    // Monopoly main board
+        // board footer caption
+        "start":"GO",
+        "purchase":"BUY",
+        "sale":"SELL",
+        "payment":"PAYMENT",
+        "decision":"DECISION",
+
         "bankBalanceTitle":"BANK BALANCE",
+        "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
         "creditTitle":"CREDIT",
@@ -207,10 +217,13 @@ ubsApp.translation={
         "buy":"Buy",
         "cancel":"Cancel",
         "cashTitleName":"CASH",
+        "Cash" : "Cash",
+        "Credit": "Credit",
         "chequeTitleName":"CHEQUE",
         "mode":"Mode of Payment :",
-
-
+        "LastWeek":"Last Week",
+        "CurrentWeek":"Current Week",
+        "WeeklySummary":"WeeklySummary",
 
         //luck scenario
         "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",

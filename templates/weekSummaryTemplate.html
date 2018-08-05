@@ -1,0 +1,55 @@
+<div style="{{style}}">
+    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">
+
+        <div>
+
+            <div style="{{headerStyle}}" >{{WeeklySummary}}</div>
+
+        </div>
+
+
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>{{LastWeek}}</th>
+                    <th>{{CurrentWeek}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{Cash}}</td>
+                    <td>{{lastWeekCash}}</td>
+                    <td>{{currentWeekCash}}</td>
+                </tr>
+                <tr>
+                    <td>{{BankBalance}}</td>
+                    <td>{{lastWeekBankBalance}}</td>
+                    <td>{{currentWeekBankBalance}}</td>
+                </tr>
+                <tr>
+                    <td>{{Credit}}</td>
+                    <td>{{lastWeekCredit}}</td>
+                    <td>{{currentWeekCredit}}</td>
+                </tr>
+                <tr>
+                    <td>{{ReputationPoints}}</td>
+                    <td>{{lastWeekReputationPts}}</td>
+                    <td>{{currentWeekReputationPts}}</td>
+                </tr>
+                <tr>
+                    <td>{{AdvantageCard}}</td>
+                    <td>{{lastWeekAdvantageCard}}</td>
+                    <td>{{currentWeekAdvantageCard}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+
+        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>
+    </div>
+</div>
+</div>

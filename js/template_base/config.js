@@ -41,18 +41,6 @@
 				}
 	}]
 },
-    "successErrorPage" : {
-        "templates" : [
-             {
-                "templateId":60,
-                "templateType":"successError",
-                "SUCCESS" : "{{SUCCESS}}",
-                "ERROR" : "{{ERROR}}",
-                "style" : "background-image: url('images/errorpopup.png'); margin: 0 auto;padding: 10px;     margin-top: 10%;position: relative;     width: 50%;    "
-
-             }
-        ]
-    }
 }
 
 ubsApp.pages=$.extend(ubsApp.pages, ubsApp.salesConfig);
@@ -68,3 +56,5 @@ ubsApp.pages=$.extend(ubsApp.pages,ubsApp.withdrawFromBankConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.helpConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.quizConfig);
 ubsApp.pages=$.extend(ubsApp.pages,ubsApp.quizStarterConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.successErrorConfig);
+ubsApp.pages=$.extend(ubsApp.pages,ubsApp.weekSummaryConfig);

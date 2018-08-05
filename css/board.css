@@ -4,7 +4,6 @@
 }
 
 .responsive {
-    background: #cde6d0;
     width: 80vw;
     height: 44.5vw;
     position: absolute;
@@ -19,7 +18,7 @@
 }
 
 .square9{
-  background: #cde6d0;
+  background: trans;
 }
 
 .row {
@@ -30,7 +29,7 @@
 }
 
 .top {
-  height: 14.28571428571429%;
+  height: 17%;
 }
 
 .center {
@@ -41,6 +40,8 @@
   flex-grow: 1;
   display: flex;
   position: relative;
+  flex-direction: column;
+  width: 0%;
 }
 
 .square2 {
@@ -49,6 +50,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 0%;
 }
 
 .square9 {
@@ -62,14 +64,6 @@
   width: 100%;
   flex-grow: 1;
   position: relative;
-}
-
-.header {
-  height: 100%;
-  position: absolute;
-  
-  background: grey;
-  /* width: 100%; */
 }
 
 .headerSide {
@@ -297,3 +291,34 @@
   display: inline-block;
 }
 
+.squareFooterWhite {
+  background: white;
+  text-align: center;
+  font-size: 1.1vw;
+  color: green;
+  font-weight: bold;
+}
+
+.squareFooterGrey {
+  background: #eee;
+  text-align: center;
+  font-size: 1.1vw;
+  color: green;
+  font-weight: bold;
+}
+
+.squareFooterBlackText {
+  background: #eee;
+  text-align: center;
+  font-size: 1.1vw;
+  color: black;
+  font-weight: bold;
+}
+
+.squareFooterBlackTextWhiteBg {
+  background: white;
+  text-align: center;
+  font-size: 1.1vw;
+  color: black;
+  font-weight: bold;
+}

@@ -155,6 +155,18 @@ class User{
     	this.noOfWeeks = weeks;
     	this.quizTakenInCurrentWeek = 0;
     }
+
+    copyCurrentSummaryToLastWeek() {
+        this.setLastWeekSummary(this.getplayerScore(), this.getBankBalance(), this.getReputationPts(), this.getCredit(), this.getAdvantageCardNumber());
+    }
+
+    setOpenWeekSummary(openWeekSummary) {
+        this.openWeekSummary = openWeekSummary;
+    }
+
+    isOpenWeekSummary() {
+        return this.openWeekSummary;
+    }
     setAdvantageCardNumber(advantageCardNumber){
         if(this.advantageCardNumber==null)
         {
@@ -230,6 +242,34 @@ class User{
     
     getWildCard(){
         return this.numberOfWildCard;
+    }
+
+    setLastWeekSummary(cash, bankBalance, reputationPts, credit, advantageCard) {
+        this.lastWeekScore = cash;
+        this.lastWeekBankBalance = bankBalance;
+        this.lastWeekReputationPts = reputationPts;
+        this.lastWeekCredit = credit;
+        this.lastWeekAdvantageCard = advantageCard;
+    }
+
+    getLastWeekPlayerScore() {
+        return this.lastWeekScore;
+    }
+
+    getLastWeekBankBalance() {
+        return this.lastWeekBankBalance;
+     }
+
+    getLastWeekReputationPts() {
+        return this.lastWeekReputationPts;
+     }
+
+    getLastWeekCredit() {
+        return this.lastWeekCredit;
+     }
+
+    getLastWeekAdvantageCardNumber() {
+        return this.lastWeekAdvantageCard;
     }
 getScenario(category,playerChance)
     {

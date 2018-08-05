@@ -181,14 +181,17 @@ monopoly.myMove = function(count, pId, currentPos) {
             else{
               userArray[pId].setTransferReminderOpened(false);
             }
+
+            userArray[pId].setOpenWeekSummary(true);
     } else {
         userArray[pId].setWeeks(++x);
         playerToken.remove();
         clearInterval(movePlayer);
         let message = userArray[pId].getplayerName() + " "  + ubsApp.getTranslation("gameFinishedForAUser");
         ubsApp.closeCurrentScenario();
-        ubsApp.openSuccessPage({ "message" : message,
-                                  "heading" : ubsApp.getTranslation("NOTICE")
+        ubsApp.openPopup({ "message" : message,
+                                  "header" : ubsApp.getTranslation("NOTICE"),
+                                  "headerStyle" : "text-align: center;  color: green; font-weight: 700; font-size: 3vw;",
                                        });
         setTimeout(function() {ubsApp.nextMove();}, 5000);
 
@@ -234,6 +237,7 @@ monopoly.rollDice  = function(){
   $("#container-dice").css("pointer-events","none");
   
     diceVal = pointRoll();
+    //diceVal = 6;
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
 		playerChance=0;
@@ -253,6 +257,7 @@ monopoly.storePlayerDetails=function(){
         let user=new User();
         user.setplayerName(document.getElementById("name"+i).value);
         user.setplayerScore(initialPlayerCash);
+        user.setLastWeekSummary(initialPlayerCash, initialPlayerBankBalance, initialReputation, 0, 0);
         user.setInventoryScore(60.00);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
@@ -581,8 +586,10 @@ ubsApp.openQuizIfValid = function() {
         userArray[playerChance].incrementQuizCount();
         ubsApp.renderPageByName('generalQuizStarter');
     } else {
-        ubsApp.openErrorPage({
-        "message" : ubsApp.translation["quizLimitReachedForWeek"]
+        ubsApp.openPopup({
+        "message" : ubsApp.getTranslation("quizLimitReachedForWeek"),
+        "header" : ubsApp.getTranslation("ERROR"),
+        "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
         })
     }
 
