@@ -1,5 +1,5 @@
 ubsApp.quizConfig = {
-"quizQ1":{
+    "quizQ1":{
 		"category":"Quiz",
 		"repeatforuser":false,
 		"repeatforall":true,
@@ -16,6 +16,7 @@ ubsApp.quizConfig = {
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"helpPageName":"quizHelp",
 				"credit":{
 					"inventory":0,
 					"bankBalance":0,
@@ -68,6 +69,7 @@ ubsApp.quizConfig = {
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"helpPageName":"quizHelp",
 				"credit":{
 					"inventory":0,
 					"bankBalance":0,
@@ -120,6 +122,7 @@ ubsApp.quizConfig = {
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"helpPageName":"quizHelp",
 				"credit":{
 					"inventory":0,
 					"bankBalance":0,
@@ -172,6 +175,7 @@ ubsApp.quizConfig = {
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"helpPageName":"quizHelp",
 				"credit":{
 					"inventory":0,
 					"bankBalance":0,
@@ -224,6 +228,7 @@ ubsApp.quizConfig = {
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
+				"helpPageName":"quizHelp",
 				"credit":{
 					"inventory":0,
 					"bankBalance":0,

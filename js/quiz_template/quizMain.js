@@ -57,7 +57,7 @@ ubsApp.nextQuizQuestion=function(page, answer, name){
 		  	questionNo=parseInt(questionNo)+1;
 		  	$("#quizQuestionNumber").text(questionNo);
 	  }
-	  $("#correctAnswers").text(c);
+	  $("#correctAnswers").text(quizCorrectAnswer);
   }
 }
 

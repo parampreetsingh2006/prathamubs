@@ -476,9 +476,9 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
-'   <button id="quizHelp" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
+'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">HELP</button>'+
 '   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
-'   <button id="quizDone" disabled class=\'quizButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
+'   <button id="quizDone" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
 '</div>';
 
 ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.js"></script>'+

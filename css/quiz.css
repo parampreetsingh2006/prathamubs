@@ -81,8 +81,7 @@
   width: 8%;
   padding: 5px 8px;
   display: inline-block;
-  color: #ffffcc;
-  background: black;
+  color: #000000;
   border: none;
   cursor: pointer;
   border-radius: 7px;
@@ -90,10 +89,12 @@
 }
 
 .quizOkButton {
+	background:url('../images/buttonsmall.png');
 	margin-left: 45%;
 }
 
 .quizSubmitButtons {
+	background:url('../images/buttonsmall.png');
 	float: right;
 }
 
