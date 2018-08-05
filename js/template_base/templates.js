@@ -633,12 +633,12 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                      <br><br>'+
 '                      <div>'+
 '                           <span class="payOffSubTitleLeft">'+
-'                               {{cashTitle}}: '+
-'                               <span id="cashValue" >Rs. {{cash}}</span>'+
+'                               {{cashTitle}} '+
+'                               <span id="cashValue" >₹ {{cash}}</span>'+
 '                           </span>'+
 '                           <span class="payOffSubTitleRight">'+
-'                               {{bankBalanceTitle}}:'+
-'                               <span id="bankBalanceValue">Rs. {{bankBalance}}</span>'+
+'                               {{bankBalanceTitle}} '+
+'                               <span id="bankBalanceValue">₹ {{bankBalance}}</span>'+
 '                           </span>'+
 '                      </div><br>'+
 '                      {{#if #payOff}}'+
