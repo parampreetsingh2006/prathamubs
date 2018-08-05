@@ -473,11 +473,12 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" class=\'quizButtons\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
+'   <button id="quizHelp" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
+'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
 '   <button id="quizDone" disabled class=\'quizButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
-'   <button id="quizCancel" class=\'quizButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
 '</div>';
 
 ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.js"></script>'+
