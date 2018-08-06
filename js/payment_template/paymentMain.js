@@ -1,4 +1,5 @@
 ubsApp.getPayTemplate=function(templateConfig,tempVar){
+    templateConfig.currentPlayerName = userArray[playerChance].getplayerName();
 	tempVar.html+=ubsLuckTemplate(templateConfig);
 }
 
