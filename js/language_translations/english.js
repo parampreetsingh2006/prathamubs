@@ -45,6 +45,7 @@ ubsApp.translation={
         "sale":"SELL",
         "payment":"PAYMENT",
         "decision":"DECISION",
+        "luck":"LUCK",
 
         "bankBalanceTitle":"BANK BALANCE",
         "BankBalance":"BANK BALANCE",

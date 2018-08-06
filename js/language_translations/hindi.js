@@ -40,6 +40,7 @@ ubsApp.translation={
     "sale":"बेचना",
     "payment":"भुगतान",
     "decision":"फेसला",
+    "luck":"भाग्य",
 
     //This is where new addition started
     "inventoryTitle":"इन्वेंटरी",
