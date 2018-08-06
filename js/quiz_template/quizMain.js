@@ -27,13 +27,13 @@ ubsApp.atleastOneSelected= function(name){
 ubsApp.nextQuizQuestion=function(page, answer, name){
 
   if(ubsApp.atleastOneSelected(name)){
-  	  var c = $("#correctAnswers").html();
+  	  var quizCorrectAnswer = $("#correctAnswers").html();
 	  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
 	  let questionNo = $("#quizQuestionNumber").html();
 
 	  if(checkedValue==answer){
-	  	c = parseInt(c);
-	  	c=c+1;
+	  	quizCorrectAnswer = parseInt(quizCorrectAnswer);
+	  	quizCorrectAnswer=quizCorrectAnswer+1;
 	  	ubsApp.updateAnswers(questionNo-1);
 	  }
 	  else{
@@ -57,7 +57,7 @@ ubsApp.nextQuizQuestion=function(page, answer, name){
 		  	questionNo=parseInt(questionNo)+1;
 		  	$("#quizQuestionNumber").text(questionNo);
 	  }
-	  $("#correctAnswers").text(c);
+	  $("#correctAnswers").text(quizCorrectAnswer);
   }
 }
 

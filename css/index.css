@@ -85,7 +85,8 @@ body {
 }
 .payOffTitle{
     width:100%;
-    font-weight:600; 
+    font-weight:bold;
+    font-size:xx-large;
     padding:1%;   
 }
 .payOffSubTitleLeft{
@@ -103,7 +104,7 @@ body {
 
 .payOffSubTitleRight{
     position:absolute;;
-    left: 45%; 
+    left: 55%;
     font-weight:600;
 }
 .payOffLeftSubTitleValue{
