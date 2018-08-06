@@ -311,5 +311,6 @@ ubsApp.translation={
         "ERROR": "ERROR",
         "gameFinishedForAUser" : "game is finished now.",
         "NOTICE": "NOTICE",
+        "loadingGameMessage": "Loading Game...",
 
     }

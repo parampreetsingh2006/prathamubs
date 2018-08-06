@@ -332,4 +332,5 @@ ubsApp.translation={
        "ERROR": "सफलता नहीं",
        "game is finished now" : "का खेल अब खत्म हो गया है",
        "NOTICE": "सूचना",
+       "loadingGameMessage": "गेम लोड हो रहा है...",
 }

@@ -379,11 +379,16 @@ monopoly.openLeaderBoard=function(category){
 }
 
 monopoly.closeLeaderBoard=function(){
-  document.getElementById("leaderBoardParent").style.width="0%";
+  if(document.getElementById("leaderBoardParent")) {
+    document.getElementById("leaderBoardParent").style.width="0%";
+  }
+
 }
 
 
 monopoly.chooseLanguage=function(){
+
+
   var language=$('input[name=languageRadio]:checked').val();
   var jsElm = document.createElement("script");
   jsElm.type = "text/javascript";
@@ -401,8 +406,15 @@ monopoly.chooseLanguage=function(){
     
   }
    jsElm.onload=function(){
+       ubsApp.openPopup({
+                "message" : ubsApp.getTranslation("loadingGameMessage"),
+                "header" : "",
+                "headerStyle" : "",
+                "showCloseButton" : false,
+                });
       ubsApp.translateScenarios();
       monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+      ubsApp.closeCurrentScenario();
     }
 
   }

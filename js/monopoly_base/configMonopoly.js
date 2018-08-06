@@ -88,7 +88,7 @@ monopoly.pages = {
             "templateType":"static",
             "id":"weekTitle",
             "style":"",
-            "src":"{{weekTitle}}: <span id=\"weekContent\" style=\"padding:1px;\">100</span>"
+            "src":"{{weekTitle}}: <span  id=\"weekContent\" style=\"padding:1px;\">100</span>"
         },
         // {
         //     "templateId":1,
@@ -102,7 +102,7 @@ monopoly.pages = {
             "templateType":"static",
             "id":"inventoryTitle",
             "style":"",
-            "src":"{{inventoryTitle}}: <span id=\"inventoryContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+            "src":"<span tooltip=\"{{inventoryTitle}}\" tooltip-position=\"top\" >{{inventoryTitle}} </span>: <span id=\"inventoryContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         },
         // {
         //     "templateId":1,
