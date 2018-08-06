@@ -88,7 +88,7 @@ monopoly.pages = {
             "templateType":"static",
             "id":"weekTitle",
             "style":"",
-            "src":"{{weekTitle}}: <span id=\"weekContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
+            "src":"{{weekTitle}}: <span id=\"weekContent\" style=\"padding:1px;\">100</span>"
         },
         // {
         //     "templateId":1,
@@ -308,7 +308,7 @@ monopoly.pages = {
                 "backgroundImage":"images/luck.png",
                 "category" : "Luck",
                 "footerColor" : "Grey",
-                "footerText" : "LUCK"
+                "footerText" : "{{luck}}"
             },
             {
                 "id"   : "7",
@@ -401,7 +401,7 @@ monopoly.pages = {
                         "backgroundImage":"images/luck.png",
                         "category" : "Luck",
                         "footerColor" : "White",
-                        "footerText" : "LUCK"
+                        "footerText" : "{{luck}}"
                     },
                     {
                         "id"   : "19",
@@ -451,7 +451,7 @@ monopoly.pages = {
                         "backgroundImage":"images/luck.png",
                         "category" : "Luck",
                         "footerColor" : "Grey",
-                        "footerText" : "LUCK"
+                        "footerText" : "{{luck}}"
                     },
                     ],
 
