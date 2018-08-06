@@ -18,9 +18,9 @@ ubsApp.luckConfig={
 // 	// 		"or":"{{or}}",
 // 	// 		"alternalteMessage":"{{alternateMessage}}",
 // 	// 		"color":"black",
-// 	// 		"background":"#4DAF7C",
+// 	// 		"background":"#FFFFFF",
 // 	// 		"wildCard":"true",
-			
+
 // 	// 	}
 // 	// ]
 // 	// },
@@ -69,10 +69,11 @@ ubsApp.luckConfig={
 			// "or":"{{or}}",
 			// "alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
+			"titleColor":"white",
 			"icon":"luck",
-			"background":"#4DAF7C",
+			"background":"#FFFFFF",
 			"wildCard":"true",
-			
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -104,12 +105,13 @@ ubsApp.luckConfig={
 			// "or":"{{or}}",
 			// "alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
+			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario2",
 			"icon":"luck",
 			"type":"cash",
-			"background":"#4DAF7C",
+			"background":"#FFFFFF",
 			"wildCard":"true",
-			
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -141,11 +143,12 @@ ubsApp.luckConfig={
 			// "or":"{{or}}",
 			// "alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
+			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario3",
 			"icon":"luck",
-			"background":"#4DAF7C",
+			"background":"#FFFFFF",
 			"wildCard":"true",
-			
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -183,9 +186,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario4",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -222,9 +227,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario5",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -261,9 +268,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario6",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -294,9 +303,11 @@ ubsApp.luckConfig={
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -333,9 +344,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario8",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -372,9 +385,11 @@ ubsApp.luckConfig={
 			"or":"{{or}}",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -405,9 +420,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"scenarioName":"luckyUnluckyScenario10",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -446,9 +463,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario11",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -485,9 +504,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario12",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -524,9 +545,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario13",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -563,9 +586,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario14",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -590,7 +615,7 @@ ubsApp.luckConfig={
 			},
 			"resultpage":"quizQ2",
 			"quizType":"luck",
-			
+
 			"scenarioTitle":"{{pratham_title_luck}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
@@ -601,9 +626,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario15",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -633,9 +660,11 @@ ubsApp.luckConfig={
 			"helpTitle":"{{helpTitle}}",
 			"scenarioName":"luckyUnluckyScenario16",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -671,10 +700,12 @@ ubsApp.luckConfig={
 			"or":"{{or}}",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
+			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario17",
-			"background":"#4DAF7C",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -705,9 +736,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"scenarioName":"luckyUnluckyScenario18",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -744,9 +777,11 @@ ubsApp.luckConfig={
 			"scenarioName":"luckyUnluckyScenario19",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -782,10 +817,12 @@ ubsApp.luckConfig={
 			"or":"{{or}}",
 			"alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
+			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario20",
-			"background":"#4DAF7C",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -816,9 +853,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"scenarioName":"luckyUnluckyScenario21",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -849,9 +888,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"scenarioName":"luckyUnluckyScenario22",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -887,11 +928,13 @@ ubsApp.luckConfig={
 			"or":"{{or}}",
 			"scenarioName":"luckyUnluckyScenario23",
 			"alternalteMessage":"{{alternateMessage}}",
-			
+
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -916,7 +959,7 @@ ubsApp.luckConfig={
 			},
 			"resultpage":"quizQ2",
 			"quizType":"luck",
-			
+
 			"scenarioTitle":"{{pratham_title_luck}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
@@ -929,9 +972,11 @@ ubsApp.luckConfig={
 			"alternalteMessage":"{{alternateMessage}}",
 			"scenarioName":"luckyUnluckyScenario24",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -963,9 +1008,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"scenarioName":"luckyUnluckyScenario25",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -995,10 +1042,12 @@ ubsApp.luckConfig={
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
 			"color":"black",
+			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario26",
-			"background":"#4DAF7C",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1029,9 +1078,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"scenarioName":"luckyUnluckyScenario27",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1069,9 +1120,11 @@ ubsApp.luckConfig={
 			"alternalteMessage":"{{alternateMessage}}",
 			"resultPage":"quizQ3",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1094,7 +1147,7 @@ ubsApp.luckConfig={
 				"reputationPoints":0,
 				"cash":0,
 			},
-			"resultpage":"quizQ2", 
+			"resultpage":"quizQ2",
 			"quizType":"luck",
 			"resultPage":"quizQ4",
 			"scenarioName":"luckyUnluckyScenario29",
@@ -1107,11 +1160,13 @@ ubsApp.luckConfig={
 			"takeQuizTitle":"{{takeQuizTitle}}",
 			"or":"{{or}}",
 			"alternalteMessage":"{{alternateMessage}}",
-			
+
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1148,9 +1203,11 @@ ubsApp.luckConfig={
 			"alternalteMessage":"{{alternateMessage}}",
 			"resultPage":"quizQ4",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1187,9 +1244,11 @@ ubsApp.luckConfig={
 			"alternalteMessage":"{{alternateMessage}}",
 			"resultPage":"quizQ4",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1220,9 +1279,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"resultPage":"quizQ4",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1253,12 +1314,15 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"resultPage":"quizQ4",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
+
 	"luckyUnluckyScenario34":{
 		"category":"Luck",
 		"repeatforuser":true,
@@ -1273,23 +1337,31 @@ ubsApp.luckConfig={
 			"positiveMsg":"Congratulations!! You answered correctly.\\n Your fine is Waived off.",
 			"negativeMsg":"Oops!! You answeres incorrectly.\\n  You have to pay the fine of 1000 Rs",
 			"credit":{
-				"inventory":0,
-				"bankBalance":10000,
+				"inventory":-500,
+				"bankBalance":0,
 				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ2",
 			"quizType":"luck",
-			"resultPage":"quizQ4",
 			"scenarioName":"luckyUnluckyScenario34",
 			"scenarioTitle":"{{pratham_title_luck}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
-			
+			"negative":true,
+			"quizRequired":true,
+			"checkWildCard":"{{checkWildCard}}",
+			"takeQuizTitle":"{{takeQuizTitle}}",
+			"or":"{{or}}",
+			"alternalteMessage":"{{alternateMessage}}",
+			"resultPage":"quizQ4",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
+
 		}
 	]
 	},
@@ -1319,14 +1391,17 @@ ubsApp.luckConfig={
 			"scenarioTitle":"{{pratham_title_luck}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
-						
+
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
+
 	"luckyUnluckyScenario36":{
 		"category":"Luck",
 		"repeatforuser":true,
@@ -1354,9 +1429,11 @@ ubsApp.luckConfig={
 			"payMessage":"{{youCan}}",
 			"resultPage":"quizQ5",
 			"color":"black",
-			"background":"#4DAF7C",
+			"titleColor":"white",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},
@@ -1386,10 +1463,12 @@ ubsApp.luckConfig={
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",
 			"color":"black",
+			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario37",
-			"background":"#4DAF7C",
+			"background":"#FFFFFF",
 			"icon":"luck",
 			"wildCard":"true",
+			"backgroundIcon":"background",
 		}
 	]
 	},

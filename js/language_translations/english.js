@@ -54,7 +54,7 @@ ubsApp.translation={
         "creditTitle":"CREDIT",
         "creditLimitTitle":"CREDIT LIMIT",
         "nextQuestion":"Next Question!",
-        
+
         "q1-correct":"Yay, you answered correct. Your balance increases.",
         "q1-wrong":">Oops!! you answered incorrect. You lost money.",
         "q1-vvwrong":">Oops!! you answered incorrect. You lost money.",
@@ -72,8 +72,8 @@ ubsApp.translation={
         "q4-vvwrong":"Oops!! you answered incorrect. You lost money.",
         "paymentQuestion1":"You have been fined for not having driving license.",
         "paymentQuestion2":"You have been fined Rs.1000 for not having shop License.",
-       
-        
+
+
         //new
         "validAmount":"PLEASE ENTER A VALID AMOUNT",
         "lessMoney":"YOU HAVE ENTERED LESS MONEY",
@@ -115,15 +115,15 @@ ubsApp.translation={
         "debtAmountTitle":"Debt Amount",
         "cancelTitle":"CANCEL",
         "withdrawTitle":"WITHDRAW",
-        
+
         //purchase
         "amountToPayTitle":"AMOUNT TO PAY",
         "amountToTransferTitle":"AMOUNT TO TRANSFER",
         "modeOfPaymentTitle":"MODE OF PAYMENT",
         "helpTitle":"HELP",
         "gainTitle":"GAIN",
-        "takeQuizTitle":"TAKE A QUIZ",
-        "checkWildCard":"CHECK WILD CARD",
+        "takeQuizTitle":"TAKE QUIZ",
+        "checkWildCard":"USE ADVANTAGE CARD",
         "current":"CURRENT",
         "level":"LEVEL",
         "confirmTitle":"CONFIRM",
@@ -201,7 +201,7 @@ ubsApp.translation={
 
         "decisionQ6O1":"Electronic Machine",
         "decisionQ6O2":"Conventional Machine",
-        
+
 
         "decisionQ11O1":"Do you bribe the police Rs 100 and rush for delivery. ",
         "decisionQ11O2":"Pay the fine of Rs 500 by going to the police station and get late for the delivery",
@@ -264,7 +264,7 @@ ubsApp.translation={
         "luckQuestion35":"Great Customer Service! You get 20 reputation points.",
         "luckQuestion36":"Increased business!  Rs. 2000",
         "luckQuestion37":"Home delivery service started! You got 15 reputation points.",
-       
+
         "convertTitle":"CONVERT",
 
         // Advantage Card
@@ -281,7 +281,7 @@ ubsApp.translation={
 
 
         //withdraw from bank
-        
+
         "withdrawFromBankTitle":"Withdraw From Bank",
         "amountToWithdrawTitle":"Amount To Withdraw",
 
