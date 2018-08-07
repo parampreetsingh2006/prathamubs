@@ -341,6 +341,11 @@ ubsApp.openPopup = function(config) {
    ubsApp.renderPageByName("generalPopUp");
 }
 
+ubsApp.addScore = function(questionId, scoredMarks,totalMarks, level, startTime, endTime){
+	var resourceId;
+	Android.addScore(resourceId,questionId,scoredMarks, totalMarks, level, startTime);
+}
+
 
 
 
