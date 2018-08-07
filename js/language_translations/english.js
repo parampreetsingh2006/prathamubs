@@ -311,6 +311,21 @@ ubsApp.translation={
         "ERROR": "ERROR",
         "gameFinishedForAUser" : "game is finished now.",
         "NOTICE": "NOTICE",
+
         "loadingGameMessage": "Loading Game...",
+
+        "ReadInstructions" : "Read Instructions",
+        "StartGame" : "Start Game",
+        
+        "instructionHeader" : "Please read instructions carefully",
+        "instructionsMessage" : "Game Instructions/Instrucciones "+
+						        "If you're new to the game, it is recommended to follow the Guide Mission prescribed by pratham"+
+						        "This game will be played with help of Dice."+
+						        "Dice will give you one random number between 1 to 6 and then accordingly cursor will move to the leaderboard."+
+						        "It is a monopoly game."+
+						        "There are many template like sales/purchase/luck/inventory and there are many scenario based on template."+
+						        "Read each template and scenario carefully before starting the game."+
+						        "As you will progress, you will get/loose point or reward based on your decision and answers." ,
+
 
     }

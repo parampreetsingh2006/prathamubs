@@ -74,6 +74,7 @@ ubsApp.luckConfig={
 			"background":"#FFFFFF",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -112,6 +113,7 @@ ubsApp.luckConfig={
 			"background":"#FFFFFF",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -149,6 +151,7 @@ ubsApp.luckConfig={
 			"background":"#FFFFFF",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -191,6 +194,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -232,6 +236,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -273,6 +278,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -308,6 +314,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -349,6 +356,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -390,6 +398,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -425,6 +434,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -468,6 +478,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -509,6 +520,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -550,6 +562,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -591,6 +604,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -631,6 +645,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -665,6 +680,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -706,6 +722,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -741,6 +758,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -782,6 +800,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -823,6 +842,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -858,6 +878,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -893,6 +914,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -935,6 +957,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -977,6 +1000,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1013,6 +1037,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1048,6 +1073,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1083,6 +1109,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1125,6 +1152,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1167,6 +1195,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1208,6 +1237,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1249,6 +1279,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1284,6 +1315,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1319,6 +1351,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1361,7 +1394,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
-
+            "isLuckCategory":true,
 		}
 	]
 	},
@@ -1398,6 +1431,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1434,6 +1468,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
@@ -1469,6 +1504,7 @@ ubsApp.luckConfig={
 			"icon":"luck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
+			"isLuckCategory":true,
 		}
 	]
 	},
