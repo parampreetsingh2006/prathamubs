@@ -10,8 +10,11 @@ ubsApp.getWeekSummaryTemplate = function(templateConfig, tempVar){
     templateConfig.currentWeekReputationPts = userArray[playerChance].getReputationPts();
     templateConfig.currentWeekCredit = userArray[playerChance].getCredit();
     templateConfig.currentWeekAdvantageCard = userArray[playerChance].getAdvantageCardNumber();
+    templateConfig.userName = userArray[playerChance].getplayerName();
+
     userArray[playerChance].setOpenWeekSummary(false);
     userArray[playerChance].copyCurrentSummaryToLastWeek();
+
     tempVar.html += ubsWeekSummarytemplate(templateConfig);
 
 }

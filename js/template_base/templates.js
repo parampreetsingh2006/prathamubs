@@ -884,8 +884,8 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 
-ubsApp.popUpTemplate = '<div style="{{style}}">'+
-                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
+ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0s; position: absolute; margin: 0px; background-color: rgb(105, 105, 105); opacity: 0.95; width: 100%; z-index: 0;"></div><div style="{{style}}">'+
+                       '    <div style="background-color:white;margin:5%;padding: 10px;position: relative; overflow: auto;  max-height:50vh;">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -912,7 +912,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                              ''+
                              '        <div>'+
                              ''+
-                             '            <div style="{{headerStyle}}" >{{WeeklySummary}}</div>'+
+                             '            <div style="{{headerStyle}}" >{{userName}} {{WeeklySummary}}</div>'+
                              ''+
                              '        </div>'+
                              ''+
