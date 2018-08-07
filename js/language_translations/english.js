@@ -326,6 +326,8 @@ ubsApp.translation={
 						        "There are many template like sales/purchase/luck/inventory and there are many scenario based on template."+
 						        "Read each template and scenario carefully before starting the game."+
 						        "As you will progress, you will get/loose point or reward based on your decision and answers." ,
+        "quizWrongAnswerHeader":"WRONG ANSWER",
+        "quizWrongAnswerMessage":"You have got wrong message!",
 
 
     }
