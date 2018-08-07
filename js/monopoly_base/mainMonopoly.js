@@ -34,12 +34,20 @@ var flag2=monopoly.flag2;
 var computerDifficulty=monopoly.computerDifficulty;
 var scenario =  monopoly.scenario;
 ubsApp.maxNumOfWeeks = 12;
+var renderTimeOutMiliSec = 3000;
 
 
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
   monopoly.initializeScenarios();
-	monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
+  
+  monopoly.renderPageforBoard(monopoly.pages.Splash);
+  
+  //setTimeout(monopoly.renderPageforBoard, 30, monopoly.pages.Splash);
+  setTimeout(monopoly.renderPageforBoard, renderTimeOutMiliSec, monopoly.pages.EnterLanguagePage);
+  
+  
+	//monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
 monopoly.intitializeTemplates = function(){
@@ -375,15 +383,24 @@ monopoly.initializeScenarios=function()
 
 monopoly.openLeaderBoard=function(category){
   ubsApp.initializeLeaderBoard(category);
-  document.getElementById("leaderBoardParent").style.width="15%";
+  if(document.getElementById("leaderBoardParent") !=null){
+		document.getElementById("leaderBoardParent").style.width="15%";
+	}
 }
 
 monopoly.closeLeaderBoard=function(){
-  document.getElementById("leaderBoardParent").style.width="0%";
+
+  if(document.getElementById("leaderBoardParent")) {
+    document.getElementById("leaderBoardParent").style.width="0%";
+  }
+
+
 }
 
 
 monopoly.chooseLanguage=function(){
+
+
   var language=$('input[name=languageRadio]:checked').val();
   var jsElm = document.createElement("script");
   jsElm.type = "text/javascript";
@@ -402,10 +419,48 @@ monopoly.chooseLanguage=function(){
   }
    jsElm.onload=function(){
       ubsApp.translateScenarios();
-      monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+      monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
     }
 
   }
+
+monopoly.readInstruction=function(){
+	 
+	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
+          "header" : ubsApp.getTranslation("instructionHeader"),
+          "headerStyle" : "text-align: center;  color: green; font-weight: 700; font-size: 3vw;"
+               });
+	  }
+
+monopoly.startGame=function(){
+	
+	  var jsElm = document.createElement("script");
+	  jsElm.type = "text/javascript";
+	  jsElm.src = "js/language_translations/"+languageSelected+".js";
+	  document.head.appendChild(jsElm);
+	  
+	  var link  = document.createElement('link');
+	  link.rel  = 'stylesheet';
+	  link.type = 'text/css';
+	  link.href = 'css/'+languageSelected+'.css';
+	  document.head.appendChild(link);
+	  
+	  link.onload=function(){
+	    
+	  }
+	   jsElm.onload=function(){
+		   ubsApp.openPopup({
+               "message" : ubsApp.getTranslation("loadingGameMessage"),
+               "header" : "",
+               "headerStyle" : "",
+               "showCloseButton" : false,
+               });
+     ubsApp.translateScenarios();
+     monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+     ubsApp.closeCurrentScenario();
+	    }
+}
+
 
  ubsApp.endGame=function(){
   	var arr=[];

@@ -337,7 +337,9 @@ ubsApp.translateScenarios=function(){
 
 
 ubsApp.openPopup = function(config) {
-   ubsApp.popupConfig = $.extend({}, config);
+   ubsApp.popupConfig = $.extend({
+    "showCloseButton" : true,
+   }, config);
    ubsApp.renderPageByName("generalPopUp");
 }
 

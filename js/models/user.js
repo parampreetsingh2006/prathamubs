@@ -142,6 +142,18 @@ class User{
         }
     }
 
+    setScenarioArrayByCategory(scenariosArray, category)
+        {
+            if(this.scenariosArray[category]==null)
+            {
+                this.scenariosArray[key]=[];
+            }
+            for(var iterator=0;iterator<scenariosArray[category].length;iterator++)
+            {
+                this.scenariosArray[category][iterator]=scenariosArray[category][iterator];
+            }
+        }
+
     setReputationPts(reputationPts){
         this.reputationPts=reputationPts;
     }
@@ -280,7 +292,7 @@ getScenario(category,playerChance)
         let removeFromAll=false;
         if(this.scenariosArray[category].length==0)
                {
-                   this.setScenarioArray(scenariosArray);
+                   this.setScenarioArrayByCategory(scenariosArray, category);
                }
                // var scenariosApplicable=[];
                // for(var i=0;i<this.scenariosArray[category].length;i++){
@@ -297,7 +309,7 @@ getScenario(category,playerChance)
                //     }
                // }
                
-               number=(Math.floor(Math.random() * 100) + 1)%(this.scenariosArray[category].length);
+               number=(Math.floor(Math.random() * 300) + 1)%(this.scenariosArray[category].length);
                object=this.scenariosArray[category][number];
        
                /*while(ubsApp.pages[object.getName()].minimumInventoryScoreRequired>=userArray[playerChance].getInventoryScore())

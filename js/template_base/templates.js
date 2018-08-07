@@ -596,14 +596,26 @@ ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
 
 '</div>';
 
-ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-color:white;">'+
-'       <div class="screenTitle" style="background-color:{{background}}; color:{{color}}">'+
+ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
+'       <img src="images/background.png" style="width:100%;height:100%;">'+
+'       <div class="luckScreenTitle" style="color:white">'+
 '            {{scenarioTitle}}'+
 '       </div>'+
-'           {{#if icon}}<div class="iconContainer">'+
+'           {{#if icon}}<div class="luckIconContainer">'+
 '               <img src="images/{{icon}}.png" class="icon" style="">'+
 '           </div>{{/if}}'+
-'       <div id="scenario" class="borderB1" style="background-color:{{background}}; color:{{color}};">'+
+
+'       <div id="luckPlayerNameTitle">'+
+'       PLAYER:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
+'       </div>'+
+
+'       <div id="scenarioOutline">' + /* Wrapper div*/
+
+'       <div id="luckHeaderBorderImage">' +
+'            <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'       </div>' +
+
+'       <div id="scenario" style="background-color:white; color:black;">'+
 '           {{scenario}}<br>'+
 '           {{#if helpRequired}}'+
 '               <button class="luckHelpButton">{{helpTitle}}</button>'+
@@ -611,16 +623,25 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;  background-col
 '       </div>'+
 '       <div id="result"></div>'+
 '       <div class="luckYouCanPayContainer">'+
-'          <div style="display:inline-block;">{{payMessage}}</div>'+
-'           <div style="display:inline-block; width:43%;">'+
-'               <button class="luckPayButton" onclick="ubsApp.payOrGain(\'{{scenarioName}}\')">{{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}</button>'+
-'           </div>'+
+'           <div style="display:inline-block; width:100%;">'+
+
+'              <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
+'                  <button class="luckPayButton" onclick="ubsApp.payOrGain(\'{{scenarioName}}\')">'+
+'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}</button>'+
+'              </div>'+
+
+'               {{#if quizRequired}}'+
+'              <div style="display:inline-block; width:33.33%; text-align:left;float:left">'+
+'                  <button class="takeQuizButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
+'              </div>'+
+'           {{#if hasAdvantageCard}}'+
+'              <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
+'                  <button class="wildCardButton" style="background-color:green;" onclick="">{{checkWildCard}}</button>    '+
+'              </div>'+
+'           {{/if}}'+
+'               {{/if}}'+
 '       </div>'+
-'       {{#if quizRequired}}<div class="alternateMessageContainer">'+
-'          {{alternalteMessage}}'+
-'           <button  class="takeQuizWildCardButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
-'           {{or}}   <button class="takeQuizWildCardButton" style="background-color:green;">{{checkWildCard}}</button>    '+
-'       {{/if}}'+
+'           </div>'+
 '       </div>'+
 '</div>';
 
@@ -875,7 +896,9 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        '        <div>'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
-                       '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
+                       '        {{#if showCloseButton}}'+
+                       '            </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
+                       '        {{/if}}'+
                        '        </div>'+
                        '    </div>'+
                        '</div>';
