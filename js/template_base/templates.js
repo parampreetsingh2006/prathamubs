@@ -626,8 +626,15 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '           <div style="display:inline-block; width:100%;">'+
 
 '              <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
+'               {{#if isLuckCategory}}'+
 '                  <button class="luckPayButton" onclick="ubsApp.payOrGain(\'{{scenarioName}}\')">'+
-'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}</button>'+
+'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}'+
+'                  </button>'+
+'                {{else}}'+
+'                  <button class="paymentPayButton" onclick="ubsApp.payFromBank(\'{{scenarioName}}\')">'+
+'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}'+
+'                  </button>'+
+'               {{/if}}'+
 '              </div>'+
 
 '               {{#if quizRequired}}'+
