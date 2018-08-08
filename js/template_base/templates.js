@@ -655,7 +655,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:white; ">'+
 '                <span class="imageContainer"><img class="payOffImageToken" src="images/{{color}}.png"></img></span>'+
 '                <div class="payOffContainer">'+
-'                      <div class="payOffTitle" align="center">'+
+'                      <br><div class="payOffTitle" align="center">'+
 '                           {{title}}'+
 '                      </div>'+
 '                      <div align="center"><img class="" src="images/redheadersellreceipt.png"></div>'+
