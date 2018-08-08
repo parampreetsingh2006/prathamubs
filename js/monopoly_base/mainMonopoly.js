@@ -152,21 +152,27 @@ monopoly.renderPageforBoard = function(page) {
 
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
-      scenario = userArray[playerChance].getScenario(blockCategory[blockNo],playerChance);   //   blockCategory[blockNo]
-        let currentTemplateName=scenario.getName();
-        let currentTemplate=ubsApp.pages[currentTemplateName].templates;
-        let key=ubsApp.pages[currentTemplateName].templates[0].question;
-        
-        $('#monopolyBase').css("z-index",-10);
-        $('#templateBase').css("z-index",10);
-        
-        document.getElementById("templateContent").style.opacity="0.95";
-        
-        $('#templateContent').css("height",(screenHeight)+'px')
-        $('#templateContent').css("width",(screenWidth)+'px')
+      let category = blockCategory[blockNo];
+      if(category) {
+        scenario = userArray[playerChance].getScenario(category,playerChance);   //   blockCategory[blockNo]
+                let currentTemplateName=scenario.getName();
+                let currentTemplate=ubsApp.pages[currentTemplateName].templates;
+                let key=ubsApp.pages[currentTemplateName].templates[0].question;
 
-        ubsApp.renderPageByName(scenario.getName());
-        currentTemplate[0].question=key;
+                $('#monopolyBase').css("z-index",-10);
+                $('#templateBase').css("z-index",10);
+
+                document.getElementById("templateContent").style.opacity="0.95";
+
+                $('#templateContent').css("height",(screenHeight)+'px')
+                $('#templateContent').css("width",(screenWidth)+'px')
+
+                ubsApp.renderPageByName(scenario.getName());
+                currentTemplate[0].question=key;
+      } else {
+        ubsApp.nextMove();
+      }
+
        
   },1000);
 
@@ -245,7 +251,7 @@ monopoly.rollDice  = function(){
   $("#container-dice").css("pointer-events","none");
   
     diceVal = pointRoll();
-    //diceVal = 6;
+    //diceVal = 13;
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
 		playerChance=0;

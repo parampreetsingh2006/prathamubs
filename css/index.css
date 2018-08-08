@@ -65,11 +65,11 @@ body {
     position: absolute;
     left:30%;
     top:25%;
-    width:40%;
-    height:37%;
-    background-color:#ffe62d;
+    width:50%;
+    height:45%;
+    background-image: url(../images/redBorderAlt.png);
+    background-size: cover;
     border:1px solid black;
-    position:absolute;
     right:30%;
   }
 .imageContainer{
@@ -92,6 +92,7 @@ body {
 .payOffSubTitleLeft{
     position:absolute;;
     left: 10%;
+    font-size:large;
     font-weight:600;
 }
 #advantageCardTitle{
@@ -103,13 +104,14 @@ body {
 }
 
 .payOffSubTitleRight{
-    position:absolute;;
-    left: 55%;
+    position:absolute;
+    font-size:large;
+    left: 50%;
     font-weight:600;
 }
 .payOffLeftSubTitleValue{
     position:absolute;
-    left:45%;
+    left:50%;
 }
 
 .payOffButtonContainer{
@@ -118,11 +120,13 @@ body {
 }
 
 .payOffButton{
-    width:100%;
-    background-color:black;
+    width:160px;
+    background-image:url("../images/buttonlong.png");
     border:0;
-    color:#ffe62d;
-    border-radius:10px;padding:2%;
+    color:black;
+    font-size:large;
+    font-weight:bold;
+    padding:2%;
 }
 
 

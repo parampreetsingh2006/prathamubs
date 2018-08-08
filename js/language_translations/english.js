@@ -224,7 +224,7 @@ ubsApp.translation={
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
-        "WeeklySummary":"WeeklySummary",
+        "WeeklySummary":"Weekly Summary",
 
         //luck scenario
         "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",
@@ -326,6 +326,8 @@ ubsApp.translation={
 						        "There are many template like sales/purchase/luck/inventory and there are many scenario based on template."+
 						        "Read each template and scenario carefully before starting the game."+
 						        "As you will progress, you will get/loose point or reward based on your decision and answers." ,
+        "quizWrongAnswerHeader":"WRONG ANSWER",
+        "quizWrongAnswerMessage":"You have got wrong message!",
 
 
     }

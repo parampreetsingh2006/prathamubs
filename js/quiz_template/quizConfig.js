@@ -10,6 +10,7 @@ ubsApp.quizConfig = {
 	 	"templates":[
 	 		{
 				"templateId": 1,
+				"questionId":1,
 				"templateType": "quiz",
 				"noOfQuestions":"",
 				"question": "GST1 stands for: ",
@@ -63,6 +64,7 @@ ubsApp.quizConfig = {
 	 	"templates":[
 	 		{
 				"templateId": 1,
+				"questionId":2,
 				"templateType": "quiz",
 				"noOfQuestions":"",
 				"question": "GST1 stands for: ",
@@ -116,6 +118,7 @@ ubsApp.quizConfig = {
 	 	"templates":[
 	 		{
 				"templateId": 1,
+				"questionId":3,
 				"templateType": "quiz",
 				"noOfQuestions":"",
 				"question": "GST1 stands for: ",
@@ -169,6 +172,7 @@ ubsApp.quizConfig = {
 	 	"templates":[
 	 		{
 				"templateId": 1,
+				"questionId":4,
 				"templateType": "quiz",
 				"noOfQuestions":"",
 				"question": "GST4 stands for: ",
@@ -222,6 +226,7 @@ ubsApp.quizConfig = {
 	 	"templates":[
 	 		{
 				"templateId": 1,
+				"questionId":5,
 				"templateType": "quiz",
 				"noOfQuestions":"",
 				"question": "GST5 stands for: ",
