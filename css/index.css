@@ -92,6 +92,7 @@ body {
 .payOffSubTitleLeft{
     position:absolute;;
     left: 10%;
+    font-size:large;
     font-weight:600;
 }
 #advantageCardTitle{
@@ -103,13 +104,14 @@ body {
 }
 
 .payOffSubTitleRight{
-    position:absolute;;
-    left: 55%;
+    position:absolute;
+    font-size:large;
+    left: 50%;
     font-weight:600;
 }
 .payOffLeftSubTitleValue{
     position:absolute;
-    left:45%;
+    left:50%;
 }
 
 .payOffButtonContainer{
