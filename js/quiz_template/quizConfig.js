@@ -13,7 +13,7 @@ ubsApp.quizConfig = {
 				"questionId":1,
 				"templateType": "quiz",
 				"noOfQuestions":"",
-				"question": "GST1 stands for: ",
+				"question": "GST<1> stands for: ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
@@ -41,7 +41,7 @@ ubsApp.quizConfig = {
 					},
 					{
 						"optionName":"q1",
-						"optionValue": "Goods and Service Tax",
+						"optionValue": "Goods and Services Tax",
 						"id":3,
 						"priority":1
 					}
@@ -67,7 +67,7 @@ ubsApp.quizConfig = {
 				"questionId":2,
 				"templateType": "quiz",
 				"noOfQuestions":"",
-				"question": "GST1 stands for: ",
+				"question": "PPF<2> stands for: ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
@@ -78,24 +78,24 @@ ubsApp.quizConfig = {
 					"reputationPoints":1,
 					"cash":0,
 				},
-				"answer":"3",
+				"answer":"2",
 				"optionName":"q2",
 				"options": [
 				    {
 						"optionName":"q2",
-						"optionValue": "Government Sales Tax",
+						"optionValue": "Public Private Finance",
 						"id":1,
 						"priority": 3
 					},
 					{
 						"optionName": "q2",
-						"optionValue": "Goods and Sales Tax",
+						"optionValue": "Public Provident Fund",
 						"id":2,
 						"priority": 2
 					},
 					{
 						"optionName":"q2",
-						"optionValue": "Goods and Service Tax",
+						"optionValue": "Provisional Public Fund",
 						"id":3,
 						"priority":1
 					}
@@ -121,7 +121,7 @@ ubsApp.quizConfig = {
 				"questionId":3,
 				"templateType": "quiz",
 				"noOfQuestions":"",
-				"question": "GST1 stands for: ",
+				"question": "Your<3> land can sell for Rs.60000; You bought it for Rs.50000. Land value has ",
 				"questionTime":3000,
 				"optionsTime":2000,
 				"questionHeading":"GST",
@@ -132,24 +132,24 @@ ubsApp.quizConfig = {
 					"reputationPoints":1,
 					"cash":0,
 				},
-				"answer":"3",
+				"answer":"1",
 				"optionName":"q3",
 				"options": [
 				    {
 						"optionName":"q3",
-						"optionValue": "Government Sales Tax",
+						"optionValue": "Increased by Rs.10000",
 						"id":1,
 						"priority": 3
 					},
 					{
 						"optionName": "q3",
-						"optionValue": "Goods and Sales Tax",
+						"optionValue": "Decreased by Rs.10000",
 						"id":2,
 						"priority": 2
 					},
 					{
 						"optionName":"q3",
-						"optionValue": "Goods and Service Tax",
+						"optionValue": "Increased by Rs.60000",
 						"id":3,
 						"priority":1
 					}
