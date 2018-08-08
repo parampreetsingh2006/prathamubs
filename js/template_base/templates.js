@@ -419,8 +419,8 @@ ubsApp.leaderBoardTemplate=
 '       <span id = "seconds">'+
 '           '+
 '       </span>'+
-'<div style="display:inline-block; width:33.33%; text-align:left;" {{#if onClickPage}} onclick="ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')" {{/if}} />'+
-'                  <button class="customerButton">'+
+'<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
+'                  <button class="customerButton" onclick="ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')">'+
 '           Done'+
 '              </div>'+
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
