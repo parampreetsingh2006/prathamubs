@@ -1,11 +1,10 @@
 ubsApp.getPopupTemplate = function(templateConfig, tempVar){
     let popupConfig = ubsApp.popupConfig;
-	templateConfig.headerStyle = popupConfig.headerStyle;
-    templateConfig.message = popupConfig.message;
+	templateConfig =  $.extend(templateConfig, popupConfig);
     templateConfig.Close = ubsApp.getTranslation("Close");
-    templateConfig.header = popupConfig.header;
     ubsApp.startCurrentScenario();
-
+    document.getElementById("templateContent").style.opacity="1";
+    document.getElementById("templateContent").style["background-color"] = "transparent";
 	tempVar.html += ubsPopupTemplate(templateConfig);
 	ubsApp.popupConfig = {};
 }

@@ -431,10 +431,11 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   <div id="quizTitle">'+
 '       <span id="quizEmoji"></span>    '+
 '       <span id="quizHeading">Quiz</span>'+
-'       <span id="score"> SCORE: <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
+'       <span id="score"> SCORE <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
+'       <span id="playerName"> PLAYER: {{currentPlayerName}}</span>'+
 '   </div>'+
-'   <div id="questionHeading">{{questionHeading}}</div>'+
 '   <div id="question_answer">'+
+'       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '       <span id="quizQuestion">{{question}}</span>'+
 '       {{#if quizResult}}<br><b><span id="quizResult"></span></b>{{/if}}'+
 '       {{#if options}}'+
@@ -444,8 +445,15 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\')" value="OK"></div>'+
 '       {{/if}}'+
+'   </div>'+
+'   <div id="answerDiv" style="display:none;">'+
+'       <span id="answerHeader"></span>'+
+/*'       <span id="answerMessage">You have wrong answer!</span>'+ TODO: To confirm from Pratham Team what message needs to be displayed*/ 
+'       <div id="quizOk">'+
+'           <button id="wrongAnswerOk"  class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
+'       </div>'+
 '   </div>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">HELP</button>'+
 '   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
@@ -588,38 +596,48 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 
 '       <div id="scenario" style="background-color:white; color:black;">'+
 '           {{scenario}}<br>'+
-'           {{#if helpRequired}}'+
-'               <button class="luckHelpButton">{{helpTitle}}</button>'+
-'           {{/if}}'+
 '       </div>'+
 '       <div id="result"></div>'+
 '       <div class="luckYouCanPayContainer">'+
 '           <div style="display:inline-block; width:100%;">'+
 
 '              <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
+'               {{#if isLuckCategory}}'+
 '                  <button class="luckPayButton" onclick="ubsApp.payOrGain(\'{{scenarioName}}\')">'+
-'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}</button>'+
+'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}'+
+'                  </button>'+
+'                {{else}}'+
+'                  <button class="paymentPayButton" onclick="ubsApp.payFromBank(\'{{scenarioName}}\')">'+
+'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}'+
+'                  </button>'+
+'               {{/if}}'+
 '              </div>'+
 
 '               {{#if quizRequired}}'+
-'              <div style="display:inline-block; width:33.33%; text-align:left;float:left">'+
-'                  <button class="takeQuizButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
-'              </div>'+
-'           {{#if hasAdvantageCard}}'+
-'              <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
-'                  <button class="wildCardButton" style="background-color:green;" onclick="">{{checkWildCard}}</button>    '+
-'              </div>'+
-'           {{/if}}'+
+'                  <div style="display:inline-block; width:33.33%; text-align:left;float:left">'+
+'                       <button class="takeQuizButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
+'                  </div>'+
+'                   {{#if hasAdvantageCard}}'+
+'                       <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
+'                           <button class="wildCardButton" style="background-color:green;" onclick="">{{checkWildCard}}</button>    '+
+'                       </div>'+
+'                   {{/if}}'+
 '               {{/if}}'+
 '       </div>'+
 '           </div>'+
+'       </div>'+
+'       <div class="luckHelpIcon">'+
+'           <button onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
+'       </div>'+
+'       <div class="luckGameIcon">'+
+'           <img style="width:100%;"src="images/logo.png">'+
 '       </div>'+
 '</div>';
 
 ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:white; ">'+
 '                <span class="imageContainer"><img class="payOffImageToken" src="images/{{color}}.png"></img></span>'+
 '                <div class="payOffContainer">'+
-'                      <div class="payOffTitle" align="center">'+
+'                      <br><div class="payOffTitle" align="center">'+
 '                           {{title}}'+
 '                      </div>'+
 '                      <div align="center"><img class="" src="images/redheadersellreceipt.png"></div>'+
@@ -633,19 +651,19 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               {{bankBalanceTitle}} '+
 '                               <span id="bankBalanceValue">₹ {{bankBalance}}</span>'+
 '                           </span>'+
-'                      </div><br>'+
+'                      </div><br><br><br><br>'+
 '                      {{#if #payOff}}'+
 '                           <div>'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
 '                                    <span class="payOffLeftSubTitleValue">Rs. <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
-'                           </div><br>'+
+'                           </div><br><br>'+
 '                      {{/if}}'+
 '                      <span class="payOffSubTitleLeft">'+
 '                           {{#if payOff}}'+
 '                               {{amountToPayTitle}}:'+
 '                           {{else}}'+
-'                               {{amountToTransferTitle}}:'+
+'                               {{amountToTransferTitle}} ₹ '+
 '                           {{/if}}'+
 '                      </span>'+
 '                      <span class="payOffLeftSubTitleValue">'+
@@ -664,10 +682,10 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               </select>'+
 '                           </span><br><br>'+
 '                      {{/if}}'+
-'                      <div class="payOffButtonContainer" style="left:30%;">'+
+'                      <br><br><br><div class="payOffButtonContainer" style="left:25%;">'+
 '                           <button class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
-'                      <div style="left:40%;" class="payOffButtonContainer">'+
+'                      <div style="left:45%;" class="payOffButtonContainer">'+
 '                           <button class="payOffButton" style="margin-left:50%;" onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
 '                      </div>'+
 '                </div>'+
@@ -855,8 +873,8 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 
-ubsApp.popUpTemplate = '<div style="{{style}}">'+
-                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
+ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0s; position: absolute; margin: 0px; background-color: rgb(105, 105, 105); opacity: 0.95; width: 100%; z-index: 0;"></div><div style="{{style}}">'+
+                       '    <div style="background-color:white;margin:5%;padding: 10px;position: relative; overflow: auto;  max-height:50vh;">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -867,7 +885,9 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        '        <div>'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
-                       '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
+                       '        {{#if showCloseButton}}'+
+                       '            </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
+                       '        {{/if}}'+
                        '        </div>'+
                        '    </div>'+
                        '</div>';
@@ -881,7 +901,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                              ''+
                              '        <div>'+
                              ''+
-                             '            <div style="{{headerStyle}}" >{{WeeklySummary}}</div>'+
+                             '            <div style="{{headerStyle}}" >{{userName}} {{WeeklySummary}}</div>'+
                              ''+
                              '        </div>'+
                              ''+

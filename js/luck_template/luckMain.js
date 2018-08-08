@@ -129,7 +129,7 @@ ubsApp.payOrGain=function(pageName){
                 console.log("Insurance REquired");
             }
         }
-        else if(key=="balance"){
+        else if(key=="bankBalance"){
             if(value=="full"){
                 value=-userArray[playerChance].getBankBalance();
             }
@@ -190,7 +190,7 @@ ubsApp.payOrGain=function(pageName){
 
             }
         }
-        else if(key=="reputation"){
+        else if(key=="reputationPoints"){
             userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+value);
             if(userArray[playerChance].getReputationPts()<0)
             {
