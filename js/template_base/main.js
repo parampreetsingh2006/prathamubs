@@ -339,10 +339,22 @@ ubsApp.translateScenarios=function(){
 
 
 ubsApp.openPopup = function(config) {
+   var showCloseButton;
+   if(config.showCloseButton){
+   		showCloseButton = config.showCloseButton;
+   }
+   else{
+   	showCloseButton = true;
+   }
    ubsApp.popupConfig = $.extend({
-    "showCloseButton" : true,
+    "showCloseButton" : showCloseButton,
    }, config);
    ubsApp.renderPageByName("generalPopUp");
+}
+
+ubsApp.updateScoreInDB = function(questionId, scoredMarks,totalMarks, level, startTime, endTime){
+	var resourceId = "";
+	Android.addScore(resourceId,questionId,scoredMarks, totalMarks, level, startTime);
 }
 
 

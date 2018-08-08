@@ -460,10 +460,11 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   <div id="quizTitle">'+
 '       <span id="quizEmoji"></span>    '+
 '       <span id="quizHeading">Quiz</span>'+
-'       <span id="score"> SCORE: <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
+'       <span id="score"> SCORE <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
+'       <span id="playerName"> PLAYER: {{currentPlayerName}}</span>'+
 '   </div>'+
-'   <div id="questionHeading">{{questionHeading}}</div>'+
 '   <div id="question_answer">'+
+'       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '       <span id="quizQuestion">{{question}}</span>'+
 '       {{#if quizResult}}<br><b><span id="quizResult"></span></b>{{/if}}'+
 '       {{#if options}}'+
@@ -473,8 +474,15 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.nextQuizQuestion(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\')" value="OK"></div>'+
 '       {{/if}}'+
+'   </div>'+
+'   <div id="answerDiv" style="display:none;">'+
+'       <span id="answerHeader"></span>'+
+/*'       <span id="answerMessage">You have wrong answer!</span>'+ TODO: To confirm from Pratham Team what message needs to be displayed*/ 
+'       <div id="quizOk">'+
+'           <button id="wrongAnswerOk"  class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
+'       </div>'+
 '   </div>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">HELP</button>'+
 '   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+

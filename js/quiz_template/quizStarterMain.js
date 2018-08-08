@@ -1,6 +1,7 @@
 ubsApp.getQuizStarterTemplate = function(templateConfig, tempVar){
 
 	tempVar.quizConfig = templateConfig;
+	tempVar.quizConfig.currentPlayerName = userArray[playerChance].getplayerName();
 	ubsApp.generalQuiz(tempVar.quizConfig);
 }
 
@@ -56,12 +57,14 @@ ubsApp.generalQuiz=function(config){   //credits can be amount or points dependi
 		ubsApp.pages["quizQ"+arr[i]].templates[0].onClickPage.nextPage = "quizQ"+arr[i+1];
 		ubsApp.initializeQuizQuestions(i, ubsApp.pages["quizQ"+arr[i]].templates[0].credit);
 		ubsApp.pages["quizQ"+arr[i]].templates[0].noOfQuestions = noOfQuestions;
+		ubsApp.pages["quizQ"+arr[i]].templates[0].currentPlayerName = config.currentPlayerName;
 	}
 
 
 	ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].onClickPage.nextPage = config.resultPage;
 	ubsApp.initializeQuizQuestions(arr.length-1, ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].credit);
 	ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].noOfQuestions = config.noOfQuestions;    			//noOfQuestions to be put in quiz config
+	ubsApp.pages["quizQ"+arr[arr.length-1]].templates[0].currentPlayerName = config.currentPlayerName;
 	ubsApp.pages[config.resultPage].templates[0].noOfQuestions = noOfQuestions;
 	ubsApp.renderFirstQuizPage("quizQ"+arr[0]);
 
