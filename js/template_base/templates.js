@@ -296,25 +296,37 @@ ubsApp.leaderBoardTemplate=
     '</div><br>';
 
     ubsApp.salesTemplate=
-    '<div class="row" style="height:100%;width:100%">'+
+    '<div class="mainDiv row" style="height:100%;width:100%">'+
+    '       <div class="salesScreenTitle" style="color:white">'+
+                    '            SELL'+
+                    '       </div>'+
+                    '           <div class="salesIconContainer">'+
+                    '               <img src="images/SELL.png" class="icon" style="">'+
+                    '           </div>'+
+                    '       <div id="luckPlayerNameTitle">'+
+                    '       PLAYER:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
+                    '       </div>'+
 '    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
-'       <div class = "heading" >'+
-'           {{Customer}}'+
-'       </div>'+
-'       <br>'+
-'       <div id="profile" >'+
-'           <img src="{{profilePicture}}.png" class="photo" >'+
+     '<div id="profile">'+
+    ' <img src="{{profilePicture}}.png" class="icon" style="">'+
 '       </div>'+
 '           <br>'+
+'<div style="display:inline-block; width:100%; text-align:left;;float:left">'+
+'                  <button class="customerButton">'+
+'           {{Customer}}'+
+'              </div>'+
+'       </div>'+
+    //need to add dhandha chalo image here
+'    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
 '       <div id="order">'+
-'           <center><b>{{Order}}</b></center>'+
 '           <div id="orderList">'+
+'           <center><b>{{Order}}</b></center>'+
 '               <table class="table table-sm">'+
 '                   <tbody>'+
 '                       {{#each order}}'+
-'                         <tr>'+
-'                           <td>{{item}}</td>'+
-'                           <td>{{amount}}</td>'+
+'                         <tr class = "row{{no}} {{#if exclude}}strikeout{{/if}}" data-toggle="tooltip" data-placement="bottom" {{#if exclude}}title="This item is not available in your Inventory"{{/if}} >'+
+'                           <td class="items">{{item}}</td>'+
+'                           <td class="items">{{amount}}</td>'+
 '                         </tr>'+
 '                       {{/each}}'+
 '                   </tbody>'+
@@ -322,14 +334,12 @@ ubsApp.leaderBoardTemplate=
 '           </div>'+
 '       </div>'+
 '    </div>'+
-'    <div class="col-md-6 col-sm-6 col-xs-6 receipt-gen">'+
-'       <div class = "heading">'+
-'           {{receiptGen}}'+
-'       </div>'+
-'       <br>'+
+'    <div class="col-md-5 col-sm-5 col-xs-5 receipt-gen">'+
 '       <div class="receipt">'+
+'       <div class="receiptSale">'+
 '           <div id="title">{{receiptHeading}}</div>'+
 '       '+
+'           <img src="images/redheadersellreceipt.png" style="width:100%" >'+
 '           <div id="bill">'+
 '               <div class="table-responsive">          '+
 '                 <table class="table table-bordered">'+
@@ -344,11 +354,11 @@ ubsApp.leaderBoardTemplate=
 '                   </thead>'+
 '                   <tbody>'+
 '                       {{#each order}}'+
-'                     <tr class = "row{{no}} {{#if exclude}}strikeout{{/if}}" data-toggle="tooltip" data-placement="bottom" {{#if exclude}}title="This item is not available in your Inventory"{{/if}} >'+
-'                       <td>{{no}}</td>'+
-'                       <td>{{item}}</td>'+
-'                       <td id="itemPrice{{no}}">{{amount}}</td>'+
-'                       <td>{{rate}}</td>'+
+'                     <tr class = "row{{no}} {{#if exclude}}hide{{/if}}">'+
+'                       <td  class="items">{{no}}</td>'+
+'                       <td  class="items">{{item}}</td>'+
+'                       <td  class="items" id="itemPrice{{no}}">{{amount}}</td>'+
+'                       <td  class="items">{{rate}}</td>'+
 '                       <td ><input id = "input{{no}}" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()" {{#if exclude}}disabled{{/if}} {{#if exclude}}value="0"{{/if}}></td>  '+
 '                     </tr>'+
 '                       {{/each}}'+
@@ -369,55 +379,13 @@ ubsApp.leaderBoardTemplate=
 '                 </table>'+
 '               </div>'+
 '           </div>'+
+'           </div>'+
 '       </div>'+
 '    </div>'+
-'   <div class="col-md-4 col-sm-4 col-xs-4 tools">'+
-'       <div class = "heading">'+
+'   <div class="col-md-3 col-sm-3 col-xs-3 tools">'+
+'       <div class="salesScreenTitle" style="color:white">'+
 '           {{Tools}}'+
 '       </div>'+
-// '       <div id="rateCard">'+
-// '           <center><b>Rate Card</b></center>'+
-// '           <div id="rateList">'+
-// '               <table class="table table-sm">'+
-// '                   <thead>'+
-// '                     <tr>'+
-// '                       <th>Items</th>'+
-// '                       <th>Rate</th>'+
-// '                     </tr>'+
-// '                 </thead>'+
-// '                   <tbody>'+
-// '                     {{#each itemRate}}'+
-// '                     <tr>'+
-// '                       <td>{{item}}</td>'+
-// '                       <td>{{rate}}</td>'+
-// '                     </tr>'+
-// '                     {{/each}}'+
-// '                   </tbody>'+
-// '                 </table>'+
-// '           </div>'+
-// '       </div>'+
-// '       <div id="inventory">'+
-// '           <center><b>Inventory</b></center>'+
-// '           <div id="inventoryList">'+
-// '               <table class="table table-sm">'+
-// '                   <thead>'+
-// '                     <tr>'+
-// '                       <th>Items</th>'+
-// '                       <th>Amount</th>'+
-// '                     </tr>'+
-// '                 </thead>'+
-// '                   <tbody>'+
-// '                       {{#each inventory}}'+
-// '                     <tr>'+
-// '                       <td>{{item}}</td>'+
-// '                       <td>{{amount}}</td>'+
-// '                     </tr>'+
-// '                     {{/each}}'+
-// '                   </tbody>'+
-// '                 </table>'+
-// ''+
-// '           </div>'+
-// '       </div>'+
 '           '+
 '       <div id="calculator">'+
 '           <input type="text" readonly size="10" maxlength="7" id="numberInput">'+
@@ -451,8 +419,11 @@ ubsApp.leaderBoardTemplate=
 '       <span id = "seconds">'+
 '           '+
 '       </span>'+
-'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
-'       <img class="butt" id="done" src="images/done.png" {{#if onClickPage}} onclick="ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')" {{/if}} />    '+
+'<div style="display:inline-block; width:33.33%; text-align:left;" {{#if onClickPage}} onclick="ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')" {{/if}} />'+
+'                  <button class="customerButton">'+
+'           Done'+
+'              </div>'+
+//'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+
 '  </div>';
 

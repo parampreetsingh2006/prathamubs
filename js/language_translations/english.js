@@ -139,7 +139,7 @@ ubsApp.translation={
 
         //Sales
 
-        "receiptHeading":"Super Market Receipt",
+        "receiptHeading":"SUPER MARKET RECIPE",
         "receiptGen":"Receipt Generation",
         "Order":"Order",
         "Customer":"Customer",
