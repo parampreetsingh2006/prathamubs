@@ -677,19 +677,19 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               {{bankBalanceTitle}} '+
 '                               <span id="bankBalanceValue">₹ {{bankBalance}}</span>'+
 '                           </span>'+
-'                      </div><br>'+
+'                      </div><br><br><br>'+
 '                      {{#if #payOff}}'+
 '                           <div>'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
 '                                    <span class="payOffLeftSubTitleValue">Rs. <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
-'                           </div><br>'+
+'                           </div><br><br>'+
 '                      {{/if}}'+
 '                      <span class="payOffSubTitleLeft">'+
 '                           {{#if payOff}}'+
 '                               {{amountToPayTitle}}:'+
 '                           {{else}}'+
-'                               {{amountToTransferTitle}}:'+
+'                               {{amountToTransferTitle}} ₹ '+
 '                           {{/if}}'+
 '                      </span>'+
 '                      <span class="payOffLeftSubTitleValue">'+
@@ -708,10 +708,10 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               </select>'+
 '                           </span><br><br>'+
 '                      {{/if}}'+
-'                      <div class="payOffButtonContainer" style="left:30%;">'+
+'                      <br><div class="payOffButtonContainer" style="left:25%;">'+
 '                           <button class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
-'                      <div style="left:40%;" class="payOffButtonContainer">'+
+'                      <div style="left:45%;" class="payOffButtonContainer">'+
 '                           <button class="payOffButton" style="margin-left:50%;" onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
 '                      </div>'+
 '                </div>'+
