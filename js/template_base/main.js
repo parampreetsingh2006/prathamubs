@@ -285,6 +285,8 @@ ubsApp.closeCurrentScenario=function(){
 	$('#templateContent').css("z-index",0)
 	$('#templateContent').css("height",0+'px')
 	document.getElementById("templateContent").innerHTML="";
+	document.getElementById("templateContent").style["background-color"] = "rgb(105,105,105)";
+	 document.getElementById("templateContent").style.opacity="0.95";
 	$('#rollIt').attr('disabled',false);
 
 	if(userArray[playerChance].isOpenWeekSummary()) {

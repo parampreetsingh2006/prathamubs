@@ -126,6 +126,7 @@
 }
 
 .quizSubmitButtons {
+    margin-right: 5px;
 	background:url('../images/buttonsmall.png');
 	float: right;
 }

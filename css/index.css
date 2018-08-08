@@ -292,7 +292,7 @@ body {
     margin-top:20%;
     padding:1%;
 }
-.luckPayButton{
+.luckPayButton,.paymentPayButton{
     padding:5px;
     border:0;
     background-color:red;

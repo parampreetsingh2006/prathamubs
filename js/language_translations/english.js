@@ -224,7 +224,7 @@ ubsApp.translation={
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
-        "WeeklySummary":"WeeklySummary",
+        "WeeklySummary":"Weekly Summary",
 
         //luck scenario
         "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",

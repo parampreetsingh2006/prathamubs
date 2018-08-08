@@ -634,8 +634,15 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '           <div style="display:inline-block; width:100%;">'+
 
 '              <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
+'               {{#if isLuckCategory}}'+
 '                  <button class="luckPayButton" onclick="ubsApp.payOrGain(\'{{scenarioName}}\')">'+
-'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}</button>'+
+'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}'+
+'                  </button>'+
+'                {{else}}'+
+'                  <button class="paymentPayButton" onclick="ubsApp.payFromBank(\'{{scenarioName}}\')">'+
+'                    {{#if negative}}{{payTitle}}{{else}}{{gainTitle}}{{/if}}'+
+'                  </button>'+
+'               {{/if}}'+
 '              </div>'+
 
 '               {{#if quizRequired}}'+
@@ -892,8 +899,8 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 
-ubsApp.popUpTemplate = '<div style="{{style}}">'+
-                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
+ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0s; position: absolute; margin: 0px; background-color: rgb(105, 105, 105); opacity: 0.95; width: 100%; z-index: 0;"></div><div style="{{style}}">'+
+                       '    <div style="background-color:white;margin:5%;padding: 10px;position: relative; overflow: auto;  max-height:50vh;">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -920,7 +927,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                              ''+
                              '        <div>'+
                              ''+
-                             '            <div style="{{headerStyle}}" >{{WeeklySummary}}</div>'+
+                             '            <div style="{{headerStyle}}" >{{userName}} {{WeeklySummary}}</div>'+
                              ''+
                              '        </div>'+
                              ''+
