@@ -66,7 +66,7 @@ body {
     left:30%;
     top:25%;
     width:50%;
-    height:45%;
+    height:53%;
     background-image: url(../images/redBorderAlt.png);
     background-size: cover;
     border:1px solid black;
@@ -92,7 +92,7 @@ body {
 .payOffSubTitleLeft{
     position:absolute;;
     left: 10%;
-    font-size:large;
+    font-size:x-large;
     font-weight:600;
 }
 #advantageCardTitle{
@@ -105,13 +105,14 @@ body {
 
 .payOffSubTitleRight{
     position:absolute;
-    font-size:large;
+    font-size:x-large;
     left: 50%;
     font-weight:600;
 }
 .payOffLeftSubTitleValue{
     position:absolute;
     left:50%;
+    top:56%;
 }
 
 .payOffButtonContainer{
