@@ -681,7 +681,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                           {{#if payOff}}'+
 '                               {{amountToPayTitle}}:'+
 '                           {{else}}'+
-'                               {{amountToTransferTitle}}:'+
+'                               {{amountToTransferTitle}} ₹ '+
 '                           {{/if}}'+
 '                      </span>'+
 '                      <span class="payOffLeftSubTitleValue">'+
