@@ -625,9 +625,6 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 
 '       <div id="scenario" style="background-color:white; color:black;">'+
 '           {{scenario}}<br>'+
-'           {{#if helpRequired}}'+
-'               <button class="luckHelpButton">{{helpTitle}}</button>'+
-'           {{/if}}'+
 '       </div>'+
 '       <div id="result"></div>'+
 '       <div class="luckYouCanPayContainer">'+
@@ -646,17 +643,23 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '              </div>'+
 
 '               {{#if quizRequired}}'+
-'              <div style="display:inline-block; width:33.33%; text-align:left;float:left">'+
-'                  <button class="takeQuizButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
-'              </div>'+
-'           {{#if hasAdvantageCard}}'+
-'              <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
-'                  <button class="wildCardButton" style="background-color:green;" onclick="">{{checkWildCard}}</button>    '+
-'              </div>'+
-'           {{/if}}'+
+'                  <div style="display:inline-block; width:33.33%; text-align:left;float:left">'+
+'                       <button class="takeQuizButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
+'                  </div>'+
+'                   {{#if hasAdvantageCard}}'+
+'                       <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
+'                           <button class="wildCardButton" style="background-color:green;" onclick="">{{checkWildCard}}</button>    '+
+'                       </div>'+
+'                   {{/if}}'+
 '               {{/if}}'+
 '       </div>'+
 '           </div>'+
+'       </div>'+
+'       <div class="luckHelpIcon">'+
+'           <button onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
+'       </div>'+
+'       <div class="luckGameIcon">'+
+'           <img style="width:100%;"src="images/logo.png">'+
 '       </div>'+
 '</div>';
 

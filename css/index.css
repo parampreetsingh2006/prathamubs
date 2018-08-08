@@ -351,6 +351,24 @@ body {
     padding:1%;
 }
 
+.luckHelpIcon{
+    display:inline-block;
+    bottom: 1%;
+    right:1%;
+    position:absolute;
+    width:10%;
+    height:auto
+}
+
+.luckGameIcon{
+    display:inline-block;
+    bottom:1%;
+    left:1%;
+    position:absolute;
+    width:13%;
+    height:auto
+}
+
 /*centerBoard*/
 .centerScoreBoardContainer{
     width:29%;
