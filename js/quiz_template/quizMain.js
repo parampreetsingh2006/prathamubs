@@ -37,7 +37,7 @@ ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
 	  $("#correctAnswers").text(quizCorrectAnswer);
 
 	  if(ubsApp.pages[page].templates[0].quizResult){
-	  		ubsApp.displayResults();
+	  		ubsApp.displayResults(page);
 	  }
 }
 
@@ -53,12 +53,12 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	  		let scoredMarks = 1;
 		  	ubsApp.updateAnswers(questionNo - 1);
 		  	ubsApp.displayNextQuizQuestion(page, true);
-	  		ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, endTime)
+	  		//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
 	  }
 	  else{
 		  	scoredMarks = 0;
 		  	$('#question_answer').hide();
-		  	ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, endTime)
+		  	//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
 		  	$('#answerDiv').css("display","inline-block")
 		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizWrongAnswerHeader"]);
 		  	$('#answerDiv').show();
@@ -66,7 +66,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	  }
 
 	  if(ubsApp.pages[page].templates[0].quizResult){
-	  	ubsApp.displayResults();
+	  	ubsApp.displayResults(page);
 	  }
   }
 }
@@ -149,7 +149,7 @@ ubsApp.generalQuizResult=function(page){
 }
 
 
-ubsApp.displayResults = function(){
+ubsApp.displayResults = function(page){
 	$("#quizCancel").attr("disabled", true);
 	$("#quizDone").attr("disabled", false);
 	if(page == "luckQuizResult"){
