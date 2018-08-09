@@ -859,6 +859,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '   <div id="decisionTitle">'+
 '       <span id="decisionEmoji"></span>    '+
 '       <span id="decisionHeading">{{Decision}}</span>'+
+'       <span id="playerName">PLAYER: {{currentPlayerName}}</span>'+
 '   </div>'+
 ''+
 '   <div id="question_answer_decision">'+
@@ -878,38 +879,19 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{/if}}'+
 '   </div>'+
 '       '+
+/*'       <img src="images/logo.png" class="logoImage">'+*/
 '       <div class="row" id="leftInfo">'+
-'           <div class="col-md-6">'+
-'               {{bankBalanceTitle}}  <br>'+
-'               {{cashTitle}}          <br>'+
-'               {{debtTitle}}          <br>'+
-'           </div>'+
-'           <div class="col-md-1">'+
-'               : <br>'+
-'               : <br>'+
-'               : <br>'+
-'           </div>'+
-'           <div class="col-md-5">'+
-'               <span>₹ {{balance}}</span><br>'+
-'               <span>₹ {{cash}}</span><br>'+
-'               <span>₹ {{debt}}</span><br>'+
+'           <div class="col-md-10">'+
+'               <span id="decisionBankBalance">{{bankBalanceTitle}} &nbsp; &nbsp; ₹ {{balance}}</span> <br>'+
+'               <span id="decisionBankBalance">{{cashTitle}} &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; ₹ {{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance">{{debtTitle}} &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; ₹ {{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
 '       <div class="row" id="rightInfo">'+
-'           <div class="col-md-7" >'+
-'               {{inventoryTitle}}         <br>'+
-'               {{invVal}}   <br>'+
-'               {{repPoints}} <br>'+
-'           </div>'+
-'           <div class="col-md-1">'+
-'               : <br>'+
-'               : <br>'+
-'               : <br>'+
-'           </div>'+
-'           <div class="col-md-4">'+
-'               <span id="decisionMakingInv">{{inventory}}%</span><br>'+
-'               <span id="decisionMakingInvValue">Rs. {{inventoryValue}}</span><br>'+
-'               <span id="decisionMakingReputation">{{reputationPts}}</span><br>'+
+'           <div class="col-md-12" >'+
+'               <span id="decisionBankBalance">{{inventoryTitle}} &nbsp; &nbsp;  {{inventory}}%</span> <br>'+
+'               <span id="decisionBankBalance">{{invVal}} &nbsp; &nbsp; &nbsp; ₹ {{inventoryValue}}</span>      <br>'+
+'               <span id="decisionBankBalance">{{repPoints}} &nbsp; &nbsp; &nbsp; ₹ {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
 '</div>';

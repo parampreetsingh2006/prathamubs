@@ -1,5 +1,6 @@
 #decisonMaking{
 	border: 2px solid black;
+	background-image: url('../images/background.png');
 	background-color: white;
 	height: auto;
 	width: 70%;	
@@ -18,7 +19,7 @@
 	position: absolute;
 	height: 6%;
 	width: 6%;
-	background: url('../images/decisionMaking.jpg') no-repeat;
+	background: url('../images/decision.png') no-repeat;
   	background-size:contain;
 }
 
@@ -26,10 +27,10 @@
 	position: absolute;
 	margin: 0 0 0 4%;
     padding: 0.2% 1%;
-	background-color:#e6e600;
 	font-size: 1.5vw;
 	text-transform: uppercase;
 	text-align: center;
+	color: white;
 	font-weight: bold;
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
@@ -38,10 +39,12 @@
 	height: auto;
 	overflow: hidden;
 	width: 70%;
-	background-color: #e6e600;
+	background-color: #ffffff;
 	padding: 1.5vw;
 	margin: 7% 15%;
 	margin-bottom: 3%; /*7% 15% 3% 13%;*/
+	border: 20px solid;
+	border-image: url('../images/redBorderAlt.png') 30 round;
 }
 
 #quizQuestion{
@@ -57,20 +60,20 @@
   margin-top: 2%;
   width: 80%;
   padding: .4% 1%;
-  color:white;
-  background:blue;
+  color:black;
   border:  3px solid white;
   cursor: pointer;
   border-radius: 12px;
   display: block;
+  background-color: #faea75
 }
 
 .decisionButtons{
   margin-right: 1%;
   width: 18%;
   padding: .4% 1%;
-  color:white;
-  background:blue;
+  background:url('../images/buttonsmall.png');
+  color: black;
   border:  3px solid white;
   cursor: pointer;
   border-radius: 12px;
@@ -87,8 +90,7 @@ button[class="decisionButtons"]:focus {outline:0;}
 
 #rightInfo{
 	font-weight: bold;
-	float:right;
-	margin: 0 1% 0 0;
+	margin: 0 12% 0 0;
 	font-size: 1vw;
 	width: 30%;
 	padding: 0;
@@ -100,10 +102,22 @@ div[id="rightInfo"] div, div[id="leftInfo"] div{
 }
 #leftInfo{
 	font-weight: bold;
-	margin: 0 ;
+	margin-left: 22%;
 	font-size: 1vw;
-	float: left;
 	width: 30%;
 	padding: 0;
 	
+}
+#playerName{
+	position: absolute;
+	margin: 0 5% 0 0;
+	font-size: 1.2vw;
+	color: black;
+	background-color: #65c0df;
+
+}
+
+#decisionBankBalance {
+	background:url('../images/buttonsmedium.png');
+	font-size: 1.2vw;
 }
