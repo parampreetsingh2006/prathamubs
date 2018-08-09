@@ -576,7 +576,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //'</div>';
 
 ubsApp.purchaseTemplate = '<div class="purchaseContainer">'+
-'        <div style="width=100%;height=30%;">'+
+'        <div >'+
 '            <img src="images/buy.png" class="purchaseIcon">'+
 '            <div class="purchaseTitle"><strong> {{purchase}}</strong></div>'+
 '            <div class="playerTitle">'+
@@ -590,13 +590,13 @@ ubsApp.purchaseTemplate = '<div class="purchaseContainer">'+
 '                    <img src="images/red header.png" class="headerImage">'+
 '                    <div>'+
 '                        <br>'+
-'                        <span>{{bankBalanceTitle}}:</span><span id="bankBalanceValue">{{bankBalance}}</span>'+
-'                        <br><br>'+
-'                        <span>{{cashTitle}}:</span><span id="cashValue">{{cash}}</span>'+
-'                        <br><br>'+
-'                        <span>{{creditTitle}}:</span><span id="creditValue">{{credit}}</span>'+
-'                        <br><br>'+
-'                        <span>{{creditLimitTitle}}:</span><span id="creditLimitValue">{{creditLimit}}</span>'+
+'                        <span style="margin-bottom: 5px;" >{{bankBalanceTitle}}:</span><span id="bankBalanceValue">{{bankBalance}}</span>'+
+'                        <br>'+
+'                        <span style="margin-bottom: 5px;">{{cashTitle}}:</span><span id="cashValue">{{cash}}</span>'+
+'                        <br>'+
+'                        <span style="margin-bottom: 5px;">{{creditTitle}}:</span><span id="creditValue">{{credit}}</span>'+
+'                        <br>'+
+'                        <span style="margin-bottom: 5px;">{{creditLimitTitle}}:</span><span id="creditLimitValue">{{creditLimit}}</span>'+
 '                        <br>'+
 '                    </div>'+
 '                </div>'+
@@ -606,7 +606,7 @@ ubsApp.purchaseTemplate = '<div class="purchaseContainer">'+
 '                <div class="purchaseMContainer">'+
 '                    <img src="images/red header.png" class="headerImage">'+
 '                    <p style= "text-align:center;font-size:20px;font-weight:600;">{{inventoryTitle}}</p>'+
-'                    <div class="currentInventoryTitle">{{current}}<br>{{inventoryTitle}}<br>{{level}}:{{sliderValue}}%</div>'+
+'                    <div class="currentInventoryTitle">{{current}}<br>{{inventoryTitle}}<br>{{level}}:<span id="percent">{{sliderValue}}</span>%</div>'+
 '                    <input type="range" value="{{sliderValue}}" id="mySlider" oninput="ubsApp.updateInventoryLevel(this.value)">'+
 '                    <div id="value">Rs. {{inventoryValue}}</div>'+
 '                    <div><button class="btn btn-md confirmButton" onclick="ubsApp.fillUp()">{{confirmTitle}}</button></div>'+
