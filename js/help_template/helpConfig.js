@@ -70,5 +70,23 @@ ubsApp.helpConfig={
                 "src":"<button onclick=\"ubsApp.closeHelp()\" style=\"padding:7px; color:white;font-size:1.1vw; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
     ]
-    }
+    },
+    "decisionHelp":{
+        "templates":[
+            {
+                "templateId":3,
+                "templateType":"static",
+                "id":"helpContent",
+                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
+                "src":"DECISION HELP!!!"
+            },
+            {
+                "templateId":4,
+                "templateType":"static",
+                "id":"quizClose",
+                "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
+                "src":"<button onclick=\"ubsApp.closeHelp()\" style=\"padding:7px; color:white;font-size:1.1vw; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+            }
+    ]
+    },
 }
