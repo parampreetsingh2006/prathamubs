@@ -1,14 +1,14 @@
-#mySlider{ 
-   
+#mySlider{
+
     -webkit-appearance: none;
     position: absolute;
-    top: 50%;
-    left: 5%;
+    top: 40%;
+    left: 10%;
     overflow: hidden;
-    height: 50px;
+    height: 10%;
     border: 2px solid black;
     -webkit-transform: rotate(-90deg);
-    width: 25%;
+    width: 80%;
     cursor: pointer;
      /* iOS */
 }

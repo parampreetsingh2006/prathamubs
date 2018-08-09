@@ -544,57 +544,117 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 
 // '</div>';
 
-ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
+//ubsApp.purchaseTemplate='<div style="width:100%;height:100%;">'+
+//
+//'       <div  class="purchaseLeftContainer">'+
+//'           <div class="iconContainer">'+
+//'               <img src="images/purchase.png" class="icon">'+
+//'           </div>'+
+//'           <div  class="purchaseScreenTitle screenTitle">'+
+//'               {{purchase}}'+
+//'           </div>'+
+//'           <div class="currentInventoryTitle">{{current}} <br>{{inventoryTitle}}<br> {{level}}</div>'+
+//'           <div id="percent">{{sliderValue}}%</div>'+
+//'           <input type="range" value="{{sliderValue}}" id="mySlider"  oninput="ubsApp.updateInventoryLevel(this.value)">'+
+//'           <div id="value">Rs. {{inventoryValue}}</div>'+
+//'           <div class="purchaseInventoryLabel">'+
+//'               {{inventoryTitle}}'+
+//'           </div>'+
+//'       </div>'+
+//'       <div id="result"></div>'+
+//'       <div><button class="purchaseScreenButton confirmButton" onclick="ubsApp.fillUp() ">{{confirmTitle}}>></button></div>'+
+//'       <div class="purchaseRightContainer">'+
+//'           <div style="width:100%;height:40%;">'+
+//'               <div class="purchaseTopRightScoreBoard">{{bankBalanceTitle}}: '+'<span id="bankBalanceValue">{{bankBalance}}</span><br>'+
+//'               <span>{{cashTitle}}:</span>'+ '<span id="cashValue">{{cash}}</span><br>'+
+//'               <span>{{creditTitle}}:</span>'+'<span id="creditValue">{{credit}}</span><br>'+
+//'               <span>{{creditLimitTitle}}:</span>'+'<span id="creditLimitValue">{{creditLimit}}</span><br>'+
+//'           </div></div>'+
+//'       <div class="purchaseInputForm">'+
+//'           <div style="margin-left:20%;">'+
+//'           <span>{{newInventoryLevelTitle}}:</span> '+
+//'           <input type="text" id="newInventoryLevelText"  class="borderB1" readonly="readonly"><br><br>'+
+//'           <span>{{costTitle}}: <span><input type="text" id="newCostText" class="borderB1" readonly="readonly"><br><br>'+
+//'           <div id="parent1" >'+
+//'               {{payByTitle}}: <select class="borderB1" id="pay1" ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText" id="amount1" min="0">&nbsp&nbsp<button class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()" style="">{{addModeTitle}}</button>'+
+//'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+//'           <div id="parent2" style="display:none;">'+
+//'               {{payByTitle}}: <select class="borderB1" id="pay2"  ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select> &nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText"  id="amount2">'+
+//'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+//'           <div id="parent3" style="display:none;">'+
+//'               {{payByTitle}}: <select class="borderB1" id="pay3"  ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText" id="amount3">'+
+//'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
+//'       </div></div>'+
+//'       <div class="purchaseDivBottomThreeButton" >'+
+//'           <button class="purchaseScreenButton bottomButton"  onclick="">{{helpTitle}}</button>'+
+//'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.pay()">{{doneTitle}}</button>'+
+//'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</button>'+
+//'       </div>'+
+//'</div>'+
+//
+//
+//
+//'</div>';
 
-'       <div  class="purchaseLeftContainer">'+
-'           <div class="iconContainer">'+
-'               <img src="images/purchase.png" class="icon">'+
-'           </div>'+
-'           <div  class="purchaseScreenTitle screenTitle">'+
-'               {{purchase}}'+
-'           </div>'+
-'           <div class="currentInventoryTitle">{{current}} <br>{{inventoryTitle}}<br> {{level}}</div>'+
-'           <div id="percent">{{sliderValue}}%</div>'+
-'           <input type="range" value="{{sliderValue}}" id="mySlider"  oninput="ubsApp.updateInventoryLevel(this.value)">'+
-'           <div id="value">Rs. {{inventoryValue}}</div>'+
-'           <div class="purchaseInventoryLabel">'+
-'               {{inventoryTitle}}'+
-'           </div>'+
-'       </div>'+
-'       <div id="result"></div>'+
-'       <div><button class="purchaseScreenButton confirmButton" onclick="ubsApp.fillUp() ">{{confirmTitle}}>></button></div>'+
-'       <div class="purchaseRightContainer">'+
-'           <div style="width:100%;height:40%;">'+
-'               <div class="purchaseTopRightScoreBoard">{{bankBalanceTitle}}: '+'<span id="bankBalanceValue">{{bankBalance}}</span><br>'+
-'               <span>{{cashTitle}}:</span>'+ '<span id="cashValue">{{cash}}</span><br>'+
-'               <span>{{creditTitle}}:</span>'+'<span id="creditValue">{{credit}}</span><br>'+
-'               <span>{{creditLimitTitle}}:</span>'+'<span id="creditLimitValue">{{creditLimit}}</span><br>'+
-'           </div></div>'+
-'       <div class="purchaseInputForm">'+
-'           <div style="margin-left:20%;">'+
-'           <span>{{newInventoryLevelTitle}}:</span> '+
-'           <input type="text" id="newInventoryLevelText"  class="borderB1" readonly="readonly"><br><br>'+
-'           <span>{{costTitle}}: <span><input type="text" id="newCostText" class="borderB1" readonly="readonly"><br><br>'+
-'           <div id="parent1" >'+
-'               {{payByTitle}}: <select class="borderB1" id="pay1" ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText" id="amount1" min="0">&nbsp&nbsp<button class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()" style="">{{addModeTitle}}</button>'+
-'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
-'           <div id="parent2" style="display:none;">'+
-'               {{payByTitle}}: <select class="borderB1" id="pay2"  ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select> &nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText"  id="amount2">'+
-'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
-'           <div id="parent3" style="display:none;">'+
-'               {{payByTitle}}: <select class="borderB1" id="pay3"  ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp&nbsp {{amountTitle}}:<input type="number" class="enterAmountText" id="amount3">'+
-'           </div><br>'+ //onchange="ubsApp.setAmountTextLimit(1)"
-'       </div></div>'+
-'       <div class="purchaseDivBottomThreeButton" >'+
-'           <button class="purchaseScreenButton bottomButton"  onclick="">{{helpTitle}}</button>'+
-'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.pay()">{{doneTitle}}</button>'+
-'           <button class="purchaseScreenButton bottomButton"  onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</button>'+
-'       </div>'+
-'</div>'+
-
-
-
-'</div>';
+ubsApp.purchaseTemplate = '<div class="purchaseContainer">'+
+'        <div style="width=100%;height=30%;">'+
+'            <img src="images/buy.png" class="purchaseIcon">'+
+'            <div class="purchaseTitle"><strong> {{purchase}}</strong></div>'+
+'            <div class="playerTitle">'+
+'                <h4><strong>PLAYER:RAMESH</strong></h4>'+
+'            </div>'+
+'        </div>'+
+'        <br>'+
+'        <div class="row" align="left">'+
+'            <div class="column">'+
+'                <div class="purchaseLContainer">'+
+'                    <img src="images/red header.png" class="headerImage">'+
+'                    <div>'+
+'                        <br>'+
+'                        <span>{{bankBalanceTitle}}:</span><span id="bankBalanceValue">{{bankBalance}}</span>'+
+'                        <br><br>'+
+'                        <span>{{cashTitle}}:</span><span id="cashValue">{{cash}}</span>'+
+'                        <br><br>'+
+'                        <span>{{creditTitle}}:</span><span id="creditValue">{{credit}}</span>'+
+'                        <br><br>'+
+'                        <span>{{creditLimitTitle}}:</span><span id="creditLimitValue">{{creditLimit}}</span>'+
+'                        <br>'+
+'                    </div>'+
+'                </div>'+
+'                <img src="images/logo.png" class="logoImage">'+
+'            </div>'+
+'            <div class="column">'+
+'                <div class="purchaseMContainer">'+
+'                    <img src="images/red header.png" class="headerImage">'+
+'                    <p style= "text-align:center;font-size:20px;font-weight:600;">{{inventoryTitle}}</p>'+
+'                    <div class="currentInventoryTitle">{{current}}<br>{{inventoryTitle}}<br>{{level}}:{{sliderValue}}%</div>'+
+'                    <input type="range" value="{{sliderValue}}" id="mySlider" oninput="ubsApp.updateInventoryLevel(this.value)">'+
+'                    <div id="value">Rs. {{inventoryValue}}</div>'+
+'                    <div><button class="btn btn-md confirmButton" onclick="ubsApp.fillUp()">{{confirmTitle}}</button></div>'+
+'                </div>'+
+'            </div>'+
+'            <div class="column">'+
+'                <div class="purchaseRContainer">'+
+'                    <img src="images/red header.png" class="headerImage">'+
+'                    <div>'+
+'                        <br>'+
+'                        <span>{{newInventoryLevelTitle}}:</span><input type="text" size="10" id="newInventoryLevelText">'+
+'                        <br><br>'+
+'                        <span>{{costTitle}}: </span><input type="text" id="newCostText" readonly="readonly">'+
+'                        <br><br>'+
+'                        <span>{{payByTitle}}: </span>'+
+'                        <select>'+
+'                            <option value="cash">{{cashTitle}}</option>'+
+'                            <option value="cheque">{{chequeTitle}}</option>'+
+'                            <option value="credit">{{creditTitle}}</option>'+
+'                        </select>'+
+'                    </div>'+
+'                </div>'+
+'                <button class="btn btn-md doneBtn" type="button" onclick="ubsApp.pay()">{{doneTitle}}</button>'+
+'                <button class="btn btn-md btn-success helpBtn" type="button" onclick="">{{helpTitle}}</button>'+
+'            </div>'+
+'        </div>'+
+'    </div>';
 
 ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '       <img src="images/background.png" style="width:100%;height:100%;">'+
