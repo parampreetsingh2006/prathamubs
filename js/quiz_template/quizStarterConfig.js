@@ -4,7 +4,7 @@ ubsApp.quizStarterConfig = {
 		"templates":[{
 			"templateId": 1,
 			"templateType": "quizStarter",
-			"noOfQuestions":3,
+			"noOfQuestions":5,
 			"resultPage":"generalQuizResult",
 		}]
 	},

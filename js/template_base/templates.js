@@ -465,10 +465,10 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   </div>'+
 '   <div id="question_answer">'+
 '       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
-'       <span id="quizQuestion">{{question}}</span>'+
+'       <span id="quizQuestionNumber"></span><span>.</span><span id="quizQuestion">{{question}}</span>'+
 '       {{#if quizResult}}<br><b><span id="quizResult"></span></b>{{/if}}'+
 '       {{#if options}}'+
-'       <span id ="quizQuestionNo">Question <span id="quizQuestionNumber"></span></span>'+
+/*'       <span id ="quizQuestionNo">Question <span id="quizQuestionNumber"></span></span>'+*/
 '       <div id="quizOptions">'+
 '           {{#each options}}'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
