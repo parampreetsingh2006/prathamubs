@@ -16,11 +16,11 @@ ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 ubsApp.updateInventoryLevel=function(value){
     if(parseFloat(value)<parseFloat(userArray[playerChance].getInventoryScore())){	//instead of 20 write userArray[playerChance].getInventoryScore()
         document.getElementById("mySlider").value=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
-        document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore().toFixed(2)+"%";	//userArray[playerChance].getInventoryScore()
+        document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore().toFixed(2);	//userArray[playerChance].getInventoryScore()
         document.getElementById("value").innerHTML="Rs. "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
     }
     else{
-        document.getElementById("percent").innerHTML=parseFloat(value).toFixed(2)+"%";
+        document.getElementById("percent").innerHTML=parseFloat(value).toFixed(2);
         document.getElementById("value").innerHTML="Rs. "+parseInt(value*1000); 
     }
     
