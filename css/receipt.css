@@ -1,3 +1,9 @@
+.mainDiv{
+    background-image: url('../images/background.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    }
+
 .heading{
 	margin:auto;
     padding: .5rem;
@@ -10,31 +16,39 @@
 }
 
 .customer{
-	background-color: #8dc657;
-	padding:2% 1.5% 1.5% 1.5%;
+	padding:2% 0.5% 1.5% 0.5%;
 	height: 100%;
 }
 
 .receipt-gen{
-	background-color:#DCDCDC;
-	padding:2%;
+	padding:2% 0.5% 1.5% 0.5%;
 	height:100%;
 }
 
 .tools{
-	background-color: #023484;
 	padding:2%;
 	height: 100%;
 }
 
 #profile{
 	height: 33%;
-	width: 97%;
+	width: 100%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: .3s;
-    border: .3rem solid black;
-    margin-top: 10%;	
+    border: 3px solid brown;
+    background-position: left top;
+    margin-left: 4%;
+    margin-top:50%;
 
+}
+.customerButton{
+    padding:5px;
+    border:0;
+    width:90%;
+    margin-left:8%;
+    background-color:red;
+    color:#123503;
+    background-image:url('../images/buttonlong.png');
 }
 
 #profile:hover {
@@ -47,27 +61,37 @@
 }
 
 #order{
-	margin: 2% 0 0 0 ;
-	height: 47%;
-	width: 97%;
-    border: .3rem solid black;
-    padding: 4% 0% .15% 3%;
-    background-color: white;
+	margin-top: 94%;
+	height: 100%;
+	width: 100%;
 }
 #orderList{
-	margin-top: 5%;
-	padding-top: 5%;
-	height: 85%;
-    overflow: auto; 
+    	height: 60%;
+    	width: 100%;
+        border:1px solid black;
+        border-image: url(../images/redBorderAlt.png) 5% round;
+        border-width: 25px;
+    overflow: auto;
+    background-color: white;
+    font-weight: bold;
+}
+.items{
+font-size: 110%;
+}
+.receipt{
+margin-top: 10%;
+         	height: 100%;
+         	width: 100%;
 }
 
-.receipt{
-	border: .2vw solid black;
-	padding: 4%;
-	height: 85%;
-	width: 94%;
+.receiptSale{
+    border:1px solid black;
+                border-image: url(../images/redBorderAlt.png) 5% round;
+                border-width: 40px;
+    	height: 85%;
+    	width: 100%;
 	background-color: white;
-	margin: 3%;
+	font-weight: bold;
 }
 
 #title{
@@ -78,11 +102,11 @@
 }
 
 #bill{
-	margin:4%;
+	margin-top:4%;
+	margin-left:4%;
 	height: 85%;
 	width: 92%;
-	overflow-y:auto; 
-	border: .2vw solid gray;
+	overflow-y:auto;
 }
 
 #bill table{
@@ -170,7 +194,7 @@ tr.strikeout td:before {
 
 #minutes, #seconds{
 	position: absolute;
-	top:72%;
+	top:67%;
 	height: 11%;
 	width: 14%;
 	border: .1vw solid black;
@@ -204,4 +228,21 @@ tr.strikeout td:before {
   box-shadow: 1px 2px #a4a4a5;
   transform: translateY(3px) translateX(2px);;
 
+}
+
+.salesScreenTitle{
+    position:absolute;
+    top:3%;
+    left:8%;
+    padding:10px;
+    font-weight:600;
+    font-size:45px;
+}
+
+.salesIconContainer{
+    width:7%;
+    height:10%;
+    top:3%;
+    left:1%;
+    position: absolute;
 }

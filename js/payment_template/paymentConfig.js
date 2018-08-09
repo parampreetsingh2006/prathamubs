@@ -25,6 +25,8 @@ ubsApp.paymentConfig={
 			"color":"white",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 
@@ -46,7 +48,6 @@ ubsApp.paymentConfig={
 			},
 			"resultpage":"quizQ3",
 			"quizType":"luck",
-			"credit":{"balance":-1000},
 			"payTitle":"{{payTitle}}",
 			"scenarioName":"paymentScenario2",
 			"scenarioTitle":"{{payTitle}}",
@@ -55,6 +56,8 @@ ubsApp.paymentConfig={
 			"color":"white",
 			"negative":true,
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 
@@ -84,6 +87,8 @@ ubsApp.paymentConfig={
 			"negative":true,
 			"scenarioName":"paymentScenario3",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 
@@ -113,6 +118,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario4",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 
@@ -143,6 +150,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario5",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -171,6 +180,8 @@ ubsApp.paymentConfig={
 			"payTitle":"{{payTitle}}",
 			"negative":true,
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -199,6 +210,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario7",
 			"negative":true,
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -227,6 +240,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario8",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -255,6 +270,8 @@ ubsApp.paymentConfig={
 			"negative":true,
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -283,6 +300,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario10",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -311,6 +330,8 @@ ubsApp.paymentConfig={
 			"payTitle":"{{payTitle}}",
 			"negative":true,
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -339,6 +360,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario12",
 			"negative":true,
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -368,6 +391,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario13",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -396,6 +421,8 @@ ubsApp.paymentConfig={
 			"payTitle":"{{payTitle}}",
 			"negative":true,
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -424,6 +451,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario15",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -452,6 +481,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario16",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -480,6 +511,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario17",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -508,6 +541,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario18",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -536,6 +571,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario19",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},
@@ -564,6 +601,8 @@ ubsApp.paymentConfig={
 			"scenarioName":"paymentScenario20",
 			"payTitle":"{{payTitle}}",
 			"background":"#000",
+			"icon":"payment",
+			"helpPageName":"paymentHelp",
 		}
 	]
 	},

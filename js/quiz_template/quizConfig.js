@@ -47,7 +47,7 @@ ubsApp.quizConfig = {
 					},
 					{
 						"optionName":"q1",
-						"optionValue": "Can be withdrawn anytime",
+						"optionValue": "All of the above",
 						"id":4,
 						"priority":1
 					}

@@ -34,5 +34,41 @@ ubsApp.helpConfig={
                 "src":"<button onclick=\"ubsApp.closeHelp()\" style=\"padding:7px; color:white;font-size:1.1vw; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
     ]
+    },
+    "luckHelp":{
+        "templates":[
+            {
+                "templateId":5,
+                "templateType":"static",
+                "id":"helpContent",
+                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
+                "src":"Luck HELP!!!"
+            },
+            {
+                "templateId":6,
+                "templateType":"static",
+                "id":"luckClose",
+                "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
+                "src":"<button onclick=\"ubsApp.closeHelp()\" style=\"padding:7px; color:white;font-size:1.1vw; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+            }
+    ]
+    },
+    "paymentHelp":{
+        "templates":[
+            {
+                "templateId":7,
+                "templateType":"static",
+                "id":"helpContent",
+                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
+                "src":"Payment HELP!!!"
+            },
+            {
+                "templateId":8,
+                "templateType":"static",
+                "id":"Close",
+                "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
+                "src":"<button onclick=\"ubsApp.closeHelp()\" style=\"padding:7px; color:white;font-size:1.1vw; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+            }
+    ]
     }
 }
