@@ -23,41 +23,51 @@ ubsApp.atleastOneSelected= function(name){
 }
 
 
+ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
+	  var quizCorrectAnswer = $("#correctAnswers").html();
+	  if(updateCorrectAnswerScore){
+	  	quizCorrectAnswer = parseInt(quizCorrectAnswer);
+		quizCorrectAnswer = quizCorrectAnswer + 1;
+	  }
+	  
+	  var questionNo = $("#quizQuestionNumber").html();
+	  ubsApp.renderPageByName(page);
+  	  questionNo=parseInt(questionNo)+1;
+	  $("#quizQuestionNumber").text(questionNo);
+	  $("#correctAnswers").text(quizCorrectAnswer);
 
-ubsApp.nextQuizQuestion=function(page, answer, name){
+	  if(ubsApp.pages[page].templates[0].quizResult){
+	  		ubsApp.displayResults(page);
+	  }
+}
 
-  if(ubsApp.atleastOneSelected(name)){
-  	  var quizCorrectAnswer = $("#correctAnswers").html();
+ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId){
+  var totalMarks = 1; // each question carries 1 mark
+  var date=new Date();
+  var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+  if(ubsApp.atleastOneSelected(optionName)){
 	  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
 	  let questionNo = $("#quizQuestionNumber").html();
 
-	  if(checkedValue==answer){
-	  	quizCorrectAnswer = parseInt(quizCorrectAnswer);
-	  	quizCorrectAnswer=quizCorrectAnswer+1;
-	  	ubsApp.updateAnswers(questionNo-1);
+	  if(checkedValue == answer){
+	  		let scoredMarks = 1;
+		  	ubsApp.updateAnswers(questionNo - 1);
+		  	ubsApp.displayNextQuizQuestion(page, true);
+	  		//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
 	  }
 	  else{
-	  	// console.log("Answer is wrong");
+		  	scoredMarks = 0;
+		  	$('#question_answer').hide();
+		  	//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
+		  	$('#answerDiv').css("display","inline-block")
+		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizWrongAnswerHeader"]);
+		  	$('#answerDiv').show();
+	  	
 	  }
-
-	  ubsApp.renderPageByName(page);
 
 	  if(ubsApp.pages[page].templates[0].quizResult){
-
-	  		$("#quizCancel").attr("disabled", true);
-	  		$("#quizDone").attr("disabled", false);
-	  		if(page == "luckQuizResult"){
-	  			ubsApp.luckQuizResult();
-	  		}
-	  		else if(page == "generalQuizResult"){
-	  			ubsApp.generalQuizResult();
-	  		}
+	  	ubsApp.displayResults(page);
 	  }
-	  else{
-		  	questionNo=parseInt(questionNo)+1;
-		  	$("#quizQuestionNumber").text(questionNo);
-	  }
-	  $("#correctAnswers").text(quizCorrectAnswer);
   }
 }
 
@@ -139,7 +149,16 @@ ubsApp.generalQuizResult=function(page){
 }
 
 
-
+ubsApp.displayResults = function(page){
+	$("#quizCancel").attr("disabled", true);
+	$("#quizDone").attr("disabled", false);
+	if(page == "luckQuizResult"){
+		ubsApp.luckQuizResult();
+	}
+	else if(page == "generalQuizResult"){
+		ubsApp.generalQuizResult();
+	}
+}
 
 //ubsApp.getChoiceTemplate = function(templateConfig, tempVar){
 //	if(ubsApp.areAllChoicesSelected() == true) {

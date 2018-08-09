@@ -17,7 +17,7 @@ ubsApp.quizStarterConfig = {
 				"noOfQuestions":"",
 				"question": "Your Result is: ",
 				"msg1":"You answered ",
-				"msg2":" questions correctly. Your Repuation Points increases by ",
+				"msg2":" questions correctly. Your Reputation Points increase by ",
 				"quizResult":true,
 				"questionTime":3000,
 				"optionsTime":2000,
