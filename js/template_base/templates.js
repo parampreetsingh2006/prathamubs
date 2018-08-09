@@ -863,6 +863,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '   </div>'+
 ''+
 '   <div id="question_answer_decision">'+
+'       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '       <div id="Decision Description">'+
 '           {{question}}'+
 '       </div>'+
@@ -894,6 +895,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '               <span id="decisionBankBalance">{{repPoints}} &nbsp; &nbsp; &nbsp; ₹ {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
+'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">HELP</button>'+
 '</div>';
 
 ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:white;">'+
