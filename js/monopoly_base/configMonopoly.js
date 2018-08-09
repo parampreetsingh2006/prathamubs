@@ -32,6 +32,12 @@ monopoly.pages = {
 
 "WelcomePage":[
 
+      {
+        "templateId":2,
+        "templateType":"static",
+        "src":"<img src=\"images/logo.png\" style=\"height: 50vh;margin: auto;margin-left: 34%;\"> </img>",
+        "style": " "
+    },
     {
         "templateId":2,
         "templateType":"static",
