@@ -629,8 +629,8 @@ ubsApp.purchaseTemplate = '<div class="purchaseContainer">'+
 '                        </select>'+
 '                    </div>'+
 '                </div>'+
-'                <button class="btn btn-md doneBtn" type="button" onclick="ubsApp.pay()">{{doneTitle}}</button>'+
-'                <button class="btn btn-md btn-success helpBtn" type="button" onclick="">{{helpTitle}}</button>'+
+'                <button class="btn btn-md doneBtn" type="button" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{doneTitle}}</button>'+
+'                <button class="btn btn-md btn-success helpBtn" type="button" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{helpTitle}}</button>'+
 '            </div>'+
 '        </div>'+
 '    </div>';
