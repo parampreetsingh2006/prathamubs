@@ -225,7 +225,7 @@ ubsApp.translation={
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
         "WeeklySummary":"Weekly Summary",
-
+        "ScoreSummary":"Score Summary",
         //luck scenario
         "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",
         "luckQuestion2":"Scratch Card Cash Prize: Rs. 100",
@@ -328,6 +328,8 @@ ubsApp.translation={
 						        "As you will progress, you will get/loose point or reward based on your decision and answers." ,
         "quizWrongAnswerHeader":"WRONG ANSWER",
         "quizWrongAnswerMessage":"You have got wrong message!",
+        "INVENTORYVALUE": "INVENTORY VALUE",
+        "INVENTORY" : "INVENTORY"
 
 
     }

@@ -3,53 +3,58 @@
 
         <div>
 
-            <div style="{{headerStyle}}" >{{userName}} {{WeeklySummary}}</div>
+            <div style="{{headerStyle}}" >{{header}}</div>
 
         </div>
 
+        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>
+        
+        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: 700;">{{WeekTitle}} {{weekNumber}}</div>
+        <div style="display: inline-block;width: 100%;font-weight: 700;">
+            <div style="float: left;width: 45%;">
+                <div style="display: inline-block;width: 100%;">
+                        <div style="float: left;">{{BankBalance}}</div>
+                        <div style="float: right;">{{currentWeekBankBalance}}</div>
+                </div>
 
-        <div>
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>{{LastWeek}}</th>
-                    <th>{{CurrentWeek}}</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>{{Cash}}</td>
-                    <td>{{lastWeekCash}}</td>
-                    <td>{{currentWeekCash}}</td>
-                </tr>
-                <tr>
-                    <td>{{BankBalance}}</td>
-                    <td>{{lastWeekBankBalance}}</td>
-                    <td>{{currentWeekBankBalance}}</td>
-                </tr>
-                <tr>
-                    <td>{{Credit}}</td>
-                    <td>{{lastWeekCredit}}</td>
-                    <td>{{currentWeekCredit}}</td>
-                </tr>
-                <tr>
-                    <td>{{ReputationPoints}}</td>
-                    <td>{{lastWeekReputationPts}}</td>
-                    <td>{{currentWeekReputationPts}}</td>
-                </tr>
-                <tr>
-                    <td>{{AdvantageCard}}</td>
-                    <td>{{lastWeekAdvantageCard}}</td>
-                    <td>{{currentWeekAdvantageCard}}</td>
-                </tr>
-                </tbody>
-            </table>
+                <div style="display: inline-block;width: 100%;">
+                        <div style="float: left;">{{Cash}}</div>
+                        <div style="float: right;">{{currentWeekCash}}</div>
+                </div>
+
+                <div style="display: inline-block;width: 100%;">
+                        <div style="float: left;">{{Credit}}</div>
+                        <div style="float: right;">{{currentWeekCredit}}</div>
+                </div>
+            </div>
+            <div style="float: right;width: 45%;">
+                <div style="display: inline-block;width: 100%;">
+                        <div style="float: left;">{{INVENTORY}}</div>
+                        <div style="float: right;">{{currentInventory}}</div>
+                </div>
+                <div style="display: inline-block;width: 100%;">
+                        <div style="float: left;">{{INVENTORYVALUE}}</div>
+                        <div style="float: right;">{{currentInventoryValue}}</div>
+                </div>
+                <div style="display: inline-block;width: 100%;">
+                        <div style="float: left;">{{ReputationPoints}}</div>
+                        <div style="float: right;">{{currentWeekReputationPts}}</div>
+                </div>
+                <div style="display: inline-block;width: 100%;">
+                        <div style="float: left;">{{AdvantageCard}}</div>
+                        <div style="float: right;">{{currentWeekAdvantageCard}}</div>
+                </div>
+
+            </div>
         </div>
 
-        <div>
 
-        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>
+        <div style="display:inline-block;margin-top: 10px;width:50%;">
+                <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;">{{playerNameTitle}}: {{userName}}</div>
+                            <div style="float:right;"> 
+                                <button style="background-image: url(images/buttonsmall.png);border: none;padding: 5px;color: #c34848;font-weight: bold;font-size: large;border-radius: 5px;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button>
+                            </div>
+        </div>
     </div>
 </div>
-</div>
+                    

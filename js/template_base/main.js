@@ -289,8 +289,14 @@ ubsApp.closeCurrentScenario=function(){
 	 document.getElementById("templateContent").style.opacity="0.95";
 	$('#rollIt').attr('disabled',false);
 
-	if(userArray[playerChance].isOpenWeekSummary()) {
-        ubsApp.openWeekSummary();
+	if(!userArray[playerChance]) {
+		return;
+	}
+	if(userArray[playerChance].getWeeks() > 1 && userArray[playerChance].isOpenWeekSummary()) {
+        ubsApp.openCurrentPlayerSummary({
+			"header" : ubsApp.getTranslation("WeeklySummary"),
+			"isWeekSummary" : true,
+			});
 	}
 	else{
 	    if(userArray[playerChance].getTransferReminderOpened()==false){
