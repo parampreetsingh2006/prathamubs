@@ -330,6 +330,7 @@ ubsApp.translation={
         "quizWrongAnswerMessage":"You have got wrong message!",
         "quizRightAnswer":"RIGHT ANSWER",
         "INVENTORYVALUE": "INVENTORY VALUE",
-        "INVENTORY" : "INVENTORY"
+        "INVENTORY" : "INVENTORY",
+        "decisionResult": "DECISION RESULT",
 
     }
