@@ -221,6 +221,7 @@ ubsApp.translation={
         "Cash" : "Cash",
         "Credit": "Credit",
         "chequeTitleName":"CHEQUE",
+        "creditTitleName":"CREDIT",
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",

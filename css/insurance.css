@@ -36,15 +36,15 @@
 	height: auto;
 	overflow: hidden;
 	width: 70%;
-	background-color: #4db8ff;
 	padding: 1.4vw;
-	margin: 7% 15%;
+	margin: 2% 15%;
 	margin-bottom: 3%; /*7% 15% 3% 13%;*/
 }
 
 #insuranceTypesTitle{
 	font-size: 1.2vw;
 	font-weight: bold;
+	text-align: center;
 }
 
 #insuranceTypesTitle, #insuranceTypes, #insurancePayment{
@@ -79,19 +79,13 @@
 }
 
 .insuranceButtons{
-  margin-right: 1%;
-  width: 20%;
-  padding: .4% 1%;
-  color:white;
-  background:black;
-  border: none;
-  cursor: pointer;
-  border-radius: 12px;
-  
+  width: 35%;
+  background-color: #f3f332;
 }
 #buy_cancel{
-	margin-top:3%;
-	margin-left: 40%;
+    position: absolute;
+    right: 30%;
+    width: 20%;
 }
 
 #rightInfo{
@@ -117,4 +111,11 @@ button[class="decisionButtons"]:focus {outline:0;}
 
 div[id="rightInfo"] div, div[id="leftInfo"] div{
 	padding: 0;
+}
+
+.helpBtnInsurance {
+	position: absolute;
+    bottom: 18%;
+    right: 2%;
+    width: 30%;
 }
