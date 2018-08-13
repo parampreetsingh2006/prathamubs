@@ -55,6 +55,8 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizRightAnswer"]);
 		  	$('#answerDiv').show();
 		    $("#correctAnswers").text(quizCorrectAnswer);
+		    var audioElement = document.getElementById('answerDiv');
+  			ubsApp.raiseAudioEvent(audioElement, 'rightAnswer');
 		  	//ubsApp.displayNextQuizQuestion(page, true);
 	  		//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
 	  }
@@ -65,6 +67,8 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	$('#answerDiv').css("display","inline-block")
 		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizWrongAnswerHeader"]);
 		  	$('#answerDiv').show();
+		  	var audioElement = document.getElementById('answerDiv');
+  			ubsApp.raiseAudioEvent(audioElement, 'wrongAnswer');
 	  	
 	  }
 

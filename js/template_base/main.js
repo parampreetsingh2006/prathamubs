@@ -265,6 +265,8 @@ ubsApp.startTimer=function(temp){
 		}
 
 	    if(timeleft === 0 ){
+	    	
+  			ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');	
 	        clearInterval(timeVar);
 	        choiceSelected={};
 	        ubsApp.nextMove();
@@ -285,8 +287,14 @@ ubsApp.closeCurrentScenario=function(){
 	 document.getElementById("templateContent").style.opacity="0.95";
 	$('#rollIt').attr('disabled',false);
 
-	if(userArray[playerChance].isOpenWeekSummary()) {
-        ubsApp.openWeekSummary();
+	if(!userArray[playerChance]) {
+		return;
+	}
+	if(userArray[playerChance].getWeeks() > 1 && userArray[playerChance].isOpenWeekSummary()) {
+        ubsApp.openCurrentPlayerSummary({
+			"header" : ubsApp.getTranslation("WeeklySummary"),
+			"isWeekSummary" : true,
+			});
 	}
 	else{
 	    if(userArray[playerChance].getTransferReminderOpened()==false){
@@ -351,6 +359,35 @@ ubsApp.openPopup = function(config) {
 ubsApp.updateScoreInDB = function(questionId, scoredMarks,totalMarks, level, startTime, endTime){
 	var resourceId = "";
 	Android.addScore(resourceId,questionId,scoredMarks, totalMarks, level, startTime);
+}
+
+ubsApp.raiseAudioEvent =function(divElement, eventName, audioSrc){
+      var audioSrc;
+      if(!audioSrc){
+      	switch(eventName){
+	      	case 'moveToken':
+	      		audioSrc =  'audio/02_TokenMove.mp3';
+	      		break;
+	      	case 'rollingDice':
+	      		audioSrc = 'audio/01_Dice.mp3';
+	      		break;
+	      	case 'rightAnswer':
+	      		audioSrc = 'audio/04_CorrectAnswer.mp3';
+	      		break;
+	      	case 'wrongAnswer':
+	      	case 'timeOut':
+	      		audioSrc = 'audio/05_WrongAnswer.mp3';
+	      		break;
+      	}
+      }
+
+      if(divElement != null) {
+        playAudio(divElement);
+        var audioevent = new CustomEvent('playAudio',{
+            detail: audioSrc,
+        });
+        divElement.dispatchEvent(audioevent);
+      }
 }
 
 

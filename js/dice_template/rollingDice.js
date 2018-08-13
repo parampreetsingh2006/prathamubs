@@ -3,15 +3,8 @@ rollingDiceConfig.currentRandomDiceOne=0;
 function pointRoll() {
   var elDiceOne       = document.getElementById('dice1');
   var diceValueOne   = Math.floor((Math.random() * 6) + 1);
-  var divElement = document.getElementById('rollIt');
-    if(divElement != null) {
-      playAudio(divElement);
-      var audioevent = new CustomEvent('playAudio',{
-          detail: 'audio/01_Dice.mp3',
-      });
-      divElement.dispatchEvent(audioevent);
-  }
-
+  var audioElement = document.getElementById('rollIt');
+  ubsApp.raiseAudioEvent(audioElement, 'rollingDice');
   while(diceValueOne==rollingDiceConfig.currentRandomDiceOne){
     diceValueOne   = Math.floor((Math.random() * 6) + 1);
   }
@@ -25,5 +18,5 @@ function pointRoll() {
     }
 
   }
-  return diceValueOne;
+  return 1;
 }
