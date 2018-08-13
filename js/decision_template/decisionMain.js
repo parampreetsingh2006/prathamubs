@@ -40,7 +40,11 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
 	}
 
 	else{
-		ubsApp.nextMove();
+		ubsApp.openCurrentPlayerSummary({
+			"header" : ubsApp.getTranslation("decisionResult"),
+			"isWeekSummary" : false,
+			});
+		//ubsApp.nextMove();
 	}
 }
 

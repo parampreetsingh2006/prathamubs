@@ -1,11 +1,10 @@
 var rollingDiceConfig = {};
 rollingDiceConfig.currentRandomDiceOne=0;
 function pointRoll() {
-
   var elDiceOne       = document.getElementById('dice1');
-  console.log(elDiceOne.classList);
-  //console.log(elDiceTwo.classList["2"]);
   var diceValueOne   = Math.floor((Math.random() * 6) + 1);
+  var audioElement = document.getElementById('rollIt');
+  ubsApp.raiseAudioEvent(audioElement, 'rollingDice');
   while(diceValueOne==rollingDiceConfig.currentRandomDiceOne){
     diceValueOne   = Math.floor((Math.random() * 6) + 1);
   }
@@ -19,5 +18,5 @@ function pointRoll() {
     }
 
   }
-  return diceValueOne;
+  return 1;
 }
