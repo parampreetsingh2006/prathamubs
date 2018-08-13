@@ -70,7 +70,7 @@ ubsApp.getTimerTempTemplate = function(templateConfig, tempVar){
 ubsApp.getAudioTemplate = function(templateConfig, tempVar){
 	if(templateConfig.audioSrc){
 		audioConfig = templateConfig;
-		tempVar.html+= ubsAudioTemplate(templateConfig);
+		tempVar.html += ubsAudioTemplate(templateConfig);
 	}
 }
 
@@ -118,11 +118,7 @@ ubsApp.renderPage = function(page) {
 
 	if(tempVar.html) {
 		$("#templateContent").empty();
-	// if(calculatorReq)
-	// {
-	// 	tempVar.html+=ubsCalculatorTemplate();
-	// }
-	$("#templateContent").append(tempVar.html);
+		$("#templateContent").append(tempVar.html);
 
 	}
 

@@ -25,12 +25,7 @@ ubsApp.atleastOneSelected= function(name){
 
 ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
 	  var quizCorrectAnswer = $("#correctAnswers").html();
-	  if(updateCorrectAnswerScore){
-	  	quizCorrectAnswer = parseInt(quizCorrectAnswer);
-		quizCorrectAnswer = quizCorrectAnswer + 1;
-	  }
-	  
-	  var questionNo = $("#quizQuestionNumber").html();
+ 	  var questionNo = $("#quizQuestionNumber").html();
 	  ubsApp.renderPageByName(page);
   	  questionNo=parseInt(questionNo)+1;
 	  $("#quizQuestionNumber").text(questionNo);
@@ -46,13 +41,21 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
   var date=new Date();
   var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
   if(ubsApp.atleastOneSelected(optionName)){
+  	  let quizCorrectAnswer = $("#correctAnswers").html();
 	  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
 	  let questionNo = $("#quizQuestionNumber").html();
 
 	  if(checkedValue == answer){
 	  		let scoredMarks = 1;
+	  		quizCorrectAnswer = parseInt(quizCorrectAnswer) + 1;
 		  	ubsApp.updateAnswers(questionNo - 1);
-		  	ubsApp.displayNextQuizQuestion(page, true);
+		  	$('#question_answer').hide();
+		  	$('#answerDiv').css("display","inline-block");
+		  	$('#answerHeader').css("color","green");
+		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizRightAnswer"]);
+		  	$('#answerDiv').show();
+		    $("#correctAnswers").text(quizCorrectAnswer);
+		  	//ubsApp.displayNextQuizQuestion(page, true);
 	  		//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
 	  }
 	  else{

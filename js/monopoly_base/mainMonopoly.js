@@ -129,6 +129,9 @@ monopoly.renderPageforBoard = function(page) {
       console.log(template);
       html+=ubsCenterScoreBoardTemplate(template);
     }
+    else if(templateType=="audioTemplate"){
+      html += ubsAudioTemplate(templateConfig);
+    }
   }
 
 	$("#monopolyBase").empty();
@@ -229,6 +232,14 @@ monopoly.myMove = function(count, pId, currentPos) {
         document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
       }
       $("#" + blockNo).append(playerToken);
+        var divElement = document.getElementById('p'+pId+'');
+      if(divElement != null) {
+        playAudio(divElement);
+        var audioevent = new CustomEvent('playAudio',{
+            detail: 'audio/02_TokenMove.mp3',
+        });
+        divElement.dispatchEvent(audioevent);
+      }
 
     }
   }

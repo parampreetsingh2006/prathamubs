@@ -328,6 +328,7 @@ ubsApp.translation={
 						        "As you will progress, you will get/loose point or reward based on your decision and answers." ,
         "quizWrongAnswerHeader":"WRONG ANSWER",
         "quizWrongAnswerMessage":"You have got wrong message!",
+        "quizRightAnswer":"RIGHT ANSWER",
 
 
     }
