@@ -1003,7 +1003,7 @@ ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0
 
 
 ubsApp.weekSummaryTemplate = '<div style="{{style}}">'+
-'    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
+'    <div style="background-color: white;margin-left:1%;margin-right:1%;position: relative; overflow: auto; max-height: 50vh; ">'+
 ''+
 '        <div>'+
 ''+
