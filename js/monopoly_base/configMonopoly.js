@@ -191,9 +191,14 @@ monopoly.pages = {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:18%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
-            "src":"<button id='rollIt' class='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; font-size:1.05vw;background:#73e600; border-radius:5px; \">Roll it</button>"
+            "src":"<button id='rollIt' class='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; font-size:1.05vw;background:#73e600; border-radius:5px; \">Roll it</button>",
+            "audioId":"diceRollAudio",
 
-
+        },
+        {
+            "templateType":"audioTemplate",
+            "audioSrc":"audio/01_Dice.mp3",
+            "audioId":"diceRollAudio",
         },
         {
             "templateId":"1",

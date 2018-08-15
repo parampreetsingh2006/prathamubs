@@ -37,7 +37,7 @@ var computerDifficulty=monopoly.computerDifficulty;
 var scenario =  monopoly.scenario;
 ubsApp.maxNumOfWeeks = 12;
 var renderTimeOutMiliSec = 3000;
-
+ubsApp.inventoryPerPercentValue = 1000;
 
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
@@ -137,6 +137,10 @@ monopoly.renderPageforBoard = function(page) {
             html+=ubsCenterScoreBoardTemplate(template);
         }*/
     }
+    else if(templateType=="audioTemplate"){
+      html += ubsAudioTemplate(templateConfig);
+    }
+  }
 
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html);
@@ -233,6 +237,8 @@ monopoly.myMove = function(count, pId, currentPos) {
         document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
       }
       $("#" + blockNo).append(playerToken);
+      var audioElement = document.getElementById('p'+pId+'');
+      ubsApp.raiseAudioEvent(audioElement, 'moveToken');
 
     }
   }
@@ -571,7 +577,7 @@ ubsApp.currentPlayerContents=function(){
 	document.getElementById("bankBalance").innerHTML="₹ "+userArray[playerChance].getBankBalance();
 	document.getElementById("cash").innerHTML="₹ "+userArray[playerChance].getplayerScore();
 	document.getElementById("debt").innerHTML="₹ "+userArray[playerChance].getCredit();
-	document.getElementById("inventoryValueContent").innerHTML="₹ "+(userArray[playerChance].getInventoryScore()*1000);
+	document.getElementById("inventoryValueContent").innerHTML="₹ "+(userArray[playerChance].getInventoryScore()*ubsApp.inventoryPerPercentValue);
 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
 	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
 	document.getElementById("advantageCardContent").innerHTML=userArray[playerChance].getAdvantageCardNumber();

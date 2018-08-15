@@ -164,12 +164,10 @@ body {
 
 
 .purchaseScreenButton{
-    background-color: orangered;
-    border: 0;
-    padding:10px;
-    border-radius: 20px;
-    cursor :pointer;
-    box-shadow: 2px 2px orangered;
+    position: absolute;
+    right: 10%;
+    background-color: #f3f332;
+
 }
 .enterAmountText{
     width:20%;
@@ -501,8 +499,8 @@ button:focus {outline:0;}
     border: 1px solid black;
     border-image: url(../images/redBorderAlt.png) 5% round;
     border-width: 20px;
-    width: 80%;
-    height: 50%;
+    width: 90%;
+    height: 60%;
 }
 .purchaseMContainer {
     font-weight: 600;
@@ -529,8 +527,8 @@ button:focus {outline:0;}
     border: 1px solid black;
     border-image: url(../images/redBorderAlt.png) 5% round;
     border-width: 20px;
-    width: 80%;
-    height: 50%;
+    width: 90%;
+    height: 60%;
 }
 .doneBtn {
 	position: absolute;

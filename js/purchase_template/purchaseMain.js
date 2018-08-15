@@ -16,7 +16,7 @@ ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 ubsApp.updateInventoryLevel=function(value){
     if(parseFloat(value)<parseFloat(userArray[playerChance].getInventoryScore())){	//instead of 20 write userArray[playerChance].getInventoryScore()
         document.getElementById("mySlider").value=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
-        document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore().toFixed(2);	//userArray[playerChance].getInventoryScore()
+        document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
         document.getElementById("value").innerHTML="Rs. "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
     }
     else{
@@ -32,7 +32,7 @@ document.getElementById("newCostText").value="Rs. "+(parseInt(temp.substring(4))
 }
 
 ubsApp.pay=function(){
-document.getElementById("result").innerHTML="";
+//document.getElementById("result").innerHTML="";
 var paymentDone=false;
 var cost=document.getElementById("newCostText").value;
 cost=parseInt(cost.substring(4));
@@ -61,7 +61,7 @@ else if(totalAmountEntered>cost){
     document.getElementById("result").innerHTML=ubsApp.translation["moreMoney"];
 }
 else{
-    document.getElementById("result").innerHTML="";
+//    document.getElementById("result").innerHTML="";
     for(var i=1;i<=numberOfPaymentModes;i++){
         if(document.getElementById("parent"+i).style.display!="none"){
         var dropDown=document.getElementById("pay"+i);

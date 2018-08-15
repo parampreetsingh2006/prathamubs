@@ -20,6 +20,7 @@
 		        "cancel":"{{cancel}}",
 		        "cashTitleName":"{{cashTitleName}}",
 		        "chequeTitleName":"{{chequeTitleName}}",
+		        "creditTitleName":"{{creditTitleName}}",
 		        "mode":"{{mode}}",
 				"Decision":"{{Decision}}",
 				"bankBalanceTitle":"{{bankBalanceTitle}}",

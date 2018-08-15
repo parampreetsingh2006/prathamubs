@@ -17,7 +17,7 @@ ubsApp.translation={
     "meritSideBar":"योग्यता",
     "cash":"कैश",
     "cheque":"चेक",
-
+    "ScoreSummary":"स्कोर सारांश",
 
     
     "rollit":"घुमाओ",
