@@ -1,4 +1,5 @@
 monopoly.ubsBoardTemplate = undefined;
+monopoly.ubsSideScoreBoardTemplate = undefined;
 monopoly.ubsMonopolyStaticTemplate =undefined;
 monopoly.ubsformTemplate = undefined;
 monopoly.centerScoreBoardTemplate=undefined;
@@ -17,6 +18,7 @@ monopoly.computerDifficulty={};
 monopoly.scenario ={};
 var harnamSinghProfit=11000;
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
+var ubsSideScoreBoardTemplate = monopoly.sideScoreBoardTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
 var ubsformTemplate= monopoly.ubsformTemplate;
 var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
@@ -51,13 +53,14 @@ $(document).ready(function(){
 });
 
 monopoly.intitializeTemplates = function(){
-
 	ubsBoardTemplate = Template7.compile(monopoly.boardTemplate);
+	ubsSideScoreBoardTemplate = Template7.compile(monopoly.sideScoreBoardTemplate);
 	rollingDiceTemplate = Template7.compile(monopoly.rollingDiceTemplate);
-  ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
-  ubsformTemplate = Template7.compile(monopoly.formTemplate);
-  ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
+    ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
+    ubsformTemplate = Template7.compile(monopoly.formTemplate);
+    ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
 }
+
 monopoly.initialiseCategory = function(){
       for(let block = 0; block<boardConfig.top_row.length; block++){
           blockCategory[boardConfig.top_row[block].id]=boardConfig.top_row[block].category;
@@ -74,74 +77,75 @@ monopoly.initialiseCategory = function(){
 }
 
 monopoly.renderPageforBoard = function(page) {
-	let html = "";
-	for(let i=0; i< page.length; i++) {
-    let templateConfig = page[i];
-    if(templateConfig.weekDeadLine){
-      numberOfWeeksDeadline=templateConfig.weekDeadLine;
-    }
-		let templateType = templateConfig.templateType;
-		if(templateType == "board"){
-      flag2=true;
-			boardConfig=templateConfig;
-			for(let i = 0; i<numplayers; i++){
-				templateConfig.top_row[0].players.push({
-			    "playerId" : userArray[i].getplayerId(),
-			    "tokenColor" : userArray[i].getplayerColor(),
-			    "currentPos" :userArray[i].getplayerCurrentPos(),
-			    "playerName" :userArray[i].getplayerName(),
-			    "score" : userArray[i].getplayerScore()
-			   });
-      }
-     
-      for(var j=0;j<templateConfig.bottom_row.length;j++){
-        let key=templateConfig.bottom_row[j].title;
-        let translatedString=ubsApp.translation[key];
-        templateConfig.bottom_row[j].title=translatedString;
-      }
-      for(var j=0;j<templateConfig.top_row.length;j++){
-        templateConfig.top_row[j].title=ubsApp.translation[templateConfig.top_row[j].title];
-      }
-      for(var j=0;j<templateConfig.left_col.length;j++){
-        templateConfig.left_col[j].title=ubsApp.translation[templateConfig.left_col[j].title];
-      }
-      for(var j=0;j<templateConfig.right_col.length;j++){
-        templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
-      }
-      console.log(templateConfig);
+    let html = "";
+    for(let i=0; i< page.length; i++) {
+        let templateConfig = page[i];
+        /*if(templateConfig.weekDeadLine){
+            numberOfWeeksDeadline=templateConfig.weekDeadLine;
+        }*/
+        let templateType = templateConfig.templateType;
 
-      monopoly.initialiseCategory();
-			html+=ubsBoardTemplate(templateConfig);
-		}else if(templateType == "rollingDice"){
-			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
-			monopoly.updateRollingDiceTemplate(templateConfig);
-			html += rollingDiceTemplate(templateConfig);
-		}else if(templateType == "static") {
-			html += ubsStaticTemplate(templateConfig);
+        if(templateType == "board"){
+            flag2=true;
+            boardConfig=templateConfig;
+            for(let i = 0; i<numplayers; i++){
+                templateConfig.top_row[0].players.push({
+                    "playerId" : userArray[i].getplayerId(),
+                    "tokenColor" : userArray[i].getplayerColor(),
+                    "currentPos" :userArray[i].getplayerCurrentPos(),
+                    "playerName" :userArray[i].getplayerName(),
+                    "score" : userArray[i].getplayerScore()
+                });
+            }
+            for(var j=0;j<templateConfig.bottom_row.length;j++){
+                let key=templateConfig.bottom_row[j].title;
+                let translatedString=ubsApp.translation[key];
+                templateConfig.bottom_row[j].title=translatedString;
+            }
+            for(var j=0;j<templateConfig.top_row.length;j++){
+                templateConfig.top_row[j].title=ubsApp.translation[templateConfig.top_row[j].title];
+            }
+            for(var j=0;j<templateConfig.left_col.length;j++){
+                templateConfig.left_col[j].title=ubsApp.translation[templateConfig.left_col[j].title];
+            }
+            for(var j=0;j<templateConfig.right_col.length;j++){
+                templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
+            }
+            console.log(templateConfig);
+
+            monopoly.initialiseCategory();
+            html+=ubsBoardTemplate(templateConfig);
+            html += ubsSideScoreBoardTemplate(templateConfig);
+        } else if(templateType == "sideScoreBoard") {
+            html += ubsSideScoreBoardTemplate(templateConfig);
+        }
+        /* else if(templateType == "rollingDice"){
+            rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
+            monopoly.updateRollingDiceTemplate(templateConfig);
+            html += rollingDiceTemplate(templateConfig);
+        }*/else if(templateType == "static") {
+            html += ubsStaticTemplate(templateConfig);
+        }/*
+            else if(templateType=="centerScoreBoard"){
+            var object={};
+            object.bankBalanceAmount="Rs. "+userArray[playerChance].getBankBalance();
+            object.cashAmount="Rs. "+userArray[playerChance].getplayerScore();
+            object.debtAmount="Rs. "+userArray[playerChance].getCredit();
+            var template=ubsApp.pages["centerScoreBoard"].templates[0];
+            template=$.extend(template,object);
+            console.log(template);
+            html+=ubsCenterScoreBoardTemplate(template);
+        }*/
     }
-    else if(templateType=="centerScoreBoard"){
-      var object={};
-      object.bankBalanceAmount="Rs. "+userArray[playerChance].getBankBalance();
-      object.cashAmount="Rs. "+userArray[playerChance].getplayerScore();    
-      object.debtAmount="Rs. "+userArray[playerChance].getCredit();
-      var template=ubsApp.pages["centerScoreBoard"].templates[0];
-      template=$.extend(template,object);
-      console.log(template);
-      html+=ubsCenterScoreBoardTemplate(template);
-    }
-  }
 
 	$("#monopolyBase").empty();
-	$("#monopolyBase").append(html); 
+	$("#monopolyBase").append(html);
 	
-	
-  if(flag2) {
-
+    if(flag2) {
      ubsApp.initializeLeaderBoard("Score");
      ubsApp.currentPlayerContents();
      //$("#player").html(userArray[playerChance].getplayerName()); 
-
-}
+    }
 }
 // monopoly.playComputer = function(div){
 //     div.addEventListener('playComputer', function (e) {

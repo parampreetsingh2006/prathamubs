@@ -1,3 +1,5 @@
+// using http://pojo.sodhanalibrary.com/string.html
+
 monopoly.boardTemplate='<div class="responsive">'+
     '<div class="mainSquare">'+
         '<div class="row top">'+
@@ -49,6 +51,78 @@ monopoly.boardTemplate='<div class="responsive">'+
         '</div>'+
     '</div>'+
 '</div>';
+
+monopoly.sideScoreBoardTemplate='<div class="sideScoreBoard">'+
+  '<div class="sideScoreBoardContainer">'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">WEEK</div>'+
+'        <div class="sideScoreBoardCol"></div>'+
+'        <div class="sideScoreBoardCol"></div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">Image</div>'+
+'        <div class="sideScoreBoardCol">Image</div>'+
+'        <div class="sideScoreBoardCol">Image</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">BANK BALANCE</div>'+
+'        <div class="sideScoreBoardCol">Rs</div>'+
+'        <div class="sideScoreBoardCol">2,50,000</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">CASH</div>'+
+'        <div class="sideScoreBoardCol">Rs</div>'+
+'        <div class="sideScoreBoardCol">1,360</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">DEBT</div>'+
+'        <div class="sideScoreBoardCol">Rs</div>'+
+'        <div class="sideScoreBoardCol">0</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">Buttons</div>'+
+'        <div class="sideScoreBoardCol">Buttons</div>'+
+'        <div class="sideScoreBoardCol">Buttons</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">-------</div>'+
+'        <div class="sideScoreBoardCol">-------</div>'+
+'        <div class="sideScoreBoardCol">-------</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">INVENTORY</div>'+
+'        <div class="sideScoreBoardCol">Rs</div>'+
+'        <div class="sideScoreBoardCol">1,00,000 (30%)</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol"></div>'+
+'        <div class="sideScoreBoardCol">BUY Button</div>'+
+'        <div class="sideScoreBoardCol"></div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">-------</div>'+
+'        <div class="sideScoreBoardCol">-------</div>'+
+'        <div class="sideScoreBoardCol">-------</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">REPUTATION PTS</div>'+
+'        <div class="sideScoreBoardCol">10</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol">ADVANTAGE CARD</div>'+
+'        <div    class="sideScoreBoardCol">2</div>'+
+'    </div>'+
+'    <div class="sideScoreBoardRow">'+
+'        <div class="sideScoreBoardCol"></div>'+
+'        <div class="sideScoreBoardCol">CONVERT Button</div>'+
+'        <div class="sideScoreBoardCol"></div>'+
+'    </div>'+
+'  </div>'+
+'</div>';
+
+
+
+
 
 /*monopoly.rollingDiceTemplate = '<body class = "diceBody"><div style="position:absolute; top:32%; left:37%;">'+
 
