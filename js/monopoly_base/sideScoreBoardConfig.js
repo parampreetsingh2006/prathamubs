@@ -1,9 +1,9 @@
-ubsApp.centerScoreBoardConfig={
-    "centerScoreBoard":{
+ubsApp.sideScoreBoardConfig={
+    "sideScoreBoard":{
     "templates":[
         {
             "templateId":13,
-            "templateType":"centerScoreBoard",
+            "templateType":"sideScoreBoard",
             "bankBalanceTitle":"{{bankBalanceTitle}}",
             "cashTitle":"{{cashTitle}}",
             "debtTitle":"{{debtTitle}}",

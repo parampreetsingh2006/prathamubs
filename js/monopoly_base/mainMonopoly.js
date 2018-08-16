@@ -21,7 +21,7 @@ var ubsBoardTemplate = monopoly.ubsBoardTemplate;
 var ubsSideScoreBoardTemplate = monopoly.sideScoreBoardTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
 var ubsformTemplate= monopoly.ubsformTemplate;
-var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
+// var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
 var boardConfig = monopoly.boardConfig;
 var salesScenarioArray=monopoly.salesScenarioArray;
 var luckScenarioArray=monopoly.luckScenarioArray;
@@ -58,7 +58,7 @@ monopoly.intitializeTemplates = function(){
 	rollingDiceTemplate = Template7.compile(monopoly.rollingDiceTemplate);
     ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
     ubsformTemplate = Template7.compile(monopoly.formTemplate);
-    ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
+    // ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
 }
 
 monopoly.initialiseCategory = function(){
@@ -115,9 +115,15 @@ monopoly.renderPageforBoard = function(page) {
 
             monopoly.initialiseCategory();
             html+=ubsBoardTemplate(templateConfig);
-            html += ubsSideScoreBoardTemplate(templateConfig);
+
         } else if(templateType == "sideScoreBoard") {
-            html += ubsSideScoreBoardTemplate(templateConfig);
+            var object={};
+            object.bankBalanceAmount=userArray[playerChance].getBankBalance();
+            object.cashAmount=userArray[playerChance].getplayerScore();
+            object.debtAmount=userArray[playerChance].getCredit();
+            var template=ubsApp.pages["sideScoreBoard"].templates[0];
+            template=$.extend(template,object);
+            html += ubsSideScoreBoardTemplate(template);
         }
         /* else if(templateType == "rollingDice"){
             rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
@@ -136,11 +142,10 @@ monopoly.renderPageforBoard = function(page) {
             console.log(template);
             html+=ubsCenterScoreBoardTemplate(template);
         }*/
+        else if(templateType=="audioTemplate"){
+          html += ubsAudioTemplate(templateConfig);
+        }
     }
-    else if(templateType=="audioTemplate"){
-      html += ubsAudioTemplate(templateConfig);
-    }
-  }
 
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html);

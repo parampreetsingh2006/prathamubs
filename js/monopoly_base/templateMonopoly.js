@@ -54,35 +54,31 @@ monopoly.boardTemplate='<div class="responsive">'+
 
 monopoly.sideScoreBoardTemplate='<div class="sideScoreBoard">'+
   '<div class="sideScoreBoardContainer">'+
+'        <div class="sideScoreBoardRow">'+
+'            <div class="sideScoreBoardCol"></div>'+
+'            <div class="sideScoreBoardCol"><img src="images/redheadercommon.png" style="width: 80%;margin-left: 2.7vw;"></div>                <div class="sideScoreBoardCol"></div>'+
+'        </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">WEEK</div>'+
 '        <div class="sideScoreBoardCol"></div>'+
 '        <div class="sideScoreBoardCol"></div>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'        <div class="sideScoreBoardCol">Image</div>'+
-'        <div class="sideScoreBoardCol">Image</div>'+
-'        <div class="sideScoreBoardCol">Image</div>'+
+'        <div class="sideScoreBoardCol">{{bankBalanceTitle}}</div>'+
+'        <span id="bankBalance" class="sideScoreBoardCol">₹ {{bankBalanceAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'        <div class="sideScoreBoardCol">BANK BALANCE</div>'+
-'        <div class="sideScoreBoardCol">Rs</div>'+
-'        <div class="sideScoreBoardCol">2,50,000</div>'+
-'    </div>'+
-'    <div class="sideScoreBoardRow">'+
-'        <div class="sideScoreBoardCol">CASH</div>'+
-'        <div class="sideScoreBoardCol">Rs</div>'+
-'        <div class="sideScoreBoardCol">1,360</div>'+
+'        <div class="sideScoreBoardCol">{{cashTitle}}</div>'+
+'        <span class="sideScoreBoardCol" id="cash">₹ {{cashAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">DEBT</div>'+
-'        <div class="sideScoreBoardCol">Rs</div>'+
-'        <div class="sideScoreBoardCol">0</div>'+
+'        <span id="debt" class="sideScoreBoardCol">₹ {{debtAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'        <div class="sideScoreBoardCol">Buttons</div>'+
-'        <div class="sideScoreBoardCol">Buttons</div>'+
-'        <div class="sideScoreBoardCol">Buttons</div>'+
+'        <button class="sideScoreBoardCol" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
+'        <button class="sideScoreBoardCol" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
+'        <button class="sideScoreBoardCol" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">-------</div>'+

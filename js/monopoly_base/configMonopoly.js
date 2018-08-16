@@ -506,9 +506,9 @@ monopoly.pages = {
         },
         {
             "templateId":12,
-            "templateType":"centerScoreBoard",
+            "templateType":"sideScoreBoard",
         },
-        
+
             
     ]
 }
