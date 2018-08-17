@@ -178,7 +178,7 @@ monopoly.endGameTemplate = '<div style="'+
                            '    position:  absolute;'+
                            '    top: 1%;'+
                            '    right: 1%;'+
-                           '    width: 10vw;'+
+                           '    width: 13vw;'+
                            '"> <img src="{{gameLogo}}" style="'+
                            '    width: 100%;'+
                            '"> </div>'+
