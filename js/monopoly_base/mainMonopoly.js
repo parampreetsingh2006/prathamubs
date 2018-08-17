@@ -210,7 +210,7 @@ monopoly.myMove = function(count, pId, currentPos) {
                                   "header" : ubsApp.getTranslation("NOTICE"),
                                   "headerStyle" : "text-align: center;  color: green; font-weight: 700; font-size: 3vw;",
                                        });
-        setTimeout(function() {ubsApp.nextMove();}, 5000);
+        setTimeout(function() {ubsApp.closePopup(); ubsApp.nextMove();}, 5000);
 
     }
 
@@ -468,7 +468,7 @@ monopoly.startGame=function(){
                });
      ubsApp.translateScenarios();
      monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
-     ubsApp.closeCurrentScenario();
+     ubsApp.closePopup();
 	    }
 }
 

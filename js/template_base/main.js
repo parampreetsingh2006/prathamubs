@@ -353,7 +353,12 @@ ubsApp.openPopup = function(config) {
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : showCloseButton,
    }, config);
-   ubsApp.renderPageByName("generalPopUp");
+   ubsApp.startHelp("generalPopUp");
+}
+
+ubsApp.closePopup = function(config) {
+
+   ubsApp.closeHelp();
 }
 
 ubsApp.updateScoreInDB = function(questionId, scoredMarks,totalMarks, level, startTime, endTime){

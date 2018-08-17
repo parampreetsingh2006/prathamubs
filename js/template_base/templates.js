@@ -992,7 +992,7 @@ ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
                        '        {{#if showCloseButton}}'+
-                       '            </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
+                       '            </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeHelp()" >{{Close}}</button> </div>'+
                        '        {{/if}}'+
                        '        </div>'+
                        '    </div>'+
