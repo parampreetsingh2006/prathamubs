@@ -21,35 +21,41 @@ monopoly.pages = {
         }
     ],
  
-"Splash":[{
-    "templateId":1,
-    "templateType":"static",
-    "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
-    "src":"<div id=\"splash\">	<link rel=\"stylesheet\" type=\"text/css\" href=\"css/splash.css\"		media=\"screen\" />	<script src=\"splash.js\"></script>	<!--Center align Splash contents in all screen sizes-->	<div id=\"ubs_logo\" class=\"split left\">		<div class=\"centered\">			<img src=\"images/prathamlogo.jpg\" alt=\"app_icon\"				style=\"width: 150px; height: 150px\" />	</div>	</div>	<div id=\"pratham_logo\" class=\"split right\">		<div class=\"centered\">			<img src=\"images/ubs_logo.png\" alt=\"app_icon\"				style=\"width: 150px; height: 150px\" /></div>	</div></div>"
-}
-	
-],
+    "Splash":[{
+        "templateId":1,
+        "templateType":"static",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+        "src":"<div id=\"splash\"> <img src=\"images/splash_screen.jpg\" style=\"width: 100%; height: 100%\"></img> </div>"	
+    }
+    	
+    ],
 
 "WelcomePage":[
+	  {
+	        "templateId":2,
+	        "templateType":"static",
+      
+	        "src":"<div id=\"redstrip\" class=\"redStrip\"> <img src=\"images/red_strip.png\" style=\"width: 100%; height: 100%\"></img> <div class=\"centered\">{{welcome}}</div></div>"
+	    },	
 
-      {
-        "templateId":2,
-        "templateType":"static",
-        "src":"<img src=\"images/logo.png\" style=\"height: 50vh;margin: auto;margin-left: 34%;\"> </img>",
-        "style": " "
-    },
     {
-        "templateId":2,
-        "templateType":"static",
-        "src":"<button onclick=\"monopoly.readInstruction()\" style=\"color:white;background-color:orange;border:0;padding:5px;\">{{ReadInstructions}}</button>",
-        "style": "position:absolute;padding:10px;border-radius:5px;top:50%;left:15%;margin-left:5%; "
-    },
-    {
-        "templateId":2,
-        "templateType":"static",
-        "src":"<button onclick=\"monopoly.startGame()\" style=\"color:white;background-color:orange;border:0;padding:5px;\">{{StartGame}}</button>",
-        "style": "position:absolute;padding:10px;border-radius:5px;top:50%;right:15%;margin-right:5%; "
-    }
+      "templateId":2,
+      "templateType":"static",
+      "src":"<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:50%;margin: auto;margin-left: 55vh;\"> </img>",
+      "style": " "
+  },
+  {
+      "templateId":2,
+      "templateType":"static",
+      "src":"<button class=\"instructionButtons\"   onclick=\"monopoly.readInstruction()\">{{ReadInstructions}}</button>",
+      "style": "position:absolute;padding:10px;border-radius:5px;top:80%;left:10%;margin-left:5%; "
+  },
+  {
+      "templateId":2,
+      "templateType":"static",
+      "src":"<button class=\"startButtons\" onclick=\"monopoly.startGame()\" >{{StartGame}}</button>",
+      "style": "position:absolute;padding:10px;border-radius:5px;top:80%;right:10%;margin-right:5%; "
+  }
 ],
 
 "InitialisePlayers":[{
