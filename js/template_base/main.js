@@ -352,11 +352,15 @@ ubsApp.closePopup = function(config) {
 
 }
 
+// Give key imageUrl to pass a image
 ubsApp.openResultPopup = function(config) {
-
+    let showImage = false;
+    if(config.imageUrl) {
+        showImage = true;
+    }
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
-    "showImage" : false,
+    "showImage" : showImage,
    }, config);
    ubsApp.renderPageByName("generalPopUp");
    ubsApp.isResultPopUpOpen = true;
