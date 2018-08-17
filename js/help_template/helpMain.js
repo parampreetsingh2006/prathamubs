@@ -33,4 +33,6 @@ ubsApp.closeHelp=function(){
 	$('#helpContent').css("height",0+'px')
 	document.getElementById("helpContent").innerHTML="";
 	helpScenarioOpen=false;
+  document.getElementById("helpContent").style.opacity="0.95";
+  document.getElementById("helpContent").style["background-color"] = "rgb(105,105,105)";
 }

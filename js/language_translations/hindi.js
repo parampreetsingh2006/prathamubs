@@ -307,7 +307,7 @@ ubsApp.translation={
     "luckQuestion55":"Change to Hindi:Government increased the prices on  Wheat. You lose Rs. 100 per week",
     "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
     "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
-
+     "EndGameSummary":"अंत खेल सारांश",
      // Advantage Card
      "advantageCardTitle":"एडवांटेज कार्ड",
      "reputationPointAvailableTitle":"प्रतिष्ठा अंक उपलब्ध हैं",

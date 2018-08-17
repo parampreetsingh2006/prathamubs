@@ -226,6 +226,7 @@ ubsApp.translation={
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
         "WeeklySummary":"Weekly Summary",
+        "EndGameSummary":"End Game Summary",
         "ScoreSummary":"Score Summary",
         //luck scenario
         "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",
