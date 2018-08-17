@@ -308,6 +308,9 @@ ubsApp.translation={
     "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
     "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
      "EndGameSummary":"अंत खेल सारांश",
+     "GAMEOVER":"खेल खत्म",
+             "gameLogo":"images/logohindi.png",
+
      // Advantage Card
      "advantageCardTitle":"एडवांटेज कार्ड",
      "reputationPointAvailableTitle":"प्रतिष्ठा अंक उपलब्ध हैं",

@@ -510,6 +510,15 @@ monopoly.pages = {
         },
         
             
+    ],
+
+    "endGamePage" : [
+        {
+            "templateType":"endGameTemplate",
+            "templateId":60,
+            "GAMEOVER":"{{GAMEOVER}}",
+            "gameLogo":"{{gameLogo}}"
+        }
     ]
 }
 

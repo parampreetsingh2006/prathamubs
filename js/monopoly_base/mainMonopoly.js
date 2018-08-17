@@ -2,6 +2,7 @@ monopoly.ubsBoardTemplate = undefined;
 monopoly.ubsMonopolyStaticTemplate =undefined;
 monopoly.ubsformTemplate = undefined;
 monopoly.centerScoreBoardTemplate=undefined;
+monopoly.ubsEndGameTemplate = undefined;
 monopoly.boardConfig={};
 monopoly.salesScenarioArray=[];
 monopoly.luckScenarioArray=[];
@@ -27,6 +28,7 @@ var initialInventoryScore=60;
 var initialReputation=45;
 var harnamSinghProfit=11000;
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
+var ubsEndGameTemplate = monopoly.ubsEndGameTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
 var ubsformTemplate= monopoly.ubsformTemplate;
 var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
@@ -46,7 +48,7 @@ var scenario =  monopoly.scenario;
 ubsApp.maxNumOfWeeks = 1;
 var renderTimeOutMiliSec = 3000;
 ubsApp.inventoryPerPercentValue = 1000;
-
+ubsApp.endGameConfig = {};
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
   monopoly.initializeScenarios();
@@ -67,6 +69,7 @@ monopoly.intitializeTemplates = function(){
   ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
   ubsformTemplate = Template7.compile(monopoly.formTemplate);
   ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
+  ubsEndGameTemplate = Template7.compile(monopoly.endGameTemplate);
 }
 monopoly.initialiseCategory = function(){
       for(let block = 0; block<boardConfig.top_row.length; block++){
@@ -141,6 +144,10 @@ monopoly.renderPageforBoard = function(page) {
     }
     else if(templateType=="audioTemplate"){
       html += ubsAudioTemplate(templateConfig);
+    }
+    else if(templateType == "endGameTemplate") {
+        templateConfig = $.extend(templateConfig,ubsApp.endGameConfig);
+        html += ubsEndGameTemplate(templateConfig);
     }
   }
 
@@ -495,7 +502,30 @@ monopoly.startGame=function(){
  ubsApp.endGame=function(){
   	var arr=[];
 
+    let playersConfig =[];
   	for(var i=0;i<numplayers;i++){
+  	    let playerConfig = {};
+  	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 5;
+        playerConfig.currentWeekCash = "₹ "+ userArray[playerChance].getplayerScore();
+        playerConfig.currentWeekBankBalance = "₹ "+ userArray[playerChance].getBankBalance();
+        playerConfig.currentWeekReputationPts = userArray[playerChance].getReputationPts();
+        playerConfig.currentWeekCredit = userArray[playerChance].getCredit();
+        playerConfig.currentWeekAdvantageCard = userArray[playerChance].getAdvantageCardNumber();
+        playerConfig.userName = userArray[playerChance].getplayerName();
+        playerConfig.currentInventory = "₹ "+ userArray[playerChance].getInventoryScore() * ubsApp.inventoryPerPercentValue + "(" + userArray[playerChance].getInventoryScore() + "%" + ")";
+        if(i > 0) {
+            playerConfig.showBorder = true;
+        }
+        playerConfig.BankBalance = ubsApp.getTranslation("BankBalance");
+        playerConfig.ReputationPoints = ubsApp.getTranslation("repPoints");
+        playerConfig.AdvantageCard = ubsApp.getTranslation("advantageCardTitle");
+        playerConfig.Close = ubsApp.getTranslation("Close");
+        playerConfig.PLAYER = ubsApp.getTranslation("PLAYER");
+        playerConfig.INVENTORY = ubsApp.getTranslation("INVENTORY");
+        playerConfig.playerNameTitle = ubsApp.getTranslation("playerNameTitle");
+         playerConfig.Credit = ubsApp.getTranslation("Credit");
+          playerConfig.Cash = ubsApp.getTranslation("Cash");
+
   		var harnamProjectedScore=userArray[i].getWeeks()*harnamSinghProfit;
   		let currentPlayerProfit=0;
   		currentPlayerProfit+=(userArray[i].getplayerScore()-initialPlayerCash);
@@ -509,6 +539,9 @@ monopoly.startGame=function(){
   		else{
   			arr[i]=true;
   		}
+
+  		playersConfig[i] = playerConfig;
+
   	}
 
   		var winnerName="";
@@ -529,8 +562,11 @@ monopoly.startGame=function(){
 
   		if(!atleastOne){
   		winnerName="No One Wins"
+
   	}
-  	monopoly.renderPageforBoard("endGamePage");
+
+  	ubsApp.endGameConfig.players = playersConfig;
+  	monopoly.renderPageforBoard(monopoly.pages.endGamePage);
   }
 
 ubsApp.nextMove = function(){

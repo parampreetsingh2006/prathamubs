@@ -228,6 +228,8 @@ ubsApp.translation={
         "WeeklySummary":"Weekly Summary",
         "EndGameSummary":"End Game Summary",
         "ScoreSummary":"Score Summary",
+        "GAMEOVER":"GAME OVER",
+        "gameLogo":"images/logo.png",
         //luck scenario
         "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",
         "luckQuestion2":"Scratch Card Cash Prize: Rs. 100",
