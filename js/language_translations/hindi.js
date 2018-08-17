@@ -374,6 +374,8 @@ ubsApp.translation={
        "INVENTORYVALUE": "INVENTORY VALUE",
        "INVENTORY" : "INVENTORY",
        "decisionResult": "DECISION RESULT",
+       "welcome":"सुस्वागतम",
+       
 	   
 	   /******************************************Quiz key Start******************************************************************/
        "QuizQuestion1" : "We should keep our savings with banks because",

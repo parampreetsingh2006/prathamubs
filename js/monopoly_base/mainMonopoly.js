@@ -449,6 +449,7 @@ monopoly.chooseLanguage=function(){
   }
    jsElm.onload=function(){
       ubsApp.translateScenarios();
+      monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 28%;\"> </img>";
       monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
     }
 
