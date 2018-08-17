@@ -360,8 +360,8 @@ ubsApp.openResultPopup = function(config) {
     }
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
-    "showImage" : showImage,
    }, config);
+   popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");
    ubsApp.isResultPopUpOpen = true;
 }
