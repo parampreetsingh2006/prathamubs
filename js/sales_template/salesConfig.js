@@ -14,7 +14,24 @@
 			"10":25,
 			"11":27,
 			"12":45,
-			"13":37
+			"13":37,
+			"14":15,
+            			"15":100,
+            			"16":70,
+            			"17":25,
+            			"18":120,
+            			"19":15,
+            			"20":85,
+            			"21":70,
+            			"22":100,
+            			"23":150,
+            			"24":46,
+                                    			"25":30,
+                                    			"26":50,
+                                    			"27":120,
+                                    			"28":320,
+                                    			"29":12,
+                                    			"30":60
 		},
 
 		"Sales":{
@@ -25,8 +42,8 @@
 			{
 				"templateId": 4,
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -141,9 +158,148 @@
 					"itemId":13,
 					"item":"Detergent",
 					"amount":" gm/kg",
-					"rate":"₹ 37/500gm",				
+					"rate":"₹ 37/500gm",
 					"exclude":false
-				}
+				},
+                {
+                     "no":14,
+                     "itemId":14,
+                 	 "item":"Salt",
+                     "amount":"kg",
+                     "rate":"₹ 15/kg",
+                     "exclude":false
+                },
+                {
+                     "no":15,
+                     "itemId":15,
+                     "item":"Coriander",
+                     "amount":" kg",
+                     "rate":"₹ 100/kg",
+                     "exclude":false
+                },
+                {
+                                     "no":16,
+                                     "itemId":16,
+                                     "item":"Phenyl",
+                                     "amount":" ml",
+                                     "rate":"₹ 70/500ml",
+                                     "exclude":false
+                                },
+                                                    {
+                                                                         "no":17,
+                                                                         "itemId":17,
+                                                                         "item":"Broom",
+                                                                         "amount":" ",
+                                                                         "rate":"₹ 25/broom",
+                                                                         "exclude":false
+                                 },
+                                  {
+                                                                                                          "no":18,
+                                                                                                          "itemId":18,
+                                                                                                          "item":"Tea",
+                                                                                                          "amount":"kg",
+                                                                                                          "rate":"₹ 120/kg",
+                                                                                                          "exclude":false
+                                                                  },
+                                  {
+                                                                                                          "no":19,
+                                                                                                          "itemId":19,
+                                                                                                          "item":"Bread",
+                                                                                                          "amount":"packet",
+                                                                                                          "rate":"₹ 15/packet",
+                                                                                                          "exclude":false
+                                                                  },
+,
+                                  {
+                                                                                                          "no":20,
+                                                                                                          "itemId":20,
+                                                                                                          "item":"Pepper",
+                                                                                                          "amount":"gm/kg",
+                                                                                                          "rate":"₹ 85/50gm",
+                                                                                                          "exclude":false
+                                                                  },
+{
+"no":21,
+"itemId":21,
+"item":"Besan Flour",
+"amount":"gm/kg",
+"rate":"₹ 70/500gm",
+"exclude":false
+},
+{
+"no":22,
+"itemId":22,
+"item":"Almond/Badam",
+"amount":"gm/kg",
+"rate":"₹ 100/100gm",
+"exclude":false
+},
+{
+"no":23,
+"itemId":23,
+"item":"Organic Cashews",
+"amount":"gm/kg",
+"rate":"₹ 150/100gm",
+"exclude":false
+},
+ {
+ "no":24,
+ "itemId":24,
+ "item":"Butter",
+ "amount":"gm/kg",
+ "rate":"₹ 46/100gm",
+ "exclude":false
+ },
+   {
+   "no":25,
+   "itemId":25,
+   "item":"Mustard",
+   "amount":"gm/kg",
+   "rate":"₹ 30/200gm",
+   "exclude":false
+   },
+     {
+     "no":26,
+     "itemId":26,
+     "item":"Chilli Powder",
+     "amount":"gm/kg",
+     "rate":"₹ 50/100gm",
+     "exclude":false
+     },
+     ,
+      {
+      "no":27,
+      "itemId":27,
+      "item":"Sabudana",
+      "amount":"gm/kg",
+      "rate":"₹ 120/kg",
+      "exclude":false
+      },
+       {
+       "no":28,
+       "itemId":28,
+       "item":"NuttyCocoa",
+       "amount":"Jar",
+       "rate":"₹ 320/Jar",
+       "exclude":false
+       },
+       {
+                "no":29,
+                "itemId":29,
+                "item":"Noodles",
+                "amount":"gm/kg",
+                "rate":"₹ 12/70gm",
+                "exclude":false
+                },
+                {
+                       "no":30,
+                       "itemId":30,
+                       "item":"Jam",
+                       "amount":"gm/kg",
+                       "rate":"₹ 60/200gms",
+                       "exclude":false
+                       },
+
 				],
 
 				"onClickPage": {
@@ -162,9 +318,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -234,9 +391,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -316,9 +474,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -390,9 +549,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -462,9 +622,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -516,9 +677,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -587,9 +749,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -650,9 +813,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -713,9 +877,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -776,9 +941,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel04",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -839,9 +1005,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"helpPageName":"salesHelp",
@@ -901,9 +1068,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -954,9 +1122,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1007,9 +1176,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1078,9 +1248,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1140,9 +1311,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1202,9 +1374,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1264,9 +1437,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"helpPageName":"salesHelp",
@@ -1335,9 +1509,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1397,9 +1572,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel03",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1459,9 +1635,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1512,9 +1689,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1565,9 +1743,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1636,9 +1815,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1689,9 +1869,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1742,9 +1923,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1795,9 +1977,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1857,9 +2040,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"helpPageName":"salesHelp",
@@ -1910,9 +2094,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -1972,9 +2157,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel02",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2035,9 +2221,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2089,9 +2276,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2142,9 +2330,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2204,9 +2393,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2266,9 +2456,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2328,9 +2519,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2390,9 +2582,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2444,9 +2637,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2515,9 +2709,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2567,9 +2762,10 @@
 			"templates":[
 			{
 				"templateId": 4,
+				"salesImage":"images/selllevel01",
 				"templateType": "sales",
-				"profilePicture":"images/download",
-				"time":"60",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
 				"divID":"seconds",
 				"Order":"{{Order}}",
 				"Customer":"{{Customer}}",
@@ -2611,6 +2807,60 @@
 					"rate":"₹ 40/chocolate",				
 					"exclude":false
 				}],
+
+				"onClickPage": {
+					"nextPage" : "",
+					"hideScenarios" : true
+				}
+			}]
+		},
+"Sales41":{
+			"category":"salesSimple",
+			"repeatforuser":true,
+			"repeatforall":true,
+			"questionTime":3000,
+			"optionsTime":2000,
+			"templates":[
+			{
+				"templateId": 4,
+				"salesImage":"images/selllevel01",
+				"templateType": "sales",
+				"profilePicture":"images/Customer/customer1",
+				"time":"600",
+				"divID":"seconds",
+				"Order":"{{Order}}",
+				"Customer":"{{Customer}}",
+				"receiptHeading":"{{receiptHeading}}",
+				"receiptGen":"{{receiptGen}}",
+				"Items":"{{Items}}",
+				"Quantity":"{{Quantity}}",
+				"Rate":"{{Rate}}",
+				"Amount":"{{Amount}}",
+				"Tools":"{{Tools}}",
+				"helpPageName":"salesHelp",
+				"tooltipMessage":"This item is not available in your Inventory",
+				"tempTotal":80,
+				"order":[
+				{
+					"no":1,
+					"itemId":25,
+					"item":"{{Mustard}}",
+					"amount":"200 gm",
+					"quantity":"200 gm",
+					"rate":"₹ 30/gm",
+					"exclude":false
+				},
+				{
+					"no":2,
+					"itemId":26,
+					"item":"{{Chilli Powder}}",
+					"amount":"100 gm",
+					"quantity":"100 gm",
+					"rate":"₹ 50/100gm",
+					"exclude":false
+				}
+
+				],
 
 				"onClickPage": {
 					"nextPage" : "",

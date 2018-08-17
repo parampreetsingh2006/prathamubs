@@ -3,7 +3,13 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	ubsApp.selectAvailableItems(templateConfig);
 	tempVar.html += ubsOrdertemplate(templateConfig);
 }
+ubsApp.validateAmount = function() {
+var item = document.getElementsByName('amt');
+	for(var i=0;i<item.length;i++){
+	if(isNaN(item[i])) {
 
+	}}
+}
 ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 	let time = totalTime - $("#seconds").html();
