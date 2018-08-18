@@ -114,6 +114,21 @@ body {
     top:60%;
 }
 
+.payOffDebtAmountValue{
+    position:absolute;
+    left:50%;
+    top:47%;
+}
+.payOffAmountToPayValue{
+    position:absolute;
+    left:50%;
+    top:57%;
+}
+.payOffLeftModeOfPaymentValue{
+    position:absolute;
+    left:50%;
+    top:67%;
+}
 .payOffButtonContainer{
     width:17%;
     position:absolute;

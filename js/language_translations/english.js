@@ -116,7 +116,7 @@ ubsApp.translation={
         "payDebtTitle":"PAY DEBT",
         "payTitle":"PAY",
         "transferToBankTitle":"TRANSFER CASH TO BANK",
-        "debtAmountTitle":"Debt Amount",
+        "debtAmountTitle":"DEBT AMOUNT",
         "cancelTitle":"CANCEL",
         "withdrawTitle":"WITHDRAW",
 
@@ -312,7 +312,7 @@ ubsApp.translation={
 
         //withdraw from bank
 
-        "withdrawFromBankTitle":"Withdraw From Bank",
+        "withdrawFromBankTitle":"WITHDRAW FROM BANK",
         "amountToWithdrawTitle":"AMOUNT TO WITHDRAW",
 
         //payment Scenarios

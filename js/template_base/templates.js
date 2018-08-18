@@ -718,7 +718,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                      {{#if #payOff}}'+
 '                           <div>'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
-'                                    <span class="payOffLeftSubTitleValue">Rs. <span id="debtValue">{{debt}}<span>'+
+'                                    <span class="payOffDebtAmountValue">Rs. <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
 '                           </div><br><br>'+
 '                      {{else}}<br><br>{{/if}}'+
@@ -729,7 +729,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               {{amountToTransferTitle}} ₹ '+
 '                           {{/if}}'+
 '                      </span>'+
-'                      <span class="payOffLeftSubTitleValue">'+
+'                      <span class="payOffAmountToPayValue">'+
 '                           <input type="number" id="debtPaymentText" class="borderB1">'+
 '                      </span><br><br>'+
 '                      {{#if payOff}}'+
@@ -738,7 +738,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                           </span>'+
 '                      {{/if}}'+
 '                      {{#if payOff}}'+
-'                           <span class="payOffLeftSubTitleValue">'+
+'                           <span class="payOffLeftModeOfPaymentValue">'+
 '                               <select class="borderB1" id="payOffDropDown">'+
 '                                   <option value="cash">{{cashTitle}}</option>'+
 '                                   <option value="cheque">{{chequeTitle}}</option>'+
