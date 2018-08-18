@@ -41,16 +41,7 @@ let userArray=[];
 let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "popup", "weekSummary"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
-monopoly.numplayers=0;
-let numplayers = monopoly.numplayers;
-monopoly.playerChance = 0;
-let playerChance = monopoly.playerChance;
 
-let cashTransfered=false;
-var initialPlayerCash=1000;
-var initialPlayerBankBalance=250000;
-var initialInventoryScore=60;
-var initialReputation=45;
 ubsApp.popupConfig = {};
 
 $(document).ready(function(){	
@@ -343,17 +334,41 @@ ubsApp.translateScenarios=function(){
 
 
 ubsApp.openPopup = function(config) {
-   var showCloseButton;
-   if(config.showCloseButton){
-   		showCloseButton = config.showCloseButton;
-   }
-   else{
-   	showCloseButton = true;
-   }
+
    ubsApp.popupConfig = $.extend({
-    "showCloseButton" : showCloseButton,
+    "showCloseButton" : true,
    }, config);
+   ubsApp.startHelp("generalPopUp");
+}
+
+ubsApp.closePopup = function(config) {
+
+   if(ubsApp.isResultPopUpOpen) {
+        ubsApp.closeCloseResultPopup();
+        ubsApp.isResultPopUpOpen = false;
+   } else {
+        ubsApp.closeHelp();
+   }
+
+}
+
+// Give key imageUrl to pass a image
+ubsApp.openResultPopup = function(config) {
+    let showImage = false;
+    if(config.imageUrl) {
+        showImage = true;
+    }
+   ubsApp.popupConfig = $.extend({
+    "showCloseButton" : true,
+   }, config);
+   popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");
+   ubsApp.isResultPopUpOpen = true;
+}
+
+ubsApp.closeCloseResultPopup = function(config) {
+   ubsApp.closeCurrentScenario();
+   ubsApp.nextMove();
 }
 
 ubsApp.updateScoreInDB = function(questionId, scoredMarks,totalMarks, level, startTime, endTime){

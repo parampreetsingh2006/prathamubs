@@ -289,7 +289,30 @@ ubsApp.translation={
     "luckQuestion35":"महान ग्राहक सेवा! आपको 20 प्रतिष्ठा अंक मिलते हैं।",
     "luckQuestion36":"बढ़ी हुई व्यवसाय! 2000 रुपये",
     "luckQuestion37":"होम डिलीवरी सेवा शुरू हुई! आपको 15 प्रतिष्ठा अंक मिले हैं।",
-       
+    "luckQuestion38":"Change to Hindi:didn't sold expired goods! You get 10 reputation points.",
+    "luckQuestion39":"Change to Hindi:Used electronic weighing balance for accurate weight! You get 10 reputation points",
+    "luckQuestion40":"Change to Hindi:Some products out of stock. You loose 10 reputation points",
+    "luckQuestion41":"Change to Hindi:Refrigerator not working, ice-cream melted. You loose 1000",
+    "luckQuestion42":"Change to Hindi:Dispose expired products. Lose inventory of Rs.2000.",
+    "luckQuestion43":"Change to Hindi:Found and returned customer's missing wallet. You get 5 reputation points.",
+    "luckQuestion44":"Change to Hindi:Customer fell on slippery shop floor. You lost 5 reputation points.",
+    "luckQuestion45":"Change to Hindi:Huge order from catering company. Made a profit of Rs.10000.",
+    "luckQuestion46":"Change to Hindi:Didn’t sell expired goods! You get 10 reputation points.",
+    "luckQuestion47":"Change to Hindi:Used electronic weighing balance for accurate weight! You get 10 reputation points",
+    "luckQuestion48":"Change to Hindi:Some products out of stock. You loose 10 reputation points",
+    "luckQuestion49":"Change to Hindi:Refrigerator not working, ice-cream melted. You loose 1000",
+    "luckQuestion50":"Change to Hindi:Increase in bank interest rate on Loan. Lose Rs. 500",
+    "luckQuestion51":"Change to Hindi:Decrease in bank interest rate on Loan. Gain Rs. 500",
+    "luckQuestion52":"Change to Hindi:Bumper Sales in Wedding season. Gain Rs. 3000",
+    "luckQuestion53":"Change to Hindi:Flu outbreak in town. Reduction in sales. Lose Rs. 3000",
+    "luckQuestion54":"Change to Hindi:Government reduced the prices on Wheat. You gain Rs. 100 per week",
+    "luckQuestion55":"Change to Hindi:Government increased the prices on  Wheat. You lose Rs. 100 per week",
+    "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
+    "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
+     "EndGameSummary":"अंत खेल सारांश",
+     "GAMEOVER":"खेल खत्म",
+             "gameLogo":"images/hindi/logo.png",
+
      // Advantage Card
      "advantageCardTitle":"एडवांटेज कार्ड",
      "reputationPointAvailableTitle":"प्रतिष्ठा अंक उपलब्ध हैं",
@@ -337,10 +360,10 @@ ubsApp.translation={
 
        "loadingGameMessage": "गेम लोड हो रहा है...",
 
-       "ReadInstructions" : "निर्देश पढ़ें",
+       "ReadInstructions" : "निर्देश देखें",
        "StartGame" : "खेल शुरू",
        
-       "instructionHeader" : "कृपया निर्देश ध्यान से पढ़ें",
+       "instructionHeader" : "निर्देश",
        "instructionsMessage" : "खेल निर्देश / निर्देश" +
 					    	   "यदि आप खेल के लिए नए हैं, तो प्राथम द्वारा निर्धारित गाइड मिशन का पालन करने की अनुशंसा की जाती है" +
 					    	   "यह खेल पासा की मदद से खेला जाएगा।" +
@@ -356,6 +379,8 @@ ubsApp.translation={
        "INVENTORYVALUE": "INVENTORY VALUE",
        "INVENTORY" : "INVENTORY",
        "decisionResult": "DECISION RESULT",
+       "welcome":"सुस्वागतम",
+       
 	   
 	   /******************************************Quiz key Start******************************************************************/
        "QuizQuestion1" : "We should keep our savings with banks because",

@@ -230,7 +230,10 @@ ubsApp.translation={
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
         "WeeklySummary":"Weekly Summary",
+        "EndGameSummary":"End Game Summary",
         "ScoreSummary":"Score Summary",
+        "GAMEOVER":"GAME OVER",
+        "gameLogo":"images/english/logo.png",
         //luck scenario
         "luckQuestion1":"Scratch Card Cash Prize: Rs. 500",
         "luckQuestion2":"Scratch Card Cash Prize: Rs. 100",
@@ -269,6 +272,26 @@ ubsApp.translation={
         "luckQuestion35":"Great Customer Service! You get 20 reputation points.",
         "luckQuestion36":"Increased business!  Rs. 2000",
         "luckQuestion37":"Home delivery service started! You got 15 reputation points.",
+        "luckQuestion38":"didn't sold expired goods! You get 10 reputation points.",
+        "luckQuestion39":"Used electronic weighing balance for accurate weight! You get 10 reputation points",
+        "luckQuestion40":"Some products out of stock. You loose 10 reputation points",
+        "luckQuestion41":"Refrigerator not working, ice-cream melted. You loose 1000",
+        "luckQuestion42":"Dispose expired products. Lose inventory of Rs.2000.",
+        "luckQuestion43":"Found and returned customer's missing wallet. You get 5 reputation points.",
+        "luckQuestion44":"Customer fell on slippery shop floor. You lost 5 reputation points.",
+        "luckQuestion45":"Huge order from catering company. Made a profit of Rs.10000.",
+        "luckQuestion46":"Didn’t sell expired goods! You get 10 reputation points.",
+        "luckQuestion47":"Used electronic weighing balance for accurate weight! You get 10 reputation points",
+        "luckQuestion48":"Some products out of stock. You loose 10 reputation points",
+        "luckQuestion49":"Refrigerator not working, ice-cream melted. You loose 1000",
+        "luckQuestion50":"Increase in bank interest rate on Loan. Lose Rs. 500",
+        "luckQuestion51":"Decrease in bank interest rate on Loan. Gain Rs. 500",
+        "luckQuestion52":"Bumper Sales in Wedding season. Gain Rs. 3000",
+        "luckQuestion53":"Flu outbreak in town. Reduction in sales. Lose Rs. 3000",
+        "luckQuestion54":"Government reduced the prices on Wheat. You gain Rs. 100 per week",
+        "luckQuestion55":"Government increased the prices on  Wheat. You lose Rs. 100 per week",
+        "luckQuestion56":"Bank increased the interest rate on your fixed deposit",
+        "luckQuestion57":"Bank decreased the interest rate on your fixed deposit",
 
         "convertTitle":"CONVERT",
         "quizTitle":"QUIZ",
@@ -321,10 +344,10 @@ ubsApp.translation={
 
         "loadingGameMessage": "Loading Game...",
 
-        "ReadInstructions" : "Read Instructions",
+        "ReadInstructions" : "View Instructions",
         "StartGame" : "Start Game",
         
-        "instructionHeader" : "Please read instructions carefully",
+        "instructionHeader" : "INSTRUCTIONS",
         "instructionsMessage" : "Game Instructions/Instrucciones "+
 						        "If you're new to the game, it is recommended to follow the Guide Mission prescribed by pratham"+
 						        "This game will be played with help of Dice."+
@@ -339,6 +362,7 @@ ubsApp.translation={
         "INVENTORYVALUE": "INVENTORY VALUE",
         "INVENTORY" : "INVENTORY",
         "decisionResult": "DECISION RESULT",
+        "welcome":"WELCOME",
         
 	   /******************************************Quiz key Start******************************************************************/
        "QuizQuestion1" : "We should keep our savings with banks because",

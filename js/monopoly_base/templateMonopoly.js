@@ -264,3 +264,63 @@ monopoly.formTemplate='{{#if nameTitle}}<br><div class=\"title\" >{{nameTitle}}:
         '<input type=\"radio\" style\"display:inline;padding-left:5em; \" name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"><label for=\"{{radioId}}\">{{text}}</label>'+
     '{{/each}}'+
 '{{/if}}';
+
+
+monopoly.endGameTemplate = '<div style="'+
+                           '    position:  absolute;'+
+                           '    top: 1%;'+
+                           '    right: 1%;'+
+                           '    width: 13vw;'+
+                           '"> <img src="{{gameLogo}}" style="'+
+                           '    width: 100%;'+
+                           '"> </div>'+
+                           ''+
+                           '<div style="'+
+                           '    background-image: url(\'images/welcomeredstrip.png\');'+
+                           '    color: white;'+
+                           '    font-weight: 700;'+
+                           '    height: 10vh;'+
+                           '    text-align: center;'+
+                           '    font-size: xx-large;'+
+                           '    margin-top: 5%;'+
+                           '">'+
+                           '    GAME OVER'+
+                           '</div>'+
+                           '<div style="margin-top: 12px;">'+
+                           '    '+
+                           '    {{#each players}}'+
+                           '        <div style="width:{{widthOfEachPlayer}}%;float: left; {{#if showBorder}}border-left: 1px solid red; {{/if}}padding-left: 10px;    padding-right: 18px;">'+
+                           '            <div style="display: inline-block;width: 100%;">'+
+                           '                <div style="float: left;">{{BankBalance}}</div>'+
+                           '                <div style="float: right;">{{currentWeekBankBalance}}</div>'+
+                           '            </div>'+
+                           ''+
+                           '            <div style="display: inline-block;width: 100%;">'+
+                           '                <div style="float: left;">{{Cash}}</div>'+
+                           '                <div style="float: right;">{{currentWeekCash}}</div>'+
+                           '            </div>'+
+                           ''+
+                           '            <div style="display: inline-block;width: 100%;">'+
+                           '                <div style="float: left;">{{Credit}}</div>'+
+                           '                <div style="float: right;">{{currentWeekCredit}}</div>'+
+                           '            </div>'+
+                           ''+
+                           '            <div style="display: inline-block;width: 100%;">'+
+                           '                <div style="float: left;">{{INVENTORY}}</div>'+
+                           '                <div style="float: right;">{{currentInventory}}</div>'+
+                           '            </div>'+
+                           '            <div style="display: inline-block;width: 100%;">'+
+                           '                <div style="float: left;">{{ReputationPoints}}</div>'+
+                           '                <div style="float: right;">{{currentWeekReputationPts}}</div>'+
+                           '            </div>'+
+                           '            <div style="display: inline-block;width: 100%;">'+
+                           '                <div style="float: left;">{{AdvantageCard}}</div>'+
+                           '                <div style="float: right;">{{currentWeekAdvantageCard}}</div>'+
+                           '            </div>'+
+                           ''+
+                           '        </div>'+
+                           '    {{/each}}'+
+                           ''+
+                           ''+
+                           '</div>';
+
