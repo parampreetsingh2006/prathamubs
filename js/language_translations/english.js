@@ -339,7 +339,7 @@ ubsApp.translation={
         "ReadInstructions" : "Read Instructions",
         "StartGame" : "Start Game",
         
-        "instructionHeader" : "Please read instructions carefully",
+        "instructionHeader" : "INSTRUCTIONS",
         "instructionsMessage" : "Game Instructions/Instrucciones "+
 						        "If you're new to the game, it is recommended to follow the Guide Mission prescribed by pratham"+
 						        "This game will be played with help of Dice."+
