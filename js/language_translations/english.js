@@ -11,6 +11,7 @@ ubsApp.translation={
         "pratham_title_decision":"Decision Making",
         "close":"close",
         "Close":"Close",
+        "CLOSE":"CLOSE",
         "scoreSideBar":"Score",
         "documentSideBar":"Document",
         "inventorySideBar":"Inventory",
@@ -26,6 +27,7 @@ ubsApp.translation={
         "language":"english",
         "rollIt":"ROLL IT",
         "playerTitle":"PLAYER",
+        "PLAYER" : "PLAYER",
 
 
     //This is where the new addition ended

@@ -18,40 +18,49 @@
 ">
     {{GAMEOVER}}
 </div>
-<div style="margin-top: 12px; background-color: white">
+<div style="margin-top: 12px; background-color: white; display: inline-block; width: 100%;    padding-top: 15px; font-weight: 700;">
 
-    {{#each players}}
-        <div style="width:{{widthOfEachPlayer}}%;float: left; {{#if showBorder}}border-left: 1px solid red; {{/if}}padding-left: 10px;    padding-right: 18px;">
-            <div style="display: inline-block;width: 100%;">
-                <div style="float: left;">{{BankBalance}}</div>
-                <div style="float: right;">{{currentWeekBankBalance}}</div>
-            </div>
+    <div style="display: inline-block; width: 100%;">
+        {{#each players}}
+        <div style="width:{{widthOfEachPlayer}}%;float: left; {{#if showBorder}}border-left: 1px solid red; {{/if}}padding-left: 20px;    padding-right: 18px;">
 
-            <div style="display: inline-block;width: 100%;">
-                <div style="float: left;">{{Cash}}</div>
-                <div style="float: right;">{{currentWeekCash}}</div>
-            </div>
-
-            <div style="display: inline-block;width: 100%;">
-                <div style="float: left;">{{Credit}}</div>
-                <div style="float: right;">{{currentWeekCredit}}</div>
-            </div>
-
-            <div style="display: inline-block;width: 100%;">
-                <div style="float: left;">{{INVENTORY}}</div>
-                <div style="float: right;">{{currentInventory}}</div>
-            </div>
-            <div style="display: inline-block;width: 100%;">
-                <div style="float: left;">{{ReputationPoints}}</div>
-                <div style="float: right;">{{currentWeekReputationPts}}</div>
-            </div>
-            <div style="display: inline-block;width: 100%;">
-                <div style="float: left;">{{AdvantageCard}}</div>
-                <div style="float: right;">{{currentWeekAdvantageCard}}</div>
-            </div>
-
+            <div style="display: inline-block;width: 100%; color:{{playerColor}};">
+                <div style="float:left; height: 36px;><img src="images/{{playerColor}}.png" style="height:100%"> </img></div>
+            <div width=" padding-top: 19px;float: left; padding-left: 7px;">{{PLAYER}}: {{userName}} </div>
         </div>
+
+        <div style="display: inline-block;width: 100%;">
+            <div style="float: left;">{{BankBalance}}</div>
+            <div style="float: right;">{{currentWeekBankBalance}}</div>
+        </div>
+
+        <div style="display: inline-block;width: 100%;">
+            <div style="float: left;">{{Cash}}</div>
+            <div style="float: right;">{{currentWeekCash}}</div>
+        </div>
+
+        <div style="display: inline-block;width: 100%;">
+            <div style="float: left;">{{Credit}}</div>
+            <div style="float: right;">{{currentWeekCredit}}</div>
+        </div>
+
+        <div style="display: inline-block;width: 100%;">
+            <div style="float: left;">{{INVENTORY}}</div>
+            <div style="float: right;">{{currentInventory}}</div>
+        </div>
+        <div style="display: inline-block;width: 100%;">
+            <div style="float: left;">{{ReputationPoints}}</div>
+            <div style="float: right;">{{currentWeekReputationPts}}</div>
+        </div>
+        <div style="display: inline-block;width: 100%;">
+            <div style="float: left;">{{AdvantageCard}}</div>
+            <div style="float: right;">{{currentWeekAdvantageCard}}</div>
+        </div>
+
+    </div>
     {{/each}}
 
+</div>
 
+    <div style="margin-top: 10px;text-align: center;"> <button onClick="ubsApp.restartGame();"> {{CLOSE}} </button></div>
 </div>

@@ -37,7 +37,7 @@ var languageSelected="hindi";
 var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
-let userArray=[];
+
 let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "popup", "weekSummary"];
 let templateMap = {};
 let offlinePurchaseClicked=false;

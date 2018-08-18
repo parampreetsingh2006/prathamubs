@@ -596,7 +596,8 @@ monopoly.pages = {
             "templateType":"endGameTemplate",
             "templateId":60,
             "GAMEOVER":"{{GAMEOVER}}",
-            "gameLogo":"{{gameLogo}}"
+            "gameLogo":"{{gameLogo}}",
+            "CLOSE":"{{CLOSE}}",
         }
     ]
 }
