@@ -80,9 +80,9 @@ monopoly.renderPageforBoard = function(page) {
     let html = "";
     for(let i=0; i< page.length; i++) {
         let templateConfig = page[i];
-        /*if(templateConfig.weekDeadLine){
+        if(templateConfig.weekDeadLine){
             numberOfWeeksDeadline=templateConfig.weekDeadLine;
-        }*/
+        }
         let templateType = templateConfig.templateType;
 
         if(templateType == "board"){
@@ -114,6 +114,8 @@ monopoly.renderPageforBoard = function(page) {
             console.log(templateConfig);
 
             monopoly.initialiseCategory();
+            rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
+            monopoly.updateRollingDiceTemplate(templateConfig);
             html+=ubsBoardTemplate(templateConfig);
 
         } else if(templateType == "sideScoreBoard") {

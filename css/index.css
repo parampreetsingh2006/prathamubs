@@ -390,11 +390,6 @@ body {
     width: 80vw;height: 44.5vw;position: absolute;top: 10px;left: 10px;
 }
 
-#currentChanceDetails{
-    position:absolute;
-    top:65%;
-    left:40%;
-}
 button:focus {outline:0;}
 
 /*advantage Card*/

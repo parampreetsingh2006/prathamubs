@@ -12,6 +12,12 @@ ubsApp.sideScoreBoardConfig={
             "payOffTitle":"{{payOffTitle}}",
             "playerNameLabel":"{{playerNameTitle}}",
             "diceValueLabel":"{{diceValueTitle}}",
+            "inventoryTitle":"{{inventoryTitle}}",
+            "buy":"{{buy}}",
+            "reputationTitle":"{{reputationTitle}}",
+            "advantageCardTitle":"{{advantageCardTitle}}",
+            "convertTitle":"{{convertTitle}}",
+            "quizTitle":"{{quizTitle}}",
         }
     ]
 }

@@ -23,6 +23,10 @@ ubsApp.translation={
         "insuranceTitle":"INSURANCE",
         "inventoryValueTitle":"INVENTORY VALUE",
         "reputationTitle":"REPUTATION PTS",
+        "language":"english",
+        "rollIt":"ROLL IT",
+        "playerTitle":"PLAYER",
+
 
     //This is where the new addition ended
 
@@ -267,6 +271,8 @@ ubsApp.translation={
         "luckQuestion37":"Home delivery service started! You got 15 reputation points.",
 
         "convertTitle":"CONVERT",
+        "quizTitle":"QUIZ",
+
 
         // Advantage Card
         "advantageCardTitle":"ADVANTAGE CARDS",
