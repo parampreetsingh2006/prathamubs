@@ -390,12 +390,16 @@ monopoly.initOfflinePlayers=function(){
             object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.numberOfTokens=[];
             object.nameId="name"+(i);
+            var checked;
             for (var j = 0; j<tokens.length; j++) {
+                checked = (i==j);
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
                     "radioValue":tokens[j],
                     "radioId":"radio"+j,
-                    "tokenColor":tokens[j]
+                    "tokenColor":tokens[j],
+                    "checked":checked,
+                    "disabled":true
                 });
 
             }
