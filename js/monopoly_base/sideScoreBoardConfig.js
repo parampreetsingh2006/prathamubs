@@ -1,9 +1,9 @@
-ubsApp.centerScoreBoardConfig={
-    "centerScoreBoard":{
+ubsApp.sideScoreBoardConfig={
+    "sideScoreBoard":{
     "templates":[
         {
             "templateId":13,
-            "templateType":"centerScoreBoard",
+            "templateType":"sideScoreBoard",
             "bankBalanceTitle":"{{bankBalanceTitle}}",
             "cashTitle":"{{cashTitle}}",
             "debtTitle":"{{debtTitle}}",
@@ -12,6 +12,12 @@ ubsApp.centerScoreBoardConfig={
             "payOffTitle":"{{payOffTitle}}",
             "playerNameLabel":"{{playerNameTitle}}",
             "diceValueLabel":"{{diceValueTitle}}",
+            "inventoryTitle":"{{inventoryTitle}}",
+            "buy":"{{buy}}",
+            "reputationTitle":"{{reputationTitle}}",
+            "advantageCardTitle":"{{advantageCardTitle}}",
+            "convertTitle":"{{convertTitle}}",
+            "quizTitle":"{{quizTitle}}",
         }
     ]
 }

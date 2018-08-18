@@ -1,7 +1,9 @@
 monopoly.ubsBoardTemplate = undefined;
+monopoly.ubsSideScoreBoardTemplate = undefined;
 monopoly.ubsMonopolyStaticTemplate =undefined;
 monopoly.ubsformTemplate = undefined;
 monopoly.centerScoreBoardTemplate=undefined;
+monopoly.ubsEndGameTemplate = undefined;
 monopoly.boardConfig={};
 monopoly.salesScenarioArray=[];
 monopoly.luckScenarioArray=[];
@@ -15,11 +17,23 @@ monopoly.difficultyLevel=["easy","medium","hard"];
 monopoly.flag2= false;
 monopoly.computerDifficulty={};
 monopoly.scenario ={};
+monopoly.numplayers=0;
+let numplayers = monopoly.numplayers;
+monopoly.playerChance = 0;
+let playerChance = monopoly.playerChance;
+
+let cashTransfered=false;
+var initialPlayerCash=1000;
+var initialPlayerBankBalance=250000;
+var initialInventoryScore=60;
+var initialReputation=45;
 var harnamSinghProfit=11000;
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
+var ubsSideScoreBoardTemplate = monopoly.sideScoreBoardTemplate;
+var ubsEndGameTemplate = monopoly.ubsEndGameTemplate;
 var ubsMonopolyStaticTemplate= monopoly.ubsMonopolyStaticTemplate;
 var ubsformTemplate= monopoly.ubsformTemplate;
-var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
+// var ubsCenterScoreBoardTemplate=monopoly.centerScoreBoardTemplate;
 var boardConfig = monopoly.boardConfig;
 var salesScenarioArray=monopoly.salesScenarioArray;
 var luckScenarioArray=monopoly.luckScenarioArray;
@@ -33,10 +47,10 @@ var difficultyLevel=monopoly.difficultyLevel;
 var flag2=monopoly.flag2;
 var computerDifficulty=monopoly.computerDifficulty;
 var scenario =  monopoly.scenario;
-ubsApp.maxNumOfWeeks = 12;
+ubsApp.maxNumOfWeeks = 1;
 var renderTimeOutMiliSec = 3000;
 ubsApp.inventoryPerPercentValue = 1000;
-
+ubsApp.endGameConfig = {};
 $(document).ready(function(){
 	monopoly.intitializeTemplates();
   monopoly.initializeScenarios();
@@ -51,13 +65,15 @@ $(document).ready(function(){
 });
 
 monopoly.intitializeTemplates = function(){
-
 	ubsBoardTemplate = Template7.compile(monopoly.boardTemplate);
+	ubsSideScoreBoardTemplate = Template7.compile(monopoly.sideScoreBoardTemplate);
 	rollingDiceTemplate = Template7.compile(monopoly.rollingDiceTemplate);
-  ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
-  ubsformTemplate = Template7.compile(monopoly.formTemplate);
-  ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
+    ubsMonopolyStaticTemplate = Template7.compile(monopoly.staticTemplate);
+    ubsformTemplate = Template7.compile(monopoly.formTemplate);
+    //ubsCenterScoreBoardTemplate=Template7.compile(ubsApp.centerScoreBoardTemplate);
+    ubsEndGameTemplate = Template7.compile(monopoly.endGameTemplate);
 }
+
 monopoly.initialiseCategory = function(){
       for(let block = 0; block<boardConfig.top_row.length; block++){
           blockCategory[boardConfig.top_row[block].id]=boardConfig.top_row[block].category;
@@ -76,13 +92,14 @@ monopoly.initialiseCategory = function(){
 monopoly.renderPageforBoard = function(page) {
 	let html = "";
 	for(let i=0; i< page.length; i++) {
-    let templateConfig = page[i];
-    if(templateConfig.weekDeadLine){
-      numberOfWeeksDeadline=templateConfig.weekDeadLine;
-    }
+        let templateConfig = page[i];
+        if(templateConfig.weekDeadLine){
+          numberOfWeeksDeadline=templateConfig.weekDeadLine;
+        }
 		let templateType = templateConfig.templateType;
+
 		if(templateType == "board"){
-      flag2=true;
+            flag2=true;
 			boardConfig=templateConfig;
 			for(let i = 0; i<numplayers; i++){
 				templateConfig.top_row[0].players.push({
@@ -92,59 +109,71 @@ monopoly.renderPageforBoard = function(page) {
 			    "playerName" :userArray[i].getplayerName(),
 			    "score" : userArray[i].getplayerScore()
 			   });
-      }
-     
-      for(var j=0;j<templateConfig.bottom_row.length;j++){
-        let key=templateConfig.bottom_row[j].title;
-        let translatedString=ubsApp.translation[key];
-        templateConfig.bottom_row[j].title=translatedString;
-      }
-      for(var j=0;j<templateConfig.top_row.length;j++){
-        templateConfig.top_row[j].title=ubsApp.translation[templateConfig.top_row[j].title];
-      }
-      for(var j=0;j<templateConfig.left_col.length;j++){
-        templateConfig.left_col[j].title=ubsApp.translation[templateConfig.left_col[j].title];
-      }
-      for(var j=0;j<templateConfig.right_col.length;j++){
-        templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
-      }
-      console.log(templateConfig);
+             }
+              for(var j=0;j<templateConfig.bottom_row.length;j++){
+                let key=templateConfig.bottom_row[j].title;
+                let translatedString=ubsApp.translation[key];
+                templateConfig.bottom_row[j].title=translatedString;
+              }
+              for(var j=0;j<templateConfig.top_row.length;j++){
+                templateConfig.top_row[j].title=ubsApp.translation[templateConfig.top_row[j].title];
+              }
+              for(var j=0;j<templateConfig.left_col.length;j++){
+                templateConfig.left_col[j].title=ubsApp.translation[templateConfig.left_col[j].title];
+              }
+              for(var j=0;j<templateConfig.right_col.length;j++){
+                templateConfig.right_col[j].title=ubsApp.translation[templateConfig.right_col[j].title];
+              }
+              console.log(templateConfig);
 
-      monopoly.initialiseCategory();
-			html+=ubsBoardTemplate(templateConfig);
-		}else if(templateType == "rollingDice"){
-			rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
-			monopoly.updateRollingDiceTemplate(templateConfig);
-			html += rollingDiceTemplate(templateConfig);
-		}else if(templateType == "static") {
-			html += ubsStaticTemplate(templateConfig);
-    }
-    else if(templateType=="centerScoreBoard"){
-      var object={};
-      object.bankBalanceAmount="Rs. "+userArray[playerChance].getBankBalance();
-      object.cashAmount="Rs. "+userArray[playerChance].getplayerScore();    
-      object.debtAmount="Rs. "+userArray[playerChance].getCredit();
-      var template=ubsApp.pages["centerScoreBoard"].templates[0];
-      template=$.extend(template,object);
-      console.log(template);
-      html+=ubsCenterScoreBoardTemplate(template);
-    }
-    else if(templateType=="audioTemplate"){
-      html += ubsAudioTemplate(templateConfig);
-    }
-  }
+               monopoly.initialiseCategory();
+               rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
+               monopoly.updateRollingDiceTemplate(templateConfig);
+               html+=ubsBoardTemplate(templateConfig);
+            } else if(templateType == "sideScoreBoard") {
+                var object={};
+                object.bankBalanceAmount=userArray[playerChance].getBankBalance();
+                object.cashAmount=userArray[playerChance].getplayerScore();
+                object.debtAmount=userArray[playerChance].getCredit();
+                var template=ubsApp.pages["sideScoreBoard"].templates[0];
+                template=$.extend(template,object);
+                html += ubsSideScoreBoardTemplate(template);
+            }
+            /*else if(templateType == "rollingDice"){
+                rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
+                monopoly.updateRollingDiceTemplate(templateConfig);
+                html += rollingDiceTemplate(templateConfig);
+            }*/ else if(templateType == "static") {
+			    html += ubsStaticTemplate(templateConfig);
+            }
+            /*else if(templateType=="centerScoreBoard"){
+              var object={};
+              object.bankBalanceAmount="Rs. "+userArray[playerChance].getBankBalance();
+              object.cashAmount="Rs. "+userArray[playerChance].getplayerScore();
+              object.debtAmount="Rs. "+userArray[playerChance].getCredit();
+              var template=ubsApp.pages["centerScoreBoard"].templates[0];
+              template=$.extend(template,object);
+              console.log(template);
+              html+=ubsCenterScoreBoardTemplate(template);
+            }*/
+            else if(templateType=="audioTemplate"){
+              html += ubsAudioTemplate(templateConfig);
+            }
+            else if(templateType == "endGameTemplate") {
+                templateConfig = $.extend(templateConfig,ubsApp.endGameConfig);
+                html += ubsEndGameTemplate(templateConfig);
+            }
+        }
 
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
-	
-	
-  if(flag2) {
 
-     ubsApp.initializeLeaderBoard("Score");
-     ubsApp.currentPlayerContents();
-     //$("#player").html(userArray[playerChance].getplayerName()); 
-
-}
+    if(flag2) {
+        ubsApp.initializeLeaderBoard("Score");
+        ubsApp.currentPlayerContents();
+        flag2 = false;
+        //$("#player").html(userArray[playerChance].getplayerName());
+    }
 }
 // monopoly.playComputer = function(div){
 //     div.addEventListener('playComputer', function (e) {
@@ -206,11 +235,18 @@ monopoly.myMove = function(count, pId, currentPos) {
         clearInterval(movePlayer);
         let message = userArray[pId].getplayerName() + " "  + ubsApp.getTranslation("gameFinishedForAUser");
         ubsApp.closeCurrentScenario();
-        ubsApp.openPopup({ "message" : message,
-                                  "header" : ubsApp.getTranslation("NOTICE"),
-                                  "headerStyle" : "text-align: center;  color: green; font-weight: 700; font-size: 3vw;",
-                                       });
-        setTimeout(function() {ubsApp.closePopup(); ubsApp.nextMove();}, 5000);
+        monopoly.noPlayersPlaying--;
+        if(monopoly.noPlayersPlaying == 0) {
+            ubsApp.endGame();
+        } else {
+            ubsApp.openCurrentPlayerSummary({
+                    			"header" : ubsApp.getTranslation("EndGameSummary"),
+                    			"isWeekSummary" : true,
+                    			});
+            setTimeout(function() { ubsApp.nextMove();}, 5000);
+        }
+
+
 
     }
 
@@ -313,6 +349,7 @@ monopoly.storePlayerDetails=function(){
       userArray.push(user);
       numplayers++;
     }
+    monopoly.noPlayersPlaying = numplayers;
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
 }
@@ -324,16 +361,10 @@ monopoly.initPlayers=function(){
     {
         for(var i=0;i<numplayers;i++)
         {
-            object={};
-            object.numberOfTokens=[];
-            object.nameTitle=ubsApp.translation["name"]+(i+1);
-
             var object={};
             object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.numberOfTokens=[];
-
             object.nameId="name"+(i);
-            object.numberOfTokens=[];
             for (var j = 0; j<tokens.length; j++) {
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
@@ -346,6 +377,35 @@ monopoly.initPlayers=function(){
             document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
       }
       
+    }
+}
+monopoly.initOfflinePlayers=function(){
+    numplayers=document.getElementById("num_offline_players").value;
+    document.getElementById("take_input").innerHTML="";
+    if(numplayers<=4)
+    {
+        for(var i=0;i<numplayers;i++)
+        {
+            var object={};
+            object.nameTitle=ubsApp.translation["name"]+(i+1);
+            object.numberOfTokens=[];
+            object.nameId="name"+(i);
+            var checked;
+            for (var j = 0; j<tokens.length; j++) {
+                checked = (i==j);
+                object.numberOfTokens.push(
+                {   "radioName":"Radio"+i,
+                    "radioValue":tokens[j],
+                    "radioId":"radio"+j,
+                    "tokenColor":tokens[j],
+                    "checked":checked,
+                    "disabled":true
+                });
+
+            }
+            document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
+      }
+
     }
 }
 monopoly.initComputerDifficulty=function()
@@ -430,6 +490,7 @@ monopoly.chooseLanguage=function(){
   }
    jsElm.onload=function(){
       ubsApp.translateScenarios();
+      monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 28%;\"> </img>";
       monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
     }
 
@@ -439,7 +500,7 @@ monopoly.readInstruction=function(){
 	 
 	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
           "header" : ubsApp.getTranslation("instructionHeader"),
-          "headerStyle" : "text-align: center;  color: green; font-weight: 700; font-size: 3vw;"
+          "headerStyle" : "text-align: center;  color: red; font-size: 2vw;"
                });
 	  }
 
@@ -466,17 +527,44 @@ monopoly.startGame=function(){
                "headerStyle" : "",
                "showCloseButton" : false,
                });
-     ubsApp.translateScenarios();
-     monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
-     ubsApp.closePopup();
-	    }
+           ubsApp.translateScenarios();
+           if(true) { // is mode offline
+              monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
+           } else {
+              monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+           }
+           ubsApp.closePopup();
+	   }
 }
 
 
  ubsApp.endGame=function(){
   	var arr=[];
 
+    let playersConfig =[];
   	for(var i=0;i<numplayers;i++){
+  	    let playerConfig = {};
+  	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 5;
+        playerConfig.currentWeekCash = "₹ "+ userArray[playerChance].getplayerScore();
+        playerConfig.currentWeekBankBalance = "₹ "+ userArray[playerChance].getBankBalance();
+        playerConfig.currentWeekReputationPts = userArray[playerChance].getReputationPts();
+        playerConfig.currentWeekCredit = userArray[playerChance].getCredit();
+        playerConfig.currentWeekAdvantageCard = userArray[playerChance].getAdvantageCardNumber();
+        playerConfig.userName = userArray[playerChance].getplayerName();
+        playerConfig.currentInventory = "₹ "+ userArray[playerChance].getInventoryScore() * ubsApp.inventoryPerPercentValue + "(" + userArray[playerChance].getInventoryScore() + "%" + ")";
+        if(i > 0) {
+            playerConfig.showBorder = true;
+        }
+        playerConfig.BankBalance = ubsApp.getTranslation("BankBalance");
+        playerConfig.ReputationPoints = ubsApp.getTranslation("repPoints");
+        playerConfig.AdvantageCard = ubsApp.getTranslation("advantageCardTitle");
+        playerConfig.Close = ubsApp.getTranslation("Close");
+        playerConfig.PLAYER = ubsApp.getTranslation("PLAYER");
+        playerConfig.INVENTORY = ubsApp.getTranslation("INVENTORY");
+        playerConfig.playerNameTitle = ubsApp.getTranslation("playerNameTitle");
+         playerConfig.Credit = ubsApp.getTranslation("Credit");
+          playerConfig.Cash = ubsApp.getTranslation("Cash");
+
   		var harnamProjectedScore=userArray[i].getWeeks()*harnamSinghProfit;
   		let currentPlayerProfit=0;
   		currentPlayerProfit+=(userArray[i].getplayerScore()-initialPlayerCash);
@@ -490,6 +578,9 @@ monopoly.startGame=function(){
   		else{
   			arr[i]=true;
   		}
+
+  		playersConfig[i] = playerConfig;
+
   	}
 
   		var winnerName="";
@@ -510,8 +601,11 @@ monopoly.startGame=function(){
 
   		if(!atleastOne){
   		winnerName="No One Wins"
+
   	}
-  	console.log(winnerName);
+
+  	ubsApp.endGameConfig.players = playersConfig;
+  	monopoly.renderPageforBoard(monopoly.pages.endGamePage);
   }
 
 ubsApp.nextMove = function(){

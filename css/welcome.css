@@ -1,0 +1,59 @@
+.instructionButtons{
+  margin-right: 1%;
+  width: 100%;
+  padding: .4% 1%;
+  background:url('../images/button long.png');
+  color: navy;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 32px;
+  width: 21vw;
+  height: 13vh;
+  font-size: 25px;
+  
+}
+.startButtons{
+  margin-right: 1%;
+  width: 100%;
+  padding: .4% 1%;
+  background:url('../images/button long.png');
+  color: maroon;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 32px;
+  width: 21vw;
+  height: 13vh;
+  font-size: 25px;
+}
+
+.redStrip{
+   margin: 2%;
+   width: 100%;
+   padding: -3.6% 1%;
+   background: url(../images/red_strip.png);
+   width: 99vw;
+   height: 9vh;
+   top: 32%;
+   vertical-align: -webkit-baseline-middle;
+   position: relative;
+   text-align: center;
+  
+}
+
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+  
+  
+}
+
+

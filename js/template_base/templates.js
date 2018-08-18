@@ -714,14 +714,14 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               {{bankBalanceTitle}} '+
 '                               <span id="bankBalanceValue">₹ {{bankBalance}}</span>'+
 '                           </span>'+
-'                      </div><br><br><br><br>'+
+'                      </div><br><br>'+
 '                      {{#if #payOff}}'+
 '                           <div>'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
-'                                    <span class="payOffLeftSubTitleValue">Rs. <span id="debtValue">{{debt}}<span>'+
+'                                    <span class="payOffDebtAmountValue">Rs. <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
 '                           </div><br><br>'+
-'                      {{/if}}'+
+'                      {{else}}<br><br>{{/if}}'+
 '                      <span class="payOffSubTitleLeft">'+
 '                           {{#if payOff}}'+
 '                               {{amountToPayTitle}}:'+
@@ -729,7 +729,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               {{amountToTransferTitle}} ₹ '+
 '                           {{/if}}'+
 '                      </span>'+
-'                      <span class="payOffLeftSubTitleValue">'+
+'                      <span class="payOffAmountToPayValue">'+
 '                           <input type="number" id="debtPaymentText" class="borderB1">'+
 '                      </span><br><br>'+
 '                      {{#if payOff}}'+
@@ -738,14 +738,14 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                           </span>'+
 '                      {{/if}}'+
 '                      {{#if payOff}}'+
-'                           <span class="payOffLeftSubTitleValue">'+
+'                           <span class="payOffLeftModeOfPaymentValue">'+
 '                               <select class="borderB1" id="payOffDropDown">'+
 '                                   <option value="cash">{{cashTitle}}</option>'+
 '                                   <option value="cheque">{{chequeTitle}}</option>'+
 '                               </select>'+
 '                           </span><br><br>'+
-'                      {{/if}}'+
-'                      <br><br><br><div class="payOffButtonContainer" style="left:25%;">'+
+'                      {{else}}<br><br>{{/if}}'+
+'                      <br><div class="payOffButtonContainer" style="left:25%;">'+
 '                           <button class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
 '                      <div style="left:45%;" class="payOffButtonContainer">'+
@@ -920,8 +920,8 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 
-ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0s; position: absolute; margin: 0px; background-color: rgb(105, 105, 105); opacity: 0.95; width: 100%; z-index: 0;"></div><div style="{{style}}">'+
-                       '    <div style="background-color:white;margin:5%;padding: 10px;position: relative; overflow: auto;  max-height:50vh;">'+
+ubsApp.popUpTemplate = '<div style="{{style}}">'+
+                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;       height: 50vh;">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -932,10 +932,12 @@ ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0
                        '        <div>'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
-                       '        {{#if showCloseButton}}'+
-                       '            </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeHelp()" >{{Close}}</button> </div>'+
-                       '        {{/if}}'+
-                       '        </div>'+
+                       '            {{#if showImage}}'+
+                       '            <div style="text-align: center;height: 25vh;"> <img style="height: 100%;"  src="{{imageUrl}}"></img></div>'+
+                       '            {{/if}}'+
+                       '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closePopup()" >{{Close}}</button> </div>'+
+                       ''+
+                       '    </div>'+
                        '    </div>'+
                        '</div>';
 
@@ -943,59 +945,63 @@ ubsApp.popUpTemplate = '<div style="height: 100%; transition: height 0.5s ease 0
 
 
 
-ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
-                             '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;   ">'+
-                             ''+
-                             '        <div>'+
-                             ''+
-                             '            <div style="{{headerStyle}}" >{{userName}} {{WeeklySummary}}</div>'+
-                             ''+
-                             '        </div>'+
-                             ''+
-                             ''+
-                             '        <div>'+
-                             '            <table class="table table-bordered">'+
-                             '                <thead>'+
-                             '                <tr>'+
-                             '                    <th></th>'+
-                             '                    <th>{{LastWeek}}</th>'+
-                             '                    <th>{{CurrentWeek}}</th>'+
-                             '                </tr>'+
-                             '                </thead>'+
-                             '                <tbody>'+
-                             '                <tr>'+
-                             '                    <td>{{Cash}}</td>'+
-                             '                    <td>{{lastWeekCash}}</td>'+
-                             '                    <td>{{currentWeekCash}}</td>'+
-                             '                </tr>'+
-                             '                <tr>'+
-                             '                    <td>{{BankBalance}}</td>'+
-                             '                    <td>{{lastWeekBankBalance}}</td>'+
-                             '                    <td>{{currentWeekBankBalance}}</td>'+
-                             '                </tr>'+
-                             '                <tr>'+
-                             '                    <td>{{Credit}}</td>'+
-                             '                    <td>{{lastWeekCredit}}</td>'+
-                             '                    <td>{{currentWeekCredit}}</td>'+
-                             '                </tr>'+
-                             '                <tr>'+
-                             '                    <td>{{ReputationPoints}}</td>'+
-                             '                    <td>{{lastWeekReputationPts}}</td>'+
-                             '                    <td>{{currentWeekReputationPts}}</td>'+
-                             '                </tr>'+
-                             '                <tr>'+
-                             '                    <td>{{AdvantageCard}}</td>'+
-                             '                    <td>{{lastWeekAdvantageCard}}</td>'+
-                             '                    <td>{{currentWeekAdvantageCard}}</td>'+
-                             '                </tr>'+
-                             '                </tbody>'+
-                             '            </table>'+
-                             '        </div>'+
-                             ''+
-                             '        <div>'+
-                             ''+
-                             '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button> </div>'+
-                             '    </div>'+
-                             '</div>'+
-                             '</div>';
 
+ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
+                              '    <div style="background-color: white;margin-left:1%;margin-right:1%;position: relative; overflow: auto; max-height: 50vh; ">'+
+                              ''+
+                              '        <div>'+
+                              ''+
+                              '            <div style="{{headerStyle}}" >{{header}}</div>'+
+                              ''+
+                              '        </div>'+
+                              ''+
+                              '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
+                              '        '+
+                              '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: 700;">{{WeekTitle}} {{weekNumber}}</div>'+
+                              '        <div style="display: inline-block;width: 100%;font-weight: 700;">'+
+                              '            <div style="float: left;width: 45%;">'+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left;">{{BankBalance}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekBankBalance}}</div>'+
+                              '                </div>'+
+                              ''+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left;">{{Cash}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekCash}}</div>'+
+                              '                </div>'+
+                              ''+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left;">{{Credit}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekCredit}}</div>'+
+                              '                </div>'+
+                              '            </div>'+
+                              '            <div style="float: right;width: 45%;">'+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left;">{{INVENTORY}}</div>'+
+                              '                        <div style="float: right;">{{currentInventory}}</div>'+
+                              '                </div>'+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left;">{{INVENTORYVALUE}}</div>'+
+                              '                        <div style="float: right;">{{currentInventoryValue}}</div>'+
+                              '                </div>'+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left;">{{ReputationPoints}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekReputationPts}}</div>'+
+                              '                </div>'+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left;">{{AdvantageCard}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekAdvantageCard}}</div>'+
+                              '                </div>'+
+                              ''+
+                              '            </div>'+
+                              '        </div>'+
+                              ''+
+                              ''+
+                              '        <div style="display:inline-block;margin-top: 10px;width:50%;">'+
+                              '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;">{{playerNameTitle}}: {{userName}}</div>'+
+                              '            <div style="float:right;"> '+
+                              '                <button style="background-image: url(images/buttonsmall.png);border: none;padding: 5px;color: #c34848;font-weight: bold;font-size: large;border-radius: 5px;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button>'+
+                              '            </div>'+
+                              '        </div>'+
+                              '</div>'+
+                              '</div>';

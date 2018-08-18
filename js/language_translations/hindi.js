@@ -23,6 +23,7 @@ ubsApp.translation={
     "rollit":"घुमाओ",
     "endGame":"अंत खेल",
     "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
+    "enterOfflinePlayers":"खिलाड़ियों की संख्या दर्ज करें",
     "initPageTitle":"खेल में आपका स्वागत है",
     "storePlayerDetailsButton":"अगला पृष्ठ",
     "computerRequiredTitle":"कंप्यूटर आवश्यक है?",
@@ -49,6 +50,9 @@ ubsApp.translation={
     "insuranceTitle":"बीमा",  //   इनश्योरेंस
     "reputationTitle":" प्रतिष्ठा अंक", // नेकनामी  अंक
     "inventoryValueTitle":"इन्वेंटरी मूल्य",
+    "language":"hindi",
+    "rollIt":"घुमाओ",
+    "playerTitle":"खिलाड़ी",
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
     "bankBalanceTitle":"बैंक राशि",
@@ -245,9 +249,8 @@ ubsApp.translation={
     "cheque":"चेक",
     "mode":"भुगतान का प्रकार :",
 
-
     "convertTitle":"कन्वर्ट",
-
+    "quizTitle":"प्रश्नोत्तरी",
 
     //luck
     "luckQuestion1":"स्क्रैच कार्ड कैश पुरस्कार: 500 रुपये",
@@ -307,6 +310,9 @@ ubsApp.translation={
     "luckQuestion55":"Change to Hindi:Government increased the prices on  Wheat. You lose Rs. 100 per week",
     "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
     "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
+     "EndGameSummary":"अंत खेल सारांश",
+     "GAMEOVER":"खेल खत्म",
+             "gameLogo":"images/hindi/logo.png",
 
      // Advantage Card
      "advantageCardTitle":"एडवांटेज कार्ड",
@@ -355,10 +361,10 @@ ubsApp.translation={
 
        "loadingGameMessage": "गेम लोड हो रहा है...",
 
-       "ReadInstructions" : "निर्देश पढ़ें",
+       "ReadInstructions" : "निर्देश देखें",
        "StartGame" : "खेल शुरू",
        
-       "instructionHeader" : "कृपया निर्देश ध्यान से पढ़ें",
+       "instructionHeader" : "निर्देश",
        "instructionsMessage" : "खेल निर्देश / निर्देश" +
 					    	   "यदि आप खेल के लिए नए हैं, तो प्राथम द्वारा निर्धारित गाइड मिशन का पालन करने की अनुशंसा की जाती है" +
 					    	   "यह खेल पासा की मदद से खेला जाएगा।" +
@@ -374,6 +380,8 @@ ubsApp.translation={
        "INVENTORYVALUE": "INVENTORY VALUE",
        "INVENTORY" : "INVENTORY",
        "decisionResult": "DECISION RESULT",
+       "welcome":"सुस्वागतम",
+       
 	   
 	   /******************************************Quiz key Start******************************************************************/
        "QuizQuestion1" : "We should keep our savings with banks because",
