@@ -338,7 +338,7 @@ ubsApp.translation={
 
         "loadingGameMessage": "Loading Game...",
 
-        "ReadInstructions" : "Read Instructions",
+        "ReadInstructions" : "View Instructions",
         "StartGame" : "Start Game",
         
         "instructionHeader" : "INSTRUCTIONS",
