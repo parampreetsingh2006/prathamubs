@@ -300,9 +300,12 @@ body {
 .luckPayButton,.paymentPayButton{
     padding:5px;
     border:0;
-    background-color:red;
     color:#123503;
-    background-image:url('../images/buttonsmedium.png');
+    background-image:url('../images/buttonsmall.png');
+    background-size: 100% 100%;
+    background-color:transparent;
+    background-repeat: no-repeat;
+    width: 45%;
 }
 .alternateMessageContainer{
     font-weight:600;
@@ -316,14 +319,18 @@ body {
     padding:5px;
     border:0;
     color:#0e0e54;
-    background-image:url('../images/button small.png');
+    background-image:url('../images/buttonmedium.png');
+    background-size: 100% 100%;
+    background-color:transparent;
 }
 
 .wildCardButton{
     padding:5px;
     border:0;
     color:#560a56;
-    background-image:url('../images/buttonsmedium.png');
+    background-image:url('../images/buttonmedium.png');
+    background-size: 100% 100%;
+    background-color:transparent;
 }
 
 .luckScreenTitle{
