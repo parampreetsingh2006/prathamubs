@@ -23,6 +23,7 @@ ubsApp.translation={
     "rollit":"घुमाओ",
     "endGame":"अंत खेल",
     "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
+    "enterOfflinePlayers":"खिलाड़ियों की संख्या दर्ज करें",
     "initPageTitle":"खेल में आपका स्वागत है",
     "storePlayerDetailsButton":"अगला पृष्ठ",
     "computerRequiredTitle":"कंप्यूटर आवश्यक है?",

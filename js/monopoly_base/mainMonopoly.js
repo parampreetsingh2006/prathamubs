@@ -361,16 +361,10 @@ monopoly.initPlayers=function(){
     {
         for(var i=0;i<numplayers;i++)
         {
-            object={};
-            object.numberOfTokens=[];
-            object.nameTitle=ubsApp.translation["name"]+(i+1);
-
             var object={};
             object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.numberOfTokens=[];
-
             object.nameId="name"+(i);
-            object.numberOfTokens=[];
             for (var j = 0; j<tokens.length; j++) {
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
@@ -383,6 +377,31 @@ monopoly.initPlayers=function(){
             document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
       }
       
+    }
+}
+monopoly.initOfflinePlayers=function(){
+    numplayers=document.getElementById("num_offline_players").value;
+    document.getElementById("take_input").innerHTML="";
+    if(numplayers<=4)
+    {
+        for(var i=0;i<numplayers;i++)
+        {
+            var object={};
+            object.nameTitle=ubsApp.translation["name"]+(i+1);
+            object.numberOfTokens=[];
+            object.nameId="name"+(i);
+            for (var j = 0; j<tokens.length; j++) {
+                object.numberOfTokens.push(
+                {   "radioName":"Radio"+i,
+                    "radioValue":tokens[j],
+                    "radioId":"radio"+j,
+                    "tokenColor":tokens[j]
+                });
+
+            }
+            document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
+      }
+
     }
 }
 monopoly.initComputerDifficulty=function()
@@ -504,10 +523,14 @@ monopoly.startGame=function(){
                "headerStyle" : "",
                "showCloseButton" : false,
                });
-     ubsApp.translateScenarios();
-     monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
-     ubsApp.closePopup();
-	    }
+           ubsApp.translateScenarios();
+           if(true) { // is mode offline
+              monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
+           } else {
+              monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+           }
+           ubsApp.closePopup();
+	   }
 }
 
 

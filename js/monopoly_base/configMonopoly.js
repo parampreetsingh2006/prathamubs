@@ -58,6 +58,7 @@ monopoly.pages = {
   }
 ],
 
+
 "InitialisePlayers":[{
         "templateId":1,
         "templateType":"static",
@@ -88,6 +89,63 @@ monopoly.pages = {
         "templateType":"static",
         "style":"position:absolute;left:45%;top:10%;",
         "src":"<input type=\"number\"  id=\"num_players\"   oninput=\"monopoly.initPlayers()\"></input><br><br>",
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "style":" top:15%;left:40%;position:absolute;",
+        "src":"<div id=\"take_input\"></div>",
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "style":" top:85%;left:45%;position:absolute;",
+        "src":"<button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button>",
+    },
+    /*{
+        "templateId":1,
+        "templateType":"static",
+        "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label for\"english\">English</label>&nbsp&nbsp<input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label for\"hindi\">Hindi</label></div>",
+        "style": "position:absolute; left:44%;bottom:3%;"
+    }*/
+],
+
+"InitialiseOfflinePlayers":[{
+        "templateId":1,
+        "templateType":"static",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+        "id":"initPageTitle",
+        "src":"{{initPageTitle}}",
+    },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\">{{computerRequiredTitle}}</label>",
+//        "style": "position:absolute; right:10%;top:10%;color:black;",
+//    },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "src":"<div id=\"computerDetails\"></div>",
+//        "style": "position:absolute; right:10%;top:20%;"
+//    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "src": "<div id=\"enterOfflinePlayers\">{{enterOfflinePlayers}}</div>" ,
+        "style": "position:absolute; left:39%;top:10%;color:black;",
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "style":"position:absolute;left:50%;top:10%;",
+        "src":"<select id=\"num_offline_players\"   onchange=\"monopoly.initOfflinePlayers()\"> "+
+                    "<option value=\"\"><span id=\"player1\"> </span></option> "+
+                    "<option value=\"1\"><span id=\"player1\">1</span></option> "+
+                    "<option value=\"2\"><span id=\"player2\">2</span></option> "+
+                    "<option value=\"3\"><span id=\"player3\">3</span></option> "+
+                    "<option value=\"4\"><span id=\"player4\">4</span></option> "+
+                "</select> "
     },
     {
         "templateId":1,

@@ -31,6 +31,7 @@ ubsApp.translation={
     //This is where the new addition ended
 
         "enterPlayers":"Enter the number of Players",
+        "enterOfflinePlayers":"NO. OF PLAYERS",
         "initPageTitle":"Welcome to the Game",
         "storePlayerDetailsButton":"Next Page",
         "computerRequiredTitle":"Computer Required?",
