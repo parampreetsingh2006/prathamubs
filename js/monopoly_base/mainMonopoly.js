@@ -483,7 +483,14 @@ monopoly.chooseLanguage=function(){
     
   }
    jsElm.onload=function(){
+       ubsApp.openPopup({
+                     "message" : ubsApp.getTranslation("loadingGameMessage"),
+                     "header" : "",
+                     "headerStyle" : "",
+                     "showCloseButton" : false,
+                     });
       ubsApp.translateScenarios();
+      ubsApp.closePopup();
       monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 28%;\"> </img>";
       monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
     }
@@ -515,19 +522,13 @@ monopoly.startGame=function(){
 	    
 	  }
 	   jsElm.onload=function(){
-		   ubsApp.openPopup({
-               "message" : ubsApp.getTranslation("loadingGameMessage"),
-               "header" : "",
-               "headerStyle" : "",
-               "showCloseButton" : false,
-               });
-           ubsApp.translateScenarios();
+		 
+
            if(true) { // is mode offline
               monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
            } else {
               monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
            }
-           ubsApp.closePopup();
 	   }
 }
 
@@ -765,7 +766,8 @@ monopoly.playerChance = 0;
 userArray=[];
 monopoly.intitializeTemplates();
   monopoly.initializeScenarios();
-
+ubsApp.intitializeTemplates();
+	ubsApp.mapTemplatetoFunction();
   monopoly.renderPageforBoard(monopoly.pages.Splash);
 
   //setTimeout(monopoly.renderPageforBoard, 30, monopoly.pages.Splash);
