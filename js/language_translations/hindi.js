@@ -11,6 +11,7 @@ ubsApp.translation={
     "pratham_title_decision":"निर्णय लेना",
     "close":"बंद करे",
      "Close":"बंद करे",
+     "CLOSE" : "बंद करे",
     "scoreSideBar":"स्कोर",
     "documentSideBar":"दस्तावेज़",
     "inventorySideBar":"इन्वेंटरी",
@@ -53,6 +54,7 @@ ubsApp.translation={
     "language":"hindi",
     "rollIt":"घुमाओ",
     "playerTitle":"खिलाड़ी",
+    "PLAYER" : "खिलाड़ी",
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
     "bankBalanceTitle":"बैंक राशि",
@@ -378,7 +380,7 @@ ubsApp.translation={
        "quizWrongAnswerMessage":"You have got wrong message!",
        "quizRightAnswer":"RIGHT ANSWER",
        "INVENTORYVALUE": "INVENTORY VALUE",
-       "INVENTORY" : "INVENTORY",
+       "INVENTORY" : "इनवेंटरी",
        "decisionResult": "DECISION RESULT",
        "welcome":"सुस्वागतम",
        
