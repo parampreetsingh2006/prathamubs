@@ -714,14 +714,14 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               {{bankBalanceTitle}} '+
 '                               <span id="bankBalanceValue">₹ {{bankBalance}}</span>'+
 '                           </span>'+
-'                      </div><br><br><br><br>'+
+'                      </div><br><br>'+
 '                      {{#if #payOff}}'+
 '                           <div>'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
-'                                    <span class="payOffLeftSubTitleValue">Rs. <span id="debtValue">{{debt}}<span>'+
+'                                    <span class="payOffDebtAmountValue">Rs. <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
 '                           </div><br><br>'+
-'                      {{/if}}'+
+'                      {{else}}<br><br>{{/if}}'+
 '                      <span class="payOffSubTitleLeft">'+
 '                           {{#if payOff}}'+
 '                               {{amountToPayTitle}}:'+
@@ -729,7 +729,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                               {{amountToTransferTitle}} ₹ '+
 '                           {{/if}}'+
 '                      </span>'+
-'                      <span class="payOffLeftSubTitleValue">'+
+'                      <span class="payOffAmountToPayValue">'+
 '                           <input type="number" id="debtPaymentText" class="borderB1">'+
 '                      </span><br><br>'+
 '                      {{#if payOff}}'+
@@ -738,14 +738,14 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:whi
 '                           </span>'+
 '                      {{/if}}'+
 '                      {{#if payOff}}'+
-'                           <span class="payOffLeftSubTitleValue">'+
+'                           <span class="payOffLeftModeOfPaymentValue">'+
 '                               <select class="borderB1" id="payOffDropDown">'+
 '                                   <option value="cash">{{cashTitle}}</option>'+
 '                                   <option value="cheque">{{chequeTitle}}</option>'+
 '                               </select>'+
 '                           </span><br><br>'+
-'                      {{/if}}'+
-'                      <br><br><br><div class="payOffButtonContainer" style="left:25%;">'+
+'                      {{else}}<br><br>{{/if}}'+
+'                      <br><div class="payOffButtonContainer" style="left:25%;">'+
 '                           <button class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
 '                      <div style="left:45%;" class="payOffButtonContainer">'+

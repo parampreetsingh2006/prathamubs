@@ -58,6 +58,7 @@ monopoly.pages = {
   }
 ],
 
+
 "InitialisePlayers":[{
         "templateId":1,
         "templateType":"static",
@@ -109,9 +110,78 @@ monopoly.pages = {
     }*/
 ],
 
+"InitialiseOfflinePlayers":[{
+        "templateId":1,
+        "templateType":"static",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
+        "id":"initPageTitle",
+        "src":"{{initPageTitle}}",
+    },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "src":"<input type=\"checkbox\" name=\"computer\" id=\"computer\" onclick=\"monopoly.initComputerDifficulty()\"><label for=\"computer\" id=\"computerRequiredTitle\">{{computerRequiredTitle}}</label>",
+//        "style": "position:absolute; right:10%;top:10%;color:black;",
+//    },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "src":"<div id=\"computerDetails\"></div>",
+//        "style": "position:absolute; right:10%;top:20%;"
+//    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "src": "<div id=\"enterOfflinePlayers\">{{enterOfflinePlayers}}</div>" ,
+        "style": "position:absolute; left:39%;top:10%;color:black;",
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "style":"position:absolute;left:50%;top:10%;",
+        "src":"<select id=\"num_offline_players\"   onchange=\"monopoly.initOfflinePlayers()\"> "+
+                    "<option value=\"\"><span id=\"player1\"> </span></option> "+
+                    "<option value=\"1\"><span id=\"player1\">1</span></option> "+
+                    "<option value=\"2\"><span id=\"player2\">2</span></option> "+
+                    "<option value=\"3\"><span id=\"player3\">3</span></option> "+
+                    "<option value=\"4\"><span id=\"player4\">4</span></option> "+
+                "</select> "
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "style":" top:15%;left:40%;position:absolute;",
+        "src":"<div id=\"take_input\"></div>",
+    },
+    {
+        "templateId":1,
+        "templateType":"static",
+        "style":" top:85%;left:45%;position:absolute;",
+        "src":"<button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button>",
+    },
+    /*{
+        "templateId":1,
+        "templateType":"static",
+        "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label for\"english\">English</label>&nbsp&nbsp<input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label for\"hindi\">Hindi</label></div>",
+        "style": "position:absolute; left:44%;bottom:3%;"
+    }*/
+],
+
 	"monopoly": [
         {
             "weekDeadLine":4,
+        },
+        /* {
+            "templateId":"1",
+            "templateType":"static",
+            "style":"position:absolute;bottom:18%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
+            "src":"<button id='rollIt' class='boardButtons' onclick=\"monopoly.rollDice()\" style=\"padding:5px; color:white;width:100%; border:0; font-size:1.05vw;background:#73e600; border-radius:5px; \">Roll it</button>",
+            "audioId":"diceRollAudio",
+        },*/
+        {
+            "templateType":"audioTemplate",
+            "audioSrc":"audio/01_Dice.mp3",
+            "audioId":"diceRollAudio",
         },
         
         // {
@@ -121,13 +191,13 @@ monopoly.pages = {
         //     "style":"",
         //     "src":"WEEK: <span id=\"weekContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
         // },
-        {
+        /*{
             "templateId":1,
             "templateType":"static",
             "id":"weekTitle",
             "style":"",
             "src":"{{weekTitle}}: <span  id=\"weekContent\" style=\"padding:1px;\">100</span>"
-        },
+        },*/
         // {
         //     "templateId":1,
         //     "templateType":"static",
@@ -135,13 +205,13 @@ monopoly.pages = {
         //     "style":"background-color:yellow;border:1px solid black; padding-left:1px;padding-right:1px; ",
         //     "src":"1"
         // },
-        {
+        /*{
             "templateId":1,
             "templateType":"static",
             "id":"inventoryTitle",
             "style":"",
             "src":"<span tooltip=\"{{inventoryTitle}}\" tooltip-position=\"top\" >{{inventoryTitle}} </span>: <span id=\"inventoryContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
-        },
+        },*/
         // {
         //     "templateId":1,
         //     "templateType":"static",
@@ -157,14 +227,14 @@ monopoly.pages = {
         //     "style":"background-color:yellow;border:1px solid black; padding:1px;",
         //     "src":"Rs. 250,000"
         // },
-        {
+       /* {
             "templateId":1,
             "templateType":"static",
             "id":"reputationTitle",
             "style":"",
             "src":"{{reputationTitle}}: <span id=\"reputationContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
-        },
-        {
+        },*/
+       /* {
             "templateId":1,
             "templateType":"static",
             "id":"advantageCardTitle",
@@ -177,7 +247,7 @@ monopoly.pages = {
             "id":"inventoryValueTitle",
             "style":"",
             "src":"{{inventoryValueTitle}}: <span id=\"inventoryValueContent\" style=\"background-color:yellow;border:1px solid black; padding:1px;\">100</span>"
-        },
+        },*/
         // {
         //     "templateId":1,
         //     "templateType":"static",
@@ -185,15 +255,15 @@ monopoly.pages = {
         //     "style":"background-color:yellow;border:1px solid black; padding:1px;",
         //     "src":"10"
         // },
-        {
+        /*{
             "templateId":1,
             "templateType":"static",
             "id":"convertToAdvantage",
             "style":"position:absolute;top:47.5%;left:90%;background-repeat: no-repeat;",
             "src":"<button onclick=\"ubsApp.openAdvantageCard()\" style=\"padding:7px; color:white;font-size:1.1vw; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{convertTitle}}</button>"
 
-        },
-        {
+        },*/
+       /* {
             "templateId":"1",
             "templateType":"static",
             "style":"position:absolute;bottom:18%;left:82%; width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
@@ -225,13 +295,13 @@ monopoly.pages = {
             "templateType":"static",
             "style":"position:absolute;bottom:10%;left:90%;width:7%;button[id=\"boardButtons\"]:focus {outline:0;}",
             "src":"<button class='boardButtons' onclick=\"ubsApp.endGame()\" style=\"padding:5px;width:100%; color:white; border:0; font-size:1.05vw;background:red; border-radius:5px; \">End Game</button>"
-        },
+        },*/
         
         // 
         
 
         //Previous was from here
-        {
+        /*{
             "templateId":1,
             "templateType":"static",
             "score_animation_req":"true",
@@ -285,7 +355,7 @@ monopoly.pages = {
             "style":"width: 0px; position: fixed;z-index: 1; white-space: nowrap;top: 50%;right: 0;background-color: #111;border-radius:2px;overflow-x: hidden;transition: width 0.5s; padding-top: 20px;  ",
             "src":"<div id=\"meritBoard\"  ></div>",
             "id" : "meritBoardParent"
-        },
+        },*/
         // {
         //     "templateId":1,
         //     "templateType":"static",
@@ -297,6 +367,9 @@ monopoly.pages = {
         {
             "templateId": 3,
             "templateType": "board",
+            "language":"{{language}}",
+            "rollIt":"{{rollIt}}",
+            "playerTitle":"{{playerTitle}}",
             "blocks":26,
             "top_row":[
             {
@@ -512,9 +585,9 @@ monopoly.pages = {
         },
         {
             "templateId":12,
-            "templateType":"centerScoreBoard",
+            "templateType":"sideScoreBoard",
         },
-        
+
             
     ],
 

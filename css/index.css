@@ -111,9 +111,24 @@ body {
 .payOffLeftSubTitleValue{
     position:absolute;
     left:50%;
-    top:56%;
+    top:60%;
 }
 
+.payOffDebtAmountValue{
+    position:absolute;
+    left:50%;
+    top:47%;
+}
+.payOffAmountToPayValue{
+    position:absolute;
+    left:50%;
+    top:57%;
+}
+.payOffLeftModeOfPaymentValue{
+    position:absolute;
+    left:50%;
+    top:67%;
+}
 .payOffButtonContainer{
     width:17%;
     position:absolute;
@@ -390,11 +405,6 @@ body {
     width: 80vw;height: 44.5vw;position: absolute;top: 10px;left: 10px;
 }
 
-#currentChanceDetails{
-    position:absolute;
-    top:65%;
-    left:40%;
-}
 button:focus {outline:0;}
 
 /*advantage Card*/

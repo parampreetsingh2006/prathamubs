@@ -23,10 +23,15 @@ ubsApp.translation={
         "insuranceTitle":"INSURANCE",
         "inventoryValueTitle":"INVENTORY VALUE",
         "reputationTitle":"REPUTATION PTS",
+        "language":"english",
+        "rollIt":"ROLL IT",
+        "playerTitle":"PLAYER",
+
 
     //This is where the new addition ended
 
         "enterPlayers":"Enter the number of Players",
+        "enterOfflinePlayers":"NO. OF PLAYERS",
         "initPageTitle":"Welcome to the Game",
         "storePlayerDetailsButton":"Next Page",
         "computerRequiredTitle":"Computer Required?",
@@ -112,7 +117,7 @@ ubsApp.translation={
         "payDebtTitle":"PAY DEBT",
         "payTitle":"PAY",
         "transferToBankTitle":"TRANSFER CASH TO BANK",
-        "debtAmountTitle":"Debt Amount",
+        "debtAmountTitle":"DEBT AMOUNT",
         "cancelTitle":"CANCEL",
         "withdrawTitle":"WITHDRAW",
 
@@ -290,6 +295,8 @@ ubsApp.translation={
         "luckQuestion57":"Bank decreased the interest rate on your fixed deposit",
 
         "convertTitle":"CONVERT",
+        "quizTitle":"QUIZ",
+
 
         // Advantage Card
         "advantageCardTitle":"ADVANTAGE CARDS",
@@ -306,8 +313,8 @@ ubsApp.translation={
 
         //withdraw from bank
 
-        "withdrawFromBankTitle":"Withdraw From Bank",
-        "amountToWithdrawTitle":"Amount To Withdraw",
+        "withdrawFromBankTitle":"WITHDRAW FROM BANK",
+        "amountToWithdrawTitle":"AMOUNT TO WITHDRAW",
 
         //payment Scenarios
         "paymentQuestion1":"Electricity Bill of Rs. 500 is due next week.",
@@ -338,10 +345,10 @@ ubsApp.translation={
 
         "loadingGameMessage": "Loading Game...",
 
-        "ReadInstructions" : "Read Instructions",
+        "ReadInstructions" : "View Instructions",
         "StartGame" : "Start Game",
         
-        "instructionHeader" : "Please read instructions carefully",
+        "instructionHeader" : "INSTRUCTIONS",
         "instructionsMessage" : "Game Instructions/Instrucciones "+
 						        "If you're new to the game, it is recommended to follow the Guide Mission prescribed by pratham"+
 						        "This game will be played with help of Dice."+
