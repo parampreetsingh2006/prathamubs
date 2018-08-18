@@ -307,7 +307,7 @@ ubsApp.translation={
         //withdraw from bank
 
         "withdrawFromBankTitle":"Withdraw From Bank",
-        "amountToWithdrawTitle":"Amount To Withdraw",
+        "amountToWithdrawTitle":"AMOUNT TO WITHDRAW",
 
         //payment Scenarios
         "paymentQuestion1":"Electricity Bill of Rs. 500 is due next week.",
