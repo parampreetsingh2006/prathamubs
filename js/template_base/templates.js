@@ -638,7 +638,7 @@ ubsApp.purchaseTemplate = '<div class="purchaseContainer">'+
 '        </div>'+
 '    </div>';
 
-ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
+ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relative;overflow:hidden">'+
 '       <img src="images/background.png" style="width:100%;height:100%;">'+
 '       <div class="luckScreenTitle" style="color:white">'+
 '            {{scenarioTitle}}'+
@@ -648,7 +648,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '           </div>{{/if}}'+
 
 '       <div id="luckPlayerNameTitle">'+
-'       PLAYER:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
+'       {{playerTitle}}:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
 '       </div>'+
 
 '       <div id="scenarioOutline">' + /* Wrapper div*/
@@ -690,10 +690,10 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '           </div>'+
 '       </div>'+
 '       <div class="luckHelpIcon">'+
-'           <button onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
+'           <input type="image" style="width:100%;" src="images/help-button.png" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" />'+
 '       </div>'+
 '       <div class="luckGameIcon">'+
-'           <img style="width:100%;"src="images/logo.png">'+
+'           <img style="width:100%;"src="{{gameLogo}}">'+
 '       </div>'+
 '</div>';
 

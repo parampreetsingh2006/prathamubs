@@ -32,12 +32,14 @@ ubsApp.luckConfig={
 			// "alternalteMessage":"{{alternateMessage}}",
 			"color":"black",
 			"titleColor":"white",
-			"icon":"luck",
+			"icon":"goodluck",
 			"background":"#FFFFFF",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -71,13 +73,15 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario2",
-			"icon":"luck",
+			"icon":"goodluck",
 			"type":"cash",
 			"background":"#FFFFFF",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -111,12 +115,14 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario3",
-			"icon":"luck",
+			"icon":"goodluck",
 			"background":"#FFFFFF",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -156,11 +162,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -199,11 +207,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -242,11 +252,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -279,11 +291,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -322,11 +336,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -365,11 +381,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -402,11 +420,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -447,11 +467,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -490,11 +512,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -533,11 +557,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -576,11 +602,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -618,11 +646,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -654,11 +684,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -697,11 +729,13 @@ ubsApp.luckConfig={
 			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario17",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -734,11 +768,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -777,11 +813,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -820,11 +858,13 @@ ubsApp.luckConfig={
 			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario20",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -857,11 +897,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -894,11 +936,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -938,11 +982,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -982,11 +1028,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1020,11 +1068,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1057,11 +1107,13 @@ ubsApp.luckConfig={
 			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario26",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1094,11 +1146,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1138,11 +1192,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1182,11 +1238,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1225,11 +1283,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1268,11 +1328,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1305,11 +1367,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1342,11 +1406,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1386,11 +1452,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1424,11 +1492,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1462,11 +1532,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"goodluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1499,11 +1571,13 @@ ubsApp.luckConfig={
 			"titleColor":"white",
 			"scenarioName":"luckyUnluckyScenario37",
 			"background":"#FFFFFF",
-			"icon":"luck", // change as per good luck or bad luck
+			"icon":"goodluck", // change as per good luck or bad luck
 			"wildCard":"true",
 			"backgroundIcon":"background",
 			"isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1537,11 +1611,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario38",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -1575,11 +1651,13 @@ ubsApp.luckConfig={
         			"titleColor":"white",
         			"scenarioName":"luckyUnluckyScenario39",
         			"background":"#FFFFFF",
-        			"icon":"luck", // change as per good luck or bad luck
+        			"icon":"goodluck", // change as per good luck or bad luck
         			"wildCard":"true",
         			"backgroundIcon":"background",
         			"isLuckCategory":true,
         			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
         		}
         	]
         	},
@@ -1618,11 +1696,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1661,11 +1741,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1704,11 +1786,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1742,11 +1826,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario43",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -1786,11 +1872,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1824,11 +1912,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario45",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -1861,11 +1951,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario46",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -1898,11 +1990,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario47",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -1942,11 +2036,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -1985,11 +2081,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -2028,11 +2126,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -2065,11 +2165,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario51",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -2102,11 +2204,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario52",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -2145,11 +2249,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -2182,11 +2288,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario54",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -2225,11 +2333,13 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -2262,11 +2372,13 @@ ubsApp.luckConfig={
     			"titleColor":"white",
     			"scenarioName":"luckyUnluckyScenario56",
     			"background":"#FFFFFF",
-    			"icon":"luck", // change as per good luck or bad luck
+    			"icon":"goodluck", // change as per good luck or bad luck
     			"wildCard":"true",
     			"backgroundIcon":"background",
     			"isLuckCategory":true,
     			"helpPageName":"luckHelp",
+			    "playerTitle":"{{playerTitle}}",
+			    "gameLogo":"{{gameLogo}}",
     		}
     	]
     	},
@@ -2306,11 +2418,14 @@ ubsApp.luckConfig={
 			"color":"black",
 			"titleColor":"white",
 			"background":"#FFFFFF",
-			"icon":"luck",
+			"icon":"badluck",
 			"wildCard":"true",
 			"backgroundIcon":"background",
             "isLuckCategory":true,
 			"helpPageName":"luckHelp",
+			"playerTitle":"{{playerTitle}}",
+			"gameLogo":"{{gameLogo}}",
+
 		}
 	]
 	},

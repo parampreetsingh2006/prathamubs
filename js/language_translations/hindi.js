@@ -106,7 +106,7 @@ ubsApp.translation={
 
     "payDebtTitle":"पाय डेब्ट",
     "transferToBankTitle":"ट्रांसफर कैश तो बैंक ",
-    "payTitle":"पाय ",
+    "payTitle":"भुगतान",
     "debtAmountTitle":"डेब्ट राशि",
     "cancelTitle":"कैंसिल ",
     "amountToPayTitle":"राशि तो पाय",

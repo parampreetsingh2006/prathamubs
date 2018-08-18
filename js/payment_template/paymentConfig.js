@@ -27,6 +27,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -58,6 +60,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -89,6 +93,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -120,6 +126,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -152,6 +160,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -182,6 +192,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -212,6 +224,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -242,6 +256,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -272,6 +288,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -302,6 +320,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -332,6 +352,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -362,6 +384,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -393,6 +417,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -423,6 +449,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -453,6 +481,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -483,6 +513,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -513,6 +545,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -543,6 +577,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -573,6 +609,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -603,6 +641,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
