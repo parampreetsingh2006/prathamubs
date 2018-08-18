@@ -49,6 +49,9 @@ ubsApp.translation={
     "insuranceTitle":"बीमा",  //   इनश्योरेंस
     "reputationTitle":" प्रतिष्ठा अंक", // नेकनामी  अंक
     "inventoryValueTitle":"इन्वेंटरी मूल्य",
+    "language":"hindi",
+    "rollIt":"घुमाओ",
+    "playerTitle":"खिलाड़ी",
     //This is where the new addition ended
     "nextQuestion":"अगला प्रश्न",
     "bankBalanceTitle":"बैंक राशि",
@@ -245,9 +248,8 @@ ubsApp.translation={
     "cheque":"चेक",
     "mode":"भुगतान का प्रकार :",
 
-
     "convertTitle":"कन्वर्ट",
-
+    "quizTitle":"प्रश्नोत्तरी",
 
     //luck
     "luckQuestion1":"स्क्रैच कार्ड कैश पुरस्कार: 500 रुपये",

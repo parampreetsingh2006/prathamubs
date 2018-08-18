@@ -23,6 +23,10 @@ ubsApp.translation={
         "insuranceTitle":"INSURANCE",
         "inventoryValueTitle":"INVENTORY VALUE",
         "reputationTitle":"REPUTATION PTS",
+        "language":"english",
+        "rollIt":"ROLL IT",
+        "playerTitle":"PLAYER",
+
 
     //This is where the new addition ended
 
@@ -290,6 +294,8 @@ ubsApp.translation={
         "luckQuestion57":"Bank decreased the interest rate on your fixed deposit",
 
         "convertTitle":"CONVERT",
+        "quizTitle":"QUIZ",
+
 
         // Advantage Card
         "advantageCardTitle":"ADVANTAGE CARDS",
