@@ -439,8 +439,10 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   </div>'+
 '   <div id="question_answer">'+
 '       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
-'       <span id="quizQuestionNumber"></span><span>.</span><span id="quizQuestion">{{question}}</span>'+
-'       {{#if quizResult}}<br><b><span id="quizResult"></span></b>{{/if}}'+
+'       <span id="quizQuestionNumber"></span><span id="quizQuestion">{{question}}</span>'+
+'       {{#if quizResult}}'+
+'           <br><b><div id="quizResult"></div>'+
+'       </b>{{/if}}'+
 '       {{#if options}}'+
 /*'       <span id ="quizQuestionNo">Question <span id="quizQuestionNumber"></span></span>'+*/
 '       <div id="quizOptions">'+
@@ -452,8 +454,8 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
-'       <span id="answerHeader"></span>'+
-/*'       <span id="answerMessage">You have wrong answer!</span>'+ TODO: To confirm from Pratham Team what message needs to be displayed*/ 
+'       <span id="answerHeader"></span><br>'+
+'       <span id="answerMessage"></span>'+
 '       <div id="quizOk">'+
 '           <button id="wrongAnswerOk"  class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
 '       </div>'+

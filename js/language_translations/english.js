@@ -1176,5 +1176,8 @@ ubsApp.translation={
        "quizCorrectAnswerHeading":"Correct Answer",
        "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
        "quizWrongAnswerHeading":"Wrong Answer",
+       "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
+       "wowImage":"images/wow.png",
+       "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
 
     }

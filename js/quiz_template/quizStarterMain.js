@@ -45,10 +45,11 @@ ubsApp.generalQuiz=function(config){   //credits can be amount or points dependi
 
 	let arr = [];
 	let noOfQuestions = config.noOfQuestions;
+	let totalNoOfQuestions =  config.totalNoOfQuestions;
     choiceSelected.page=config.resultPage;
 
 	while(arr.length < noOfQuestions){
-	    var randomNumber = Math.floor(Math.random()*5+1);
+	    var randomNumber = Math.floor(Math.random()*totalNoOfQuestions+1);
 	    if(arr.indexOf(randomNumber) > -1) continue;
 	    arr[arr.length] = randomNumber;
 	}

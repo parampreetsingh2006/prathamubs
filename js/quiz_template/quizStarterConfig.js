@@ -6,6 +6,7 @@ ubsApp.quizStarterConfig = {
 			"templateType": "quizStarter",
 			"noOfQuestions":5,
 			"resultPage":"generalQuizResult",
+			"totalNoOfQuestions":162,
 		}]
 	},
 
@@ -15,9 +16,6 @@ ubsApp.quizStarterConfig = {
 				"templateId": 1,
 				"templateType": "quiz",
 				"noOfQuestions":"",
-				"question": "Your Result is: ",
-				"msg1":"You answered ",
-				"msg2":" questions correctly. Your Reputation Points increase by ",
 				"quizResult":true,
 				"questionTime":3000,
 				"optionsTime":2000,
@@ -28,7 +26,8 @@ ubsApp.quizStarterConfig = {
 				"onClickPage": {
 					"nextPage" : "",
 					"hideScenarios" : true
-				}
+				},
+				"congratulationsImage":"{{wowImage}}",
 			}
 		]
 	},

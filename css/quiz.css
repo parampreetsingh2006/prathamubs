@@ -150,6 +150,11 @@
   transform: translateY(3px);
 }
 
+#quizWowImage {
+	width: 39%;
+	margin: 6% 0 0 24%;	
+}
+
 button[class="quizButtons"]:disabled{
   border: 1px solid #999999;
   background-color: #cccccc;
