@@ -189,6 +189,12 @@ ubsApp.translation={
         },
     "This item is not available in your Inventory":"This item is not available in your Inventory",
 
+    "salesResultHeader":"बिक्री परिणाम",
+    "salesWrongAnswer":"गलत जवाब।",
+    "salesCorrectAnswer":"सही जवाब।",
+    "salesCorrectRptpt":"Reputation points are increased to ",
+    "salesWrongRptpt":"Reputation points are reduced to ",
+
     //Decision
 
     "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",

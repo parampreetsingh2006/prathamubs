@@ -171,6 +171,12 @@ ubsApp.translation={
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
 
+        "salesResultHeader":"SALES RESULT",
+        "salesWrongAnswer":"Wrong Answer.",
+        "salesCorrectAnswer":"Correct Answer.",
+        "salesCorrectRptpt":"Reputation points are increased to ",
+        "salesWrongRptpt":"Reputation points are reduced to ",
+
         //Decision
         "invVal":"INVENTORY VALUE",
         "repPoints":"REPUTATION POINTS",

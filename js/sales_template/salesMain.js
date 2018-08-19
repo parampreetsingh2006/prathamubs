@@ -4,14 +4,21 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	tempVar.html += ubsOrdertemplate(templateConfig);
 }
 ubsApp.validateAmount = function() {
-var item = document.getElementsByName('amt');
+    var item = document.getElementsByName('amt');
 	for(var i=0;i<item.length;i++){
-	if(isNaN(item[i])) {
-
-	}}
+    	if(!item[i].value) {
+           ubsApp.openPopup({
+                   "message" : "Please calculate amount for all items.",//ubsApp.getTranslation("quizLimitReachedForWeek"),
+                   "header" : ubsApp.getTranslation("ERROR"),
+                   "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+                   "imageUrl" : "",
+                   });
+           return false;
+	    }
+	}
+    return true;
 }
 ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
-
 	let time = totalTime - $("#seconds").html();
 	let c = userArray[playerChance].getplayerScore();
 	let r = userArray[playerChance].getReputationPts();
@@ -32,6 +39,13 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 		userArray[playerChance].setReputationPts(r);
 
+		ubsApp.openResultPopup({
+                "message" : ubsApp.getTranslation("salesCorrectAnswer") + " " + ubsApp.getTranslation("salesCorrectRptpt") + userArray[playerChance].getReputationPts(),
+                "header" : ubsApp.getTranslation("salesResultHeader"),
+                "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+                "imageUrl" : "images/wow.jpg",
+                });
+
 	}else{
 
 		if(userTotal>total){
@@ -41,8 +55,15 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		else{
 			userArray[playerChance].setplayerScore(c+userTotal*31);
 		}
+
+		ubsApp.openResultPopup({
+               "message" : ubsApp.getTranslation("salesWrongAnswer") + " " + ubsApp.getTranslation("salesWrongRptpt") + userArray[playerChance].getReputationPts(),
+               "header" : ubsApp.getTranslation("salesResultHeader"),
+               "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+               "imageUrl" : "images/wrong.jpg",
+               });
 	}
-	ubsApp.checkPageorBoard(page,amount,hideScenarios);
+//	ubsApp.checkPageorBoard(page,amount,hideScenarios);
 }
 
 ubsApp.calculateBill = function(){
