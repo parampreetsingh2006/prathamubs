@@ -937,7 +937,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        '            {{#if showImage}}'+
                        '            <div style="text-align: center;height: 25vh;"> <img style="height: 100%;"  src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
-                       '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closePopup()" >{{Close}}</button> </div>'+
+                       '        </div> <div style="text-align: center;margin-top: 10px;"> <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin-left: 45%;    padding: 7px; color: red;font-weight:700" onclick="ubsApp.closePopup()" >{{Close}}</div> </div>'+
                        ''+
                        '    </div>'+
                        '    </div>'+
@@ -1002,7 +1002,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               '        <div style="display:inline-block;margin-top: 10px;width:50%;">'+
                               '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
-                              '                <div style="background-image: url(images/buttonsmall.png);border: none;padding: 5px;color: #c34848;font-weight: bold;font-size: large;border-radius: 5px;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button>'+
+                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin-left: 45%;    padding: 7px; color: #c34848;font-weight: bold;font-size: large;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
                               '            </div>'+
                               '        </div>'+
                               '</div>'+
