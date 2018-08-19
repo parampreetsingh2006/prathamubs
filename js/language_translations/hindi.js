@@ -1178,6 +1178,10 @@ ubsApp.translation={
        "QuizHelpPageName" : "quizHelp",
 
        /******************************************Quiz key End******************************************************************/
+       "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
+       "quizCorrectAnswerHeading":"Correct Answer".
+       "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
+       "quizWrongAnswerHeading":"Wrong Answer",
 
 
 

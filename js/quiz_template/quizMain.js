@@ -36,7 +36,7 @@ ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
 	  }
 }
 
-ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId){
+ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId, reputationPoints){
   var totalMarks = 1; // each question carries 1 mark
   var date=new Date();
   var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
@@ -49,15 +49,22 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	  		let scoredMarks = 1;
 	  		quizCorrectAnswer = parseInt(quizCorrectAnswer) + 1;
 		  	ubsApp.updateAnswers(questionNo - 1);
-		  	$('#question_answer').hide();
+		  	/*$('#question_answer').hide();
 		  	$('#answerDiv').css("display","inline-block");
 		  	$('#answerHeader').css("color","green");
 		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizRightAnswer"]);
-		  	$('#answerDiv').show();
-		    $("#correctAnswers").text(quizCorrectAnswer);
+		  	$('#answerDiv').show();*/
 		    var audioElement = document.getElementById('answerDiv');
+		    ubsApp.openPopup({ 
+		    		"header":ubsApp.translation["quizCorrectAnswerHeading"],
+		    		"headerStyle":"text-align: center;  color: red; font-size: 1.1vw",
+		    		"message" : ubsApp.formatMessage(ubsApp.translation['quizCorrectAnswerMessage'], [reputationPoints]),
+         		                
+         		});
+		    $("#correctAnswers").text(quizCorrectAnswer);
   			ubsApp.raiseAudioEvent(audioElement, 'rightAnswer');
-		  	//ubsApp.displayNextQuizQuestion(page, true);
+		  	ubsApp.displayNextQuizQuestion(page, true);
+
 	  		//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
 	  }
 	  else{

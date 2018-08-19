@@ -78,8 +78,8 @@ ubsApp.renderFirstQuizPage = function(page){
 
     document.getElementById("templateContent").style.opacity="0.95";
 
-    $('#templateContent').css("height",(screenHeight)+'px');
-    $('#templateContent').css("width",(screenWidth)+'px');
+    $('#templateContent').css("height","100vh");
+    $('#templateContent').css("width","100vw");
 
     ubsApp.renderPageByName(page);
 	$("#correctAnswers").text("0");

@@ -359,9 +359,6 @@ ubsApp.translation={
 						        "There are many template like sales/purchase/luck/inventory and there are many scenario based on template."+
 						        "Read each template and scenario carefully before starting the game."+
 						        "As you will progress, you will get/loose point or reward based on your decision and answers." ,
-        "quizWrongAnswerHeader":"WRONG ANSWER",
-        "quizWrongAnswerMessage":"You have got wrong message!",
-        "quizRightAnswer":"RIGHT ANSWER",
         "INVENTORYVALUE": "INVENTORY VALUE",
         "INVENTORY" : "INVENTORY",
         "decisionResult": "DECISION RESULT",
@@ -1161,6 +1158,9 @@ ubsApp.translation={
 
        /******************************************Quiz key End******************************************************************/
 
-
+       "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
+       "quizCorrectAnswerHeading":"Correct Answer",
+       "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
+       "quizWrongAnswerHeading":"Wrong Answer",
 
     }
