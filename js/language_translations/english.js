@@ -1179,5 +1179,11 @@ ubsApp.translation={
        "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
        "wowImage":"images/wow.png",
        "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
+       "decisionGainReptPointsLostBalance": " You earned {0} Reputation Points. However you lost ₹ {1}",
+       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
+       "decisionGainRptPts":"You earned {0} Reputation points!",
+       "decisionLoseRptPts":"You lost {0} Reputation points!",
 
-    }
+
+
+    }   

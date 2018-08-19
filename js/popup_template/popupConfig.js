@@ -4,7 +4,7 @@ ubsApp.successErrorConfig = {
                  {
                     "templateId":60,
                     "templateType":"popup",
-                    "style" : "background-image: url('images/errorpopup.png'); margin: 0 auto;padding: 10px;     margin-top: 10%;position: relative;     width: 50%;    "
+                    "style" : "margin: 0 auto;padding: 10px;     margin-top: 10%;position: relative;     width: 50%;    "
 
                  }
             ]

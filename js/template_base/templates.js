@@ -902,7 +902,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '               <span id="decisionBankBalance">{{repPoints}} &nbsp; &nbsp; &nbsp; ₹ {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">HELP</button>'+
+'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:white;">'+
@@ -925,7 +925,7 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 ubsApp.popUpTemplate = '<div style="{{style}}">'+
-                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;       height: 50vh;">'+
+                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;       height: 50vh; border: 20px solid;border-image: url(images/redBorderAlt.png) 5% round;">'+
                        ''+
                        '        <div>'+
                        ''+

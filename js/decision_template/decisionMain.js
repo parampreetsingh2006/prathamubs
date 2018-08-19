@@ -25,10 +25,13 @@ ubsApp.renderDecisonTemplate = function() {
 
 ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, page="", pamphlet=false){
 
-	let playerRepPoints = userArray[playerChance].getReputationPts();
-	userArray[playerChance].setReputationPts(playerRepPoints+parseInt(reputationPts));
-	let playerBankBalance = userArray[playerChance].getBankBalance();
-	userArray[playerChance].setBankBalance(playerBankBalance+parseInt(bankBalance));
+	let initialPlayerRepPoints = userArray[playerChance].getReputationPts();
+	let totalReputationPoints = initialPlayerRepPoints+parseInt(reputationPts);
+	let initialPlayerBankBalance = userArray[playerChance].getBankBalance();
+	let totalPlayerBankBalance = initialPlayerBankBalance+parseInt(bankBalance);
+	let decisionResultMessage = "";
+	userArray[playerChance].setReputationPts(initialPlayerRepPoints+parseInt(reputationPts));
+	userArray[playerChance].setBankBalance(initialPlayerBankBalance+parseInt(bankBalance));
 	if(insurance == "true"){
 	 ubsApp.renderPageByName(page);
 	}
@@ -40,11 +43,25 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
 	}
 
 	else{
-		ubsApp.openCurrentPlayerSummary({
-			"header" : ubsApp.getTranslation("decisionResult"),
-			"isWeekSummary" : false,
-			});
-		//ubsApp.nextMove();
+
+		if(totalReputationPoints > initialPlayerRepPoints && totalPlayerBankBalance < initialPlayerBankBalance){
+			decisionResultMessage = ubsApp.formatMessage( ubsApp.translation["decisionGainReptPointsLostBalance"],[reputationPts, bankBalance]);
+		} 
+		else if(totalReputationPoints < totalReputationPoints && totalPlayerBankBalance > initialPlayerBankBalance){
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainBalanceLoseRptPts"],[bankBalance, reputationPts]);
+		}
+		else if (totalReputationPoints > initialPlayerRepPoints){
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainRptPts"],[reputationPts]);
+		}
+		else if (totalReputationPoints < initialPlayerRepPoints){
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionLoseRptPts"],[reputationPts]);
+		}
+
+		 ubsApp.openResultPopup({
+        	"message" : decisionResultMessage,
+        	"header" : ubsApp.translation["decisionResult"],
+        	"headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+        })
 	}
 }
 

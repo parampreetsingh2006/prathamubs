@@ -1195,9 +1195,13 @@ ubsApp.translation={
 
        /******************************************Quiz key End******************************************************************/
        "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
-       "quizCorrectAnswerHeading":"Correct Answer".
+       "quizCorrectAnswerHeading":"Correct Answer",
        "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
        "quizWrongAnswerHeading":"Wrong Answer",
+       "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
+       "wowImage":"images/hindi/wah.png",
+       "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
+
 
 
 
