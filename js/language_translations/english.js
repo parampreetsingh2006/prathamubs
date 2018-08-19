@@ -58,6 +58,8 @@ ubsApp.translation={
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
+        "endGameConfirm" : "Are you sure you want to end game?",
+        "ENDGAME" : "END GAME",
         "creditTitle":"CREDIT",
         "creditLimitTitle":"CREDIT LIMIT",
         "nextQuestion":"Next Question!",

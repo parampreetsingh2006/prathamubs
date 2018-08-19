@@ -1199,5 +1199,8 @@ ubsApp.translation={
        "quizCorrectAnswerHeading":"Correct Answer",
        "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
        "quizWrongAnswerHeading":"Wrong Answer",
+       "endGameConfirm" : "क्या आप वाकई खेल खत्म करना चाहते हैं?",
+       "ENDGAME" : "अंत खेल",
+
 
 }

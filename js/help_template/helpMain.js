@@ -14,12 +14,9 @@ ubsApp.renderHelpPage=function(template){
 		if(templateConfig.templateType=="static"){
 			html+=ubsStaticTemplate(templateConfig);
 		} else if(templateConfig.templateType ==  "popup") {
-		    let popupConfig = ubsApp.popupConfig;
-        	templateConfig =  $.extend(templateConfig, popupConfig);
-            templateConfig.Close = ubsApp.getTranslation("Close");
             document.getElementById("helpContent").style.opacity="1";
             document.getElementById("helpContent").style["background-color"] = "transparent";
-        	html += ubsPopupTemplate(templateConfig);
+        	html += ubsApp.getPopupHtml(templateConfig);
         	ubsApp.popupConfig = {};
 
 		}

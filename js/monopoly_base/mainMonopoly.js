@@ -534,6 +534,25 @@ monopoly.startGame=function(){
 }
 
 
+ubsApp.confirmEndGame=function(){
+
+ubsApp.openPopup({
+    'message' : ubsApp.getTranslation("endGameConfirm"),
+    "header" : ubsApp.getTranslation("ENDGAME"),
+    "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+    'buttons' : [
+        {
+            'name' : ubsApp.getTranslation("yes"),
+            'action': "ubsApp.closePopup();ubsApp.endGame();"
+        },
+
+        {
+                    'name' : ubsApp.getTranslation("no"),
+                    'action': "ubsApp.closePopup();"
+        }
+    ]
+});
+}
  ubsApp.endGame=function(){
   	var arr=[];
 
