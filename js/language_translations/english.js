@@ -296,6 +296,20 @@ ubsApp.translation={
         "luckQuestion56":"Bank increased the interest rate on your fixed deposit",
         "luckQuestion57":"Bank decreased the interest rate on your fixed deposit",
 
+
+        "badLuckResultPopUpBankBalance":"Your Bank Balance is reduced to ",
+        "badLuckResultPopUpCash":"Your Cash Balance is reduced to ",
+        "badLuckResultPopUpRepPt":"Your Reputation points are reduced to ",
+        "badLuckResultPopUpInv":"Your Inventory is reduced to ", // percentage
+        "goodLuckResultPopUpBankBalance":"Your Bank Balance is increased to ",
+        "goodLuckResultPopUpCash":"Your Cash Balance is increased to ",
+        "goodLuckResultPopUpRepPt":"Your Reputation points are increased to ",
+        "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
+        "goodLuckResultHeader":"GOOD LUCK RESULT",
+        "badLuckResultHeader":"BAD LUCK RESULT",
+
+        "paymentResultHeader":"PAYMENT RESULT",
+
         "convertTitle":"CONVERT",
         "quizTitle":"QUIZ",
 

@@ -361,7 +361,7 @@ ubsApp.openResultPopup = function(config) {
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
    }, config);
-   popupConfig.showImage = showImage;
+   ubsApp.popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");
    ubsApp.isResultPopUpOpen = true;
 }
