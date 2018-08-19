@@ -1,4 +1,4 @@
-monopoly.pages = {
+monopoly.origpages = {
 "EnterLanguagePage":[
     
         {
@@ -602,3 +602,4 @@ monopoly.pages = {
     ]
 }
 
+monopoly.initializePages();

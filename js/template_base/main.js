@@ -176,7 +176,7 @@ ubsApp.renderPage = function(page) {
 }
     
 ubsApp.mapTemplatetoFunction = function(){
-
+    templateMap={};
 	for(let i=0; i<templateName.length; i++){
 	   templateMap[templateName[i]]= "ubsApp.get"+templateName[i].charAt(0).toUpperCase()+templateName[i].substring(1)+"Template";
 	}
@@ -406,6 +406,27 @@ ubsApp.raiseAudioEvent =function(divElement, eventName, audioSrc){
 }
 
 
+ubsApp.initializeUbsPages = function() {
+    ubsApp.pages= {
+    };
+
+    ubsApp.pages=$.extend(ubsApp.pages, ubsApp.decisionInsurancePage);
+    ubsApp.pages=$.extend(ubsApp.pages, ubsApp.salesConfig);
+    ubsApp.pages=$.extend(ubsApp.pages, ubsApp.decisionConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.transferToBankConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.payOffConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.purchaseConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.paymentConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.luckConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.advantageCardConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.sideScoreBoardConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.withdrawFromBankConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.helpConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.quizConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.quizStarterConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.successErrorConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.weekSummaryConfig);
+}
 
 
 // ubsApp.animate_score=function(amount){

@@ -63,6 +63,7 @@ ubsApp.translation={
     "cashTitle":"कैश",
     "creditTitle":"श्रेय",
     "Credit":"श्रेय",
+     "DEBT":"कर्ज",
 
     "creditLimitTitle":"श्रेय सीमा",
     "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",

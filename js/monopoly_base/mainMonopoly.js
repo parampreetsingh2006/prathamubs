@@ -425,6 +425,7 @@ monopoly.initComputerDifficulty=function()
 
 monopoly.initializeScenarios=function()
 {
+    scenariosArray = [];
     $.each(ubsApp.pages, function(key, value) {
         if(value.category)
         {
@@ -522,7 +523,7 @@ monopoly.startGame=function(){
 	    
 	  }
 	   jsElm.onload=function(){
-		 
+
 
            if(true) { // is mode offline
               monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
@@ -548,7 +549,7 @@ monopoly.startGame=function(){
         playerConfig.currentWeekCredit = player.getCredit();
         playerConfig.currentWeekAdvantageCard = player.getAdvantageCardNumber();
         playerConfig.userName = player.getplayerName();
-        playerConfig.currentInventory = "₹ "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + "(" + player.getInventoryScore() + "%" + ")";
+        playerConfig.currentInventory = "₹ "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + " (" + player.getInventoryScore() + "%" + ")";
         if(i > 0) {
             playerConfig.showBorder = true;
         }
@@ -559,8 +560,8 @@ monopoly.startGame=function(){
         playerConfig.PLAYER = ubsApp.getTranslation("PLAYER");
         playerConfig.INVENTORY = ubsApp.getTranslation("INVENTORY");
         playerConfig.playerNameTitle = ubsApp.getTranslation("playerNameTitle");
-         playerConfig.Credit = ubsApp.getTranslation("Credit");
-          playerConfig.Cash = ubsApp.getTranslation("Cash");
+         playerConfig.Credit = ubsApp.getTranslation("DEBT");
+          playerConfig.Cash = ubsApp.getTranslation("cashTitle");
 
         let weeks = player.getWeeks();
         if(weeks > 12) {
@@ -760,16 +761,22 @@ ubsApp.openQuizIfValid = function() {
 }
 
 ubsApp.restartGame = function() {
-monopoly.numplayers=0;
-numplayers = monopoly.numplayers;
-monopoly.playerChance = 0;
-userArray=[];
-monopoly.intitializeTemplates();
-  monopoly.initializeScenarios();
-ubsApp.intitializeTemplates();
+    monopoly.numplayers=0;
+    numplayers = monopoly.numplayers;
+    monopoly.playerChance = 0;
+    userArray=[];
+    monopoly.intitializeTemplates();
+    monopoly.initializeScenarios();
+    ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
-  monopoly.renderPageforBoard(monopoly.pages.Splash);
+	ubsApp.initializeUbsPages();
+	monopoly.initializePages();
+    monopoly.renderPageforBoard(monopoly.pages.Splash);
 
   //setTimeout(monopoly.renderPageforBoard, 30, monopoly.pages.Splash);
   setTimeout(monopoly.renderPageforBoard, renderTimeOutMiliSec, monopoly.pages.EnterLanguagePage);
+}
+
+monopoly.initializePages = function() {
+    monopoly.pages = $.extend({},monopoly.origpages);
 }
