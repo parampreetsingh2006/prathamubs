@@ -361,7 +361,7 @@ ubsApp.openResultPopup = function(config) {
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
    }, config);
-   popupConfig.showImage = showImage;
+   ubsApp.popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");
    ubsApp.isResultPopUpOpen = true;
 }
@@ -403,6 +403,15 @@ ubsApp.raiseAudioEvent =function(divElement, eventName, audioSrc){
         });
         divElement.dispatchEvent(audioevent);
       }
+}
+
+ubsApp.formatMessage = function(string, replacements){
+    return string.replace(/\{(\d+)\}/g, function() {
+        return replacements[arguments[1]];
+    });
+
+    // Or, if prototype code above...
+    String.format.apply(string, replacements);
 }
 
 

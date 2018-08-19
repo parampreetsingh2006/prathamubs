@@ -107,7 +107,7 @@ ubsApp.translation={
 
     "payDebtTitle":"पाय डेब्ट",
     "transferToBankTitle":"ट्रांसफर कैश तो बैंक ",
-    "payTitle":"पाय ",
+    "payTitle":"भुगतान",
     "debtAmountTitle":"डेब्ट राशि",
     "cancelTitle":"कैंसिल ",
     "amountToPayTitle":"राशि तो पाय",
@@ -313,6 +313,22 @@ ubsApp.translation={
     "luckQuestion55":"Change to Hindi:Government increased the prices on  Wheat. You lose Rs. 100 per week",
     "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
     "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
+
+    "badLuckResultPopUpBankBalance":"Your Bank Balance is reduced to ",
+    "badLuckResultPopUpCash":"Your Cash Balance is reduced to ",
+    "badLuckResultPopUpRepPt":"Your Reputation points are reduced to ",
+    "badLuckResultPopUpInv":"Your Inventory is reduced to ", // percentage
+    "goodLuckResultPopUpBankBalance":"Your Bank Balance is increased to ",
+    "goodLuckResultPopUpCash":"Your Cash Balance is increased to ",
+    "goodLuckResultPopUpRepPt":"Your Reputation points are increased to ",
+    "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
+    "goodLuckResultHeader":"अच्छा भाग्य परिणाम",
+    "badLuckResultHeader":"खराब भाग्य परिणाम",
+
+    "paymentResultHeader":"भुगतान परिणाम",
+
+
+
      "EndGameSummary":"अंत खेल सारांश",
      "GAMEOVER":"खेल खत्म",
       "gameLogo":"images/hindi/logo.png",
@@ -1179,6 +1195,10 @@ ubsApp.translation={
        "QuizHelpPageName" : "quizHelp",
 
        /******************************************Quiz key End******************************************************************/
+       "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
+       "quizCorrectAnswerHeading":"Correct Answer".
+       "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
+       "quizWrongAnswerHeading":"Wrong Answer",
 
 
 

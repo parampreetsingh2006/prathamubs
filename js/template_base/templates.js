@@ -448,7 +448,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
@@ -458,9 +458,11 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <button id="wrongAnswerOk"  class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
 '       </div>'+
 '   </div>'+
-'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">HELP</button>'+
-'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
+'<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
 '   <button id="quizDone" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
+'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
+'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
+'</div>'+
 '</div>';
 
 ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.js"></script>'+
@@ -638,7 +640,7 @@ ubsApp.purchaseTemplate = '<div class="purchaseContainer">'+
 '        </div>'+
 '    </div>';
 
-ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
+ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relative;overflow:hidden">'+
 '       <img src="images/background.png" style="width:100%;height:100%;">'+
 '       <div class="luckScreenTitle" style="color:white">'+
 '            {{scenarioTitle}}'+
@@ -648,7 +650,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '           </div>{{/if}}'+
 
 '       <div id="luckPlayerNameTitle">'+
-'       PLAYER:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
+'       {{playerTitle}}:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
 '       </div>'+
 
 '       <div id="scenarioOutline">' + /* Wrapper div*/
@@ -678,11 +680,11 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 
 '               {{#if quizRequired}}'+
 '                  <div style="display:inline-block; width:33.33%; text-align:left;float:left">'+
-'                       <button class="takeQuizButton" style="background-color:orangered;" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
+'                       <button class="takeQuizButton" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
 '                  </div>'+
 '                   {{#if hasAdvantageCard}}'+
 '                       <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
-'                           <button class="wildCardButton" style="background-color:green;" onclick="">{{checkWildCard}}</button>    '+
+'                           <button class="wildCardButton" onclick="">{{checkWildCard}}</button>    '+
 '                       </div>'+
 '                   {{/if}}'+
 '               {{/if}}'+
@@ -690,10 +692,10 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;">'+
 '           </div>'+
 '       </div>'+
 '       <div class="luckHelpIcon">'+
-'           <button onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
+'           <input type="image" style="width:100%;" src="images/help-button.png" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" />'+
 '       </div>'+
 '       <div class="luckGameIcon">'+
-'           <img style="width:100%;"src="images/logo.png">'+
+'           <img style="width:100%;"src="{{gameLogo}}">'+
 '       </div>'+
 '</div>';
 
