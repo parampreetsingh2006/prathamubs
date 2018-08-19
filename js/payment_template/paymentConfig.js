@@ -27,6 +27,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -58,6 +60,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -89,6 +93,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -120,6 +126,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 
@@ -141,7 +149,6 @@ ubsApp.paymentConfig={
 			},
 			"resultpage":"quizQ4",
 			"quizType":"luck",
-			"credit":{"balance":-1500,"reputation":-2},
 			"scenarioTitle":"{{payTitle}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",	
@@ -152,6 +159,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -182,6 +191,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -212,6 +223,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -242,6 +255,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -272,6 +287,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -302,6 +319,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -332,6 +351,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -362,6 +383,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -393,6 +416,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -423,6 +448,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -453,6 +480,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -483,6 +512,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -513,6 +544,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -543,6 +576,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -573,6 +608,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},
@@ -603,6 +640,8 @@ ubsApp.paymentConfig={
 			"background":"#000",
 			"icon":"payment",
 			"helpPageName":"paymentHelp",
+			"playerTitle":"{{playerTitle}}",
+            "gameLogo":"{{gameLogo}}",
 		}
 	]
 	},

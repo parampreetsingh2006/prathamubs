@@ -85,6 +85,12 @@ ubsApp.payFromBank=function(){
 
 
 ubsApp.payOrGain=function(pageName){
+
+    let initialBankBalance = userArray[playerChance].getBankBalance();
+    let initialCashBalance = userArray[playerChance].getplayerScore();
+    let initialReputationPoints = userArray[playerChance].getReputationPts();
+    let initialInventory = userArray[playerChance].getInventoryScore();
+
     var credit=ubsApp.pages[pageName].templates[0].credit;
     console.log(credit);
     $.each(credit, function(key, value) {
@@ -198,6 +204,63 @@ ubsApp.payOrGain=function(pageName){
             }
         }
     });
-    ubsApp.nextMove();
+
+    let message = "";
+    let header = "";
+    let endStr = ". ";
+    // Bank Balance Compare
+    if(initialBankBalance > userArray[playerChance].getBankBalance())
+    {
+        header = ubsApp.getTranslation("badLuckResultHeader");
+        message = ubsApp.getTranslation("badLuckResultPopUpBankBalance") + userArray[playerChance].getBankBalance() + endStr;
+    }
+    else if(initialBankBalance < userArray[playerChance].getBankBalance())
+    {
+        header = ubsApp.getTranslation("goodLuckResultHeader");
+        message = ubsApp.getTranslation("goodLuckResultPopUpBankBalance") + userArray[playerChance].getBankBalance() + endStr;
+    }
+
+    // Cash Balance Compare
+    if(initialCashBalance > userArray[playerChance].getplayerScore())
+    {
+        header = ubsApp.getTranslation("badLuckResultHeader");
+        message = message + ubsApp.getTranslation("badLuckResultPopUpCash") + userArray[playerChance].getplayerScore() + endStr;
+    }
+    else if(initialCashBalance < userArray[playerChance].getplayerScore())
+    {
+        header = ubsApp.getTranslation("goodLuckResultHeader");
+        message = message + ubsApp.getTranslation("goodLuckResultPopUpCash") + userArray[playerChance].getplayerScore() + endStr;
+    }
+
+    //reputation points compare
+    if(initialReputationPoints > userArray[playerChance].getReputationPts())
+    {
+        header = ubsApp.getTranslation("badLuckResultHeader");
+        message = message + ubsApp.getTranslation("badLuckResultPopUpRepPt") + userArray[playerChance].getReputationPts() + endStr;
+    }
+    else if(initialReputationPoints < userArray[playerChance].getReputationPts())
+    {
+        header = ubsApp.getTranslation("goodLuckResultHeader");
+        message = message + ubsApp.getTranslation("goodLuckResultPopUpRepPt") + userArray[playerChance].getReputationPts() + endStr;
+    }
+
+    //inventory compare
+    if(initialInventory > userArray[playerChance].getInventoryScore())
+    {
+        header = ubsApp.getTranslation("badLuckResultHeader");
+        message = message + ubsApp.getTranslation("badLuckResultPopUpInv") + userArray[playerChance].getInventoryScore() + "%" + endStr;
+    }
+    else if(initialInventory < userArray[playerChance].getInventoryScore())
+    {
+        header = ubsApp.getTranslation("goodLuckResultHeader");
+        message = message + ubsApp.getTranslation("goodLuckResultPopUpInv") + userArray[playerChance].getInventoryScore() + "%" + endStr;
+    }
+
+    ubsApp.openResultPopup({
+        "message" : message,
+        "header" : header,
+        "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+        })
+
 }
 
