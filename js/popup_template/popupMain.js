@@ -8,7 +8,7 @@ ubsApp.getPopupTemplate = function(templateConfig, tempVar){
 
 ubsApp.getPopupHtml = function(templateConfig) {
     let popupConfig = ubsApp.popupConfig;
-    if(!popupConfig.buttons) {
+    if(!popupConfig.buttons && popupConfig.showCloseButton) {
             let button = {
                 'name' : ubsApp.getTranslation("Close"),
                 'action' : "ubsApp.closePopup();"
