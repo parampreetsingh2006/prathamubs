@@ -58,6 +58,8 @@ ubsApp.translation={
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
+        "endGameConfirm" : "Are you sure you want to end game?",
+        "ENDGAME" : "END GAME",
         "creditTitle":"CREDIT",
         "creditLimitTitle":"CREDIT LIMIT",
         "nextQuestion":"Next Question!",
@@ -169,6 +171,12 @@ ubsApp.translation={
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
 
+        "salesResultHeader":"SALES RESULT",
+        "salesWrongAnswer":"Wrong Answer.",
+        "salesCorrectAnswer":"Correct Answer.",
+        "salesCorrectRptpt":"Reputation points are increased to ",
+        "salesWrongRptpt":"Reputation points are reduced to ",
+
         //Decision
         "invVal":"INVENTORY VALUE",
         "repPoints":"REPUTATION POINTS",
@@ -229,6 +237,7 @@ ubsApp.translation={
         "Credit": "Credit",
         "chequeTitleName":"CHEQUE",
         "creditTitleName":"CREDIT",
+        "DEBT" : "DEBT",
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",

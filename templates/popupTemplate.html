@@ -13,7 +13,16 @@
             {{#if showImage}}
             <div style="text-align: center; height: 25vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>
             {{/if}}
-        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closePopUp();" >{{Close}}</button> </div>
+        </div>
+        <div style="text-align: center;margin-top: 10px;">
+            <div style="width: fit-content;margin: auto;">
+                {{#each buttons}}
+                <div style="cursor:pointer;     float: left;     margin-right: 10px; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
 
     </div>
     </div>

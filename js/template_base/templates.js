@@ -421,7 +421,7 @@ ubsApp.leaderBoardTemplate=
 '           '+
 '       </span>'+
 '<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
-'                  <button class="submitButton" onclick="ubsApp.validateAmount();ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')">'+
+'                  <button class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           Submit'+
 ' <br> <br> <br>' +
 '           <button class="helpButton" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
@@ -925,7 +925,7 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 ubsApp.popUpTemplate = '<div style="{{style}}">'+
-                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;       height: 50vh; border: 20px solid;border-image: url(images/redBorderAlt.png) 5% round;">'+
+                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; max-height: 50vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -937,13 +937,23 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
                        '            {{#if showImage}}'+
-                       '            <div style="text-align: center;height: 25vh;"> <img style="height: 100%;"  src="{{imageUrl}}"></img></div>'+
+                       '            <div style="text-align: center; height: 25vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
-                       '        </div> <div style="text-align: center;margin-top: 10px;"> <button onclick="ubsApp.closePopup()" >{{Close}}</button> </div>'+
+                       '        </div>'+
+                       '        <div style="text-align: center;margin-top: 10px;">'+
+                       '            <div style="width: fit-content;margin: auto;">'+
+                       '                {{#each buttons}}'+
+                       '                <div style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}'+
+                       '                </div>'+
+                       '                {{/each}}'+
+                       '            </div>'+
+                       ''+
+                       '        </div>'+
                        ''+
                        '    </div>'+
                        '    </div>'+
                        '</div>';
+
 
 
 
@@ -1004,7 +1014,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               '        <div style="display:inline-block;margin-top: 10px;width:50%;">'+
                               '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
-                              '                <button style="background-image: url(images/buttonsmall.png);border: none;padding: 5px;color: #c34848;font-weight: bold;font-size: large;border-radius: 5px;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</button>'+
+                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: #c34848;font-weight: bold;font-size: large;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
                               '            </div>'+
                               '        </div>'+
                               '</div>'+

@@ -173,8 +173,8 @@ monopoly.sideScoreBoardTemplate=
 '</div>'+
 '  <div class="sideScoreBoardRow">'+
 '         <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()">{{quizTitle}}</div>'+
-'         <div class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.endGame()"></div>'+
-'         <div class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.endGame()"></div>'+
+'         <div class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'salesHelp\')"></div>'+
+'         <div class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></div>'+
 '  </div>'+
 '</div>';
 
@@ -293,8 +293,8 @@ monopoly.endGameTemplate = '<div style="'+
                            '        <div style="width:{{widthOfEachPlayer}}%;float: left; {{#if showBorder}}border-left: 1px solid red; {{/if}}padding-left: 20px;    padding-right: 18px;">'+
                            ''+
                            '            <div style="display: inline-block;width: 100%; color:{{playerColor}};">'+
-                           '                <div style="float:left; height: 36px;><img src="images/{{playerColor}}.png" style="height:100%"> </img></div>'+
-                           '            <div width=" padding-top: 19px;float: left; padding-left: 7px;">{{PLAYER}}: {{userName}} </div>'+
+                           '                <div style="float:left; height: 36px;"><img src="images/{{playerColor}}.png" style="height:100%"> </img></div>'+
+                           '            <div style=" padding-top: 19px;float: left; padding-left: 7px;">{{PLAYER}}: {{userName}} </div>'+
                            '        </div>'+
                            ''+
                            '        <div style="display: inline-block;width: 100%;">'+
@@ -330,7 +330,7 @@ monopoly.endGameTemplate = '<div style="'+
                            ''+
                            '</div>'+
                            ''+
-                           '    <div style="margin-top: 10px;text-align: center;"> <button onClick="ubsApp.restartGame();"> {{CLOSE}} </button></div>'+
+                           '    <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonMedium.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: red;" onClick="ubsApp.restartGame();"> {{CLOSE}} </div></div>'+
                            '</div>';
 
 
