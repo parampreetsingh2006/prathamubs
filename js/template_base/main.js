@@ -335,6 +335,7 @@ ubsApp.translateScenarios=function(){
 
 ubsApp.openPopup = function(config) {
 
+    $('#popupBackground').show();
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
    }, config);
@@ -347,6 +348,7 @@ ubsApp.closePopup = function(config) {
         ubsApp.closeCloseResultPopup();
         ubsApp.isResultPopUpOpen = false;
    } else {
+        $('#popupBackground').hide();
         ubsApp.closeHelp();
    }
 
@@ -354,6 +356,7 @@ ubsApp.closePopup = function(config) {
 
 // Give key imageUrl to pass a image
 ubsApp.openResultPopup = function(config) {
+    $('#resultBackground').show();
     let showImage = false;
     if(config.imageUrl) {
         showImage = true;
@@ -364,9 +367,11 @@ ubsApp.openResultPopup = function(config) {
    ubsApp.popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");
    ubsApp.isResultPopUpOpen = true;
+
 }
 
 ubsApp.closeCloseResultPopup = function(config) {
+   $('#resultBackground').hide();
    ubsApp.closeCurrentScenario();
    ubsApp.nextMove();
 }

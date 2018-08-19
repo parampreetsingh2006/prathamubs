@@ -923,7 +923,7 @@ ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-co
 
 
 ubsApp.popUpTemplate = '<div style="{{style}}">'+
-                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;       height: 50vh;">'+
+                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; overflow: auto;       max-height: 50vh;">'+
                        ''+
                        '        <div>'+
                        ''+
