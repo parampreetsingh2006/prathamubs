@@ -90,7 +90,7 @@ button[class="decisionButtons"]:focus {outline:0;}
 
 #rightInfo{
 	font-weight: bold;
-	margin: 0 12% 0 0;
+	margin: 0 17% 0 0;
 	font-size: 1vw;
 	width: 30%;
 	padding: 0;
@@ -102,7 +102,7 @@ div[id="rightInfo"] div, div[id="leftInfo"] div{
 }
 #leftInfo{
 	font-weight: bold;
-	margin-left: 22%;
+	margin-left: 16%;
 	font-size: 1vw;
 	width: 30%;
 	padding: 0;
@@ -119,5 +119,11 @@ div[id="rightInfo"] div, div[id="leftInfo"] div{
 
 #decisionBankBalance {
 	background:url('../images/buttonsmedium.png');
+	font-size: 1.2vw;
+}
+
+.insuranceText {
+	background:url('../images/buttonsmedium.png');
+	background-size: 110%;
 	font-size: 1.2vw;
 }
