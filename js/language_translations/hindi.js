@@ -1215,6 +1215,8 @@ ubsApp.translation={
 
        "endGameConfirm" : "क्या आप वाकई खेल खत्म करना चाहते हैं?",
        "ENDGAME" : "अंत खेल",
-
+        "convertReputationPointsTitle" :"कन्वर्ट प्रतिष्ठान अंक",
+         "convertReputationMessage" : "कार्ड को उन्नत करने के लिए कनवर्टर प्रतिस्थापन",
+         "OK" : "ठीक",
 
 }

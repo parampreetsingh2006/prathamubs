@@ -2,6 +2,15 @@ ubsApp.getAdvantageCardTemplate=function(templateConfig,tempVar){
     var object={};
     object.currentReputationPoint=userArray[playerChance].getReputationPts();
     templateConfig=$.extend(templateConfig,object);
+    templateConfig.convertReputationPointsTitle = ubsApp.getTranslation("convertReputationPointsTitle");
+    templateConfig.convertReputationMessage = ubsApp.getTranslation("convertReputationMessage");
+    templateConfig.CANCEL = ubsApp.getTranslation("cancelTitle");
+    templateConfig.OK = ubsApp.getTranslation("OK");
+    templateConfig.currentWeekCash = "₹ "+ userArray[playerChance].getplayerScore();
+    templateConfig.currentWeekBankBalance = "₹ "+ userArray[playerChance].getBankBalance();
+    templateConfig.currentWeekReputationPts = userArray[playerChance].getReputationPts();
+    templateConfig.currentWeekCredit = userArray[playerChance].getCredit();
+    templateConfig.currentWeekAdvantageCard = userArray[playerChance].getAdvantageCardNumber();
     tempVar.html+=ubsAdvantageCardTemplate(templateConfig);
 }
 
@@ -10,38 +19,50 @@ ubsApp.openAdvantageCard=function(){
     ubsApp.renderPageByName("advantageCardScenario");
 }
 
-ubsApp.checkDetails=function(){
-    var numberEntered=document.getElementById("convertText").value;
-    if(numberEntered>0){
-        if(numberEntered<=userArray[playerChance].getReputationPts()){
-            if(numberEntered%15==0){
-                document.getElementById("convertedNumber").innerHTML=numberEntered/15;
-                document.getElementById("remainingBalance").innerHTML=userArray[playerChance].getReputationPts()-numberEntered;
-            }
-            else{
-                document.getElementById("result").innerHTML=ubsApp.translation["enterInMultipleOf15"];    
-            }
-        }
-        else{
-            document.getElementById("result").innerHTML=ubsApp.translation["You have entered more points than you have"];    
-        }
-    }
-    else{
-        document.getElementById("result").innerHTML=ubsApp.translation["validReputationPts"];
-    }
-}
+//ubsApp.checkDetails=function(){
+//    var numberEntered=document.getElementById("convertText").value;
+//    if(numberEntered>0){
+//        if(numberEntered<=userArray[playerChance].getReputationPts()){
+//            if(numberEntered%15==0){
+//                document.getElementById("convertedNumber").innerHTML=numberEntered/15;
+//                document.getElementById("remainingBalance").innerHTML=userArray[playerChance].getReputationPts()-numberEntered;
+//            }
+//            else{
+//                document.getElementById("result").innerHTML=ubsApp.translation["enterInMultipleOf15"];
+//            }
+//        }
+//        else{
+//            document.getElementById("result").innerHTML=ubsApp.translation["You have entered more points than you have"];
+//        }
+//    }
+//    else{
+//        document.getElementById("result").innerHTML=ubsApp.translation["validReputationPts"];
+//    }
+//}
 
 ubsApp.covertReputationToWildCard=function(){
-    var numberEntered=parseInt(document.getElementById("convertedNumber").innerHTML);
+     var numberEntered=document.getElementById("convertText").value;
         console.log(numberEntered);
-        if(numberEntered>0)
+        if(numberEntered>15)
         {
-            userArray[playerChance].setAdvantageCardNumber(numberEntered); 
-            var remainingPoints=parseInt(document.getElementById("remainingBalance").innerHTML);                userArray[playerChance].setReputationPts(remainingPoints);
+            let reputationPointsUsed = numberEntered  - (numberEntered%15);
+            userArray[playerChance].setAdvantageCardNumber(reputationPointsUsed / 15);
+            userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()-reputationPointsUsed);
             ubsApp.closeCurrentScenario();
             ubsApp.currentPlayerContents();
+            ubsApp.openPopup({
+                'message' : "Congratulations you now have " + userArray[playerChance].getAdvantageCardNumber() + " Advantage Card. " + reputationPointsUsed + " Reputaion points have been used.",
+                "header" : ubsApp.getTranslation("SUCCESS"),
+                "headerStyle" : "text-align: center;  color: green; font-weight: 700; font-size: 3vw;",
+            });
+
         }
     else{
-        document.getElementById("result").innerHTML=ubsApp.translation["validReputationPts"];
-    }
+        ubsApp.openPopup({
+            'message' : ubsApp.translation["validReputationPts"],
+            "header" : ubsApp.getTranslation("ERROR"),
+            "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+        });
+        }
+
 }

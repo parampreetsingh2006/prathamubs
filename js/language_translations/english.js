@@ -1193,7 +1193,9 @@ ubsApp.translation={
        "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
        "decisionGainRptPts":"You earned {0} Reputation points!",
        "decisionLoseRptPts":"You lost {0} Reputation points!",
-
+        "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
+        "convertReputationMessage" : "CONVERT REPUTATION TO ADVANTAGE CARD",
+        "OK" : "OK",
 
 
     }   
