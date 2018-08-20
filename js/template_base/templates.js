@@ -937,7 +937,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
                        '            {{#if showImage}}'+
-                       '            <div style="text-align: center; height: 25vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>'+
+                       '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
                        '        </div>'+
                        '        <div style="text-align: center;margin-top: 10px;">'+

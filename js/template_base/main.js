@@ -336,9 +336,15 @@ ubsApp.translateScenarios=function(){
 ubsApp.openPopup = function(config) {
 
     $('#popupBackground').show();
+     let showImage = false;
+        if(config.imageUrl) {
+            showImage = true;
+        }
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
    }, config);
+
+   ubsApp.popupConfig.showImage = showImage;
    ubsApp.startHelp("generalPopUp");
 }
 

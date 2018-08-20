@@ -168,6 +168,7 @@ ubsApp.translation={
         "Eggs":"Eggs",
         "Biscuits":"Biscuits",
         "Soap":"Soap",
+        "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
 

@@ -7,12 +7,24 @@ ubsApp.validateAmount = function() {
     var item = document.getElementsByName('amt');
 	for(var i=0;i<item.length;i++){
     	if(!item[i].value) {
-           ubsApp.openPopup({
-                   "message" : "Please calculate amount for all items.",//ubsApp.getTranslation("quizLimitReachedForWeek"),
-                   "header" : ubsApp.getTranslation("ERROR"),
-                   "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
-                   "imageUrl" : "",
-                   });
+    	   ubsApp.openPopup({
+               "message" : "Please calculate amount for all items.",//ubsApp.getTranslation("quizLimitReachedForWeek"),
+              "header" : ubsApp.getTranslation("ERROR"),
+              "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+              "imageUrl" : "",
+               'buttons' : [
+                   {
+                       'name' : ubsApp.getTranslation("yes"),
+                       'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
+                   },
+
+                   {
+                               'name' : ubsApp.getTranslation("no"),
+                               'action': "ubsApp.closePopup();"
+                   }
+               ]
+           });
+
            return false;
 	    }
 	}
