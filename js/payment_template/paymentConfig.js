@@ -149,7 +149,6 @@ ubsApp.paymentConfig={
 			},
 			"resultpage":"quizQ4",
 			"quizType":"luck",
-			"credit":{"balance":-1500,"reputation":-2},
 			"scenarioTitle":"{{payTitle}}",
 			"helpTitle":"{{helpTitle}}",
 			"payMessage":"{{youCan}}",	

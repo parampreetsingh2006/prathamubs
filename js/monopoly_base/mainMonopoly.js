@@ -86,7 +86,7 @@ monopoly.initialiseCategory = function(){
 monopoly.renderPageforBoard = function(page) {
 	let html = "";
 	for(let i=0; i< page.length; i++) {
-        let templateConfig = page[i];
+        let templateConfig = $.extend({},page[i]);
         if(templateConfig.weekDeadLine){
           numberOfWeeksDeadline=templateConfig.weekDeadLine;
         }
@@ -364,7 +364,9 @@ monopoly.initPlayers=function(){
                 {   "radioName":"Radio"+i,
                     "radioValue":tokens[j],
                     "radioId":"radio"+j,
-                    "tokenColor":tokens[j]
+                    "tokenColor":tokens[j],
+                    "checked":false,
+                    "display":"inline"
                 });
             
             }
@@ -384,21 +386,21 @@ monopoly.initOfflinePlayers=function(){
             object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.numberOfTokens=[];
             object.nameId="name"+(i);
-            var checked;
+            var isCheckedByDefault;
             for (var j = 0; j<tokens.length; j++) {
-                checked = (i==j);
+                isCheckedByDefault = (i==j);
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
                     "radioValue":tokens[j],
                     "radioId":"radio"+j,
                     "tokenColor":tokens[j],
-                    "checked":checked,
-                    "disabled":true
+                    "checked":isCheckedByDefault,
+                    "display":"none"
                 });
 
             }
             document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
-      }
+        }
 
     }
 }
@@ -425,6 +427,7 @@ monopoly.initComputerDifficulty=function()
 
 monopoly.initializeScenarios=function()
 {
+    scenariosArray = [];
     $.each(ubsApp.pages, function(key, value) {
         if(value.category)
         {
@@ -522,7 +525,7 @@ monopoly.startGame=function(){
 	    
 	  }
 	   jsElm.onload=function(){
-		 
+
 
            if(true) { // is mode offline
               monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
@@ -533,13 +536,33 @@ monopoly.startGame=function(){
 }
 
 
+ubsApp.confirmEndGame=function(){
+
+ubsApp.openPopup({
+    'message' : ubsApp.getTranslation("endGameConfirm"),
+    "header" : ubsApp.getTranslation("ENDGAME"),
+    "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+    'buttons' : [
+        {
+            'name' : ubsApp.getTranslation("yes"),
+            'action': "ubsApp.closePopup();ubsApp.endGame();"
+        },
+
+        {
+                    'name' : ubsApp.getTranslation("no"),
+                    'action': "ubsApp.closePopup();"
+        }
+    ]
+});
+}
  ubsApp.endGame=function(){
   	var arr=[];
 
     let playersConfig =[];
+    let atleastOne=false;
   	for(var i=0;i<numplayers;i++){
   	    let playerConfig = {};
-  	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 5;
+  	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 3;
   	    let player = userArray[i];
   	    playerConfig.playerColor = player.getplayerColor();
         playerConfig.currentWeekCash = "₹ "+ player.getplayerScore();
@@ -548,7 +571,7 @@ monopoly.startGame=function(){
         playerConfig.currentWeekCredit = player.getCredit();
         playerConfig.currentWeekAdvantageCard = player.getAdvantageCardNumber();
         playerConfig.userName = player.getplayerName();
-        playerConfig.currentInventory = "₹ "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + "(" + player.getInventoryScore() + "%" + ")";
+        playerConfig.currentInventory = "₹ "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + " (" + player.getInventoryScore() + "%" + ")";
         if(i > 0) {
             playerConfig.showBorder = true;
         }
@@ -559,8 +582,8 @@ monopoly.startGame=function(){
         playerConfig.PLAYER = ubsApp.getTranslation("PLAYER");
         playerConfig.INVENTORY = ubsApp.getTranslation("INVENTORY");
         playerConfig.playerNameTitle = ubsApp.getTranslation("playerNameTitle");
-         playerConfig.Credit = ubsApp.getTranslation("Credit");
-          playerConfig.Cash = ubsApp.getTranslation("Cash");
+         playerConfig.Credit = ubsApp.getTranslation("DEBT");
+          playerConfig.Cash = ubsApp.getTranslation("cashTitle");
 
         let weeks = player.getWeeks();
         if(weeks > 12) {
@@ -586,7 +609,7 @@ monopoly.startGame=function(){
 
   		var winnerName="";
   		var currentHighScore=0;
-  		var atleastOne=false;
+
   		for(var i=0;i<numplayers;i++)
   		{
   			if(arr[i])
@@ -605,8 +628,17 @@ monopoly.startGame=function(){
 
   	}
 
+
   	ubsApp.endGameConfig.players = playersConfig;
   	monopoly.renderPageforBoard(monopoly.pages.endGamePage);
+  	if(atleastOne){
+        ubsApp.openPopup({
+                       "header" : winnerName + " " + ubsApp.getTranslation("hasWon"),
+                      "message" : "",
+                      "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+                      "imageUrl" : "images/wow.jpg",
+                   });
+     }
   }
 
 ubsApp.nextMove = function(){
@@ -760,16 +792,22 @@ ubsApp.openQuizIfValid = function() {
 }
 
 ubsApp.restartGame = function() {
-monopoly.numplayers=0;
-numplayers = monopoly.numplayers;
-monopoly.playerChance = 0;
-userArray=[];
-monopoly.intitializeTemplates();
-  monopoly.initializeScenarios();
-ubsApp.intitializeTemplates();
+    monopoly.numplayers=0;
+    numplayers = monopoly.numplayers;
+    monopoly.playerChance = 0;
+    userArray=[];
+    monopoly.intitializeTemplates();
+    monopoly.initializeScenarios();
+    ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
-  monopoly.renderPageforBoard(monopoly.pages.Splash);
+	ubsApp.initializeUbsPages();
+	monopoly.initializePages();
+    monopoly.renderPageforBoard(monopoly.pages.Splash);
 
   //setTimeout(monopoly.renderPageforBoard, 30, monopoly.pages.Splash);
   setTimeout(monopoly.renderPageforBoard, renderTimeOutMiliSec, monopoly.pages.EnterLanguagePage);
+}
+
+monopoly.initializePages = function() {
+    monopoly.pages = $.extend({},monopoly.origpages);
 }

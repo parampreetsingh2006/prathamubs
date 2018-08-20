@@ -20,7 +20,7 @@ ubsApp.quizConfig = {
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2,
         "cash" : 0
       },
       "answer" : "4",
@@ -73,7 +73,7 @@ ubsApp.quizConfig = {
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3,
         "cash" : 0
       },
       "answer" : "3",
@@ -126,7 +126,7 @@ ubsApp.quizConfig = {
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4,
         "cash" : 0
       },
       "answer" : "3",
@@ -179,7 +179,7 @@ ubsApp.quizConfig = {
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 5,
         "cash" : 0
       },
       "answer" : "3",
@@ -232,7 +232,7 @@ ubsApp.quizConfig = {
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 6,
         "cash" : 0
       },
       "answer" : "4",

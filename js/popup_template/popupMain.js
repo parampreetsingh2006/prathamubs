@@ -1,10 +1,24 @@
 ubsApp.getPopupTemplate = function(templateConfig, tempVar){
-    let popupConfig = ubsApp.popupConfig;
-	templateConfig =  $.extend(templateConfig, popupConfig);
-    templateConfig.Close = ubsApp.getTranslation("Close");
-    ubsApp.startCurrentScenario();
     document.getElementById("templateContent").style.opacity="1";
     document.getElementById("templateContent").style["background-color"] = "transparent";
-	tempVar.html += ubsPopupTemplate(templateConfig);
+    ubsApp.startCurrentScenario();
+	tempVar.html += ubsApp.getPopupHtml(templateConfig);
 	ubsApp.popupConfig = {};
+}
+
+ubsApp.getPopupHtml = function(templateConfig) {
+    let popupConfig = ubsApp.popupConfig;
+    if(!popupConfig.buttons && popupConfig.showCloseButton) {
+            let button = {
+                'name' : ubsApp.getTranslation("Close"),
+                'action' : "ubsApp.closePopup();"
+            };
+
+            popupConfig.buttons = [];
+            popupConfig.buttons[0] = button;
+        }
+
+    templateConfig =  $.extend(templateConfig, popupConfig);
+
+    return ubsPopupTemplate(templateConfig);
 }

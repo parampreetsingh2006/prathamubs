@@ -58,6 +58,8 @@ ubsApp.translation={
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
+        "endGameConfirm" : "Are you sure you want to end game?",
+        "ENDGAME" : "END GAME",
         "creditTitle":"CREDIT",
         "creditLimitTitle":"CREDIT LIMIT",
         "nextQuestion":"Next Question!",
@@ -167,8 +169,15 @@ ubsApp.translation={
         "Eggs":"Eggs",
         "Biscuits":"Biscuits",
         "Soap":"Soap",
+        "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
+
+        "salesResultHeader":"SALES RESULT",
+        "salesWrongAnswer":"Wrong Answer.",
+        "salesCorrectAnswer":"Correct Answer.",
+        "salesCorrectRptpt":"Reputation points are increased to ",
+        "salesWrongRptpt":"Reputation points are reduced to ",
 
         //Decision
         "invVal":"INVENTORY VALUE",
@@ -230,6 +239,7 @@ ubsApp.translation={
         "Credit": "Credit",
         "chequeTitleName":"CHEQUE",
         "creditTitleName":"CREDIT",
+        "DEBT" : "DEBT",
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
@@ -297,6 +307,20 @@ ubsApp.translation={
         "luckQuestion56":"Bank increased the interest rate on your fixed deposit",
         "luckQuestion57":"Bank decreased the interest rate on your fixed deposit",
 
+
+        "badLuckResultPopUpBankBalance":"Your Bank Balance is reduced to ",
+        "badLuckResultPopUpCash":"Your Cash Balance is reduced to ",
+        "badLuckResultPopUpRepPt":"Your Reputation points are reduced to ",
+        "badLuckResultPopUpInv":"Your Inventory is reduced to ", // percentage
+        "goodLuckResultPopUpBankBalance":"Your Bank Balance is increased to ",
+        "goodLuckResultPopUpCash":"Your Cash Balance is increased to ",
+        "goodLuckResultPopUpRepPt":"Your Reputation points are increased to ",
+        "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
+        "goodLuckResultHeader":"GOOD LUCK RESULT",
+        "badLuckResultHeader":"BAD LUCK RESULT",
+
+        "paymentResultHeader":"PAYMENT RESULT",
+
         "convertTitle":"CONVERT",
         "quizTitle":"QUIZ",
 
@@ -311,7 +335,7 @@ ubsApp.translation={
         "checkTitle":"CHECK",
         "enterInMultipleOf15":"Please enter number in the multiple of 15.",
         "You have entered more points than you have":"You have entered more points than you have.",
-        "validReputationPts":"Please enter a valid reputation point.",
+        "validReputationPts":"Please enter a valid reputation point greater than 14 and less than current Reputation points.",
 
 
         //withdraw from bank
@@ -360,9 +384,6 @@ ubsApp.translation={
 						        "There are many template like sales/purchase/luck/inventory and there are many scenario based on template."+
 						        "Read each template and scenario carefully before starting the game."+
 						        "As you will progress, you will get/loose point or reward based on your decision and answers." ,
-        "quizWrongAnswerHeader":"WRONG ANSWER",
-        "quizWrongAnswerMessage":"You have got wrong message!",
-        "quizRightAnswer":"RIGHT ANSWER",
         "INVENTORYVALUE": "INVENTORY VALUE",
         "INVENTORY" : "INVENTORY",
         "decisionResult": "DECISION RESULT",
@@ -1162,6 +1183,20 @@ ubsApp.translation={
 
        /******************************************Quiz key End******************************************************************/
 
+       "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
+       "quizCorrectAnswerHeading":"Correct Answer",
+       "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
+       "quizWrongAnswerHeading":"Wrong Answer",
+       "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
+       "wowImage":"images/wow.png",
+       "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
+       "decisionGainReptPointsLostBalance": " You earned {0} Reputation Points. However you lost ₹ {1}",
+       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
+       "decisionGainRptPts":"You earned {0} Reputation points!",
+       "decisionLoseRptPts":"You lost {0} Reputation points!",
+        "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
+        "convertReputationMessage" : "CONVERT REPUTATION TO ADVANTAGE CARD",
+        "OK" : "OK",
 
 
-    }
+    }   

@@ -63,6 +63,7 @@ ubsApp.translation={
     "cashTitle":"कैश",
     "creditTitle":"श्रेय",
     "Credit":"श्रेय",
+     "DEBT":"कर्ज",
 
     "creditLimitTitle":"श्रेय सीमा",
     "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
@@ -188,8 +189,14 @@ ubsApp.translation={
         },
     "This item is not available in your Inventory":"This item is not available in your Inventory",
 
-    //Decision
+    "salesResultHeader":"बिक्री परिणाम",
+    "salesWrongAnswer":"गलत जवाब।",
+    "salesCorrectAnswer":"सही जवाब।",
+    "salesCorrectRptpt":"Reputation points are increased to ",
+    "salesWrongRptpt":"Reputation points are reduced to ",
 
+    //Decision
+    "hasWon" : "जीता है",
     "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",
     "inventory":"इन्वेंटरी",
     "invVal":"प्रतिष्ठा अंक",
@@ -312,6 +319,22 @@ ubsApp.translation={
     "luckQuestion55":"Change to Hindi:Government increased the prices on  Wheat. You lose Rs. 100 per week",
     "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
     "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
+
+    "badLuckResultPopUpBankBalance":"Your Bank Balance is reduced to ",
+    "badLuckResultPopUpCash":"Your Cash Balance is reduced to ",
+    "badLuckResultPopUpRepPt":"Your Reputation points are reduced to ",
+    "badLuckResultPopUpInv":"Your Inventory is reduced to ", // percentage
+    "goodLuckResultPopUpBankBalance":"Your Bank Balance is increased to ",
+    "goodLuckResultPopUpCash":"Your Cash Balance is increased to ",
+    "goodLuckResultPopUpRepPt":"Your Reputation points are increased to ",
+    "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
+    "goodLuckResultHeader":"अच्छा भाग्य परिणाम",
+    "badLuckResultHeader":"खराब भाग्य परिणाम",
+
+    "paymentResultHeader":"भुगतान परिणाम",
+
+
+
      "EndGameSummary":"अंत खेल सारांश",
      "GAMEOVER":"खेल खत्म",
       "gameLogo":"images/hindi/logo.png",
@@ -326,7 +349,7 @@ ubsApp.translation={
      "checkTitle":"चेक",
      "enterInMultipleOf15":"कृपया 15 के एकाधिक में नंबर दर्ज करें।",
      "You have entered more points than you have":"आपने अपने से अधिक अंक दर्ज किए हैं।",
-     "validReputationPts":"कृपया वैध प्रतिष्ठा बिंदु दर्ज करें।",
+     "validReputationPts":"14 से अधिक मान्य प्रतिष्ठा बिंदु और वर्तमान प्रतिष्ठा अंक से कम दर्ज करें",
      "LastWeek":"पिछले सप्ताह",
      "CurrentWeek":"यह सप्ताह",
      "WeeklySummary" : "साप्ताहिक सारांश",
@@ -1178,9 +1201,22 @@ ubsApp.translation={
        "QuizHelpPageName" : "quizHelp",
 
        /******************************************Quiz key End******************************************************************/
+       "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
+       "quizCorrectAnswerHeading":"Correct Answer",
+       "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
+       "quizWrongAnswerHeading":"Wrong Answer",
+       "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
+       "wowImage":"images/wah.png",
+       "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
+       "decisionGainReptPointsLostBalance": " You earned {0} Reputation Points. However you lost ₹ {1}",
+       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
+       "decisionGainRptPts":"You earned {0} Reputation points!",
+       "decisionLoseRptPts":"You lost {0} Reputation points!",
 
-
-
-    	   
+       "endGameConfirm" : "क्या आप वाकई खेल खत्म करना चाहते हैं?",
+       "ENDGAME" : "अंत खेल",
+        "convertReputationPointsTitle" :"कन्वर्ट प्रतिष्ठान अंक",
+         "convertReputationMessage" : "कार्ड को उन्नत करने के लिए कनवर्टर प्रतिस्थापन",
+         "OK" : "ठीक",
 
 }

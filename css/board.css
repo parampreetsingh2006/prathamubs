@@ -56,9 +56,8 @@
 .sideScoreBoardButton {
     background-image: url(../images/buttonMedium.png);
     background-size: 100% 100%;
-    width: 28%;
     text-align: center;
-    line-height: 185%;
+    padding: 6px;
     font-weight: bold;
     cursor: pointer;
 }

@@ -3,7 +3,7 @@
 	background-image: url('../images/background.png');
 	height: auto;
 	width: 80%;	
-	margin: 6% 9%;
+	margin: 3% 6%;
 	padding: 1%;
 	overflow: hidden;
 }
@@ -67,8 +67,10 @@
 	background-color: #ffffff;
 	padding: 1vw;
 	margin: 6% 10% 3% 10%;
-	border: 20px solid;
+	border: 2vw solid;
 	border-image: url('../images/redBorderAlt.png') 30 round;
+	font-size: 1.1vw;
+	font-weight: bold;
 }
 
 #answerDiv{
@@ -117,30 +119,40 @@
   border: none;
   cursor: pointer;
   border-radius: 7px;
-  box-shadow: 0 3px #333333;
+  text-align: center;
+  font-weight: bold;
 }
 
 .quizOkButton {
 	background:url('../images/buttonsmall.png');
 	margin-left: 45%;
+	background-size: 100% 100%;
 }
 
 .quizSubmitButtons {
     margin-right: 5px;
 	background:url('../images/buttonsmall.png');
 	float: right;
+	background-size: 100% 100%;
 }
 
 .quizHelpButtons {
 	float: right;
 	margin-left: 5%;
-	background-color: green;
-	color:white;
+	background-image: url('../images/help-button.png');
+	background-color: transparent;
+	height: auto;
+	background-size: 100% 100%;
 }
 .quizButtons:active{
 
   box-shadow: 1px 1px  #333333;
   transform: translateY(3px);
+}
+
+#quizWowImage {
+	width: 20%;
+	margin: 6% 0 0 24%;	
 }
 
 button[class="quizButtons"]:disabled{
