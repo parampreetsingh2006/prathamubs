@@ -334,7 +334,7 @@ ubsApp.translation={
         "checkTitle":"CHECK",
         "enterInMultipleOf15":"Please enter number in the multiple of 15.",
         "You have entered more points than you have":"You have entered more points than you have.",
-        "validReputationPts":"Please enter a valid reputation point.",
+        "validReputationPts":"Please enter a valid reputation point greater than 14 and less than current Reputation points.",
 
 
         //withdraw from bank

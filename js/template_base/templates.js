@@ -905,22 +905,22 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
-ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:rgb(105,105,105);">'+
-'       <div class="screenTitle" style="background-color:{{background}}; color:{{color}}">'+
-'            {{advantageCardTitle}}'+
-'       </div>'+
-'       <div id="advantageCardScenario" class="borderB1" style="background-color:{{background}}; color:{{color}};">'+
-'           {{reputationPointAvailableTitle}}:<span id="currentReputationPoint">{{currentReputationPoint}}</span>&nbsp ({{conversionTitle}})<br>'+
-'           {{numberToConvertTitle}}: <input type="number" style="width:15%;" class="borderB1" id="convertText"></input> &nbsp <button id="checkButton" onclick="ubsApp.checkDetails()">{{checkTitle}}</button><br><br>'+
-'            {{numberOfAdvantageCardTitle}}: <span id="convertedNumber"></span><br>'+
-'            {{reputationPointBalance}}: <span id="remainingBalance"></span>'+
-'       </div>'+
-'       <div class="advantageCardButtonContainer">'+
-'           <button onclick="ubsApp.covertReputationToWildCard()" class="advantageCardButton">{{convertTitle}}</button>'+
-'           <button onclick="ubsApp.closeCurrentScenario()" class="advantageCardButton" >{{cancelTitle}}</button>'+
-'       </div>'+
-'       <div id="result"></div>'+
-'</div>';
+//ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:rgb(105,105,105);">'+
+//'       <div class="screenTitle" style="background-color:{{background}}; color:{{color}}">'+
+//'            {{advantageCardTitle}}'+
+//'       </div>'+
+//'       <div id="advantageCardScenario" class="borderB1" style="background-color:{{background}}; color:{{color}};">'+
+//'           {{reputationPointAvailableTitle}}:<span id="currentReputationPoint">{{currentReputationPoint}}</span>&nbsp ({{conversionTitle}})<br>'+
+//'           {{numberToConvertTitle}}: <input type="number" style="width:15%;" class="borderB1" id="convertText"></input> &nbsp <button id="checkButton" onclick="ubsApp.checkDetails()">{{checkTitle}}</button><br><br>'+
+//'            {{numberOfAdvantageCardTitle}}: <span id="convertedNumber"></span><br>'+
+//'            {{reputationPointBalance}}: <span id="remainingBalance"></span>'+
+//'       </div>'+
+//'       <div class="advantageCardButtonContainer">'+
+//'           <button onclick="ubsApp.covertReputationToWildCard()" class="advantageCardButton">{{convertTitle}}</button>'+
+//'           <button onclick="ubsApp.closeCurrentScenario()" class="advantageCardButton" >{{cancelTitle}}</button>'+
+//'       </div>'+
+//'       <div id="result"></div>'+
+//'</div>';
 
 ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            '    <div style="background-color: white;margin-left:1%;margin-right:1%;position: relative; overflow: auto; max-height: 50vh; ">'+

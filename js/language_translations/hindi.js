@@ -349,7 +349,7 @@ ubsApp.translation={
      "checkTitle":"चेक",
      "enterInMultipleOf15":"कृपया 15 के एकाधिक में नंबर दर्ज करें।",
      "You have entered more points than you have":"आपने अपने से अधिक अंक दर्ज किए हैं।",
-     "validReputationPts":"कृपया वैध प्रतिष्ठा बिंदु दर्ज करें।",
+     "validReputationPts":"14 से अधिक मान्य प्रतिष्ठा बिंदु और वर्तमान प्रतिष्ठा अंक से कम दर्ज करें",
      "LastWeek":"पिछले सप्ताह",
      "CurrentWeek":"यह सप्ताह",
      "WeeklySummary" : "साप्ताहिक सारांश",

@@ -43,7 +43,7 @@ ubsApp.openAdvantageCard=function(){
 ubsApp.covertReputationToWildCard=function(){
      var numberEntered=document.getElementById("convertText").value;
         console.log(numberEntered);
-        if(numberEntered>15)
+        if(numberEntered>14 && numberEntered <= userArray[playerChance].getReputationPts())
         {
             let reputationPointsUsed = numberEntered  - (numberEntered%15);
             userArray[playerChance].setAdvantageCardNumber(reputationPointsUsed / 15);
