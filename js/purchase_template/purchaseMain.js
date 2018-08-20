@@ -32,9 +32,10 @@ document.getElementById("newCostText").value="Rs. "+(parseInt(temp.substring(4))
 }
 
 ubsApp.pay=function(){
-//document.getElementById("result").innerHTML="";
 var paymentDone=false;
+var resultMessage="";
 var cost=document.getElementById("newCostText").value;
+var inventoryPercent=document.getElementById("percent").innerHTML ;
 cost=parseInt(cost.substring(4));
 if(cost){
 var creditChanged=userArray[playerChance].getCredit();
@@ -48,20 +49,19 @@ for(var i=1;i<=numberOfPaymentModes;i++){
         if(document.getElementById("amount"+i).value)
         totalAmountEntered+=parseInt(document.getElementById("amount"+i).value);
         else{
-            document.getElementById("result").innerHTML=ubsApp.translation["validAmount"];
+            resultMessage = ubsApp.translation["validAmount"];
             break;		
         }
     }
 }
 if(totalAmountEntered<cost){
-    document.getElementById("result").innerHTML=ubsApp.translation["lessMoney"];
+    resultMessage = ubsApp.translation["lessMoney"].replace("<CurrentAmount>",totalAmountEntered).replace("<ActualAmount>",cost);
 }
 
 else if(totalAmountEntered>cost){
-    document.getElementById("result").innerHTML=ubsApp.translation["moreMoney"];
+    resultMessage = ubsApp.translation["moreMoney"].replace("<CurrentAmount>",totalAmountEntered).replace("<ActualAmount>",cost);
 }
 else{
-//    document.getElementById("result").innerHTML="";
     for(var i=1;i<=numberOfPaymentModes;i++){
         if(document.getElementById("parent"+i).style.display!="none"){
         var dropDown=document.getElementById("pay"+i);
@@ -75,7 +75,7 @@ else{
                 //userArray[playerChance].setplayerScore();
             }
             else{
-                document.getElementById("result").innerHTML=ubsApp.translation["moreCash"];
+                resultMessage = ubsApp.translation["moreCash"];
                 break;
             }
         }
@@ -87,7 +87,7 @@ else{
                 //userArray[playerChance].setBankBalance();
             }
             else{
-                document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];
+                resultMessage=ubsApp.translation["bankBalance"];
                 break;
             }
         }
@@ -101,7 +101,7 @@ else{
                 //userArray[playerChance].setCredit();
             }
             else{
-                document.getElementById("result").innerHTML=ubsApp.translation["lotDebt"];
+                resultMessage=ubsApp.translation["lotDebt"];
                 break;
             }
         }
@@ -110,6 +110,7 @@ else{
     if(totalAmountEntered==0)
     {
         paymentDone=true;
+        resultMessage=ubsApp.translation["purchaseSuccess"].replace("<Percent>",inventoryPercent).replace("<Amount>",cost);
     }
     if(paymentDone){
         userArray[playerChance].setInventoryScore(newLevel);
@@ -149,7 +150,13 @@ else{
 }
 }
 else{
-document.getElementById("result").innerHTML=ubsApp.translation["pleaseConfirm"];
+resultMessage=ubsApp.translation["pleaseConfirm"];
+}
+if(resultMessage != "") {
+    ubsApp.openPopup({ "message" : resultMessage,
+                 "header" : ubsApp.getTranslation("purchaseHeader"),
+                 "headerStyle" : "text-align: center;  color: red; font-size: 2vw;"
+                      });
 }
 }
 

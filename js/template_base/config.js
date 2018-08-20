@@ -1,4 +1,4 @@
- ubsApp.pages = {
+ ubsApp.decisionInsurancePage = {
 	"decisionInsurance":{
 		"repeatforuser":true,
 		"repeatforall":true,
@@ -44,18 +44,4 @@
 },
 }
 
-ubsApp.pages=$.extend(ubsApp.pages, ubsApp.salesConfig);
-ubsApp.pages=$.extend(ubsApp.pages, ubsApp.decisionConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.transferToBankConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.payOffConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.purchaseConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.paymentConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.luckConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.advantageCardConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.sideScoreBoardConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.withdrawFromBankConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.helpConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.quizConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.quizStarterConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.successErrorConfig);
-ubsApp.pages=$.extend(ubsApp.pages,ubsApp.weekSummaryConfig);
+ubsApp.initializeUbsPages();

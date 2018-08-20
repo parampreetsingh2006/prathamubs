@@ -58,6 +58,8 @@ ubsApp.translation={
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
+        "endGameConfirm" : "Are you sure you want to end game?",
+        "ENDGAME" : "END GAME",
         "creditTitle":"CREDIT",
         "creditLimitTitle":"CREDIT LIMIT",
         "nextQuestion":"Next Question!",
@@ -82,15 +84,16 @@ ubsApp.translation={
 
 
         //new
-        "validAmount":"PLEASE ENTER A VALID AMOUNT",
-        "lessMoney":"YOU HAVE ENTERED LESS MONEY",
-        "moreMoney":"YOU HAVE ENTERED MORE MONEY",
-        "moreCash":"YOU HAVE ENTERED MORE CASH THAN YOU HAVE",
-        "bankBalance":"YOU HAVE INSUFFICIENT BANK BALANCE",
-        "lotDebt":"YOU HAVE A LOT OF DEBT",
-        "pleaseConfirm":"PLEASE CONFIRM THE AMOUNT YOU WANT",
-        "noDebt":"YOU DON'T HAVE ANY DEBTS.",
-
+        "validAmount":"Please enter a valid amount",
+        "lessMoney":"Payment is being made for Rs. <CurrentAmount> only. Please make payment of Rs. <ActualAmount>",
+        "moreMoney":"Payment is being made for Rs. <CurrentAmount>. Please make payment of Rs. <ActualAmount>",
+        "moreCash":"Insufficient cash to complete transaction. Please pay by cheque or buy on credit.",
+        "bankBalance":"Insufficient funds to complete transaction. Please transfer money or buy on credit.",
+        "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
+        "pleaseConfirm":"Please confirm the amount you want",
+        "noDebt":"You don't have any debt.",
+        "purchaseSuccess":"Congratulations! Your inventory has been replenished! It is now at <Percent>%. You paid Rs. <Amount>",
+        "purchaseHeader":"Purchase Alert",
 
         "itemRateDisplay":{
 
@@ -166,8 +169,15 @@ ubsApp.translation={
         "Eggs":"Eggs",
         "Biscuits":"Biscuits",
         "Soap":"Soap",
+        "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
+
+        "salesResultHeader":"SALES RESULT",
+        "salesWrongAnswer":"Wrong Answer.",
+        "salesCorrectAnswer":"Correct Answer.",
+        "salesCorrectRptpt":"Reputation points are increased to ",
+        "salesWrongRptpt":"Reputation points are reduced to ",
 
         //Decision
         "invVal":"INVENTORY VALUE",
@@ -229,6 +239,7 @@ ubsApp.translation={
         "Credit": "Credit",
         "chequeTitleName":"CHEQUE",
         "creditTitleName":"CREDIT",
+        "DEBT" : "DEBT",
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
@@ -324,7 +335,7 @@ ubsApp.translation={
         "checkTitle":"CHECK",
         "enterInMultipleOf15":"Please enter number in the multiple of 15.",
         "You have entered more points than you have":"You have entered more points than you have.",
-        "validReputationPts":"Please enter a valid reputation point.",
+        "validReputationPts":"Please enter a valid reputation point greater than 14 and less than current Reputation points.",
 
 
         //withdraw from bank
@@ -377,7 +388,7 @@ ubsApp.translation={
         "INVENTORY" : "INVENTORY",
         "decisionResult": "DECISION RESULT",
         "welcome":"WELCOME",
-        
+
 	   /******************************************Quiz key Start******************************************************************/
        "QuizQuestion1" : "We should keep our savings with banks because",
        "QuizQuestion2" : "Bank does not give loan against",
@@ -1176,5 +1187,16 @@ ubsApp.translation={
        "quizCorrectAnswerHeading":"Correct Answer",
        "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
        "quizWrongAnswerHeading":"Wrong Answer",
+       "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
+       "wowImage":"images/wow.png",
+       "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
+       "decisionGainReptPointsLostBalance": " You earned {0} Reputation Points. However you lost ₹ {1}",
+       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
+       "decisionGainRptPts":"You earned {0} Reputation points!",
+       "decisionLoseRptPts":"You lost {0} Reputation points!",
+        "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
+        "convertReputationMessage" : "CONVERT REPUTATION TO ADVANTAGE CARD",
+        "OK" : "OK",
 
-    }
+
+    }   

@@ -63,6 +63,7 @@ ubsApp.translation={
     "cashTitle":"कैश",
     "creditTitle":"श्रेय",
     "Credit":"श्रेय",
+     "DEBT":"कर्ज",
 
     "creditLimitTitle":"श्रेय सीमा",
     "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
@@ -86,9 +87,6 @@ ubsApp.translation={
 
     "paymentQuestion1":"ड्राइविंग लाइसेंस नहीं होने के लिए आपको 1000 रुपये जुर्माना लगाया गया है।",
     "paymentQuestion2":"दुकान लाइसेंस नहीं होने के लिए आपको 1000 रुपये जुर्माना लगाया गया है।",
-
-   
-    "validAmount":"कृपया एक वैध राशि दर्ज करें",
 
 
     //Main Screen
@@ -131,12 +129,15 @@ ubsApp.translation={
     "noThanksTitle":"जी नहीं, धन्यवाद",
     "or":"या",
 
-    "lessMoney":"आपने कम पैसा दिया है",
-    "moreMoney":"आपने अधिक पैसा लगाया है",
-    "moreCash":"आपने अधिक कैश लगाया है",
-    "bankBalance":"आपके पास असंतुलित बैंक बैलेंस है",
-    "lotDebt":"आपके पास बहुत डेब्ट है",
+    "validAmount":"कृपया एक वैध राशि दर्ज करें",
+    "lessMoney":"केवल ₹<CurrentAmount> के लिए भुगतान किया जा रहा है। कृपया ₹<ActualAmount> का भुगतान करें।",
+    "moreMoney":"₹<CurrentAmount> के लिए भुगतान किया जा रहा है। कृपया ₹<ActualAmount> का भुगतान करें।",
+    "moreCash":"लेनदेन को पूरा करने के लिए अपर्याप्त नकदी। चेक द्वारा भुगतान करें या क्रेडिट पर खरीद लें।",
+    "bankBalance":"लेनदेन को पूरा करने के लिए अपर्याप्त धन। कृपया पैसा स्थानांतरित करें या क्रेडिट पर खरीद लें।",
+    "lotDebt":"आप बहुत सारे कर्ज में हैं। नकदी या चेक द्वारा भुगतान करें।",
     "pleaseConfirm":"कृपया जो राशि आप चाहते हैं उसे पुष्टि करें",
+    "purchaseSuccess":"बधाई हो! आपकी सूची भर दी गई है! यह अब <Percent>% पर है। आपने ₹<Amount> चुकाए हैं",
+    "purchaseHeader":"खरीद फरोख्त अलर्ट",
     "withdrawTitle":"विथड्रॉ",
 
     //Sales
@@ -188,8 +189,14 @@ ubsApp.translation={
         },
     "This item is not available in your Inventory":"This item is not available in your Inventory",
 
-    //Decision
+    "salesResultHeader":"बिक्री परिणाम",
+    "salesWrongAnswer":"गलत जवाब।",
+    "salesCorrectAnswer":"सही जवाब।",
+    "salesCorrectRptpt":"Reputation points are increased to ",
+    "salesWrongRptpt":"Reputation points are reduced to ",
 
+    //Decision
+    "hasWon" : "जीता है",
     "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",
     "inventory":"इन्वेंटरी",
     "invVal":"प्रतिष्ठा अंक",
@@ -342,7 +349,7 @@ ubsApp.translation={
      "checkTitle":"चेक",
      "enterInMultipleOf15":"कृपया 15 के एकाधिक में नंबर दर्ज करें।",
      "You have entered more points than you have":"आपने अपने से अधिक अंक दर्ज किए हैं।",
-     "validReputationPts":"कृपया वैध प्रतिष्ठा बिंदु दर्ज करें।",
+     "validReputationPts":"14 से अधिक मान्य प्रतिष्ठा बिंदु और वर्तमान प्रतिष्ठा अंक से कम दर्ज करें",
      "LastWeek":"पिछले सप्ताह",
      "CurrentWeek":"यह सप्ताह",
      "WeeklySummary" : "साप्ताहिक सारांश",
@@ -1195,12 +1202,21 @@ ubsApp.translation={
 
        /******************************************Quiz key End******************************************************************/
        "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
-       "quizCorrectAnswerHeading":"Correct Answer".
+       "quizCorrectAnswerHeading":"Correct Answer",
        "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
        "quizWrongAnswerHeading":"Wrong Answer",
+       "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
+       "wowImage":"images/wah.png",
+       "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
+       "decisionGainReptPointsLostBalance": " You earned {0} Reputation Points. However you lost ₹ {1}",
+       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
+       "decisionGainRptPts":"You earned {0} Reputation points!",
+       "decisionLoseRptPts":"You lost {0} Reputation points!",
 
-
-
-    	   
+       "endGameConfirm" : "क्या आप वाकई खेल खत्म करना चाहते हैं?",
+       "ENDGAME" : "अंत खेल",
+        "convertReputationPointsTitle" :"कन्वर्ट प्रतिष्ठान अंक",
+         "convertReputationMessage" : "कार्ड को उन्नत करने के लिए कनवर्टर प्रतिस्थापन",
+         "OK" : "ठीक",
 
 }
