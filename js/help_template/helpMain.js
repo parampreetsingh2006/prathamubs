@@ -11,7 +11,7 @@ ubsApp.startHelp=function(pageName){
 ubsApp.renderHelpPage=function(template){
 	let html = "";
 	for(let i=0; i< template.length; i++) {
-		let templateConfig = template[i];
+		let templateConfig = $.extend({},template[i]);
 		if(templateConfig.templateType=="static"){
 			html+=ubsStaticTemplate(templateConfig);
 		} else if(templateConfig.templateType ==  "popup") {

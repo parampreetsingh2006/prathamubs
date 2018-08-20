@@ -86,7 +86,7 @@ monopoly.initialiseCategory = function(){
 monopoly.renderPageforBoard = function(page) {
 	let html = "";
 	for(let i=0; i< page.length; i++) {
-        let templateConfig = page[i];
+        let templateConfig = $.extend({},page[i]);
         if(templateConfig.weekDeadLine){
           numberOfWeeksDeadline=templateConfig.weekDeadLine;
         }
