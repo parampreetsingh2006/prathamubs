@@ -929,7 +929,7 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '    </div>'+
 '    <div class="row" id="rightInfo">'+
 '        <div class="col-md-12">'+
-'            <div class="row insuranceText">'+
+'            <div class="row insuranceText">'+ 
 '                <div class="col-sm-6" style="text-align:left;">{{inventoryTitle}}</div>'+
 '                <div id="decisionMakingInv" class="col-sm-6" style="text-align:right;">{{inventory}}%</div>'+
 '            </div>'+
