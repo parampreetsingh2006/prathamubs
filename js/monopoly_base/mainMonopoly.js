@@ -364,7 +364,9 @@ monopoly.initPlayers=function(){
                 {   "radioName":"Radio"+i,
                     "radioValue":tokens[j],
                     "radioId":"radio"+j,
-                    "tokenColor":tokens[j]
+                    "tokenColor":tokens[j],
+                    "checked":false,
+                    "display":"inline"
                 });
             
             }
@@ -384,21 +386,21 @@ monopoly.initOfflinePlayers=function(){
             object.nameTitle=ubsApp.translation["name"]+(i+1);
             object.numberOfTokens=[];
             object.nameId="name"+(i);
-            var checked;
+            var isCheckedByDefault;
             for (var j = 0; j<tokens.length; j++) {
-                checked = (i==j);
+                isCheckedByDefault = (i==j);
                 object.numberOfTokens.push(
                 {   "radioName":"Radio"+i,
                     "radioValue":tokens[j],
                     "radioId":"radio"+j,
                     "tokenColor":tokens[j],
-                    "checked":checked,
-                    "disabled":true
+                    "checked":isCheckedByDefault,
+                    "display":"none"
                 });
 
             }
             document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
-      }
+        }
 
     }
 }

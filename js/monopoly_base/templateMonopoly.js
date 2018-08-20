@@ -250,9 +250,8 @@ monopoly.formTemplate='{{#if nameTitle}}<br><div class=\"title\" >{{nameTitle}}:
 
 '{{#if numberOfTokens}}'+
     '{{#each numberOfTokens}}'+
-        '<input type=\"radio\" style="display:inline;padding-left:5em; " name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"  {{#if checked}}checked{{/if}} {{#if disabled}}disabled{{/if}}><label for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+
+        '<input type=\"radio\" style="display:{{display}};padding-left:5em; " name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"  {{#if checked}}checked{{/if}}><label for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+
     '{{/each}}'+
-
 '{{/if}}'+
 '{{#if difficulty}}'+
     '{{#each difficulty}}'+
