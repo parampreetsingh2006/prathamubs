@@ -189,8 +189,14 @@ ubsApp.translation={
         },
     "This item is not available in your Inventory":"This item is not available in your Inventory",
 
-    //Decision
+    "salesResultHeader":"बिक्री परिणाम",
+    "salesWrongAnswer":"गलत जवाब।",
+    "salesCorrectAnswer":"सही जवाब।",
+    "salesCorrectRptpt":"Reputation points are increased to ",
+    "salesWrongRptpt":"Reputation points are reduced to ",
 
+    //Decision
+    "hasWon" : "जीता है",
     "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",
     "inventory":"इन्वेंटरी",
     "invVal":"प्रतिष्ठा अंक",
@@ -1199,6 +1205,14 @@ ubsApp.translation={
        "quizCorrectAnswerHeading":"Correct Answer",
        "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
        "quizWrongAnswerHeading":"Wrong Answer",
+       "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
+       "wowImage":"images/wah.png",
+       "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
+       "decisionGainReptPointsLostBalance": " You earned {0} Reputation Points. However you lost ₹ {1}",
+       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
+       "decisionGainRptPts":"You earned {0} Reputation points!",
+       "decisionLoseRptPts":"You lost {0} Reputation points!",
+
        "endGameConfirm" : "क्या आप वाकई खेल खत्म करना चाहते हैं?",
        "ENDGAME" : "अंत खेल",
 

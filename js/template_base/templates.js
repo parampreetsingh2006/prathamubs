@@ -421,7 +421,7 @@ ubsApp.leaderBoardTemplate=
 '           '+
 '       </span>'+
 '<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
-'                  <button class="submitButton" onclick="ubsApp.validateAmount();ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\')">'+
+'                  <button class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           Submit'+
 ' <br> <br> <br>' +
 '           <button class="helpButton" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
@@ -439,8 +439,10 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   </div>'+
 '   <div id="question_answer">'+
 '       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
-'       <span id="quizQuestionNumber"></span><span>.</span><span id="quizQuestion">{{question}}</span>'+
-'       {{#if quizResult}}<br><b><span id="quizResult"></span></b>{{/if}}'+
+'       <span id="quizQuestionNumber"></span><span id="quizQuestion">{{question}}</span>'+
+'       {{#if quizResult}}'+
+'           <br><b><div id="quizResult"></div>'+
+'       </b>{{/if}}'+
 '       {{#if options}}'+
 /*'       <span id ="quizQuestionNo">Question <span id="quizQuestionNumber"></span></span>'+*/
 '       <div id="quizOptions">'+
@@ -452,8 +454,8 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
-'       <span id="answerHeader"></span>'+
-/*'       <span id="answerMessage">You have wrong answer!</span>'+ TODO: To confirm from Pratham Team what message needs to be displayed*/ 
+'       <span id="answerHeader"></span><br>'+
+'       <span id="answerMessage"></span>'+
 '       <div id="quizOk">'+
 '           <button id="wrongAnswerOk"  class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
 '       </div>'+
@@ -900,7 +902,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '               <span id="decisionBankBalance">{{repPoints}} &nbsp; &nbsp; &nbsp; ₹ {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">HELP</button>'+
+'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:white;">'+
@@ -935,7 +937,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
                        '            {{#if showImage}}'+
-                       '            <div style="text-align: center; height: 25vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>'+
+                       '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
                        '        </div>'+
                        '        <div style="text-align: center;margin-top: 10px;">'+

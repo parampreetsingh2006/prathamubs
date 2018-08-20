@@ -1,5 +1,6 @@
 ubsApp.startHelp=function(pageName){
 
+    ubsApp.closeHelp();
 	document.getElementById("helpContent").style.opacity="0.95";
 	$('#helpContent').css("height",(screenHeight)+'px')
 	$('#helpContent').css("width",(screenWidth)+'px')
@@ -10,7 +11,7 @@ ubsApp.startHelp=function(pageName){
 ubsApp.renderHelpPage=function(template){
 	let html = "";
 	for(let i=0; i< template.length; i++) {
-		let templateConfig = template[i];
+		let templateConfig = $.extend({},template[i]);
 		if(templateConfig.templateType=="static"){
 			html+=ubsStaticTemplate(templateConfig);
 		} else if(templateConfig.templateType ==  "popup") {

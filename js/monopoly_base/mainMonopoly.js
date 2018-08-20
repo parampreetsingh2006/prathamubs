@@ -86,7 +86,7 @@ monopoly.initialiseCategory = function(){
 monopoly.renderPageforBoard = function(page) {
 	let html = "";
 	for(let i=0; i< page.length; i++) {
-        let templateConfig = page[i];
+        let templateConfig = $.extend({},page[i]);
         if(templateConfig.weekDeadLine){
           numberOfWeeksDeadline=templateConfig.weekDeadLine;
         }
@@ -559,6 +559,7 @@ ubsApp.openPopup({
   	var arr=[];
 
     let playersConfig =[];
+    let atleastOne=false;
   	for(var i=0;i<numplayers;i++){
   	    let playerConfig = {};
   	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 3;
@@ -608,7 +609,7 @@ ubsApp.openPopup({
 
   		var winnerName="";
   		var currentHighScore=0;
-  		var atleastOne=false;
+
   		for(var i=0;i<numplayers;i++)
   		{
   			if(arr[i])
@@ -627,8 +628,17 @@ ubsApp.openPopup({
 
   	}
 
+
   	ubsApp.endGameConfig.players = playersConfig;
   	monopoly.renderPageforBoard(monopoly.pages.endGamePage);
+  	if(atleastOne){
+        ubsApp.openPopup({
+                       "header" : winnerName + " " + ubsApp.getTranslation("hasWon"),
+                      "message" : "",
+                      "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+                      "imageUrl" : "images/wow.jpg",
+                   });
+     }
   }
 
 ubsApp.nextMove = function(){

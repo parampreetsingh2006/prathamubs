@@ -101,7 +101,7 @@ ubsApp.renderPage = function(page) {
 
 
 	for(let i=0; i< page.length; i++) {
-		let templateConfig = page[i];
+		let templateConfig = $.extend({},page[i]);
 		let templateType = templateConfig.templateType;
 		eval(templateMap[templateType])(templateConfig,tempVar);
 
@@ -336,9 +336,15 @@ ubsApp.translateScenarios=function(){
 ubsApp.openPopup = function(config) {
 
     $('#popupBackground').show();
+     let showImage = false;
+        if(config.imageUrl) {
+            showImage = true;
+        }
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
    }, config);
+
+   ubsApp.popupConfig.showImage = showImage;
    ubsApp.startHelp("generalPopUp");
 }
 
