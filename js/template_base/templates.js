@@ -1025,7 +1025,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
                            '        '+
                            '        <div style="display: inline-block;width: 100%;font-weight: 700;">'+
-                           '            <div style="float: left;width: 50%;">'+
+                           '            <div style="float: left;width: 50%;     margin-left: 10%; font-size: large;">'+
                            '                <div style="display: inline-block;width: 100%;">'+
                            '                        <div style="float: left;">{{ReputationPoints}}</div>'+
                            '                        <div style="float: right;">{{currentWeekReputationPts}}</div>'+
