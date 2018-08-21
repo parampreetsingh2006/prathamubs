@@ -369,7 +369,7 @@ ubsApp.translation={
         "ERROR": "ERROR",
         "gameFinishedForAUser" : "game is finished now.",
         "NOTICE": "NOTICE",
-
+        "eachPlayerNameUniqueMessage" : "Two players cannot be same",
         "loadingGameMessage": "Loading Game...",
 
         "ReadInstructions" : "VIEW INSTRUCTIONS",

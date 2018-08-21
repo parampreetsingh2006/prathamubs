@@ -140,8 +140,8 @@ monopoly.origpages = {
         "templateType":"static",
         "style":"position:absolute;left:50%;top:10%;",
         "src":"<select id=\"num_offline_players\"   onchange=\"monopoly.initOfflinePlayers()\"> "+
-                    "<option value=\"\"><span id=\"player1\"> </span></option> "+
-                    "<option value=\"1\"><span id=\"player1\">1</span></option> "+
+                    "<option value=\"0\"><span id=\"player1\">0</span></option> "+
+                    "<option value=\"1\"><span  id=\"player1\">1</span></option> "+
                     "<option value=\"2\"><span id=\"player2\">2</span></option> "+
                     "<option value=\"3\"><span id=\"player3\">3</span></option> "+
                     "<option value=\"4\"><span id=\"player4\">4</span></option> "+

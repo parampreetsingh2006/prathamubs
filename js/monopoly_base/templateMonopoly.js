@@ -246,8 +246,17 @@ monopoly.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="mo
 ' </div>'+
 '<div id={{audioId}}></div>';
 
-monopoly.formTemplate='{{#if nameTitle}}<br><div class=\"title\" >{{nameTitle}}:</span><input type=\"text\" id=\"{{nameId}}\" style=\"margin-left:9px;\"></input><br><br>{{/if}}'+
-
+monopoly.formTemplate='{{#if nameTitle}}<br><div class="title" >{{nameTitle}}:</span> '+
+'{{#if isDropdown}}'+
+    '<select id="{{nameId}}" >'+
+        ' {{#each studentArray}}'+
+        '<option value="{{StudentId}}_{{StudentName}}">{{StudentName}} </option>'+
+        '{{/each}}'+
+    '</select>'+
+'{{else}}'+
+'<input type=\"text\" id=\"{{nameId}}\" style=\"margin-left:9px;\"></input>'+
+ '{{/if}}'+
+'<br><br>'+
 '{{#if numberOfTokens}}'+
     '{{#each numberOfTokens}}'+
         '<input type=\"radio\" style="display:{{display}};padding-left:5em; " name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"  {{#if checked}}checked{{/if}}><label style="display:{{display}};" for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+

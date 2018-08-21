@@ -19,6 +19,15 @@ class User{
     setplayerName(name){
         this.name=name;
     }
+
+    setplayerStudentId(id) {
+        this.playerStudentId = id;
+    }
+
+    getplayerStudentId() {
+            return this.playerStudentId;
+        }
+
     setplayerScore(score){ ///this is the cash 
         this.score=score;
     }

@@ -351,6 +351,8 @@ ubsApp.translation={
      "You have entered more points than you have":"आपने अपने से अधिक अंक दर्ज किए हैं।",
      "validReputationPts":"14 से अधिक मान्य प्रतिष्ठा बिंदु और वर्तमान प्रतिष्ठा अंक से कम दर्ज करें",
      "LastWeek":"पिछले सप्ताह",
+     "eachPlayerNameUniqueMessage" : "दो खिलाड़ी समान नहीं हो सकते हैं",
+
      "CurrentWeek":"यह सप्ताह",
      "WeeklySummary" : "साप्ताहिक सारांश",
     //withdraw from bank
