@@ -61,15 +61,16 @@ body {
   /*payOff*/
 
   .payOffContainer{
-    position: absolute;
-    left:30%;
-    top:25%;
     width:50%;
-    height:53%;
+    height:62%;
     background-image: url(../images/redBorderAlt.png);
-    background-size: cover;
-    border:1px solid black;
+    background-size: 100% 100%;
     right:30%;
+    padding: 2% 3%;
+    margin: auto;
+    margin-top: 10%;
+    max-height: 70%;
+    overflow: auto;
   }
 .imageContainer{
     position:absolute;
@@ -89,9 +90,7 @@ body {
     padding:1%;
 }
 .payOffSubTitleLeft{
-    position:absolute;;
-    left: 10%;
-    font-size:x-large;
+    font-size:large;
     font-weight:600;
 }
 #advantageCardTitle{
@@ -103,40 +102,33 @@ body {
 }
 
 .payOffSubTitleRight{
-    position:absolute;
-    font-size:x-large;
-    left: 50%;
+    font-size:large;
     font-weight:600;
+    float: right;
 }
 .payOffLeftSubTitleValue{
-    position:absolute;
-    left:50%;
-    top:60%;
 }
 
 .payOffDebtAmountValue{
-    position:absolute;
-    left:50%;
-    top:47%;
+    font-weight: 700;
+        font-size: large;
 }
 .payOffAmountToPayValue{
-    position:absolute;
-    left:50%;
-    top:57%;
 }
 .payOffLeftModeOfPaymentValue{
-    position:absolute;
-    left:50%;
-    top:67%;
 }
 .payOffButtonContainer{
-    width:17%;
-    position:absolute;
+    width:fit-content;
+    margin-top: 5%;
+    float: left;
+    margin-left: 22%;
 }
 
 .payOffButton{
     width:160px;
-    background-image:url("../images/buttonlong.png");
+    background-image:url("../images/buttonMedium.png");
+    background-color: transparent;
+    background-size: 100% 100%;
     border:0;
     color:black;
     font-size:large;
@@ -514,7 +506,7 @@ button:focus {outline:0;}
     padding: 1%;
     background-color: white;
     border: 1px solid black;
-    border-image: url(../images/redBorderAlt.png) 5% round;
+    border-image: url(../images/redBorderAlt.png) 30 43 round;
     border-width: 20px;
     width: 90%;
     height: 60%;
@@ -528,7 +520,7 @@ button:focus {outline:0;}
     padding: 1%;
     background-color: white;
     border: 1px solid black;
-    border-image: url(../images/redBorderAlt.png) 5% round;
+    border-image: url(../images/redBorderAlt.png) 30 43 round;
     border-width: 20px;
     width: 70%;
     height: 100%;
@@ -542,7 +534,7 @@ button:focus {outline:0;}
     padding: 1%;
     background-color: white;
     border: 1px solid black;
-    border-image: url(../images/redBorderAlt.png) 5% round;
+    border-image: url(../images/redBorderAlt.png) 30 43 round;
     border-width: 20px;
     width: 90%;
     height: 60%;

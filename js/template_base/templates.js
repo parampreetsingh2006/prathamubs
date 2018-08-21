@@ -321,6 +321,7 @@ ubsApp.leaderBoardTemplate=
 '    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
 '       <div id="order">'+
 '           <div id="orderList">'+
+'           <div style="background-color: white;height: 100%;padding: 2px;">'+
 '           <center><b>{{Order}}</b></center>'+
 '               <table class="table table-sm">'+
 '                   <tbody>'+
@@ -334,10 +335,12 @@ ubsApp.leaderBoardTemplate=
 '               </table>'+
 '           </div>'+
 '       </div>'+
+'       </div>'+
 '    </div>'+
 '    <div class="col-md-5 col-sm-5 col-xs-5 receipt-gen">'+
 '       <div class="receipt">'+
 '       <div class="receiptSale">'+
+'        <div style="background-color: white;height: 100%;padding: 2px;">'+
 '           <div id="title">{{receiptHeading}}</div>'+
 '       '+
 '           <img src="images/redheadersellreceipt.png" style="width:100%" >'+
@@ -381,6 +384,7 @@ ubsApp.leaderBoardTemplate=
 '               </div>'+
 '           </div>'+
 '           </div>'+
+'       </div>'+
 '       </div>'+
 '    </div>'+
 '   <div class="col-md-3 col-sm-3 col-xs-3">'+
@@ -702,14 +706,12 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '</div>';
 
 ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb(105,105,105); ">'+
-'                <span class="imageContainer"><img class="payOffImageToken" src="images/{{color}}.png"></img></span>'+
 '                <div class="payOffContainer">'+
-'                      <br><div class="payOffTitle" align="center">'+
+'                      <div class="payOffTitle" align="center">'+
 '                           {{title}}'+
 '                      </div>'+
-'                      <div align="center"><img class="" src="images/redheadersellreceipt.png"></div>'+
-'                      <br><br>'+
-'                      <div>'+
+'                      <div align="center"><img style="width: 100%;" src="images/redheadersellreceipt.png"></div>'+
+'                      <div style="    margin-top: 5%;    margin-bottom: 5%;">'+
 '                           <span class="payOffSubTitleLeft">'+
 '                               {{cashTitle}} '+
 '                               <span id="cashValue" >₹ {{cash}}</span>'+
@@ -718,27 +720,28 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                               {{bankBalanceTitle}} '+
 '                               <span id="bankBalanceValue">₹ {{bankBalance}}</span>'+
 '                           </span>'+
-'                      </div><br><br>'+
+'                      </div>'+
+'                      <div style="margin: auto;     width: fit-content;">'+
 '                      {{#if #payOff}}'+
-'                           <div>'+
+'                           <div style="    margin-bottom: 3%;">'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
-'                                    <span class="payOffDebtAmountValue">Rs. <span id="debtValue">{{debt}}<span>'+
+'                                    <span class="payOffDebtAmountValue"> ₹ <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
-'                           </div><br><br>'+
-'                      {{else}}<br><br>{{/if}}'+
+'                           </div>'+
+'                      {{else}}{{/if}}'+
 '                      <span class="payOffSubTitleLeft">'+
 '                           {{#if payOff}}'+
-'                               {{amountToPayTitle}}:'+
+'                               {{amountToPayTitle}} ₹ '+
 '                           {{else}}'+
 '                               {{amountToTransferTitle}} ₹ '+
 '                           {{/if}}'+
 '                      </span>'+
 '                      <span class="payOffAmountToPayValue">'+
 '                           <input type="number" id="debtPaymentText" class="borderB1">'+
-'                      </span><br><br>'+
+'                      </span>'+
 '                      {{#if payOff}}'+
-'                           <span class="payOffSubTitleLeft">'+
-'                               {{modeOfPaymentTitle}}:'+
+'                           <br><br><span class="payOffSubTitleLeft">'+
+'                               {{modeOfPaymentTitle}} ₹ '+
 '                           </span>'+
 '                      {{/if}}'+
 '                      {{#if payOff}}'+
@@ -747,13 +750,14 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                                   <option value="cash">{{cashTitle}}</option>'+
 '                                   <option value="cheque">{{chequeTitle}}</option>'+
 '                               </select>'+
-'                           </span><br><br>'+
-'                      {{else}}<br><br>{{/if}}'+
-'                      <br><div class="payOffButtonContainer" style="left:25%;">'+
-'                           <button class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
+'                           </span>'+
+'                      {{else}}{{/if}}'+
 '                      </div>'+
-'                      <div style="left:45%;" class="payOffButtonContainer">'+
-'                           <button class="payOffButton" style="margin-left:50%;" onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
+'                      <div class="payOffButtonContainer" >'+
+'                           <button style="color:green;" class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
+'                      </div>'+
+'                      <div style="margin-left: 1%;" class="payOffButtonContainer">'+
+'                           <button style="color:red;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
 '                      </div>'+
 '                </div>'+
 '       <div id="result"></div>'+
@@ -965,7 +969,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
 
 
 ubsApp.popUpTemplate = '<div style="{{style}}">'+
-                       '    <div style="background-color: white;margin:5%;padding: 10px;position: relative; max-height: 50vh;overflow: auto;   ">'+
+                       '    <div style="background-color: white;position: relative; min-height:35vh;max-height: 50vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -1001,7 +1005,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
 
 
 ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
-                              '    <div style="background-color: white;margin-left:1%;margin-right:1%;position: relative; overflow: auto; max-height: 50vh; ">'+
+                              '    <div style="background-color: white; padding:2px;margin-left:1%;margin-right:1%;position: relative; overflow: auto; min-height:35vh;max-height: 50vh; ">'+
                               ''+
                               '        <div>'+
                               ''+

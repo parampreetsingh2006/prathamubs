@@ -78,19 +78,19 @@
 }
 
 #order{
-	margin-top: 94%;
+	margin-top: 91%;
 	height: 100%;
 	width: 100%;
 }
 #orderList{
     	height: 60%;
     	width: 100%;
-        border:1px solid black;
-        border-image: url(../images/redBorderAlt.png) 5% round;
-        border-width: 25px;
-    overflow: auto;
-    background-color: white;
-    font-weight: bold;
+        background-size: 100% 100%;
+        background-image: url(../images/redbgsellorder.png);
+        overflow: auto;
+        background-color: white;
+        font-weight: bold;
+        padding: 8% 8%;
 }
 .items{
 font-size: 110%;
@@ -102,9 +102,9 @@ margin-top: 10%;
 }
 
 .receiptSale{
-    border:1px solid black;
-                border-image: url(../images/redBorderAlt.png) 5% round;
-                border-width: 40px;
+    background-image: url(../images/redbgsellreceipt.png);
+        background-size: 100% 100%;
+            padding: 6% 8%;
     	height: 85%;
     	width: 100%;
 	background-color: white;

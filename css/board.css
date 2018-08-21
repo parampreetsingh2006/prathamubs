@@ -19,10 +19,11 @@
     width: 27%;
     height: 100%;
     float: right;
+    margin-top: 10px;
 }
 
 .sideScoreBoard {
-    background-image: url(../images/redBorderAlt.png);
+    background-image: url(../images/redbgmainboard.png);
     height: 90%;
     background-size: 100% 100%;
     float: right;
@@ -38,6 +39,8 @@
     margin-left: 7%;
     height: 90%;
     width: 85%;
+    background-color: white;
+    padding: 5px;
 }
 
 .sideScoreBoardRow {
