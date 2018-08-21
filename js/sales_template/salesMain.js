@@ -32,6 +32,7 @@ ubsApp.validateAmount = function() {
 }
 ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 	let time = totalTime - $("#seconds").html();
+	ubsApp.stopTimer();
 	let c = userArray[playerChance].getplayerScore();
 	let r = userArray[playerChance].getReputationPts();
 	let s = userArray[playerChance].getInventoryScore();

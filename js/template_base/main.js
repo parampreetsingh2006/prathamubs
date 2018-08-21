@@ -266,6 +266,10 @@ ubsApp.startTimer=function(temp){
 
 }
 
+ubsApp.stopTimer = function() {
+    clearInterval(timeVar);
+}
+
 
 
 
