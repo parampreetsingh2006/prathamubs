@@ -84,15 +84,16 @@ ubsApp.translation={
 
 
         //new
-        "validAmount":"PLEASE ENTER A VALID AMOUNT",
-        "lessMoney":"YOU HAVE ENTERED LESS MONEY",
-        "moreMoney":"YOU HAVE ENTERED MORE MONEY",
-        "moreCash":"YOU HAVE ENTERED MORE CASH THAN YOU HAVE",
-        "bankBalance":"YOU HAVE INSUFFICIENT BANK BALANCE",
-        "lotDebt":"YOU HAVE A LOT OF DEBT",
-        "pleaseConfirm":"PLEASE CONFIRM THE AMOUNT YOU WANT",
-        "noDebt":"YOU DON'T HAVE ANY DEBTS.",
-
+        "validAmount":"Please enter a valid amount",
+        "lessMoney":"Payment is being made for Rs. <CurrentAmount> only. Please make payment of Rs. <ActualAmount>",
+        "moreMoney":"Payment is being made for Rs. <CurrentAmount>. Please make payment of Rs. <ActualAmount>",
+        "moreCash":"Insufficient cash to complete transaction. Please pay by cheque or buy on credit.",
+        "bankBalance":"Insufficient funds to complete transaction. Please transfer money or buy on credit.",
+        "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
+        "pleaseConfirm":"Please confirm the amount you want",
+        "noDebt":"You don't have any debt.",
+        "purchaseSuccess":"Congratulations! Your inventory has been replenished! It is now at <Percent>%. You paid Rs. <Amount>",
+        "purchaseHeader":"Purchase Alert",
 
         "itemRateDisplay":{
 
@@ -387,7 +388,7 @@ ubsApp.translation={
         "INVENTORY" : "INVENTORY",
         "decisionResult": "DECISION RESULT",
         "welcome":"WELCOME",
-        
+
 	   /******************************************Quiz key Start******************************************************************/
        "QuizQuestion1" : "We should keep our savings with banks because",
        "QuizQuestion2" : "Bank does not give loan against",

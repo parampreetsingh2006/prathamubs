@@ -153,7 +153,7 @@ body {
     padding: 5%;
     position: absolute;
     top: 48%;
-    left: 55%;
+    left: 70%;
 }
 .currentInventoryTitle{
     padding:5%;
@@ -173,8 +173,15 @@ body {
 .purchaseScreenButton{
     position: absolute;
     right: 10%;
-    background-color: #f3f332;
-
+    background-image: url(../images/buttonMedium.png);
+    background-size: 100% 100%;
+    width: 28%;
+    text-align: center;
+    line-height: 185%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    top:17%;
 }
 .enterAmountText{
     width:20%;
@@ -543,16 +550,36 @@ button:focus {outline:0;}
 	position: absolute;
 	bottom: -20%;
 	right: 10%;
-	background-color: #f3f332;
+    background-image: url(../images/buttonMedium.png);
+    background-size: 100% 100%;
+    width: 28%;
+    text-align: center;
+    line-height: 185%;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
 }
 .helpBtn {
 	position: absolute;
 	bottom: -20%;
-	right: 30%;
+	right: 40%;
+    background-image: url(../images/help-button.png);
+    background-size: 100% 100%;
+    width: 28%;
+    text-align: center;
+    line-height: 185%;
+    font-weight: bold;
+    cursor: pointer;
 }
 .confirmButton{
-    background-color: #f3f332;
     position: absolute;
     bottom: 10%;
     left: 35%;
+    background-image: url(../images/buttonMedium.png);
+    background-size: 100% 100%;
+    width: 40%;
+    text-align: center;
+    line-height: 185%;
+    font-weight: bold;
+    cursor: pointer;
 }
