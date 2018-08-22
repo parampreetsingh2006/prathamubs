@@ -2,11 +2,14 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	tempVar.salesConfig = templateConfig;
 	ubsApp.selectAvailableItems(templateConfig);
 	tempVar.html += ubsOrdertemplate(templateConfig);
+	ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
 }
 ubsApp.validateAmount = function() {
     var item = document.getElementsByName('amt');
+    var salesSubmitButton = document.getElementById('salesSubmitButton');
 	for(var i=0;i<item.length;i++){
     	if(!item[i].value) {
+    	   ubsApp.raiseAudioEvent(salesSubmitButton, 'wrongAnswer');
            ubsApp.openPopup({
                    "message" : "Please calculate amount for all items.",//ubsApp.getTranslation("quizLimitReachedForWeek"),
                    "header" : ubsApp.getTranslation("ERROR"),
@@ -37,13 +40,21 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		else if (time*100.0/totalTime<=80)r+=1;
 		else if (time*100.0/totalTime<=100)r+=0;
 
-		userArray[playerChance].setReputationPts(r);
 
+		userArray[playerChance].setReputationPts(r);
+		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'rightAnswer');
 		ubsApp.openResultPopup({
                 "message" : ubsApp.getTranslation("salesCorrectAnswer") + " " + ubsApp.getTranslation("salesCorrectRptpt") + userArray[playerChance].getReputationPts(),
                 "header" : ubsApp.getTranslation("salesResultHeader"),
                 "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
                 "imageUrl" : "images/wow.jpg",
+                "buttons":[
+                	{
+                		'id':"closePopupButton",
+                		'name' : ubsApp.getTranslation("Close"),
+              			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()"
+                	}
+                ]
                 });
 
 	}else{
@@ -55,12 +66,19 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		else{
 			userArray[playerChance].setplayerScore(c+userTotal*31);
 		}
-
+		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'wrongAnswer');
 		ubsApp.openResultPopup({
                "message" : ubsApp.getTranslation("salesWrongAnswer") + " " + ubsApp.getTranslation("salesWrongRptpt") + userArray[playerChance].getReputationPts(),
                "header" : ubsApp.getTranslation("salesResultHeader"),
                "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
                "imageUrl" : "images/wrong.jpg",
+               "buttons":[
+                	{
+                		'id':"closePopupButton",
+                		'name' : ubsApp.getTranslation("Close"),
+              			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()"
+                	}
+                ]
                });
 	}
 //	ubsApp.checkPageorBoard(page,amount,hideScenarios);

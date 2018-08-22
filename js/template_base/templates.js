@@ -421,7 +421,7 @@ ubsApp.leaderBoardTemplate=
 '           '+
 '       </span>'+
 '<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
-'                  <button class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
+'                  <button id= "salesSubmitButton" class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           Submit'+
 ' <br> <br> <br>' +
 '           <button class="helpButton" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
@@ -943,7 +943,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        '        <div style="text-align: center;margin-top: 10px;">'+
                        '            <div style="width: fit-content;margin: auto;">'+
                        '                {{#each buttons}}'+
-                       '                <div style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}'+
                        '                </div>'+
                        '                {{/each}}'+
                        '            </div>'+

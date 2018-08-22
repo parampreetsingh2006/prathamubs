@@ -174,7 +174,7 @@ monopoly.sideScoreBoardTemplate=
 '  <div class="sideScoreBoardRow">'+
 '         <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()">{{quizTitle}}</div>'+
 '         <div class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'salesHelp\')"></div>'+
-'         <div class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></div>'+
+'         <div id="endGame" class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></div>'+
 '  </div>'+
 '</div>';
 
