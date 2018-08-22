@@ -1,2873 +1,6551 @@
-	ubsApp.salesConfig ={
-
-		"itemRate":{
-
-			"1":50,
-			"2":110,
-			"3":80,
-			"4":50,
-			"5":45,
-			"6":125,
-			"7":3.5,
-			"8":40,
-			"9":5.5,
-			"10":25,
-			"11":27,
-			"12":45,
-			"13":37,
-			"14":15,
-            			"15":100,
-            			"16":70,
-            			"17":25,
-            			"18":120,
-            			"19":15,
-            			"20":85,
-            			"21":70,
-            			"22":100,
-            			"23":150,
-            			"24":46,
-                                    			"25":30,
-                                    			"26":50,
-                                    			"27":120,
-                                    			"28":320,
-                                    			"29":12,
-                                    			"30":60
-		},
-
-		"Sales":{
-			//"category":"Sales",
-			"repeatforuser":true,
-			"repeatforall":false,
-			"templates":[
-			{
-				"templateId": 4,
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"{{This item is not available in your Inventory}}",
-				"tempTotal":"",
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"Wheat",
-					"amount":" Kg",
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":4,
-					"item":"Sugar",
-					"amount":" Kg",
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":3,
-					"item":"Dal",
-					"amount":" Kg",
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":2,
-					"item":"Rice",
-					"amount":" Kg",
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":5,
-					"itemId":7,
-					"item":"Rope",
-					"amount":" m",
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				{
-					"no":6,
-					"itemId":5,
-					"item":"Milk",
-					"amount":" Litre",
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":7,
-					"itemId":9,
-					"item":"Eggs",
-					"amount":"",
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				{
-					"no":8,
-					"itemId":6,
-					"item":"Oil",
-					"amount":" Litre",
-					"rate":"₹ 125/litre",				
-					"exclude":false
-				},
-				{
-					"no":9,
-					"itemId":8,
-					"item":"Chocolate",
-					"amount":"",
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				{
-					"no":10,
-					"itemId":10,
-					"item":"Biscuits",
-					"amount":" Packets",
-					"rate":"₹ 25/Packet",				
-					"exclude":false
-				},
-				{
-					"no":11,
-					"itemId":11,
-					"item":"Soap",
-					"amount":"",
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				{
-					"no":12,
-					"itemId":12,
-					"item":"Shampoo",
-					"amount":" ml",
-					"rate":"₹ 45/100ml",				
-					"exclude":false
-				},
-				{
-					"no":13,
-					"itemId":13,
-					"item":"Detergent",
-					"amount":" gm/kg",
-					"rate":"₹ 37/500gm",
-					"exclude":false
-				},
-                {
-                     "no":14,
-                     "itemId":14,
-                 	 "item":"Salt",
-                     "amount":"kg",
-                     "rate":"₹ 15/kg",
-                     "exclude":false
-                },
-                {
-                     "no":15,
-                     "itemId":15,
-                     "item":"Coriander",
-                     "amount":" kg",
-                     "rate":"₹ 100/kg",
-                     "exclude":false
-                },
-                {
-                                     "no":16,
-                                     "itemId":16,
-                                     "item":"Phenyl",
-                                     "amount":" ml",
-                                     "rate":"₹ 70/500ml",
-                                     "exclude":false
-                                },
-                                                    {
-                                                                         "no":17,
-                                                                         "itemId":17,
-                                                                         "item":"Broom",
-                                                                         "amount":" ",
-                                                                         "rate":"₹ 25/broom",
-                                                                         "exclude":false
-                                 },
-                                  {
-                                                                                                          "no":18,
-                                                                                                          "itemId":18,
-                                                                                                          "item":"Tea",
-                                                                                                          "amount":"kg",
-                                                                                                          "rate":"₹ 120/kg",
-                                                                                                          "exclude":false
-                                                                  },
-                                  {
-                                                                                                          "no":19,
-                                                                                                          "itemId":19,
-                                                                                                          "item":"Bread",
-                                                                                                          "amount":"packet",
-                                                                                                          "rate":"₹ 15/packet",
-                                                                                                          "exclude":false
-                                                                  },
-,
-                                  {
-                                                                                                          "no":20,
-                                                                                                          "itemId":20,
-                                                                                                          "item":"Pepper",
-                                                                                                          "amount":"gm/kg",
-                                                                                                          "rate":"₹ 85/50gm",
-                                                                                                          "exclude":false
-                                                                  },
-{
-"no":21,
-"itemId":21,
-"item":"Besan Flour",
-"amount":"gm/kg",
-"rate":"₹ 70/500gm",
-"exclude":false
-},
-{
-"no":22,
-"itemId":22,
-"item":"Almond/Badam",
-"amount":"gm/kg",
-"rate":"₹ 100/100gm",
-"exclude":false
-},
-{
-"no":23,
-"itemId":23,
-"item":"Organic Cashews",
-"amount":"gm/kg",
-"rate":"₹ 150/100gm",
-"exclude":false
-},
- {
- "no":24,
- "itemId":24,
- "item":"Butter",
- "amount":"gm/kg",
- "rate":"₹ 46/100gm",
- "exclude":false
- },
-   {
-   "no":25,
-   "itemId":25,
-   "item":"Mustard",
-   "amount":"gm/kg",
-   "rate":"₹ 30/200gm",
-   "exclude":false
-   },
-     {
-     "no":26,
-     "itemId":26,
-     "item":"Chilli Powder",
-     "amount":"gm/kg",
-     "rate":"₹ 50/100gm",
-     "exclude":false
-     },
-     ,
-      {
-      "no":27,
-      "itemId":27,
-      "item":"Sabudana",
-      "amount":"gm/kg",
-      "rate":"₹ 120/kg",
-      "exclude":false
-      },
-       {
-       "no":28,
-       "itemId":28,
-       "item":"NuttyCocoa",
-       "amount":"Jar",
-       "rate":"₹ 320/Jar",
-       "exclude":false
-       },
-       {
-                "no":29,
-                "itemId":29,
-                "item":"Noodles",
-                "amount":"gm/kg",
-                "rate":"₹ 12/70gm",
-                "exclude":false
-                },
-                {
-                       "no":30,
-                       "itemId":30,
-                       "item":"Jam",
-                       "amount":"gm/kg",
-                       "rate":"₹ 60/200gms",
-                       "exclude":false
-                       },
-
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales40":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":362.5,
-				"order":[
-				{
-					"no":1,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"2 m",
-					"quantity":2,
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"3.5 Litre",
-					"quantity":3.5,
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"2 Packets",
-					"quantity":2,
-					"rate":"₹ 25/Packet",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"4 kg",
-					"quantity":8,
-					"rate":"₹ 37/500gm",				
-					"exclude":false
-				}
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-
-		"Sales39":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"discount":"25% on total",
-				"tempTotal":594.38,
-				"order":[
-				{
-					"no":1,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"3 Kg",
-					"quantity":3*0.75 ,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"1 Kg",
-					"quantity":1*0.75,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"2 Litre",
-					"quantity":2*0.75,
-					"rate":"₹ 125/litre",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"2",
-					"quantity":2,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				{
-					"no":5,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"250 ml",
-					"quantity":2.5,
-					"rate":"₹ 45/100ml",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-
-		"Sales38":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"helpPageName":"salesHelp",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"discount":"Sugar - Get 1kg free",
-				"tempTotal":395,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"2.5 Kg",
-					"quantity":2.5,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"3 Kg",
-					"quantity":2,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"25 m",
-					"quantity":25,
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":9,
-					"item":"{{Eggs}}",
-					"amount":"15",
-					"quantity":15,
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-
-
-		"Sales37":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"helpPageName":"salesHelp",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":408.75,
-				"order":[
-				{
-					"no":1,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"500 gm",
-					"quantity":0.5,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"3 Kg",
-					"quantity":3,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"500 ml",
-					"quantity":0.5,
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"250 ml",
-					"quantity":0.25,
-					"rate":"₹ 125/litre",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-
-		"Sales36":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":537,
-				"discount":"20% on oil",
-				"order":[
-				{
-					"no":1,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"5 Litre",
-					"quantity":5*0.8,
-					"rate":"₹ 125/litre",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"500 gm",
-					"quantity":1,
-					"rate":"₹ 37/500gm",				
-					"exclude":false
-				}
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales35":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",	
-				"tempTotal":546,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"3 Kg",
-					"quantity":3,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"2 Litre",
-					"quantity":2,
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":9,
-					"item":"{{Eggs}}",
-					"amount":"3 dozen",
-					"quantity":36,
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"4",
-					"quantity":4,
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales34":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"discount":"5% on Total",
-				"tempTotal":494,
-				"order":[
-				{
-					"no":1,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"50 m",
-					"quantity":50*.95,
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"5 Litre",
-					"quantity":5*.95,
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"3",
-					"quantity":3*.95,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales33":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":549,
-				"discount":"10% on Total",
-				"order":[
-				{
-					"no":1,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"4 Kg",
-					"quantity":4*.9,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"2 Kg",
-					"quantity":2*.9,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"2 Litre",
-					"quantity":2*.9,
-					"rate":"₹ 125/litre",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales32":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"discount":"Buy 500 ml shampoo and get 500 ml shampoo for free",				
-				"tempTotal":415.5,
-				"order":[
-				{
-					"no":1,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"5",
-					"quantity":5,
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"1 Litre",
-					"quantity":5,
-					"rate":"₹ 45/100ml",
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"1.5 kg",
-					"quantity":3,
-					"rate":"₹ 37/500gm",				
-					"exclude":false
-				}
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales31":{
-			"category":"salesDifficult",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel04",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"helpPageName":"salesHelp",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"discount":"50% on Wheat",
-				"tempTotal":430,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"2 Kg",
-					"quantity":2*0.5,
-					"rate":"₹ 50/kg",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"2 Kg",
-					"quantity":2,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"2 Kg",
-					"quantity":2,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales30":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"helpPageName":"salesHelp",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":520,
-				"order":[
-				{
-					"no":1,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"750 gm",
-					"quantity":0.75,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"100 m",
-					"quantity":100,
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales29":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"helpPageName":"salesHelp",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":585,
-				"order":[
-				{
-					"no":1,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"5",
-					"quantity":5,
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"1 Litre",
-					"quantity":10,
-					"rate":"₹ 45/100ml",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales28":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"helpPageName":"salesHelp",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":534,
-				"order":[
-				{
-					"no":1,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"5.5 Kg",
-					"quantity":5.5,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"3.5 kg",
-					"quantity":7,
-					"rate":"₹ 37/500gm",				
-					"exclude":false
-				}
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales27":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"helpPageName":"salesHelp",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":422.5,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"3.5 Kg",
-					"quantity":3.5,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"1.5 Kg",
-					"quantity":1.5,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"5 m",
-					"quantity":5,
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales26":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":296.25,
-				"order":[
-				{
-					"no":1,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"30 m",
-					"quantity":30,
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"250 ml",
-					"quantity":0.25,
-					"rate":"₹ 125/litre",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"4",
-					"quantity":4,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales25":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":276.5,
-				"order":[
-				{
-					"no":1,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"2.5 Kg",
-					"quantity":2.5,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"500 ml",
-					"quantity":0.5,
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"2",
-					"quantity":2,
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales24":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":242.5,
-				"order":[
-				{
-					"no":1,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"2.5 Litre",
-					"quantity":2.5,
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":9,
-					"item":"{{Eggs}}",
-					"amount":"10",
-					"quantity":10,
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"3 Packets",
-					"quantity":3,
-					"rate":"₹ 25/Packet",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales23":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"helpPageName":"salesHelp",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":422.5,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"3.5 Kg",
-					"quantity":3.5,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"2 Kg",
-					"quantity":2,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"500 gm",
-					"quantity":0.5,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales22":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":321,
-				"order":[
-				{
-					"no":1,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"1.5 Kg",
-					"quantity":1.5,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":9,
-					"item":"{{Eggs}}",
-					"amount":"12",
-					"quantity":12,
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"200 ml",
-					"quantity":2,
-					"rate":"₹ 45/100ml",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales21":{
-			"category":"salesModerate",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel03",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":293,
-				"order":[
-				{
-					"no":1,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"500 gm",
-					"quantity":0.5,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"3",
-					"quantity":3,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"2 kg",
-					"quantity":4,
-					"rate":"₹ 37/500gm",				
-					"exclude":false
-				}
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales20":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":675,
-				"order":[
-				{
-					"no":1,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"6 Kg",
-					"quantity":6,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"3 Litre",
-					"quantity":3,
-					"rate":"₹ 125/litre",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales19":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":410,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"5 Kg",
-					"quantity":5,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"2 Kg",
-					"quantity":2,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales18":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":258,
-				"order":[
-				{
-					"no":1,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":9,
-					"item":"{{Eggs}}",
-					"amount":"8",
-					"quantity":8,
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"2 Packets",
-					"quantity":2,
-					"rate":"₹ 25/Packet",				
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"2",
-					"quantity":2,
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales17":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"helpPageName":"salesHelp",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":299,
-				"order":[
-				{
-					"no":1,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"500 ml",
-					"quantity":5,
-					"rate":"₹ 45/100ml",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"1000 gm",
-					"quantity":2,
-					"rate":"₹ 37/500gm",				
-					"exclude":false
-				}
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales16":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":215,
-				"order":[
-				{
-					"no":1,
-					"itemId":9,
-					"item":"{{Eggs}}",
-					"amount":"10",
-					"quantity":10,
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"4",
-					"quantity":4,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales15":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":310,
-				"order":[
-				{
-					"no":1,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"2 Kg",
-					"quantity":2,
-					"rate":"₹ 110/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"200 ml",
-					"quantity":2,
-					"rate":"₹ 45/100ml",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales14":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"helpPageName":"salesHelp",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":200,
-				"order":[
-				{
-					"no":1,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"2",
-					"quantity":2,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"3 Packets",
-					"quantity":3,
-					"rate":"₹ 25/Packet",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"100 ml",
-					"quantity":1,
-					"rate":"₹ 45/100ml",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales13":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"helpPageName":"salesHelp",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":310,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"3 Kg",
-					"quantity":3,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"2 Kg",
-					"quantity":2,
-					"rate":"₹ 80/kg",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales12":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"helpPageName":"salesHelp",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":191,
-				"order":[
-				{
-					"no":1,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"20 m",
-					"quantity":20,
-					"rate":"₹ 35/10 m",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"1",
-					"quantity":1,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"3",
-					"quantity":3,
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales11":{
-			"category":"salesEasy",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel02",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":137,
-				"order":[
-				{
-					"no":1,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"2 Litre",
-					"quantity":2,
-					"rate":"₹ 45/litre",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":9,
-					"item":"{{Eggs}}",
-					"amount":"4",
-					"quantity":4,
-					"rate":"₹ 5.5/egg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"1 Packet",
-					"quantity":1,
-					"rate":"₹ 25/Packet",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-
-		"Sales10":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":62,
-				"order":[
-				{
-					"no":1,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"1 Packet",
-					"quantity":1,
-					"rate":"₹ 25/Packet",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"500 gm",
-					"quantity":1,
-					"rate":"₹ 37/500gm",				
-					"exclude":false
-				}
-
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales9":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":67,
-				"order":[
-				{
-					"no":1,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"1",
-					"quantity":1,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"1",
-					"quantity":1,
-					"rate":"₹ 27/soap",				
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales8":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":200,
-				"order":[
-				{
-					"no":1,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"1 Litre",
-					"quantity":1,
-					"rate":"₹ 125/litre",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 50/kg",
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"1 Packet",
-					"quantity":1,
-					"rate":"₹ 25/Packet",
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales7":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":157,
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 50/kg",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 80/kg",
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"1",
-					"quantity":1,
-					"rate":"₹ 27/soap",
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales6":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"helpPageName":"salesHelp",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":120,
-				"order":[
-				{
-					"no":1,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"1 Litre",
-					"quantity":1,
-					"rate":"₹ 45/litre",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"1 Packet",
-					"quantity":1,
-					"rate":"₹ 25/Packet",
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 50/kg",
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales5":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":109,
-				"order":[
-				{
-					"no":1,
-					"itemId":11,
-					"item":"{{Soap}}",
-					"amount":"1",
-					"quantity":1,
-					"rate":"₹ 27/soap",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"100 ml",
-					"quantity":1,
-					"rate":"₹ 45/100ml",
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":13,
-					"item":"{{Detergent}}",
-					"amount":"500 gm",
-					"quantity":1,
-					"rate":"₹ 37/500gm",
-					"exclude":false
-				}
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales4":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"helpPageName":"salesHelp",
-				"Tools":"{{Tools}}",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":205,
-				"order":[
-				{
-					"no":1,
-					"itemId":6,
-					"item":"{{Oil}}",
-					"amount":"1 Litre",
-					"quantity":1,
-					"rate":"₹ 125/litre",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":3,
-					"item":"{{Dal}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 80/kg",
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-
-		"Sales3":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":155,
-				"order":[
-				{
-					"no":1,
-					"itemId":10,
-					"item":"{{Biscuits}}",
-					"amount":"1 Packet",
-					"quantity":1,
-					"rate":"₹ 25/Packet",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":7,
-					"item":"{{Rope}}",
-					"amount":"10 m",
-					"quantity":10,
-					"rate":"₹ 35/10m",
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":5,
-					"item":"{{Milk}}",
-					"amount":"1 Litre",
-					"quantity":1,
-					"rate":"₹ 45/litre",
-					"exclude":false
-				},
-				{
-					"no":4,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 50/kg",
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales2":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":155,
-				"order":[
-				{
-					"no":1,
-					"itemId":2,
-					"item":"{{Rice}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 110/kg",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":12,
-					"item":"{{Shampoo}}",
-					"amount":"100 ml",
-					"quantity":1,
-					"rate":"₹ 45/100ml",
-					"exclude":false
-				},
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		"Sales1":{
-
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":false,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":"140",
-				"order":[
-				{
-					"no":1,
-					"itemId":1,
-					"item":"{{Wheat}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":4,
-					"item":"{{Sugar}}",
-					"amount":"1 Kg",
-					"quantity":1,
-					"rate":"₹ 50/kg",				
-					"exclude":false
-				},
-				{
-					"no":3,
-					"itemId":8,
-					"item":"{{Chocolate}}",
-					"amount":"1",
-					"quantity":1,
-					"rate":"₹ 40/chocolate",				
-					"exclude":false
-				}],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-"Sales41":{
-			"category":"salesSimple",
-			"repeatforuser":true,
-			"repeatforall":true,
-			"questionTime":3000,
-			"optionsTime":2000,
-			"templates":[
-			{
-				"templateId": 4,
-				"salesImage":"images/selllevel01",
-				"templateType": "sales",
-				"profilePicture":"images/Customer/customer1",
-				"time":"600",
-				"divID":"seconds",
-				"Order":"{{Order}}",
-				"Customer":"{{Customer}}",
-				"receiptHeading":"{{receiptHeading}}",
-				"receiptGen":"{{receiptGen}}",
-				"Items":"{{Items}}",
-				"Quantity":"{{Quantity}}",
-				"Rate":"{{Rate}}",
-				"Amount":"{{Amount}}",
-				"Tools":"{{Tools}}",
-				"helpPageName":"salesHelp",
-				"tooltipMessage":"This item is not available in your Inventory",
-				"tempTotal":80,
-				"order":[
-				{
-					"no":1,
-					"itemId":25,
-					"item":"{{Mustard}}",
-					"amount":"200 gm",
-					"quantity":"200 gm",
-					"rate":"₹ 30/gm",
-					"exclude":false
-				},
-				{
-					"no":2,
-					"itemId":26,
-					"item":"{{Chilli Powder}}",
-					"amount":"100 gm",
-					"quantity":"100 gm",
-					"rate":"₹ 50/100gm",
-					"exclude":false
-				}
-
-				],
-
-				"onClickPage": {
-					"nextPage" : "",
-					"hideScenarios" : true
-				}
-			}]
-		},
-
-		
+ubsApp.salesConfig={
+                   	"itemRate": {
+                   		"1": 50,
+                   		"2": 110,
+                   		"3": 80,
+                   		"4": 50,
+                   		"5": 45,
+                   		"6": 125,
+                   		"7": 3.5,
+                   		"8": 40,
+                   		"9": 5.5,
+                   		"10": 25,
+                   		"11": 27,
+                   		"12": 45,
+                   		"13": 37,
+                   		"14": 15,
+                   		"15": 100,
+                   		"16": 70,
+                   		"17": 25,
+                   		"18": 120,
+                   		"19": 15,
+                   		"20": 85,
+                   		"21": 70,
+                   		"22": 100,
+                   		"23": 150,
+                   		"24": 46,
+                   		"25": 30,
+                   		"26": 50,
+                   		"27": 120,
+                   		"28": 320,
+                   		"29": 12,
+                   		"30": 60
+                   	},
+                   	"Sales": {
+                   		//"category":"Sales",
+                   		"repeatforuser": true,
+                   		"repeatforall": false,
+                   		"templates": [
+                   			{
+                   				"templateId": 4,
+                   				"templateType": "sales",
+                   				"profilePicture": "images/Customer/customer1",
+                   				"time": "600",
+                   				"divID": "seconds",
+                   				"Order": "{{Order}}",
+                   				"Customer": "{{Customer}}",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"Items": "{{Items}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"tooltipMessage": "{{This item is not available in your Inventory}}",
+                   				"tempTotal": "",
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " Kg",
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " Kg",
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " Kg",
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " Kg",
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 5,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " m",
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 6,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " Litre",
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 7,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": "",
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 8,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " Litre",
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 9,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": "",
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 10,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " Packets",
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 11,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": "",
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 12,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " ml",
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 13,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " gm",
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 14,
+                   						"itemId": 14,
+                   						"item": "Salt",
+                   						"amount": "kg",
+                   						"rate": " 15/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 15,
+                   						"itemId": 15,
+                   						"item": "Coriander",
+                   						"amount": " kg",
+                   						"rate": " 100/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 16,
+                   						"itemId": 16,
+                   						"item": "Phenyl",
+                   						"amount": " ml",
+                   						"rate": " 70/500ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 17,
+                   						"itemId": 17,
+                   						"item": "Broom",
+                   						"amount": " ",
+                   						"rate": " 25/broom",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 18,
+                   						"itemId": 18,
+                   						"item": "Tea",
+                   						"amount": "kg",
+                   						"rate": " 120/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 19,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": "packet",
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 20,
+                   						"itemId": 20,
+                   						"item": "Pepper",
+                   						"amount": "gm",
+                   						"rate": " 85/50gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 21,
+                   						"itemId": 21,
+                   						"item": "Besan Flour",
+                   						"amount": "gm",
+                   						"rate": " 70/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 22,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": "gm",
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 23,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": "gm",
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 24,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": "gm",
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 25,
+                   						"itemId": 25,
+                   						"item": "Mustard",
+                   						"amount": "gm",
+                   						"rate": " 30/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 26,
+                   						"itemId": 26,
+                   						"item": "Chilli Powder",
+                   						"amount": "gm",
+                   						"rate": " 50/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 27,
+                   						"itemId": 27,
+                   						"item": "Sabudana",
+                   						"amount": "gm",
+                   						"rate": " 120/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 28,
+                   						"itemId": 28,
+                   						"item": "NuttyCocoa",
+                   						"amount": "Jar",
+                   						"rate": " 320/Jar",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 29,
+                   						"itemId": 29,
+                   						"item": "Noodles",
+                   						"amount": "gm",
+                   						"rate": " 12/70gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 30,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": "gm",
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					}
+                   				],
+                   				"onClickPage": {
+                   					"nextPage": "",
+                   					"hideScenarios": true
+                   				}
+                   			}
+                   		]
+                   	},
+                   	"Sales1": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 140,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales2": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 155,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 100ml",
+                   						"quantity": 0.001,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales3": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 155,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1 Packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 10m",
+                   						"quantity": 1,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales4": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 205,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales5": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 109,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 100ml",
+                   						"quantity": 0.001,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 500gm",
+                   						"quantity": 1,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales6": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 120,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1Packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales7": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 157,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales8": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 200,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1 Packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales9": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 67,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales10": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 62,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 500gm",
+                   						"quantity": 1,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1 packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales11": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 80,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 25,
+                   						"item": "Mustard",
+                   						"amount": " 200 gm",
+                   						"quantity": 1,
+                   						"rate": " 30/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 26,
+                   						"item": "Chilli Powder",
+                   						"amount": " 100 gm",
+                   						"quantity": 1,
+                   						"rate": " 50/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales12": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 106,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 100 gm",
+                   						"quantity": 1,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 200 gm",
+                   						"quantity": 1,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales13": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 155,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 10",
+                   						"quantity": 10,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 14,
+                   						"item": "Salt",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 15/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 20,
+                   						"item": "Pepper",
+                   						"amount": " 50 gm",
+                   						"quantity": 1,
+                   						"rate": " 85/50gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales14": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 176,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 2 Packets",
+                   						"quantity": 2,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 100 gm",
+                   						"quantity": 1,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 3",
+                   						"quantity": 3,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales15": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 195,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 26,
+                   						"item": "Chilli Powder",
+                   						"amount": " 100 gm",
+                   						"quantity": 1,
+                   						"rate": " 50/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 20,
+                   						"item": "Pepper",
+                   						"amount": " 50 gm",
+                   						"quantity": 1,
+                   						"rate": " 85/50gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 14,
+                   						"item": "Salt",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 15/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 1 L",
+                   						"quantity": 1,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales16": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 230,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales17": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 95,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales18": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 159,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 100 ml",
+                   						"quantity": 0.001,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 500 gm",
+                   						"quantity": 1,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales19": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 95,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales20": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 155.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1 Packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales21": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 75,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 10m",
+                   						"quantity": 1,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales22": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 240,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales23": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 187,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 500 gm",
+                   						"quantity": 1,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1 Packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales24": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 80,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 100ml",
+                   						"quantity": 0.001,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 10m",
+                   						"quantity": 1,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales25": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 70,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel01",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 1L",
+                   						"quantity": 1,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1 packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesSimple",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales26": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 137,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 4",
+                   						"quantity": 4,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 2L",
+                   						"quantity": 2,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales27": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 191,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 20m",
+                   						"quantity": 2,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 3",
+                   						"quantity": 3,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales28": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 310,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 3 kg",
+                   						"quantity": 3,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales29": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 200,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 3 Packets",
+                   						"quantity": 3,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 2",
+                   						"quantity": 2,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 100ml",
+                   						"quantity": 0.001,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales30": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 310,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 2Kg",
+                   						"quantity": 2,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 200ml",
+                   						"quantity": 0.002,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales31": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 215,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 10",
+                   						"quantity": 10,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 4",
+                   						"quantity": 4,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales32": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 299,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 1000 gm",
+                   						"quantity": 2,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 500 ml",
+                   						"quantity": 0.005,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales33": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 258,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 8",
+                   						"quantity": 8,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 2 Packets",
+                   						"quantity": 2,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 2",
+                   						"quantity": 2,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1Kg",
+                   						"quantity": 1,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales34": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 410,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 5Kg",
+                   						"quantity": 5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales35": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 675,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 6kg",
+                   						"quantity": 6,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 3L",
+                   						"quantity": 3,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales36": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 213,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": " 1 Packet",
+                   						"quantity": 1,
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 200 gm",
+                   						"quantity": 1,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 300 gm",
+                   						"quantity": 3,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales37": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 251,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 12",
+                   						"quantity": 12,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 20,
+                   						"item": "Pepper",
+                   						"amount": " 100 gm",
+                   						"quantity": 2,
+                   						"rate": " 85/50gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 15,
+                   						"item": "Coriander",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 100/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 14,
+                   						"item": "Salt",
+                   						"amount": " 1 KG",
+                   						"quantity": 1,
+                   						"rate": " 15/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales38": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 277.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1.5 Kgs",
+                   						"quantity": 1.5,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 0.5 Ltrs",
+                   						"quantity": 0.5,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 50 gm",
+                   						"quantity": 0.5,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales39": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 305,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 18,
+                   						"item": "Tea",
+                   						"amount": " 250 gm",
+                   						"quantity": 0.25,
+                   						"rate": " 120/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 2 Packets",
+                   						"quantity": 2,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 300 gm",
+                   						"quantity": 1.5,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 3 Lts",
+                   						"quantity": 3,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales40": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 375,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 150gm",
+                   						"quantity": 1.5,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 150gm",
+                   						"quantity": 1.5,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales41": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 135,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": " 1 Packet",
+                   						"quantity": 1,
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 400 gm",
+                   						"quantity": 2,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales42": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 285,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 20,
+                   						"item": "Pepper",
+                   						"amount": "  100 gm",
+                   						"quantity": 2,
+                   						"rate": " 85/50gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 15,
+                   						"item": "Coriander",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 100/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 14,
+                   						"item": "Salt",
+                   						"amount": " 1 KG",
+                   						"quantity": 1,
+                   						"rate": " 15/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales43": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 265,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1.5 Kgs",
+                   						"quantity": 1.5,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 100 gm",
+                   						"quantity": 1,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales44": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 148,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 6",
+                   						"quantity": 6,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 1 packet",
+                   						"quantity": 1,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 2L",
+                   						"quantity": 2,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales45": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 385,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 2 kg",
+                   						"quantity": 2,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2 kg",
+                   						"quantity": 2,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 1 L",
+                   						"quantity": 1,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales46": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 124,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 1 kg",
+                   						"quantity": 2,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 2 Packets",
+                   						"quantity": 2,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales47": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 186,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 3",
+                   						"quantity": 3,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 12",
+                   						"quantity": 12,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales48": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 320,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 2Kg",
+                   						"quantity": 2,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 2Kg",
+                   						"quantity": 2,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales49": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 655,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 20,
+                   						"item": "Pepper",
+                   						"amount": "  200 gm",
+                   						"quantity": 4,
+                   						"rate": " 85/50gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 27,
+                   						"item": "Sabudana",
+                   						"amount": " 2kg",
+                   						"quantity": 2,
+                   						"rate": " 120/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 3 packets",
+                   						"quantity": 3,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales50": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 208,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Nil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel02",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 29,
+                   						"item": "Noodles",
+                   						"amount": "  210 gm",
+                   						"quantity": 3,
+                   						"rate": " 12/70gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 200 gm",
+                   						"quantity": 2,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 2",
+                   						"quantity": 2,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesEasy",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales51": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 293,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 2Kg",
+                   						"quantity": 4,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 500 gm",
+                   						"quantity": 0.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 3",
+                   						"quantity": 3,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales52": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 321,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1 and a 1/2 kg",
+                   						"quantity": 112,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 12",
+                   						"quantity": 12,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 200 ml",
+                   						"quantity": 0.002,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales53": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 260,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 500 gm",
+                   						"quantity": 0.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 500 gm",
+                   						"quantity": 0.5,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales54": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 242.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 2 and a half L",
+                   						"quantity": 2,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 10",
+                   						"quantity": 10,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 3",
+                   						"quantity": 3,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales55": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 276.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 500 ml",
+                   						"quantity": 0.5,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2.5kg",
+                   						"quantity": 2.5,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 2",
+                   						"quantity": 2,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales56": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 296.25,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 250 ml",
+                   						"quantity": 0.25,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 30 m",
+                   						"quantity": 3,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 4",
+                   						"quantity": 4,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales57": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 422.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 3.5 kg",
+                   						"quantity": 3.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 1.5 Kg",
+                   						"quantity": 1.5,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1kg",
+                   						"quantity": 1,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 5m",
+                   						"quantity": 0.5,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales58": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 534,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 3.5kg",
+                   						"quantity": 7,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 5.5Kg",
+                   						"quantity": 5.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales59": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 585,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 1L",
+                   						"quantity": 10,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 5",
+                   						"quantity": 5,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales60": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 520,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 100m",
+                   						"quantity": 10,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 750 gm",
+                   						"quantity": 0.75,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1 kg",
+                   						"quantity": 1,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales61": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 410,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 500 gm",
+                   						"quantity": 5,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 500 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": " 2 packets",
+                   						"quantity": 2,
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales62": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 475,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 21,
+                   						"item": "Besan Flour",
+                   						"amount": " 1250 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 70/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 200 gm",
+                   						"quantity": 2,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales63": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 315,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 5",
+                   						"quantity": 5,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 200 gm",
+                   						"quantity": 1,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 100 gm",
+                   						"quantity": 1,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 250 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales64": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 556,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 18",
+                   						"quantity": 18,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 28,
+                   						"item": "NuttyCocoa",
+                   						"amount": " 1 Jar",
+                   						"quantity": 1,
+                   						"rate": " 320/Jar",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": " 3 Packet",
+                   						"quantity": 3,
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 200 gm",
+                   						"quantity": 2,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales65": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 535,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 28,
+                   						"item": "NuttyCocoa",
+                   						"amount": " 1 Jar",
+                   						"quantity": 1,
+                   						"rate": " 320/Jar",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 250 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 150 gm",
+                   						"quantity": 1.5,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales66": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 380,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 500 gm",
+                   						"quantity": 5,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 500 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": " 2 packets",
+                   						"quantity": 2,
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales67": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 665,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 21,
+                   						"item": "Besan Flour",
+                   						"amount": " 1000 gm",
+                   						"quantity": 2,
+                   						"rate": " 70/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 350 gm",
+                   						"quantity": 3.5,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales68": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 590,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 400 gm",
+                   						"quantity": 2,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 28,
+                   						"item": "NuttyCocoa",
+                   						"amount": " 1 Jar",
+                   						"quantity": 1,
+                   						"rate": " 320/Jar",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 150 gm",
+                   						"quantity": 1.5,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales69": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 212.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 350 ml",
+                   						"quantity": 0.0034999999999999996,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 500 gm",
+                   						"quantity": 0.5,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales70": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 385,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 1.5 kg",
+                   						"quantity": 1.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 35 m",
+                   						"quantity": 3.5,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 1.5 L",
+                   						"quantity": 1.5,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales71": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 414,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 2",
+                   						"quantity": 2,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 4",
+                   						"quantity": 4,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2.5 Kg",
+                   						"quantity": 2.5,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales72": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 270.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 3.5 kg",
+                   						"quantity": 3.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 6",
+                   						"quantity": 6,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 0.5 L",
+                   						"quantity": 0.5,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales73": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 276.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 500 ml",
+                   						"quantity": 0.5,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2.5kg",
+                   						"quantity": 2.5,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 2",
+                   						"quantity": 2,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales74": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 322.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 21,
+                   						"item": "Besan Flour",
+                   						"amount": " 1.5 kg",
+                   						"quantity": 3,
+                   						"rate": " 70/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 2.5 L",
+                   						"quantity": 2.5,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales75": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 275,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel03",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 14,
+                   						"item": "Salt",
+                   						"amount": " 2kg",
+                   						"quantity": 2,
+                   						"rate": " 15/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 500 ml",
+                   						"quantity": 0.5,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 15m",
+                   						"quantity": 1.5,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 500 gm",
+                   						"quantity": 0.5,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 5,
+                   						"itemId": 16,
+                   						"item": "Phenyl",
+                   						"amount": " 250 ml",
+                   						"quantity": 5.0E-4,
+                   						"rate": " 70/500ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 6,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 0.5 kg",
+                   						"quantity": 0.5,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesModerate",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales76": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 430,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "50% on Wheat",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales77": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 415.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Buy 500 ml and get 500 ml free!",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 1L",
+                   						"quantity": 10,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 1.5kg",
+                   						"quantity": 3,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 5",
+                   						"quantity": 5,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales78": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 549,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "10% on total",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 4 kg",
+                   						"quantity": 4,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 2 L",
+                   						"quantity": 2,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2Kg",
+                   						"quantity": 2,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales79": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 494,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "5% on total",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 5L",
+                   						"quantity": 5,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 50 m",
+                   						"quantity": 5,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 3",
+                   						"quantity": 3,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales80": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 546,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 3 doz",
+                   						"quantity": 3,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 2L",
+                   						"quantity": 2,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 3kg",
+                   						"quantity": 3,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 4",
+                   						"quantity": 4,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales81": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 537,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "20% on oil",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 5L",
+                   						"quantity": 5,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 500gm",
+                   						"quantity": 1,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales82": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 408.75,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 500 ml",
+                   						"quantity": 0.5,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 250 ml",
+                   						"quantity": 0.25,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 500 gm",
+                   						"quantity": 0.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 3 kg",
+                   						"quantity": 3,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales83": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 395,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Sugar - Get 1kg free on 2kg purchase",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 25m",
+                   						"quantity": 2.5,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 2.5kg",
+                   						"quantity": 2.5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 15",
+                   						"quantity": 15,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 3Kg",
+                   						"quantity": 3,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales84": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 594.38,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "25% on total",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 250 ml",
+                   						"quantity": 0.0025,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 2L",
+                   						"quantity": 2,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 3kg",
+                   						"quantity": 3,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 1kg",
+                   						"quantity": 1,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 5,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 2",
+                   						"quantity": 2,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales85": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 362.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 10,
+                   						"item": "Biscuit",
+                   						"amount": " 2 Pkt",
+                   						"quantity": 2,
+                   						"rate": " 25/Packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 4kg",
+                   						"quantity": 8,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 2m",
+                   						"quantity": 0.2,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 3.5 L",
+                   						"quantity": 3.5,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales86": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 642.8,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Combo: Bread 1 + Butter 100 Gm + Jam 200 gm = 20% off",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": " 5 Packets",
+                   						"quantity": 5,
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 200 gm",
+                   						"quantity": 2,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 200 gm",
+                   						"quantity": 1,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 21,
+                   						"item": "Besan Flour",
+                   						"amount": " 500 gm",
+                   						"quantity": 1,
+                   						"rate": " 70/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 5,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 6,
+                   						"itemId": 28,
+                   						"item": "NuttyCocoa",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 320/Jar",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales87": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 650,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Combo: Almonds 100gm + Organic Cashews 100gm = 10% off",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": "  400gm",
+                   						"quantity": 4,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 200gm",
+                   						"quantity": 2,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales88": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 721.5,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Dozen eggs free with 200 gm Noodles",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 12",
+                   						"quantity": 12,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 29,
+                   						"item": "Noodles",
+                   						"amount": " 245 gm",
+                   						"quantity": 3.5,
+                   						"rate": " 12/70gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 14,
+                   						"item": "Salt",
+                   						"amount": " 250 gm",
+                   						"quantity": 0.25,
+                   						"rate": " 15/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 20,
+                   						"item": "Pepper",
+                   						"amount": " 100 gm",
+                   						"quantity": 2,
+                   						"rate": " 85/50gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 5,
+                   						"itemId": 15,
+                   						"item": "Coriander",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 100/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 6,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 250 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales89": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 720,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Get 100 gm cashews free on purchase of 200 gm",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 27,
+                   						"item": "Sabudana",
+                   						"amount": " 3.5 Kgs",
+                   						"quantity": 3.5,
+                   						"rate": " 120/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 300 gm",
+                   						"quantity": 3,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales90": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 982,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "NuttyCocoa combo of 2 Jars @ 20% off",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 28,
+                   						"item": "NuttyCocoa",
+                   						"amount": " 3 Jars",
+                   						"quantity": 3,
+                   						"rate": " 320/Jar",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 500 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales91": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 592.8,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Combo: Bread 1 + Butter 100 Gm + Jam 200 gm = 20% off",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer1",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 19,
+                   						"item": "Bread",
+                   						"amount": " 5 Packets",
+                   						"quantity": 5,
+                   						"rate": " 15/packet",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 200 gm",
+                   						"quantity": 2,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 200 gm",
+                   						"quantity": 1,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 21,
+                   						"item": "Besan Flour",
+                   						"amount": " 500 gm",
+                   						"quantity": 1,
+                   						"rate": " 70/500gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 5,
+                   						"itemId": 28,
+                   						"item": "NuttyCocoa",
+                   						"amount": " 1",
+                   						"quantity": 1,
+                   						"rate": " 320/Jar",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales92": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 720,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Combo: Almonds 100gm + Organic Cashews 100gm = 10% off",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer2",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 400gm",
+                   						"quantity": 4,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 200gm",
+                   						"quantity": 2,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 21,
+                   						"item": "Besan Flour",
+                   						"amount": " 500 gm",
+                   						"quantity": 1,
+                   						"rate": " 70/500gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales93": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 535,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Dozen eggs free with 200 gm Noodles",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer3",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": null,
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 12",
+                   						"quantity": 12,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 29,
+                   						"item": "Noodles",
+                   						"amount": " 350 gm",
+                   						"quantity": 5,
+                   						"rate": " 12/70gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 15,
+                   						"item": "Coriander",
+                   						"amount": " 1 Kg",
+                   						"quantity": 1,
+                   						"rate": " 100/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 23,
+                   						"item": "Organic Cashews",
+                   						"amount": " 250 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 150/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": null,
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales94": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 436,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "20% on Rice",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer4",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 2,
+                   						"item": "Rice",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 110/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 1,
+                   						"item": "Wheat",
+                   						"amount": " 2 Kg",
+                   						"quantity": 2,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales95": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 336,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Buy 500 ml and get 500 ml free!",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer5",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 12,
+                   						"item": "Shampoo",
+                   						"amount": " 1L",
+                   						"quantity": 10,
+                   						"rate": " 45/100ml",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 13,
+                   						"item": "Detergent",
+                   						"amount": " 1.5kg",
+                   						"quantity": 3,
+                   						"rate": " 37/500gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales96": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 666,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "10% on total",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer6",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 4,
+                   						"item": "Sugar",
+                   						"amount": " 5 kg",
+                   						"quantity": 5,
+                   						"rate": " 50/kg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 6,
+                   						"item": "Oil",
+                   						"amount": " 2 L",
+                   						"quantity": 2,
+                   						"rate": " 125/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 3,
+                   						"item": "Dal",
+                   						"amount": " 3Kg",
+                   						"quantity": 3,
+                   						"rate": " 80/kg",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales97": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 510,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "50% off on rope",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer7",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 3 L",
+                   						"quantity": 3,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 7,
+                   						"item": "Rope",
+                   						"amount": " 100 m",
+                   						"quantity": 10,
+                   						"rate": " 35/10 m",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 5",
+                   						"quantity": 5,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales98": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 321.6,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "20% off on eggs + milk combo",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer8",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 9,
+                   						"item": "Eggs",
+                   						"amount": " 2 dozens",
+                   						"quantity": 24,
+                   						"rate": " 5.5/egg",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 5,
+                   						"item": "Milk",
+                   						"amount": " 3 L",
+                   						"quantity": 3,
+                   						"rate": " 45/litre",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 11,
+                   						"item": "Soap",
+                   						"amount": " 4",
+                   						"quantity": 4,
+                   						"rate": " 27/soap",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales99": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 475,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "1 Chocolate free with every 200 gm of Jam",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer9",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 8,
+                   						"item": "Chocolate",
+                   						"amount": " 5",
+                   						"quantity": 5,
+                   						"rate": " 40/chocolate",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 600 gm",
+                   						"quantity": 3,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 3,
+                   						"itemId": 22,
+                   						"item": "Almonds",
+                   						"amount": " 100 gm",
+                   						"quantity": 1,
+                   						"rate": " 100/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 4,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 250 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	},
+                   	"Sales100": {
+                   		"optionsTime": 2000,
+                   		"templates": [
+                   			{
+                   				"templateType": "sales",
+                   				"Order": "{{Order}}",
+                   				"tempTotal": 380,
+                   				"Customer": "{{Customer}}",
+                   				"Rate": "{{Rate}}",
+                   				"Amount": "{{Amount}}",
+                   				"Tools": "{{Tools}}",
+                   				"Quantity": "{{Quantity}}",
+                   				"discount": "Butter 250 gm free with 500 gm pack",
+                   				"templateId": 4,
+                   				"profilePicture": "images/Customer/customer10",
+                   				"receiptHeading": "{{receiptHeading}}",
+                   				"receiptGen": "{{receiptGen}}",
+                   				"tooltipMessage": "This item is not available in your Inventory",
+                   				"helpPageName": "salesHelp",
+                   				"Items": "{{Items}}",
+                   				"salesImage": "images/selllevel04",
+                   				"time": 60,
+                   				"divID": "seconds",
+                   				"onClickPage": {
+                   					"hideScenarios": true,
+                   					"nextPage": ""
+                   				},
+                   				"order": [
+                   					{
+                   						"no": 1,
+                   						"itemId": 24,
+                   						"item": "Butter",
+                   						"amount": " 750 gm",
+                   						"quantity": 7.5,
+                   						"rate": " 46/100gm",
+                   						"exclude": false
+                   					},
+                   					{
+                   						"no": 2,
+                   						"itemId": 30,
+                   						"item": "Jam",
+                   						"amount": " 500 gm",
+                   						"quantity": 2.5,
+                   						"rate": " 60/200gm",
+                   						"exclude": false
+                   					}
+                   				]
+                   			}
+                   		],
+                   		"repeatforuser": false,
+                   		"category": "salesDifficult",
+                   		"questionTime": 3000,
+                   		"repeatforall": true
+                   	}
 }

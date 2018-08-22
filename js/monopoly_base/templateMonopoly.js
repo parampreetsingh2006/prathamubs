@@ -72,7 +72,10 @@ monopoly.boardTemplate='<div class="responsive">'+
             '<div class="square9" >'+
                 '<div class="centerDiceContainer">'+
                     '<div class="centerDiceRowRight" >'+
-                        '<span class="playerName">{{playerTitle}}: <span id="player"></span></span>'+
+                        '<div class="playerName">'+
+                            '<div>{{playerTitle}}: </div>'+
+                            '<div id="playerId"></div>'+
+                        '</div>'+
                     '</div>'+
 
                     '<div class="centerDiceRow">'+
@@ -81,7 +84,7 @@ monopoly.boardTemplate='<div class="responsive">'+
 
                     '<div class="centerDiceRow">'+monopoly.rollingDiceTemplate+'</div>'+
                     '<div class="centerDiceRow">'+
-                        '<div id="rollIt" class="sideScoreBoardButton" onclick="monopoly.rollDice()" style="width: 15%">{{rollIt}}</div>'+
+                        '<button id="rollIt" class="sideScoreBoardButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;">{{rollIt}}</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'+
@@ -114,7 +117,7 @@ monopoly.sideScoreBoardTemplate=
 '<div class="sideScoreBoardContainer">'+
 '        <div class="sideScoreBoardRow">'+
 '            <div class="sideScoreBoardCol"></div>'+
-'            <div class="sideScoreBoardCol"><img src="images/redheadercommon.png" style="width: 80%;margin-left: 2.7vw;"></div>                <div class="sideScoreBoardCol"></div>'+
+'            <div class="sideScoreBoardCol"><img src="images/redheadercommon.png" style="width: 100%;"></div>                <div class="sideScoreBoardCol"></div>'+
 '        </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol weekTitle">WEEK: <span id="weekContent">100</span></div>'+
@@ -133,13 +136,12 @@ monopoly.sideScoreBoardTemplate=
 '        <span id="debt" class="sideScoreBoardCol">₹ {{debtAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'       <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</div>'+
-'       <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</div>'+
-'       <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</div>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'        <div class="sideScoreBoardCol"></div>'+
-'        <div class="sideScoreBoardCol"><img src="images/redheadercommon.png" style="width: 80%;margin-left: 2.7vw;"></div>                <div class="sideScoreBoardCol"></div>'+
+'       <hr>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">{{inventoryTitle}}:</div>'+
@@ -148,13 +150,11 @@ monopoly.sideScoreBoardTemplate=
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '       <div class="sideScoreBoardCol"></div>'+
-'       <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPurchaseScenario()">{{buy}}</div>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPurchaseScenario()" style="padding-left: 7%;padding-right: 7%;">{{buy}}</button>'+
 '       <div class="sideScoreBoardCol"></div>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'        <div class="sideScoreBoardCol"></div>'+
-'        <div class="sideScoreBoardCol"><img src="images/redheadercommon.png" style="width: 80%;margin-left: 2.7vw;"></div>'+
-'        <div class="sideScoreBoardCol"></div>'+
+'       <hr>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">{{reputationTitle}}:</div>'+
@@ -166,15 +166,15 @@ monopoly.sideScoreBoardTemplate=
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '       <div class="sideScoreBoardCol"></div>'+
-'       <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openAdvantageCard()">{{convertTitle}}</div>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openAdvantageCard()">{{convertTitle}}</button>'+
 '       <div class="sideScoreBoardCol"></div>'+
 '    </div>'+
 '  </div>'+
 '</div>'+
 '  <div class="sideScoreBoardRow">'+
-'         <div class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()">{{quizTitle}}</div>'+
-'         <div class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'salesHelp\')"></div>'+
-'         <div id="endGame" class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></div>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;">{{quizTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'salesHelp\')"></button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></button>'+
 '  </div>'+
 '</div>';
 
@@ -246,13 +246,21 @@ monopoly.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="mo
 ' </div>'+
 '<div id={{audioId}}></div>';
 
-monopoly.formTemplate='{{#if nameTitle}}<br><div class=\"title\" >{{nameTitle}}:</span><input type=\"text\" id=\"{{nameId}}\" style=\"margin-left:9px;\"></input><br><br>{{/if}}'+
-
+monopoly.formTemplate='{{#if nameTitle}}<br><div class="title" >{{nameTitle}}:</span> '+
+'{{#if isDropdown}}'+
+    '<select id="{{nameId}}" >'+
+        ' {{#each studentArray}}'+
+        '<option value="{{StudentId}}_{{StudentName}}">{{StudentName}} </option>'+
+        '{{/each}}'+
+    '</select>'+
+'{{else}}'+
+'<input type=\"text\" id=\"{{nameId}}\" style=\"margin-left:9px;\"></input>'+
+ '{{/if}}'+
+'<br><br>'+
 '{{#if numberOfTokens}}'+
     '{{#each numberOfTokens}}'+
-        '<input type=\"radio\" style="display:inline;padding-left:5em; " name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"  {{#if checked}}checked{{/if}} {{#if disabled}}disabled{{/if}}><label for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+
+        '<input type=\"radio\" style="display:{{display}};padding-left:5em; " name=\"{{radioName}}\" value=\"{{radioValue}}\" id=\"{{radioId}}\"  {{#if checked}}checked{{/if}}><label style="display:{{display}};" for=\"{{radioId}}\"><img src=\"images/{{tokenColor}}.png\" style=\"height:32px;width:32px;\"></label>'+
     '{{/each}}'+
-
 '{{/if}}'+
 '{{#if difficulty}}'+
     '{{#each difficulty}}'+

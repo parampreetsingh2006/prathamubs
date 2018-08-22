@@ -47,7 +47,7 @@ ubsApp.translation={
 
     // Monopoly main board
         // board footer caption
-        "start":"GO",
+        "start":"WEEK UP",
         "purchase":"BUY",
         "sale":"SELL",
         "payment":"PAYMENT",
@@ -84,15 +84,16 @@ ubsApp.translation={
 
 
         //new
-        "validAmount":"PLEASE ENTER A VALID AMOUNT",
-        "lessMoney":"YOU HAVE ENTERED LESS MONEY",
-        "moreMoney":"YOU HAVE ENTERED MORE MONEY",
-        "moreCash":"YOU HAVE ENTERED MORE CASH THAN YOU HAVE",
-        "bankBalance":"YOU HAVE INSUFFICIENT BANK BALANCE",
-        "lotDebt":"YOU HAVE A LOT OF DEBT",
-        "pleaseConfirm":"PLEASE CONFIRM THE AMOUNT YOU WANT",
-        "noDebt":"YOU DON'T HAVE ANY DEBTS.",
-
+        "validAmount":"Please enter a valid amount",
+        "lessMoney":"Payment is being made for Rs. <CurrentAmount> only. Please make payment of Rs. <ActualAmount>",
+        "moreMoney":"Payment is being made for Rs. <CurrentAmount>. Please make payment of Rs. <ActualAmount>",
+        "moreCash":"Insufficient cash to complete transaction. Please pay by cheque or buy on credit.",
+        "bankBalance":"Insufficient funds to complete transaction. Please transfer money or buy on credit.",
+        "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
+        "pleaseConfirm":"Please confirm the amount you want",
+        "noDebt":"You don't have any debt.",
+        "purchaseSuccess":"Congratulations! Your inventory has been replenished! It is now at <Percent>%. You paid Rs. <Amount>",
+        "purchaseHeader":"Purchase Alert",
 
         "itemRateDisplay":{
 
@@ -168,6 +169,7 @@ ubsApp.translation={
         "Eggs":"Eggs",
         "Biscuits":"Biscuits",
         "Soap":"Soap",
+        "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
 
@@ -230,7 +232,7 @@ ubsApp.translation={
         "insurance3":"Natural Calamities",
         "premium":"Annual Premium :",
         "sumAssured":"Sum Assured:",
-        "buy":"Buy",
+        "buy":"BUY",
         "cancel":"Cancel",
         "cashTitleName":"CASH",
         "Cash" : "Cash",
@@ -333,7 +335,7 @@ ubsApp.translation={
         "checkTitle":"CHECK",
         "enterInMultipleOf15":"Please enter number in the multiple of 15.",
         "You have entered more points than you have":"You have entered more points than you have.",
-        "validReputationPts":"Please enter a valid reputation point.",
+        "validReputationPts":"Please enter a valid reputation point greater than 14 and less than current Reputation points.",
 
 
         //withdraw from bank
@@ -367,11 +369,11 @@ ubsApp.translation={
         "ERROR": "ERROR",
         "gameFinishedForAUser" : "game is finished now.",
         "NOTICE": "NOTICE",
-
+        "eachPlayerNameUniqueMessage" : "Two players cannot be same",
         "loadingGameMessage": "Loading Game...",
 
-        "ReadInstructions" : "View Instructions",
-        "StartGame" : "Start Game",
+        "ReadInstructions" : "VIEW INSTRUCTIONS",
+        "StartGame" : "PLAY THE GAME",
         
         "instructionHeader" : "INSTRUCTIONS",
         "instructionsMessage" : "Game Instructions/Instrucciones "+
@@ -386,7 +388,7 @@ ubsApp.translation={
         "INVENTORY" : "INVENTORY",
         "decisionResult": "DECISION RESULT",
         "welcome":"WELCOME",
-        
+
 	   /******************************************Quiz key Start******************************************************************/
        "QuizQuestion1" : "We should keep our savings with banks because",
        "QuizQuestion2" : "Bank does not give loan against",
@@ -1192,7 +1194,9 @@ ubsApp.translation={
        "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
        "decisionGainRptPts":"You earned {0} Reputation points!",
        "decisionLoseRptPts":"You lost {0} Reputation points!",
-
+        "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
+        "convertReputationMessage" : "CONVERT REPUTATION TO ADVANTAGE CARD",
+        "OK" : "OK",
 
 
     }   

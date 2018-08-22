@@ -79,13 +79,19 @@
 }
 
 .insuranceButtons{
-  width: 35%;
-  background-color: #f3f332;
+    background-image: url(../images/buttonMedium.png);
+    background-size: 100% 100%;
+    width: 30%;
+    text-align: center;
+    line-height: 185%;
+    font-weight: bold;
+    cursor: pointer;
 }
+
 #buy_cancel{
     position: absolute;
     right: 30%;
-    width: 20%;
+    width: 13%;
 }
 
 #rightInfo{
@@ -116,6 +122,13 @@ div[id="rightInfo"] div, div[id="leftInfo"] div{
 .helpBtnInsurance {
 	position: absolute;
     bottom: 18%;
-    right: 2%;
+    right: -54%;
     width: 30%;
+    background-image: url(../images/help-button.png);
+    background-size: 100% 100%;
+    width: 28%;
+    text-align: center;
+    line-height: 185%;
+    font-weight: bold;
+    cursor: pointer;
 }
