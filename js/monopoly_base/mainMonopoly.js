@@ -743,9 +743,8 @@ ubsApp.addInventory=function(inventoryPoints){
 
 
 ubsApp.currentPlayerContents=function(){
-    $(".playerName").hide();
-	$("#player").html(userArray[playerChance].getplayerName());
-	$(".playerName").show();
+    $("#playerId").empty();
+	$("#playerId").html(userArray[playerChance].getplayerName());
 	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
 	document.getElementById("bankBalance").innerHTML="₹ "+userArray[playerChance].getBankBalance();
 	document.getElementById("cash").innerHTML="₹ "+userArray[playerChance].getplayerScore();

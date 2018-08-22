@@ -538,7 +538,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'       <div  class="purchaseLeftContainer">'+
 //'           <div class="iconContainer">'+
-//'               <img src="images/purchase.png" class="icon">'+
+//'               <img src="images/buy.png" class="icon">'+
 //'           </div>'+
 //'           <div  class="purchaseScreenTitle screenTitle">'+
 //'               {{purchase}}'+
