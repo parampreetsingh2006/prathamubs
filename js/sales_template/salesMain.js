@@ -42,7 +42,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 	var userTotal = $("#receiptTotal").val();
 	if(userTotal==total){
 
-		userArray[playerChance].setplayerScore(c+total*31);
+		userArray[playerChance].setplayerScore(c+total*ubsApp.getMultiplier());
 
 		if(time*100.0/totalTime<=20)r+=4;
 		else if (time*100.0/totalTime<=40)r+=3;
@@ -63,10 +63,10 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 		if(userTotal>total){
 			userArray[playerChance].setReputationPts(r-4);
-			userArray[playerChance].setplayerScore(c+total*31);
+			userArray[playerChance].setplayerScore(c+total*ubsApp.getMultiplier());
 		}
 		else{
-			userArray[playerChance].setplayerScore(c+userTotal*31);
+			userArray[playerChance].setplayerScore(c+userTotal*ubsApp.getMultiplier());
 		}
 
 		ubsApp.openResultPopup({
@@ -141,4 +141,8 @@ ubsApp.checkInventory=function(){
        percent = (Math.random()*2)*0.1+0.2;
     }
     return percent;
+}
+
+ubsApp.getMultiplier = function() {
+    return 31;
 }
