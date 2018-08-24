@@ -25,7 +25,7 @@ ubsApp.translation={
         "inventoryValueTitle":"INVENTORY VALUE",
         "reputationTitle":"REPUTATION PTS",
         "language":"english",
-        "rollIt":"ROLL IT",
+        "rollIt":"ROLL",
         "playerTitle":"PLAYER",
         "PLAYER" : "PLAYER",
 
