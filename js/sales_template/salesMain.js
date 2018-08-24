@@ -39,7 +39,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 	let r = userArray[playerChance].getReputationPts();
 	let s = userArray[playerChance].getInventoryScore();
 
-	s-=0.85*total/(1000);									//Multiplier from Inventory % to cash is 1000
+	s-=0.85 * total * ubsApp.getMultiplier() /(1000);									//Multiplier from Inventory % to cash is 1000
 	userArray[playerChance].setInventoryScore(s);
 	var userTotal = $("#receiptTotal").val();
 	if(userTotal==total){
@@ -119,7 +119,7 @@ ubsApp.selectAvailableItems = function(config){
 	while(arr.length < notAvailable){
 	    var randomNumber = Math.floor(Math.random()*noOfItems);
 	    if(arr.indexOf(randomNumber) > -1) continue;
-	    arr[arr.length] = randomNumber;
+	    arr[arr.length] = randomNumber; 
 	}
 
 	for(let i = 0; i<arr.length;i++){
