@@ -289,8 +289,8 @@ monopoly.endGameTemplate = '<div style="'+
                            '    font-weight: 700;'+
                            '    height: 10vh;'+
                            '    text-align: center;'+
-                           '    font-size: xx-large;'+
-                           '    margin-top: 5%;'+
+                           '    font-size: 7vh;'+
+                           '    margin-top: 5%; background-size: 100%;'+
                            '">'+
                            '    {{GAMEOVER}}'+
                            '</div>'+
