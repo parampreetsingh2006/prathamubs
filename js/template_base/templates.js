@@ -1044,7 +1044,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            ''+
                            '        <div style="display:inline-block;margin-top: 10px;width:100%;">'+
-                           '                 <div style="float: left;margin-left: 40%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 7px; color: green;font-weight:     width: 16%;text-align: center;bold;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
+                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 7px; color: green;font-weight:bold; width: 16%;text-align: center;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
 
                            '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;font-size: large; width: 16%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
                            '                 <div style="cursor: pointer;     float: right;padding: 3%;width: 13%;    background-size: 100% 100%;background-image: url(images/help-button.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
