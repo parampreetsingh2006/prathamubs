@@ -37,7 +37,7 @@ ubsApp.translation={
 
 // Monopoly main board
     // board footer caption
-    "start":"प्रारंभ",
+    "start":"सप्ताह पूरा",
     "purchase":"खरीद",
     "sale":"बेचना",
     "payment":"भुगतान",
