@@ -119,7 +119,7 @@ ubsApp.selectAvailableItems = function(config){
 	while(arr.length < notAvailable){
 	    var randomNumber = Math.floor(Math.random()*noOfItems);
 	    if(arr.indexOf(randomNumber) > -1) continue;
-	    arr[arr.length] = randomNumber; 
+	    arr[arr.length] = randomNumber;
 	}
 
 	for(let i = 0; i<arr.length;i++){
