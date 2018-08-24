@@ -541,7 +541,7 @@ monopoly.readInstruction=function(){
 	 
 	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
           "header" : ubsApp.getTranslation("instructionHeader"),
-          "headerStyle" : "text-align: center;  color: red; font-size: 2vw;"
+          "headerStyle" : "text-align: center;  color: red; font-size: 3vw;"
                });
 	  }
 
