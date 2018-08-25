@@ -153,6 +153,7 @@ else{
 else{
 resultMessage=ubsApp.translation["pleaseConfirm"];
 ubsApp.openPopup({
+    "message" : resultMessage,
     "header" : ubsApp.getTranslation("purchaseHeader"),
     "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
     'buttons' : [

@@ -662,31 +662,31 @@ ubsApp.purchaseTemplate = '<div>'+
 '                <div class="row">'+
 '                    <img src="images/red header.png" class="headerImage">'+
 '                </div>'+
-'                <div class="row" style="padding: 2%;">'+
+'                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-8">{{newInventoryLevelTitle}}:</div>'+
 '                    <div class="col-md-4" style="text-align: right;">'+
 '                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">'+
 '                    </div>'+
 '                </div>'+
-'                <div class="row" style="padding: 2%;">'+
+'                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{inventoryValueTitle}}:</div>'+
 '                    <div class="col-md-6 col-lg-6" style="text-align: right;"><input type="text" id="updatedInventoryValue" class="borderB1" style="width: 45%;" readonly="readonly"></div>'+
 '                </div>'+
-'                <div class="row" style="padding: 2%;">'+
+'                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{costTitle}}:</div>'+
 '                    <div class="col-md-6 col-lg-6" style="text-align: right;"><input type="text" id="newCostText" class="borderB1" style="width: 45%;" readonly="readonly"></div>'+
 '                </div>'+
-'                <div class="row" style="padding: 2%;">'+
+'                <div class="row" style="padding: 1%;">'+
 '                    <div id="parent1">'+
 '                        <span style="padding-left: 15px;">{{payByTitle}}:</span><select class="borderB1" id="pay1" style="width: 17%;"><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp;&nbsp;{{amountTitle}}:<input type="number" class="enterAmountText" id="amount1" min="0" style="width: 20%;">'+
 '                    </div><br>'+
 '                </div>'+
-'                <div class="row" style="padding: 2%;">'+
+'                <div class="row" style="padding: 1%;">'+
 '                    <div id="parent2" style="display:none;">'+
 '                        <span style="padding-left: 15px;">{{payByTitle}}:</span><select class="borderB1" id="pay2" style="width: 17%;"><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp;&nbsp;{{amountTitle}}:<input type="number" class="enterAmountText"  id="amount2" style="width: 20%;">'+
 '                    </div><br>'+
 '                </div>'+
-'                <div class="row" style="padding: 2%;">'+
+'                <div class="row" style="padding: 1%;">'+
 '                    <div id="parent3" style="display:none;">'+
 '                        <span style="padding-left: 15px;">{{payByTitle}}:</span><select class="borderB1" id="pay3" style="width: 17%;"><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select>&nbsp;{{amountTitle}}:<input type="number" class="enterAmountText"  id="amount3" style="width: 20%;">'+
 '                    </div>'+

@@ -167,7 +167,7 @@ body {
     background-color: white;
     color: green;
     margin: auto;
-    margin-top: 13%;
+    margin-top: 8%;
 }
 
 .enterAmountText{
@@ -467,7 +467,7 @@ button:focus {outline:0;}
     width: 97%;
     height: 15%;
     margin-top: 10%;
-    margin-bottom: 6%;
+    margin-bottom: 2``%;
     margin-left: 1%;
 }
 .logoImage {
