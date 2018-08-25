@@ -425,7 +425,7 @@ ubsApp.leaderBoardTemplate=
 '           '+
 '       </span>'+
 '<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
-'                  <button class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
+'                  <button id= "salesSubmitButton" class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           Submit'+
 ' <br> <br> <br>' +
 '           <button class="helpButton" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
@@ -538,7 +538,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'       <div  class="purchaseLeftContainer">'+
 //'           <div class="iconContainer">'+
-//'               <img src="images/purchase.png" class="icon">'+
+//'               <img src="images/buy.png" class="icon">'+
 //'           </div>'+
 //'           <div  class="purchaseScreenTitle screenTitle">'+
 //'               {{purchase}}'+
@@ -1073,7 +1073,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            '        <div>'+
                            ''+
-                           '            <div style="text-align: center;  color: red; font-weight: 700; font-size: 2vw;" >{{convertReputationPointsTitle}}</div>'+
+                           '            <div style="text-align: center; font-weight: 700; font-size: 2vw;" >{{convertReputationPointsTitle}}</div>'+
                            ''+
                            '        </div>'+
                            ''+
@@ -1099,9 +1099,9 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            ''+
                            '        <div style="display:inline-block;margin-top: 10px;width:100%;">'+
-                           '                 <div style="float: left;margin-left: 40%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 7px; color: green;font-weight: bold;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
+                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 7px; color: green;font-weight:bold; width: 16%;text-align: center;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
 
-                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;font-size: large;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
+                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;font-size: large; width: 16%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
                            '                 <div style="cursor: pointer;     float: right;padding: 3%;width: 13%;    background-size: 100% 100%;background-image: url(images/help-button.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
 
                            '        </div>'+
@@ -1129,7 +1129,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}">'+
                        '        <div style="text-align: center;margin-top: 10px;">'+
                        '            <div style="width: fit-content;margin: auto;">'+
                        '                {{#each buttons}}'+
-                       '                <div style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}'+
                        '                </div>'+
                        '                {{/each}}'+
                        '            </div>'+

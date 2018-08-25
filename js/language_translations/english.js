@@ -25,7 +25,7 @@ ubsApp.translation={
         "inventoryValueTitle":"INVENTORY VALUE",
         "reputationTitle":"REPUTATION PTS",
         "language":"english",
-        "rollIt":"ROLL IT",
+        "rollIt":"ROLL",
         "playerTitle":"PLAYER",
         "PLAYER" : "PLAYER",
 
@@ -47,7 +47,7 @@ ubsApp.translation={
 
     // Monopoly main board
         // board footer caption
-        "start":"GO",
+        "start":"WEEK UP",
         "purchase":"BUY",
         "sale":"SELL",
         "payment":"PAYMENT",
@@ -233,7 +233,7 @@ ubsApp.translation={
         "insurance3":"Natural Calamities",
         "premium":"Annual Premium :",
         "sumAssured":"Sum Assured:",
-        "buy":"Buy",
+        "buy":"BUY",
         "cancel":"Cancel",
         "cashTitleName":"CASH",
         "Cash" : "Cash",

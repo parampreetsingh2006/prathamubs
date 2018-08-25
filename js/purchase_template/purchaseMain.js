@@ -172,7 +172,7 @@ resultMessage="";
 if(resultMessage != "") {
     ubsApp.openPopup({ "message" : resultMessage,
                  "header" : ubsApp.getTranslation("purchaseHeader"),
-                 "headerStyle" : "text-align: center;  color: red; font-size: 2vw;"
+                 "headerStyle" : "text-align: center;  color: red; font-size: 3vw;"
                       });
 }
 }

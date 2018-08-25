@@ -408,6 +408,18 @@ ubsApp.raiseAudioEvent =function(divElement, eventName, audioSrc){
 	      	case 'timeOut':
 	      		audioSrc = 'audio/05_WrongAnswer.mp3';
 	      		break;
+	      	case 'congratulations':
+	      		audioSrc = 'audio/11_Congratulations.mp3';
+	      		break;
+	      	case 'splashScreenAudio':
+	      		audioSrc = 'audio/10_FlashScreen.mp3';
+	      		break;
+	      	case 'saleEnd':
+	      		audioSrc = 'audio/06_SaleEnd.mp3';
+	      		break;
+	      	case 'spaceLanding':
+	      		audioSrc = 'audio/03_SpaceLanding.mp3';
+	      		break;
       	}
       }
 
