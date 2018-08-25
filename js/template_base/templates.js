@@ -586,13 +586,11 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'</div>';
 
-ubsApp.purchaseTemplate = '<div>'+
+ubsApp.purchaseTemplate = '<div class="container-fluid">'+
 '    <div class="rowPurchase" align="left">'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
-'                <div class="col-md-4" style="padding-right: 0%;">'+
-'                    <img class="purchaseIcon img-responsive" align="right" src="images/buy.png">'+
-'                </div>'+
+'                <div class="purchaseIcon" style="padding-right: 0%;"></div>'+
 '                <div class="col-md-8" style="padding-left: 0%;">'+
 '                    <div class="purchaseTitle">{{purchase}}</div>'+
 '                </div>'+
@@ -623,9 +621,7 @@ ubsApp.purchaseTemplate = '<div>'+
 '                </div>'+
 '            </div>'+
 '            <div class="row" style="margin-top:15%;">'+
-'                <div class="col-md-5">'+
-'                    <img src="images/logo_english.png" class="logoImage">'+
-'                </div>'+
+'                <div class="logoImage"></div>'+
 '                <div class="col-md-7"></div>'+
 '            </div>'+
 '        </div>'+
@@ -651,8 +647,8 @@ ubsApp.purchaseTemplate = '<div>'+
 '        </div>'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
-'                <div class="col-md-4"></div>'+
-'                <div class="col-md-7 purchasePlayerTitle">'+
+'                <div class="col-md-2"></div>'+
+'                <div class="col-md-9 purchasePlayerTitle">'+
 '                    <span>{{playerTitle}}:</span>'+
 '                    <span>{{currentPlayerName}}</span>'+
 '                </div>'+

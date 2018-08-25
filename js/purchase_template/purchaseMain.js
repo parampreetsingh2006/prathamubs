@@ -5,7 +5,7 @@ ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 	object.cash="Rs. "+userArray[playerChance].getplayerScore();
 	object.credit="Rs. "+userArray[playerChance].getCredit();
 	object.sliderValue=userArray[playerChance].getInventoryScore();
-	
+	object.currentPlayerName = userArray[playerChance].getplayerName();
 	object.inventoryValue=userArray[playerChance].getInventoryScore()*1000;
     object.creditLimit="Rs. "+userArray[playerChance].getCreditLimit();
     templateConfig=$.extend(templateConfig,object);

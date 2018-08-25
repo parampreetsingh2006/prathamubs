@@ -445,8 +445,12 @@ button:focus {outline:0;}
 }
 
 .purchaseIcon {
-    margin-top: 10%;
-    max-width: 50%;
+    margin-top: 3%;
+    background-image:url(../images/buy.png);
+    background-size: 100% 100%;
+    width: 7vw;
+    height: 7vw;
+    margin-left: 5%;
 }
 .purchaseTitle {
 	color: white;
@@ -472,8 +476,11 @@ button:focus {outline:0;}
 }
 .logoImage {
     max-width: 80%;
-    margin-left: 10%;
-    margin-top: 15%;
+    margin-left: 1%;
+    background-image:url(../images/logo_english.png);
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 7vw;
 }
 .purchaseLContainer {
     font-weight: 600;
