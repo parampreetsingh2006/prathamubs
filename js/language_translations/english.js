@@ -90,10 +90,11 @@ ubsApp.translation={
         "moreCash":"Insufficient cash to complete transaction. Please pay by cheque or buy on credit.",
         "bankBalance":"Insufficient funds to complete transaction. Please transfer money or buy on credit.",
         "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
-        "pleaseConfirm":"Please confirm the amount you want",
+        "pleaseConfirm":"You have not entered any amount. Do you want to Exit ?",
         "noDebt":"You don't have any debt.",
         "purchaseSuccess":"Congratulations! Your inventory has been replenished! It is now at <Percent>%. You paid Rs. <Amount>",
         "purchaseHeader":"Purchase Alert",
+        "inventoryValueTitle": "INVENTORY VALUE",
 
         "itemRateDisplay":{
 
@@ -140,10 +141,10 @@ ubsApp.translation={
         "newInventoryLevelTitle":"NEW INVENTORY LEVEL",
         "costTitle":"COST",
         "amountTitle":"AMOUNT",
-        "payByTitle":"MODE OF PAYMENT",
+        "payByTitle":"PAYMENT MODE",
         "addModeTitle":"ADD MODE",
-        "doneTitle":"DONE",
-        "noThanksTitle":"NO THANKS",
+        "doneTitle":"BUY",
+        "noThanksTitle":"CANCEL",
         "or":"OR",
         "cheque":"CHEQUE",
 

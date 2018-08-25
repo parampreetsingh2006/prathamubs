@@ -21,14 +21,15 @@ ubsApp.updateInventoryLevel=function(value){
     }
     else{
         document.getElementById("percent").innerHTML=parseFloat(value).toFixed(2);
-        document.getElementById("value").innerHTML="Rs. "+parseInt(value*1000); 
+        document.getElementById("value").innerHTML="Rs. "+parseInt(value*1000);
     }
     
 }
 ubsApp.fillUp=function(){
 var temp=document.getElementById("value").innerHTML;
 document.getElementById("newInventoryLevelText").value=document.getElementById("percent").innerHTML;
-document.getElementById("newCostText").value="Rs. "+(parseInt(temp.substring(4))-userArray[playerChance].getInventoryScore()*1000);//-userArray[playerChance].getInventoryScore()*1000;
+document.getElementById("newCostText").value=(parseInt(temp.substring(4))-userArray[playerChance].getInventoryScore()*1000);//-userArray[playerChance].getInventoryScore()*1000;
+document.getElementById("updatedInventoryValue").value=temp.substring(4);
 }
 
 ubsApp.pay=function(){
@@ -36,7 +37,7 @@ var paymentDone=false;
 var resultMessage="";
 var cost=document.getElementById("newCostText").value;
 var inventoryPercent=document.getElementById("percent").innerHTML ;
-cost=parseInt(cost.substring(4));
+//cost=parseInt(cost.substring(4));
 if(cost){
 var creditChanged=userArray[playerChance].getCredit();
 var bankBalanceChanged=userArray[playerChance].getBankBalance();
@@ -151,6 +152,22 @@ else{
 }
 else{
 resultMessage=ubsApp.translation["pleaseConfirm"];
+ubsApp.openPopup({
+    "header" : ubsApp.getTranslation("purchaseHeader"),
+    "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+    'buttons' : [
+        {
+            'name' : ubsApp.getTranslation("yes"),
+            'action': "ubsApp.closePopup();ubsApp.closeCurrentScenario(); ubsApp.nextMove();"
+        },
+
+        {
+                    'name' : ubsApp.getTranslation("no"),
+                    'action': "ubsApp.closePopup();"
+        }
+    ]
+});
+resultMessage="";
 }
 if(resultMessage != "") {
     ubsApp.openPopup({ "message" : resultMessage,

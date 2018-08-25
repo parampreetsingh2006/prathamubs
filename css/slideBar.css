@@ -3,12 +3,12 @@
     -webkit-appearance: none;
     position: absolute;
     top: 40%;
-    left: 10%;
+    left: -30%;
     overflow: hidden;
     height: 10%;
     border: 2px solid black;
     -webkit-transform: rotate(-90deg);
-    width: 80%;
+    width: 160%;
     cursor: pointer;
      /* iOS */
 }

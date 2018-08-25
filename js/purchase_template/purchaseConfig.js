@@ -14,6 +14,7 @@ ubsApp.purchaseConfig={
 				"creditTitle":"{{creditTitle}}",
 				"creditLimitTitle":"{{creditLimitTitle}}",
 				"newInventoryLevelTitle":"{{newInventoryLevelTitle}}",
+				"inventoryValueTitle":"{{inventoryValueTitle}}",
 				"costTitle":"{{costTitle}}",
 				"amountTitle":"{{amountTitle}}",
 				"payByTitle":"{{payByTitle}}",
@@ -24,6 +25,8 @@ ubsApp.purchaseConfig={
 				"chequeTitle":"{{cheque}}",
 				"creditTitle":"{{creditTitle}}",
 				"noThanksTitle":"{{noThanksTitle}}",
+				"playerTitle":"{{playerTitle}}",
+				"purchaseHelp":"{{purchaseHelp}}"
 			}
 		]
 	},
