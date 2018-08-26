@@ -626,7 +626,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid">'+
 '            </div>'+
 '        </div>'+
 '        <div class="columnPurchase">'+
-'            <div class="purchaseMContainer">'+
+'            <div class="purchaseMContainer"> <div style="background-color: white;height: 97%;    margin: 3% 3%;overflow: auto;">'+
 '                <div class="row">'+
 '                    <img src="images/red header.png" class="headerImage">'+
 '                </div>'+
@@ -644,7 +644,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid">'+
 '                    <div class="confirmButton" onclick="ubsApp.fillUp()">{{confirmTitle}}</div>'+
 '                </div>'+
 '            </div>'+
-'        </div>'+
+'        </div> </div>'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
 '                <div class="col-md-2"></div>'+
