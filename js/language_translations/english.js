@@ -319,6 +319,8 @@ ubsApp.translation={
         "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
         "goodLuckResultHeader":"GOOD LUCK RESULT",
         "badLuckResultHeader":"BAD LUCK RESULT",
+        "redeemAdvantageCardHeader":"REDEEM ADVANTAGE CARD",
+        "redeemAdvantageCardMessage":"1 advantage card redeemed! You have {0} advantage cards left.",
 
         "paymentResultHeader":"PAYMENT RESULT",
 
