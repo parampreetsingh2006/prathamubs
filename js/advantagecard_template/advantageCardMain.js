@@ -53,7 +53,7 @@ ubsApp.covertReputationToWildCard=function(){
             ubsApp.openPopup({
                 'message' : "Congratulations you now have " + userArray[playerChance].getAdvantageCardNumber() + " Advantage Card. " + reputationPointsUsed + " Reputaion points have been used.",
                 "header" : ubsApp.getTranslation("SUCCESS"),
-                "headerStyle" : "text-align: center;  color: green; font-weight: 700; font-size: 3vw;",
+                "headerStyle" : "text-align: center;  color: green; font-weight: 700;",
             });
 
         }
@@ -61,7 +61,7 @@ ubsApp.covertReputationToWildCard=function(){
         ubsApp.openPopup({
             'message' : ubsApp.translation["validReputationPts"],
             "header" : ubsApp.getTranslation("ERROR"),
-            "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+            "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
         });
         }
 

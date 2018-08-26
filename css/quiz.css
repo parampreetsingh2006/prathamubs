@@ -26,7 +26,6 @@
 	position: absolute;
 	margin-top: 2%;
 	right: 20%;
-	font-size: 1.5vw;
 	font-weight: bold;
 	color: black;
 	background:url('../images/buttonsmedium.png');
@@ -36,7 +35,7 @@
 #playerName{
 	position: absolute;
 	right: 12%;
-	font-size: 1.2vw;
+	font-size: 1.2vmax;
 	color: black;
 	background-color: #65c0df;
 
@@ -50,14 +49,13 @@
     color: white;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 2.5vw;
+	font-size: 3vmax;
 	font-weight: bold;
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
 #questionHeading{
 	margin-top: 3%;
  	text-align: center;
- 	font-size: 1.5vw;
 }
 
 #question_answer{
@@ -69,7 +67,6 @@
 	margin: 6% 10% 3% 10%;
 	border: 2vw solid;
 	border-image: url('../images/redBorderAlt.png') 30 round;
-	font-size: 1.1vw;
 	font-weight: bold;
 }
 
@@ -84,14 +81,12 @@
 
 #answerHeader{
 	color: red;
-	font-size: 3vw;
 	margin-left: 30%;
 	font-weight: bold;
 }
 
 #answerMessage{
 	color: black;
-	font-size: 3vh;
 	margin-left: 20%;
 }
 

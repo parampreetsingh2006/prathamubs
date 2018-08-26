@@ -26,7 +26,6 @@
     right: 12%;
     position: absolute;
     top: 3%;
-    font-size: 1.1vw;
     font-weight: 700;
     color: white;
     background: red;
@@ -36,7 +35,6 @@
     left:82%;
     position:absolute;
     top:17%;
-    font-size: 1.1vw;
     font-weight:700;
 }
 
@@ -44,7 +42,6 @@
     left:82%;
     position:absolute;
     top:23%;
-    font-size: 1.1vw;
     font-weight:700;
 }
 /* #inventoryValueContent{
@@ -64,31 +61,26 @@
     left:82%;
     position:absolute;
     top:17%;
-    font-size: 1.1vw;
     font-weight:700;
 }
 #insuranceTitle{
     left:82%;
     position:absolute;
     top:32%;
-    font-size: 1.1vw;
     font-weight:700;
 }
 #reputationTitle{
     left:82%;
     font-weight:700;
     position:absolute;
-    font-size: 1.1vw;
     top:29.5%;
 }
 
 /*idr se new*/
 
   .centerScoreBoardButton{
-    font-size:0.91vw;
   }
 .centerScoreBoardContainer{
-    font-size:1.05vw;
   }
 
   #radio0{
@@ -111,8 +103,6 @@
   /*advantage card*/
 #advantageCardScenario
 {
-    font-size: 1.05vw;
 }
 #advantageCardTitle{
-    font-size: 1.1vw;
 }

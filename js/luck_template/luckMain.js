@@ -259,7 +259,7 @@ ubsApp.payOrGain=function(pageName){
     ubsApp.openResultPopup({
         "message" : message,
         "header" : header,
-        "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+        "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
         })
 
 }

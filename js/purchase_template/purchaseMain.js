@@ -1,13 +1,15 @@
+let numberOfPaymentModes=1;
+
 ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 	var object={};
 
-	object.bankBalance="Rs. "+userArray[playerChance].getBankBalance();
-	object.cash="Rs. "+userArray[playerChance].getplayerScore();
-	object.credit="Rs. "+userArray[playerChance].getCredit();
+	object.bankBalance="₹ "+userArray[playerChance].getBankBalance();
+	object.cash="₹ "+userArray[playerChance].getplayerScore();
+	object.credit="₹ "+userArray[playerChance].getCredit();
 	object.sliderValue=userArray[playerChance].getInventoryScore();
 	object.currentPlayerName = userArray[playerChance].getplayerName();
-	object.inventoryValue=userArray[playerChance].getInventoryScore()*1000;
-    object.creditLimit="Rs. "+userArray[playerChance].getCreditLimit();
+	object.inventoryValue="₹ "+userArray[playerChance].getInventoryScore()*1000;
+    object.creditLimit="₹ "+userArray[playerChance].getCreditLimit();
     templateConfig=$.extend(templateConfig,object);
 	tempVar.html+=ubsPurchaseTemplate(templateConfig);
 }
@@ -17,25 +19,25 @@ ubsApp.updateInventoryLevel=function(value){
     if(parseFloat(value)<parseFloat(userArray[playerChance].getInventoryScore())){	//instead of 20 write userArray[playerChance].getInventoryScore()
         document.getElementById("mySlider").value=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
         document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
-        document.getElementById("value").innerHTML="Rs. "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
+        document.getElementById("value").innerHTML="₹ "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
     }
     else{
         document.getElementById("percent").innerHTML=parseFloat(value).toFixed(2);
-        document.getElementById("value").innerHTML="Rs. "+parseInt(value*1000);
+        document.getElementById("value").innerHTML="₹ "+parseInt(value*1000);
     }
     
 }
 ubsApp.fillUp=function(){
 var temp=document.getElementById("value").innerHTML;
 document.getElementById("newInventoryLevelText").value=document.getElementById("percent").innerHTML;
-document.getElementById("newCostText").value=(parseInt(temp.substring(4))-userArray[playerChance].getInventoryScore()*1000);//-userArray[playerChance].getInventoryScore()*1000;
-document.getElementById("updatedInventoryValue").value=temp.substring(4);
+$("#newCostText").text((parseInt(temp.substring(2))-userArray[playerChance].getInventoryScore()*1000));//-userArray[playerChance].getInventoryScore()*1000;
+$("#updatedInventoryValue").text(temp.substring(2));
 }
 
 ubsApp.pay=function(){
 var paymentDone=false;
 var resultMessage="";
-var cost=document.getElementById("newCostText").value;
+var cost=$("#newCostText").text();
 var inventoryPercent=document.getElementById("percent").innerHTML ;
 //cost=parseInt(cost.substring(4));
 if(cost){
@@ -47,8 +49,12 @@ newLevel=parseInt(newLevel.substring(0,newLevel.length));
 var totalAmountEntered=0;
 for(var i=1;i<=numberOfPaymentModes;i++){
     if(document.getElementById("parent"+i).style.display!="none"){
-        if(document.getElementById("amount"+i).value)
-        totalAmountEntered+=parseInt(document.getElementById("amount"+i).value);
+        //if(document.getElementById("amount"+i).value)
+        if(cost) {
+            //totalAmountEntered+=parseInt(document.getElementById("amount"+i).value);
+            totalAmountEntered+=parseInt(cost);
+        }
+
         else{
             resultMessage = ubsApp.translation["validAmount"];
             break;		
@@ -67,7 +73,8 @@ else{
         if(document.getElementById("parent"+i).style.display!="none"){
         var dropDown=document.getElementById("pay"+i);
         var paymentMode=dropDown.options[dropDown.selectedIndex].value;
-        var amount=parseInt(document.getElementById("amount"+i).value);
+        //var amount=parseInt(document.getElementById("amount"+i).value);
+        let amount = parseInt(cost);
         if(paymentMode=="cash"){
             if(amount<=userArray[playerChance].getplayerScore()){
                 
@@ -75,8 +82,19 @@ else{
                 totalAmountEntered-=amount;
                 //userArray[playerChance].setplayerScore();
             }
-            else{
-                resultMessage = ubsApp.translation["moreCash"];
+            else if(userArray[playerChance].getBankBalance() >= (amount - userArray[playerChance].getplayerScore())){
+                cashChanged = 0;
+                bankBalanceChanged = userArray[playerChance].getBankBalance() - (amount - userArray[playerChance].getplayerScore());
+                totalAmountEntered-=amount;
+
+            } else if((userArray[playerChance].getCredit() + amount - userArray[playerChance].getBankBalance() - userArray[playerChance].getplayerScore()) <= userArray[playerChance].getCreditLimit()){
+                 cashChanged = 0;
+                 bankBalanceChanged = 0;
+                 creditChanged= userArray[playerChance].getCredit() + (amount - userArray[playerChance].getBankBalance() - userArray[playerChance].getplayerScore());
+                 totalAmountEntered-=amount;
+
+            } else {
+                resultMessage=ubsApp.translation["lotDebt"];
                 break;
             }
         }
@@ -87,9 +105,13 @@ else{
                 totalAmountEntered-=amount;
                 //userArray[playerChance].setBankBalance();
             }
-            else{
-                resultMessage=ubsApp.translation["bankBalance"];
-                break;
+            else if((userArray[playerChance].getCredit() + amount - userArray[playerChance].getBankBalance()) <= userArray[playerChance].getCreditLimit()){
+                 bankBalanceChanged = 0;
+                 creditChanged= userArray[playerChance].getCredit() + (amount - userArray[playerChance].getBankBalance());
+                 totalAmountEntered-=amount;
+            } else {
+                resultMessage=ubsApp.translation["lotDebt"];
+                            break;
             }
         }
         else if(paymentMode=="credit"){
@@ -123,10 +145,10 @@ else{
         temptimer = setInterval(function(){
             temptime--;
             
-        document.getElementById("bankBalanceValue").innerHTML="Rs. "+userArray[playerChance].getBankBalance();
-        document.getElementById("cashValue").innerHTML="Rs. "+userArray[playerChance].getplayerScore();
-        document.getElementById("creditValue").innerHTML="Rs. "+userArray[playerChance].getCredit();
-        document.getElementById("creditLimitValue").innerHTML="Rs. "+userArray[playerChance].getCreditLimit();
+        document.getElementById("bankBalanceValue").innerHTML="₹ "+userArray[playerChance].getBankBalance();
+        document.getElementById("cashValue").innerHTML="₹ "+userArray[playerChance].getplayerScore();
+        document.getElementById("creditValue").innerHTML="₹ "+userArray[playerChance].getCredit();
+        document.getElementById("creditLimitValue").innerHTML="₹ "+userArray[playerChance].getCreditLimit();
             if(temptime === 0 ){
                 clearInterval(temptimer);
                 if(!offlinePurchaseClicked)
@@ -155,7 +177,7 @@ resultMessage=ubsApp.translation["pleaseConfirm"];
 ubsApp.openPopup({
     "message" : resultMessage,
     "header" : ubsApp.getTranslation("purchaseHeader"),
-    "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+    "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
     'buttons' : [
         {
             'name' : ubsApp.getTranslation("yes"),
@@ -173,7 +195,7 @@ resultMessage="";
 if(resultMessage != "") {
     ubsApp.openPopup({ "message" : resultMessage,
                  "header" : ubsApp.getTranslation("purchaseHeader"),
-                 "headerStyle" : "text-align: center;  color: red; font-size: 3vw;"
+                 "headerStyle" : "text-align: center;  color: red;"
                       });
 }
 }

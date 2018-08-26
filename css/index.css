@@ -14,7 +14,6 @@ body {
     border:1px solid black;
 }
 .fontSize2{
-    font-size: 2vw;
 }
 
 .screenTitle{
@@ -86,23 +85,19 @@ body {
 .payOffTitle{
     width:100%;
     font-weight:bold;
-    font-size:xx-large;
     padding:1%;
 }
 .payOffSubTitleLeft{
-    font-size:large;
     font-weight:600;
 }
 #advantageCardTitle{
     left: 82%;
     font-weight: 700;
     position: absolute;
-    /*font-size: 1.1vw;*/
     top: 35.5%;
 }
 
 .payOffSubTitleRight{
-    font-size:large;
     font-weight:600;
     float: right;
 }
@@ -111,7 +106,6 @@ body {
 
 .payOffDebtAmountValue{
     font-weight: 700;
-        font-size: large;
 }
 .payOffAmountToPayValue{
 }
@@ -131,7 +125,6 @@ body {
     background-size: 100% 100%;
     border:0;
     color:black;
-    font-size:large;
     font-weight:bold;
     padding:2%;
 }
@@ -465,7 +458,6 @@ button:focus {outline:0;}
 	background-color: #00bbff;
 	text-align: left;
 	margin-top: 4%;
-	font-size: 1vw;
 }
 .headerImage {
     width: 97%;
@@ -484,7 +476,6 @@ button:focus {outline:0;}
 }
 .purchaseLContainer {
     font-weight: 600;
-    font-size: 1vw;
     padding: 1%;
     width:85%;
     height:45%;
@@ -499,7 +490,6 @@ button:focus {outline:0;}
 }
 .purchaseMContainer {
     font-weight: 600;
-    font-size: 1vw;
     padding: 1%;
     width:80%;
     height:70%;
@@ -514,7 +504,6 @@ button:focus {outline:0;}
 }
 .purchaseRContainer {
     font-weight: 600;
-    font-size: 1vw;
     padding: 1%;
     width:85%;
     height:45%;
@@ -553,5 +542,5 @@ button:focus {outline:0;}
     width: 25%;
     height: 17%;
     margin-top: 25%;
-    font-size: 1vw;
+    padding-top: 1%;
 }

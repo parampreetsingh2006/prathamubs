@@ -34,8 +34,8 @@ ubsApp.translation={
 
         "enterPlayers":"Enter the number of Players",
         "enterOfflinePlayers":"NO. OF PLAYERS",
-        "initPageTitle":"Welcome to the Game",
-        "storePlayerDetailsButton":"Next Page",
+        "initPageTitle":"CHOOSE NUMBER OF PLAYERS",
+        "storePlayerDetailsButton":"NEXT PAGE",
         "computerRequiredTitle":"Computer Required?",
         "playerNameTitle":"Player Name",
         "diceValueTitle":"Dice Value",
@@ -1196,7 +1196,7 @@ ubsApp.translation={
        "decisionGainRptPts":"You earned {0} Reputation points!",
        "decisionLoseRptPts":"You lost {0} Reputation points!",
         "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
-        "convertReputationMessage" : "CONVERT REPUTATION TO ADVANTAGE CARD",
+        "convertReputationMessage" : "NO OF POINTS TO CONVERT",
         "OK" : "OK",
 
 

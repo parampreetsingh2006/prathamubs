@@ -136,9 +136,9 @@ monopoly.sideScoreBoardTemplate=
 '        <span id="debt" class="sideScoreBoardCol">₹ {{debtAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '       <hr>'+

@@ -60,7 +60,7 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
 		 ubsApp.openResultPopup({
         	"message" : decisionResultMessage,
         	"header" : ubsApp.translation["decisionResult"],
-        	"headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+        	"headerStyle" : "text-align: center;  color: black; font-weight: 700; ",
         })
 	}
 }

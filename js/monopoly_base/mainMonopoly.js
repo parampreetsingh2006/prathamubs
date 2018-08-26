@@ -310,7 +310,7 @@ monopoly.storePlayerDetails=function(){
                      ubsApp.openPopup({
                             "message" : ubsApp.getTranslation("eachPlayerNameUniqueMessage"),
                             "header" : ubsApp.getTranslation("ERROR"),
-                            "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+                            "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
                             });
                      return;
                 }
@@ -344,7 +344,7 @@ monopoly.storePlayerDetails=function(){
         user.setReputationPts(initialReputation);
         user.setCredit(0);
         user.setWildCard(0);
-        user.setCreditLimit(15000);
+        user.setCreditLimit(250000);
         user.setTransferReminderOpened(true);
         user.setScenarioArray(scenariosArray);
         user.setWeeks(1);
@@ -541,7 +541,7 @@ monopoly.readInstruction=function(){
 	 
 	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
           "header" : ubsApp.getTranslation("instructionHeader"),
-          "headerStyle" : "text-align: center;  color: red; font-size: 3vw;"
+          "headerStyle" : "text-align: center;  color: red;"
                });
 	  }
 
@@ -591,7 +591,7 @@ ubsApp.confirmEndGame=function(){
     ubsApp.openPopup({
       'message' : ubsApp.getTranslation("endGameConfirm"),
       "header" : ubsApp.getTranslation("ENDGAME"),
-      "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
       'buttons' : [
           {
               'name' : ubsApp.getTranslation("yes"),
@@ -686,7 +686,7 @@ ubsApp.confirmEndGame=function(){
         ubsApp.openPopup({
                        "header" : winnerName + " " + ubsApp.getTranslation("hasWon"),
                       "message" : "",
-                      "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+                      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
                       "imageUrl" : "images/wow.jpg",
                    });
      }
@@ -837,7 +837,7 @@ ubsApp.openQuizIfValid = function() {
         ubsApp.openPopup({
         "message" : ubsApp.getTranslation("quizLimitReachedForWeek"),
         "header" : ubsApp.getTranslation("ERROR"),
-        "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+        "headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
         })
     }
 

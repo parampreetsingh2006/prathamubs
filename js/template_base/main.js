@@ -23,7 +23,6 @@ let ubsWeekSummarytemplate;
 let choiceSelected={};
 let timeVar;
 var helpScenarioOpen=false;
-let numberOfPaymentModes=3;
 var numberOfWeeksDeadline=0;
 var answerselected=0;       
 var inventoryToBeUpdated=0;

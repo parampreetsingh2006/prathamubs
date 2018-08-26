@@ -25,7 +25,7 @@ ubsApp.translation={
     "endGame":"अंत खेल",
     "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
     "enterOfflinePlayers":"खिलाड़ियों की संख्या दर्ज करें",
-    "initPageTitle":"खेल में आपका स्वागत है",
+    "initPageTitle":"खिलाड़ियों की संख्या चुनें",
     "storePlayerDetailsButton":"अगला पृष्ठ",
     "computerRequiredTitle":"कंप्यूटर आवश्यक है?",
     "playerNameTitle":"खिलाडि का नाम",

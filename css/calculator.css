@@ -7,7 +7,6 @@
 	border: 3px solid brown;
 	padding: 6%;
 	padding-left:7%;
-	font-size:1vw;
 }
 
 #numberInput{
@@ -18,7 +17,6 @@
 	border: 2px solid black; 
 	text-align: right;
 	background-color:#bccd95;
-	font-size:1.3vw;
 	padding: 2%;
 	text-align:right
 }

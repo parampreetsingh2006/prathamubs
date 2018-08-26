@@ -13,7 +13,7 @@ ubsApp.validateAmount = function() {
     	   ubsApp.openPopup({
                "message" : "Please calculate amount for all items.",//ubsApp.getTranslation("quizLimitReachedForWeek"),
               "header" : ubsApp.getTranslation("ERROR"),
-              "headerStyle" : "text-align: center;  color: red; font-weight: 700; font-size: 3vw;",
+              "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
               "imageUrl" : "",
                'buttons' : [
                    {
@@ -58,7 +58,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		ubsApp.openResultPopup({
                 "message" : ubsApp.getTranslation("salesCorrectAnswer") + " " + ubsApp.getTranslation("salesCorrectRptpt") + userArray[playerChance].getReputationPts(),
                 "header" : ubsApp.getTranslation("salesResultHeader"),
-                "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+                "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
                 "imageUrl" : "images/wow.jpg",
                 "buttons":[
                 	{
@@ -82,7 +82,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		ubsApp.openResultPopup({
                "message" : ubsApp.getTranslation("salesWrongAnswer") + " " + ubsApp.getTranslation("salesWrongRptpt") + userArray[playerChance].getReputationPts(),
                "header" : ubsApp.getTranslation("salesResultHeader"),
-               "headerStyle" : "text-align: center;  color: black; font-weight: 700; font-size: 3vw;",
+               "headerStyle" : "text-align: center;  color: black; font-weight: 700; ",
                "imageUrl" : "images/wrong.jpg",
                "buttons":[
                 	{
