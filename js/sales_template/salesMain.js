@@ -11,7 +11,7 @@ ubsApp.validateAmount = function() {
     	if(!item[i].value) {
     	   ubsApp.raiseAudioEvent(salesSubmitButton, 'wrongAnswer');
     	   ubsApp.openPopup({
-               "message" : "Please calculate amount for all items.",//ubsApp.getTranslation("quizLimitReachedForWeek"),
+               "message" : "Please calculate amount for all items. Do you need Help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
               "header" : ubsApp.getTranslation("ERROR"),
               "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
               "imageUrl" : "",
