@@ -194,7 +194,7 @@ ubsApp.translation={
         "salesResultHeader":"SALES RESULT",
         "salesWrongAnswer":"Wrong Answer.",
         "salesCorrectAnswer":"Correct Answer.",
-        "salesCorrectRptpt":"Reputation points are increased to ",
+        "salesCorrectRptpt":"Reputation points are increased by ",
         "salesWrongRptpt":"Reputation points are reduced to ",
 
         //Decision

@@ -180,6 +180,7 @@ monopoly.renderPageforBoard = function(page) {
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
       let category = blockCategory[blockNo];
+      ubsApp.currentScenarioCategory = category;
       if(category) {
         scenario = userArray[playerChance].getScenario(category,playerChance);   //   blockCategory[blockNo]
                 let currentTemplateName=scenario.getName();
@@ -197,6 +198,7 @@ monopoly.startScenarios = function(blockNo){
                 ubsApp.renderPageByName(scenario.getName());
                 currentTemplate[0].question=key;
       } else {
+         ubsApp.currentScenarioCategory = "";
         ubsApp.nextMove();
       }
 
