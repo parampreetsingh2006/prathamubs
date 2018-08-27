@@ -172,6 +172,8 @@ ubsApp.translation={
     "Discount":"छूट",
     "Customer":"ग्राहक",
     "Tools":"उपकरण",
+    "SUBMIT": "जमा करें",
+
 
     "itemRateDisplay":{
             "1":"₹ 50/kg",
