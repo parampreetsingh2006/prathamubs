@@ -186,14 +186,31 @@ ubsApp.translation={
             "10":"₹ 25/पैकेट",
             "11":"₹ 27/साबुन",
             "12":"₹ 45/100ml",
-            "13":"₹ 37/500gm"
+            "13":"₹ 37/500gm",
+            "14":"₹ 15/kg",
+            "15":"₹ 100/kg",
+            "16": "₹ 70/500ml",
+            "17": "₹ 25/झाड़ू",
+            "18": "₹ 120/kg",
+            "19": "₹ 15/पैकेट",
+            "20": "₹ 85/50gm",
+            "21": "₹ 70/500gm",
+            "22": "₹ 100/100gm",
+            "23": "₹ 150/100gm",
+            "24": "₹ 46/100gm",
+            "25": "₹ 30/200gm",
+            "26": "₹ 50/100gm",
+            "27": "₹ 120/kg",
+            "28": "₹ 320/जार",
+            "29": "₹ 12/70gm",
+            "30": "₹ 60/200gm"
         },
     "This item is not available in your Inventory":"This item is not available in your Inventory",
 
     "salesResultHeader":"बिक्री परिणाम",
     "salesWrongAnswer":"गलत जवाब।",
     "salesCorrectAnswer":"सही जवाब।",
-    "salesCorrectRptpt":"Reputation points are increased to ",
+    "salesCorrectRptpt":"Reputation points are increased by ",
     "salesWrongRptpt":"Reputation points are reduced to ",
 
     //Decision
@@ -331,6 +348,8 @@ ubsApp.translation={
     "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
     "goodLuckResultHeader":"अच्छा भाग्य परिणाम",
     "badLuckResultHeader":"खराब भाग्य परिणाम",
+    "redeemAdvantageCardHeader":"एडवांटेज कार्ड का उपयोग",
+    "redeemAdvantageCardMessage":"1 advantage card redeemed! You have {0} advantage cards left.",
 
     "paymentResultHeader":"भुगतान परिणाम",
 

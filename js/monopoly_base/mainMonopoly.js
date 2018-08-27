@@ -180,6 +180,7 @@ monopoly.renderPageforBoard = function(page) {
 monopoly.startScenarios = function(blockNo){
   setTimeout(function(){
       let category = blockCategory[blockNo];
+      ubsApp.currentScenarioCategory = category;
       if(category) {
         scenario = userArray[playerChance].getScenario(category,playerChance);   //   blockCategory[blockNo]
                 let currentTemplateName=scenario.getName();
@@ -197,6 +198,7 @@ monopoly.startScenarios = function(blockNo){
                 ubsApp.renderPageByName(scenario.getName());
                 currentTemplate[0].question=key;
       } else {
+         ubsApp.currentScenarioCategory = "";
         ubsApp.nextMove();
       }
 
@@ -507,6 +509,13 @@ monopoly.chooseLanguage=function(){
 
 
   var language=$('input[name=languageRadio]:checked').val();
+  var flag = false;
+  if(language == null){
+	  flag = true;
+	  language = "english";
+  }
+  
+  
   var jsElm = document.createElement("script");
   jsElm.type = "text/javascript";
   jsElm.src = "js/language_translations/"+language+".js";
@@ -522,6 +531,8 @@ monopoly.chooseLanguage=function(){
     
     
   }
+  
+    
    jsElm.onload=function(){
        ubsApp.openPopup({
                      "message" : ubsApp.getTranslation("loadingGameMessage"),
@@ -529,12 +540,27 @@ monopoly.chooseLanguage=function(){
                      "headerStyle" : "",
                      "showCloseButton" : false,
                      });
-      ubsApp.translateScenarios();
+      
       ubsApp.closePopup();
-      monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 28%;\"> </img>";
-      monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
+      ubsApp.translateScenarios();
+      
+      if(flag == true){
+    	  ubsApp.openPopup({
+              "message" : "Please select the language",
+              "header" : "",
+              "headerStyle" : "",
+              "showCloseButton" : true,
+              });
+    	  
+      }
+     else
+     {
+    	 ubsApp.translateScenarios();
+    	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
+    	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
+      }
     }
-
+  
   }
 
 monopoly.readInstruction=function(){

@@ -11,7 +11,7 @@ ubsApp.validateAmount = function() {
     	if(!item[i].value) {
     	   ubsApp.raiseAudioEvent(salesSubmitButton, 'wrongAnswer');
     	   ubsApp.openPopup({
-               "message" : "Please calculate amount for all items.",//ubsApp.getTranslation("quizLimitReachedForWeek"),
+               "message" : "Please calculate amount for all items. Do you need Help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
               "header" : ubsApp.getTranslation("ERROR"),
               "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
               "imageUrl" : "",
@@ -46,17 +46,16 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 		userArray[playerChance].setplayerScore(c+total*ubsApp.getMultiplier());
 
-		if(time*100.0/totalTime<=20)r+=4;
-		else if (time*100.0/totalTime<=40)r+=3;
-		else if (time*100.0/totalTime<=60)r+=2;
-		else if (time*100.0/totalTime<=80)r+=1;
-		else if (time*100.0/totalTime<=100)r+=0;
+        let reputationPointIncrease = ubsApp.getReputationPointsIncreasedInSales(time, totalTime, ubsApp.currentScenarioCategory);
 
-
-		userArray[playerChance].setReputationPts(r);
+		userArray[playerChance].setReputationPts(r + reputationPointIncrease);
 		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'rightAnswer');
+		let message = ubsApp.getTranslation("salesCorrectAnswer");
+		if(reputationPointIncrease > 0) {
+		    message += " " + ubsApp.getTranslation("salesCorrectRptpt") + reputationPointIncrease;
+		}
 		ubsApp.openResultPopup({
-                "message" : ubsApp.getTranslation("salesCorrectAnswer") + " " + ubsApp.getTranslation("salesCorrectRptpt") + userArray[playerChance].getReputationPts(),
+                "message" : message,
                 "header" : ubsApp.getTranslation("salesResultHeader"),
                 "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
                 "imageUrl" : "images/wow.jpg",
@@ -94,6 +93,30 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
                });
 	}
 //	ubsApp.checkPageorBoard(page,amount,hideScenarios);
+}
+
+ubsApp.getReputationPointsIncreasedInSales = function(time, totalTime, currentScenarioCategory) {
+
+let level1 = 20;
+let level2 = 40;
+let level3 = 60;
+let level4 = 80;
+
+if(currentScenarioCategory == "salesEasy") {
+    level1=30;level2=50;level3=70;level4=90;
+} else if(currentScenarioCategory == "salesDifficult") {
+    level1=40;level2=60;level3=80;level4=100;
+} else if(currentScenarioCategory == "salesModerate") {
+    level1=50;level2=80;level3=110;level4=140;
+
+}
+let reputationPointIncrease = 0;
+ if(time*100.0/totalTime<=level1)reputationPointIncrease=4;
+ 		else if (time*100.0/totalTime<=level2)reputationPointIncrease=3;
+ 		else if (time*100.0/totalTime<=level3)reputationPointIncrease=2;
+ 		else if (time*100.0/totalTime<=level4)reputationPointIncrease=1;
+
+ return reputationPointIncrease;
 }
 
 ubsApp.calculateBill = function(){
