@@ -8,6 +8,7 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 ubsApp.validateAmount = function() {
     var item = document.getElementsByName('amt');
     var salesSubmitButton = document.getElementById('salesSubmitButton');
+
 	for(var i=0;i<item.length;i++){
     	if(!item[i].value) {
     	   ubsApp.raiseAudioEvent(salesSubmitButton, 'wrongAnswer');
@@ -31,6 +32,28 @@ ubsApp.validateAmount = function() {
            return false;
 	    }
 	}
+
+	var userTotal = $("#receiptTotal").val();
+    if(!userTotal) {
+         ubsApp.openPopup({
+                       "message" : "Please calculate total amount. Do you need any help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
+                      "header" : ubsApp.getTranslation("ERROR"),
+                      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                      "imageUrl" : "",
+                       'buttons' : [
+                           {
+                               'name' : ubsApp.getTranslation("yes"),
+                               'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
+                           },
+
+                           {
+                                       'name' : ubsApp.getTranslation("no"),
+                                       'action': "ubsApp.closePopup();"
+                           }
+                       ]
+                   });
+                   return false;
+        }
     return true;
 }
 ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
@@ -129,7 +152,7 @@ ubsApp.calculateBill = function(){
         else if(parseFloat(item[i].value) && item[i].id=="discount")
         	total-= parseFloat(item[i].value);
     }
-	document.getElementById("receiptTotal").value=total;
+	//document.getElementById("receiptTotal").value=total;
 }
 
 ubsApp.selectAvailableItems = function(config){

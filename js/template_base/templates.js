@@ -377,7 +377,7 @@ ubsApp.leaderBoardTemplate=
 '                       <td></td>'+
 '                       <td></td>'+
 '                       <td><b>Total</b></td>'+
-'                       <td><input type="number"  value="0" id="receiptTotal" class="amount" ></td>    '+
+'                       <td><input type="number"  id="receiptTotal" class="amount" ></td>    '+
 '                     </tr>'+
 '                   </tbody>'+
 '                 </table>'+
