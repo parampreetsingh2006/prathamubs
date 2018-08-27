@@ -315,7 +315,7 @@ ubsApp.leaderBoardTemplate=
 '                  <button class="customerButton">'+
 '           {{Customer}}'+
 '              </div>'+
-'<img src="images/logo.png" class="gameLogoImage">' +
+'<img src="{{gameLogo}}" class="gameLogoImage">' +
 '       </div>'+
     //need to add dhandha chalo image here
 '    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+

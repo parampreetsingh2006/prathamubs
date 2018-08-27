@@ -2,6 +2,9 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	tempVar.salesConfig = templateConfig;
 	ubsApp.selectAvailableItems(templateConfig);
 	templateConfig.SUBMIT = ubsApp.getTranslation("SUBMIT");
+	templateConfig.currentPlayerName = userArray[playerChance].getplayerName();
+	templateConfig.Customer = ubsApp.getTranslation("Customer");
+	templateConfig.gameLogo = ubsApp.getTranslation("gameLogo");
 	tempVar.html += ubsOrdertemplate(templateConfig);
 	ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
 }

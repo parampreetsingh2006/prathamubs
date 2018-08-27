@@ -170,7 +170,7 @@ ubsApp.translation={
         "receiptHeading":"SUPER MARKET RECIPE",
         "receiptGen":"Receipt Generation",
         "Order":"Order",
-        "Customer":"Customer",
+        "Customer":"CUSTOMER",
         "Items":"Items",
         "SUBMIT": "SUBMIT",
         "Quantity":"Quantity",
