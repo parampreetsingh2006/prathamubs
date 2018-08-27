@@ -8,17 +8,18 @@
   background-color: transparent;
   padding: 19px;
   font-size: large;
+  font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
 .startButtons{
   background:url('../images/button long.png');
   color: red;
-  font-weight: bold;
   cursor: pointer;
   border: none;
   background-size: 100% 100%;
   background-color: transparent;
   font-size: large;
   padding: 19px;
+  font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
 
 .redStrip{
@@ -31,6 +32,8 @@
    vertical-align: -webkit-baseline-middle;
    position: relative;
    text-align: center;
+   margin-top: 3vh;
+   font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
   
 }
 
@@ -43,7 +46,8 @@
     transform: translate(-50%, -50%);
     color: white;
     font-weight: bold;
-    font-size: 4vmax;
+   
+    font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 4vmax;
 }
 
   

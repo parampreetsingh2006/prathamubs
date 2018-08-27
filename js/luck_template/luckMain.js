@@ -264,3 +264,17 @@ ubsApp.payOrGain=function(pageName){
 
 }
 
+ubsApp.useOneAdvantageCard=function(){
+    let header = ubsApp.getTranslation("redeemAdvantageCardHeader");
+    if(userArray[playerChance].getAdvantageCardNumber() > 0)
+    {
+       userArray[playerChance].setAdvantageCardNumber(-1);
+       let cardNumber = userArray[playerChance].getAdvantageCardNumber();
+       let message= ubsApp.formatMessage(ubsApp.translation["redeemAdvantageCardMessage"], [cardNumber]);
+          ubsApp.openResultPopup({
+               "message" : message,
+               "header" : header,
+               "headerStyle" : "text-align: center;  color: black;",
+               })
+    }
+}

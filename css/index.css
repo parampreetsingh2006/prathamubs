@@ -276,7 +276,7 @@ body {
     margin-top:20%;
     padding:1%;
 }
-.luckPayButton,.paymentPayButton{
+.luckPayButton{
     padding:5px;
     border:0;
     color:#123503;
@@ -285,6 +285,19 @@ body {
     background-color:transparent;
     background-repeat: no-repeat;
     width: 45%;
+    
+}
+.paymentPayButton{
+    padding:5px;
+    border:0;
+    color:#123503;
+    background-image:url('../images/buttonsmall.png');
+    background-size: 100% 100%;
+    background-color:transparent;
+    background-repeat: no-repeat;
+    width: 45%;
+    margin-left: 29%;
+    
 }
 .alternateMessageContainer{
     font-weight:600;
