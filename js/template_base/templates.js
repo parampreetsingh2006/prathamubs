@@ -311,7 +311,7 @@ ubsApp.leaderBoardTemplate=
     ' <img src="{{profilePicture}}.png" class="icon" style="">'+
 '       </div>'+
 '           <br>'+
-'<div style="display:inline-block; width:100%; text-align:left;;float:left";>'+
+'<div style="display:inline-block; width:80%; text-align:left;;float:left";>'+
 '                  <button class="customerButton">'+
 '           {{Customer}}'+
 '              </div>'+
@@ -387,7 +387,7 @@ ubsApp.leaderBoardTemplate=
 '       </div>'+
 '       </div>'+
 '    </div>'+
-'   <div class="col-md-3 col-sm-3 col-xs-3">'+
+'   <div class="col-md-3 col-sm-3 col-xs-3" style="    margin-top: 5%;">'+
 '       <div class="tools" style="color:white">'+
 '           {{Tools}}'+
 '       </div>'+
@@ -414,7 +414,7 @@ ubsApp.leaderBoardTemplate=
 '           <input id="calcButton" class="button gray" type="button" value="." onclick="addToDisplay(\'.\')">'+
 '           <input id="calcButton" class="button orange" type="button" value="+/-" disabled onclick="addToDisplay(\'\')">'+
 '           <input id="calcButton" class="button pink" type="button" value="%" onclick="addToDisplay(\'%\')">'+
-'       </div>'+
+'       </div> <div style="text-align: center;">'+
 '       <span id = "minutes">00'+
 '           '+
 '       </span>'+
@@ -423,12 +423,12 @@ ubsApp.leaderBoardTemplate=
 '       </span>'+
 '       <span id = "seconds">'+
 '           '+
-'       </span>'+
+'       </span> </div>'+
 '<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
-'                  <button id= "salesSubmitButton" class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
-'           Submit'+
-' <br> <br> <br>' +
-'           <button class="helpButton" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"><img src="images/help2.png"></button>'+
+'                  <div id= "salesSubmitButton" class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
+'           {{SUBMIT}}'+
+' </div>' +
+'           <div class="helpBtn" style="float: right;    padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
 '              </div>'+
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+

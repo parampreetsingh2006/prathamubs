@@ -1,6 +1,7 @@
 ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	tempVar.salesConfig = templateConfig;
 	ubsApp.selectAvailableItems(templateConfig);
+	templateConfig.SUBMIT = ubsApp.getTranslation("SUBMIT");
 	tempVar.html += ubsOrdertemplate(templateConfig);
 	ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
 }
