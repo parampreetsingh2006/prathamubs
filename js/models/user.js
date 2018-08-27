@@ -28,8 +28,8 @@ class User{
             return this.playerStudentId;
         }
 
-    setplayerScore(score){ ///this is the cash 
-        this.score=score;
+    setplayerScore(score){ ///this is the cash
+        this.score=Math.round(score);
     }
     setTransferReminderOpened(flag){
         this.reminderForThisWeekShown=flag;
