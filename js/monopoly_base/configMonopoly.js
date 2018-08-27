@@ -16,8 +16,8 @@ monopoly.origpages = {
         {
             "templateId":2,
             "templateType":"static",
-            "src":"<button onclick=\"monopoly.chooseLanguage()\" style=\"font-weight:700; background-color:orange;border:0;padding:5px;\">Choose Language</button>",
-            "style": "position:absolute;padding:10px;border-radius:5px;top:80%;left:35%;margin-left:5%; "
+            "src":"<button class=\"longButton\" onclick=\"monopoly.chooseLanguage()\" >Choose Language</button>",
+            "style": "position: absolute;padding:10px;border-radius:5px;top:80%;left:35%;margin-left:5%; "
         }
     ],
  
