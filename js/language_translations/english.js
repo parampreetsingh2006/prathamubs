@@ -37,7 +37,7 @@ ubsApp.translation={
         "initPageTitle":"CHOOSE NUMBER OF PLAYERS",
         "storePlayerDetailsButton":"NEXT PAGE",
         "computerRequiredTitle":"Computer Required?",
-        "playerNameTitle":"Player Name",
+        "playerNameTitle":"Player",
         "diceValueTitle":"Dice Value",
 
         "easy":"Easy",
@@ -110,7 +110,24 @@ ubsApp.translation={
             "10":"₹ 25/packet",
             "11":"₹ 27/soap",
             "12":"₹ 45/100ml",
-            "13":"₹ 37/500gm"
+            "13":"₹ 37/500gm",
+            "14":"₹ 15/kg",
+            "15":"₹ 100/kg",
+            "16": "₹ 70/500ml",
+            "17": "₹ 25/broom",
+            "18": "₹ 120/kg",
+            "19": "₹ 15/packet",
+            "20": "₹ 85/50gm",
+            "21": "₹ 70/500gm",
+            "22": "₹ 100/100gm",
+            "23": "₹ 150/100gm",
+            "24": "₹ 46/100gm",
+            "25": "₹ 30/200gm",
+            "26": "₹ 50/100gm",
+            "27": "₹ 120/kg",
+            "28": "₹ 320/Jar",
+            "29": "₹ 12/70gm",
+            "30": "₹ 60/200gm"
         },
         //center ScoreBoard and transfer to bank
         "payDebtTitle":"PAY DEBT",
@@ -153,12 +170,13 @@ ubsApp.translation={
         "receiptHeading":"SUPER MARKET RECIPE",
         "receiptGen":"Receipt Generation",
         "Order":"Order",
-        "Customer":"Customer",
+        "Customer":"CUSTOMER",
         "Items":"Items",
+        "SUBMIT": "SUBMIT",
         "Quantity":"Quantity",
         "Rate":"Rate",
         "Amount":"Amount",
-        "Tools":"Tools",
+        "Tools":"TOOLS",
         "Wheat":"Wheat",
         "Rice":"Rice",
         "Dal":"Dal",
@@ -177,7 +195,7 @@ ubsApp.translation={
         "salesResultHeader":"SALES RESULT",
         "salesWrongAnswer":"Wrong Answer.",
         "salesCorrectAnswer":"Correct Answer.",
-        "salesCorrectRptpt":"Reputation points are increased to ",
+        "salesCorrectRptpt":"Reputation points are increased by ",
         "salesWrongRptpt":"Reputation points are reduced to ",
 
         //Decision
@@ -244,9 +262,9 @@ ubsApp.translation={
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
-        "WeeklySummary":"Weekly Summary",
-        "EndGameSummary":"End Game Summary",
-        "ScoreSummary":"Score Summary",
+        "WeeklySummary":"WEEKLY SUMMARY",
+        "EndGameSummary":"END GAME SUMMARY",
+        "ScoreSummary":"SCORE SUMMARY",
         "GAMEOVER":"GAME OVER",
         "gameLogo":"images/english/logo.png",
         //luck scenario
@@ -319,6 +337,8 @@ ubsApp.translation={
         "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
         "goodLuckResultHeader":"GOOD LUCK RESULT",
         "badLuckResultHeader":"BAD LUCK RESULT",
+        "redeemAdvantageCardHeader":"REDEEM ADVANTAGE CARD",
+        "redeemAdvantageCardMessage":"1 advantage card redeemed! You have {0} advantage cards left.",
 
         "paymentResultHeader":"PAYMENT RESULT",
 

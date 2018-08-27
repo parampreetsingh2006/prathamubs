@@ -11,7 +11,7 @@ ubsApp.weekSummaryConfig = {
                     "AdvantageCard" : "{{advantageCardTitle}}",
                     "CurrentWeek" : "{{CurrentWeek}}",
                     "LastWeek" : "{{LastWeek}}",
-                    "Close": "{{Close}}",
+                    "Close": "{{CLOSE}}",
                     "PLAYER": "{{PLAYER}}",
                     "INVENTORY": "{{inventoryTitle}}",
                     "INVENTORYVALUE": "{{inventoryValueTitle}}",
