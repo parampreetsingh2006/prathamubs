@@ -454,7 +454,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
@@ -1019,12 +1019,12 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{#if inline}}'+
 '       <div id="yes_no">'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}})">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}},\'{{startTime}}\'),\'{{questionId}}\'">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       </div>'+
 '       {{else}}'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button  class=\'inlineDecisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\')">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button  class=\'inlineDecisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\', \'{{startTime}}\',\'{{questionId}}\')">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       {{/if}}'+
 '   </div>'+

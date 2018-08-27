@@ -6,7 +6,8 @@ object.debt = userArray[playerChance].getCredit();
 object.inventory = userArray[playerChance].getInventoryScore();
 object.inventoryValue = (userArray[playerChance].getInventoryScore()*1000);
 object.reputationPts = userArray[playerChance].getReputationPts();
-object.currentPlayerName = userArray[playerChance].getplayerName()
+object.currentPlayerName = userArray[playerChance].getplayerName();
+ubsApp.startRecordingTimer(templateConfig);
 object = $.extend(true, templateConfig, object);
 tempVar.html+=ubsDecisionTemplate(object);
 }
@@ -23,7 +24,7 @@ ubsApp.renderDecisonTemplate = function() {
 
 }
 
-ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, page="", pamphlet=false){
+ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, page="", pamphlet=false, startTime,questionId){
 
 	let initialPlayerRepPoints = userArray[playerChance].getReputationPts();
 	let totalReputationPoints = initialPlayerRepPoints+parseInt(reputationPts);
@@ -46,15 +47,24 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
 
 		if(totalReputationPoints > initialPlayerRepPoints && totalPlayerBankBalance < initialPlayerBankBalance){
 			decisionResultMessage = ubsApp.formatMessage( ubsApp.translation["decisionGainReptPointsLostBalance"],[reputationPts, bankBalance]);
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceLoss");
+
 		} 
 		else if(totalReputationPoints < totalReputationPoints && totalPlayerBankBalance > initialPlayerBankBalance){
 			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainBalanceLoseRptPts"],[bankBalance, reputationPts]);
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceGain");
+
 		}
 		else if (totalReputationPoints > initialPlayerRepPoints){
 			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainRptPts"],[reputationPts]);
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
+
 		}
 		else if (totalReputationPoints < initialPlayerRepPoints){
 			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionLoseRptPts"],[reputationPts]);
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
 		}
 
 		 ubsApp.openResultPopup({

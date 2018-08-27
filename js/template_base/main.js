@@ -40,7 +40,7 @@ let screenWidth = $(window).width();
 let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "popup", "weekSummary"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
-
+let postScore=false;
 ubsApp.popupConfig = {};
 
 $(document).ready(function(){	
@@ -385,9 +385,11 @@ ubsApp.closeCloseResultPopup = function(config) {
    ubsApp.nextMove();
 }
 
-ubsApp.updateScoreInDB = function(questionId, scoredMarks,totalMarks, level, startTime, endTime){
-	var resourceId = "";
-	Android.addScore(resourceId,questionId,scoredMarks, totalMarks, level, startTime);
+ubsApp.updateScoreInDB = function(playerStudentId, questionId, scoredMarks,totalMarks, level, startTime, label){
+	if(postScore){
+		Android.addScore(playerStudentId,questionId,scoredMarks, totalMarks, level, startTime,label);
+	}
+	
 }
 
 ubsApp.raiseAudioEvent =function(divElement, eventName, audioSrc){
@@ -463,6 +465,10 @@ ubsApp.initializeUbsPages = function() {
     ubsApp.pages=$.extend(ubsApp.pages,ubsApp.weekSummaryConfig);
 }
 
+ubsApp.startRecordingTimer = function(templateConfig){
+	var date = new Date();
+	templateConfig.startTime = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+}
 
 // ubsApp.animate_score=function(amount){
 

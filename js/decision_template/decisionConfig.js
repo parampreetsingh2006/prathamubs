@@ -18,6 +18,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ1}}",
+				"questionId":"decisionq2",
 				"helpPageName":"decisionHelp",
 				"inline":false,
 				"options": [
@@ -67,6 +68,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ2}}",
+				"questionId":"decisionq2",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -118,6 +120,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ3}}",
+				"questionId":"decisionQ3",
 				"helpPageName":"decisionHelp",
 				"inline":false,
 				"options": [
@@ -178,6 +181,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ4}}",
+				"questionId":"decisionQ4",
 				"helpPageName":"decisionHelp",
 				"inline":false,
 				"options": [
@@ -239,6 +243,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ5}}",
+				"questionId":"decisionQ5",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -288,6 +293,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ6}}",
+				"questionId":"decisionQ6",
 				"helpPageName":"decisionHelp",
 				"inline":false,
 				"options": [
@@ -337,6 +343,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ7}}",
+				"questionId":"decisionQ7",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -386,6 +393,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ8}}",
+				"questionId":"decisionQ8",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -435,6 +443,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ9}}",
+				"questionId":"decisionQ9",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -484,6 +493,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ10}}",
+				"questionId":"decisionQ10",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -533,6 +543,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ11}}",
+				"questionId":"decisionQ11",
 				"helpPageName":"decisionHelp",
 				"inline":false,
 				"options": [
@@ -582,6 +593,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ12}}",
+				"questionId":"decisionQ12",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -631,6 +643,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ13}}",
+				"questionId":"decisionQ13",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -680,6 +693,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ14}}",
+				"questionId":"decisionQ14",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [
@@ -730,6 +744,7 @@ ubsApp.decisionConfig = {
 				"invVal":"{{invVal}}",
 				"repPoints":"{{repPoints}}",
 				"question": "{{decisionQ15}}",
+				"questionId":"decisionQ15",
 				"helpPageName":"decisionHelp",
 				"inline":true,
 				"options": [

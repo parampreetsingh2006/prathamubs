@@ -27,6 +27,7 @@ ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
 	  var quizCorrectAnswer = $("#correctAnswers").html();
  	  var questionNo = $("#quizQuestionNumber").html();
 	  ubsApp.renderPageByName(page);
+	  ubsApp.startRecordingTimer(ubsApp.pages[page].templates[0]);
   	  questionNo=parseInt(questionNo)+1;
 	  $("#quizQuestionNumber").text(questionNo);
 	  $("#correctAnswers").text(quizCorrectAnswer);
@@ -36,10 +37,10 @@ ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
 	  }
 }
 
-ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId, reputationPoints){
+ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId, reputationPoints, startTime){
   var totalMarks = 1; // each question carries 1 mark
   var date=new Date();
-  var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+  //var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
   if(ubsApp.atleastOneSelected(optionName)){
   	  let quizCorrectAnswer = $("#correctAnswers").html();
 	  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
@@ -65,9 +66,9 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		    ubsApp.displayNextQuizQuestion(page, true);*/
 		    $("#correctAnswers").text(quizCorrectAnswer);
   			ubsApp.raiseAudioEvent(audioElement, 'rightAnswer');
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, scoredMarks,totalMarks, 1, startTime, "quizScore");
+	  		ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPoints,reputationPoints, 1, startTime, "quizReputationPoints");
 
-
-	  		//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
 	  }
 	  else{
 		  	scoredMarks = 0;
@@ -80,6 +81,10 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	$('#answerDiv').show();
 		  	var audioElement = document.getElementById('answerDiv');
   			ubsApp.raiseAudioEvent(audioElement, 'wrongAnswer');
+  			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, scoredMarks,totalMarks, 1, startTime, "quizScore");
+
+	  		ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, 0,reputationPoints, 1, startTime, "quizReputationPoints");
+
 	  	
 	  }
 
@@ -191,6 +196,7 @@ ubsApp.displayResults = function(page){
 		ubsApp.generalQuizResult();
 	}
 }
+
 
 //ubsApp.getChoiceTemplate = function(templateConfig, tempVar){
 //	if(ubsApp.areAllChoicesSelected() == true) {
