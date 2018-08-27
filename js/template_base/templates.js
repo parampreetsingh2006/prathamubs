@@ -1147,7 +1147,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}" >'+
 
 
 ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
-                              '    <div style="background-color: white; padding:2px;margin-left:1%;margin-right:1%;position: relative; overflow: auto; min-height:35vh;max-height: 50vh; ">'+
+                              '    <div style="background-color: white; padding:2px;margin-left:1%;margin-right:1%;position: relative; overflow: auto; min-height:35vh;max-height: 60vh; ">'+
                               ''+
                               '        <div>'+
                               ''+
@@ -1197,10 +1197,10 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               '        </div>'+
                               ''+
                               ''+
-                              '        <div style="display:inline-block;margin-top: 10px;width:50%;">'+
-                              '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;">{{playerNameTitle}}: {{userName}}</div>'+
+                              '        <div style="display:inline-block;margin-top: 10px;width:58%;">'+
+                              '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
-                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: #c34848;font-weight: bold;font-size: large;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
+                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: #c34848;font-weight: bold;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
                               '            </div>'+
                               '        </div>'+
                               '</div>'+

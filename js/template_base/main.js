@@ -273,6 +273,7 @@ ubsApp.stopTimer = function() {
 
 
 ubsApp.closeCurrentScenario=function(){
+    $('#resultBackground').hide();
 	$('#monopolyBase').css("z-index",0)
 	$('#templateContent').css("z-index",0)
 	$('#templateContent').css("height",0+'px')
@@ -354,7 +355,7 @@ ubsApp.openPopup = function(config) {
 ubsApp.closePopup = function(config) {
 
    if(ubsApp.isResultPopUpOpen) {
-        ubsApp.closeCloseResultPopup();
+        ubsApp.closeResultPopup();
         ubsApp.isResultPopUpOpen = false;
    } else {
         $('#popupBackground').hide();
@@ -379,9 +380,8 @@ ubsApp.openResultPopup = function(config) {
 
 }
 
-ubsApp.closeCloseResultPopup = function(config) {
+ubsApp.closeResultPopup = function(config) {
    $('#resultBackground').hide();
-   ubsApp.closeCurrentScenario();
    ubsApp.nextMove();
 }
 

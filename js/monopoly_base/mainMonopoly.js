@@ -194,6 +194,7 @@ monopoly.startScenarios = function(blockNo){
 
                 $('#templateContent').css("height",(screenHeight)+'px')
                 $('#templateContent').css("width",(screenWidth)+'px')
+                $('#resultBackground').show();
 
                 ubsApp.renderPageByName(scenario.getName());
                 currentTemplate[0].question=key;

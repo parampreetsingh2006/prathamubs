@@ -37,7 +37,7 @@ ubsApp.translation={
         "initPageTitle":"CHOOSE NUMBER OF PLAYERS",
         "storePlayerDetailsButton":"NEXT PAGE",
         "computerRequiredTitle":"Computer Required?",
-        "playerNameTitle":"Player Name",
+        "playerNameTitle":"Player",
         "diceValueTitle":"Dice Value",
 
         "easy":"Easy",

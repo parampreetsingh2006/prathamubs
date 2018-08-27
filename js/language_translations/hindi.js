@@ -28,7 +28,7 @@ ubsApp.translation={
     "initPageTitle":"खिलाड़ियों की संख्या चुनें",
     "storePlayerDetailsButton":"अगला पृष्ठ",
     "computerRequiredTitle":"कंप्यूटर आवश्यक है?",
-    "playerNameTitle":"खिलाडि का नाम",
+    "playerNameTitle":"खिलाडि",
     "diceValueTitle":"पासा मूल्य",
     "easy":"आसान",
     "medium":"मध्यम",
