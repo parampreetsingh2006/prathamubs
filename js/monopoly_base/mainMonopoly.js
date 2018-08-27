@@ -547,8 +547,8 @@ monopoly.chooseLanguage=function(){
       if(flag == true){
     	  ubsApp.openPopup({
               "message" : "Please select the language",
-              "header" : "",
-              "headerStyle" : "",
+              "header" : "ERROR",
+              "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
               "showCloseButton" : true,
               });
     	  
