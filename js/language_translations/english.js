@@ -262,9 +262,9 @@ ubsApp.translation={
         "mode":"Mode of Payment :",
         "LastWeek":"Last Week",
         "CurrentWeek":"Current Week",
-        "WeeklySummary":"Weekly Summary",
-        "EndGameSummary":"End Game Summary",
-        "ScoreSummary":"Score Summary",
+        "WeeklySummary":"WEEKLY SUMMARY",
+        "EndGameSummary":"END GAME SUMMARY",
+        "ScoreSummary":"SCORE SUMMARY",
         "GAMEOVER":"GAME OVER",
         "gameLogo":"images/english/logo.png",
         //luck scenario
