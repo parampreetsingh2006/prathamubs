@@ -586,7 +586,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'</div>';
 
-ubsApp.purchaseTemplate = '<div class="container-fluid">'+
+ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;">'+
 '    <div class="rowPurchase" align="left">'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
@@ -595,7 +595,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid">'+
 '                    <div class="purchaseTitle">{{purchase}}</div>'+
 '                </div>'+
 '            </div>'+
-'            <div class="purchaseLContainer">'+
+'            <div class="purchaseLContainer"><div style="background-color: white;height: 95%;    margin: 3% 3%;overflow: auto;">'+
 '                <div class="row">'+
 '                    <img src="images/red header.png" class="headerImage">'+
 '                </div>'+
@@ -619,7 +619,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid">'+
 '                    <div class="col-md-6">{{creditLimitTitle}}</div>'+
 '                    <div id="creditLimitValue" class="col-md-6" style="text-align: right;">{{creditLimit}}</div>'+
 '                </div>'+
-'            </div>'+
+'            </div></div>'+
 '            <div class="row" style="margin-top:15%;">'+
 '                <div class="logoImage"></div>'+
 '                <div class="col-md-7"></div>'+
@@ -654,7 +654,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid">'+
 '                </div>'+
 '                <div class="col-md-1"></div>'+
 '            </div>'+
-'            <div class="purchaseRContainer">'+
+'            <div class="purchaseRContainer"><div style="background-color: white;height: 92%;    margin: 3% 3%;overflow: auto;">'+
 '                <div class="row">'+
 '                    <img src="images/red header.png" class="headerImage">'+
 '                </div>'+
@@ -690,7 +690,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid">'+
 '                <div class="row" style="display:none;">'+
 '                    <div class="purchaseScreenButton" onclick="ubsApp.addPaymentMode()">{{addModeTitle}}</div>'+
 '                </div>'+
-'            </div>'+
+'            </div></div>'+
 '            <div class="row" style="height:20vmax;">'+
 '                    <div class="confirmButton mainButtons" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</div>'+
 '                    <div class="confirmButton mainButtons" onclick="ubsApp.pay()">{{doneTitle}}</div>'+
