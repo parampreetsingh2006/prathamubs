@@ -323,7 +323,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -386,7 +386,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -440,7 +440,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -512,7 +512,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -566,7 +566,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -629,7 +629,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -692,7 +692,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -755,7 +755,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -818,7 +818,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -872,7 +872,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -926,7 +926,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -980,7 +980,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1034,7 +1034,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1097,7 +1097,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1160,7 +1160,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1232,7 +1232,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1295,7 +1295,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1349,7 +1349,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1421,7 +1421,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1475,7 +1475,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1538,7 +1538,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1592,7 +1592,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1655,7 +1655,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1718,7 +1718,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1772,7 +1772,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel01",
-                   				"time": 60,
+                   				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1805,7 +1805,7 @@ ubsApp.salesConfig={
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
-                   	"Sales26": {
+	                "Sales26": {
                    		"optionsTime": 2000,
                    		"templates": [
                    			{
@@ -1826,7 +1826,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1889,7 +1889,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -1952,7 +1952,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2006,7 +2006,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2069,7 +2069,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2123,7 +2123,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2177,7 +2177,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2231,7 +2231,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2303,7 +2303,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2357,7 +2357,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2411,7 +2411,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2474,7 +2474,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2546,7 +2546,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2609,7 +2609,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2681,7 +2681,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2735,7 +2735,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2789,7 +2789,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2852,7 +2852,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2906,7 +2906,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -2969,7 +2969,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3032,7 +3032,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3086,7 +3086,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3140,7 +3140,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3194,7 +3194,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3257,7 +3257,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel02",
-                   				"time": 60,
+                   				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3320,7 +3320,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3383,7 +3383,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3446,7 +3446,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3518,7 +3518,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3581,7 +3581,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3644,7 +3644,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3707,7 +3707,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3779,7 +3779,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3833,7 +3833,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3887,7 +3887,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -3950,7 +3950,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4013,7 +4013,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4067,7 +4067,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4139,7 +4139,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4211,7 +4211,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4274,7 +4274,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4337,7 +4337,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4391,7 +4391,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4454,7 +4454,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4508,7 +4508,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4571,7 +4571,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4634,7 +4634,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4697,7 +4697,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4760,7 +4760,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4814,7 +4814,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel03",
-                   				"time": 60,
+                   				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4904,7 +4904,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4967,7 +4967,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5030,7 +5030,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5093,7 +5093,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5156,7 +5156,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5228,7 +5228,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5282,7 +5282,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5354,7 +5354,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5426,7 +5426,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5507,7 +5507,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5579,7 +5579,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5669,7 +5669,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5723,7 +5723,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5813,7 +5813,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5867,7 +5867,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5921,7 +5921,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6002,7 +6002,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6065,7 +6065,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": null,
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6137,7 +6137,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6200,7 +6200,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6254,7 +6254,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6317,7 +6317,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6380,7 +6380,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6443,7 +6443,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6457,7 +6457,7 @@ ubsApp.salesConfig={
                    						"amount": " 5",
                    						"quantity": 5,
                    						"rate": " 40/chocolate",
-                   						"exclude": false
+                   						"exclude": false,
                    					},
                    					{
                    						"no": 2,
@@ -6515,7 +6515,7 @@ ubsApp.salesConfig={
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
                    				"salesImage": "images/selllevel04",
-                   				"time": 60,
+                   				"time": 150,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,

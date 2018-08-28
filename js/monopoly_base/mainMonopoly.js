@@ -347,7 +347,7 @@ monopoly.storePlayerDetails=function(){
         user.setReputationPts(initialReputation);
         user.setCredit(0);
         user.setWildCard(0);
-        user.setCreditLimit(250000);
+        user.setCreditLimit(90000);
         user.setTransferReminderOpened(true);
         user.setScenarioArray(scenariosArray);
         user.setWeeks(1);
