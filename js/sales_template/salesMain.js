@@ -131,9 +131,9 @@ let level4 = 80;
 
 if(currentScenarioCategory == "salesEasy") {
     level1=30;level2=50;level3=70;level4=90;
-} else if(currentScenarioCategory == "salesDifficult") {
-    level1=40;level2=60;level3=80;level4=100;
 } else if(currentScenarioCategory == "salesModerate") {
+    level1=40;level2=60;level3=80;level4=100;
+} else if(currentScenarioCategory == "salesDifficult") {
     level1=50;level2=80;level3=110;level4=140;
 
 }
@@ -181,7 +181,22 @@ ubsApp.selectAvailableItems = function(config){
 		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
 		if(config.order[i].exclude==false){
 			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[x];
+			if(config.order[i].discountOnItem) {
+            	    if(config.order[i].discountOnItem.type == 1) {
+            	        val-=config.order[i].discountOnItem.value * config.order[i].quantity * ubsApp.salesConfig.itemRate[x] / 100;
+            	    } else {
+            	        val-=config.order[i].discountOnItem.value;
+            	    }
+            }
 		}
+	}
+
+	if(config.discountOnTotal) {
+	    if(config.discountOnTotal.type == 1) {
+	        val-=config.discountOnTotal.value * val / 100;
+	    } else {
+	        val-=config.discountOnTotal.value;
+	    }
 	}
 	config["tempTotal"] = val;
 }

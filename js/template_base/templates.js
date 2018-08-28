@@ -425,7 +425,7 @@ ubsApp.leaderBoardTemplate=
 '           '+
 '       </span> </div>'+
 '<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
-'                  <div id= "salesSubmitButton" class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
+'                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           {{SUBMIT}}'+
 ' </div>' +
 '           <div class="helpBtn" style="float: right;    padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
@@ -1139,11 +1139,6 @@ ubsApp.popUpTemplate = '<div style="{{style}}" >'+
                        '    </div>'+
                        '    </div>'+
                        '</div>';
-
-
-
-
-
 
 
 ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+

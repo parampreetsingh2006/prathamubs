@@ -4936,7 +4936,11 @@ ubsApp.salesConfig={
                    						"amount": " 2 Kg",
                    						"quantity": 2,
                    						"rate": " 50/kg",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                   						    "type" : 1,
+                   						    "value" : 50
+                   						}
                    					}
                    				]
                    			}
@@ -4981,7 +4985,11 @@ ubsApp.salesConfig={
                    						"amount": " 1L",
                    						"quantity": 10,
                    						"rate": " 45/100ml",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 50
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -5036,6 +5044,10 @@ ubsApp.salesConfig={
                    					"hideScenarios": true,
                    					"nextPage": ""
                    				},
+                   				"discountOnTotal" : {
+                                    "type" : 1,
+                                    "value" : 10
+                                },
                    				"order": [
                    					{
                    						"no": 1,
@@ -5099,6 +5111,10 @@ ubsApp.salesConfig={
                    					"hideScenarios": true,
                    					"nextPage": ""
                    				},
+                   				"discountOnTotal" : {
+                                    "type" : 1,
+                                    "value" : 5
+                                },
                    				"order": [
                    					{
                    						"no": 1,
@@ -5242,7 +5258,11 @@ ubsApp.salesConfig={
                    						"amount": " 5L",
                    						"quantity": 5,
                    						"rate": " 125/litre",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 20
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -5395,7 +5415,11 @@ ubsApp.salesConfig={
                    						"amount": " 3Kg",
                    						"quantity": 3,
                    						"rate": " 50/kg",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 50
+                                        }
                    					}
                    				]
                    			}
@@ -5432,6 +5456,10 @@ ubsApp.salesConfig={
                    					"hideScenarios": true,
                    					"nextPage": ""
                    				},
+                   				"discountOnTotal" : {
+                                    "type" : 1,
+                                    "value" : 25
+                                },
                    				"order": [
                    					{
                    						"no": 1,
@@ -5836,7 +5864,11 @@ ubsApp.salesConfig={
                    						"amount": " 300 gm",
                    						"quantity": 3,
                    						"rate": " 150/100gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 150
+                                        }
                    					}
                    				]
                    			}
@@ -5881,7 +5913,11 @@ ubsApp.salesConfig={
                    						"amount": " 3 Jars",
                    						"quantity": 3,
                    						"rate": " 320/Jar",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 128
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -6151,7 +6187,11 @@ ubsApp.salesConfig={
                    						"amount": " 2 Kg",
                    						"quantity": 2,
                    						"rate": " 110/kg",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 20
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -6214,7 +6254,11 @@ ubsApp.salesConfig={
                    						"amount": " 1L",
                    						"quantity": 10,
                    						"rate": " 45/100ml",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 50
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -6260,6 +6304,10 @@ ubsApp.salesConfig={
                    					"hideScenarios": true,
                    					"nextPage": ""
                    				},
+                   				"discountOnTotal" : {
+                                    "type" : 1,
+                                    "value" : 10
+                                },
                    				"order": [
                    					{
                    						"no": 1,
@@ -6340,7 +6388,11 @@ ubsApp.salesConfig={
                    						"amount": " 100 m",
                    						"quantity": 10,
                    						"rate": " 35/10 m",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 50
+                                        }
                    					},
                    					{
                    						"no": 3,
@@ -6529,7 +6581,11 @@ ubsApp.salesConfig={
                    						"amount": " 750 gm",
                    						"quantity": 7.5,
                    						"rate": " 46/100gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 115
+                                        }
                    					},
                    					{
                    						"no": 2,
