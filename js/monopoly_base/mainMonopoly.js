@@ -556,6 +556,14 @@ monopoly.chooseLanguage=function(){
       }
      else
      {
+    	 //reinitialze the page
+    	 monopoly.intitializeTemplates();
+    	 monopoly.initializeScenarios();
+    	 ubsApp.intitializeTemplates();
+    	 ubsApp.mapTemplatetoFunction();
+    	 ubsApp.initializeUbsPages();
+    	 monopoly.initializePages();
+    	    
     	 ubsApp.translateScenarios();
     	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
     	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
