@@ -5386,8 +5386,8 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 25m",
-                   						"quantity": 2.5,
-                   						"rate": " 35/10 m",
+                   						"quantity": 25,
+                   						"rate": " 35/10m",
                    						"exclude": false
                    					},
                    					{
@@ -5565,7 +5565,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 2m",
-                   						"quantity": 0.2,
+                   						"quantity": 2,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -6386,7 +6386,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 100 m",
-                   						"quantity": 10,
+                   						"quantity": 100,
                    						"rate": " 35/10 m",
                    						"exclude": false,
                    						"discountOnItem" : {
