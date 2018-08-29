@@ -722,12 +722,25 @@ ubsApp.confirmEndGame=function(){
                        "header" : winnerName + " " + ubsApp.getTranslation("hasWon"),
                       "message" : "",
                       "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-                      "imageUrl" : "images/wow.jpg",
+                      "imageUrl" : ubsApp.getTranslation("congratulationImage"),
                    });
      }
   }
 
 ubsApp.nextMove = function(){
+         if(numplayers > 1) {
+
+             ubsApp.openPopup({
+                                           "header" : "",
+                                          "message" : "",
+                                          "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                                          "imageUrl" : ubsApp.getTranslation("nextPlayerImage"),
+                                          "imageStyle" : "width:100%;",
+                                          "showCloseButton" : false
+                                       });
+                       setTimeout(function(){ubsApp.closePopup();}, 2000);
+         }
+
 			playerChance+=1;
 	        playerChance%=numplayers;
 	        let count = 0;
@@ -873,7 +886,7 @@ ubsApp.openQuizIfValid = function() {
         "message" : ubsApp.getTranslation("quizLimitReachedForWeek"),
         "header" : ubsApp.getTranslation("ERROR"),
         "headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
-        })
+        });
     }
 
 }

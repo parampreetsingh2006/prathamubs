@@ -10,6 +10,9 @@ ubsApp.translation={
     "pratham_title_start":"प्रारंभ",
     "pratham_title_decision":"निर्णय लेना",
     "close":"बंद करे",
+    "congratulationImage" : "images/hindi/congratulations.png",
+    "nextPlayerImage" : "images/hindi/nextplayer.png",
+
      "Close":"बंद करे",
      "CLOSE" : "बंद करे",
     "scoreSideBar":"स्कोर",

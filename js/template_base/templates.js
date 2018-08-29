@@ -692,8 +692,8 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;"
 '                </div>'+
 '            </div></div>'+
 '            <div class="row" style="height:20vmax;">'+
-'                    <div class="confirmButton mainButtons" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</div>'+
 '                    <div class="confirmButton mainButtons" onclick="ubsApp.pay()">{{doneTitle}}</div>'+
+'                    <div class="confirmButton mainButtons" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</div>'+
 '                    <div class="helpBtn mainButtons" onclick="ubsApp.startHelp(\'purchaseHelp\')"></div>'+
 '            </div>'+
 '        </div>'+
@@ -1123,7 +1123,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}" >'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
                        '            {{#if showImage}}'+
-                       '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>'+
+                       '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;{{imageStyle}}" src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
                        '        </div>'+
                        '        <div style="text-align: center;margin-top: 10px;">'+

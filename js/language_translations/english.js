@@ -265,6 +265,8 @@ ubsApp.translation={
         "WeeklySummary":"WEEKLY SUMMARY",
         "EndGameSummary":"END GAME SUMMARY",
         "ScoreSummary":"SCORE SUMMARY",
+        "congratulationImage" : "images/english/congratulations.png",
+        "nextPlayerImage" : "images/english/nextplayer.png",
         "GAMEOVER":"GAME OVER",
         "gameLogo":"images/english/logo.png",
         //luck scenario
