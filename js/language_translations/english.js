@@ -193,11 +193,13 @@ ubsApp.translation={
         "Detergent":"Detergent",
 
         "salesResultHeader":"SALES RESULT",
-        "salesWrongAnswer":"Wrong Answer.",
-        "salesCorrectAnswer":"Correct Answer.",
-        "salesCorrectRptpt":"Reputation points are increased by ",
-        "salesWrongRptpt":"Reputation points are reduced to ",
-
+        "salesWrongAnswer":"This is the wrong answer. ",
+        "salesCorrectAnswer":"This is correct answer.",
+        "salesCorrectRptpt1":" You earned {{reputationPoints}} Reputation Points for solving problem in {{time}} seconds! ",
+        "salesCorrectRptpt2":"Consider this sale to be representative of your whole day's sale.₹ {{cashincreased}} was credited to your cash balance.",
+        "salesWrongRptpt":"Reputation points are reduced by ",
+        "salesWrongRptpt2":"You do not earn any reputation points. ",
+        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
         //Decision
         "invVal":"INVENTORY VALUE",
         "repPoints":"REPUTATION POINTS",
@@ -266,6 +268,7 @@ ubsApp.translation={
         "EndGameSummary":"END GAME SUMMARY",
         "ScoreSummary":"SCORE SUMMARY",
         "congratulationImage" : "images/english/congratulations.png",
+        "wowImage": "images/english/wow.png",
         "nextPlayerImage" : "images/english/nextplayer.png",
         "GAMEOVER":"GAME OVER",
         "gameLogo":"images/english/logo.png",

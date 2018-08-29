@@ -1111,7 +1111,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
 
 
 ubsApp.popUpTemplate = '<div style="{{style}}" >'+
-                       '    <div style="background-color: white;position: relative; min-height:35vh;max-height: 50vh;overflow: auto;   ">'+
+                       '    <div style="background-color: white;position: relative; min-height:35vh;max-height: 60vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -1129,7 +1129,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}" >'+
                        '        <div style="text-align: center;margin-top: 10px;">'+
                        '            <div style="width: fit-content;margin: auto;">'+
                        '                {{#each buttons}}'+
-                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: red; font-weight:700" onclick="{{action}}" >{{name}}'+
                        '                </div>'+
                        '                {{/each}}'+
                        '            </div>'+

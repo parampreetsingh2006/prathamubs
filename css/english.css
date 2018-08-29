@@ -106,3 +106,12 @@
 }
 #advantageCardTitle{
 }
+
+.logoImage {
+    max-width: 80%;
+    margin-left: 1%;
+    background-image:url(../images/english/logo.png);
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 7vw;
+}
