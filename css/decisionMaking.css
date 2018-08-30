@@ -2,9 +2,9 @@
 	border: 2px solid black;
 	background-image: url('../images/background.png');
 	background-color: white;
-	height: auto;
-	width: 70%;	
-	margin: 5% 14%;
+	height: 100%;
+	width: 100%;	
+	/*margin: 5% 14%;*/
 	padding: 1%;
 	overflow: hidden;
 }
@@ -17,7 +17,7 @@
 
 #decisionEmoji{
 	position: absolute;
-	height: 6%;
+	height: 8%;
 	width: 6%;
 	background: url('../images/decision.png') no-repeat;
   	background-size:contain;
@@ -25,14 +25,16 @@
 
 #decisionHeading{
 	position: absolute;
-	margin: 0 0 0 4%;
+	margin: 0.5% 0 0 5.6%;
     padding: 0.2% 1%;
-	font-size: 1.5vw;
+	font-size: 1.9vw;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
 	font-weight: bold;
 	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+	background: url('../images/decisionstrip.png');
+	background-size: 100% 100%;
 }
 
 #question_answer_decision{
@@ -127,4 +129,11 @@ div[id="rightInfo"] div, div[id="leftInfo"] div{
 	background:url('../images/buttonsmedium.png');
 	background-size: 110%;
 	font-size: 1.2vw;
+}
+.decisionHelpButtons {
+	float: right;
+	margin-left: 5%;
+	background-image: url('../images/help-button.png');
+	background-color: transparent;
+	background-size: 100% 100%;
 }

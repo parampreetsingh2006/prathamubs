@@ -465,8 +465,8 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       </div>'+
 '   </div>'+
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
-'   <button id="quizDone" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
-'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
+'   <button id="quizDone" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">DONE</button>'+
+'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">CANCEL</button>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>'+
 '</div>';
@@ -1048,7 +1048,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '               <span id="decisionBankBalance">{{repPoints}} &nbsp; &nbsp; &nbsp; ₹ {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
+'   <button id="quizHelp" class=\'quizButtons decisionHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 //ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:rgb(105,105,105);">'+
