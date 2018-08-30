@@ -425,10 +425,10 @@ ubsApp.leaderBoardTemplate=
 '           '+
 '       </span> </div>'+
 '<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
-'                  <div id= "salesSubmitButton" class="submitButton" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
+'                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           {{SUBMIT}}'+
 ' </div>' +
-'           <div class="helpBtn" style="float: right;    padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
+'           <div class="helpBtn" style="    margin-top: 3%;padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
 '              </div>'+
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+
@@ -692,8 +692,8 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;"
 '                </div>'+
 '            </div></div>'+
 '            <div class="row" style="height:20vmax;">'+
-'                    <div class="confirmButton mainButtons" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</div>'+
 '                    <div class="confirmButton mainButtons" onclick="ubsApp.pay()">{{doneTitle}}</div>'+
+'                    <div class="confirmButton mainButtons" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove()">{{noThanksTitle}}</div>'+
 '                    <div class="helpBtn mainButtons" onclick="ubsApp.startHelp(\'purchaseHelp\')"></div>'+
 '            </div>'+
 '        </div>'+
@@ -1111,7 +1111,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
 
 
 ubsApp.popUpTemplate = '<div style="{{style}}" >'+
-                       '    <div style="background-color: white;position: relative; min-height:35vh;max-height: 50vh;overflow: auto;   ">'+
+                       '    <div style="background-color: white;position: relative; min-height:35vh;max-height: 60vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -1123,13 +1123,13 @@ ubsApp.popUpTemplate = '<div style="{{style}}" >'+
                        ''+
                        '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
                        '            {{#if showImage}}'+
-                       '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;" src="{{imageUrl}}"></img></div>'+
+                       '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;{{imageStyle}}" src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
                        '        </div>'+
                        '        <div style="text-align: center;margin-top: 10px;">'+
                        '            <div style="width: fit-content;margin: auto;">'+
                        '                {{#each buttons}}'+
-                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: #c34848; font-weight:700" onclick="{{action}}" >{{name}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: red; font-weight:700" onclick="{{action}}" >{{name}}'+
                        '                </div>'+
                        '                {{/each}}'+
                        '            </div>'+
@@ -1139,11 +1139,6 @@ ubsApp.popUpTemplate = '<div style="{{style}}" >'+
                        '    </div>'+
                        '    </div>'+
                        '</div>';
-
-
-
-
-
 
 
 ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
@@ -1200,7 +1195,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               '        <div style="display:inline-block;margin-top: 10px;width:58%;">'+
                               '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
-                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: #c34848;font-weight: bold;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
+                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
                               '            </div>'+
                               '        </div>'+
                               '</div>'+

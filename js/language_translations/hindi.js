@@ -10,6 +10,9 @@ ubsApp.translation={
     "pratham_title_start":"प्रारंभ",
     "pratham_title_decision":"निर्णय लेना",
     "close":"बंद करे",
+    "congratulationImage" : "images/hindi/congratulations.png",
+    "nextPlayerImage" : "images/hindi/nextplayer.png",
+
      "Close":"बंद करे",
      "CLOSE" : "बंद करे",
     "scoreSideBar":"स्कोर",
@@ -212,8 +215,11 @@ ubsApp.translation={
     "salesResultHeader":"बिक्री परिणाम",
     "salesWrongAnswer":"गलत जवाब।",
     "salesCorrectAnswer":"सही जवाब।",
-    "salesCorrectRptpt":"Reputation points are increased by ",
-    "salesWrongRptpt":"Reputation points are reduced to ",
+    "salesCorrectRptpt1":" आपने {{time}} सेकंड में समस्या को हल करने के लिए {{reputationPoints}} प्रतिष्ठा अंक अर्जित किए हैं! ",
+    "salesCorrectRptpt2":"इस बिक्री पर अपने दिन की बिक्री के प्रतिनिधि होने पर विचार करें। ₹ {{cashincreased}} को आपके नकद शेष राशि में जमा किया गया था।",
+    "salesWrongRptpt":"प्रतिष्ठा अंक कम कर रहे हैं ",
+    "salesWrongRptpt2":"आप कोई प्रतिष्ठा अंक अर्जित नहीं करते हैं। ",
+    "salesWrongRptpt3":"हालांकि यह बिक्री आपके पूरे दिन की बिक्री का प्रतिनिधित्व करती है। आपके नकद शेष राशि में ₹ {{cashincreased}} क्रेडिटिंग। क्या आपको समस्या को हल करने के बारे में जानने के लिए किसी भी मदद की ज़रूरत है?",
 
     //Decision
     "hasWon" : "जीता है",
@@ -359,7 +365,8 @@ ubsApp.translation={
 
      "EndGameSummary":"अंत खेल सारांश",
      "GAMEOVER":"खेल खत्म",
-      "gameLogo":"images/hindi/logo.png",
+     "gameLogo":"images/hindi/logo.png",
+     "wowImage": "images/hindi/wow.png",
 
      // Advantage Card
      "advantageCardTitle":"एडवांटेज कार्ड",

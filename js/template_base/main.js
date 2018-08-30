@@ -346,6 +346,7 @@ ubsApp.openPopup = function(config) {
         }
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
+    "imageStyle":"",
    }, config);
 
    ubsApp.popupConfig.showImage = showImage;

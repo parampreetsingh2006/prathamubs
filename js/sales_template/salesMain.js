@@ -60,6 +60,7 @@ ubsApp.validateAmount = function() {
     return true;
 }
 ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
+    total = parseFloat(total);
 	let time = totalTime - $("#seconds").html();
 	ubsApp.stopTimer();
 	let c = userArray[playerChance].getplayerScore();
@@ -68,10 +69,12 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 	s-=0.85 * total * ubsApp.getMultiplier() /(1000);									//Multiplier from Inventory % to cash is 1000
 	userArray[playerChance].setInventoryScore(s);
-	var userTotal = $("#receiptTotal").val();
+	let userTotal = parseFloat($("#receiptTotal").val());
+	let cashIncreased = total*ubsApp.getMultiplier();
 	if(userTotal==total){
 
-		userArray[playerChance].setplayerScore(c+total*ubsApp.getMultiplier());
+
+		userArray[playerChance].setplayerScore(c+cashIncreased);
 
         let reputationPointIncrease = ubsApp.getReputationPointsIncreasedInSales(time, totalTime, ubsApp.currentScenarioCategory);
 
@@ -79,17 +82,18 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'rightAnswer');
 		let message = ubsApp.getTranslation("salesCorrectAnswer");
 		if(reputationPointIncrease > 0) {
-		    message += " " + ubsApp.getTranslation("salesCorrectRptpt") + reputationPointIncrease;
+		    message += ubsApp.getTranslation("salesCorrectRptpt1").replace("{{reputationPoints}}",reputationPointIncrease).replace("{{time}}",time);
 		}
+		message += ubsApp.getTranslation("salesCorrectRptpt2").replace("{{cashincreased}}",cashIncreased);
 		ubsApp.openResultPopup({
                 "message" : message,
                 "header" : ubsApp.getTranslation("salesResultHeader"),
                 "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
-                "imageUrl" : "images/wow.jpg",
+                "imageUrl" : ubsApp.getTranslation("wowImage"),
                 "buttons":[
                 	{
                 		'id':"closePopupButton",
-                		'name' : ubsApp.getTranslation("Close"),
+                		'name' : ubsApp.getTranslation("CLOSE"),
               			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()"
                 	}
                 ]
@@ -97,23 +101,34 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 	}else{
 
+        let message = ubsApp.getTranslation("salesWrongAnswer");
 		if(userTotal>total){
 			userArray[playerChance].setReputationPts(r-4);
-			userArray[playerChance].setplayerScore(c+total*ubsApp.getMultiplier());
+			userArray[playerChance].setplayerScore(c+cashIncreased);
+			message+=ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
 		}
 		else{
-			userArray[playerChance].setplayerScore(c+userTotal*ubsApp.getMultiplier());
+		    cashIncreased = userTotal*ubsApp.getMultiplier()
+			userArray[playerChance].setplayerScore(c+cashIncreased);
+			message+=ubsApp.getTranslation("salesWrongRptpt2");
 		}
+
+		message+=ubsApp.getTranslation("salesWrongRptpt3").replace("{{cashincreased}}",cashIncreased);
 		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'wrongAnswer');
 		ubsApp.openResultPopup({
-               "message" : ubsApp.getTranslation("salesWrongAnswer") + " " + ubsApp.getTranslation("salesWrongRptpt") + userArray[playerChance].getReputationPts(),
+               "message" : message,
                "header" : ubsApp.getTranslation("salesResultHeader"),
                "headerStyle" : "text-align: center;  color: black; font-weight: 700; ",
                "imageUrl" : "images/wrong.jpg",
                "buttons":[
+                      {
+                           'name' : ubsApp.getTranslation("yes"),
+                           'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
+                     },
+
                 	{
                 		'id':"closePopupButton",
-                		'name' : ubsApp.getTranslation("Close"),
+                		'name' : ubsApp.getTranslation("no"),
               			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()"
                 	}
                 ]
@@ -131,9 +146,9 @@ let level4 = 80;
 
 if(currentScenarioCategory == "salesEasy") {
     level1=30;level2=50;level3=70;level4=90;
-} else if(currentScenarioCategory == "salesDifficult") {
-    level1=40;level2=60;level3=80;level4=100;
 } else if(currentScenarioCategory == "salesModerate") {
+    level1=40;level2=60;level3=80;level4=100;
+} else if(currentScenarioCategory == "salesDifficult") {
     level1=50;level2=80;level3=110;level4=140;
 
 }
@@ -181,7 +196,22 @@ ubsApp.selectAvailableItems = function(config){
 		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
 		if(config.order[i].exclude==false){
 			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[x];
+			if(config.order[i].discountOnItem) {
+            	    if(config.order[i].discountOnItem.type == 1) {
+            	        val-=config.order[i].discountOnItem.value * config.order[i].quantity * ubsApp.salesConfig.itemRate[x] / 100;
+            	    } else {
+            	        val-=config.order[i].discountOnItem.value;
+            	    }
+            }
 		}
+	}
+
+	if(config.discountOnTotal) {
+	    if(config.discountOnTotal.type == 1) {
+	        val-=config.discountOnTotal.value * val / 100;
+	    } else {
+	        val-=config.discountOnTotal.value;
+	    }
 	}
 	config["tempTotal"] = val;
 }

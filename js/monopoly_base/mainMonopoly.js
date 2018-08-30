@@ -24,7 +24,7 @@ let playerChance = monopoly.playerChance;
 let userArray=[];
 let cashTransfered=false;
 var initialPlayerCash=1000;
-var initialPlayerBankBalance=250000;
+var initialPlayerBankBalance=100000;
 var initialInventoryScore=60;
 var initialReputation=10;
 var harnamSinghProfit=11000;
@@ -347,7 +347,7 @@ monopoly.storePlayerDetails=function(){
         user.setReputationPts(initialReputation);
         user.setCredit(0);
         user.setWildCard(0);
-        user.setCreditLimit(250000);
+        user.setCreditLimit(90000);
         user.setTransferReminderOpened(true);
         user.setScenarioArray(scenariosArray);
         user.setWeeks(1);
@@ -556,6 +556,14 @@ monopoly.chooseLanguage=function(){
       }
      else
      {
+    	 //reinitialze the page
+    	 monopoly.intitializeTemplates();
+    	 monopoly.initializeScenarios();
+    	 ubsApp.intitializeTemplates();
+    	 ubsApp.mapTemplatetoFunction();
+    	 ubsApp.initializeUbsPages();
+    	 monopoly.initializePages();
+    	    
     	 ubsApp.translateScenarios();
     	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
     	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
@@ -714,12 +722,25 @@ ubsApp.confirmEndGame=function(){
                        "header" : winnerName + " " + ubsApp.getTranslation("hasWon"),
                       "message" : "",
                       "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-                      "imageUrl" : "images/wow.jpg",
+                      "imageUrl" : ubsApp.getTranslation("congratulationImage"),
                    });
      }
   }
 
 ubsApp.nextMove = function(){
+         if(numplayers > 1) {
+
+             ubsApp.openPopup({
+                                           "header" : "",
+                                          "message" : "",
+                                          "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                                          "imageUrl" : ubsApp.getTranslation("nextPlayerImage"),
+                                          "imageStyle" : "width:100%;",
+                                          "showCloseButton" : false
+                                       });
+                       setTimeout(function(){ubsApp.closePopup();}, 2000);
+         }
+
 			playerChance+=1;
 	        playerChance%=numplayers;
 	        let count = 0;
@@ -865,7 +886,7 @@ ubsApp.openQuizIfValid = function() {
         "message" : ubsApp.getTranslation("quizLimitReachedForWeek"),
         "header" : ubsApp.getTranslation("ERROR"),
         "headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
-        })
+        });
     }
 
 }
