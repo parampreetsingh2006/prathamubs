@@ -194,7 +194,7 @@ ubsApp.translation={
 
         "salesResultHeader":"SALES RESULT",
         "salesWrongAnswer":"This is the wrong answer. ",
-        "salesCorrectAnswer":"This is correct answer.",
+        "salesCorrectAnswer":"This is the correct answer.",
         "salesCorrectRptpt1":" You earned {{reputationPoints}} Reputation Points for solving problem in {{time}} seconds! ",
         "salesCorrectRptpt2":"Consider this sale to be representative of your whole day's sale.₹ {{cashincreased}} was credited to your cash balance.",
         "salesWrongRptpt":"Reputation points are reduced by ",

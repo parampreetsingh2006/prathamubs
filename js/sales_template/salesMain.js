@@ -93,7 +93,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
                 "buttons":[
                 	{
                 		'id':"closePopupButton",
-                		'name' : ubsApp.getTranslation("Close"),
+                		'name' : ubsApp.getTranslation("CLOSE"),
               			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()"
                 	}
                 ]
