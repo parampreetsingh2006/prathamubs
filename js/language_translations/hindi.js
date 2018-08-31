@@ -30,6 +30,7 @@ ubsApp.translation={
     "enterOfflinePlayers":"खिलाड़ियों की संख्या दर्ज करें",
     "initPageTitle":"खिलाड़ियों की संख्या चुनें",
     "storePlayerDetailsButton":"अगला पृष्ठ",
+    "storePlayerDetailsBackPage": "BACK",
     "computerRequiredTitle":"कंप्यूटर आवश्यक है?",
     "playerNameTitle":"खिलाडि",
     "diceValueTitle":"पासा मूल्य",

@@ -36,6 +36,7 @@ ubsApp.translation={
         "enterOfflinePlayers":"NO. OF PLAYERS",
         "initPageTitle":"CHOOSE NUMBER OF PLAYERS",
         "storePlayerDetailsButton":"NEXT PAGE",
+         "storePlayerDetailsBackPage":"BACK",
         "computerRequiredTitle":"Computer Required?",
         "playerNameTitle":"Player",
         "diceValueTitle":"Dice Value",
