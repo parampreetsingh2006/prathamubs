@@ -51,7 +51,7 @@ ubsApp.covertReputationToWildCard=function(){
             ubsApp.closeCurrentScenario();
             ubsApp.currentPlayerContents();
             ubsApp.openPopup({
-                'message' : "Congratulations you now have " + userArray[playerChance].getAdvantageCardNumber() + " Advantage Card. " + reputationPointsUsed + " Reputaion points have been used.",
+                'message' : "Congratulations you now have " + userArray[playerChance].getAdvantageCardNumber() + " Advantage Card(s). " + reputationPointsUsed + " Reputation points have been used.",
                 "header" : ubsApp.getTranslation("SUCCESS"),
                 "headerStyle" : "text-align: center;  color: green; font-weight: 700;",
             });

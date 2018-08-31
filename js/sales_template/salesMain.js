@@ -36,8 +36,7 @@ ubsApp.validateAmount = function() {
 	    }
 	}
 
-	var userTotal = Math.round(parseFloat($("#receiptTotal").val()) * 100) / 100;
-    if(!userTotal) {
+    if(!$("#receiptTotal").val()) {
          ubsApp.openPopup({
                        "message" : "Please calculate total amount. Do you need any help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
                       "header" : ubsApp.getTranslation("ERROR"),
@@ -237,8 +236,10 @@ ubsApp.checkInventory=function(){
     else  if(invLevel > 20 ){
        percent = (Math.random()*2)*0.1+0.4;
     }
-    else  if(invLevel < 20 ){
+    else  if(invLevel > 0 ){
        percent = (Math.random()*2)*0.1+0.2;
+    } else  {
+        percent = 0;
     }
     return percent;
 }

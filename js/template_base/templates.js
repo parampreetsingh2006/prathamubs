@@ -810,13 +810,13 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                               </select>'+
 '                           </span>'+
 '                      {{else}}{{/if}}'+
-'                      </div>'+
-'                      <div class="payOffButtonContainer" >'+
+'                      </div> <div class="payOffButtonContainer">'+
+'                      <div style="width:24%;" >'+
 '                           <button style="color:green;" class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
-'                      <div style="margin-left: 1%;" class="payOffButtonContainer">'+
+'                      <div style="width:24%;margin-left: 2%;" >'+
 '                           <button style="color:red;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
-'                      </div>'+
+'                      </div> </div>'+
 '                </div>'+
 '       <div id="result"></div>'+
 '</div>';
