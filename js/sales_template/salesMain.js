@@ -36,7 +36,7 @@ ubsApp.validateAmount = function() {
 	    }
 	}
 
-	var userTotal = $("#receiptTotal").val();
+	var userTotal = Math.round(parseFloat($("#receiptTotal").val()) * 100) / 100;
     if(!userTotal) {
          ubsApp.openPopup({
                        "message" : "Please calculate total amount. Do you need any help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
@@ -69,8 +69,8 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 	s-=0.85 * total * ubsApp.getMultiplier() /(1000);									//Multiplier from Inventory % to cash is 1000
 	userArray[playerChance].setInventoryScore(s);
-	let userTotal = parseFloat($("#receiptTotal").val());
-	let cashIncreased = total*ubsApp.getMultiplier();
+	let userTotal = Math.round(parseFloat($("#receiptTotal").val()) * 100) / 100;
+	let cashIncreased = Math.round(total*ubsApp.getMultiplier() * 100)/ 100;
 	if(userTotal==total){
 
 
@@ -108,7 +108,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 			message+=ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
 		}
 		else{
-		    cashIncreased = userTotal*ubsApp.getMultiplier()
+		    cashIncreased = Math.round(userTotal*ubsApp.getMultiplier() * 100)/ 100;
 			userArray[playerChance].setplayerScore(c+cashIncreased);
 			message+=ubsApp.getTranslation("salesWrongRptpt2");
 		}
@@ -216,7 +216,7 @@ ubsApp.selectAvailableItems = function(config){
 	        val-=config.discountOnTotal.value;
 	    }
 	}
-	config["tempTotal"] = val;
+	config["tempTotal"] = Math.round(val * 100) / 100;
 }
 
 
