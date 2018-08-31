@@ -563,7 +563,7 @@ monopoly.chooseLanguage=function(){
     	 ubsApp.mapTemplatetoFunction();
     	 ubsApp.initializeUbsPages();
     	 monopoly.initializePages();
-    	    
+
     	 ubsApp.translateScenarios();
     	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
     	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
@@ -611,7 +611,7 @@ monopoly.startGame=function(){
                 for(let i = 4 ; i > ubsApp.studentArray.length; i--) {
                     $("#num_offline_players option[value='" + i + "']").remove();
                 }
-
+                monopoly.initOfflinePlayers();
               }
            } else {
               monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);

@@ -84,7 +84,7 @@ monopoly.boardTemplate='<div class="responsive">'+
 
                     '<div class="centerDiceRow">'+monopoly.rollingDiceTemplate+'</div>'+
                     '<div class="centerDiceRow">'+
-                        '<button id="rollIt" class="sideScoreBoardButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;">{{rollIt}}</button>'+
+                        '<button id="rollIt" class="sideScoreBoardButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;padding-bottom: 1.8%;">{{rollIt}}</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'+
@@ -172,7 +172,7 @@ monopoly.sideScoreBoardTemplate=
 '  </div>'+
 '</div>'+
 '  <div class="sideScoreBoardRow">'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;">{{quizTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;padding-bottom: 4%;">{{quizTitle}}</button>'+
 '       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'salesHelp\')"></button>'+
 '       <button class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></button>'+
 '  </div>'+

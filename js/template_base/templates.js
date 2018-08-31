@@ -428,7 +428,7 @@ ubsApp.leaderBoardTemplate=
 '                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           {{SUBMIT}}'+
 ' </div>' +
-'           <div class="helpBtn" style="    margin-top: 3%;padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
+'           <div class="helpBtn" style="float: right;    padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
 '              </div>'+
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+
@@ -586,7 +586,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'</div>';
 
-ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;">'+
+ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;    padding-left: 0px;">'+
 '    <div class="rowPurchase" align="left">'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
@@ -729,7 +729,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '               {{#if quizRequired}}'+
 '                   <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
 '                {{else}}'+
-'                   <div style="width:33.33%; margin:0 auto;">'+
+'                   <div style="width:33.33%; margin:auto; text-align: center;">'+
 '               {{/if}}'+
 '               {{#if isLuckCategory}}'+
 '                  <button class="luckPayButton" onclick="ubsApp.payOrGain(\'{{scenarioName}}\')">'+

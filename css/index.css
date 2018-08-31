@@ -327,17 +327,17 @@ body {
 
 .luckScreenTitle{
     position:absolute;
-    top:3%;
-    left:8%;
+    top: 4%;
+    left: 8%;
     padding:10px;
     font-weight:600;
-    font-size:25px;
+    font-size:2.5vmax;
 }
 
 .luckIconContainer{
-    width:6%;
-    height:10%;
-    top:3%;
+    width: 7%;
+    height: 13%;
+    top: 2.5%;
     left:1%;
     position: absolute;
 }
@@ -460,12 +460,15 @@ button:focus {outline:0;}
 }
 .purchaseTitle {
 	color: white;
-	font-size: 3vmax;
+	font-size: 2.5vmax;
 	font-weight: bold;
     background-image:url(../images/red_strip.png);
     background-size: 100% 100%;
     width: 60%;
     margin-top: 10%;
+    height: 65%;
+    padding-top: 4%;
+    padding-left: 3%;
 }
 .purchasePlayerTitle {
 	background-color: #00bbff;
@@ -479,7 +482,14 @@ button:focus {outline:0;}
     margin-bottom: 2``%;
     margin-left: 1%;
 }
-
+.logoImage {
+    max-width: 80%;
+    margin-left: 1%;
+    background-image:url(../images/logo_english.png);
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 7vw;
+}
 .purchaseLContainer {
     font-weight: 600;
     padding: 1%;
