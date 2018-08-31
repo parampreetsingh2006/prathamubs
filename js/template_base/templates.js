@@ -388,7 +388,7 @@ ubsApp.leaderBoardTemplate=
 '       </div>'+
 '    </div>'+
 '   <div class="col-md-3 col-sm-3 col-xs-3" style="    margin-top: 5%;">'+
-'       <div class="tools" style="color:white">'+
+'       <div class="tools" style="color:white;    text-align: center;padding-right: 6%;">'+
 '           {{Tools}}'+
 '       </div>'+
 '           '+
@@ -428,7 +428,7 @@ ubsApp.leaderBoardTemplate=
 '                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           {{SUBMIT}}'+
 ' </div>' +
-'           <div class="helpBtn" style="float: right;    padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
+'           <div class="helpBtn" style=" margin-top: 3%;padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
 '              </div>'+
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+

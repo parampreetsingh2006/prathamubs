@@ -153,10 +153,10 @@ if(currentScenarioCategory == "salesEasy") {
 
 }
 let reputationPointIncrease = 0;
- if(time*100.0/totalTime<=level1)reputationPointIncrease=4;
- 		else if (time*100.0/totalTime<=level2)reputationPointIncrease=3;
- 		else if (time*100.0/totalTime<=level3)reputationPointIncrease=2;
- 		else if (time*100.0/totalTime<=level4)reputationPointIncrease=1;
+ if(time<=level1)reputationPointIncrease=4;
+ 		else if (time<=level2)reputationPointIncrease=3;
+ 		else if (time<=level3)reputationPointIncrease=2;
+ 		else if (time<=level4)reputationPointIncrease=1;
 
  return reputationPointIncrease;
 }
@@ -191,10 +191,13 @@ ubsApp.selectAvailableItems = function(config){
 		config.order[arr[i]].exclude = true;
 	}
 
+    let orderNo=1;
 	for(var i=0;i<noOfItems;i++){
 		var x = config.order[i].itemId;
 		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
 		if(config.order[i].exclude==false){
+		    config.order[i].no = orderNo;
+		    orderNo++;
 			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[x];
 			if(config.order[i].discountOnItem) {
             	    if(config.order[i].discountOnItem.type == 1) {
