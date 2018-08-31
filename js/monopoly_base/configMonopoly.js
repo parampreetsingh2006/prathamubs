@@ -158,7 +158,7 @@ monopoly.origpages = {
         "templateId":1,
         "templateType":"static",
         "style":" width:100%;display: flex;flex-direction: row;justify-content: space-around; margin-top: 10%;",
-        "src":"<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/buttonMedium.png);background-size: 100% 100%;background-color: transparent;padding: 1.2%;\" >{{storePlayerDetailsBackPage}} </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/buttonMedium.png);background-size: 100% 100%;background-color: transparent;padding: 3%;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button>",
+        "src":"<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/buttonMedium.png);background-size: 100% 100%;background-color: transparent;padding: 1.2%;    color: red;\" >{{storePlayerDetailsBackPage}} </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/buttonMedium.png);background-size: 100% 100%;background-color: transparent;padding: 1.2%;    color: green;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button>",
     },
     /*{
         "templateId":1,
