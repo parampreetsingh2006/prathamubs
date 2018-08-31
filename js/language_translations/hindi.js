@@ -23,7 +23,7 @@ ubsApp.translation={
     "cheque":"चेक",
     "ScoreSummary":"स्कोर सारांश",
 
-    
+
     "rollit":"घुमाओ",
     "endGame":"अंत खेल",
     "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
@@ -74,17 +74,17 @@ ubsApp.translation={
     "q1-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
     "q1-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
 
-    
+
     "q2-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
     "q2-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
     "q2-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
 
-    
+
     "q3-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
     "q3-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
     "q3-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
 
-    
+
     "q4-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
     "q4-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
     "q4-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
@@ -112,7 +112,7 @@ ubsApp.translation={
     "debtAmountTitle":"डेब्ट राशि",
     "cancelTitle":"कैंसिल ",
     "amountToPayTitle":"राशि तो पाय",
-    "amountToTransferTitle":"राशि तो ट्रांसफर",   
+    "amountToTransferTitle":"राशि तो ट्रांसफर",
     "modeOfPaymentTitle":"भुगतान का प्रकार",
     "helpTitle":"मदद",
     "gainTitle":"लाभ",
@@ -176,7 +176,7 @@ ubsApp.translation={
     "Discount":"छूट",
     "Customer":"ग्राहक",
     "Tools":"उपकरण",
-    "SUBMIT": "जमा करें",
+    "SUBMIT": "समाप्त",
 
 
     "itemRateDisplay":{
@@ -263,7 +263,7 @@ ubsApp.translation={
 
     "decisionQ6O1":"इलेक्ट्रॉनिक मशीन",
     "decisionQ6O2":"पारंपरिक मशीन",
-    
+
 
     "decisionQ11O1":"क्या आप पुलिस को 100 रुपये रिश्वत देते हैं और डिलीवरी के लिए भागते हैं।",
     "decisionQ11O2":"पुलिस स्टेशन जाकर 500 रुपये का जुर्माना अदा करें और डिलीवरी के लिए देर हो जाओ",
@@ -366,7 +366,7 @@ ubsApp.translation={
 
      "EndGameSummary":"अंत खेल सारांश",
      "GAMEOVER":"खेल खत्म",
-     "gameLogo":"images/hindi/logo.png",
+      "gameLogo":"images/hindi/logo.png",
      "wowImage": "images/hindi/wow.png",
 
      // Advantage Card

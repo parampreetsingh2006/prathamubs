@@ -173,7 +173,7 @@ ubsApp.translation={
         "Order":"Order",
         "Customer":"CUSTOMER",
         "Items":"Items",
-        "SUBMIT": "SUBMIT",
+        "SUBMIT": "DONE",
         "Quantity":"Quantity",
         "Rate":"Rate",
         "Amount":"Amount",

@@ -25,24 +25,24 @@ monopoly.origpages = {
         {
         "templateId":1,
         "templateType":"static",
-        "style": "text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%;",
-        "src":"<div id=\"splash\"> <img src=\"images/splash_screen.jpg\" style=\"width: 100%; height: 100%\"></img> </div>"	
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%;",
+        "src":"<div id=\"splash\"> <img src=\"images/splash_screen.jpg\" style=\"width: 100%; height: 100%\"></img> </div>"
         },
         {
             "templateType":"audioTemplate",
             "audioSrc":"audio/10_FlashScreen.mp3",
             "audioId":"splashAudio",
         },
-    	
+
     ],
 
 "WelcomePage":[
 	  {
 	        "templateId":2,
 	        "templateType":"static",
-      
+
 	        "src":"<div id=\"redstrip\" class=\"redStrip\"> <img src=\"images/red_strip.png\" style=\"width: 100%; height: 100%\"></img> <div class=\"centered\">{{welcome}}</div></div>"
-	    },	
+	    },
 
     {
       "templateId":2,
@@ -68,7 +68,7 @@ monopoly.origpages = {
 "InitialisePlayers":[{
         "templateId":1,
         "templateType":"static",
-        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:11vh;background-image: url(images/red_strip.png);    background-size: 100% 100%;font-size: 3vmax;",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
         "id":"initPageTitle",
         "src":"{{initPageTitle}}",
     },
@@ -139,7 +139,6 @@ monopoly.origpages = {
         "templateId":1,
         "templateType":"static",
         "src": "<div id=\"enterOfflinePlayers\">{{enterOfflinePlayers}} <select id=\"num_offline_players\"   onchange=\"monopoly.initOfflinePlayers()\"> "+
-                                                                                            "<option value=\"0\"><span id=\"player1\">0</span></option> "+
                                                                                             "<option value=\"1\"><span  id=\"player1\">1</span></option> "+
                                                                                             "<option value=\"2\"><span id=\"player2\">2</span></option> "+
                                                                                             "<option value=\"3\"><span id=\"player3\">3</span></option> "+
@@ -157,7 +156,7 @@ monopoly.origpages = {
     {
         "templateId":1,
         "templateType":"static",
-        "style":" width:100%;display: flex;flex-direction: row;justify-content: space-around; margin-top: 10%;",
+        "style":" width:100%;display: flex;flex-direction: row;justify-content: space-around; ",
         "src":"<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/buttonMedium.png);background-size: 100% 100%;background-color: transparent;padding: 1.2%;    color: red;\" >{{storePlayerDetailsBackPage}} </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/buttonMedium.png);background-size: 100% 100%;background-color: transparent;padding: 1.2%;    color: green;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button>",
     },
     /*{
