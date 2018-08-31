@@ -144,11 +144,9 @@ width: 100%;
    
 }
 #result{
-    position:absolute;
-    left:40%;
-    bottom:3%;
     color:red;
-    font-weight:600;
+    text-align: center;
+    margin-top: 2%;
 }
 .purchaseScreenButton {
     background-image: url(../images/buttonMedium.png);

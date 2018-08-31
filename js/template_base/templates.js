@@ -816,9 +816,10 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      </div>'+
 '                      <div style="width:24%;margin-left: 2%;" >'+
 '                           <button style="color:red;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
-'                      </div> </div>'+
-'                </div>'+
+'                      </div>' +
+'</div>'+
 '       <div id="result"></div>'+
+'                </div>'+
 '</div>';
 
 
