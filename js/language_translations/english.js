@@ -201,6 +201,8 @@ ubsApp.translation={
         "salesWrongRptpt":"Reputation points are reduced by ",
         "salesWrongRptpt2":"You do not earn any reputation points. ",
         "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
+
+        "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",
         //Decision
         "invVal":"INVENTORY VALUE",
         "repPoints":"REPUTATION POINTS",
