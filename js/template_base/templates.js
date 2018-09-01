@@ -1111,8 +1111,8 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
 
 
 
-ubsApp.popUpTemplate = '<div style="{{style}}" >'+
-                       '    <div style="background-color: white;position: relative; min-height:35vh;max-height: 60vh;overflow: auto;   ">'+
+ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image: url(images/redbgcommon.png);{{/if}}" >'+
+                       '    <div style="background-color: {{backgroundColor}};position: relative; min-height:35vh;max-height: 60vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
                        ''+

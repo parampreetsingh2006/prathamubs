@@ -347,6 +347,8 @@ ubsApp.openPopup = function(config) {
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
     "imageStyle":"",
+    "showBorder" : true,
+    "backgroundColor" :"white",
    }, config);
 
    ubsApp.popupConfig.showImage = showImage;
@@ -374,6 +376,9 @@ ubsApp.openResultPopup = function(config) {
     }
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
+    "imageStyle":"",
+    "showBorder" : true,
+    "backgroundColor" :"white",
    }, config);
    ubsApp.popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");

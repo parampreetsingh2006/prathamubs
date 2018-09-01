@@ -47,7 +47,19 @@ ubsApp.transferToBank=function(){
 				if(temptime === 0 ){
 					clearInterval(temptimer);
 					ubsApp.closeCurrentScenario();
-					ubsApp.currentPlayerContents();	
+					ubsApp.currentPlayerContents();
+                    ubsApp.openResultPopup({
+                                "message" : ubsApp.getTranslation("transferSuccessMsg").replace("{{transferAmount}}",amount),
+                                "header" : ubsApp.getTranslation("SUCCESS"),
+                                "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
+                                "buttons":[
+                                    {
+                                        'id':"closePopupButton",
+                                        'name' : ubsApp.getTranslation("CLOSE"),
+                                        'action': "ubsApp.closePopup();"
+                                    }
+                                ]
+                     });
 				}
 			},50);
 			

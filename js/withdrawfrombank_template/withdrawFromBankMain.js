@@ -23,6 +23,18 @@ ubsApp.withdrawFromBank=function(){
             userArray[playerChance].setBankBalance(userArray[playerChance].getBankBalance()-number);
             ubsApp.closeCurrentScenario();
             ubsApp.currentPlayerContents();
+            ubsApp.openResultPopup({
+                        "message" : ubsApp.getTranslation("withdrawSuccessMsg").replace("{{withdrawAmount}}",number),
+                        "header" : ubsApp.getTranslation("SUCCESS"),
+                        "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
+                        "buttons":[
+                            {
+                                'id':"closePopupButton",
+                                'name' : ubsApp.getTranslation("CLOSE"),
+                                'action': "ubsApp.closePopup();"
+                            }
+                        ]
+             });
         }
         else{
             document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];

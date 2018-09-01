@@ -736,7 +736,9 @@ ubsApp.nextMove = function(){
                                           "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
                                           "imageUrl" : ubsApp.getTranslation("nextPlayerImage"),
                                           "imageStyle" : "width:100%;",
-                                          "showCloseButton" : false
+                                          "showCloseButton" : false,
+                                          "showBorder" : false,
+                                          "backgroundColor" :"transparent",
                                        });
                        setTimeout(function(){ubsApp.closePopup();}, 2000);
          }
