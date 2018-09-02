@@ -586,7 +586,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'</div>';
 
-ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;    padding-left: 0px;">'+
+ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '    <div class="rowPurchase" align="left">'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
@@ -640,7 +640,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden; 
 '                    </div>'+
 '                    <div id="value" class="col-md-4" style="padding-left: 0%;margin:auto;">{{inventoryValue}}</div>'+
 '                </div>'+
-'                <div class="row">'+
+'                <div class="row" style="height:7vmax;">'+
 '                    <div class="confirmButton" onclick="ubsApp.fillUp()">{{confirmTitle}}</div>'+
 '                </div>'+
 '            </div>'+
@@ -661,7 +661,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden; 
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-8">{{newInventoryLevelTitle}}:</div>'+
 '                    <div class="col-md-4" style="text-align: right;">'+
-'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">'+
+'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">%'+
 '                    </div>'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+

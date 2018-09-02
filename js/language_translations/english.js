@@ -91,7 +91,7 @@ ubsApp.translation={
         "moreCash":"Insufficient cash to complete transaction. Please pay by cheque or buy on credit.",
         "bankBalance":"Insufficient funds to complete transaction. Please transfer money or buy on credit.",
         "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
-        "pleaseConfirm":"You have not entered any amount. Do you want to Exit ?",
+        "pleaseConfirm":"You have not purchased any inventory. Are you sure you want to proceed?",
         "noDebt":"You don't have any debt.",
         "purchaseSuccess":"Congratulations! Your inventory has been replenished! It is now at <Percent>%. You paid ₹ <Amount>",
         "purchaseHeader":"Purchase Alert",

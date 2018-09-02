@@ -545,16 +545,27 @@ button:focus {outline:0;}
     background-image: url(../images/buttonMedium.png);
     background-size: 100% 100%;
     width: 40%;
+    height: 48%;
     text-align: center;
     line-height: 185%;
     font-weight: bold;
     cursor: pointer;
     margin: auto;
     color: green;
+    padding-top: 1%;
 }
 .mainButtons {
     width: 25%;
     height: 17%;
     margin-top: 25%;
     padding-top: 1%;
+}
+.mainPurchaseDiv {
+    background-image: url(../images/background.png);
+    overflow:hidden;
+    padding-left: 0px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1.3vmax;
+    color:black;
 }

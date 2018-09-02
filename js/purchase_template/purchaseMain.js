@@ -141,7 +141,7 @@ else{
         userArray[playerChance].setBankBalance(bankBalanceChanged);
         userArray[playerChance].setCredit(creditChanged);
         var temptimer;
-        var temptime=20;	
+        var temptime=100;
         temptimer = setInterval(function(){
             temptime--;
             
@@ -181,12 +181,12 @@ ubsApp.openPopup({
     'buttons' : [
         {
             'name' : ubsApp.getTranslation("yes"),
-            'action': "ubsApp.closePopup();ubsApp.closeCurrentScenario(); ubsApp.nextMove();"
+            'action': "ubsApp.closePopup();"
         },
 
         {
                     'name' : ubsApp.getTranslation("no"),
-                    'action': "ubsApp.closePopup();"
+                    'action': "ubsApp.closePopup();ubsApp.closeCurrentScenario(); ubsApp.nextMove();"
         }
     ]
 });
