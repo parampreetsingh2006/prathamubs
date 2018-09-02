@@ -93,9 +93,12 @@ ubsApp.translation={
         "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
         "pleaseConfirm":"You have not purchased any inventory. Are you sure you want to proceed?",
         "noDebt":"You don't have any debt.",
-        "purchaseSuccess":"Congratulations! Your inventory has been replenished! It is now at <Percent>%. You paid ₹ <Amount>",
+        "purchaseSuccess":"Congratulations! Your inventory has been replenished! It is now at <Percent>%. You paid ₹ <Amount>. ",
         "purchaseHeader":"Purchase Alert",
         "inventoryValueTitle": "INVENTORY VALUE",
+        "cashChequeMessage":"You have insufficient Cash, Remaining payment will be done via Cheque",
+        "cashChequeCreditMessage":"You have insufficient Cash & Bank Balance, Remaining payment will be done via Credit",
+        "chequeCreditMessage":"You have insufficient Bank Balance, Remaining payment will be done via Credit",
 
         "itemRateDisplay":{
 
@@ -201,6 +204,7 @@ ubsApp.translation={
         "salesWrongRptpt":"Reputation points are reduced by ",
         "salesWrongRptpt2":"You do not earn any reputation points. ",
         "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
+        "salesTimeOut": "Time's Up! Your reputation points are reduced by 1.",
 
         "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",
         //Decision

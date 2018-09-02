@@ -247,3 +247,16 @@ ubsApp.checkInventory=function(){
 ubsApp.getMultiplier = function() {
     return 31;
 }
+ubsApp.salesTimeOut= function(temp){
+	let r = userArray[playerChance].getReputationPts();
+
+    let message = ubsApp.getTranslation("salesWrongAnswer");
+	userArray[playerChance].setReputationPts(r-1);
+	ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');
+    message+=ubsApp.getTranslation("salesTimeOut");
+    ubsApp.openResultPopup({
+           "message" : message,
+           "header" : ubsApp.getTranslation("salesResultHeader"),
+           "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
+           });
+	}

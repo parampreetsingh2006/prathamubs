@@ -255,11 +255,10 @@ ubsApp.startTimer=function(temp){
 		}
 
 	    if(timeleft === 0 ){
-	    	
-  			ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');	
 	        clearInterval(timeVar);
+	        ubsApp.salesTimeOut(temp);
 	        choiceSelected={};
-	        ubsApp.nextMove();
+//	        ubsApp.nextMove();
 	    }
 	},1000);
 

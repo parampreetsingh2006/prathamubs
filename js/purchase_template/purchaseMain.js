@@ -37,6 +37,7 @@ $("#updatedInventoryValue").text(temp.substring(2));
 ubsApp.pay=function(){
 var paymentDone=false;
 var resultMessage="";
+var subResultMessage="";
 var cost=$("#newCostText").text();
 var inventoryPercent=document.getElementById("percent").innerHTML ;
 //cost=parseInt(cost.substring(4));
@@ -77,7 +78,6 @@ else{
         let amount = parseInt(cost);
         if(paymentMode=="cash"){
             if(amount<=userArray[playerChance].getplayerScore()){
-                
                 cashChanged=userArray[playerChance].getplayerScore()-amount;
                 totalAmountEntered-=amount;
                 //userArray[playerChance].setplayerScore();
@@ -86,12 +86,14 @@ else{
                 cashChanged = 0;
                 bankBalanceChanged = userArray[playerChance].getBankBalance() - (amount - userArray[playerChance].getplayerScore());
                 totalAmountEntered-=amount;
+                subResultMessage=ubsApp.translation["cashChequeMessage"];
 
             } else if((userArray[playerChance].getCredit() + amount - userArray[playerChance].getBankBalance() - userArray[playerChance].getplayerScore()) <= userArray[playerChance].getCreditLimit()){
                  cashChanged = 0;
                  bankBalanceChanged = 0;
                  creditChanged= userArray[playerChance].getCredit() + (amount - userArray[playerChance].getBankBalance() - userArray[playerChance].getplayerScore());
                  totalAmountEntered-=amount;
+                 subResultMessage=ubsApp.translation["cashChequeCreditMessage"];
 
             } else {
                 resultMessage=ubsApp.translation["lotDebt"];
@@ -109,6 +111,7 @@ else{
                  bankBalanceChanged = 0;
                  creditChanged= userArray[playerChance].getCredit() + (amount - userArray[playerChance].getBankBalance());
                  totalAmountEntered-=amount;
+                 subResultMessage=ubsApp.translation["chequeCreditMessage"];
             } else {
                 resultMessage=ubsApp.translation["lotDebt"];
                             break;
@@ -133,7 +136,7 @@ else{
     if(totalAmountEntered==0)
     {
         paymentDone=true;
-        resultMessage=ubsApp.translation["purchaseSuccess"].replace("<Percent>",inventoryPercent).replace("<Amount>",cost);
+        resultMessage=ubsApp.translation["purchaseSuccess"].replace("<Percent>",inventoryPercent).replace("<Amount>",cost) + subResultMessage;
     }
     if(paymentDone){
         userArray[playerChance].setInventoryScore(newLevel);
