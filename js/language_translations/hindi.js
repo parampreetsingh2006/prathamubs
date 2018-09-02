@@ -1256,5 +1256,5 @@ ubsApp.translation={
        "debtPaidSuccessMsg" : "ऋण राशि ₹ {{debtAmount}} सफलतापूर्वक भुगतान की गई।",
        "enterValidAmount" : "वैध राशि दर्ज करें",
        "transferSuccessMsg":"राशि का हस्तांतरण ₹ {{transferAmount}} सफलतापूर्वक किया गया।",
-       "withdrawSuccessMsg": :"राशि को वापस लेना ₹ {{withdrawAmount}} सफलतापूर्वक किया गया।",
+       "withdrawSuccessMsg":"राशि को वापस लेना ₹ {{withdrawAmount}} सफलतापूर्वक किया गया।",
 }
