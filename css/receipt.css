@@ -1,6 +1,5 @@
 .mainDiv{
     background-image: url('../images/background.png');
-    background-repeat:no-repeat;
     background-size:contain;
     }
 
@@ -30,9 +29,6 @@
     font-weight:600;
     font-size:2vmax;
     height: fit-content;
-    color: white;
-    text-align: center;
-    padding-right: 6%;
 }
 
 #profile{

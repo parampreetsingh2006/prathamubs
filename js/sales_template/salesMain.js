@@ -36,8 +36,7 @@ ubsApp.validateAmount = function() {
 	    }
 	}
 
-	var userTotal = $("#receiptTotal").val();
-    if(!userTotal) {
+    if(!$("#receiptTotal").val()) {
          ubsApp.openPopup({
                        "message" : "Please calculate total amount. Do you need any help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
                       "header" : ubsApp.getTranslation("ERROR"),
@@ -69,8 +68,8 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 	s-=0.85 * total * ubsApp.getMultiplier() /(1000);									//Multiplier from Inventory % to cash is 1000
 	userArray[playerChance].setInventoryScore(s);
-	let userTotal = parseFloat($("#receiptTotal").val());
-	let cashIncreased = total*ubsApp.getMultiplier();
+	let userTotal = Math.round(parseFloat($("#receiptTotal").val()) * 100) / 100;
+	let cashIncreased = Math.round(total*ubsApp.getMultiplier() * 100)/ 100;
 	if(userTotal==total){
 
 
@@ -108,7 +107,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 			message+=ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
 		}
 		else{
-		    cashIncreased = userTotal*ubsApp.getMultiplier()
+		    cashIncreased = Math.round(userTotal*ubsApp.getMultiplier() * 100)/ 100;
 			userArray[playerChance].setplayerScore(c+cashIncreased);
 			message+=ubsApp.getTranslation("salesWrongRptpt2");
 		}
@@ -153,10 +152,10 @@ if(currentScenarioCategory == "salesEasy") {
 
 }
 let reputationPointIncrease = 0;
- if(time*100.0/totalTime<=level1)reputationPointIncrease=4;
- 		else if (time*100.0/totalTime<=level2)reputationPointIncrease=3;
- 		else if (time*100.0/totalTime<=level3)reputationPointIncrease=2;
- 		else if (time*100.0/totalTime<=level4)reputationPointIncrease=1;
+ if(time<=level1)reputationPointIncrease=4;
+ 		else if (time<=level2)reputationPointIncrease=3;
+ 		else if (time<=level3)reputationPointIncrease=2;
+ 		else if (time<=level4)reputationPointIncrease=1;
 
  return reputationPointIncrease;
 }
@@ -191,10 +190,13 @@ ubsApp.selectAvailableItems = function(config){
 		config.order[arr[i]].exclude = true;
 	}
 
+    let orderNo=1;
 	for(var i=0;i<noOfItems;i++){
 		var x = config.order[i].itemId;
 		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
 		if(config.order[i].exclude==false){
+		    config.order[i].no = orderNo;
+		    orderNo++;
 			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[x];
 			if(config.order[i].discountOnItem) {
             	    if(config.order[i].discountOnItem.type == 1) {
@@ -213,7 +215,7 @@ ubsApp.selectAvailableItems = function(config){
 	        val-=config.discountOnTotal.value;
 	    }
 	}
-	config["tempTotal"] = val;
+	config["tempTotal"] = Math.round(val * 100) / 100;
 }
 
 
@@ -234,8 +236,10 @@ ubsApp.checkInventory=function(){
     else  if(invLevel > 20 ){
        percent = (Math.random()*2)*0.1+0.4;
     }
-    else  if(invLevel < 20 ){
+    else  if(invLevel > 0 ){
        percent = (Math.random()*2)*0.1+0.2;
+    } else  {
+        percent = 0;
     }
     return percent;
 }
@@ -243,3 +247,16 @@ ubsApp.checkInventory=function(){
 ubsApp.getMultiplier = function() {
     return 31;
 }
+ubsApp.salesTimeOut= function(temp){
+	let r = userArray[playerChance].getReputationPts();
+
+    let message = ubsApp.getTranslation("salesWrongAnswer");
+	userArray[playerChance].setReputationPts(r-1);
+	ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');
+    message+=ubsApp.getTranslation("salesTimeOut");
+    ubsApp.openResultPopup({
+           "message" : message,
+           "header" : ubsApp.getTranslation("salesResultHeader"),
+           "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
+           });
+	}

@@ -24,12 +24,25 @@ ubsApp.payDebt=function(){
 					if(amountEntered<=userArray[playerChance].getplayerScore()){
 						userArray[playerChance].setplayerScore(userArray[playerChance].getplayerScore()-amountEntered);
 						userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+3);
+						userArray[playerChance].setCredit(userArray[playerChance].getCredit()-amountEntered);
 						ubsApp.currentPlayerContents();
 						ubsApp.closeCurrentScenario();
 						if(userArray[playerChance].getCredit()==0){
 							userArray[playerChance].setPayOffDeadline(-1);
 						}
-						userArray[playerChance].setCredit(userArray[playerChance].getCredit()-amount);
+
+                        ubsApp.openResultPopup({
+                                    "message" : ubsApp.getTranslation("debtPaidSuccessMsg").replace("{{debtAmount}}",amountEntered),
+                                    "header" : ubsApp.getTranslation("SUCCESS"),
+                                    "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
+                                    "buttons":[
+                                        {
+                                            'id':"closePopupButton",
+                                            'name' : ubsApp.getTranslation("CLOSE"),
+                                            'action': "ubsApp.closePopup();"
+                                        }
+                                    ]
+                     });
 					}
 					else{
 						document.getElementById("result").innerHTML=ubsApp.translation["moreCash"];		
@@ -45,6 +58,18 @@ ubsApp.payDebt=function(){
 							userArray[playerChance].setPayOffDeadline(-1);
 						}
 						ubsApp.closeCurrentScenario();
+						ubsApp.openResultPopup({
+                                    "message" : ubsApp.getTranslation("debtPaidSuccessMsg").replace("{{debtAmount}}",amountEntered),
+                                    "header" : ubsApp.getTranslation("SUCCESS"),
+                                    "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
+                                    "buttons":[
+                                        {
+                                            'id':"closePopupButton",
+                                            'name' : ubsApp.getTranslation("CLOSE"),
+                                            'action': "ubsApp.closePopup();"
+                                        }
+                                    ]
+                     });
 					}
 					else{
 						document.getElementById("result").innerHTML=ubsApp.translation["bankBalance"];		
@@ -54,7 +79,7 @@ ubsApp.payDebt=function(){
 			
 		}
 		else{
-			document.getElementById("result").innerHTML=ubsApp.translation["moreMoney"];
+			document.getElementById("result").innerHTML=ubsApp.translation["enterValidAmount"];
 		}
 		
 	}

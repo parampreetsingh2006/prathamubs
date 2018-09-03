@@ -255,11 +255,10 @@ ubsApp.startTimer=function(temp){
 		}
 
 	    if(timeleft === 0 ){
-	    	
-  			ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');	
 	        clearInterval(timeVar);
+	        ubsApp.salesTimeOut(temp);
 	        choiceSelected={};
-	        ubsApp.nextMove();
+//	        ubsApp.nextMove();
 	    }
 	},1000);
 
@@ -347,6 +346,8 @@ ubsApp.openPopup = function(config) {
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
     "imageStyle":"",
+    "showBorder" : true,
+    "backgroundColor" :"white",
    }, config);
 
    ubsApp.popupConfig.showImage = showImage;
@@ -374,6 +375,9 @@ ubsApp.openResultPopup = function(config) {
     }
    ubsApp.popupConfig = $.extend({
     "showCloseButton" : true,
+    "imageStyle":"",
+    "showBorder" : true,
+    "backgroundColor" :"white",
    }, config);
    ubsApp.popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");

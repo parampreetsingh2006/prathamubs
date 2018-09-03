@@ -388,7 +388,7 @@ ubsApp.leaderBoardTemplate=
 '       </div>'+
 '    </div>'+
 '   <div class="col-md-3 col-sm-3 col-xs-3" style="    margin-top: 5%;">'+
-'       <div class="tools" style="color:white">'+
+'       <div class="tools" style="color:white;    text-align: center;padding-right: 6%;">'+
 '           {{Tools}}'+
 '       </div>'+
 '           '+
@@ -428,7 +428,7 @@ ubsApp.leaderBoardTemplate=
 '                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\');}">'+
 '           {{SUBMIT}}'+
 ' </div>' +
-'           <div class="helpBtn" style="    margin-top: 3%;padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
+'           <div class="helpBtn" style=" margin-top: 3%;padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
 '              </div>'+
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+
@@ -586,7 +586,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'</div>';
 
-ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;">'+
+ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '    <div class="rowPurchase" align="left">'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
@@ -640,7 +640,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;"
 '                    </div>'+
 '                    <div id="value" class="col-md-4" style="padding-left: 0%;margin:auto;">{{inventoryValue}}</div>'+
 '                </div>'+
-'                <div class="row">'+
+'                <div class="row" style="height:7vmax;">'+
 '                    <div class="confirmButton" onclick="ubsApp.fillUp()">{{confirmTitle}}</div>'+
 '                </div>'+
 '            </div>'+
@@ -661,7 +661,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;"
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-8">{{newInventoryLevelTitle}}:</div>'+
 '                    <div class="col-md-4" style="text-align: right;">'+
-'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">'+
+'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">%'+
 '                    </div>'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
@@ -729,7 +729,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '               {{#if quizRequired}}'+
 '                   <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
 '                {{else}}'+
-'                   <div style="width:33.33%; margin:0 auto;">'+
+'                   <div style="width:33.33%; margin:auto; text-align: center;">'+
 '               {{/if}}'+
 '               {{#if isLuckCategory}}'+
 '                  <button class="luckPayButton" onclick="ubsApp.payOrGain(\'{{scenarioName}}\')">'+
@@ -810,15 +810,16 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                               </select>'+
 '                           </span>'+
 '                      {{else}}{{/if}}'+
-'                      </div>'+
-'                      <div class="payOffButtonContainer" >'+
+'                      </div> <div class="payOffButtonContainer">'+
+'                      <div style="width:24%;" >'+
 '                           <button style="color:green;" class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
-'                      <div style="margin-left: 1%;" class="payOffButtonContainer">'+
+'                      <div style="width:24%;margin-left: 2%;" >'+
 '                           <button style="color:red;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
-'                      </div>'+
-'                </div>'+
+'                      </div>' +
+'</div>'+
 '       <div id="result"></div>'+
+'                </div>'+
 '</div>';
 
 
@@ -1112,8 +1113,8 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
 
 
 
-ubsApp.popUpTemplate = '<div style="{{style}}" >'+
-                       '    <div style="background-color: white;position: relative; min-height:35vh;max-height: 60vh;overflow: auto;   ">'+
+ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image: url(images/redbgcommon.png);{{/if}}" >'+
+                       '    <div style="background-color: {{backgroundColor}};position: relative; min-height:35vh;max-height: 60vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
                        ''+
@@ -1129,7 +1130,7 @@ ubsApp.popUpTemplate = '<div style="{{style}}" >'+
                        '            {{/if}}'+
                        '        </div>'+
                        '        <div style="text-align: center;margin-top: 10px;">'+
-                       '            <div style="width: fit-content;margin: auto;">'+
+                       '            <div style="width: fit-content;margin: auto;margin-top: 2%;">'+
                        '                {{#each buttons}}'+
                        '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: red; font-weight:700" onclick="{{action}}" >{{name}}'+
                        '                </div>'+

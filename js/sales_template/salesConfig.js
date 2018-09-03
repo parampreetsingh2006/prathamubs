@@ -917,7 +917,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer1",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -971,7 +971,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -1025,7 +1025,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer3",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -1088,7 +1088,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer4",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -1151,7 +1151,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer5",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2402,7 +2402,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer6",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2465,7 +2465,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer7",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2537,7 +2537,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer8",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2600,7 +2600,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer9",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2672,7 +2672,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer10",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2726,7 +2726,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer1",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2780,7 +2780,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2843,7 +2843,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer3",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2897,7 +2897,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer4",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -2960,7 +2960,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer5",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -3023,7 +3023,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer6",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -3077,7 +3077,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer7",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -3131,7 +3131,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer8",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -3185,7 +3185,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer9",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -3248,7 +3248,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Nil",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer10",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -4158,7 +4158,7 @@ ubsApp.salesConfig={
                    					{
                    						"no": 2,
                    						"itemId": 28,
-                   						"item": "NuttyCocoa",
+                   						"item": "Nutty Cocoa",
                    						"amount": " 1 Jar",
                    						"quantity": 1,
                    						"rate": " 320/Jar",
@@ -5163,7 +5163,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "",
+                   				"discount": "{{sales80DiscountMsg}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer10",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5213,7 +5213,11 @@ ubsApp.salesConfig={
                    						"amount": " 4",
                    						"quantity": 4,
                    						"rate": " 27/soap",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 13.5
+                                        }
                    					}
                    				]
                    			}
@@ -5287,13 +5291,13 @@ ubsApp.salesConfig={
                    			{
                    				"templateType": "sales",
                    				"Order": "{{Order}}",
-                   				"tempTotal": 408.75,
+                   				"tempTotal": 546,
                    				"Customer": "{{Customer}}",
                    				"Rate": "{{Rate}}",
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "",
+                   				"discount": "10% discount on oil, 15% discount on sugar and13% discount on Rice",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5325,7 +5329,11 @@ ubsApp.salesConfig={
                    						"amount": " 250 ml",
                    						"quantity": 0.25,
                    						"rate": " 125/litre",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 10
+                                        }
                    					},
                    					{
                    						"no": 3,
@@ -5334,7 +5342,11 @@ ubsApp.salesConfig={
                    						"amount": " 500 gm",
                    						"quantity": 0.5,
                    						"rate": " 50/kg",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 15
+                                        }
                    					},
                    					{
                    						"no": 4,
@@ -5343,7 +5355,11 @@ ubsApp.salesConfig={
                    						"amount": " 3 kg",
                    						"quantity": 3,
                    						"rate": " 110/kg",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 13
+                                        }
                    					}
                    				]
                    			}
@@ -5526,7 +5542,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "",
+                   				"discount": "7.5% discount on total",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer5",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5541,6 +5557,10 @@ ubsApp.salesConfig={
                    					"hideScenarios": true,
                    					"nextPage": ""
                    				},
+                   				"discountOnTotal" : {
+                                    "type" : 1,
+                                    "value" : 7.5
+                                },
                    				"order": [
                    					{
                    						"no": 1,
@@ -5598,7 +5618,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Combo: Bread 1 + Butter 100 Gm + Jam 200 gm = 20% off",
+                   				"discount": "Get 100gm butter free with 100gm and get 1 loaf of bread free with 4 loaves",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer6",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5621,7 +5641,11 @@ ubsApp.salesConfig={
                    						"amount": " 5 Packets",
                    						"quantity": 5,
                    						"rate": " 15/packet",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 15
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -5630,7 +5654,11 @@ ubsApp.salesConfig={
                    						"amount": " 200 gm",
                    						"quantity": 2,
                    						"rate": " 46/100gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 46
+                                        }
                    					},
                    					{
                    						"no": 3,
@@ -5688,7 +5716,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Combo: Almonds 100gm + Organic Cashews 100gm = 10% off",
+                   				"discount": "Get 100gm of Almonds free with 200gm",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer7",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5711,7 +5739,11 @@ ubsApp.salesConfig={
                    						"amount": "  400gm",
                    						"quantity": 4,
                    						"rate": " 100/100gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 200
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -5948,7 +5980,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Combo: Bread 1 + Butter 100 Gm + Jam 200 gm = 20% off",
+                   				"discount": "Get 15% off on bread's if you buy more than 2 loaves of bread",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer1",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5971,7 +6003,11 @@ ubsApp.salesConfig={
                    						"amount": " 5 Packets",
                    						"quantity": 5,
                    						"rate": " 15/packet",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 15
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -6029,7 +6065,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Combo: Almonds 100gm + Organic Cashews 100gm = 10% off",
+                   				"discount": "Get 5% off on Almonds and 10% off on Cashew",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6052,7 +6088,11 @@ ubsApp.salesConfig={
                    						"amount": " 400gm",
                    						"quantity": 4,
                    						"rate": " 100/100gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 5
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -6061,7 +6101,11 @@ ubsApp.salesConfig={
                    						"amount": " 200gm",
                    						"quantity": 2,
                    						"rate": " 150/100gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 10
+                                        }
                    					},
                    					{
                    						"no": 3,
@@ -6092,7 +6136,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Dozen eggs free with 200 gm Noodles",
+                   				"discount": "Cashews at 5% off. Corriander - Get 500gm free on purchase of 500gm",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer3",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6133,7 +6177,11 @@ ubsApp.salesConfig={
                    						"amount": " 1 Kg",
                    						"quantity": 1,
                    						"rate": " 100/kg",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 50
+                                        }
                    					},
                    					{
                    						"no": 4,
@@ -6142,7 +6190,11 @@ ubsApp.salesConfig={
                    						"amount": " 250 gm",
                    						"quantity": 2.5,
                    						"rate": " 150/100gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 5
+                                        }
                    					}
                    				]
                    			}
@@ -6423,7 +6475,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "20% off on eggs + milk combo",
+                   				"discount": "Get half dozen egg free with every dozen",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer8",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6446,7 +6498,11 @@ ubsApp.salesConfig={
                    						"amount": " 2 dozens",
                    						"quantity": 24,
                    						"rate": " 5.5/egg",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 50
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -6486,7 +6542,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "1 Chocolate free with every 200 gm of Jam",
+                   				"discount": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer9",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6510,6 +6566,10 @@ ubsApp.salesConfig={
                    						"quantity": 5,
                    						"rate": " 40/chocolate",
                    						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 2,
+                                            "value" : 80
+                                        }
                    					},
                    					{
                    						"no": 2,
@@ -6518,7 +6578,11 @@ ubsApp.salesConfig={
                    						"amount": " 600 gm",
                    						"quantity": 3,
                    						"rate": " 60/200gm",
-                   						"exclude": false
+                   						"exclude": false,
+                   						"discountOnItem" : {
+                                            "type" : 1,
+                                            "value" : 20
+                                        }
                    					},
                    					{
                    						"no": 3,
