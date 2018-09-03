@@ -17,36 +17,43 @@
 
 #decisionEmoji{
 	position: absolute;
-	height: 8%;
-	width: 6%;
+	height: 13%;
+	width: 7%;
 	background: url('../images/decision.png') no-repeat;
   	background-size:contain;
 }
 
 #decisionHeading{
 	position: absolute;
-	margin: 0.5% 0 0 5.6%;
+	margin: 0.5% 0 0 7%;
     padding: 0.2% 1%;
-	font-size: 1.9vw;
+	font-size: 2.5vmax;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
-	font-weight: bold;
-	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+	font-weight: 600;
+	font-family: 'Open Sans', "Helvetica Rounded", Arial, sans-serif;
 	background: url('../images/decisionstrip.png');
 	background-size: 100% 100%;
 }
 
-#question_answer_decision{
+#question_answer_decision_border{
 	height: auto;
 	overflow: hidden;
 	width: 70%;
-	background-color: #ffffff;
 	padding: 1.5vw;
 	margin: 7% 15%;
 	margin-bottom: 3%; /*7% 15% 3% 13%;*/
-	border: 20px solid;
-	border-image: url('../images/redBorderAlt.png') 30 round;
+	background-image: url('../images/redbgcommon.png');
+	background-size: 100% 100%;
+	
+}
+
+#question_answer_decision{
+	background-color: white;
+	margin: 0% 2%;
+	padding: 2%;
+
 }
 
 #quizQuestion{

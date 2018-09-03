@@ -1015,6 +1015,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       <span id="playerName">PLAYER: {{currentPlayerName}}</span>'+
 '   </div>'+
 ''+
+'<div id="question_answer_decision_border">'+
 '   <div id="question_answer_decision">'+
 '       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '       <div id="Decision Description">'+
@@ -1023,7 +1024,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{#if inline}}'+
 '       <div id="yes_no">'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}},\'{{startTime}}\'),\'{{questionId}}\'">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}} \'{{startTime}}\',\'{{questionId}}\')">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       </div>'+
 '       {{else}}'+
@@ -1032,6 +1033,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{/each}}'+
 '       {{/if}}'+
 '   </div>'+
+'</div>'+
 '       '+
 /*'       <img src="images/logo.png" class="logoImage">'+*/
 '       <div class="row" id="leftInfo">'+
