@@ -407,7 +407,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 100ml",
-                   						"quantity": 0.001,
+                   						"quantity": 1,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					}
@@ -461,7 +461,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 10m",
-                   						"quantity": 1,
+                   						"quantity": 10,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -578,7 +578,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 100ml",
-                   						"quantity": 0.001,
+                   						"quantity": 1,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					},
@@ -1370,7 +1370,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 100 ml",
-                   						"quantity": 0.001,
+                   						"quantity": 1,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					},
@@ -1559,7 +1559,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 10m",
-                   						"quantity": 1,
+                   						"quantity": 10,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					}
@@ -1730,7 +1730,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 100ml",
-                   						"quantity": 0.001,
+                   						"quantity": 1,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					},
@@ -1739,7 +1739,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 10m",
-                   						"quantity": 1,
+                   						"quantity": 10,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					}
@@ -1901,7 +1901,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 20m",
-                   						"quantity": 2,
+                   						"quantity": 20,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -2036,7 +2036,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 100ml",
-                   						"quantity": 0.001,
+                   						"quantity": 1,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					}
@@ -2090,7 +2090,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 200ml",
-                   						"quantity": 0.002,
+                   						"quantity": 2,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					}
@@ -2198,7 +2198,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 500 ml",
-                   						"quantity": 0.005,
+                   						"quantity": 5,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					}
@@ -3413,7 +3413,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 200 ml",
-                   						"quantity": 0.002,
+                   						"quantity": 2,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					}
@@ -3665,7 +3665,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 30 m",
-                   						"quantity": 3,
+                   						"quantity": 30,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -3746,7 +3746,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 5m",
-                   						"quantity": 0.5,
+                   						"quantity": 5,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					}
@@ -3899,7 +3899,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 100m",
-                   						"quantity": 10,
+                   						"quantity": 100,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -4466,7 +4466,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 350 ml",
-                   						"quantity": 0.0034999999999999996,
+                   						"quantity": 3.5,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					},
@@ -4529,7 +4529,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 35 m",
-                   						"quantity": 3.5,
+                   						"quantity": 35,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -4844,7 +4844,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 15m",
-                   						"quantity": 1.5,
+                   						"quantity": 15,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -5130,7 +5130,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " 50 m",
-                   						"quantity": 5,
+                   						"quantity": 50,
                    						"rate": " 35/10 m",
                    						"exclude": false
                    					},
@@ -5482,7 +5482,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " 250 ml",
-                   						"quantity": 0.0025,
+                   						"quantity": 2.5,
                    						"rate": " 45/100ml",
                    						"exclude": false
                    					},

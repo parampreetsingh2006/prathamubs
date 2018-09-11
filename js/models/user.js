@@ -66,7 +66,7 @@ class User{
         this.difficultyLevel=difficultyLevel;
     }
     setBankBalance(bankBalance){
-        this.bankBalance=bankBalance;
+        this.bankBalance=Math.round(bankBalance);
     }
     getDifficultyLevel()
     {
@@ -82,11 +82,11 @@ class User{
     }
 
     setCredit(credit){
-        this.credit=credit;
+        this.credit=Math.round(credit);
     }
     
     setCreditLimit(creditLimit){
-        this.creditLimit=creditLimit;
+        this.creditLimit=Math.round(creditLimit);
     }
 
     getCredit(){
@@ -97,7 +97,7 @@ class User{
     }
     setInventoryScore(inventoryScore)
     {
-        this.inventoryScore=parseFloat(inventoryScore).toFixed(2);
+        this.inventoryScore=Math.round(inventoryScore);
     }
 
     getInventoryScore()
@@ -127,7 +127,7 @@ class User{
     }
 
     setSumAssured(sum){
-      this.sumAssured = sum;
+      this.sumAssured = Math.round(sum);
     }
 
     getSumAssured(){
