@@ -1,9 +1,8 @@
 #quiz{
 	border: 2px solid black;
 	background-image: url('../images/background.png');
-	height: auto;
-	width: 80%;	
-	margin: 3% 6%;
+	height: 100%;
+	width: 100%;	
 	padding: 1%;
 	overflow: hidden;
 }

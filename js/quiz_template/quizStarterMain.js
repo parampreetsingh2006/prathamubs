@@ -81,7 +81,7 @@ ubsApp.renderFirstQuizPage = function(page){
 
     $('#templateContent').css("height","100vh");
     $('#templateContent').css("width","100vw");
-
+    ubsApp.startRecordingTimer(ubsApp.pages[page].templates[0]);
     ubsApp.renderPageByName(page);
 	$("#correctAnswers").text("0");
 	$("#quizQuestionNumber").text("1");

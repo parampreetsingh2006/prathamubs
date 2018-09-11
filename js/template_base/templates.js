@@ -454,7 +454,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
@@ -465,8 +465,8 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       </div>'+
 '   </div>'+
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
-'   <button id="quizDone" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">Done</button>'+
-'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">Cancel</button>'+
+'   <button id="quizDone" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">DONE</button>'+
+'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">CANCEL</button>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>'+
 '</div>';
@@ -586,7 +586,7 @@ ubsApp.calculatorTemplate = '<script type="text/javascript" src="js/calculator.j
 //
 //'</div>';
 
-ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden;    padding-left: 0px;">'+
+ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '    <div class="rowPurchase" align="left">'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
@@ -640,7 +640,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden; 
 '                    </div>'+
 '                    <div id="value" class="col-md-4" style="padding-left: 0%;margin:auto;">{{inventoryValue}}</div>'+
 '                </div>'+
-'                <div class="row">'+
+'                <div class="row" style="height:7vmax;">'+
 '                    <div class="confirmButton" onclick="ubsApp.fillUp()">{{confirmTitle}}</div>'+
 '                </div>'+
 '            </div>'+
@@ -661,7 +661,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid" style="overflow:hidden; 
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-8">{{newInventoryLevelTitle}}:</div>'+
 '                    <div class="col-md-4" style="text-align: right;">'+
-'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">'+
+'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">%'+
 '                    </div>'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
@@ -1016,6 +1016,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       <span id="playerName">PLAYER: {{currentPlayerName}}</span>'+
 '   </div>'+
 ''+
+'<div id="question_answer_decision_border">'+
 '   <div id="question_answer_decision">'+
 '       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '       <div id="Decision Description">'+
@@ -1024,15 +1025,16 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{#if inline}}'+
 '       <div id="yes_no">'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}})">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}} \'{{startTime}}\',\'{{questionId}}\')">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       </div>'+
 '       {{else}}'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button  class=\'inlineDecisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\')">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button  class=\'inlineDecisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\', \'{{startTime}}\',\'{{questionId}}\')">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       {{/if}}'+
 '   </div>'+
+'</div>'+
 '       '+
 /*'       <img src="images/logo.png" class="logoImage">'+*/
 '       <div class="row" id="leftInfo">'+
@@ -1049,7 +1051,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '               <span id="decisionBankBalance">{{repPoints}} &nbsp; &nbsp; &nbsp; ₹ {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
+'   <button id="quizHelp" class=\'quizButtons decisionHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 //ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:rgb(105,105,105);">'+
