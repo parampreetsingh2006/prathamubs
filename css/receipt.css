@@ -79,9 +79,9 @@
 }
 
 #order{
-	margin-top: 91%;
-	height: 100%;
+	height: 92%;
 	width: 100%;
+	position: relative;
 }
 #orderList{
     	height: 60%;
@@ -92,14 +92,17 @@
         background-color: white;
         font-weight: bold;
         padding: 8% 8%;
+        position: absolute;
+        bottom: 0px;
 }
 .items{
 font-size: 110%;
 }
 .receipt{
-margin-top: 10%;
-         	height: 100%;
+         	height: 92%;
          	width: 100%;
+            position: relative;
+
 }
 
 .receiptSale{
@@ -110,6 +113,8 @@ margin-top: 10%;
     	width: 100%;
 	background-color: white;
 	font-weight: bold;
+    position: absolute;
+    bottom: 0px;
 }
 
 #title{
