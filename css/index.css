@@ -351,19 +351,19 @@ width: 100%;
 
 .luckHelpIcon{
     display:inline-block;
-    bottom: 1%;
-    right:1%;
+    bottom: 4%;
+    right:2%;
     position:absolute;
-    width:10%;
+    width:9%;
     height:auto;
 }
 
 .luckGameIcon{
     display:inline-block;
-    bottom:1%;
-    left:1%;
+    bottom:4%;
+    left:2%;
     position:absolute;
-    width:14%;
+    width:15%;
     height:auto;
 }
 
