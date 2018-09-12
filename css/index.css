@@ -564,8 +564,5 @@ button:focus {outline:0;}
     background-image: url(../images/background.png);
     overflow:hidden;
     padding-left: 0px;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 1.3vmax;
     color:black;
 }

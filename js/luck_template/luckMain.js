@@ -19,7 +19,7 @@ ubsApp.luckPaymentQuiz=function(page){
 	let noOfQuestions = 1;
 	choiceSelected.page = page;
 	ubsApp.initializeQuizQuestions(0, config.credit);
-
+    ubsApp.nextPlayerOnQuizClose = true;
 	let quizPage = ubsApp.pages[config.resultpage].templates[0];
 	quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
 	quizPage.noOfQuestions = noOfQuestions;
@@ -91,6 +91,11 @@ ubsApp.payOrGain=function(pageName){
     let initialReputationPoints = userArray[playerChance].getReputationPts();
     let initialInventory = userArray[playerChance].getInventoryScore();
 
+    let isNegativeInvVal = false;
+    let isNegativeBankBalVal = false;
+    let isNegativeCashVal = false;
+    let isNegativeRepPtVal = false;
+
     var credit=ubsApp.pages[pageName].templates[0].credit;
     console.log(credit);
     $.each(credit, function(key, value) {
@@ -102,6 +107,9 @@ ubsApp.payOrGain=function(pageName){
                 value=-userArray[playerChance].getplayerScore();
             }
 
+            if (value < 0) {
+                isNegativeInvVal = true;
+            }
             var newInventoryLevel=parseFloat(parseFloat(userArray[playerChance].getInventoryScore())+(value/1000));
             userArray[playerChance].setInventoryScore(newInventoryLevel);
             if(userArray[playerChance].getInventoryScore()<0){
@@ -140,6 +148,9 @@ ubsApp.payOrGain=function(pageName){
                 value=-userArray[playerChance].getBankBalance();
             }
 
+             if (value < 0) {
+                isNegativeBankBalVal = true;
+            }
                 userArray[playerChance].setBankBalance(userArray[playerChance].getBankBalance()+value);
                 if(userArray[playerChance].getBankBalance()<0){
                     done=false;
@@ -168,6 +179,11 @@ ubsApp.payOrGain=function(pageName){
             if(value=="full"){
                 value=-userArray[playerChance].getplayerScore();
             }
+
+            if (value < 0) {
+                isNegativeCashVal = true;
+            }
+
             userArray[playerChance].setplayerScore(userArray[playerChance].getplayerScore()+value);
             if(userArray[playerChance].getplayerScore()<0)
             {   difference=userArray[playerChance].getplayerScore();
@@ -197,6 +213,9 @@ ubsApp.payOrGain=function(pageName){
             }
         }
         else if(key=="reputationPoints"){
+            if (value < 0) {
+                isNegativeRepPtVal = true;
+            }
             userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+value);
             if(userArray[playerChance].getReputationPts()<0)
             {
@@ -209,7 +228,7 @@ ubsApp.payOrGain=function(pageName){
     let header = "";
     let endStr = ". ";
     // Bank Balance Compare
-    if(initialBankBalance > userArray[playerChance].getBankBalance())
+    if(isNegativeBankBalVal || initialBankBalance > userArray[playerChance].getBankBalance())
     {
         header = ubsApp.getTranslation("badLuckResultHeader");
         message = ubsApp.getTranslation("badLuckResultPopUpBankBalance") + userArray[playerChance].getBankBalance() + endStr;
@@ -221,7 +240,7 @@ ubsApp.payOrGain=function(pageName){
     }
 
     // Cash Balance Compare
-    if(initialCashBalance > userArray[playerChance].getplayerScore())
+    if(isNegativeCashVal || initialCashBalance > userArray[playerChance].getplayerScore())
     {
         header = ubsApp.getTranslation("badLuckResultHeader");
         message = message + ubsApp.getTranslation("badLuckResultPopUpCash") + userArray[playerChance].getplayerScore() + endStr;
@@ -233,7 +252,7 @@ ubsApp.payOrGain=function(pageName){
     }
 
     //reputation points compare
-    if(initialReputationPoints > userArray[playerChance].getReputationPts())
+    if(isNegativeRepPtVal || initialReputationPoints > userArray[playerChance].getReputationPts())
     {
         header = ubsApp.getTranslation("badLuckResultHeader");
         message = message + ubsApp.getTranslation("badLuckResultPopUpRepPt") + userArray[playerChance].getReputationPts() + endStr;
@@ -245,7 +264,7 @@ ubsApp.payOrGain=function(pageName){
     }
 
     //inventory compare
-    if(initialInventory > userArray[playerChance].getInventoryScore())
+    if(isNegativeInvVal || initialInventory > userArray[playerChance].getInventoryScore())
     {
         header = ubsApp.getTranslation("badLuckResultHeader");
         message = message + ubsApp.getTranslation("badLuckResultPopUpInv") + userArray[playerChance].getInventoryScore() + "%" + endStr;

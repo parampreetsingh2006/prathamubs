@@ -253,15 +253,15 @@ ubsApp.translation={
 
             //Insurance
 
-        "insuranceType":"Select Insurance Type(s):",
+        "insuranceType":"SELECT INSURANCE TYPE",
         "Insurance":"Insurance",
         "insurance1":"Theft",
         "insurance2":"Accident",
         "insurance3":"Natural Calamities",
-        "premium":"Annual Premium :",
-        "sumAssured":"Sum Assured:",
+        "premium":"Annual Premium",
+        "sumAssured":"Sum Assured",
         "buy":"BUY",
-        "cancel":"Cancel",
+        "cancel":"CANCEL",
         "cashTitleName":"CASH",
         "Cash" : "Cash",
         "Credit": "Credit",

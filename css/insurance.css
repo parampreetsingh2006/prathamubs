@@ -42,8 +42,7 @@
 }
 
 #insuranceTypesTitle{
-	font-size: 1.2vw;
-	font-weight: bold;
+    font-size: 2.5vmax;
 	text-align: center;
 }
 
@@ -81,17 +80,14 @@
 .insuranceButtons{
     background-image: url(../images/buttonMedium.png);
     background-size: 100% 100%;
-    width: 30%;
     text-align: center;
-    line-height: 185%;
     font-weight: bold;
     cursor: pointer;
+    padding: 1% 2%;
 }
 
 #buy_cancel{
-    position: absolute;
-    right: 30%;
-    width: 13%;
+    text-align: center;
 }
 
 #rightInfo{

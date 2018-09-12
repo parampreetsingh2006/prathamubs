@@ -31,12 +31,12 @@ ubsApp.emptyQuizQuestions = function(){
 ubsApp.cancelQuiz=function(){
 	choiceSelected = {};
 	$("#quizCancel").attr("disabled", false);
-	$("#quizDone").attr("disabled", true);
-	$('#rollIt').attr('disabled',false);
-	$('#monopolyBase').css("z-index",0)
-	$('#templateBase').css("z-index",0)
-	$('#templateContent').css("height",0+'px')
-	document.getElementById("templateContent").innerHTML="";
+	ubsApp.closeCurrentScenario();
+	if(ubsApp.nextPlayerOnQuizClose) {
+	    ubsApp.nextPlayerOnQuizClose = false;
+	    ubsApp.nextMove();
+	}
+
 }
 
 ubsApp.generalQuiz=function(config){   //credits can be amount or points depending on type of quiz
