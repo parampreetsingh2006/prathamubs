@@ -935,7 +935,7 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '        <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '        <div id="insuranceSelection">'+
 '            <div id="typesOfInsurance">'+
-'                <fieldset id="insuranceTypesSelection">'+
+'                <fieldset id="insuranceTypesSelection" style="font-size: 1.5vmax;">'+
 '                    <label for="insurance1" class="col-md-3"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium1}}" id="insurance1" name="insuranceTypes">{{insurance1}}</label>'+
 '                    <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue1}} id="suminsurance1">'+
 '                    <label for="insurance2" class="col-md-3"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium2}}" id="insurance2" name="insuranceTypes">{{insurance2}}</label>'+
@@ -945,11 +945,11 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '                </fieldset>'+
 '            </div>'+
 '            <div id="insurancePayment" class="row">'+
-'                <label for="annualPremium" class="insuranceValue">{{premium}}</label>'+
+'                <label for="annualPremium" class="insuranceValue">{{premium}}(₹)</label>'+
 '                <input type="number" id="annualPremium" name="premium" value="0" readonly >'+
 '            </div>'+
 '            <div>'+
-'                <label for="annualPremium" class="insuranceValue">{{sumAssured}}</label>'+
+'                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(₹)</label>'+
 '                <input type="number" id="sumAssured" name="sum"  value="0" readonly >'+
 '            </div>'+
 '            <br>'+
@@ -963,7 +963,7 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '            </div>'+
 '            <br>'+
 '            <div id="buy_cancel" style="align:center;">'+
-'                <span id="decisionBuy" class="insuranceButtons" style="color:green;" onclick="ubsApp.buyInsurance(\'{{page}}\')">{{buy}}</span>'+
+'                <span id="decisionBuy" class="insuranceButtons" style="color:green; margin-right: 2%;" onclick="ubsApp.buyInsurance(\'{{page}}\')">{{buy}}</span>'+
 '                <span id="decisionCancel" class="insuranceButtons" style="color:red;" onclick="ubsApp.nextMove()">{{cancel}}</span>'+
 '            </div>'+
 '        </div>'+
@@ -1024,7 +1024,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{#if inline}}'+
 '       <div id="yes_no">'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\'{{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\'{{/if}} \'{{startTime}}\',\'{{questionId}}\')">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\', {{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\',{{/if}} \'{{startTime}}\',\'{{questionId}}\')">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       </div>'+
 '       {{else}}'+
