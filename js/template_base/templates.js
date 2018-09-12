@@ -453,19 +453,20 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" style="color:green" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
 '       <span id="answerHeader" class="popupHeaderFontSize"></span><br>'+
 '       <span id="answerMessage"></span>'+
 '       <div id="quizOk">'+
-'           <button id="wrongAnswerOk"  class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
+'           <button id="wrongAnswerOk" style="color:green" class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
 '       </div>'+
 '   </div>'+
+'<img src="{{gameLogo}}" class="decisionGameLogoImage quizGameLogoImage">' +
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
-'   <button id="quizDone" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">DONE</button>'+
-'   <button id="quizCancel" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">CANCEL</button>'+
+'   <button id="quizDone" style="color:green" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">SUBMIT</button>'+
+'   <button id="quizCancel" style="color:red" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">CANCEL</button>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>'+
 '</div>';
@@ -1035,19 +1036,19 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '   </div>'+
 '</div>'+
 '       '+
-/*'       <img src="images/logo.png" class="logoImage">'+*/
+'<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
 '       <div class="row" id="leftInfo">'+
 '           <div class="col-md-10">'+
-'               <span id="decisionBankBalance">{{bankBalanceTitle}} &nbsp; &nbsp; ₹ {{balance}}</span> <br>'+
-'               <span id="decisionBankBalance">{{cashTitle}} &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; ₹ {{cash}}</span>      <br>'+
-'               <span id="decisionBankBalance">{{debtTitle}} &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; ₹ {{debt}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
 '       <div class="row" id="rightInfo">'+
 '           <div class="col-md-12" >'+
-'               <span id="decisionBankBalance">{{inventoryTitle}} &nbsp; &nbsp;  {{inventory}}%</span> <br>'+
-'               <span id="decisionBankBalance">{{invVal}} &nbsp; &nbsp; &nbsp; ₹ {{inventoryValue}}</span>      <br>'+
-'               <span id="decisionBankBalance">{{repPoints}} &nbsp; &nbsp; &nbsp; ₹ {{reputationPts}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} ₹{{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
 '   <button id="quizHelp" class=\'quizButtons decisionHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+

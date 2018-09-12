@@ -2,6 +2,7 @@ ubsApp.getQuizTemplate = function(templateConfig, tempVar){
 	if(templateConfig.options!=undefined){
 		ubsDecisionOption = templateConfig.options[0].optionName;
 	}
+	templateConfig.gameLogo = ubsApp.getTranslation("gameLogo");
 	tempVar.html+=ubsQuizTemplate(templateConfig);
 }
 

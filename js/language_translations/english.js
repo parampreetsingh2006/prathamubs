@@ -55,7 +55,7 @@ ubsApp.translation={
         "decision":"DECISION",
         "luck":"LUCK",
 
-        "bankBalanceTitle":"BANK BALANCE",
+        "bankBalanceTitle":"BANKBALANCE",
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
@@ -208,8 +208,8 @@ ubsApp.translation={
 
         "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",
         //Decision
-        "invVal":"INVENTORY VALUE",
-        "repPoints":"REPUTATION POINTS",
+        "invVal":"INVENTORY-VALUE",
+        "repPoints":"REPUTATION-POINTS",
         "Decision":"Decision",
         "questionDecisionInsurance":"An Insurance Advisor is offering you comprehensive shop insurance that covers fire, theft and  natural disaste₹<br><br>Premium: Between ₹15000 and ₹ 24,000 anuallly based on cover SumAssured: Between 3,00,000 and 5,00,000<br><br>Would you like to buy insurance?",
         "yes":"YES",
@@ -1217,9 +1217,9 @@ ubsApp.translation={
        /******************************************Quiz key End******************************************************************/
 
        "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
-       "quizCorrectAnswerHeading":"Correct Answer",
+       "quizCorrectAnswerHeading":"CORRECT ANSWER",
        "quizWrongAnswerMessage":"You do not earn any reputation points for this question. Do you need help on this topic?",
-       "quizWrongAnswerHeading":"Wrong Answer",
+       "quizWrongAnswerHeading":"WRONG ANSWER",
        "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
        "wowImage":"images/wow.png",
        "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",

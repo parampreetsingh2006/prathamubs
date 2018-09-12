@@ -7,6 +7,7 @@ object.inventory = userArray[playerChance].getInventoryScore();
 object.inventoryValue = (userArray[playerChance].getInventoryScore()*1000);
 object.reputationPts = userArray[playerChance].getReputationPts();
 object.currentPlayerName = userArray[playerChance].getplayerName();
+object.gameLogo = ubsApp.getTranslation("gameLogo");
 ubsApp.startRecordingTimer(templateConfig);
 object = $.extend(true, templateConfig, object);
 tempVar.html+=ubsDecisionTemplate(object);
