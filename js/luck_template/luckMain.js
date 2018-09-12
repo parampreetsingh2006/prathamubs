@@ -19,7 +19,7 @@ ubsApp.luckPaymentQuiz=function(page){
 	let noOfQuestions = 1;
 	choiceSelected.page = page;
 	ubsApp.initializeQuizQuestions(0, config.credit);
-
+    ubsApp.nextPlayerOnQuizClose = true;
 	let quizPage = ubsApp.pages[config.resultpage].templates[0];
 	quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
 	quizPage.noOfQuestions = noOfQuestions;

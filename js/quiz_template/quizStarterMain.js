@@ -32,6 +32,11 @@ ubsApp.cancelQuiz=function(){
 	choiceSelected = {};
 	$("#quizCancel").attr("disabled", false);
 	ubsApp.closeCurrentScenario();
+	if(ubsApp.nextPlayerOnQuizClose) {
+	    ubsApp.nextPlayerOnQuizClose = false;
+	    ubsApp.nextMove();
+	}
+
 }
 
 ubsApp.generalQuiz=function(config){   //credits can be amount or points depending on type of quiz
