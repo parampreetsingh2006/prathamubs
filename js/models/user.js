@@ -97,6 +97,9 @@ class User{
     }
     setInventoryScore(inventoryScore)
     {
+        if(inventoryScore < 0) {
+            inventoryScore = 0;
+        }
         this.inventoryScore=Math.round(inventoryScore);
     }
 

@@ -1113,7 +1113,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
 
 
 ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image: url(images/redbgcommon.png);{{/if}}" >'+
-                       '    <div style="background-color: {{backgroundColor}};position: relative; min-height:35vh;max-height: 60vh;overflow: auto;   ">'+
+                       '    <div style="background-color: {{backgroundColor}};position: relative; min-height:25vh;max-height: 60vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
                        ''+
