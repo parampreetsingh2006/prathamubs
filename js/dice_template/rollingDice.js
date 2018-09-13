@@ -1,5 +1,6 @@
 var rollingDiceConfig = {};
 rollingDiceConfig.currentRandomDiceOne=0;
+
 function pointRoll() {
   var elDiceOne       = document.getElementById('dice1');
   var diceValueOne   = Math.floor((Math.random() * 6) + 1);

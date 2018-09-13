@@ -431,6 +431,9 @@ ubsApp.raiseAudioEvent =function(divElement, eventName, audioSrc){
 	      	case 'spaceLanding':
 	      		audioSrc = 'audio/03_SpaceLanding.mp3';
 	      		break;
+	      	case 'nextPlayer':
+	      		audioSrc = 'audio/09_NextPlayerTurn.mp3';
+	      		break;
       	}
       }
 
