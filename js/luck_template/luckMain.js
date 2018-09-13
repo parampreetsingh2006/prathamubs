@@ -20,12 +20,25 @@ ubsApp.luckPaymentQuiz=function(page){
 	choiceSelected.page = page;
 	ubsApp.initializeQuizQuestions(0, config.credit);
     ubsApp.nextPlayerOnQuizClose = true;
-	let quizPage = ubsApp.pages[config.resultpage].templates[0];
+	let quizPage = ubsApp.findQuizPage(config.category);
 	quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
 	quizPage.noOfQuestions = noOfQuestions;
 	ubsApp.pages[quizPage.onClickPage.nextPage].templates[0].noOfQuestions = noOfQuestions;
 
-    ubsApp.renderFirstQuizPage(config.resultpage);
+    ubsApp.renderFirstQuizPage(quizPage);
+}
+
+ubsApp.findQuizPage = function(category){
+    var filteredObjs = [];
+    var quizConfig = ubsApp.quizConfig;
+    for(var quizConfigTemplate in quizConfig){
+        if(quizConfig[quizConfigTemplate].templates[0].category == category){
+            filteredObjs.push(quizConfig[quizConfigTemplate]);
+        }
+    }
+
+    var quizRandomNumber = Math.floor(Math.random()*filteredObjs.length);
+    return filteredObjs[quizRandomNumber].templates[0];
 }
 
 ubsApp.payFromBank=function(){

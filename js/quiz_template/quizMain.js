@@ -139,12 +139,10 @@ ubsApp.luckQuizResult=function(){
 		if(choiceSelected.answers[i]==false){
 		   inventory += choiceSelected.credit[i].inventory;
 		   bankBalance += choiceSelected.credit[i].bankBalance;
-		   reputationPoints += choiceSelected.credit[i].reputationPoints;
+		   //reputationPoints += choiceSelected.credit[i].reputationPoints;
 		   cash += choiceSelected.credit[i].cash;
 		}
 	}
-	let playerRepPoints = userArray[playerChance].getReputationPts();
-	userArray[playerChance].setReputationPts(playerRepPoints+reputationPoints);
 
 	let playerCash = userArray[playerChance].getplayerScore();
 	userArray[playerChance].setplayerScore(playerCash+cash);

@@ -270,6 +270,7 @@ ubsApp.luckConfig={
 		{
 			"templateId":9,
 			"templateType":"luck",
+			"category":"GST",
 			"scenario":"{{luckQuestion7}}",//question Key
 			// "value":-1800,
 			// "type":"inventory",
