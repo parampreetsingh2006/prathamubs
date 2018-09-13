@@ -1234,5 +1234,6 @@ ubsApp.translation={
        "enterValidAmount" : "Enter valid amount",
        "transferSuccessMsg":"Transfer of amount ₹ {{transferAmount}} done successfully.",
        "withdrawSuccessMsg": "Withdraw of amount ₹ {{withdrawAmount}} done successfully.",
+       "quizResultHeader":"QUIZ RESULT",
 
     }   

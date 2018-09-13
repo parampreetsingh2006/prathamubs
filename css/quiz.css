@@ -22,8 +22,8 @@
 
 #score{
 	position: absolute;
-	margin-top: 2%;
-	right: 20%;
+	margin-top: 3%;
+	right: 13%;
 	font-weight: bold;
 	color: black;
 	background:url('../images/buttonsmedium.png');
@@ -56,16 +56,22 @@
  	text-align: center;
 }
 
-#question_answer{
+#question_answer_background{
 	height: auto;
 	overflow: hidden;
 	width: 80%;
 	background-color: #ffffff;
 	padding: 1vw;
 	margin: 6% 10% 3% 10%;
-	border: 2vw solid;
-	border-image: url('../images/redBorderAlt.png') 30 round;
 	font-weight: bold;
+	background-image: url('../images/redbgcommon.png');
+	background-size: 100% 100%;
+}
+
+#question_answer{
+	background-color: white;
+	margin: 2% 2% 2% 2%;
+	padding: 2%;
 }
 
 #answerDiv{
@@ -158,6 +164,10 @@ button[class="quizButtons"]:focus {outline:0;}
 
 input[class="quizButtons"]:focus {outline:0;}
 
-#quizGameLogoImage{
-	top: 78% !important;
+.quizGameLogoImage{
+	position: absolute;
+    top: 80%;
+    left: 1%;
+    width: 15%;
+    height: 20%;
 }

@@ -356,10 +356,15 @@ ubsApp.openPopup = function(config) {
 
 ubsApp.closePopup = function(config) {
 
-   if(ubsApp.isResultPopUpOpen) {
+   if(ubsApp.isResultPopUpOpen && config) {
+        $('#popupBackground').hide();
+        ubsApp.closeHelp();
+   } 
+   else if (ubsApp.isResultPopUpOpen){
         ubsApp.closeResultPopup();
         ubsApp.isResultPopUpOpen = false;
-   } else {
+   }
+   else {
         $('#popupBackground').hide();
         ubsApp.closeHelp();
    }

@@ -440,6 +440,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       <span id="score"> SCORE <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
 '       <span id="playerName"> PLAYER: {{currentPlayerName}}</span>'+
 '   </div>'+
+'   <div id="question_answer_background">'+
 '   <div id="question_answer">'+
 '       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '       <span id="quizQuestionNumber"></span><span id="quizQuestion">{{question}}</span>'+
@@ -453,7 +454,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" style="color:green" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" style="color:green" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\', \'{{helpPageName}}\')" value="OK"></div>'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
@@ -463,7 +464,8 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <button id="wrongAnswerOk" style="color:green" class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
 '       </div>'+
 '   </div>'+
-'<img src="{{gameLogo}}" class="decisionGameLogoImage quizGameLogoImage">' +
+'</div>'+
+'<img src="{{gameLogo}}" class="quizGameLogoImage">' +
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
 '   <button id="quizDone" style="color:green" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">SUBMIT</button>'+
 '   <button id="quizCancel" style="color:red" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">CANCEL</button>'+
