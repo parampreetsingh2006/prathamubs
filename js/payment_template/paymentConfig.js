@@ -144,7 +144,7 @@ ubsApp.paymentConfig={
 			"credit":{
 				"inventory":0,
 				"bankBalance":-1500,
-				"reputationPoints":-2,
+				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ4",
@@ -240,7 +240,7 @@ ubsApp.paymentConfig={
 			"credit":{
 				"inventory":0,
 				"bankBalance":-1000,
-				"reputationPoints":2,
+				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ4",
@@ -272,7 +272,7 @@ ubsApp.paymentConfig={
 			"credit":{
 				"inventory":0,
 				"bankBalance":-500,
-				"reputationPoints":3,
+				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ4",
@@ -336,7 +336,7 @@ ubsApp.paymentConfig={
 			"credit":{
 				"inventory":0,
 				"bankBalance":-800,
-				"reputationPoints":-1,
+				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ4",
@@ -368,7 +368,7 @@ ubsApp.paymentConfig={
 			"credit":{
 				"inventory":0,
 				"bankBalance":-1000,
-				"reputationPoints":-2,
+				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ4",
@@ -497,7 +497,7 @@ ubsApp.paymentConfig={
 			"credit":{
 				"inventory":0,
 				"bankBalance":-2200,
-				"reputationPoints":-1,
+				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ4",
@@ -529,7 +529,7 @@ ubsApp.paymentConfig={
 			"credit":{
 				"inventory":0,
 				"bankBalance":-10000,
-				"reputationPoints":2,
+				"reputationPoints":0,
 				"cash":0,
 			},
 			"resultpage":"quizQ4",
