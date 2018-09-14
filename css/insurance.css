@@ -33,12 +33,10 @@
 }
 
 #insuranceSelection{
-	height: auto;
-	overflow: hidden;
-	width: 70%;
+	overflow: auto;
+	width: 101%;
 	padding: 1.4vw;
-	margin: 2% 15%;
-	margin-bottom: 3%; /*7% 15% 3% 13%;*/
+
 }
 
 #insuranceTypesTitle{
