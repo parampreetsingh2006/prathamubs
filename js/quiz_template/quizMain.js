@@ -38,33 +38,37 @@ ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
 	  }
 }
 
-ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId, reputationPoints, startTime){
+ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId, reputationPoints, startTime, helpPageName){
   var totalMarks = 1; // each question carries 1 mark
   var date=new Date();
+  var resultConfig={};
   //var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
   if(ubsApp.atleastOneSelected(optionName)){
   	  let quizCorrectAnswer = $("#correctAnswers").html();
 	  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
 	  let questionNo = $("#quizQuestionNumber").html();
+	  var audioElement = document.getElementById('answerDiv');
 
 	  if(checkedValue == answer){
 	  		let scoredMarks = 1;
 	  		quizCorrectAnswer = parseInt(quizCorrectAnswer) + 1;
 		  	ubsApp.updateAnswers(questionNo - 1);
-		  	$('#question_answer').hide();
-		  	$('#answerDiv').css("display","inline-block");
-		  	$('#answerHeader').css("color","green");
-		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizCorrectAnswerHeading"]);
-		  	$('#answerDiv #answerMessage').text(ubsApp.formatMessage(ubsApp.translation["quizCorrectAnswerMessage"], [reputationPoints]));
-		  	$('#answerDiv').show();
-		    var audioElement = document.getElementById('answerDiv');
-		    /*ubsApp.openPopup({ 
-		    		"header":ubsApp.translation["quizCorrectAnswerHeading"],
-		    		"headerStyle":"text-align: center;  color: red; font-size: 1.1vw",
-		    		"message" : ubsApp.formatMessage(ubsApp.translation['quizCorrectAnswerMessage'], [reputationPoints]),
-         		                
-         	});
-		    ubsApp.displayNextQuizQuestion(page, true);*/
+   		    if(ubsApp.pages[page].templates[0].quizResult){
+	  				resultConfig.isQuizLastQuestion = true;
+	  		}
+		    ubsApp.openPopup({
+        		"message" : ubsApp.formatMessage(ubsApp.translation["quizCorrectAnswerMessage"], [reputationPoints]),
+        		"header"  : ubsApp.translation["quizCorrectAnswerHeading"],
+        		"headerStyle" : "text-align: center;  color: green; font-weight: 700; ",
+        		"buttons":[
+                		{
+                			'id':"quizRightAnswer",
+                            'name' : ubsApp.getTranslation("OK"),
+                            'action': "ubsApp.closePopup("+true+");ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
+                        }
+                 ]
+
+        	});  
 		    $("#correctAnswers").text(quizCorrectAnswer);
   			ubsApp.raiseAudioEvent(audioElement, 'rightAnswer');
 			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, scoredMarks,totalMarks, 1, startTime, "quizScore");
@@ -73,13 +77,24 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	  }
 	  else{
 		  	scoredMarks = 0;
-		  	$('#question_answer').hide();
-		  	//ubsApp.updateScoreInDB(questionId, scoredMarks,totalMarks, 1, startTime, null)
-		  	$('#answerDiv').css("display","inline-block");
-		  	$('#answerHeader').css("color","red");
-		  	$('#answerDiv #answerHeader').text(ubsApp.translation["quizWrongAnswerHeading"]);
-		  	$('#answerDiv #answerMessage').text(ubsApp.formatMessage(ubsApp.translation['quizWrongAnswerMessage'], [reputationPoints]));
-		  	$('#answerDiv').show();
+		  	ubsApp.openPopup({
+        		"message" : ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongAnswerMessage'], [reputationPoints])),
+        		"header"  : ubsApp.translation["quizWrongAnswerHeading"],
+        		"headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
+        		"buttons":[
+                		{
+                			'id':"quizWrongAnswer",
+                            'name' : ubsApp.getTranslation("yes"),
+                            'action': "ubsApp.startHelp(\'"+helpPageName+"\');ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
+                        },
+                        {
+                			'id':"quizWrongAnswer",
+                            'name' : ubsApp.getTranslation("no"),
+                            'action': "ubsApp.closePopup();ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
+                        }
+                 ]
+
+        	});  
 		  	var audioElement = document.getElementById('answerDiv');
   			ubsApp.raiseAudioEvent(audioElement, 'wrongAnswer');
   			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, scoredMarks,totalMarks, 1, startTime, "quizScore");
@@ -170,17 +185,20 @@ ubsApp.generalQuizResult=function(page){
 	userArray[playerChance].setReputationPts(playerRepPoints+reputationPoints);
 	$("#quizQuestionNumber").text("");
 	if(correctAnswers === resultPage.noOfQuestions){
-			/*ubsApp.openPopup({ 
-		    		"header":ubsApp.translation["quizCorrectAnswerHeading"],
-		    		"headerStyle":"text-align: center;  color: red; font-size: 1.1vw",
-		    		"message" : ubsApp.formatMessage(ubsApp.translation['quizAllCorrectAnswers'], [reputationPoints]),
-         		                
-   			 });*/
-   			 $("#quizResult").html(ubsApp.formatMessage(ubsApp.translation['quizAllCorrectAnswers'], [reputationPoints]));
-   			 $('#quizResult').append('<img id="quizWowImage" src="'+resultPage.congratulationsImage+'" />')
+			ubsApp.openResultPopup({
+                "message" : ubsApp.formatMessage(ubsApp.translation['quizAllCorrectAnswers'], [reputationPoints]),
+                "header" : ubsApp.getTranslation("quizResultHeader"),
+                "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
+                "imageUrl" : ubsApp.getTranslation("wowImage"),
+                });
 	}
 	else{
-			 $("#quizResult").html(ubsApp.formatMessage(ubsApp.translation['quizPartialCorrectMessage'], [reputationPoints]));
+			ubsApp.openResultPopup({
+                "message" : ubsApp.formatMessage(ubsApp.translation['quizPartialCorrectMessage'], [reputationPoints]),
+                "header" : ubsApp.getTranslation("quizResultHeader"),
+                "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
+                });
+			
 	}
 
 	

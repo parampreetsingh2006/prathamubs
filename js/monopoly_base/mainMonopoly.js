@@ -86,6 +86,7 @@ monopoly.initialiseCategory = function(){
 
 monopoly.renderPageforBoard = function(page) {
 	let html = "";
+  var changeDefaultDiceFace=false;
 	for(let i=0; i< page.length; i++) {
         let templateConfig = $.extend({},page[i]);
         if(templateConfig.weekDeadLine){
@@ -124,6 +125,7 @@ monopoly.renderPageforBoard = function(page) {
                monopoly.initialiseCategory();
                rollingDiceConfig.optionPageMap = templateConfig.optionPageMap;
                monopoly.updateRollingDiceTemplate(templateConfig);
+               changeDefaultDiceFace=true;
                html+=ubsBoardTemplate(templateConfig);
             } else if(templateType == "sideScoreBoard") {
                 var object={};
@@ -162,7 +164,9 @@ monopoly.renderPageforBoard = function(page) {
 
 	$("#monopolyBase").empty();
 	$("#monopolyBase").append(html); 
-
+  if(changeDefaultDiceFace){
+      monopoly.changeDefaultDice();
+  }
     if(flag2) {
         ubsApp.initializeLeaderBoard("Score");
         ubsApp.currentPlayerContents();
@@ -283,6 +287,10 @@ ubsApp.getTranslation = function(key) {
 monopoly.updateRollingDiceTemplate = function(template){
 	let windowHeight =  $(window).height();
     template.diceSceneWidth = windowHeight/3;
+}
+
+monopoly.changeDefaultDice = function(){
+      document.getElementById('dice1').classList.add('show-' + 5);
 }
 
 monopoly.rollDice  = function(){
@@ -729,7 +737,7 @@ ubsApp.confirmEndGame=function(){
 
 ubsApp.nextMove = function(){
          if(numplayers > 1) {
-
+            ubsApp.raiseAudioEvent(document.getElementById('playerId'),'nextPlayer');
              ubsApp.openPopup({
                                            "header" : "",
                                           "message" : "",
@@ -882,7 +890,20 @@ ubsApp.openQuizIfValid = function() {
 
     if(userArray[playerChance].canUserTakeQuiz()) {
         userArray[playerChance].incrementQuizCount();
-        ubsApp.renderPageByName('generalQuizStarter');
+        ubsApp.openPopup({
+            "message" : ubsApp.translation["quizStartHelp"],
+            "header"  : ubsApp.translation["quiz"],
+            "headerStyle" : "text-align: center;  color: green; font-weight: 700; ",
+            "buttons":[
+                    {
+                            'id':"quizStart",
+                            'name' : ubsApp.getTranslation("startQuiz"),
+                            'action': "ubsApp.closePopup();ubsApp.renderPageByName('generalQuizStarter');"
+                        }
+                 ]
+
+          });
+        
     } else {
         ubsApp.openPopup({
         "message" : ubsApp.getTranslation("quizLimitReachedForWeek"),

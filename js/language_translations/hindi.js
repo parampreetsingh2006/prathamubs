@@ -1257,4 +1257,9 @@ ubsApp.translation={
        "enterValidAmount" : "वैध राशि दर्ज करें",
        "transferSuccessMsg":"राशि का हस्तांतरण ₹ {{transferAmount}} सफलतापूर्वक किया गया।",
        "withdrawSuccessMsg":"राशि को वापस लेना ₹ {{withdrawAmount}} सफलतापूर्वक किया गया।",
+        "quizResultHeader":"QUIZ RESULT",
+       "quizStartHelp":"You will be shown 3 questions. Each correct answer will earn reputation points for you.",
+       "quiz":"QUIZ",
+       "startQuiz":"Start Quiz",
+
 }
