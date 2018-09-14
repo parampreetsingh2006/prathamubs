@@ -730,7 +730,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '       </div>'+
 '       <div id="result"></div>'+
 '       <div class="luckYouCanPayContainer">'+
-'           <div style="display:inline-block; width:100%;">'+
+'           <div style="display:inline-block; width:100%;display: flex;flex-direction: row;justify-content: space-around;">'+
 
 '               {{#if quizRequired}}'+
 '                   <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
