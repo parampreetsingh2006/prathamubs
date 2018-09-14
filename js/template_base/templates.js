@@ -704,7 +704,11 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 
 ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relative;overflow:hidden">'+
 '       <img src="images/background.png" style="width:100%;height:100%;">'+
-'       <div class="luckScreenTitle" style="color:white">'+
+'   {{#if isLuckCategory}}'+
+'           <div class="luckScreenTitle" style="color:white">'+
+'       {{else}}'+
+'            <div class="paymentScreenTitle" style="color:white">'+
+'   {{/if}}'+
 '            {{scenarioTitle}}'+
 '       </div>'+
 '           {{#if icon}}<div class="luckIconContainer">'+
