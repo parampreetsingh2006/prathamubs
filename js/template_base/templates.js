@@ -704,7 +704,11 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 
 ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relative;overflow:hidden">'+
 '       <img src="images/background.png" style="width:100%;height:100%;">'+
-'       <div class="luckScreenTitle" style="color:white">'+
+'   {{#if isLuckCategory}}'+
+'           <div class="luckScreenTitle" style="color:white">'+
+'       {{else}}'+
+'            <div class="paymentScreenTitle" style="color:white">'+
+'   {{/if}}'+
 '            {{scenarioTitle}}'+
 '       </div>'+
 '           {{#if icon}}<div class="luckIconContainer">'+
@@ -726,7 +730,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '       </div>'+
 '       <div id="result"></div>'+
 '       <div class="luckYouCanPayContainer">'+
-'           <div style="display:inline-block; width:100%;">'+
+'           <div style="display:inline-block; width:100%;display: flex;flex-direction: row;justify-content: space-around;">'+
 
 '               {{#if quizRequired}}'+
 '                   <div style="display:inline-block; width:33.33%; text-align:left;;float:left">'+
@@ -927,13 +931,99 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 //'       </div>'+
 //'</div>';
 
+// ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
+// '    <div id="decisionTitle">'+
+// '        <span id="decisionEmoji"></span>'+
+// '        <span id="decisionHeading">{{Decision}}</span>'+
+// '        <span id="playerName">PLAYER: {{currentPlayerName}}</span>'+
+// '    </div>'+
+// '    <div id="question_answer_decision">'+
+// '        <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
+// '        <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+// '        <div id="insuranceSelection">'+
+// '            <div id="typesOfInsurance">'+
+// '                <fieldset id="insuranceTypesSelection" style="font-size: 1.5vmax;">'+
+// '                    <label for="insurance1" class="col-md-3"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium1}}" id="insurance1" name="insuranceTypes">{{insurance1}}</label>'+
+// '                    <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue1}} id="suminsurance1">'+
+// '                    <label for="insurance2" class="col-md-3"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium2}}" id="insurance2" name="insuranceTypes">{{insurance2}}</label>'+
+// '                    <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue2}} id="suminsurance2">'+
+// '                    <label for="insurance3" class="col-md-4"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium3}}" id="insurance3" name="insuranceTypes">{{insurance3}}</label>'+
+// '                    <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue3}} id="suminsurance3">'+
+// '                </fieldset>'+
+// '            </div>'+
+// '            <div id="insurancePayment" class="row">'+
+// '                <label for="annualPremium" class="insuranceValue">{{premium}}(₹)</label>'+
+// '                <input type="number" id="annualPremium" name="premium" value="0" readonly >'+
+// '            </div>'+
+// '            <div>'+
+// '                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(₹)</label>'+
+// '                <input type="number" id="sumAssured" name="sum"  value="0" readonly >'+
+// '            </div>'+
+// '            <br>'+
+// '            <div id="modeOfPayment">'+
+// '                <span id="modeOfPaymentTitle">{{mode}}</span>'+
+// '                <select id="modeOfPaymentOptions">'+
+// '                    <option value="cash"><span id="cashInsurance">{{cashTitleName}}</span></option>'+
+// '                    <option value="cheque"><span id="chequeInsurance">{{chequeTitleName}}</span></option>'+
+// '                    <option value="credit"><span id="creditInsurance">{{creditTitleName}}</span></option>'+
+// '                </select>'+
+// '            </div>'+
+// '            <br>'+
+// '            <div id="buy_cancel" style="align:center;">'+
+// '                <span id="decisionBuy" class="insuranceButtons" style="color:green; margin-right: 2%;" onclick="ubsApp.buyInsurance(\'{{page}}\')">{{buy}}</span>'+
+// '                <span id="decisionCancel" class="insuranceButtons" style="color:red;" onclick="ubsApp.nextMove()">{{cancel}}</span>'+
+// '            </div>'+
+// '        </div>'+
+// '    </div>'+
+// '    <div class="row" id="leftInfo">'+
+// '        <div class="col-md-12">'+
+// '            <div class="row insuranceText">'+
+// '                <div class="col-sm-6" style="text-align:left;">{{bankBalanceTitle}}</div>'+
+// '                <div class="col-sm-6" style="text-align:right;">{{balance}}</div>'+
+// '            </div>'+
+// '            <br>'+
+// '            <div class="row insuranceText">'+
+// '                <div class="col-sm-6" style="text-align:left;">{{cashTitle}}</div>'+
+// '                <div class="col-sm-6" style="text-align:right;">{{cash}}</div>'+
+// '            </div>'+
+// '            <br>'+
+// '            <div class="row insuranceText">'+
+// '                <div class="col-sm-6" style="text-align:left;">{{debtTitle}}</div>'+
+// '                <div class="col-sm-6" style="text-align:right;">{{debt}}</div>'+
+// '            </div>'+
+// '        </div>'+
+// '    </div>'+
+// '    <div class="row" id="rightInfo">'+
+// '        <div class="col-md-12">'+
+// '            <div class="row insuranceText">'+ 
+// '                <div class="col-sm-6" style="text-align:left;">{{inventoryTitle}}</div>'+
+// '                <div id="decisionMakingInv" class="col-sm-6" style="text-align:right;">{{inventory}}%</div>'+
+// '            </div>'+
+// '            <br>'+
+// '            <div class="row insuranceText">'+
+// '                <div class="col-sm-6" style="text-align:left;">{{invVal}}</div>'+
+// '                <div id="decisionMakingInvValue" class="col-sm-6" style="text-align:right;">{{inventoryValue}}</div>'+
+// '            </div>'+
+// '            <br>'+
+// '            <div class="row insuranceText">'+
+// '                <div class="col-sm-6" style="text-align:left;">{{repPoints}}</div>'+
+// '                <div id="decisionMakingReputation" class="col-sm-6" style="text-align:right;">{{reputationPts}}</div>'+
+// '            </div>'+
+// '            <br>'+
+// '            <div id="quizHelp" class="helpBtnInsurance" onclick="ubsApp.startHelp(\'{{helpPageName}}\)"> </div>'+
+// '        </div>'+
+// '    </div>'+
+// '</div>';
+
 ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
-'    <div id="decisionTitle">'+
-'        <span id="decisionEmoji"></span>'+
-'        <span id="decisionHeading">{{Decision}}</span>'+
-'        <span id="playerName">PLAYER: {{currentPlayerName}}</span>'+
-'    </div>'+
-'    <div id="question_answer_decision">'+
+'   <div id="decisionTitle">'+
+'       <span id="decisionEmoji"></span>    '+
+'       <span id="decisionHeading">{{Decision}}</span>'+
+'       <span id="playerName">PLAYER: {{currentPlayerName}}</span>'+
+'   </div>'+
+''+
+'<div id="question_answer_decision_border">'+
+'   <div id="question_answer_decision">'+
 '        <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
 '        <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
 '        <div id="insuranceSelection">'+
@@ -946,15 +1036,15 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '                    <label for="insurance3" class="col-md-4"><input type="checkbox" onchange="ubsApp.increasePremium()" value="{{premium3}}" id="insurance3" name="insuranceTypes">{{insurance3}}</label>'+
 '                    <input type="checkbox" style="visibility:hidden" value={{sumAssuredvalue3}} id="suminsurance3">'+
 '                </fieldset>'+
-'            </div>'+
-'            <div id="insurancePayment" class="row">'+
+'            </div> <div style="display: inline-block;">'+
+'            <div id="insurancePayment" style="width: 45%;float: left;" class="row">'+
 '                <label for="annualPremium" class="insuranceValue">{{premium}}(₹)</label>'+
-'                <input type="number" id="annualPremium" name="premium" value="0" readonly >'+
+'                <input style="width: 30%;" type="number" id="annualPremium" name="premium" value="0" readonly >'+
 '            </div>'+
-'            <div>'+
+'            <div style="width: 45%;float: right;margin-top: 2%;">'+
 '                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(₹)</label>'+
-'                <input type="number" id="sumAssured" name="sum"  value="0" readonly >'+
-'            </div>'+
+'                <input style="width: 30%;" type="number" id="sumAssured" name="sum"  value="0" readonly >'+
+'            </div> </div>'+
 '            <br>'+
 '            <div id="modeOfPayment">'+
 '                <span id="modeOfPaymentTitle">{{mode}}</span>'+
@@ -970,45 +1060,24 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '                <span id="decisionCancel" class="insuranceButtons" style="color:red;" onclick="ubsApp.nextMove()">{{cancel}}</span>'+
 '            </div>'+
 '        </div>'+
-'    </div>'+
-'    <div class="row" id="leftInfo">'+
-'        <div class="col-md-12">'+
-'            <div class="row insuranceText">'+
-'                <div class="col-sm-6" style="text-align:left;">{{bankBalanceTitle}}</div>'+
-'                <div class="col-sm-6" style="text-align:right;">{{balance}}</div>'+
-'            </div>'+
-'            <br>'+
-'            <div class="row insuranceText">'+
-'                <div class="col-sm-6" style="text-align:left;">{{cashTitle}}</div>'+
-'                <div class="col-sm-6" style="text-align:right;">{{cash}}</div>'+
-'            </div>'+
-'            <br>'+
-'            <div class="row insuranceText">'+
-'                <div class="col-sm-6" style="text-align:left;">{{debtTitle}}</div>'+
-'                <div class="col-sm-6" style="text-align:right;">{{debt}}</div>'+
-'            </div>'+
-'        </div>'+
-'    </div>'+
-'    <div class="row" id="rightInfo">'+
-'        <div class="col-md-12">'+
-'            <div class="row insuranceText">'+ 
-'                <div class="col-sm-6" style="text-align:left;">{{inventoryTitle}}</div>'+
-'                <div id="decisionMakingInv" class="col-sm-6" style="text-align:right;">{{inventory}}%</div>'+
-'            </div>'+
-'            <br>'+
-'            <div class="row insuranceText">'+
-'                <div class="col-sm-6" style="text-align:left;">{{invVal}}</div>'+
-'                <div id="decisionMakingInvValue" class="col-sm-6" style="text-align:right;">{{inventoryValue}}</div>'+
-'            </div>'+
-'            <br>'+
-'            <div class="row insuranceText">'+
-'                <div class="col-sm-6" style="text-align:left;">{{repPoints}}</div>'+
-'                <div id="decisionMakingReputation" class="col-sm-6" style="text-align:right;">{{reputationPts}}</div>'+
-'            </div>'+
-'            <br>'+
-'            <div id="quizHelp" class="helpBtnInsurance" onclick="ubsApp.startHelp(\'{{helpPageName}}\)"> </div>'+
-'        </div>'+
-'    </div>'+
+'</div>'+
+'</div>'+
+'<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
+'       <div class="row" id="leftInfo">'+
+'           <div class="col-md-10">'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
+'           </div>'+
+'       </div>'+
+'       <div class="row" id="rightInfo">'+
+'           <div class="col-md-12" >'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} ₹{{reputationPts}}</span>       <br>'+
+'           </div>'+
+'       </div>'+
+'   <button id="quizHelp" class=\'quizButtons decisionHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 ubsApp.decisionTemplate = '<div id="decisonMaking">'+

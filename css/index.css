@@ -295,7 +295,6 @@ width: 100%;
     background-color:transparent;
     background-repeat: no-repeat;
     width: 45%;
-    margin-left: 29%;
     
 }
 .alternateMessageContainer{
@@ -331,8 +330,20 @@ width: 100%;
     padding:10px;
     font-weight:600;
     font-size:2.5vmax;
+    background-image: url(../images/luck_strip.png);
+    background-size: 100% 100%;
 }
 
+.paymentScreenTitle{
+    position:absolute;
+    top: 4%;
+    left: 8%;
+    padding:10px;
+    font-weight:600;
+    font-size:2.5vmax;
+    background-image: url(../images/payment_strip.png);
+    background-size: 100% 100%;
+}
 .luckIconContainer{
     width: 7%;
     height: 13%;

@@ -10,6 +10,7 @@
 				"templateId": 1,
 				"templateType": "insurance",
 				"insuranceType":"{{insuranceType}}",
+				"helpPageName":"decisionHelp",
 		        "Insurance":"{{Insurance}}",
 		        "insurance1":"{{insurance1}}",
 		        "insurance2":"{{insurance2}}",
