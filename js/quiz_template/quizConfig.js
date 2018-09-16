@@ -3592,6 +3592,7 @@ ubsApp.quizConfig = {
       "questionHeading" : "GST",
       "helpPageName" : "quizHelp",
       "category":"GST",
+      "pageName":"quizQ69",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,

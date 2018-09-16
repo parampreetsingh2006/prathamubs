@@ -1238,5 +1238,7 @@ ubsApp.translation={
        "quizStartHelp":"You will be shown 3 questions. Each correct answer will earn reputation points for you.",
        "quiz":"QUIZ",
        "startQuiz":"Start Quiz",
+       "quizWrongResultFromUnluckyScenario":"That is the wrong answer. Money will be deducted and/or reputation points will be lost",
+       "quizWrongResultFromLuckyScenario":"That is the correct answer. No money will be deducted. Nor will any reputation points be lost",
 
     }   

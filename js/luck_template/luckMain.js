@@ -23,9 +23,11 @@ ubsApp.luckPaymentQuiz=function(page){
 	let quizPage = ubsApp.findQuizPage(config.category);
 	quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
 	quizPage.noOfQuestions = noOfQuestions;
-	ubsApp.pages[quizPage.onClickPage.nextPage].templates[0].noOfQuestions = noOfQuestions;
+    quizPage.entryPoint = "unluckyScenario";
+    ubsApp.pages[quizPage.onClickPage.nextPage].templates[0].noOfQuestions = noOfQuestions;
+    ubsApp.pages[quizPage.pageName].templates[0].entryPoint = "unluckyScenario";
 
-    ubsApp.renderFirstQuizPage(quizPage);
+    ubsApp.renderFirstQuizPage(quizPage.pageName);
 }
 
 ubsApp.findQuizPage = function(category){
