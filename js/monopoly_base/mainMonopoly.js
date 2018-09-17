@@ -344,7 +344,7 @@ monopoly.storePlayerDetails=function(){
 
 
         user.setplayerScore(initialPlayerCash);
-        user.setLastWeekSummary(initialPlayerCash, initialPlayerBankBalance, initialReputation, 0, 0);
+        user.setLastWeekSummary(initialPlayerCash, initialPlayerBankBalance, initialReputation, 0, 0, 60.00);
         user.setInventoryScore(60.00);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
