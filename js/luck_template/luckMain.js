@@ -13,16 +13,32 @@ ubsApp.getLuckTemplate=function(templateConfig,tempVar){
 }
 
 ubsApp.luckPaymentQuiz=function(page){
+    //luckTakeQuizPopupMessage
+    ubsApp.openPopup({
+        "message" : ubsApp.translation["luckTakeQuizPopupMessage"],
+        "header"  : ubsApp.translation["takeQuizTitle"],
+        "headerStyle" : "text-align: center;  color: green; font-weight: 700; ",
+        "buttons":[
+                {
+                    'id':"luckTakeQuizPopup",
+                    'name' : ubsApp.getTranslation("OK"),
+                    'action': "ubsApp.closePopup();ubsApp.renderLuckQuizQuestion(\'"+ page +"\')"
+                }
+        ]
 
-	ubsApp.emptyQuizQuestions();
-	let config = ubsApp.pages[page].templates[0];
-	let noOfQuestions = 1;
-	choiceSelected.page = page;
-	ubsApp.initializeQuizQuestions(0, config.credit);
+    });
+}
+
+ubsApp.renderLuckQuizQuestion = function(page){
+    ubsApp.emptyQuizQuestions();
+    let config = ubsApp.pages[page].templates[0];
+    let noOfQuestions = 1;
+    choiceSelected.page = page;
+    ubsApp.initializeQuizQuestions(0, config.credit);
     ubsApp.nextPlayerOnQuizClose = true;
-	let quizPage = ubsApp.findQuizPage(config.category);
-	quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
-	quizPage.noOfQuestions = noOfQuestions;
+    let quizPage = ubsApp.findQuizPage(config.category);
+    quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
+    quizPage.noOfQuestions = noOfQuestions;
     quizPage.entryPoint = "unluckyScenario";
     ubsApp.pages[quizPage.onClickPage.nextPage].templates[0].noOfQuestions = noOfQuestions;
     ubsApp.pages[quizPage.pageName].templates[0].entryPoint = "unluckyScenario";
