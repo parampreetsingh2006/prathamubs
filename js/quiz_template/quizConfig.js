@@ -1,5 +1,6 @@
-ubsApp.quizConfig = {  
-	"quizQ1" : {
+ubsApp.quizConfig=
+{
+  "quizQ1" : {
     "category" : "Quiz",
     "repeatforuser" : false,
     "repeatforall" : true,
@@ -10,17 +11,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion1}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 2,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -49,7 +50,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ1"
     } ]
   },
   "quizQ2" : {
@@ -63,17 +69,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion2}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 3,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -102,7 +108,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ2"
     } ]
   },
   "quizQ3" : {
@@ -116,17 +127,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion3}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 4,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -155,7 +166,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ3"
     } ]
   },
   "quizQ4" : {
@@ -169,17 +185,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion4}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 5,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -208,7 +224,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ4"
     } ]
   },
   "quizQ5" : {
@@ -222,17 +243,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion5}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 6,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -261,7 +282,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ5"
     } ]
   },
   "quizQ6" : {
@@ -275,17 +301,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion6}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -314,7 +340,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ6"
     } ]
   },
   "quizQ7" : {
@@ -328,17 +359,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion7}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -367,7 +398,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ7"
     } ]
   },
   "quizQ8" : {
@@ -381,17 +417,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion8}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -420,7 +456,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ8"
     } ]
   },
   "quizQ9" : {
@@ -434,17 +475,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion9}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -473,7 +514,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "kyc",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ9"
     } ]
   },
   "quizQ10" : {
@@ -487,17 +533,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion10}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -526,7 +572,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ10"
     } ]
   },
   "quizQ11" : {
@@ -540,17 +591,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion11}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -579,7 +630,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ11"
     } ]
   },
   "quizQ12" : {
@@ -593,17 +649,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion12}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -632,7 +688,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ12"
     } ]
   },
   "quizQ13" : {
@@ -646,17 +707,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion13}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -685,7 +746,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ13"
     } ]
   },
   "quizQ14" : {
@@ -699,17 +765,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion14}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -738,7 +804,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "safety",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ14"
     } ]
   },
   "quizQ15" : {
@@ -752,17 +823,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion15}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -791,7 +862,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "safety",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ15"
     } ]
   },
   "quizQ16" : {
@@ -805,17 +881,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion16}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -844,7 +920,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ16"
     } ]
   },
   "quizQ17" : {
@@ -858,20 +939,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion17}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "4",
       "optionName" : "q17",
       "options" : [ {
         "optionName" : "q17",
@@ -897,7 +978,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ17"
     } ]
   },
   "quizQ18" : {
@@ -911,17 +997,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion18}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -950,7 +1036,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ18"
     } ]
   },
   "quizQ19" : {
@@ -964,17 +1055,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion19}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -1003,7 +1094,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ19"
     } ]
   },
   "quizQ20" : {
@@ -1017,17 +1113,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion20}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -1056,7 +1152,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ20"
     } ]
   },
   "quizQ21" : {
@@ -1070,17 +1171,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion21}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -1109,7 +1210,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ21"
     } ]
   },
   "quizQ22" : {
@@ -1123,17 +1229,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion22}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -1162,7 +1268,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ22"
     } ]
   },
   "quizQ23" : {
@@ -1176,17 +1287,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion23}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -1215,7 +1326,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ23"
     } ]
   },
   "quizQ24" : {
@@ -1229,17 +1345,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion24}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -1268,7 +1384,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ24"
     } ]
   },
   "quizQ25" : {
@@ -1282,17 +1403,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion25}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -1321,7 +1442,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ25"
     } ]
   },
   "quizQ26" : {
@@ -1335,17 +1461,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion26}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -1374,7 +1500,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ26"
     } ]
   },
   "quizQ27" : {
@@ -1388,17 +1519,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion27}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -1427,7 +1558,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ27"
     } ]
   },
   "quizQ28" : {
@@ -1441,17 +1577,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion28}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -1480,7 +1616,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ28"
     } ]
   },
   "quizQ29" : {
@@ -1494,17 +1635,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion29}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -1533,7 +1674,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ29"
     } ]
   },
   "quizQ30" : {
@@ -1547,17 +1693,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion30}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -1586,7 +1732,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ30"
     } ]
   },
   "quizQ31" : {
@@ -1600,17 +1751,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion31}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -1639,7 +1790,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ31"
     } ]
   },
   "quizQ32" : {
@@ -1653,17 +1809,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion32}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -1692,7 +1848,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ32"
     } ]
   },
   "quizQ33" : {
@@ -1706,17 +1867,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion33}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -1745,7 +1906,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "any",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ33"
     } ]
   },
   "quizQ34" : {
@@ -1759,17 +1925,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion34}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -1798,7 +1964,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ34"
     } ]
   },
   "quizQ35" : {
@@ -1812,17 +1983,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion35}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -1851,7 +2022,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ35"
     } ]
   },
   "quizQ36" : {
@@ -1865,17 +2041,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion36}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -1904,7 +2080,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ36"
     } ]
   },
   "quizQ37" : {
@@ -1918,17 +2099,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion37}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -1957,7 +2138,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ37"
     } ]
   },
   "quizQ38" : {
@@ -1971,17 +2157,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion38}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -2010,7 +2196,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ38"
     } ]
   },
   "quizQ39" : {
@@ -2024,17 +2215,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion39}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -2063,7 +2254,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ39"
     } ]
   },
   "quizQ40" : {
@@ -2077,17 +2273,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion40}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -2116,7 +2312,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ40"
     } ]
   },
   "quizQ41" : {
@@ -2130,17 +2331,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion41}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -2169,7 +2370,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ41"
     } ]
   },
   "quizQ42" : {
@@ -2183,17 +2389,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion42}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -2222,7 +2428,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "any",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ42"
     } ]
   },
   "quizQ43" : {
@@ -2236,17 +2447,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion43}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -2275,7 +2486,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ43"
     } ]
   },
   "quizQ44" : {
@@ -2289,17 +2505,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion44}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -2328,7 +2544,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ44"
     } ]
   },
   "quizQ45" : {
@@ -2342,17 +2563,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion45}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -2381,7 +2602,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ45"
     } ]
   },
   "quizQ46" : {
@@ -2395,17 +2621,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion46}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -2434,7 +2660,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ46"
     } ]
   },
   "quizQ47" : {
@@ -2448,17 +2679,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion47}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -2487,7 +2718,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ47"
     } ]
   },
   "quizQ48" : {
@@ -2501,17 +2737,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion48}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -2540,7 +2776,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ48"
     } ]
   },
   "quizQ49" : {
@@ -2554,17 +2795,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion49}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -2593,7 +2834,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ49"
     } ]
   },
   "quizQ50" : {
@@ -2607,17 +2853,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion50}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -2646,7 +2892,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ50"
     } ]
   },
   "quizQ51" : {
@@ -2660,17 +2911,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion51}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -2699,7 +2950,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ51"
     } ]
   },
   "quizQ52" : {
@@ -2713,17 +2969,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion52}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -2752,7 +3008,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ52"
     } ]
   },
   "quizQ53" : {
@@ -2766,17 +3027,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion53}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -2805,7 +3066,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ53"
     } ]
   },
   "quizQ54" : {
@@ -2819,17 +3085,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion54}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -2858,7 +3124,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ54"
     } ]
   },
   "quizQ55" : {
@@ -2872,17 +3143,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion55}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -2911,7 +3182,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ55"
     } ]
   },
   "quizQ56" : {
@@ -2925,20 +3201,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion56}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q56",
       "options" : [ {
         "optionName" : "q56",
@@ -2964,7 +3240,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "income tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ56"
     } ]
   },
   "quizQ57" : {
@@ -2978,20 +3259,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion57}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "4",
       "optionName" : "q57",
       "options" : [ {
         "optionName" : "q57",
@@ -3003,11 +3284,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion57Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q57",
+        "optionValue" : "{{QuizQuestion57Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q57",
+        "optionValue" : "{{QuizQuestion57Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "income tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ57"
     } ]
   },
   "quizQ58" : {
@@ -3021,20 +3317,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion58}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "3",
       "optionName" : "q58",
       "options" : [ {
         "optionName" : "q58",
@@ -3060,7 +3356,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "income tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ58"
     } ]
   },
   "quizQ59" : {
@@ -3074,20 +3375,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion59}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "3",
       "optionName" : "q59",
       "options" : [ {
         "optionName" : "q59",
@@ -3113,7 +3414,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "income tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ59"
     } ]
   },
   "quizQ60" : {
@@ -3127,20 +3433,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion60}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "4",
       "optionName" : "q60",
       "options" : [ {
         "optionName" : "q60",
@@ -3157,16 +3463,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion60Option3}}",
         "id" : 3,
         "priority" : 3
-      }, {
-        "optionName" : "q60",
-        "optionValue" : "{{QuizQuestion60Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "property tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ60"
     } ]
   },
   "quizQ61" : {
@@ -3180,17 +3486,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion61}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -3219,7 +3525,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "property tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ61"
     } ]
   },
   "quizQ62" : {
@@ -3233,20 +3544,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion62}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "1",
       "optionName" : "q62",
       "options" : [ {
         "optionName" : "q62",
@@ -3263,16 +3574,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion62Option3}}",
         "id" : 3,
         "priority" : 3
-      }, {
-        "optionName" : "q62",
-        "optionValue" : "{{QuizQuestion62Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ62"
     } ]
   },
   "quizQ63" : {
@@ -3286,17 +3597,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion63}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -3325,7 +3636,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ63"
     } ]
   },
   "quizQ64" : {
@@ -3339,20 +3655,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion64}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q64",
       "options" : [ {
         "optionName" : "q64",
@@ -3378,7 +3694,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ64"
     } ]
   },
   "quizQ65" : {
@@ -3392,20 +3713,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion65}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "3",
       "optionName" : "q65",
       "options" : [ {
         "optionName" : "q65",
@@ -3431,7 +3752,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ65"
     } ]
   },
   "quizQ66" : {
@@ -3445,17 +3771,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion66}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -3484,7 +3810,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ66"
     } ]
   },
   "quizQ67" : {
@@ -3498,20 +3829,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion67}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q67",
       "options" : [ {
         "optionName" : "q67",
@@ -3527,7 +3858,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "any",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ67"
     } ]
   },
   "quizQ68" : {
@@ -3541,20 +3877,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion68}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q68",
       "options" : [ {
         "optionName" : "q68",
@@ -3566,11 +3902,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion68Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q68",
+        "optionValue" : "{{QuizQuestion68Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q68",
+        "optionValue" : "{{QuizQuestion68Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "safety",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ68"
     } ]
   },
   "quizQ69" : {
@@ -3584,22 +3935,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion69}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "category":"GST",
-      "pageName":"quizQ69",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "1",
       "optionName" : "q69",
       "options" : [ {
         "optionName" : "q69",
@@ -3625,7 +3974,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ69"
     } ]
   },
   "quizQ70" : {
@@ -3639,20 +3993,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion70}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "2",
       "optionName" : "q70",
       "options" : [ {
         "optionName" : "q70",
@@ -3664,21 +4018,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion70Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q70",
-        "optionValue" : "{{QuizQuestion70Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q70",
-        "optionValue" : "{{QuizQuestion70Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ70"
     } ]
   },
   "quizQ71" : {
@@ -3692,17 +4041,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion71}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -3717,11 +4066,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion71Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q71",
+        "optionValue" : "{{QuizQuestion71Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q71",
+        "optionValue" : "{{QuizQuestion71Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ71"
     } ]
   },
   "quizQ72" : {
@@ -3735,20 +4099,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion72}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "4",
       "optionName" : "q72",
       "options" : [ {
         "optionName" : "q72",
@@ -3760,11 +4124,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion72Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q72",
+        "optionValue" : "{{QuizQuestion72Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q72",
+        "optionValue" : "{{QuizQuestion72Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ72"
     } ]
   },
   "quizQ73" : {
@@ -3778,20 +4157,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion73}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q73",
       "options" : [ {
         "optionName" : "q73",
@@ -3803,11 +4182,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion73Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q73",
+        "optionValue" : "{{QuizQuestion73Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q73",
+        "optionValue" : "{{QuizQuestion73Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ73"
     } ]
   },
   "quizQ74" : {
@@ -3821,20 +4215,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion74}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "3",
       "optionName" : "q74",
       "options" : [ {
         "optionName" : "q74",
@@ -3846,11 +4240,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion74Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q74",
+        "optionValue" : "{{QuizQuestion74Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q74",
+        "optionValue" : "{{QuizQuestion74Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ74"
     } ]
   },
   "quizQ75" : {
@@ -3864,17 +4273,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion75}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -3903,7 +4312,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ75"
     } ]
   },
   "quizQ76" : {
@@ -3917,20 +4331,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion76}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "2",
       "optionName" : "q76",
       "options" : [ {
         "optionName" : "q76",
@@ -3956,7 +4370,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ76"
     } ]
   },
   "quizQ77" : {
@@ -3970,20 +4389,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion77}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q77",
       "options" : [ {
         "optionName" : "q77",
@@ -4009,7 +4428,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ77"
     } ]
   },
   "quizQ78" : {
@@ -4023,20 +4447,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion78}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q78",
       "options" : [ {
         "optionName" : "q78",
@@ -4048,21 +4472,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion78Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q78",
-        "optionValue" : "{{QuizQuestion78Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q78",
-        "optionValue" : "{{QuizQuestion78Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ78"
     } ]
   },
   "quizQ79" : {
@@ -4076,20 +4495,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion79}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q79",
       "options" : [ {
         "optionName" : "q79",
@@ -4101,21 +4520,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion79Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q79",
-        "optionValue" : "{{QuizQuestion79Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q79",
-        "optionValue" : "{{QuizQuestion79Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ79"
     } ]
   },
   "quizQ80" : {
@@ -4129,17 +4543,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion80}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -4154,21 +4568,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion80Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q80",
-        "optionValue" : "{{QuizQuestion80Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q80",
-        "optionValue" : "{{QuizQuestion80Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ80"
     } ]
   },
   "quizQ81" : {
@@ -4182,20 +4591,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion81}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q81",
       "options" : [ {
         "optionName" : "q81",
@@ -4211,7 +4620,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ81"
     } ]
   },
   "quizQ82" : {
@@ -4225,17 +4639,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion82}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -4254,7 +4668,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ82"
     } ]
   },
   "quizQ83" : {
@@ -4268,17 +4687,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion83}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -4297,7 +4716,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ83"
     } ]
   },
   "quizQ84" : {
@@ -4311,20 +4735,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion84}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q84",
       "options" : [ {
         "optionName" : "q84",
@@ -4340,7 +4764,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "income tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ84"
     } ]
   },
   "quizQ85" : {
@@ -4354,20 +4783,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion85}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "2",
       "optionName" : "q85",
       "options" : [ {
         "optionName" : "q85",
@@ -4393,7 +4822,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "gst",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ85"
     } ]
   },
   "quizQ86" : {
@@ -4407,20 +4841,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion86}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "3",
       "optionName" : "q86",
       "options" : [ {
         "optionName" : "q86",
@@ -4432,11 +4866,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion86Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q86",
+        "optionValue" : "{{QuizQuestion86Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q86",
+        "optionValue" : "{{QuizQuestion86Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ86"
     } ]
   },
   "quizQ87" : {
@@ -4450,20 +4899,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion87}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q87",
       "options" : [ {
         "optionName" : "q87",
@@ -4489,7 +4938,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ87"
     } ]
   },
   "quizQ88" : {
@@ -4503,20 +4957,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion88}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q88",
       "options" : [ {
         "optionName" : "q88",
@@ -4542,7 +4996,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ88"
     } ]
   },
   "quizQ89" : {
@@ -4556,17 +5015,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion89}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -4581,11 +5040,26 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion89Option2}}",
         "id" : 2,
         "priority" : 2
+      }, {
+        "optionName" : "q89",
+        "optionValue" : "{{QuizQuestion89Option3}}",
+        "id" : 3,
+        "priority" : 3
+      }, {
+        "optionName" : "q89",
+        "optionValue" : "{{QuizQuestion89Option4}}",
+        "id" : 4,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ89"
     } ]
   },
   "quizQ90" : {
@@ -4599,20 +5073,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion90}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "2",
       "optionName" : "q90",
       "options" : [ {
         "optionName" : "q90",
@@ -4638,7 +5112,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ90"
     } ]
   },
   "quizQ91" : {
@@ -4652,20 +5131,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion91}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q91",
       "options" : [ {
         "optionName" : "q91",
@@ -4677,21 +5156,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion91Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q91",
-        "optionValue" : "{{QuizQuestion91Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q91",
-        "optionValue" : "{{QuizQuestion91Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ91"
     } ]
   },
   "quizQ92" : {
@@ -4705,17 +5179,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion92}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -4730,21 +5204,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion92Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q92",
-        "optionValue" : "{{QuizQuestion92Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q92",
-        "optionValue" : "{{QuizQuestion92Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ92"
     } ]
   },
   "quizQ93" : {
@@ -4758,20 +5227,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion93}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q93",
       "options" : [ {
         "optionName" : "q93",
@@ -4783,21 +5252,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion93Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q93",
-        "optionValue" : "{{QuizQuestion93Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q93",
-        "optionValue" : "{{QuizQuestion93Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ93"
     } ]
   },
   "quizQ94" : {
@@ -4811,20 +5275,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion94}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q94",
       "options" : [ {
         "optionName" : "q94",
@@ -4836,21 +5300,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion94Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q94",
-        "optionValue" : "{{QuizQuestion94Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q94",
-        "optionValue" : "{{QuizQuestion94Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "income tax",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ94"
     } ]
   },
   "quizQ95" : {
@@ -4864,20 +5323,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion95}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "3",
       "optionName" : "q95",
       "options" : [ {
         "optionName" : "q95",
@@ -4903,7 +5362,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ95"
     } ]
   },
   "quizQ96" : {
@@ -4917,20 +5381,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion96}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "2",
       "optionName" : "q96",
       "options" : [ {
         "optionName" : "q96",
@@ -4942,21 +5406,16 @@ ubsApp.quizConfig = {
         "optionValue" : "{{QuizQuestion96Option2}}",
         "id" : 2,
         "priority" : 2
-      }, {
-        "optionName" : "q96",
-        "optionValue" : "{{QuizQuestion96Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q96",
-        "optionValue" : "{{QuizQuestion96Option4}}",
-        "id" : 4,
-        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ96"
     } ]
   },
   "quizQ97" : {
@@ -4970,17 +5429,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion97}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -5009,7 +5468,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ97"
     } ]
   },
   "quizQ98" : {
@@ -5023,20 +5487,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion98}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "1",
       "optionName" : "q98",
       "options" : [ {
         "optionName" : "q98",
@@ -5062,7 +5526,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ98"
     } ]
   },
   "quizQ99" : {
@@ -5076,17 +5545,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion99}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -5115,7 +5584,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ99"
     } ]
   },
   "quizQ100" : {
@@ -5129,20 +5603,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion100}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q100",
       "options" : [ {
         "optionName" : "q100",
@@ -5168,7 +5642,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ100"
     } ]
   },
   "quizQ101" : {
@@ -5182,17 +5661,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion101}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -5221,7 +5700,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ101"
     } ]
   },
   "quizQ102" : {
@@ -5235,17 +5719,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion102}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -5274,7 +5758,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ102"
     } ]
   },
   "quizQ103" : {
@@ -5288,17 +5777,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion103}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -5327,7 +5816,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "aadhar",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ103"
     } ]
   },
   "quizQ104" : {
@@ -5341,20 +5835,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion104}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "4",
       "optionName" : "q104",
       "options" : [ {
         "optionName" : "q104",
@@ -5380,7 +5874,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ104"
     } ]
   },
   "quizQ105" : {
@@ -5394,20 +5893,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion105}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q105",
       "options" : [ {
         "optionName" : "q105",
@@ -5433,7 +5932,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ105"
     } ]
   },
   "quizQ106" : {
@@ -5447,17 +5951,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion106}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -5486,7 +5990,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ106"
     } ]
   },
   "quizQ107" : {
@@ -5500,20 +6009,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion107}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "1",
       "optionName" : "q107",
       "options" : [ {
         "optionName" : "q107",
@@ -5539,7 +6048,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ107"
     } ]
   },
   "quizQ108" : {
@@ -5553,20 +6067,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion108}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "3",
       "optionName" : "q108",
       "options" : [ {
         "optionName" : "q108",
@@ -5592,7 +6106,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ108"
     } ]
   },
   "quizQ109" : {
@@ -5606,20 +6125,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion109}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q109",
       "options" : [ {
         "optionName" : "q109",
@@ -5645,7 +6164,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ109"
     } ]
   },
   "quizQ110" : {
@@ -5659,20 +6183,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion110}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "2",
       "optionName" : "q110",
       "options" : [ {
         "optionName" : "q110",
@@ -5698,7 +6222,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ110"
     } ]
   },
   "quizQ111" : {
@@ -5712,20 +6241,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion111}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "4",
       "optionName" : "q111",
       "options" : [ {
         "optionName" : "q111",
@@ -5751,7 +6280,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ111"
     } ]
   },
   "quizQ112" : {
@@ -5765,17 +6299,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion112}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -5804,7 +6338,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ112"
     } ]
   },
   "quizQ113" : {
@@ -5818,17 +6357,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion113}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -5857,7 +6396,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ113"
     } ]
   },
   "quizQ114" : {
@@ -5871,17 +6415,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion114}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -5910,7 +6454,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ114"
     } ]
   },
   "quizQ115" : {
@@ -5924,17 +6473,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion115}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -5963,7 +6512,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ115"
     } ]
   },
   "quizQ116" : {
@@ -5977,17 +6531,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion116}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -6016,7 +6570,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ116"
     } ]
   },
   "quizQ117" : {
@@ -6030,17 +6589,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion117}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -6069,7 +6628,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ117"
     } ]
   },
   "quizQ118" : {
@@ -6083,20 +6647,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion118}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "3",
       "optionName" : "q118",
       "options" : [ {
         "optionName" : "q118",
@@ -6122,7 +6686,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ118"
     } ]
   },
   "quizQ119" : {
@@ -6136,17 +6705,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion119}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -6175,7 +6744,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposits",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ119"
     } ]
   },
   "quizQ120" : {
@@ -6189,17 +6763,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion120}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -6228,7 +6802,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ120"
     } ]
   },
   "quizQ121" : {
@@ -6242,17 +6821,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion121}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -6281,7 +6860,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ121"
     } ]
   },
   "quizQ122" : {
@@ -6295,20 +6879,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion122}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "3",
       "optionName" : "q122",
       "options" : [ {
         "optionName" : "q122",
@@ -6334,7 +6918,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposit",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ122"
     } ]
   },
   "quizQ123" : {
@@ -6348,17 +6937,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion123}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -6387,7 +6976,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposit",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ123"
     } ]
   },
   "quizQ124" : {
@@ -6401,20 +6995,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion124}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "4",
       "optionName" : "q124",
       "options" : [ {
         "optionName" : "q124",
@@ -6440,7 +7034,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ124"
     } ]
   },
   "quizQ125" : {
@@ -6454,20 +7053,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion125}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "4",
       "optionName" : "q125",
       "options" : [ {
         "optionName" : "q125",
@@ -6493,7 +7092,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "kyc",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ125"
     } ]
   },
   "quizQ126" : {
@@ -6507,17 +7111,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion126}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -6546,7 +7150,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ126"
     } ]
   },
   "quizQ127" : {
@@ -6560,20 +7169,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion127}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "1",
       "optionName" : "q127",
       "options" : [ {
         "optionName" : "q127",
@@ -6599,7 +7208,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ127"
     } ]
   },
   "quizQ128" : {
@@ -6613,20 +7227,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion128}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q128",
       "options" : [ {
         "optionName" : "q128",
@@ -6652,7 +7266,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "pan",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ128"
     } ]
   },
   "quizQ129" : {
@@ -6666,20 +7285,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion129}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "3",
       "optionName" : "q129",
       "options" : [ {
         "optionName" : "q129",
@@ -6705,7 +7324,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ129"
     } ]
   },
   "quizQ130" : {
@@ -6719,20 +7343,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion130}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "3",
       "optionName" : "q130",
       "options" : [ {
         "optionName" : "q130",
@@ -6758,7 +7382,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ130"
     } ]
   },
   "quizQ131" : {
@@ -6772,17 +7401,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion131}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -6811,7 +7440,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ131"
     } ]
   },
   "quizQ132" : {
@@ -6825,17 +7459,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion132}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "3",
@@ -6864,7 +7498,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ132"
     } ]
   },
   "quizQ133" : {
@@ -6878,20 +7517,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion133}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "2",
       "optionName" : "q133",
       "options" : [ {
         "optionName" : "q133",
@@ -6917,7 +7556,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ133"
     } ]
   },
   "quizQ134" : {
@@ -6931,17 +7575,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion134}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -6970,7 +7614,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ134"
     } ]
   },
   "quizQ135" : {
@@ -6984,20 +7633,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion135}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "4",
       "optionName" : "q135",
       "options" : [ {
         "optionName" : "q135",
@@ -7023,7 +7672,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "kyc",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ135"
     } ]
   },
   "quizQ136" : {
@@ -7037,20 +7691,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion136}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "2",
       "optionName" : "q136",
       "options" : [ {
         "optionName" : "q136",
@@ -7076,7 +7730,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ136"
     } ]
   },
   "quizQ137" : {
@@ -7090,17 +7749,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion137}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 1.0,
         "cash" : 0
       },
       "answer" : "2",
@@ -7129,7 +7788,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ137"
     } ]
   },
   "quizQ138" : {
@@ -7143,17 +7807,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion138}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -7182,7 +7846,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ138"
     } ]
   },
   "quizQ139" : {
@@ -7196,17 +7865,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion139}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -7235,7 +7904,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposit",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ139"
     } ]
   },
   "quizQ140" : {
@@ -7249,20 +7923,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion140}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "4",
       "optionName" : "q140",
       "options" : [ {
         "optionName" : "q140",
@@ -7288,7 +7962,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "deposit",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ140"
     } ]
   },
   "quizQ141" : {
@@ -7302,20 +7981,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion141}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "1",
       "optionName" : "q141",
       "options" : [ {
         "optionName" : "q141",
@@ -7341,7 +8020,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ141"
     } ]
   },
   "quizQ142" : {
@@ -7355,20 +8039,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion142}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "4",
       "optionName" : "q142",
       "options" : [ {
         "optionName" : "q142",
@@ -7394,7 +8078,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ142"
     } ]
   },
   "quizQ143" : {
@@ -7408,20 +8097,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion143}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "2",
       "optionName" : "q143",
       "options" : [ {
         "optionName" : "q143",
@@ -7447,7 +8136,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ143"
     } ]
   },
   "quizQ144" : {
@@ -7461,17 +8155,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion144}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "4",
@@ -7500,7 +8194,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ144"
     } ]
   },
   "quizQ145" : {
@@ -7514,17 +8213,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion145}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -7553,7 +8252,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ145"
     } ]
   },
   "quizQ146" : {
@@ -7567,20 +8271,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion146}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "1",
       "optionName" : "q146",
       "options" : [ {
         "optionName" : "q146",
@@ -7606,7 +8310,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "growth",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ146"
     } ]
   },
   "quizQ147" : {
@@ -7620,20 +8329,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion147}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "4",
       "optionName" : "q147",
       "options" : [ {
         "optionName" : "q147",
@@ -7659,7 +8368,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ147"
     } ]
   },
   "quizQ148" : {
@@ -7673,20 +8387,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion148}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "1",
       "optionName" : "q148",
       "options" : [ {
         "optionName" : "q148",
@@ -7712,7 +8426,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ148"
     } ]
   },
   "quizQ149" : {
@@ -7726,17 +8445,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion149}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -7765,7 +8484,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ149"
     } ]
   },
   "quizQ150" : {
@@ -7779,17 +8503,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion150}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 4.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -7818,7 +8542,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "loans",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ150"
     } ]
   },
   "quizQ151" : {
@@ -7832,20 +8561,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion151}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "4",
+      "answer" : "1",
       "optionName" : "q151",
       "options" : [ {
         "optionName" : "q151",
@@ -7871,7 +8600,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ151"
     } ]
   },
   "quizQ152" : {
@@ -7885,20 +8619,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion152}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "3",
       "optionName" : "q152",
       "options" : [ {
         "optionName" : "q152",
@@ -7924,7 +8658,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ152"
     } ]
   },
   "quizQ153" : {
@@ -7938,17 +8677,17 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion153}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
       "answer" : "1",
@@ -7977,7 +8716,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ153"
     } ]
   },
   "quizQ154" : {
@@ -7991,20 +8735,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion154}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "4",
       "optionName" : "q154",
       "options" : [ {
         "optionName" : "q154",
@@ -8030,7 +8774,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
+      },
+      "category" : "banking",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ154"
     } ]
   },
   "quizQ155" : {
@@ -8044,20 +8793,20 @@ ubsApp.quizConfig = {
     "templates" : [ {
       "templateId" : 0,
       "questionId" : 0,
-      "templateType" : "quiz",
+      "templateType" : "{{QuizTemplateType}}",
       "noOfQuestions" : "",
       "question" : "{{QuizQuestion155}}",
       "questionTime" : 3000,
       "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
+      "questionHeading" : "{{QuizQuestionHeading}}",
+      "helpPageName" : "{{QuizHelpPageName}}",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
-        "reputationPoints" : 1,
+        "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "3",
       "optionName" : "q155",
       "options" : [ {
         "optionName" : "q155",
@@ -8083,378 +8832,12 @@ ubsApp.quizConfig = {
       "onClickPage" : {
         "nextPage" : "",
         "hideScenarios" : false
-      }
-    } ]
-  },
-  "quizQ156" : {
-    "category" : "Quiz",
-    "repeatforuser" : false,
-    "repeatforall" : true,
-    "questionTime" : 3000,
-    "displayCalculator" : true,
-    "minimumInventoryScoreRequired" : 0,
-    "inventoryScoreToBeChanged" : 0,
-    "templates" : [ {
-      "templateId" : 0,
-      "questionId" : 0,
-      "templateType" : "quiz",
-      "noOfQuestions" : "",
-      "question" : "{{QuizQuestion156}}",
-      "questionTime" : 3000,
-      "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "credit" : {
-        "inventory" : 0,
-        "bankBalance" : 0,
-        "reputationPoints" : 1,
-        "cash" : 0
       },
-      "answer" : "1",
-      "optionName" : "q156",
-      "options" : [ {
-        "optionName" : "q156",
-        "optionValue" : "{{QuizQuestion156Option1}}",
-        "id" : 1,
-        "priority" : 1
-      }, {
-        "optionName" : "q156",
-        "optionValue" : "{{QuizQuestion156Option2}}",
-        "id" : 2,
-        "priority" : 2
-      }, {
-        "optionName" : "q156",
-        "optionValue" : "{{QuizQuestion156Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q156",
-        "optionValue" : "{{QuizQuestion156Option4}}",
-        "id" : 4,
-        "priority" : 4
-      } ],
-      "onClickPage" : {
-        "nextPage" : "",
-        "hideScenarios" : false
-      }
-    } ]
-  },
-  "quizQ157" : {
-    "category" : "Quiz",
-    "repeatforuser" : false,
-    "repeatforall" : true,
-    "questionTime" : 3000,
-    "displayCalculator" : true,
-    "minimumInventoryScoreRequired" : 0,
-    "inventoryScoreToBeChanged" : 0,
-    "templates" : [ {
-      "templateId" : 0,
-      "questionId" : 0,
-      "templateType" : "quiz",
-      "noOfQuestions" : "",
-      "question" : "{{QuizQuestion157}}",
-      "questionTime" : 3000,
-      "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "credit" : {
-        "inventory" : 0,
-        "bankBalance" : 0,
-        "reputationPoints" : 1,
-        "cash" : 0
-      },
-      "answer" : "3",
-      "optionName" : "q157",
-      "options" : [ {
-        "optionName" : "q157",
-        "optionValue" : "{{QuizQuestion157Option1}}",
-        "id" : 1,
-        "priority" : 1
-      }, {
-        "optionName" : "q157",
-        "optionValue" : "{{QuizQuestion157Option2}}",
-        "id" : 2,
-        "priority" : 2
-      }, {
-        "optionName" : "q157",
-        "optionValue" : "{{QuizQuestion157Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q157",
-        "optionValue" : "{{QuizQuestion157Option4}}",
-        "id" : 4,
-        "priority" : 4
-      } ],
-      "onClickPage" : {
-        "nextPage" : "",
-        "hideScenarios" : false
-      }
-    } ]
-  },
-  "quizQ158" : {
-    "category" : "Quiz",
-    "repeatforuser" : false,
-    "repeatforall" : true,
-    "questionTime" : 3000,
-    "displayCalculator" : true,
-    "minimumInventoryScoreRequired" : 0,
-    "inventoryScoreToBeChanged" : 0,
-    "templates" : [ {
-      "templateId" : 0,
-      "questionId" : 0,
-      "templateType" : "quiz",
-      "noOfQuestions" : "",
-      "question" : "{{QuizQuestion158}}",
-      "questionTime" : 3000,
-      "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "credit" : {
-        "inventory" : 0,
-        "bankBalance" : 0,
-        "reputationPoints" : 1,
-        "cash" : 0
-      },
-      "answer" : "3",
-      "optionName" : "q158",
-      "options" : [ {
-        "optionName" : "q158",
-        "optionValue" : "{{QuizQuestion158Option1}}",
-        "id" : 1,
-        "priority" : 1
-      }, {
-        "optionName" : "q158",
-        "optionValue" : "{{QuizQuestion158Option2}}",
-        "id" : 2,
-        "priority" : 2
-      }, {
-        "optionName" : "q158",
-        "optionValue" : "{{QuizQuestion158Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q158",
-        "optionValue" : "{{QuizQuestion158Option4}}",
-        "id" : 4,
-        "priority" : 4
-      } ],
-      "onClickPage" : {
-        "nextPage" : "",
-        "hideScenarios" : false
-      }
-    } ]
-  },
-  "quizQ159" : {
-    "category" : "Quiz",
-    "repeatforuser" : false,
-    "repeatforall" : true,
-    "questionTime" : 3000,
-    "displayCalculator" : true,
-    "minimumInventoryScoreRequired" : 0,
-    "inventoryScoreToBeChanged" : 0,
-    "templates" : [ {
-      "templateId" : 0,
-      "questionId" : 0,
-      "templateType" : "quiz",
-      "noOfQuestions" : "",
-      "question" : "{{QuizQuestion159}}",
-      "questionTime" : 3000,
-      "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "credit" : {
-        "inventory" : 0,
-        "bankBalance" : 0,
-        "reputationPoints" : 1,
-        "cash" : 0
-      },
-      "answer" : "1",
-      "optionName" : "q159",
-      "options" : [ {
-        "optionName" : "q159",
-        "optionValue" : "{{QuizQuestion159Option1}}",
-        "id" : 1,
-        "priority" : 1
-      }, {
-        "optionName" : "q159",
-        "optionValue" : "{{QuizQuestion159Option2}}",
-        "id" : 2,
-        "priority" : 2
-      }, {
-        "optionName" : "q159",
-        "optionValue" : "{{QuizQuestion159Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q159",
-        "optionValue" : "{{QuizQuestion159Option4}}",
-        "id" : 4,
-        "priority" : 4
-      } ],
-      "onClickPage" : {
-        "nextPage" : "",
-        "hideScenarios" : false
-      }
-    } ]
-  },
-  "quizQ160" : {
-    "category" : "Quiz",
-    "repeatforuser" : false,
-    "repeatforall" : true,
-    "questionTime" : 3000,
-    "displayCalculator" : true,
-    "minimumInventoryScoreRequired" : 0,
-    "inventoryScoreToBeChanged" : 0,
-    "templates" : [ {
-      "templateId" : 0,
-      "questionId" : 0,
-      "templateType" : "quiz",
-      "noOfQuestions" : "",
-      "question" : "{{QuizQuestion160}}",
-      "questionTime" : 3000,
-      "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "credit" : {
-        "inventory" : 0,
-        "bankBalance" : 0,
-        "reputationPoints" : 1,
-        "cash" : 0
-      },
-      "answer" : "1",
-      "optionName" : "q160",
-      "options" : [ {
-        "optionName" : "q160",
-        "optionValue" : "{{QuizQuestion160Option1}}",
-        "id" : 1,
-        "priority" : 1
-      }, {
-        "optionName" : "q160",
-        "optionValue" : "{{QuizQuestion160Option2}}",
-        "id" : 2,
-        "priority" : 2
-      }, {
-        "optionName" : "q160",
-        "optionValue" : "{{QuizQuestion160Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q160",
-        "optionValue" : "{{QuizQuestion160Option4}}",
-        "id" : 4,
-        "priority" : 4
-      } ],
-      "onClickPage" : {
-        "nextPage" : "",
-        "hideScenarios" : false
-      }
-    } ]
-  },
-  "quizQ161" : {
-    "category" : "Quiz",
-    "repeatforuser" : false,
-    "repeatforall" : true,
-    "questionTime" : 3000,
-    "displayCalculator" : true,
-    "minimumInventoryScoreRequired" : 0,
-    "inventoryScoreToBeChanged" : 0,
-    "templates" : [ {
-      "templateId" : 0,
-      "questionId" : 0,
-      "templateType" : "quiz",
-      "noOfQuestions" : "",
-      "question" : "{{QuizQuestion161}}",
-      "questionTime" : 3000,
-      "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "credit" : {
-        "inventory" : 0,
-        "bankBalance" : 0,
-        "reputationPoints" : 1,
-        "cash" : 0
-      },
-      "answer" : "4",
-      "optionName" : "q161",
-      "options" : [ {
-        "optionName" : "q161",
-        "optionValue" : "{{QuizQuestion161Option1}}",
-        "id" : 1,
-        "priority" : 1
-      }, {
-        "optionName" : "q161",
-        "optionValue" : "{{QuizQuestion161Option2}}",
-        "id" : 2,
-        "priority" : 2
-      }, {
-        "optionName" : "q161",
-        "optionValue" : "{{QuizQuestion161Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q161",
-        "optionValue" : "{{QuizQuestion161Option4}}",
-        "id" : 4,
-        "priority" : 4
-      } ],
-      "onClickPage" : {
-        "nextPage" : "",
-        "hideScenarios" : false
-      }
-    } ]
-  },
-  "quizQ162" : {
-    "category" : "Quiz",
-    "repeatforuser" : false,
-    "repeatforall" : true,
-    "questionTime" : 3000,
-    "displayCalculator" : true,
-    "minimumInventoryScoreRequired" : 0,
-    "inventoryScoreToBeChanged" : 0,
-    "templates" : [ {
-      "templateId" : 0,
-      "questionId" : 0,
-      "templateType" : "quiz",
-      "noOfQuestions" : "",
-      "question" : "{{QuizQuestion162}}",
-      "questionTime" : 3000,
-      "optionsTime" : 2000,
-      "questionHeading" : "GST",
-      "helpPageName" : "quizHelp",
-      "credit" : {
-        "inventory" : 0,
-        "bankBalance" : 0,
-        "reputationPoints" : 1,
-        "cash" : 0
-      },
-      "answer" : "3",
-      "optionName" : "q162",
-      "options" : [ {
-        "optionName" : "q162",
-        "optionValue" : "{{QuizQuestion162Option1}}",
-        "id" : 1,
-        "priority" : 1
-      }, {
-        "optionName" : "q162",
-        "optionValue" : "{{QuizQuestion162Option2}}",
-        "id" : 2,
-        "priority" : 2
-      }, {
-        "optionName" : "q162",
-        "optionValue" : "{{QuizQuestion162Option3}}",
-        "id" : 3,
-        "priority" : 3
-      }, {
-        "optionName" : "q162",
-        "optionValue" : "{{QuizQuestion162Option4}}",
-        "id" : 4,
-        "priority" : 4
-      } ],
-      "onClickPage" : {
-        "nextPage" : "",
-        "hideScenarios" : false
-      }
+      "category" : "kyc",
+      "doneTitle" : "{{SUBMIT}}",
+      "cancelTitle" : "{{cancelTitle}}",
+      "okTitle" : "{{OK}}",
+      "pageName" : "quizQ155"
     } ]
   }
 }

@@ -49,6 +49,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	  let questionNo = $("#quizQuestionNumber").html();
 	  let audioElement = document.getElementById('answerDiv');
 	  let quizResultMessage;
+	  let nextAction;
 
 	  if(checkedValue == answer){
 	  		let scoredMarks = 1;
@@ -57,10 +58,11 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	if(entryPoint == "unluckyScenario"){
 		  		let currentPlayerRepPoints = userArray[playerChance].getReputationPts();
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongResultFromLuckyScenario'], [reputationPoints]));
-				userArray[playerChance].setReputationPts(currentPlayerRepPoints+reputationPoints);
+		  		nextAction = "ubsApp.closePopup();	ubsApp.closeCurrentScenario();"
 		  	}
 		  	else{
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizCorrectAnswerMessage'], [reputationPoints]));
+		  		nextAction = "ubsApp.closePopup("+true+");ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
 		  	}
 		    ubsApp.openPopup({
         		"message" : quizResultMessage,
@@ -70,7 +72,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
                 		{
                 			'id':"quizRightAnswer",
                             'name' : ubsApp.getTranslation("OK"),
-                            'action': "ubsApp.closePopup("+true+");ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
+                            'action': nextAction
                         }
                  ]
 
@@ -86,37 +88,50 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	if(entryPoint == "unluckyScenario"){
 		  		let currentPlayerRepPoints = userArray[playerChance].getReputationPts();
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongResultFromUnluckyScenario'], [reputationPoints]));
-				userArray[playerChance].setReputationPts(currentPlayerRepPoints+reputationPoints);
-		  	}
-		  	else{
-		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongAnswerMessage'], [reputationPoints]));
-		  	}
-		  	ubsApp.openPopup({
-        		"message" : quizResultMessage,
-        		"header"  : ubsApp.translation["quizWrongAnswerHeading"],
-        		"headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
-        		"buttons":[
-                		{
-                			'id':"quizWrongAnswer",
-                            'name' : ubsApp.getTranslation("yes"),
-                            'action': "ubsApp.startHelp(\'"+helpPageName+"\');ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
-                        },
-                        {
-                			'id':"quizWrongAnswer",
-                            'name' : ubsApp.getTranslation("no"),
-                            'action': "ubsApp.closePopup();ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
-                        }
-                 ]
+				userArray[playerChance].setReputationPts(currentPlayerRepPoints-reputationPoints);
+		  		ubsApp.openPopup({
+	        		"message" : quizResultMessage,
+	        		"header"  : ubsApp.translation["quizWrongAnswerHeading"],
+	        		"headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
+	        		"buttons":[
+	                		{
+	                			'id':"unluckyScenarioOkButton",
+	                            'name' : ubsApp.getTranslation("OK"),
+	                            'action': "ubsApp.closePopup();	ubsApp.closeCurrentScenario();"
+	                        }
+	                 ]
 
-        	}); 
+	        	});
+		  	}
+		  	else{	
+		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongAnswerMessage'], [reputationPoints]));
+			  	ubsApp.openPopup({
+	        		"message" : quizResultMessage,
+	        		"header"  : ubsApp.translation["quizWrongAnswerHeading"],
+	        		"headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
+	        		"buttons":[
+	                		{
+	                			'id':"quizWrongAnswer",
+	                            'name' : ubsApp.getTranslation("yes"),
+	                            'action': "ubsApp.startHelp(\'"+helpPageName+"\');ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
+	                        },
+	                        {
+	                			'id':"quizWrongAnswer",
+	                            'name' : ubsApp.getTranslation("no"),
+	                            'action': "ubsApp.closePopup();ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
+	                        }
+	                 ]
+
+        		});
+		  	}
+ 
   			ubsApp.raiseAudioEvent(audioElement, 'wrongAnswer');
   			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, scoredMarks,totalMarks, 1, startTime, "quizScore");
-
 	  		ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, 0,reputationPoints, 1, startTime, "quizReputationPoints");
 
 	  	
 	  }
-
+	  ubsApp.currentPlayerContents();
 	  if(ubsApp.pages[page].templates[0].quizResult){
 	  	ubsApp.displayResults(page);
 	  }
@@ -151,7 +166,7 @@ ubsApp.luckQuizResult=function(){
 	for(let i=0;i<choiceSelected.answers.length;i++){
 		if(choiceSelected.answers[i]==false){
 		   inventory += choiceSelected.credit[i].inventory;
-		   bankBalance += choiceSelected.credit[i].bankBalance;
+		   //bankBalance += choiceSelected.credit[i].bankBalance;
 		   //reputationPoints += choiceSelected.credit[i].reputationPoints;
 		   cash += choiceSelected.credit[i].cash;
 		}
@@ -211,6 +226,7 @@ ubsApp.generalQuizResult=function(page){
                 });
 			
 	}
+	ubsApp.currentPlayerContents();
 
 	
 }

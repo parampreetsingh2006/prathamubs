@@ -461,14 +461,14 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '       <span id="answerHeader" class="popupHeaderFontSize"></span><br>'+
 '       <span id="answerMessage"></span>'+
 '       <div id="quizOk">'+
-'           <button id="wrongAnswerOk" style="color:green" class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >OK</button>'+
+'           <button id="wrongAnswerOk" style="color:green" class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >{{okTitle}}</button>'+
 '       </div>'+
 '   </div>'+
 '</div>'+
 '<img src="{{gameLogo}}" class="quizGameLogoImage">' +
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
-'   <button id="quizDone" style="color:green" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">SUBMIT</button>'+
-'   <button id="quizCancel" style="color:red" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">CANCEL</button>'+
+'   <button id="quizDone" style="color:green" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">{{doneTitle}}</button>'+
+'   <button id="quizCancel" style="color:red" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">{{cancelTitle}}</button>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>'+
 '</div>';
@@ -750,7 +750,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 
 '               {{#if quizRequired}}'+
 '                  <div style="display:inline-block; width:33.33%; text-align:left;float:left">'+
-'                       <button class="takeQuizButton" onclick="ubsApp.luckPaymentQuiz(\'luckyUnluckyScenario7\')">{{takeQuizTitle}}</button>'+
+'                       <button class="takeQuizButton" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
 '                  </div>'+
 '                   {{#if hasAdvantageCard}}'+
 '                       <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+

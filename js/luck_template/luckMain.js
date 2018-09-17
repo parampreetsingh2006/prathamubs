@@ -33,8 +33,12 @@ ubsApp.luckPaymentQuiz=function(page){
 ubsApp.findQuizPage = function(category){
     var filteredObjs = [];
     var quizConfig = ubsApp.quizConfig;
+    var quizCategory = category;
+    if(!quizCategory){
+        quizCategory = "any";
+    }
     for(var quizConfigTemplate in quizConfig){
-        if(quizConfig[quizConfigTemplate].templates[0].category == category){
+        if(quizConfig[quizConfigTemplate].templates[0].category == quizCategory.toLowerCase()){
             filteredObjs.push(quizConfig[quizConfigTemplate]);
         }
     }

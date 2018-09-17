@@ -74,15 +74,22 @@ ubsApp.generalQuiz=function(config){   //credits can be amount or points dependi
 
 ubsApp.renderFirstQuizPage = function(page){
 
+	var pageTemplate = ubsApp.pages[page].templates[0];
 	$('#monopolyBase').css("z-index",-10);
     $('#templateBase').css("z-index",10);
-
+    if(pageTemplate.entryPoint == "unluckyScenario"){
+    	pageTemplate.currentPlayerName = userArray[playerChance].getplayerName();
+    }
     document.getElementById("templateContent").style.opacity="0.95";
 
     $('#templateContent').css("height","100vh");
     $('#templateContent').css("width","100vw");
-    ubsApp.startRecordingTimer(ubsApp.pages[page].templates[0]);
+    ubsApp.startRecordingTimer(pageTemplate);
     ubsApp.renderPageByName(page);
+    if(pageTemplate.entryPoint == "unluckyScenario"){
+    	$('#score').hide();
+    	$('#quizDone').hide();
+    }
 	$("#correctAnswers").text("0");
 	$("#quizQuestionNumber").text("1");
 
