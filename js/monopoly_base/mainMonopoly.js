@@ -344,7 +344,7 @@ monopoly.storePlayerDetails=function(){
 
 
         user.setplayerScore(initialPlayerCash);
-        user.setLastWeekSummary(initialPlayerCash, initialPlayerBankBalance, initialReputation, 0, 0);
+        user.setLastWeekSummary(initialPlayerCash, initialPlayerBankBalance, initialReputation, 0, 0, 60.00);
         user.setInventoryScore(60.00);
         var color=$('input[name=Radio'+i+']:checked').val();
         user.setplayerColor(color.toLowerCase());
@@ -384,6 +384,15 @@ monopoly.storePlayerDetails=function(){
     monopoly.noPlayersPlaying = numplayers;
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
+    ubsApp.openPopup({
+                      "header" : ubsApp.getTranslation("theGameBegins"),
+                      "message" : "",
+                      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                      "showCloseButton" : false,
+                      "showBorder" : false,
+                      "backgroundColor" :"white",
+                   });
+    setTimeout(function(){ubsApp.closePopup();}, 2000);
 }
 
 monopoly.initPlayers=function(){
@@ -517,6 +526,7 @@ monopoly.closeLeaderBoard=function(){
 monopoly.chooseLanguage=function(){
 
 
+
   var language=$('input[name=languageRadio]:checked').val();
   var flag = false;
   if(language == null){
@@ -543,16 +553,7 @@ monopoly.chooseLanguage=function(){
   
     
    jsElm.onload=function(){
-       ubsApp.openPopup({
-                     "message" : ubsApp.getTranslation("loadingGameMessage"),
-                     "header" : "",
-                     "headerStyle" : "",
-                     "showCloseButton" : false,
-                     });
-      
-      ubsApp.closePopup();
-      ubsApp.translateScenarios();
-      
+
       if(flag == true){
     	  ubsApp.openPopup({
               "message" : "Please select the language",
@@ -565,16 +566,23 @@ monopoly.chooseLanguage=function(){
      else
      {
     	 //reinitialze the page
-    	 monopoly.intitializeTemplates();
-    	 monopoly.initializeScenarios();
-    	 ubsApp.intitializeTemplates();
-    	 ubsApp.mapTemplatetoFunction();
-    	 ubsApp.initializeUbsPages();
-    	 monopoly.initializePages();
+//    	 monopoly.intitializeTemplates();
+//    	 monopoly.initializeScenarios();
+//    	 ubsApp.intitializeTemplates();
+//    	 ubsApp.mapTemplatetoFunction();
+//    	 ubsApp.initializeUbsPages();
+//    	 monopoly.initializePages();
 
+         ubsApp.openPopup({
+                                       "message" : ubsApp.getTranslation("loadingGameMessage"),
+                                       "header" : "",
+                                       "headerStyle" : "",
+                                       "showCloseButton" : false,
+                                       });
     	 ubsApp.translateScenarios();
     	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
     	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
+    	 ubsApp.closePopup();
       }
     }
   
@@ -654,6 +662,8 @@ ubsApp.confirmEndGame=function(){
 
     let playersConfig =[];
     let atleastOne=false;
+    let highestScoringPlayer = -1;
+    let highestScore = -10000;
   	for(var i=0;i<numplayers;i++){
   	    let playerConfig = {};
   	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 3;
@@ -676,14 +686,15 @@ ubsApp.confirmEndGame=function(){
         playerConfig.PLAYER = ubsApp.getTranslation("PLAYER");
         playerConfig.INVENTORY = ubsApp.getTranslation("INVENTORY");
         playerConfig.playerNameTitle = ubsApp.getTranslation("playerNameTitle");
-         playerConfig.Credit = ubsApp.getTranslation("DEBT");
-          playerConfig.Cash = ubsApp.getTranslation("cashTitle");
+        playerConfig.Credit = ubsApp.getTranslation("DEBT");
+        playerConfig.Cash = ubsApp.getTranslation("cashTitle");
 
         let weeks = player.getWeeks();
         if(weeks > 12) {
             weeks = 12;
         }
   		var harnamProjectedScore=weeks*harnamSinghProfit;
+
   		let currentPlayerProfit=0;
   		currentPlayerProfit+=(player.getplayerScore()-initialPlayerCash);
   		currentPlayerProfit+=(player.getBankBalance()-initialPlayerBankBalance);
@@ -697,12 +708,16 @@ ubsApp.confirmEndGame=function(){
   			arr[i]=true;
   		}
 
+  		if(currentPlayerProfit > highestScore) {
+  		    highestScoringPlayer = i;
+  		    highestScore = currentPlayerProfit;
+  		}
+
   		playersConfig[i] = playerConfig;
 
   	}
 
   		var winnerName="";
-  		var currentHighScore=0;
 
   		for(var i=0;i<numplayers;i++)
   		{
@@ -712,27 +727,25 @@ ubsApp.confirmEndGame=function(){
   				var consolidatedScore=userArray[i].getplayerScore()+userArray[i].getBankBalance()-userArray[i].getCredit()+userArray[i].getReputationPts();
   				if(consolidatedScore>currentHighScore){
   					currentHighScore=consolidatedScore;
-  					winnerName=userArray[i].getplayerName();
+  					winnerName=userArray[i].getplayerName() +  " " + ubsApp.getTranslation("hasWon");
   				}
   			}
   		}
 
   		if(!atleastOne){
-  		winnerName="No One Wins"
+  		  winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}", userArray[highestScoringPlayer].getplayerName());
 
-  	}
+  	   }
 
 
   	ubsApp.endGameConfig.players = playersConfig;
   	monopoly.renderPageforBoard(monopoly.pages.endGamePage);
-  	if(atleastOne){
-        ubsApp.openPopup({
-                       "header" : winnerName + " " + ubsApp.getTranslation("hasWon"),
-                      "message" : "",
-                      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-                      "imageUrl" : ubsApp.getTranslation("congratulationImage"),
-                   });
-     }
+    ubsApp.openPopup({
+                   "header" : winnerName,
+                  "message" : "",
+                  "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                  "imageUrl" : ubsApp.getTranslation("congratulationImage"),
+               });
   }
 
 ubsApp.nextMove = function(){

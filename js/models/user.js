@@ -181,7 +181,8 @@ class User{
     }
 
     copyCurrentSummaryToLastWeek() {
-        this.setLastWeekSummary(this.getplayerScore(), this.getBankBalance(), this.getReputationPts(), this.getCredit(), this.getAdvantageCardNumber());
+        this.setLastWeekSummary(this.getplayerScore(), this.getBankBalance(), this.getReputationPts(), this.getCredit(), this.getAdvantageCardNumber(), this.getInventoryScore());
+
     }
 
     setOpenWeekSummary(openWeekSummary) {
@@ -268,12 +269,13 @@ class User{
         return this.numberOfWildCard;
     }
 
-    setLastWeekSummary(cash, bankBalance, reputationPts, credit, advantageCard) {
+    setLastWeekSummary(cash, bankBalance, reputationPts, credit, advantageCard, inventoryScore) {
         this.lastWeekScore = cash;
         this.lastWeekBankBalance = bankBalance;
         this.lastWeekReputationPts = reputationPts;
         this.lastWeekCredit = credit;
         this.lastWeekAdvantageCard = advantageCard;
+        this.lastWeekInventoryScore = inventoryScore;
     }
 
     getLastWeekPlayerScore() {
@@ -294,6 +296,10 @@ class User{
 
     getLastWeekAdvantageCardNumber() {
         return this.lastWeekAdvantageCard;
+    }
+
+    getLastWeekInventoryScore() {
+        return this.lastWeekInventoryScore;
     }
 getScenario(category,playerChance)
     {
