@@ -663,6 +663,8 @@ ubsApp.confirmEndGame=function(){
 
     let playersConfig =[];
     let atleastOne=false;
+    let highestScoringPlayer = -1;
+    let highestScore = -10000;
   	for(var i=0;i<numplayers;i++){
   	    let playerConfig = {};
   	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 3;
@@ -685,14 +687,15 @@ ubsApp.confirmEndGame=function(){
         playerConfig.PLAYER = ubsApp.getTranslation("PLAYER");
         playerConfig.INVENTORY = ubsApp.getTranslation("INVENTORY");
         playerConfig.playerNameTitle = ubsApp.getTranslation("playerNameTitle");
-         playerConfig.Credit = ubsApp.getTranslation("DEBT");
-          playerConfig.Cash = ubsApp.getTranslation("cashTitle");
+        playerConfig.Credit = ubsApp.getTranslation("DEBT");
+        playerConfig.Cash = ubsApp.getTranslation("cashTitle");
 
         let weeks = player.getWeeks();
         if(weeks > 12) {
             weeks = 12;
         }
   		var harnamProjectedScore=weeks*harnamSinghProfit;
+
   		let currentPlayerProfit=0;
   		currentPlayerProfit+=(player.getplayerScore()-initialPlayerCash);
   		currentPlayerProfit+=(player.getBankBalance()-initialPlayerBankBalance);
@@ -706,12 +709,16 @@ ubsApp.confirmEndGame=function(){
   			arr[i]=true;
   		}
 
+  		if(currentPlayerProfit > highestScore) {
+  		    highestScoringPlayer = i;
+  		    highestScore = currentPlayerProfit;
+  		}
+
   		playersConfig[i] = playerConfig;
 
   	}
 
   		var winnerName="";
-  		var currentHighScore=0;
 
   		for(var i=0;i<numplayers;i++)
   		{
@@ -721,27 +728,25 @@ ubsApp.confirmEndGame=function(){
   				var consolidatedScore=userArray[i].getplayerScore()+userArray[i].getBankBalance()-userArray[i].getCredit()+userArray[i].getReputationPts();
   				if(consolidatedScore>currentHighScore){
   					currentHighScore=consolidatedScore;
-  					winnerName=userArray[i].getplayerName();
+  					winnerName=userArray[i].getplayerName() +  " " + ubsApp.getTranslation("hasWon");
   				}
   			}
   		}
 
   		if(!atleastOne){
-  		winnerName="No One Wins"
+  		  winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}", userArray[highestScoringPlayer].getplayerName());
 
-  	}
+  	   }
 
 
   	ubsApp.endGameConfig.players = playersConfig;
   	monopoly.renderPageforBoard(monopoly.pages.endGamePage);
-  	if(atleastOne){
-        ubsApp.openPopup({
-                       "header" : winnerName + " " + ubsApp.getTranslation("hasWon"),
-                      "message" : "",
-                      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-                      "imageUrl" : ubsApp.getTranslation("congratulationImage"),
-                   });
-     }
+    ubsApp.openPopup({
+                   "header" : winnerName,
+                  "message" : "",
+                  "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                  "imageUrl" : ubsApp.getTranslation("congratulationImage"),
+               });
   }
 
 ubsApp.nextMove = function(){
