@@ -554,16 +554,6 @@ monopoly.chooseLanguage=function(){
     
    jsElm.onload=function(){
 
-      ubsApp.openPopup({
-                               "message" : ubsApp.getTranslation("loadingGameMessage"),
-                               "header" : "",
-                               "headerStyle" : "",
-                               "showCloseButton" : false,
-                               });
-
-
-//      ubsApp.translateScenarios();
-      
       if(flag == true){
     	  ubsApp.openPopup({
               "message" : "Please select the language",
@@ -583,10 +573,16 @@ monopoly.chooseLanguage=function(){
 //    	 ubsApp.initializeUbsPages();
 //    	 monopoly.initializePages();
 
+         ubsApp.openPopup({
+                                       "message" : ubsApp.getTranslation("loadingGameMessage"),
+                                       "header" : "",
+                                       "headerStyle" : "",
+                                       "showCloseButton" : false,
+                                       });
     	 ubsApp.translateScenarios();
-    	  ubsApp.closePopup();
     	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
     	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
+    	 ubsApp.closePopup();
       }
     }
   
