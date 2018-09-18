@@ -1264,5 +1264,6 @@ ubsApp.translation={
         "quizWrongResultFromUnluckyScenario":"That is the wrong answer. Money will be deducted and/or reputation points will be lost",
        "quizWrongResultFromLuckyScenario":"That is the correct answer. No money will be deducted. Nor will any reputation points be lost",
        "luckTakeQuizPopupMessage":"You will be shown 1 question. If you are able to answer it, the fine will be waived or the money will not be deducted from your account",
-   
+       "theGameBegins" : "खेल शुरू होता है!!!",
+
 }

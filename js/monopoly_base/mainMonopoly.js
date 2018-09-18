@@ -384,6 +384,15 @@ monopoly.storePlayerDetails=function(){
     monopoly.noPlayersPlaying = numplayers;
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
+    ubsApp.openPopup({
+                      "header" : ubsApp.getTranslation("theGameBegins"),
+                      "message" : "",
+                      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                      "showCloseButton" : false,
+                      "showBorder" : false,
+                      "backgroundColor" :"white",
+                   });
+    setTimeout(function(){ubsApp.closePopup();}, 2000);
 }
 
 monopoly.initPlayers=function(){
