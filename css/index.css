@@ -332,6 +332,7 @@ width: 100%;
     font-size:2.5vmax;
     background-image: url(../images/luck_strip.png);
     background-size: 100% 100%;
+    width: 15%;
 }
 
 .paymentScreenTitle{
@@ -343,6 +344,7 @@ width: 100%;
     font-size:2.5vmax;
     background-image: url(../images/payment_strip.png);
     background-size: 100% 100%;
+    width: 15%;
 }
 .luckIconContainer{
     width: 7%;
@@ -464,14 +466,14 @@ button:focus {outline:0;}
     margin-top: 3%;
     background-image:url(../images/buy.png);
     background-size: 100% 100%;
-    width: 7vw;
+    width: 8vw;
     height: 7vw;
     margin-left: 5%;
 }
 .purchaseTitle {
 	color: white;
 	font-size: 2.5vmax;
-	font-weight: bold;
+	font-weight: 600;
     background-image:url(../images/red_strip.png);
     background-size: 100% 100%;
     width: 60%;
