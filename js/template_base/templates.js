@@ -1115,14 +1115,14 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'       <div class="row" id="rightInfo">'+
-'           <div class="col-md-12" >'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
+'       <div class="row" id="rightInfo" style="position: relative;">'+
+'           <div class="col-md-6" >'+
+'               <span id="decisionBankBalance" style="word-spacing: 7.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} ₹{{reputationPts}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
+'       <div class="decisionHelpButtons" onclick="ubsApp.startHelp("decisionHelp")" style="position: absolute;right: 0px;bottom: 0px;"></div>'+
 '       </div>'+
-'   <button id="quizHelp" class=\'quizButtons decisionHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 //ubsApp.advantageCardTemplate='<div style="width:100%;height:100%;  background-color:rgb(105,105,105);">'+

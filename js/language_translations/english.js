@@ -216,42 +216,145 @@ ubsApp.translation={
         "no":"NO",
 
 
-        "decisionQ1":"Food inspector visits your shop and it is found that you have some products that are expired but still kept for sale.<br>Food inspector raises objection. He asks for shop documents. You don't have all documents.<br>",
-        "decisionQ2":"Last year during extremely heavy rains, there was immense flooding and water logging in your area which led to partial or complete damage of the food items in your shop. <br> of the neighbouring shops were also affected. Your insurance agent has come for purchase of your policy? Premium cost will between Rs 3000 - Rs 6800 per year. <br>Will you purchase it ?",
-        "decisionQ3":"You need funds to repair the broken ceiling in your store. The cost to repair the ceiling is ₹ 10000. Would you - ",
-        "decisionQ4":"You decide not to pay taxes at all in spite of having a significant income. <br>Income tax officer has sent you a notice for payment of ₹20000 and fine of ₹3500.",
-        "decisionQ5":"A customer purchases goods worth 1200. He gives you a ₹ 2000 note. You return 700 rupees. The customer doesn't count the money and leaves. Later you realize that you didn't return 100 rupees. Will you return 100 rupees to customer when they visit your shop again.",
-        "decisionQ6":"You need to buy a weighing machine. The electronic machine works on electricity but can also be battery operated. It will cost ₹ 1200. It measures accurate quantities of products.  A Conventional one will cost you ₹ 500 Which one will you buy?",
-        "decisionQ7":"You heard about security camera that will continuously monitor and record the activities in shop. It will cost you ₹ 5000. Will you install it.",
-        "decisionQ8":"A sales man came to your shop and said that there is an offer going on where if you buy 20 kg of washing powder worth Rs 1000, you will get Rs 500 cash back. The washing powder was nonbranded and not packaged properly. Will you buy it?",
-        "decisionQ9":"Your uncle in village is ill and alone. Will you go to look after him? Shut shop for 7 days. Lose profit of 7,000 but gain 20 merit points.",
-        "decisionQ10":"Will you give discount on packet of chips to sale off the existing stock which is expired. You will get a profit 500 Rs if you sell them.",
-        "decisionQ11":"Your delivery van was stopped for breaking the signal ,You are late for a big order. What would you do.",
-        "decisionQ12":"You have refrigerator in your shop. It needs servicing. One service costs ₹ 750. A service man gives you an offer where you will get one service free when you pay advance money for 3 regular service. ",
-        "decisionQ13":"Since, there are voltage fluctuations in your area. You purchased voltage stablizer to safeguard refrigerator, electric weighing balace. It cost you ₹ 3000. This will save you from damaging stock worth ₹ 700 in this week and more in the future. Will you purchase it?",
-        "decisionQ14":"3 new grocery shops have opened in the 5 km vicinity. <br>To make your store known, you can send out pamphlets that will cost you ₹ 1000 to print and distribute. This could result in sales increase between ₹ 500 - 3000. <br>Will you do it?",
-        "decisionQ15":"The shop also sells SIM cards. A customer offers you ₹ 2000 to sell him a SIM card without KYC documents. Do you accept?",
+        "decisionQ1":"Incomplete shop documents.",
+        "decisionQ2":"Your insurance agent has come for purchase of your policy? Premium cost will between Rs 3000 - Rs 6800 per year. <br>Will you purchase it ? ",
+        "decisionQ3":"Ceiling repair costs - Rs. 10000",
+        "decisionQ4":"Income tax payment overdue. Rs.20000 + Fine:Rs.3500.",
+        "decisionQ5":"Wrong amout of change given. Rs.100 less. Return to customer?",
+        "decisionQ6":"Buy accurate electronic machine weighing machine (Rs. 1200) or conventional machine (Rs. 500) ",
+        "decisionQ7":"Security Camera cost: Rs. 500. Buy?",
+        "decisionQ8":"Non branded, unpackaged goods for sale with Rs. 500 cashback. Buy? ",
+        "decisionQ9":"Uncle ill in another town.",
+        "decisionQ10":"Chips stock expired",
+        "decisionQ11":"Speeding fine",
+        "decisionQ12":"Servicing required",
+        "decisionQ13":"Voltage fluctuation!",
+        "decisionQ14":"Shop marketing required. Spend Rs. 1000 and gain between Rs. 500-Rs.3000",
+        "decisionQ15":"Accept cash of Rs. 2000 for selling SIM without KYC documents?",
+        "decisionQ16":"Wholesaler discount on detergent leading to gain of Rs. 2500",
+        "decisionQ17":"No stock of dal anywhere except your shop",
+        "decisionQ17O1":"Increase dal price by 50% and get gains of Rs.500 (Earn money but lose reputation points)",
+        "decisionQ17O2":"Sell at same price (Gain Reputation Points)",
+        "decisionQ18":"You learn that selling medicines over the counter could yield better profit",
+        "decisionQ18O1":"Start selling prescription medicine even though you don't have a license",
+        "decisionQ18O2":"Do not sell as it is illegal",
+        "decisionQ18O3":"Secretly sell only to regular customers",
 
+        "decisionQ19":"During shop closing time you find there are many sandwiches unsold",
+        "decisionQ19O1":"Put them in freezer and sell tomorrow. (Lose reputation points)",
+        "decisionQ19O2":"Throw them away and incur loss of Rs. 250 (Gain reputation points but lose Rs. 250)",
+        "decisionQ19O3":"Give them away to the nearest charity shelter. (Gain reputation points)",
 
-        "decisionQ1O1":"Do you bribe the inspector ₹ 1000? ",
-        "decisionQ1O2":"Do you pay the fine ₹ 1500 and documentation fees of ₹ 1000?",
+        "decisionQ20":"Customer asks help to carry items to home",
+        "decisionQ20O1":"Tell customer the sale value is low so no help",
+        "decisionQ20O2":"Close shop for half an hour and help - Loss of business worth Rs.1000",
+        "decisionQ20O3":"Deliver after shop closes",
 
-        "decisionQ3O1":"avail of a loan from Punjab National Bank?",
-        "decisionQ3O2":"take money from friend?",
-        "decisionQ3O3":"take money from an unauthorised dealer?",
+        "decisionQ21":"Purchase swipe machine for Rs. 3000?",
+        "decisionQ21O1":"Yes (Spend Rs. 3000 but gain reputation points)",
+        "decisionQ21O2":" No (Lose reputation points)",
+        
+        "decisionQ22":"Incur charges of 2% on card transactions resulting in loss of Rs. 500",
+        "decisionQ22O1":"You pass on the charge to customers (Lose Reputation Points)",
+        "decisionQ22O2":"You absorb the charge as customers always spend more on card(Lose Rs. 500 but gain Reputation Points)",
 
-        "decisionQ4O1":"Would you pay the tax and fine?",
-        "decisionQ4O2":"would you ignore it.",
-        "decisionQ4O3":"would you bribe the tax officer of Rs 5000?",
+        "decisionQ23":"Regular customer has Rs.150 less in cash for a bill of Rs.1000",
+        "decisionQ23O1":"Only sell them goods worth Rs. 850",
+        "decisionQ23O2":"Make a note and ask customer to pay during next visit",
 
-        "decisionQ6O1":"Electronic Machine",
-        "decisionQ6O2":"Conventional Machine",
+        "decisionQ24":"There is a shortage of milk in the market but you have 100 packets",
+        "decisionQ24O1":"Hike up price and make Rs. 1000 extra (Gain Rs 1000 but lose Reputation Points)",
+        "decisionQ24O2":"Sell at usual price. (Gain Reputation points)",
+        "decisionQ24O3":"Sell until break-even and give the rest to the needy. (Gain Reputation points)",
 
+        "decisionQ25":"Nebouring shop charges Re. 1 extra for cold water bottles",
+        "decisionQ25O1":"Advise the shop next door to not charge to avoid reporting to authorities",
+        "decisionQ25O2":"Tell your customers to not go to that shop",
+        "decisionQ25O3":"You also start charging",
 
-        "decisionQ11O1":"Do you bribe the police Rs 100 and rush for delivery. ",
-        "decisionQ11O2":"Pay the fine of Rs 500 by going to the police station and get late for the delivery",
+        "decisionQ26":"Unsold sandwiches at shop closing time",
+        "decisionQ26O1":"Put them in freezer and sell the next day. (Lose Reputation points)",
+        "decisionQ26O2":"Throw them away. (Lose Rs. 250 but gain reputation points)",
+        "decisionQ26O3":"Give them away to the nearest charity shelter on the same day (Gain Reputation points)",
 
-            //Insurance
+        "decisionQ27":"Received fake note of Rs. 2000 from an unknown customer",
+        "decisionQ27O1":"Report and hand in the note to the bank (Lose money but gain reputation points)",
+        "decisionQ27O2":"Try and pass it on unknowingly to another customer (Lose reputation points)",
+
+        "decisionQ28":"Bird flu spreading in area",
+        "decisionQ28O1":"Discard all stock of eggs (Lose Rs. 3500, but gain reputation points)",
+        "decisionQ28O2":"Keep the stock and sell without informing customers (Earn profit on eggs but Lose reputation points)",
+
+        "decisionQ29":"No stock of dal anywhere except your shop",
+        "decisionQ29O1":"Increase dal price by 50% and earn profit of Rs. 1000 (Lose reputation points)",
+        "decisionQ20O2":"Sell at same price (Gain reputation points)",
+
+        "decisionQ30":"Festival coming up. Purchase extra food items worth Rs. 5000 and hope to earn extra profit between (10 - 50%)",
+        "decisionQ30O1":"Buy extra items",
+        "decisionQ30O2":"Do nothing. Continue as usual",
+
+        "decisionQ31":"Good Sales.Extra money in the bank",
+        "decisionQ31O1":"Put extra money into a Fixed deposit that earns 6% interest (Gain reputation points - High)",
+        "decisionQ31O2":"Pay bonus to employees and take extra salary for the month (Gain reputation points - Low)",
+        "decisionQ31O3":"Do Nothing in case you need the money (Lose reputation points)",
+
+        "decisionQ32":"Aunt gifts business Rs. 1,00,000",
+        "decisionQ32O1":"Invest in FD with 8% Simple Interest for 1 year (Safe with liquidity)",
+        "decisionQ32O2":"Invest in FD with 6% Compound interest for 1 year (Safe, higher gains)",
+        "decisionQ32O3":"Invest in a friend's scheme that assures of 25% growth (Risky)",
+
+        "decisionQ33":"Customers come to the shope without money",
+        "decisionQ33O1":"Introduce monthly account books (Retains customers but Items could be left out resulting in minor losses)",
+        "decisionQ33O2":"Let regular customers by on credit (Risk of forgetting to collect money)",
+        "decisionQ33O3":"Only sell to those who have money (Risk of losing customers)",
+
+        "decisionQ34":"Electricity shortage",
+        "decisionQ34O1":"Buy invertor. Cost 5000",
+        "decisionQ34O2":"Use candles in night",
+
+        "decisionQ1O1":"Bribe the inspector Rs. 1000? (Lose Reputation Points and Rs.1000)",
+        "decisionQ1O2":"Pay fine Rs. 1500 and fees of Rs. 1000 (Lose more money but gain Reputation points)",
+
+        "decisionQ3O1":"Bank Loan (Gain 5 Reputation Points as it is always better to opt for a bank loan)",
+        "decisionQ3O2":"Borrow from friend (Lose 5 reputation points. Always better to opt for an official loan)",
+        "decisionQ3O3":"Borrow from unauthorised dealer (Lose 10 reputation points. Too many risks. Opt for offical loan)",
+
+        "decisionQ4O1":"Pay the tax and fine? (Lose tax amount but gain reputation points)",
+        "decisionQ4O2":"Ignore (Lose 30 Reputation Points)",
+        "decisionQ4O3":"Bribe:Rs. 5000 (Lose 20 reputation points and Rs. 5000)",
+
+        "decisionQ5O1":"Yes (Lose Rs. 100 but gain Reputation Points)",
+        "decisionQ5O2":"No (Lose Reputation Points)",
+
+        "decisionQ6O1":"Electronic Machine (Balances reduces by 1200 but Reputation Points increase by 10)",
+        "decisionQ6O2":"Conventional (Balance reduces by 500 and Reputation Points decrease by 5)",
+
+        "decisionQ7O1":"Yes (Balances reduces but reputation points increase)",
+        "decisionQ7O2":"No (Reputation points decrease)",
+
+        "decisionQ9O1":"Shut shop, look after him but risk loss of business worth Rs. 7000 (Gain Reputation points)",
+        "decisionQ9O2":"Do not go (Lose Reputation Points but gain Rs 7000)",
+
+        "decisionQ10O1":"Sell on discount and earn a profit of Rs. 500 (Earn Rs. 500 but lose reputation points)",
+        "decisionQ10O2":"Do not sell (Gain Reputation Points)",
+
+        "decisionQ11O1":"Bribe Rs 100. (Lose Reputation Points and Rs. 100)",
+        "decisionQ11O2":"Pay Rs.500 fine (Lose Rs. 500 but gain reputation points)",
+
+        "decisionQ12O1":"Buy 1 service for Rs. 750 (Balance reduces by 750 but lose Reputation Points)",
+        "decisionQ12O2":"Buy 3 services and get one free (Balance reduces by 2250 but gain reputation points",
+
+        "decisionQ13O1":"Buy stabilizer for Rs. 3000 and save stock damage worth Rs. 700 (Spend money but gain reputation points)",
+        "decisionQ13O2":"Don't buy (Lose inventory worth Rs. 700 and lose reputation points)",
+
+        "decisionQ14O1":"Spend (Calculated risk could earn you some money and you gain reputation points)",
+        "decisionQ14O2":"Don't spend (No impact)",
+
+        "decisionQ15O1":"Yes (Balance increases by Rs. 2000 but lose Reputation points)",
+        "decisionQ15O2":"No (Gain reputation points)",
+
+        "decisionQ16O1":"Do not pass on discount to customers. (Earn money but lose reputation points)",
+        "decisionQ16O2":"Pass on discount to customers. (Gain reputation points)",
 
         "insuranceType":"SELECT INSURANCE TYPE",
         "Insurance":"Insurance",

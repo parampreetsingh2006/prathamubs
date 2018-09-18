@@ -32,39 +32,44 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
 	let initialPlayerBankBalance = userArray[playerChance].getBankBalance();
 	let totalPlayerBankBalance = initialPlayerBankBalance+parseInt(bankBalance);
 	let decisionResultMessage = "";
+	let nextAction;
 	userArray[playerChance].setReputationPts(initialPlayerRepPoints+parseInt(reputationPts));
 	userArray[playerChance].setBankBalance(initialPlayerBankBalance+parseInt(bankBalance));
 	if(insurance == "true"){
 	 ubsApp.renderPageByName(page);
 	}
-	else if(pamphlet == "true"){
+	
+	if(pamphlet == "true"){
 		let profit = Math.floor(Math.random() * 2500) + 500;
 		let playerBankBalance = userArray[playerChance].getBankBalance();
 		userArray[playerChance].setBankBalance(playerBankBalance+profit);
-		ubsApp.nextMove();
+		totalPlayerBankBalance += playerBankBalance+profit;
+		nextAction="ubsApp.nextMove();";
+	}
+	else{
+		nextAction="ubsApp.closePopup();";
 	}
 
-	else{
 
 		if(totalReputationPoints > initialPlayerRepPoints && totalPlayerBankBalance < initialPlayerBankBalance){
-			decisionResultMessage = ubsApp.formatMessage( ubsApp.translation["decisionGainReptPointsLostBalance"],[reputationPts, bankBalance]);
+			decisionResultMessage = ubsApp.formatMessage( ubsApp.translation["decisionGainReptPointsLostBalance"],[Math.abs(reputationPts), Math.abs(bankBalance)]);
 			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
 			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceLoss");
 
 		} 
 		else if(totalReputationPoints < totalReputationPoints && totalPlayerBankBalance > initialPlayerBankBalance){
-			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainBalanceLoseRptPts"],[bankBalance, reputationPts]);
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainBalanceLoseRptPts"],[Math.abs(bankBalance), Math.abs(reputationPts)]);
 			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
 			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceGain");
 
 		}
 		else if (totalReputationPoints > initialPlayerRepPoints){
-			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainRptPts"],[reputationPts]);
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainRptPts"],[Math.abs(reputationPts)]);
 			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
 
 		}
 		else if (totalReputationPoints < initialPlayerRepPoints){
-			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionLoseRptPts"],[reputationPts]);
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionLoseRptPts"],[Math.abs(reputationPts)]);
 			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
 		}
 
@@ -72,8 +77,14 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
         	"message" : decisionResultMessage,
         	"header" : ubsApp.translation["decisionResult"],
         	"headerStyle" : "text-align: center;  color: black; font-weight: 700; ",
+        	"buttons":[
+                		{
+                			'id':"decisionPopup",
+                            'name' : ubsApp.getTranslation("OK"),
+                            'action': nextAction
+                        }
+                 ]
         })
-	}
 }
 
 

@@ -61,7 +61,7 @@
 
 #yes_no{
 	margin-top:3%;
-	margin-left: 40%;
+	/*margin-left: 40%;*/
 }
 
 .inlineDecisionButtons{
@@ -73,19 +73,21 @@
   cursor: pointer;
   border-radius: 12px;
   display: block;
-  background-color: #faea75
+  background:url('../images/buttonlong.png');
+  background-size: 100% 100%;
+  text-align:left;
 }
 
 .decisionButtons{
   margin-right: 1%;
-  width: 18%;
+  width: 80%;
   padding: .4% 1%;
-  background:url('../images/buttonsmall.png');
+  background:url('../images/buttonlong.png');
+  background-size: 100% 100%;
   color: black;
   border:  3px solid white;
   cursor: pointer;
-  border-radius: 12px;
-  background-size: 100% 100%;
+  text-align: left;
   
 }
 
@@ -101,7 +103,7 @@ button[class="decisionButtons"]:focus {outline:0;}
 	font-weight: bold;
 	margin: 0 17% 0 0;
 	font-size: 1vw;
-	width: 30%;
+	width: 50%;
 	padding: 0;
 	
 }
@@ -143,7 +145,12 @@ div[id="rightInfo"] div, div[id="leftInfo"] div{
 	background-image: url('../images/help-button.png');
 	background-color: transparent;
 	background-size: 100% 100%;
-	padding: 12px 8px !important
+	padding: 3% 5% !important;
+	border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: bold
 }
 
 .decisionGameLogoImage {
