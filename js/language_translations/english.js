@@ -288,9 +288,9 @@ ubsApp.translation={
         "luckQuestion6":"Theft in store! Lose inventory worth ₹ 3800.",
         "luckQuestion7":"Decrease in GST. Save ₹500.",
         "luckQuestion8":"Increase in GST. Lose ₹500",
-        "luckQuestion9":"Increase in bank interest rate. Lose ₹ 250.",
-        "luckQuestion10":"Decrease in bank interest rate. Gain ₹ 250",
-        "luckQuestion11":"Stock damaged in rain Storm. Lose inventory worth ₹ 7800 or claim insurance.",
+        "luckQuestion9":"Increase in bank interest rate on Loan. Lose ₹ 250.",
+        "luckQuestion10":"Decrease in bank interest rate on Loan. Gain ₹ 250",
+        "luckQuestion11":"Stock damaged in rain Storm. Lose inventory worth ₹ 7800.",
         "luckQuestion12":"Refrigerator break down. Lose inventory worth ₹ 3800",
         "luckQuestion13":"Leak in shop. Lose inventory worth ₹ 5000",
         "luckQuestion14":"Fire hazard in shop. Fine ₹ 12000",
@@ -339,19 +339,27 @@ ubsApp.translation={
         "luckQuestion57":"Bank decreased the interest rate on your fixed deposit",
 
 
-        "badLuckResultPopUpBankBalance":"Your Bank Balance is reduced to ",
-        "badLuckResultPopUpCash":"Your Cash Balance is reduced to ",
-        "badLuckResultPopUpRepPt":"Your Reputation points are reduced to ",
-        "badLuckResultPopUpInv":"Your Inventory is reduced to ", // percentage
-        "goodLuckResultPopUpBankBalance":"Your Bank Balance is increased to ",
-        "goodLuckResultPopUpCash":"Your Cash Balance is increased to ",
-        "goodLuckResultPopUpRepPt":"Your Reputation points are increased to ",
-        "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
+        "badLuckResultPopUpBankBalance":"Oops. Rs {0} debited from your account. ",
+        "badLuckResultPopUpCash":"Oops. Rs {0} debited from your account cash balance. ",
+        "badLuckResultPopUpRepPt":"Oops. {0} reputation points debited from your account. ",
+        "badLuckResultPopUpInv":"Oops. {0} % Inventory debited from your account. ", // percentage
+        "goodLuckResultPopUpBankBalance":"Congratulations! Rs {0} credited to your account. ",
+        "goodLuckResultPopUpCash":"Congratulations! Rs {0} credited to your account cash balance. ",
+        "goodLuckResultPopUpRepPt":"Congratulations! {0} reputation points credited to your account. ",
+        "goodLuckResultPopUpInv":"Congratulations! {0} % Inventory credited to your account. ", // percentage
         "goodLuckResultHeader":"GOOD LUCK RESULT",
         "badLuckResultHeader":"BAD LUCK RESULT",
         "redeemAdvantageCardHeader":"REDEEM ADVANTAGE CARD",
         "redeemAdvantageCardMessage":"1 advantage card redeemed! You have {0} advantage cards left.",
 
+        "badPaymentResultPopUpBankBalance":"Rs {0} debited from your account. ",
+        "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
+        "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
+        "badPaymentResultPopUpInv":"{0} % Inventory debited from your account. ", // percentage
+        "goodPaymentResultPopUpBankBalance":"Rs {0} credited to your account. ",
+        "goodPaymentResultPopUpCash":"Rs {0} credited to your account cash balance. ",
+        "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
+        "goodPaymentResultPopUpInv":"{0} % Inventory credited to your account. ", // percentage
         "paymentResultHeader":"PAYMENT RESULT",
 
         "convertTitle":"CONVERT",
@@ -385,7 +393,7 @@ ubsApp.translation={
         "paymentQuestion6":"Many customers want digital payment options and you need to enrol with a digital wallet provider. Enrolment fee is ₹500",
         "paymentQuestion7":"Need to find additional help for the shop a the cost of ₹1000",
         "paymentQuestion8":"You have to spend on printing and distributing pamphlets to promote an upcoming sale. ₹ 1000",
-        "paymentQuestion9":"Pay your ontribution for planting more tress in the locatlity. ₹ 500",
+        "paymentQuestion9":"Pay your contribution for planting more tress in the locatlity. ₹ 500",
         "paymentQuestion10":"Owing to increased parking space usage, the landlord has asked for ₹5000 as additional advance for the shop rental.",
         "paymentQuestion11":"Cockroaches infested the shop via one of the goods consignment. Exterminate for ₹800",
         "paymentQuestion12":"Your shop has been disposing garbage improperly. Hence corporation has charged a fine of ₹1000",

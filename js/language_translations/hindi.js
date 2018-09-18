@@ -352,18 +352,27 @@ ubsApp.translation={
     "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
     "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
 
-    "badLuckResultPopUpBankBalance":"Your Bank Balance is reduced to ",
-    "badLuckResultPopUpCash":"Your Cash Balance is reduced to ",
-    "badLuckResultPopUpRepPt":"Your Reputation points are reduced to ",
-    "badLuckResultPopUpInv":"Your Inventory is reduced to ", // percentage
-    "goodLuckResultPopUpBankBalance":"Your Bank Balance is increased to ",
-    "goodLuckResultPopUpCash":"Your Cash Balance is increased to ",
-    "goodLuckResultPopUpRepPt":"Your Reputation points are increased to ",
-    "goodLuckResultPopUpInv":"Your Inventory is increased to ", // percentage
+    "badLuckResultPopUpBankBalance":"Oops. Rs {0} debited from your account. ",
+    "badLuckResultPopUpCash":"Oops. Rs {0} debited from your account cash balance. ",
+    "badLuckResultPopUpRepPt":"Oops. {0} reputation points debited from your account. ",
+    "badLuckResultPopUpInv":"Oops. {0} % Inventory debited from your account. ", // percentage
+    "goodLuckResultPopUpBankBalance":"Congratulations! Rs {0} credited to your account. ",
+    "goodLuckResultPopUpCash":"Congratulations! Rs {0} credited to your account cash balance. ",
+    "goodLuckResultPopUpRepPt":"Congratulations! {0} reputation points credited to your account. ",
+    "goodLuckResultPopUpInv":"Congratulations! {0} % Inventory credited to your account. ", // percentage
     "goodLuckResultHeader":"अच्छा भाग्य परिणाम",
     "badLuckResultHeader":"खराब भाग्य परिणाम",
     "redeemAdvantageCardHeader":"एडवांटेज कार्ड का उपयोग",
     "redeemAdvantageCardMessage":"1 advantage card redeemed! You have {0} advantage cards left.",
+
+    "badPaymentResultPopUpBankBalance":"Rs {0} debited from your account. ",
+    "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
+    "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
+    "badPaymentResultPopUpInv":"{0} % Inventory debited from your account. ", // percentage
+    "goodPaymentResultPopUpBankBalance":"Rs {0} credited to your account. ",
+    "goodPaymentResultPopUpCash":"Rs {0} credited to your account cash balance. ",
+    "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
+    "goodPaymentResultPopUpInv":"{0} % Inventory credited to your account. ", // percentage
 
     "paymentResultHeader":"भुगतान परिणाम",
 

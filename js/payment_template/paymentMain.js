@@ -36,45 +36,44 @@ ubsApp.payFromBank=function(pageName){
 
         let message = "";
         let header = ubsApp.getTranslation("paymentResultHeader");
-        let endStr = ". ";
         // Bank Balance Compare
         if(initialBankBalance > userArray[playerChance].getBankBalance())
         {
-            message = ubsApp.getTranslation("badLuckResultPopUpBankBalance") + userArray[playerChance].getBankBalance() + endStr;
+            message= message + ubsApp.formatMessage(ubsApp.translation["badPaymentResultPopUpBankBalance"], [initialBankBalance - userArray[playerChance].getBankBalance()]);
         }
         else if(initialBankBalance < userArray[playerChance].getBankBalance())
         {
-            message = ubsApp.getTranslation("goodLuckResultPopUpBankBalance") + userArray[playerChance].getBankBalance() + endStr;
+            message= message + ubsApp.formatMessage(ubsApp.translation["goodPaymentResultPopUpBankBalance"], [userArray[playerChance].getBankBalance() - initialBankBalance]);
         }
 
         // Cash Balance Compare
         if(initialCashBalance > userArray[playerChance].getplayerScore())
         {
-            message = message + ubsApp.getTranslation("badLuckResultPopUpCash") + userArray[playerChance].getplayerScore() + endStr;
+            message= message + ubsApp.formatMessage(ubsApp.translation["badPaymentResultPopUpCash"], [initialCashBalance - userArray[playerChance].getplayerScore()]);
         }
         else if(initialCashBalance < userArray[playerChance].getplayerScore())
         {
-            message = message + ubsApp.getTranslation("goodLuckResultPopUpCash") + userArray[playerChance].getplayerScore() + endStr;
+            message= message + ubsApp.formatMessage(ubsApp.translation["goodPaymentResultPopUpCash"], [userArray[playerChance].getplayerScore() - initialCashBalance]);
         }
 
         //reputation points compare
         if(initialReputationPoints > userArray[playerChance].getReputationPts())
         {
-            message = message + ubsApp.getTranslation("badLuckResultPopUpRepPt") + userArray[playerChance].getReputationPts() + endStr;
+            message= message + ubsApp.formatMessage(ubsApp.translation["badPaymentResultPopUpRepPt"], [initialReputationPoints - userArray[playerChance].getReputationPts()]);
         }
         else if(initialReputationPoints < userArray[playerChance].getReputationPts())
         {
-            message = message + ubsApp.getTranslation("goodLuckResultPopUpRepPt") + userArray[playerChance].getReputationPts() + endStr;
+            message= message + ubsApp.formatMessage(ubsApp.translation["goodPaymentResultPopUpRepPt"], [userArray[playerChance].getReputationPts() - initialReputationPoints]);
         }
 
         //inventory compare
         if(initialInventory > userArray[playerChance].getInventoryScore())
         {
-            message = message + ubsApp.getTranslation("badLuckResultPopUpInv") + userArray[playerChance].getInventoryScore() + "%" + endStr;
+            message = message + ubsApp.formatMessage(ubsApp.translation["badPaymentResultPopUpInv"], [initialInventory - userArray[playerChance].getInventoryScore()]);
         }
         else if(initialInventory < userArray[playerChance].getInventoryScore())
         {
-            message = message + ubsApp.getTranslation("goodLuckResultPopUpInv") + userArray[playerChance].getInventoryScore() + "%" + endStr;
+            message = message + ubsApp.formatMessage(ubsApp.translation["goodPaymentResultPopUpInv"], [userArray[playerChance].getInventoryScore() - initialInventory]);
         }
 
         ubsApp.openResultPopup({
