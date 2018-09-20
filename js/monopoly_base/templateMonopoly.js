@@ -84,7 +84,7 @@ monopoly.boardTemplate='<div class="responsive">'+
 
                     '<div class="centerDiceRow">'+monopoly.rollingDiceTemplate+'</div>'+
                     '<div class="centerDiceRow">'+
-                        '<button id="rollIt" class="sideScoreBoardButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;padding-bottom: 1.8%;">{{rollIt}}</button>'+
+                        '<button id="rollIt" class="sideScoreBoardButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;padding-bottom: 2.8%;">{{rollIt}}</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'+
