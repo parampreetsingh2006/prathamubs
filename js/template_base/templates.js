@@ -1096,7 +1096,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{#if inline}}'+
 '       <div id="yes_no">'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\', {{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\',{{/if}} \'{{startTime}}\',\'{{questionId}}\')">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\', {{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\',{{/if}} \'{{startTime}}\',\'{{questionId}}\', {{#if randomProfit}} \'{{randomProfit}}\' {{/if}})">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       </div>'+
 '       {{else}}'+

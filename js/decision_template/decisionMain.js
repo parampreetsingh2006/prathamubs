@@ -25,7 +25,7 @@ ubsApp.renderDecisonTemplate = function() {
 
 }
 
-ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, page="", pamphlet=false, startTime,questionId){
+ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, page="", pamphlet=false, startTime,questionId, randomProfit=false){
 
 	let initialPlayerRepPoints = userArray[playerChance].getReputationPts();
 	let totalReputationPoints = initialPlayerRepPoints+parseInt(reputationPts);
@@ -44,6 +44,13 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
 		let playerBankBalance = userArray[playerChance].getBankBalance();
 		userArray[playerChance].setBankBalance(playerBankBalance+profit);
 		totalPlayerBankBalance += playerBankBalance+profit;
+		nextAction="ubsApp.nextMove();";
+	}
+	else if(randomProfit == "true"){
+		let profitPercentage = Math.floor(Math.random() * 50) +10;
+		let playerBankBal = userArray[playerChance].getBankBalance();
+		let balIncreaseAsProfit =  Math.floor((profitPercentage/100)*playerBankBalance);
+		totalPlayerBankBalance += balIncreaseAsProfit;
 		nextAction="ubsApp.nextMove();";
 	}
 	else{

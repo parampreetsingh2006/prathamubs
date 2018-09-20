@@ -1,3 +1,5 @@
+	
+
 ubsApp.decisionConfig = {
 	
 	"decision1" : {
@@ -1558,7 +1560,8 @@ ubsApp.decisionConfig = {
 				"inline":true,
 				"options": [
 				    {
-						"optionName":"q30", 
+						"optionName":"q30",
+						"randomProfit":true,
 						"optionValue": "{{decisionQ30O1}}",
 						"id":1,
 						"credit":{

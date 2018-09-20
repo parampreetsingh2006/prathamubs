@@ -1354,4 +1354,5 @@ ubsApp.translation={
        "luckTakeQuizPopupMessage":"You will be shown 1 question. If you are able to answer it, the fine will be waived or the money will not be deducted from your account",
        "theGameBegins" : "THE GAME BEGINS!!!",
        "hasHighestScoreMessage" : "Player {{playerName}} scored highest but its still less than Gupta Ji's usual profit.",
+       "kycHelpImage":"images/incometaxhelp.png",
     }   

@@ -23,8 +23,8 @@ ubsApp.helpConfig={
                 "templateId":3,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"QUIZ HELP!!!"
+                "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;",
+                "src":"<video width=\"80%\" height=\"80%\" controls><source src=\"videos/incomeTax.mp4\" type=\"video/mp4\"></video>"
             },
             {
                 "templateId":4,
