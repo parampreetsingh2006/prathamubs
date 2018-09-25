@@ -108,8 +108,9 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		}
 		else{
 		    cashIncreased = Math.round(userTotal*ubsApp.getMultiplier() * 100)/ 100;
+		    userArray[playerChance].setReputationPts(r-4);
 			userArray[playerChance].setplayerScore(c+cashIncreased);
-			message+=ubsApp.getTranslation("salesWrongRptpt2");
+			message+=ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
 		}
 
 		message+=ubsApp.getTranslation("salesWrongRptpt3").replace("{{cashincreased}}",cashIncreased);

@@ -269,6 +269,13 @@ class User{
         return this.numberOfWildCard;
     }
 
+    setPaymentReminderOpen(open) {
+        this.paymentReminderOpen = open;
+    }
+
+    getPaymentReminderOpen() {
+        return this.paymentReminderOpen;
+    }
     setLastWeekSummary(cash, bankBalance, reputationPts, credit, advantageCard, inventoryScore) {
         this.lastWeekScore = cash;
         this.lastWeekBankBalance = bankBalance;
