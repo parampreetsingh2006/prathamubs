@@ -1355,4 +1355,5 @@ ubsApp.translation={
        "theGameBegins" : "THE GAME BEGINS!!!",
        "hasHighestScoreMessage" : "Player {{playerName}} scored highest but its still less than Gupta Ji's usual profit.",
        "kycHelpImage":"images/incometaxhelp.png",
+       "salesNoItemMessage" : "Inventory too low no items available to sell.",
     }   

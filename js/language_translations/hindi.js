@@ -1275,5 +1275,6 @@ ubsApp.translation={
        "luckTakeQuizPopupMessage":"You will be shown 1 question. If you are able to answer it, the fine will be waived or the money will not be deducted from your account",
        "theGameBegins" : "खेल शुरू होता है!!!",
        "hasHighestScoreMessage" : "प्लेयर {{playerName}} ने उच्चतम स्कोर किया लेकिन यह अभी भी गुप्ता जी के सामान्य लाभ से कम है।",
+       "salesNoItemMessage" : "बेचने के लिए सूची बहुत कम कोई वस्तु उपलब्ध नहीं है।",
 
 }

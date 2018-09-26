@@ -5297,7 +5297,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "10% discount on oil, 15% discount on sugar and13% discount on Rice",
+                   				"discount": "10% discount on oil, 15% discount on sugar and 13% discount on Rice",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",

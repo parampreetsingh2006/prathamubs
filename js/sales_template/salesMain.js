@@ -1,12 +1,28 @@
 ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 	tempVar.salesConfig = templateConfig;
 	ubsApp.selectAvailableItems(templateConfig);
-	templateConfig.SUBMIT = ubsApp.getTranslation("SUBMIT");
-	templateConfig.currentPlayerName = userArray[playerChance].getplayerName();
-	templateConfig.Customer = ubsApp.getTranslation("Customer");
-	templateConfig.gameLogo = ubsApp.getTranslation("gameLogo");
-	tempVar.html += ubsOrdertemplate(templateConfig);
-	ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
+    templateConfig.SUBMIT = ubsApp.getTranslation("SUBMIT");
+    templateConfig.currentPlayerName = userArray[playerChance].getplayerName();
+    templateConfig.Customer = ubsApp.getTranslation("Customer");
+    templateConfig.gameLogo = ubsApp.getTranslation("gameLogo");
+    tempVar.html += ubsOrdertemplate(templateConfig);
+    ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
+	if(ubsApp.noItemsForSale) {
+        ubsApp.noItemsForSale = false;
+        ubsApp.openPopup({
+                        "message" : ubsApp.getTranslation("salesNoItemMessage"),
+                        "header" : ubsApp.getTranslation("ERROR"),
+                        "headerStyle" : "text-align: center;  color: black; font-weight: 700;",
+                        "buttons":[
+                        	{
+                        		'id':"closePopupButton",
+                        		'name' : ubsApp.getTranslation("CLOSE"),
+                      			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup();ubsApp.closeCurrentScenario();"
+                        	}
+                        ]
+                        });
+    }
+
 }
 ubsApp.validateAmount = function() {
     var item = document.getElementsByName('amt');
@@ -70,7 +86,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 	userArray[playerChance].setInventoryScore(s);
 	let userTotal = Math.round(parseFloat($("#receiptTotal").val()) * 100) / 100;
 	let cashIncreased = Math.round(total*ubsApp.getMultiplier() * 100)/ 100;
-	if(userTotal==total){
+	if(Math.abs(userTotal - total) < 1){
 
 
 		userArray[playerChance].setplayerScore(c+cashIncreased);
@@ -181,6 +197,9 @@ ubsApp.selectAvailableItems = function(config){
 	let notAvailable = Math.floor(percent*noOfItems);
 	let arr = [];
 
+   if(notAvailable == noOfItems) {
+        ubsApp.noItemsForSale = true;
+   }
 	while(arr.length < notAvailable){
 	    var randomNumber = Math.floor(Math.random()*noOfItems);
 	    if(arr.indexOf(randomNumber) > -1) continue;
