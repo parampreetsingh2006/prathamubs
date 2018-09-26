@@ -3395,7 +3395,7 @@ ubsApp.salesConfig={
                    						"itemId": 2,
                    						"item": "Rice",
                    						"amount": " 1 and a 1/2 kg",
-                   						"quantity": 112,
+                   						"quantity": 1.5,
                    						"rate": " 110/kg",
                    						"exclude": false
                    					},
