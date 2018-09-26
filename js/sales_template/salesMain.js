@@ -17,7 +17,7 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
                         	{
                         		'id':"closePopupButton",
                         		'name' : ubsApp.getTranslation("CLOSE"),
-                      			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup();ubsApp.closeCurrentScenario();"
+                      			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup();	ubsApp.stopTimer();ubsApp.closeCurrentScenario();"
                         	}
                         ]
                         });
@@ -271,7 +271,7 @@ ubsApp.salesTimeOut= function(temp){
 	let r = userArray[playerChance].getReputationPts();
 
     let message = ubsApp.getTranslation("salesWrongAnswer");
-	userArray[playerChance].setReputationPts(r-1);
+	userArray[playerChance].setReputationPts(r-4);
 	ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');
     message+=ubsApp.getTranslation("salesTimeOut");
     ubsApp.openResultPopup({
