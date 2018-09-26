@@ -44,7 +44,7 @@ ubsApp.translation={
         "easy":"Easy",
         "medium":"Medium",
         "hard":"Hard",
-        "name":"Name",
+        "name":"Player",
 
     // Monopoly main board
         // board footer caption
@@ -55,7 +55,7 @@ ubsApp.translation={
         "decision":"DECISION",
         "luck":"LUCK",
 
-        "bankBalanceTitle":"BANKBALANCE",
+        "bankBalanceTitle":"BANK BALANCE",
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
@@ -366,8 +366,8 @@ ubsApp.translation={
         "buy":"BUY",
         "cancel":"CANCEL",
         "cashTitleName":"CASH",
-        "Cash" : "Cash",
-        "Credit": "Credit",
+        "Cash" : "CASH",
+        "Credit": "CREDIT",
         "chequeTitleName":"CHEQUE",
         "creditTitleName":"CREDIT",
         "DEBT" : "DEBT",
@@ -1348,7 +1348,7 @@ ubsApp.translation={
        "quizResultHeader":"QUIZ RESULT",
        "quizStartHelp":"You will be shown 3 questions. Each correct answer will earn reputation points for you.",
        "quiz":"QUIZ",
-       "startQuiz":"Start Quiz",
+       "startQuiz":"START QUIZ",
        "quizWrongResultFromUnluckyScenario":"That is the wrong answer. Money will be deducted and/or reputation points will be lost",
        "quizWrongResultFromLuckyScenario":"That is the correct answer. No money will be deducted. Nor will any reputation points be lost",
        "luckTakeQuizPopupMessage":"You will be shown 1 question. If you are able to answer it, the fine will be waived or the money will not be deducted from your account",

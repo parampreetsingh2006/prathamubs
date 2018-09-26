@@ -4,19 +4,19 @@ monopoly.origpages = {
         {
             "templateId":1,
             "templateType":"static",
-            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label style=\"color:white\" for\"english\">ENGLISH</label></div>",
+            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label style=\"color:white\" for\"english\">English</label></div>",
             "style": "position:absolute;margin-left:5%;padding:10px;border-radius:5px; background-color:black; width:70%;top:30%;"
         },
         {
             "templateId":1,
             "templateType":"static",
-            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label style=\"color:white\" for\"hindi\">HINDI || हिंदी</label></div>",    
+            "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label style=\"color:white\" for\"hindi\">Hindi || हिंदी</label></div>",    
             "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:50%;margin-left:5%; background-color:black;"
         },
         {
             "templateId":2,
             "templateType":"static",
-            "src":"<button class=\"longButton\" onclick=\"monopoly.chooseLanguage()\" >Choose Language</button>",
+            "src":"<button class=\"longButton\" onclick=\"monopoly.chooseLanguage()\" >CHOOSE LANGUAGE</button>",
             "style": "position: absolute;padding:10px;border-radius:5px;top:80%;left:35%;margin-left:5%; "
         }
     ],

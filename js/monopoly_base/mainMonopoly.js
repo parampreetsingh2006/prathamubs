@@ -906,7 +906,7 @@ ubsApp.openQuizIfValid = function() {
         ubsApp.openPopup({
             "message" : ubsApp.translation["quizStartHelp"],
             "header"  : ubsApp.translation["quiz"],
-            "headerStyle" : "text-align: center;  color: green; font-weight: 700; ",
+            "headerStyle" : "text-align: center;  color: green; font-weight: 700",
             "buttons":[
                     {
                             'id':"quizStart",
