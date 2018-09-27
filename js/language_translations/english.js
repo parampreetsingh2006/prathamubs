@@ -479,7 +479,7 @@ ubsApp.translation={
         "checkTitle":"CHECK",
         "enterInMultipleOf15":"Please enter number in the multiple of 15.",
         "You have entered more points than you have":"You have entered more points than you have.",
-        "validReputationPts":"Please enter a valid reputation point greater than 14 and less than current Reputation points.",
+        "validReputationPts":"Please enter a valid reputation point atleast 15 and less than current Reputation points.",
 
 
         //withdraw from bank
@@ -1341,10 +1341,10 @@ ubsApp.translation={
        "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
        "convertReputationMessage" : "NO OF POINTS TO CONVERT",
        "OK" : "OK",
-       "debtPaidSuccessMsg" : "Debt amount ₹ {{debtAmount}} paid successfully.",
+       "debtPaidSuccessMsg" : "Well done! You have paid off ₹ {{debtAmount}} of your debt. It is always better to pay off your debt when you have extra money. You earned 3 Reputation Points.",
        "enterValidAmount" : "Enter valid amount",
-       "transferSuccessMsg":"Transfer of amount ₹ {{transferAmount}} done successfully.",
-       "withdrawSuccessMsg": "Withdraw of amount ₹ {{withdrawAmount}} done successfully.",
+       "transferSuccessMsg":"Well done! You transferred ₹ {{transferAmount}} to the bank. It is always better to transfer extra cash to the bank.You earned 5 Reputation Points!",
+       "withdrawSuccessMsg": "You withdrew ₹ {{withdrawAmount}}. Money has been debited from your bank and credited to your cash balance.",
        "quizResultHeader":"QUIZ RESULT",
        "quizStartHelp":"You will be shown 3 questions. Each correct answer will earn reputation points for you.",
        "quiz":"QUIZ",
@@ -1356,4 +1356,5 @@ ubsApp.translation={
        "hasHighestScoreMessage" : "Player {{playerName}} scored highest but its still less than Gupta Ji's usual profit.",
        "kycHelpImage":"images/incometaxhelp.png",
        "salesNoItemMessage" : "Inventory too low no items available to sell.",
+       "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
     }   
