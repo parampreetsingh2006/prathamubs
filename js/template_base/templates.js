@@ -343,7 +343,7 @@ ubsApp.leaderBoardTemplate=
 '        <div style="background-color: white;height: 100%;padding: 2px;">'+
 '           <div id="title">{{receiptHeading}}</div>'+
 '       '+
-'           <img src="images/redheadersellreceipt.png" style="width:100%" >'+
+'           <img src="images/red header.png" style="width:100%" >'+
 '           <div id="bill">'+
 '               <div class="table-responsive">          '+
 '                 <table class="table table-bordered">'+
@@ -442,7 +442,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   </div>'+
 '   <div id="question_answer_background">'+
 '   <div id="question_answer">'+
-'       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'       <img src="images/red header.png" style="width:100%; height:100%">'+
 '       <span id="quizQuestionNumber"></span><span id="quizQuestion">{{question}}</span>'+
 '       {{#if quizResult}}'+
 '           <br><b><div id="quizResult"></div>'+
@@ -722,7 +722,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '       <div id="scenarioOutline">' + /* Wrapper div*/
 
 '       <div id="luckHeaderBorderImage">' +
-'            <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'            <img src="images/red header.png" style="width:100%; height:100%">'+
 '       </div>' +
 
 '       <div id="scenario" style="background-color:white; color:black;">'+
@@ -774,7 +774,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      <div class="payOffTitle popupHeaderFontSize" align="center">'+
 '                           {{title}}'+
 '                      </div>'+
-'                      <div align="center"><img style="width: 100%;" src="images/redheadersellreceipt.png"></div>'+
+'                      <div align="center"><img style="width: 100%;" src="images/red header.png"></div>'+
 '                      <div style="    margin-top: 5%;    margin-bottom: 5%;">'+
 '                           <span class="payOffSubTitleLeft">'+
 '                               {{cashTitle}} '+
@@ -939,7 +939,7 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 // '    </div>'+
 // '    <div id="question_answer_decision">'+
 // '        <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
-// '        <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+// '        <img src="images/red header.png" style="width:100%; height:100%">'+
 // '        <div id="insuranceSelection">'+
 // '            <div id="typesOfInsurance">'+
 // '                <fieldset id="insuranceTypesSelection" style="font-size: 1.5vmax;">'+
@@ -1025,7 +1025,7 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '<div id="question_answer_decision_border">'+
 '   <div id="question_answer_decision">'+
 '        <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
-'        <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'        <img src="images/red header.png" style="width:100%; height:100%">'+
 '        <div id="insuranceSelection">'+
 '            <div id="typesOfInsurance">'+
 '                <fieldset id="insuranceTypesSelection" style="font-size: 1.5vmax;">'+
@@ -1089,7 +1089,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 ''+
 '<div id="question_answer_decision_border">'+
 '   <div id="question_answer_decision">'+
-'       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'       <img src="images/red header.png" style="width:100%; height:100%">'+
 '       <div id="Decision Description">'+
 '           {{question}}'+
 '       </div>'+
