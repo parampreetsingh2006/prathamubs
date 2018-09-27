@@ -1173,9 +1173,9 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            ''+
                            '        <div style="display:inline-block;margin-top: 10px;width:100%;">'+
-                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 7px; color: green;font-weight:bold; width: 16%;text-align: center;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
+                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 1%; padding-bottom: 2%; color: green;font-weight:bold; width: 16%;text-align: center;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
 
-                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;font-size: large; width: 16%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
+                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold;font-size: large; width: 16%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
                            '                 <div style="cursor: pointer;     float: right;padding: 3%;width: 13%;    background-size: 100% 100%;background-image: url(images/help-button.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
 
                            '        </div>'+
@@ -1203,7 +1203,7 @@ ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image
                        '        <div style="text-align: center;margin-top: 10px;">'+
                        '            <div style="width: fit-content;margin: auto;margin-top: 2%;">'+
                        '                {{#each buttons}}'+
-                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: red; font-weight:700" onclick="{{action}}" >{{name}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; padding-bottom: 15%; color: red; font-weight:700" onclick="{{action}}" >{{name}}'+
                        '                </div>'+
                        '                {{/each}}'+
                        '            </div>'+
