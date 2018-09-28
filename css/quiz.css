@@ -59,10 +59,10 @@
 #question_answer_background{
 	height: auto;
 	overflow: hidden;
-	width: 80%;
+	width: 70%;
 	background-color: #ffffff;
 	padding: 1vw;
-	margin: 6% 10% 3% 10%;
+	margin: 6% 10% 3% 15%;
 	font-weight: bold;
 	background-image: url('../images/redbgcommon.png');
 	background-size: 100% 100%;
