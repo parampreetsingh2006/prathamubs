@@ -526,14 +526,26 @@ monopoly.closeLeaderBoard=function(){
 monopoly.chooseLanguage=function(){
 
 
-
   var language=$('input[name=languageRadio]:checked').val();
   var flag = false;
   if(language == null){
 	  flag = true;
 	  language = "english";
   }
-  
+
+  let message = "Loading Game...";
+  if(language == "hindi") {
+    message = "गेम लोड हो रहा है...";
+  } else if (language == "marathi") {
+    message = "खेळ लोड करीत आहे...";
+  }
+  ubsApp.openPopup({
+                                         "message" : message,
+                                         "header" : "",
+                                         "headerStyle" : "",
+                                         "showCloseButton" : false,
+                                         });
+
   
   var jsElm = document.createElement("script");
   jsElm.type = "text/javascript";
@@ -566,19 +578,13 @@ monopoly.chooseLanguage=function(){
      else
      {
     	 //reinitialze the page
-//    	 monopoly.intitializeTemplates();
-//    	 monopoly.initializeScenarios();
-//    	 ubsApp.intitializeTemplates();
-//    	 ubsApp.mapTemplatetoFunction();
-//    	 ubsApp.initializeUbsPages();
-//    	 monopoly.initializePages();
+   	    monopoly.intitializeTemplates();
+    	 monopoly.initializeScenarios();
+    	 ubsApp.intitializeTemplates();
+    	 ubsApp.mapTemplatetoFunction();
+    	 ubsApp.initializeUbsPages();
+    	 monopoly.initializePages();
 
-         ubsApp.openPopup({
-                                       "message" : ubsApp.getTranslation("loadingGameMessage"),
-                                       "header" : "",
-                                       "headerStyle" : "",
-                                       "showCloseButton" : false,
-                                       });
     	 ubsApp.translateScenarios();
     	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
     	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
