@@ -343,7 +343,7 @@ ubsApp.leaderBoardTemplate=
 '        <div style="background-color: white;height: 100%;padding: 2px;">'+
 '           <div id="title">{{receiptHeading}}</div>'+
 '       '+
-'           <img src="images/redheadersellreceipt.png" style="width:100%" >'+
+'           <img src="images/red header.png" style="width:100%" >'+
 '           <div id="bill">'+
 '               <div class="table-responsive">          '+
 '                 <table class="table table-bordered">'+
@@ -442,7 +442,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   </div>'+
 '   <div id="question_answer_background">'+
 '   <div id="question_answer">'+
-'       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'       <img src="images/red header.png" style="width:100%; height:100%">'+
 '       <span id="quizQuestionNumber"></span><span id="quizQuestion">{{question}}</span>'+
 '       {{#if quizResult}}'+
 '           <br><b><div id="quizResult"></div>'+
@@ -695,7 +695,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '            </div></div>'+
 '            <div class="row" style="height:20vmax;">'+
 '                    <div class="confirmButton mainButtons" onclick="ubsApp.pay()">{{doneTitle}}</div>'+
-'                    <div class="confirmButton mainButtons" onclick="ubsApp.nextMove()">{{noThanksTitle}}</div>'+
+'                    <div class="confirmButton mainButtons" id="target_cancel" onclick="ubsApp.nextMove()">{{noThanksTitle}}</div>'+
 '                    <div class="helpBtn mainButtons" onclick="ubsApp.startHelp(\'purchaseHelp\')"></div>'+
 '            </div>'+
 '        </div>'+
@@ -722,7 +722,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '       <div id="scenarioOutline">' + /* Wrapper div*/
 
 '       <div id="luckHeaderBorderImage">' +
-'            <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'            <img src="images/red header.png" style="width:100%; height:100%">'+
 '       </div>' +
 
 '       <div id="scenario" style="background-color:white; color:black;">'+
@@ -753,7 +753,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '                       <button class="takeQuizButton" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
 '                  </div>'+
 '                   {{#if hasAdvantageCard}}'+
-'                       <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
+'                       <div style="display:inline-block; width:45%; text-align:right;float:left">'+
 '                           <button class="wildCardButton" onclick="ubsApp.useOneAdvantageCard()">{{checkWildCard}}</button>    '+
 '                       </div>'+
 '                   {{/if}}'+
@@ -774,7 +774,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      <div class="payOffTitle popupHeaderFontSize" align="center">'+
 '                           {{title}}'+
 '                      </div>'+
-'                      <div align="center"><img style="width: 100%;" src="images/redheadersellreceipt.png"></div>'+
+'                      <div align="center"><img style="width: 100%;" src="images/red header.png"></div>'+
 '                      <div style="    margin-top: 5%;    margin-bottom: 5%;">'+
 '                           <span class="payOffSubTitleLeft">'+
 '                               {{cashTitle}} '+
@@ -939,7 +939,7 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 // '    </div>'+
 // '    <div id="question_answer_decision">'+
 // '        <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
-// '        <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+// '        <img src="images/red header.png" style="width:100%; height:100%">'+
 // '        <div id="insuranceSelection">'+
 // '            <div id="typesOfInsurance">'+
 // '                <fieldset id="insuranceTypesSelection" style="font-size: 1.5vmax;">'+
@@ -1025,7 +1025,7 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '<div id="question_answer_decision_border">'+
 '   <div id="question_answer_decision">'+
 '        <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
-'        <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'        <img src="images/red header.png" style="width:100%; height:100%">'+
 '        <div id="insuranceSelection">'+
 '            <div id="typesOfInsurance">'+
 '                <fieldset id="insuranceTypesSelection" style="font-size: 1.5vmax;">'+
@@ -1089,7 +1089,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 ''+
 '<div id="question_answer_decision_border">'+
 '   <div id="question_answer_decision">'+
-'       <img src="images/redheadercommon.png" style="width:100%; height:100%">'+
+'       <img src="images/red header.png" style="width:100%; height:100%">'+
 '       <div id="Decision Description">'+
 '           {{question}}'+
 '       </div>'+
@@ -1153,7 +1153,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
                            '        '+
-                           '        <div style="display: inline-block;width: 100%;font-weight: 700;">'+
+                           '        <div style="display: inline-block;width: 100%;font-weight:bold;">'+
                            '            <div style="float: left;width: 50%;     margin-left: 10%; font-size: large;">'+
                            '                <div style="display: inline-block;width: 100%;">'+
                            '                        <div style="float: left;">{{ReputationPoints}}</div>'+
@@ -1173,9 +1173,10 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            ''+
                            '        <div style="display:inline-block;margin-top: 10px;width:100%;">'+
-                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 7px; color: green;font-weight:bold; width: 16%;text-align: center;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
+                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 1%; padding-bottom: 2%; color: green;font-weight:bold; width: 16%;text-align: center;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
 
-                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;font-size: large; width: 16%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
+                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold;font-size: large; width: 16%;text-align: center;padding-bottom: 15%;padding-right: 15%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
+
                            '                 <div style="cursor: pointer;     float: right;padding: 3%;width: 13%;    background-size: 100% 100%;background-image: url(images/help-button.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
 
                            '        </div>'+
@@ -1195,7 +1196,7 @@ ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image
                        ''+
                        '        <div>'+
                        ''+
-                       '            <div style="    text-align: center;     padding-top: 19px;">{{message}}</div>'+
+                       '            <div style="    text-align: center;     padding-top: 19px;">{{message}}<br></div>'+
                        '            {{#if showImage}}'+
                        '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;{{imageStyle}}" src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
@@ -1203,7 +1204,9 @@ ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image
                        '        <div style="text-align: center;margin-top: 10px;">'+
                        '            <div style="width: fit-content;margin: auto;margin-top: 2%;">'+
                        '                {{#each buttons}}'+
-                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; color: red; font-weight:700" onclick="{{action}}" >{{name}}'+
+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; padding-bottom: 15%; color: red; font-weight:bold" onclick="{{action}}" >{{name}}'+
+
                        '                </div>'+
                        '                {{/each}}'+
                        '            </div>'+
@@ -1226,8 +1229,8 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               ''+
                               '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
                               '        '+
-                              '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: 700;">{{WeekTitle}} {{weekNumber}}</div>'+
-                              '        <div style="display: inline-block;width: 100%;font-weight: 700;">'+
+                              '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: bold;">{{WeekTitle}} {{weekNumber}}</div>'+
+                              '        <div style="display: inline-block;width: 100%;font-weight: bold;">'+
                               '            <div style="float: left;width: 45%;">'+
                               '                <div style="display: inline-block;width: 100%;">'+
                               '                        <div style="float: left;">{{BankBalance}}</div>'+
@@ -1267,7 +1270,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               ''+
                               ''+
                               '        <div style="display:inline-block;margin-top: 10px;width:58%;">'+
-                              '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: 700;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
+                              '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: bold;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
                               '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
                               '            </div>'+

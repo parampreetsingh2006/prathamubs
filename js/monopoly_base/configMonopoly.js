@@ -5,26 +5,33 @@ monopoly.origpages = {
             "templateId":1,
             "templateType":"static",
             "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label style=\"color:white\" for\"english\">English</label></div>",
-            "style": "position:absolute;margin-left:5%;padding:10px;border-radius:5px; background-color:black; width:70%;top:30%;"
+            "style": "position:absolute;margin-left:15%;padding:10px;border-radius:5px; background-color:black; width:70%;top:30%;"
         },
         {
             "templateId":1,
             "templateType":"static",
             "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label style=\"color:white\" for\"hindi\">Hindi || हिंदी</label></div>",    
-            "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:45%;margin-left:5%; background-color:black;"
+            "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:45%;margin-left:15%; background-color:black;"
         },
          {
                     "templateId":1,
                     "templateType":"static",
                     "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"marathi\" id=\"marathi\"><label style=\"color:white\" for\"hindi\">Marathi || मराठी</label></div>",
-                    "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:60%;margin-left:5%; background-color:black;"
+                    "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:60%;margin-left:15%; background-color:black;"
           },
         {
             "templateId":2,
             "templateType":"static",
-            "src":"<button class=\"longButton\" onclick=\"monopoly.chooseLanguage()\" >Choose Language</button>",
+            "src":"<button class=\"longButton\" onclick=\"monopoly.chooseLanguage()\" >CHOOSE LANGUAGE</button>",
             "style": "position: absolute;padding:10px;border-radius:5px;top:80%;left:35%;margin-left:5%; "
+        },
+        {
+            "templateId":2,
+            "templateType":"static",
+            "src":"<img src=\"images/guptaji/guptaji_front.png\" style=\"position:absolute; top:20%; width: 12%; height: 40%;\"></img>",
+           /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
         }
+
     ],
  
     "Splash":[
@@ -67,10 +74,23 @@ monopoly.origpages = {
       "templateType":"static",
       "src":"<button class=\"startButtons\" onclick=\"monopoly.startGame()\" >{{StartGame}}</button>",
       "style": "position:absolute;padding:10px;border-radius:5px;top:80%;right:10%;margin-right:5%; "
-  }
+  },
+  {
+        "templateId":2,
+        "templateType":"static",
+        "style":" width:100%;display: flex;flex-direction: row;justify-content: space-around; ",
+        "src":"<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);\" style=\"position:absolute;padding:10px; border-radius:5px;border: none;top:82%;right:45%;padding:10px; background-image: url(images/backbutton.png);background-size: 100% 100%;background-color:transparent; padding: 2% 4%;    color: red;\" > </button>",
+    },
+    {
+        "templateId":2,
+        "templateType":"static",
+        "src":"<img src=\"images/guptaji/guptaji.png\" style=\"position:absolute; top:20%; width: 20%; height: 40%;\"></img>",
+       /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
+    }
+
 ],
 
-
+  
 "InitialisePlayers":[{
         "templateId":1,
         "templateType":"static",
@@ -120,6 +140,12 @@ monopoly.origpages = {
         "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label for\"english\">English</label>&nbsp&nbsp<input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label for\"hindi\">Hindi</label></div>",
         "style": "position:absolute; left:44%;bottom:3%;"
     }*/
+    {
+        "templateId":2,
+        "templateType":"static",
+        "src":"<img src=\"images/guptaji/guptaji_side.png\" style=\"position:absolute; top:20%; width: 20%; height: 40%;\"></img>",
+       /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
+    }
 ],
 
 "InitialiseOfflinePlayers":[{
@@ -171,6 +197,12 @@ monopoly.origpages = {
         "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label for\"english\">English</label>&nbsp&nbsp<input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label for\"hindi\">Hindi</label></div>",
         "style": "position:absolute; left:44%;bottom:3%;"
     }*/
+    {
+        "templateId":2,
+        "templateType":"static",
+        "src":"<img src=\"images/guptaji/guptaji_side.png\" style=\"position:absolute; top:20%; width: 10%; height: 40%;\"></img>",
+       /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
+    }
 ],
 
 	"monopoly": [

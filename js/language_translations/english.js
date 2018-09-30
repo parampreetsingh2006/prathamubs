@@ -44,7 +44,7 @@ ubsApp.translation={
         "easy":"Easy",
         "medium":"Medium",
         "hard":"Hard",
-        "name":"Name",
+        "name":"Player",
 
     // Monopoly main board
         // board footer caption
@@ -55,7 +55,7 @@ ubsApp.translation={
         "decision":"DECISION",
         "luck":"LUCK",
 
-        "bankBalanceTitle":"BANKBALANCE",
+        "bankBalanceTitle":"BANK BALANCE",
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
         "cashTitle":"CASH",
@@ -366,8 +366,8 @@ ubsApp.translation={
         "buy":"BUY",
         "cancel":"CANCEL",
         "cashTitleName":"CASH",
-        "Cash" : "Cash",
-        "Credit": "Credit",
+        "Cash" : "CASH",
+        "Credit": "CREDIT",
         "chequeTitleName":"CHEQUE",
         "creditTitleName":"CREDIT",
         "DEBT" : "DEBT",
@@ -423,7 +423,7 @@ ubsApp.translation={
         "luckQuestion38":"didn't sold expired goods! You get 10 reputation points.",
         "luckQuestion39":"Used electronic weighing balance for accurate weight! You get 10 reputation points",
         "luckQuestion40":"Some products out of stock. You loose 10 reputation points",
-        "luckQuestion41":"Refrigerator not working, ice-cream melted. You loose 1000",
+        "luckQuestion41":"Refrigerator not working, ice-cream melted. You loose ₹1000",
         "luckQuestion42":"Dispose expired products. Lose inventory of ₹2000.",
         "luckQuestion43":"Found and returned customer's missing wallet. You get 5 reputation points.",
         "luckQuestion44":"Customer fell on slippery shop floor. You lost 5 reputation points.",
@@ -431,7 +431,7 @@ ubsApp.translation={
         "luckQuestion46":"Didn’t sell expired goods! You get 10 reputation points.",
         "luckQuestion47":"Used electronic weighing balance for accurate weight! You get 10 reputation points",
         "luckQuestion48":"Some products out of stock. You loose 10 reputation points",
-        "luckQuestion49":"Refrigerator not working, ice-cream melted. You loose 1000",
+        "luckQuestion49":"Refrigerator not working, ice-cream melted. You loose ₹1000",
         "luckQuestion50":"Increase in bank interest rate on Loan. Lose ₹ 500",
         "luckQuestion51":"Decrease in bank interest rate on Loan. Gain ₹ 500",
         "luckQuestion52":"Bumper Sales in Wedding season. Gain ₹ 3000",
@@ -459,6 +459,7 @@ ubsApp.translation={
         "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
         "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
         "badPaymentResultPopUpInv":"{0} % Inventory debited from your account. ", // percentage
+        "badPaymentResultPopUpInv2":"You lose entire inventory from your account since your account balance is now Zero. ",
         "goodPaymentResultPopUpBankBalance":"Rs {0} credited to your account. ",
         "goodPaymentResultPopUpCash":"Rs {0} credited to your account cash balance. ",
         "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
@@ -490,7 +491,7 @@ ubsApp.translation={
         //payment Scenarios
         "paymentQuestion1":"Electricity Bill of ₹ 500 is due next week.",
         "paymentQuestion2":"You need to urgently file tax returns and the chartered accountant fee is ₹1000.",
-        "paymentQuestion3":"Refrigerator has broken down owing to excessive usage this summer.",
+        "paymentQuestion3":"Refrigerator has broken down owing to excessive usage this summer. Cost for fixing is ₹1200.",
         "paymentQuestion4":"Shop entrance need renovation. ₹ 800.",
         "paymentQuestion5":"GST department has levied ₹1500 fine for incorrect filing last year.",
         "paymentQuestion6":"Many customers want digital payment options and you need to enrol with a digital wallet provider. Enrolment fee is ₹500",
@@ -507,7 +508,7 @@ ubsApp.translation={
         "paymentQuestion17":"Owing to recent government regulation, you need to procure a bulk lot of non-plastic carry bags. ₹10000",
         "paymentQuestion18":"The display cabinet accidentally broke and needs fixing. ₹1300",
         "paymentQuestion19":"Recent rains had caused damage to the shop roof. Need fixing. Cost ₹750",
-        "paymentQuestion20":"Installation of CCTV camera",
+        "paymentQuestion20":"Installation of CCTV camera. Cost ₹5000.",
         "quizLimitReachedForWeek": "Quiz limit reached for the week. Wait till next week.",
         "SUCCESS": "SUCCESS",
         "ERROR": "ERROR",
@@ -518,6 +519,7 @@ ubsApp.translation={
 
         "ReadInstructions" : "VIEW INSTRUCTIONS",
         "StartGame" : "PLAY THE GAME",
+        "Back" : "Back",
         
         "instructionHeader" : "INSTRUCTIONS",
         "instructionsMessage" : "Game Instructions/Instrucciones "+
@@ -1348,7 +1350,7 @@ ubsApp.translation={
        "quizResultHeader":"QUIZ RESULT",
        "quizStartHelp":"You will be shown 3 questions. Each correct answer will earn reputation points for you.",
        "quiz":"QUIZ",
-       "startQuiz":"Start Quiz",
+       "startQuiz":"START QUIZ",
        "quizWrongResultFromUnluckyScenario":"That is the wrong answer. Money will be deducted and/or reputation points will be lost",
        "quizWrongResultFromLuckyScenario":"That is the correct answer. No money will be deducted. Nor will any reputation points be lost",
        "luckTakeQuizPopupMessage":"You will be shown 1 question. If you are able to answer it, the fine will be waived or the money will not be deducted from your account",

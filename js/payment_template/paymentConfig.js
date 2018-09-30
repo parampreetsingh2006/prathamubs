@@ -77,9 +77,9 @@ ubsApp.paymentConfig={
 			"negativeMsg":"Oops!! You answeres incorrectly.\\n  You have to pay the fine of 1000 Rs",
 			"credit":{
 				"inventory":0,
-				"bankBalance":0,
+				"bankBalance":-1200,
 				"reputationPoints":0,
-				"cash":-1200,
+				"cash":0,
 			},
 			"resultpage":"quizQ4",
 			"quizType":"luck",

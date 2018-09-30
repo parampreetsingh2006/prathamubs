@@ -369,6 +369,7 @@ ubsApp.translation={
     "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
     "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
     "badPaymentResultPopUpInv":"{0} % Inventory debited from your account. ", // percentage
+    "badPaymentResultPopUpInv2":"You lose entire inventory from your account since your account balance is now Zero. ",
     "goodPaymentResultPopUpBankBalance":"Rs {0} credited to your account. ",
     "goodPaymentResultPopUpCash":"Rs {0} credited to your account cash balance. ",
     "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
