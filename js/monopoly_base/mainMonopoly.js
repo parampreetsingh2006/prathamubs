@@ -642,7 +642,7 @@ ubsApp.confirmEndGame=function(){
     ubsApp.openPopup({
       'message' : ubsApp.getTranslation("endGameConfirm"),
       "header" : ubsApp.getTranslation("ENDGAME"),
-      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+      "headerStyle" : "text-align: center;  color: red; font-weight: bold;",
       'buttons' : [
           {
               'name' : ubsApp.getTranslation("yes"),

@@ -518,6 +518,7 @@ ubsApp.translation={
 
         "ReadInstructions" : "VIEW INSTRUCTIONS",
         "StartGame" : "PLAY THE GAME",
+        "Back" : "Back",
         
         "instructionHeader" : "INSTRUCTIONS",
         "instructionsMessage" : "Game Instructions/Instrucciones "+

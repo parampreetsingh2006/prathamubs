@@ -176,7 +176,7 @@ width: 100%;
 }
 
 .icon{
-    height:110%;
+    height:115%;
     width:100%;
 }
 .purchaseScreenButton:active {
@@ -550,7 +550,7 @@ button:focus {outline:0;}
 .helpBtn {
     background-image: url(../images/help-button.png);
     background-size: 100% 100%;
-    width: 50%;
+    width: 30%;
     text-align: center;
     line-height: 185%;
     font-weight: bold;
@@ -586,4 +586,13 @@ button:focus {outline:0;}
 
 #target_cancel{
     color: red;*/
+}
+
+.gupt_image{
+    max-width: 80%;
+    margin-left: 1%;
+    background-image: url(../images/guptaji/guptaji_front.png);
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 7vw;
 }
