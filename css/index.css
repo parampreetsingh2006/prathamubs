@@ -92,7 +92,7 @@ body {
 }
 #advantageCardTitle{
     left: 82%;
-    font-weight: 700;
+    font-weight: bold;
     position: absolute;
     top: 35.5%;
 }
@@ -105,7 +105,7 @@ body {
 }
 
 .payOffDebtAmountValue{
-    font-weight: 700;
+    font-weight: bold;
 }
 .payOffAmountToPayValue{
 }
@@ -128,6 +128,7 @@ width: 100%;
     color:black;
     font-weight:bold;
     padding:2%;
+    font-weight: bold;
     padding-bottom: 5%;
 }
 
@@ -175,7 +176,7 @@ width: 100%;
 }
 
 .icon{
-    height:100%;
+    height:115%;
     width:100%;
 }
 .purchaseScreenButton:active {
@@ -233,7 +234,7 @@ width: 100%;
 
 /* luck template*/
 #scenario{
-    font-weight:600;
+    font-weight:bold;
     left:25%;
     right:25%;
     top:30%;
@@ -285,6 +286,7 @@ width: 100%;
     background-color:transparent;
     background-repeat: no-repeat;
     width: 45%;
+    font-weight: bold;
     
 }
 .paymentPayButton{
@@ -313,6 +315,7 @@ width: 100%;
     background-image:url('../images/buttonmedium.png');
     background-size: 100% 100%;
     background-color:transparent;
+    font-weight: bold;
 }
 
 .wildCardButton{
@@ -465,7 +468,7 @@ button:focus {outline:0;}
 
 .purchaseIcon {
     margin-top: 3%;
-    background-image:url(../images/buy.png);
+    background-image:url(../images/backgrounds_and_buttons/buy_strip.png);
     background-size: 100% 100%;
     width: 8vw;
     height: 7vw;
@@ -547,7 +550,7 @@ button:focus {outline:0;}
 .helpBtn {
     background-image: url(../images/help-button.png);
     background-size: 100% 100%;
-    width: 40%;
+    width: 30%;
     text-align: center;
     line-height: 185%;
     font-weight: bold;
@@ -579,4 +582,17 @@ button:focus {outline:0;}
     overflow:hidden;
     padding-left: 0px;
     color:black;
+}
+
+#target_cancel{
+    color: red;*/
+}
+
+.gupt_image{
+    max-width: 80%;
+    margin-left: 1%;
+    background-image: url(../images/guptaji/guptaji_front.png);
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 7vw;
 }
