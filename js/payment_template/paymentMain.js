@@ -27,7 +27,7 @@ ubsApp.payFromBank=function(pageName){
                     else{
                         userArray[playerChance].setCredit(userArray[playerChance].getCreditLimit());
                     }
-                }pay
+                }
         }
         else if(key=="reputationPoints"){
             userArray[playerChance].setReputationPts(userArray[playerChance].getReputationPts()+value);
