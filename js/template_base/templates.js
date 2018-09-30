@@ -753,7 +753,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '                       <button class="takeQuizButton" onclick="ubsApp.luckPaymentQuiz(\'{{scenarioName}}\')">{{takeQuizTitle}}</button>'+
 '                  </div>'+
 '                   {{#if hasAdvantageCard}}'+
-'                       <div style="display:inline-block; width:33.33%; text-align:right;float:left">'+
+'                       <div style="display:inline-block; width:45%; text-align:right;float:left">'+
 '                           <button class="wildCardButton" onclick="ubsApp.useOneAdvantageCard()">{{checkWildCard}}</button>    '+
 '                       </div>'+
 '                   {{/if}}'+
