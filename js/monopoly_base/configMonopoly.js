@@ -11,8 +11,14 @@ monopoly.origpages = {
             "templateId":1,
             "templateType":"static",
             "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label style=\"color:white\" for\"hindi\">Hindi || हिंदी</label></div>",    
-            "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:50%;margin-left:5%; background-color:black;"
+            "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:45%;margin-left:5%; background-color:black;"
         },
+         {
+                    "templateId":1,
+                    "templateType":"static",
+                    "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"marathi\" id=\"marathi\"><label style=\"color:white\" for\"hindi\">Marathi || मराठी</label></div>",
+                    "style": "position:absolute; width:70%;padding:10px;border-radius:5px;top:60%;margin-left:5%; background-color:black;"
+          },
         {
             "templateId":2,
             "templateType":"static",

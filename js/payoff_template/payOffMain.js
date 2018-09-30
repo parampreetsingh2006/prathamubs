@@ -17,7 +17,7 @@ ubsApp.payDebt=function(){
 	document.getElementById("result").innerHTML="";
 	var amountEntered=document.getElementById("debtPaymentText").value;
 	if(userArray[playerChance].getCredit()>0){
-		if(amountEntered){
+		if(amountEntered && amountEntered <= userArray[playerChance].getCredit()){
 				var dropDown=document.getElementById("payOffDropDown");
 				var paymentMode=dropDown.options[dropDown.selectedIndex].value;
 				if(paymentMode=="cash"){
