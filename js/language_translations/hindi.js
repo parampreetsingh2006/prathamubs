@@ -224,7 +224,7 @@ ubsApp.translation={
     "salesWrongRptpt":"प्रतिष्ठा अंक कम कर रहे हैं ",
     "salesWrongRptpt2":"आप कोई प्रतिष्ठा अंक अर्जित नहीं करते हैं। ",
     "salesWrongRptpt3":"हालांकि यह बिक्री आपके पूरे दिन की बिक्री का प्रतिनिधित्व करती है। आपके नकद शेष राशि में ₹ {{cashincreased}} क्रेडिटिंग। क्या आपको समस्या को हल करने के बारे में जानने के लिए किसी भी मदद की ज़रूरत है?",
-    "salesTimeOut": "समय पूर्ण हुआ! आपकी प्रतिष्ठा अंक 1 से कम हो जाते हैं।",
+    "salesTimeOut": "समय पूर्ण हुआ! आपकी प्रतिष्ठा अंक 4 से कम हो जाते हैं।",
      "sales80DiscountMsg" : "3 साबुन खरीदें और चौथा 50% छूट पर प्राप्त करें",
 
     //Decision
@@ -369,6 +369,7 @@ ubsApp.translation={
     "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
     "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
     "badPaymentResultPopUpInv":"{0} % Inventory debited from your account. ", // percentage
+    "badPaymentResultPopUpInv2":"You lose entire inventory from your account since your account balance is now Zero. ",
     "goodPaymentResultPopUpBankBalance":"Rs {0} credited to your account. ",
     "goodPaymentResultPopUpCash":"Rs {0} credited to your account cash balance. ",
     "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
@@ -1262,18 +1263,20 @@ ubsApp.translation={
        "convertReputationPointsTitle" :"कन्वर्ट प्रतिष्ठान अंक",
        "convertReputationMessage" : "कार्ड को उन्नत करने के लिए कनवर्टर प्रतिस्थापन",
        "OK" : "ठीक",
-       "debtPaidSuccessMsg" : "ऋण राशि ₹ {{debtAmount}} सफलतापूर्वक भुगतान की गई।",
+       "debtPaidSuccessMsg" : "बहुत बढ़िया! आपने अपने कर्ज के ₹ {{ऋण राशि}} का भुगतान किया है। जब आपके पास अतिरिक्त पैसा होता है तो अपने कर्ज का भुगतान करना हमेशा बेहतर होता है। आपने 3 प्रतिष्ठा अंक अर्जित किए हैं।",
        "enterValidAmount" : "वैध राशि दर्ज करें",
-       "transferSuccessMsg":"राशि का हस्तांतरण ₹ {{transferAmount}} सफलतापूर्वक किया गया।",
-       "withdrawSuccessMsg":"राशि को वापस लेना ₹ {{withdrawAmount}} सफलतापूर्वक किया गया।",
-        "quizResultHeader":"QUIZ RESULT",
+       "transferSuccessMsg":"बहुत बढ़िया! आपने बैंक को ₹ {{transferAmount}} स्थानांतरित कर दिया है। बैंक को अतिरिक्त नकदी स्थानांतरित करना हमेशा बेहतर होता है। आपने 5 प्रतिष्ठा अंक अर्जित किए हैं!",
+       "withdrawSuccessMsg":"आपने ₹ {{withdrawAmount}} वापस ले लिया है। आपके बैंक से पैसा डेबिट कर दिया गया है और आपके नकद शेष राशि में जमा किया गया है।",
+       "quizResultHeader":"QUIZ RESULT",
        "quizStartHelp":"You will be shown 3 questions. Each correct answer will earn reputation points for you.",
        "quiz":"QUIZ",
        "startQuiz":"Start Quiz",
-        "quizWrongResultFromUnluckyScenario":"That is the wrong answer. Money will be deducted and/or reputation points will be lost",
+       "quizWrongResultFromUnluckyScenario":"That is the wrong answer. Money will be deducted and/or reputation points will be lost",
        "quizWrongResultFromLuckyScenario":"That is the correct answer. No money will be deducted. Nor will any reputation points be lost",
        "luckTakeQuizPopupMessage":"You will be shown 1 question. If you are able to answer it, the fine will be waived or the money will not be deducted from your account",
        "theGameBegins" : "खेल शुरू होता है!!!",
        "hasHighestScoreMessage" : "प्लेयर {{playerName}} ने उच्चतम स्कोर किया लेकिन यह अभी भी गुप्ता जी के सामान्य लाभ से कम है।",
+       "salesNoItemMessage" : "बेचने के लिए सूची बहुत कम कोई वस्तु उपलब्ध नहीं है।",
+       "advantageCardConvertSuccess" : "बधाई हो कि अब आपके पास {{advantageCard}} लाभ कार्ड {{reputationPoints}} प्रतिष्ठा अंक का उपयोग किया गया है।",
 
 }

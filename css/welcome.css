@@ -6,7 +6,8 @@
   border: none;
   background-size: 100% 100%;
   background-color: transparent;
-  padding: 19px;
+  padding: 7%;
+  padding-bottom: 16%;
   font-size: large;
   font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
@@ -18,7 +19,8 @@
   background-size: 100% 100%;
   background-color: transparent;
   font-size: large;
-  padding: 19px;
+  padding: 8%;
+  padding-bottom: 17%;
   font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
 
