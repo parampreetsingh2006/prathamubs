@@ -88,7 +88,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	if(entryPoint == "unluckyScenario"){
 		  		let currentPlayerRepPoints = userArray[playerChance].getReputationPts();
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongResultFromUnluckyScenario'], [reputationPoints]));
-				userArray[playerChance].setReputationPts(currentPlayerRepPoints-reputationPoints);
+				userArray[playerChance].setReputationPts(currentPlayerRepPoints);
 		  		ubsApp.openPopup({
 	        		"message" : quizResultMessage,
 	        		"header"  : ubsApp.translation["quizWrongAnswerHeading"],
