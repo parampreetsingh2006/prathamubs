@@ -1299,7 +1299,7 @@ ubsApp.translation={
 
        "QuizTemplateType" : "quiz",
        "QuizQuestionHeading" : "जीएसटी",
-       "QuizHelpPageName" : "प्रश्नमंजुषा मदत",
+       "QuizHelpPageName" : "quizHelp",
 
 
        "quizCorrectAnswerMessage":"अभिनंदन ! तुम्ही{0}  प्रतिष्ठा गुण मिळवले आहेत .",
