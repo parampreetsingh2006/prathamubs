@@ -221,7 +221,7 @@ ubsApp.translation={
         "decisionQ3":"Ceiling repair costs - Rs. 10000",
         "decisionQ4":"Income tax payment overdue. Rs.20000 + Fine:Rs.3500.",
         "decisionQ5":"Wrong amout of change given. Rs.100 less. Return to customer?",
-        "decisionQ6":"Buy accurate electronic machine weighing machine (Rs. 1200) or conventional machine (Rs. 500) ",
+        "decisionQ6":"Buy accurate electronic machine weighing (Rs. 1200) or conventional machine (Rs. 500) ",
         "decisionQ7":"Security Camera cost: Rs. 500. Buy?",
         "decisionQ8":"Non branded, unpackaged goods for sale with Rs. 500 cashback. Buy? ",
         "decisionQ9":"Uncle ill in another town.",
