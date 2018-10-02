@@ -216,24 +216,24 @@ ubsApp.translation={
         "no":"NO",
 
 
-        "decisionQ1":"Incomplete shop documents.",
+        "decisionQ1":"Incomplete shop documents",
         "decisionQ2":"Your insurance agent has come for purchase of your policy? Premium cost will between Rs 3000 - Rs 6800 per year. <br>Will you purchase it ? ",
         "decisionQ3":"Ceiling repair costs - Rs. 10000",
-        "decisionQ4":"Income tax payment overdue. Rs.20000 + Fine:Rs.3500.",
+        "decisionQ4":"Income tax payment overdue. Rs.20000 + Fine:Rs.3500",
         "decisionQ5":"Wrong amout of change given. Rs.100 less. Return to customer?",
         "decisionQ6":"Buy accurate electronic machine weighing (Rs. 1200) or conventional machine (Rs. 500) ",
         "decisionQ7":"Security Camera cost: Rs. 500. Buy?",
         "decisionQ8":"Non branded, unpackaged goods for sale with Rs. 500 cashback. Buy? ",
-        "decisionQ9":"Uncle ill in another town.",
+        "decisionQ9":"Uncle ill in another town",
         "decisionQ10":"Chips stock expired",
         "decisionQ11":"Speeding fine",
         "decisionQ12":"Servicing required",
         "decisionQ13":"Voltage fluctuation!",
-        "decisionQ14":"Shop marketing required. Spend Rs. 1000 and gain between Rs. 500-Rs.3000",
+        "decisionQ14":"Shop marketing required. Spend Rs. 1000 and gain between Rs. 500 - Rs. 3000",
         "decisionQ15":"Accept cash of Rs. 2000 for selling SIM without KYC documents?",
         "decisionQ16":"Wholesaler discount on detergent leading to gain of Rs. 2500",
         "decisionQ17":"No stock of dal anywhere except your shop",
-        "decisionQ17O1":"Increase dal price by 50% and get gains of Rs.500 (Earn money but lose reputation points)",
+        "decisionQ17O1":"Increase dal price by 50% and get gains of Rs. 500 (Earn money but lose reputation points)",
         "decisionQ17O2":"Sell at same price (Gain Reputation Points)",
         "decisionQ18":"You learn that selling medicines over the counter could yield better profit",
         "decisionQ18O1":"Start selling prescription medicine even though you don't have a license",
@@ -258,14 +258,14 @@ ubsApp.translation={
         "decisionQ22O1":"You pass on the charge to customers (Lose Reputation Points)",
         "decisionQ22O2":"You absorb the charge as customers always spend more on card(Lose Rs. 500 but gain Reputation Points)",
 
-        "decisionQ23":"Regular customer has Rs.150 less in cash for a bill of Rs.1000",
+        "decisionQ23":"Regular customer has Rs. 150 less in cash for a bill of Rs. 1000",
         "decisionQ23O1":"Only sell them goods worth Rs. 850",
         "decisionQ23O2":"Make a note and ask customer to pay during next visit",
 
         "decisionQ24":"There is a shortage of milk in the market but you have 100 packets",
-        "decisionQ24O1":"Hike up price and make Rs. 1000 extra (Gain Rs 1000 but lose Reputation Points)",
-        "decisionQ24O2":"Sell at usual price. (Gain Reputation points)",
-        "decisionQ24O3":"Sell until break-even and give the rest to the needy. (Gain Reputation points)",
+        "decisionQ24O1":"Hike up price and make Rs. 1000 extra (Gain Rs. 1000 but lose Reputation Points)",
+        "decisionQ24O2":"Sell at usual price (Gain Reputation points)",
+        "decisionQ24O3":"Sell until break-even and give the rest to the needy (Gain Reputation points)",
 
         "decisionQ25":"Nebouring shop charges Re. 1 extra for cold water bottles",
         "decisionQ25O1":"Advise the shop next door to not charge to avoid reporting to authorities",
@@ -309,7 +309,7 @@ ubsApp.translation={
         "decisionQ33O3":"Only sell to those who have money (Risk of losing customers)",
 
         "decisionQ34":"Electricity shortage",
-        "decisionQ34O1":"Buy invertor. Cost 5000",
+        "decisionQ34O1":"Buy invertor. Cost Rs. 5000",
         "decisionQ34O2":"Use candles in night",
 
         "decisionQ1O1":"Bribe the inspector Rs. 1000? (Lose Reputation Points and Rs.1000)",
@@ -326,23 +326,23 @@ ubsApp.translation={
         "decisionQ5O1":"Yes (Lose Rs. 100 but gain Reputation Points)",
         "decisionQ5O2":"No (Lose Reputation Points)",
 
-        "decisionQ6O1":"Electronic Machine (Balances reduces by 1200 but Reputation Points increase by 10)",
-        "decisionQ6O2":"Conventional (Balance reduces by 500 and Reputation Points decrease by 5)",
+        "decisionQ6O1":"Electronic Machine (Balances reduces by Rs. 1200 but Reputation Points increase by 10)",
+        "decisionQ6O2":"Conventional (Balance reduces by Rs. 500 and Reputation Points decrease by 5)",
 
         "decisionQ7O1":"Yes (Balances reduces but reputation points increase)",
         "decisionQ7O2":"No (Reputation points decrease)",
 
         "decisionQ9O1":"Shut shop, look after him but risk loss of business worth Rs. 7000 (Gain Reputation points)",
-        "decisionQ9O2":"Do not go (Lose Reputation Points but gain Rs 7000)",
+        "decisionQ9O2":"Do not go (Lose Reputation Points but gain Rs. 7000)",
 
         "decisionQ10O1":"Sell on discount and earn a profit of Rs. 500 (Earn Rs. 500 but lose reputation points)",
         "decisionQ10O2":"Do not sell (Gain Reputation Points)",
 
-        "decisionQ11O1":"Bribe Rs 100. (Lose Reputation Points and Rs. 100)",
+        "decisionQ11O1":"Bribe Rs 100 (Lose Reputation Points and Rs. 100)",
         "decisionQ11O2":"Pay Rs.500 fine (Lose Rs. 500 but gain reputation points)",
 
-        "decisionQ12O1":"Buy 1 service for Rs. 750 (Balance reduces by 750 but lose Reputation Points)",
-        "decisionQ12O2":"Buy 3 services and get one free (Balance reduces by 2250 but gain reputation points",
+        "decisionQ12O1":"Buy 1 service for Rs. 750 (Balance reduces by Rs. 750 but lose Reputation Points)",
+        "decisionQ12O2":"Buy 3 services and get one free (Balance reduces by Rs. 2250 but gain reputation points",
 
         "decisionQ13O1":"Buy stabilizer for Rs. 3000 and save stock damage worth Rs. 700 (Spend money but gain reputation points)",
         "decisionQ13O2":"Don't buy (Lose inventory worth Rs. 700 and lose reputation points)",
@@ -1297,10 +1297,10 @@ ubsApp.translation={
        "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
        "wowImage":"images/wow.png",
        "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
-       "decisionGainReptPointsLostBalance": "Congratulations! You earned {0} Reputation Points. However you lost ₹ {1}",
-       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points as it was not a good decision",
-       "decisionGainRptPts":"Congratulations! You earned {0} Reputation points!",
-       "decisionLoseRptPts":"That was not a good decision. You lost {0} Reputation points!",
+       "decisionGainReptPointsLostBalance": "Congratulations! You earned {0} Reputation Points. <br>However you lost ₹ {1}",
+       "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. <br>However you lost {1} Reputation Points as it was not a good decision",
+       "decisionGainRptPts":"Congratulations! You earned {0} Reputation Points!",
+       "decisionLoseRptPts":"That was not a good decision. You lost {0} Reputation Points!",
        "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
        "convertReputationMessage" : "NO OF POINTS TO CONVERT",
        "OK" : "OK",
@@ -1320,4 +1320,5 @@ ubsApp.translation={
        "kycHelpImage":"images/incometaxhelp.png",
        "salesNoItemMessage" : "Inventory too low no items available to sell.",
        "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
+       "decisionBankBalanceTitle":"BANK-BALANCE",
     }   

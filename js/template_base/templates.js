@@ -1084,7 +1084,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '   <div id="decisionTitle">'+
 '       <span id="decisionEmoji"></span>    '+
 '       <span id="decisionHeading">{{Decision}}</span>'+
-'       <span id="playerName">PLAYER: {{currentPlayerName}}</span>'+
+'       <span id="decisionplayerName">PLAYER: {{currentPlayerName}}</span>'+
 '   </div>'+
 ''+
 '<div id="question_answer_decision_border">'+
@@ -1110,7 +1110,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
 '       <div class="row" id="leftInfo">'+
 '           <div class="col-md-10">'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 1.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
 '           </div>'+
@@ -1121,7 +1121,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
-'       <div class="decisionHelpButtons" onclick="ubsApp.startHelp("decisionHelp")" style="position: absolute;right: 0px;bottom: 0px;"></div>'+
+'       <div class="decisionHelpButtons" onclick="ubsApp.startHelp("decisionHelp")" style="position: absolute;right: 10%;bottom: 0px;"></div>'+
 '       </div>'+
 '</div>';
 

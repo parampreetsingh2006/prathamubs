@@ -856,7 +856,7 @@ ubsApp.decisionConfig = {
 							"bankBalance":500,
 							"reputationPoints":-10,
 							"cash":0,
-						},
+						}
 					},
 					{
 						"optionName":"q17", 
@@ -867,7 +867,7 @@ ubsApp.decisionConfig = {
 							"bankBalance":0,
 							"reputationPoints":10,
 							"cash":0,
-						},
+						}
 					},
 				],
 				"optionPageMap": {},
