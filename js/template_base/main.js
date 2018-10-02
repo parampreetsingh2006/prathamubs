@@ -294,10 +294,11 @@ ubsApp.closeCurrentScenario=function(){
 	    if(userArray[playerChance].getTransferReminderOpened()==false){
         		userArray[playerChance].setTransferReminderOpened(true);
         		ubsApp.openTransferToBank();
-        	}
-        if(userArray[playerChance].getPayOffDeadline()==0){
-        		ubsApp.openPayOffScenario();
+        } else if(userArray[playerChance].getPayOffDeadline()==0 && userArray[playerChance].getPaymentReminderOpen()){
+            userArray[playerChance].setPaymentReminderOpen(false);
+            ubsApp.openPayOffScenario();
         }
+
 	}
 
 }

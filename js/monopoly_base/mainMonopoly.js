@@ -229,7 +229,7 @@ monopoly.myMove = function(count, pId, currentPos) {
             else{
               userArray[pId].setTransferReminderOpened(false);
             }
-
+            userArray[pId].setPaymentReminderOpen(true);
             userArray[pId].setOpenWeekSummary(true);
     } else {
         userArray[pId].setWeeks(++x);

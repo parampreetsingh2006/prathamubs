@@ -204,7 +204,7 @@ ubsApp.translation={
         "salesWrongRptpt":"Reputation points are reduced by ",
         "salesWrongRptpt2":"You do not earn any reputation points. ",
         "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
-        "salesTimeOut": "Time's Up! Your reputation points are reduced by 1.",
+        "salesTimeOut": "Time's Up! Your reputation points are reduced by 4.",
 
         "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",
         //Decision
@@ -423,7 +423,7 @@ ubsApp.translation={
         "luckQuestion38":"didn't sold expired goods! You get 10 reputation points.",
         "luckQuestion39":"Used electronic weighing balance for accurate weight! You get 10 reputation points",
         "luckQuestion40":"Some products out of stock. You loose 10 reputation points",
-        "luckQuestion41":"Refrigerator not working, ice-cream melted. You loose 1000",
+        "luckQuestion41":"Refrigerator not working, ice-cream melted. You loose ₹1000",
         "luckQuestion42":"Dispose expired products. Lose inventory of ₹2000.",
         "luckQuestion43":"Found and returned customer's missing wallet. You get 5 reputation points.",
         "luckQuestion44":"Customer fell on slippery shop floor. You lost 5 reputation points.",
@@ -431,7 +431,7 @@ ubsApp.translation={
         "luckQuestion46":"Didn’t sell expired goods! You get 10 reputation points.",
         "luckQuestion47":"Used electronic weighing balance for accurate weight! You get 10 reputation points",
         "luckQuestion48":"Some products out of stock. You loose 10 reputation points",
-        "luckQuestion49":"Refrigerator not working, ice-cream melted. You loose 1000",
+        "luckQuestion49":"Refrigerator not working, ice-cream melted. You loose ₹1000",
         "luckQuestion50":"Increase in bank interest rate on Loan. Lose ₹ 500",
         "luckQuestion51":"Decrease in bank interest rate on Loan. Gain ₹ 500",
         "luckQuestion52":"Bumper Sales in Wedding season. Gain ₹ 3000",
@@ -459,6 +459,7 @@ ubsApp.translation={
         "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
         "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
         "badPaymentResultPopUpInv":"{0} % Inventory debited from your account. ", // percentage
+        "badPaymentResultPopUpInv2":"You lose entire inventory from your account since your account balance is now Zero. ",
         "goodPaymentResultPopUpBankBalance":"Rs {0} credited to your account. ",
         "goodPaymentResultPopUpCash":"Rs {0} credited to your account cash balance. ",
         "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
@@ -479,7 +480,7 @@ ubsApp.translation={
         "checkTitle":"CHECK",
         "enterInMultipleOf15":"Please enter number in the multiple of 15.",
         "You have entered more points than you have":"You have entered more points than you have.",
-        "validReputationPts":"Please enter a valid reputation point greater than 14 and less than current Reputation points.",
+        "validReputationPts":"Please enter a valid reputation point atleast 15 and less than current Reputation points.",
 
 
         //withdraw from bank
@@ -490,7 +491,7 @@ ubsApp.translation={
         //payment Scenarios
         "paymentQuestion1":"Electricity Bill of ₹ 500 is due next week.",
         "paymentQuestion2":"You need to urgently file tax returns and the chartered accountant fee is ₹1000.",
-        "paymentQuestion3":"Refrigerator has broken down owing to excessive usage this summer.",
+        "paymentQuestion3":"Refrigerator has broken down owing to excessive usage this summer. Cost for fixing is ₹1200.",
         "paymentQuestion4":"Shop entrance need renovation. ₹ 800.",
         "paymentQuestion5":"GST department has levied ₹1500 fine for incorrect filing last year.",
         "paymentQuestion6":"Many customers want digital payment options and you need to enrol with a digital wallet provider. Enrolment fee is ₹500",
@@ -507,7 +508,7 @@ ubsApp.translation={
         "paymentQuestion17":"Owing to recent government regulation, you need to procure a bulk lot of non-plastic carry bags. ₹10000",
         "paymentQuestion18":"The display cabinet accidentally broke and needs fixing. ₹1300",
         "paymentQuestion19":"Recent rains had caused damage to the shop roof. Need fixing. Cost ₹750",
-        "paymentQuestion20":"Installation of CCTV camera",
+        "paymentQuestion20":"Installation of CCTV camera. Cost ₹5000.",
         "quizLimitReachedForWeek": "Quiz limit reached for the week. Wait till next week.",
         "SUCCESS": "SUCCESS",
         "ERROR": "ERROR",
@@ -1342,10 +1343,10 @@ ubsApp.translation={
        "convertReputationPointsTitle" :"CONVERT REPUTATION POINTS",
        "convertReputationMessage" : "NO OF POINTS TO CONVERT",
        "OK" : "OK",
-       "debtPaidSuccessMsg" : "Debt amount ₹ {{debtAmount}} paid successfully.",
+       "debtPaidSuccessMsg" : "Well done! You have paid off ₹ {{debtAmount}} of your debt. It is always better to pay off your debt when you have extra money. You earned 3 Reputation Points.",
        "enterValidAmount" : "Enter valid amount",
-       "transferSuccessMsg":"Transfer of amount ₹ {{transferAmount}} done successfully.",
-       "withdrawSuccessMsg": "Withdraw of amount ₹ {{withdrawAmount}} done successfully.",
+       "transferSuccessMsg":"Well done! You transferred ₹ {{transferAmount}} to the bank. It is always better to transfer extra cash to the bank.You earned 5 Reputation Points!",
+       "withdrawSuccessMsg": "You withdrew ₹ {{withdrawAmount}}. Money has been debited from your bank and credited to your cash balance.",
        "quizResultHeader":"QUIZ RESULT",
        "quizStartHelp":"You will be shown 3 questions. <br>Each correct answer will earn reputation points for you.",
        "quiz":"QUIZ",
@@ -1356,4 +1357,6 @@ ubsApp.translation={
        "theGameBegins" : "THE GAME BEGINS!!!",
        "hasHighestScoreMessage" : "Player {{playerName}} scored highest but its still less than Gupta Ji's usual profit.",
        "kycHelpImage":"images/incometaxhelp.png",
+       "salesNoItemMessage" : "Inventory too low no items available to sell.",
+       "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
     }   

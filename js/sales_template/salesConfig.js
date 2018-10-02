@@ -3395,7 +3395,7 @@ ubsApp.salesConfig={
                    						"itemId": 2,
                    						"item": "Rice",
                    						"amount": " 1 and a 1/2 kg",
-                   						"quantity": 112,
+                   						"quantity": 1.5,
                    						"rate": " 110/kg",
                    						"exclude": false
                    					},
@@ -5297,7 +5297,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "10% discount on oil, 15% discount on sugar and13% discount on Rice",
+                   				"discount": "10% discount on oil, 15% discount on sugar and 13% discount on Rice",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",
