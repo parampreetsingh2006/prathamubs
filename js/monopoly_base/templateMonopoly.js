@@ -120,7 +120,7 @@ monopoly.sideScoreBoardTemplate=
 '            <div class="sideScoreBoardCol"><img src="images/red header.png" style="width: 100%;"></div>                <div class="sideScoreBoardCol"></div>'+
 '        </div>'+
 '    <div class="sideScoreBoardRow">'+
-'        <div class="sideScoreBoardCol weekTitle">WEEK: <span id="weekContent">100</span></div>'+
+'        <div class="sideScoreBoardCol weekTitle">{{weekTitle}}: <span id="weekContent">100</span></div>'+
 '        <div class="sideScoreBoardCol"></div>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+

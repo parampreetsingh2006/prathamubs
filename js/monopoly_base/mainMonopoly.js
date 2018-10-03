@@ -132,7 +132,9 @@ monopoly.renderPageforBoard = function(page) {
                 object.bankBalanceAmount=userArray[playerChance].getBankBalance();
                 object.cashAmount=userArray[playerChance].getplayerScore();
                 object.debtAmount=userArray[playerChance].getCredit();
+                object.weekTitle = ubsApp.getTranslation("weekTitle");
                 var template=ubsApp.pages["sideScoreBoard"].templates[0];
+
                 template=$.extend(template,object);
                 html += ubsSideScoreBoardTemplate(template);
             }
