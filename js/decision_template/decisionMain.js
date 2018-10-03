@@ -11,6 +11,8 @@ object.gameLogo = ubsApp.getTranslation("gameLogo");
 ubsApp.startRecordingTimer(templateConfig);
 object = $.extend(true, templateConfig, object);
 tempVar.html+=ubsDecisionTemplate(object);
+$('#templateContent').css("height","100vh");
+$('#templateContent').css("width","100vw");
 }
 
 ubsApp.renderDecisonTemplate = function() {
@@ -22,6 +24,7 @@ ubsApp.renderDecisonTemplate = function() {
   clearInterval(interval);
   clearInterval(timeVar);
   this.renderPage(ubsApp.pages[ubsDecisionOptionMap[checkedValue].page]);
+
 
 }
 
