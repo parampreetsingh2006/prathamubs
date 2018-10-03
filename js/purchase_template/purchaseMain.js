@@ -136,7 +136,7 @@ else{
     if(totalAmountEntered==0)
     {
         paymentDone=true;
-        resultMessage=ubsApp.translation["purchaseSuccess"].replace("<Percent>",inventoryPercent).replace("<Amount>",cost) + subResultMessage;
+        resultMessage=ubsApp.translation["purchaseSuccess"].replace("<Percent>",inventoryPercent).replace("<Amount>",cost) + "<br>" + subResultMessage;
     }
     if(paymentDone){
         userArray[playerChance].setInventoryScore(newLevel);
