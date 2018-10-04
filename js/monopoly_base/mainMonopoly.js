@@ -300,7 +300,7 @@ monopoly.rollDice  = function(){
   $("#container-dice").css("pointer-events","none");
   
     diceVal = pointRoll();
-    //diceVal = 13;
+    diceVal = 13;
 	setTimeout(function(){ 
 	if(playerChance >= numplayers){
 		playerChance=0;

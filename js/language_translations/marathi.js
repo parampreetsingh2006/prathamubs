@@ -41,7 +41,7 @@ ubsApp.translation={
         "hard":"मध्यम",
         "name":"Name",
 
-        "start":"वीक अप",
+        "start":"आठवडा",
         "purchase":"खरेदी",
         "sale":"विक्री",
         "payment":"पैसे भरणे",
@@ -130,14 +130,14 @@ ubsApp.translation={
         "payment":"पैसे भरणे",
         "youCan":"आपण करू शकता",
         "alternateMessage":"किंवा आपण चांगले करू शकता ",
-        "transferTitle":"ट्रान्स्फर",
+        "transferTitle":"हस्तांतरण",
         "payOffTitle":"भरणा",
         "payDebtTitle":"कर्ज भरणा",
         "payTitle":"पैसे भरा ",
         "transferToBankTitle":"बँकेत पैसे ट्रान्स्फर करा",
         "debtAmountTitle":"कर्ज रक्कम",
         "cancelTitle":"कॅन्सेल",
-        "withdrawTitle":"विथड्रॉ",
+        "withdrawTitle":"पैसे काढणे",
 
         "amountToPayTitle":"पैसे भरणे",
         "amountToTransferTitle":"ट्रान्स्फर रक्कम",
@@ -452,7 +452,7 @@ ubsApp.translation={
         "goodPaymentResultPopUpInv":"{0} % इन्वेंटरी तुमच्या खात्यातून जमा केली आहे. ",
         "paymentResultHeader":"पैसे भरणे परिणाम",
 
-        "convertTitle":"कनवर्ट / रुपांतर",
+        "convertTitle":"रुपांतर",
         "quizTitle":"प्रश्नमंजुषा",
 
 
