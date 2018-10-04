@@ -265,6 +265,9 @@ ubsApp.checkInventory=function(){
 }
 
 ubsApp.getMultiplier = function() {
+    if(userArray[playerChance].getReputationPts() >= 100) {
+        return 35;
+    }
     return 31;
 }
 ubsApp.salesTimeOut= function(temp){

@@ -143,26 +143,20 @@ else{
         userArray[playerChance].setplayerScore(cashChanged);
         userArray[playerChance].setBankBalance(bankBalanceChanged);
         userArray[playerChance].setCredit(creditChanged);
-        var temptimer;
-        var temptime=100;
-        temptimer = setInterval(function(){
-            temptime--;
-            
+
         document.getElementById("bankBalanceValue").innerHTML="₹ "+userArray[playerChance].getBankBalance();
         document.getElementById("cashValue").innerHTML="₹ "+userArray[playerChance].getplayerScore();
         document.getElementById("creditValue").innerHTML="₹ "+userArray[playerChance].getCredit();
         document.getElementById("creditLimitValue").innerHTML="₹ "+userArray[playerChance].getCreditLimit();
-            if(temptime === 0 ){
-                clearInterval(temptimer);
-                if(!offlinePurchaseClicked)
-                    ubsApp.nextMove();
-                else{
-                    ubsApp.closeCurrentScenario();
-                    ubsApp.currentPlayerContents();
-                    offlinePurchaseClicked=false;
-                }		
-            }
-        },50);
+
+        if(!offlinePurchaseClicked)
+            ubsApp.nextMove();
+        else{
+            ubsApp.closeCurrentScenario();
+            ubsApp.currentPlayerContents();
+            offlinePurchaseClicked=false;
+        }		
+
         // document.getElementById("bankBalanceValue").innerHTML=userArray[playerChance].getBankBalance();
         // document.getElementById("cashValue").innerHTML=userArray[playerChance].getplayerScore();
         // document.getElementById("creditValue").innerHTML=userArray[playerChance].getCredit();

@@ -672,6 +672,7 @@ ubsApp.confirmEndGame=function(){
     let atleastOne=false;
     let highestScoringPlayer = -1;
     let highestScore = -10000;
+
   	for(var i=0;i<numplayers;i++){
   	    let playerConfig = {};
   	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 3;
@@ -707,7 +708,7 @@ ubsApp.confirmEndGame=function(){
   		currentPlayerProfit+=(player.getplayerScore()-initialPlayerCash);
   		currentPlayerProfit+=(player.getBankBalance()-initialPlayerBankBalance);
   		currentPlayerProfit-=player.getCredit();
-  		currentPlayerProfit=currentPlayerProfit*0.15;
+  		currentPlayerProfit=currentPlayerProfit;
   		if(currentPlayerProfit<harnamProjectedScore)
   		{
   			arr[i]=false;
@@ -727,21 +728,17 @@ ubsApp.confirmEndGame=function(){
 
   		var winnerName="";
 
-  		for(var i=0;i<numplayers;i++)
-  		{
-  			if(arr[i])
-  			{
-  				atleastOne=true;
-  				var consolidatedScore=userArray[i].getplayerScore()+userArray[i].getBankBalance()-userArray[i].getCredit()+userArray[i].getReputationPts();
-  				if(consolidatedScore>currentHighScore){
-  					currentHighScore=consolidatedScore;
-  					winnerName=userArray[i].getplayerName() +  " " + ubsApp.getTranslation("hasWon");
-  				}
-  			}
+
+
+  		if(arr[highestScoringPlayer]) {
+  		  winnerName=userArray[i].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
+
+  		} else {
+  		     winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}" , userArray[highestScoringPlayer].getplayerName()) +  " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
+
   		}
 
   		if(!atleastOne){
-  		  winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}", userArray[highestScoringPlayer].getplayerName());
 
   	   }
 
