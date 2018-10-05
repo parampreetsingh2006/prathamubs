@@ -200,7 +200,7 @@ monopoly.origpages = {
     {
         "templateId":2,
         "templateType":"static",
-        "src":"<img src=\"images/guptaji/guptaji_side.png\" style=\"position:absolute; top:20%; width: 10%; height: 40%;\"></img>",
+        "src":"<img src=\"images/guptaji/guptaji_side.png\" style=\"position:absolute; top:20%; width: 12%; height: 40%;\"></img>",
        /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
     }
 ],
