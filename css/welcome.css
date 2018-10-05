@@ -6,11 +6,13 @@
   border: none;
   background-size: 100% 100%;
   background-color: transparent;
-  padding: 7%;
+  padding: 13px;
   padding-bottom: 16%;
   font-size: large;
+  text-align: center;
   font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
+  
 .startButtons{
   background:url('../images/button long.png');
   color: red;
@@ -19,7 +21,7 @@
   background-size: 100% 100%;
   background-color: transparent;
   font-size: large;
-  padding: 8%;
+  padding: 13px;
   padding-bottom: 17%;
   font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
