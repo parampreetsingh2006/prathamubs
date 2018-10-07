@@ -402,7 +402,7 @@ ubsApp.translation={
         "luckQuestion17":"Sick Leave for 3 days. Your profit reduced by ₹15000",
         "luckQuestion18":"GST refund. ₹ 8,000",
         "luckQuestion19":"Fine for late payment of GST. ₹ 1000",
-        "luckQuestion20":"In store repai₹ Cost: ₹800",
+        "luckQuestion20":"In store repair. Cost: ₹800",
         "luckQuestion21":"Income tax refund.  ₹ 8700.",
         "luckQuestion22":"Go Green Cash Prize. Rs 3000 +  20 reputation points.",
         "luckQuestion23":"Admitted to hospital for 3 days. Loss: ₹20000",
