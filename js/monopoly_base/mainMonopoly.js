@@ -917,7 +917,7 @@ ubsApp.openQuizIfValid = function() {
                             'id':"quizStart",
                             'name' : ubsApp.getTranslation("startQuiz"),
                             'action': "ubsApp.closePopup();ubsApp.renderPageByName('generalQuizStarter');"
-                        }
+                    }
                  ]
 
           });
