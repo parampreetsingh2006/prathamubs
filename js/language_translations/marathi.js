@@ -184,6 +184,7 @@ ubsApp.translation={
         "hasWon" : "has won",
         "Shampoo":"शॅम्पू",
         "Detergent":"Detergent",
+        "sale":"विक्री",
 
         "salesResultHeader":"विक्री परिणाम",
         "salesWrongAnswer":"हे चुकीचे उत्तर आहे. ",
@@ -200,7 +201,7 @@ ubsApp.translation={
         "repPoints":"प्रतिष्ठा गुण",
         "Decision":"निर्णय",
         "questionDecisionInsurance":"तुमच्याकडे विमा एजंट पॉलिसी विकायला  आला आहे - विमाहप्ता / प्रीमीयमची किंमत प्रतिवर्ष रु.₹<br><br>असेल.तुम्ही विमा उतरवणार का? ",
-        "yes":"हो (विमा हप्ता भरा आणि प्रतिष्ठा गुण  कमवा)",
+        "yes":"हो (विमा हप्ता भरा आणि प्रतिष्ठा गुण गमवा)",
         "no":"नाही (प्रतिष्ठा गुण गमवा)",
 
 
@@ -369,7 +370,7 @@ ubsApp.translation={
         "wowImage": "images/english/wow.png",
         "nextPlayerImage" : "images/english/nextplayer.png",
         "GAMEOVER":"खेळ संपला",
-        "gameLogo":"images/english/logo.png",
+        "gameLogo":"images/marathi/logo.png",
         "luckQuestion1":"स्क्रॅच कार्ड रोख बक्षीस : रु.५००/- ",
         "luckQuestion2":"स्क्रॅच कार्ड रोख बक्षीस : रु.१००/- ",
         "luckQuestion3":"उन्हाळ्यात अधिक आईसक्रीम विक्री - नफा : रु.३५००/- ",

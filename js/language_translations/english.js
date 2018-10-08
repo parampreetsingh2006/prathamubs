@@ -195,6 +195,7 @@ ubsApp.translation={
         "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
+        "sale":"Sales",
 
         "salesResultHeader":"SALES RESULT",
         "salesWrongAnswer":"This is the wrong answer. ",

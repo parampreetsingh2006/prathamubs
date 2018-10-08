@@ -298,7 +298,7 @@ ubsApp.leaderBoardTemplate=
     ubsApp.salesTemplate=
     '<div class="mainDiv row" style="height:100%;width:100%">'+
     '       <div class="salesScreenTitle" style="color:white">'+
-                    '           SELL' +
+                    '           {{sale}}' +
                     '       </div>'+
                     '           <div class="salesIconContainer">'+
                     '               <img src="{{salesImage}}.png" class="icon" style="">'+

@@ -180,7 +180,7 @@ ubsApp.translation={
     "Customer":"ग्राहक",
     "Tools":"उपकरण",
     "SUBMIT": "समाप्त",
-
+    "sale": "बिक्री",
 
     "itemRateDisplay":{
             "1":"₹ 50/kg",
