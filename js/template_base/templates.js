@@ -1065,19 +1065,19 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
 '       <div class="row" id="leftInfo">'+
 '           <div class="col-md-10">'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 1.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'       <div class="row" id="rightInfo">'+
-'           <div class="col-md-12" >'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
+'       <div class="row" id="rightInfo" style="position: relative;">'+
+'           <div class="col-md-6" >'+
+'               <span id="decisionBankBalance" style="word-spacing: 7.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} ₹{{reputationPts}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
+'       <div class="decisionHelpButtons" onclick="ubsApp.startHelp(\'decisionHelp\')" style="position: absolute;right: 10%;bottom: 20%;"></div>'+
 '       </div>'+
-'   <button id="quizHelp" class=\'quizButtons decisionHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 ubsApp.decisionTemplate = '<div id="decisonMaking">'+
@@ -1096,7 +1096,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{#if inline}}'+
 '       <div id="yes_no">'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\', {{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\',{{/if}} \'{{startTime}}\',\'{{questionId}}\', {{#if randomProfit}} \'{{randomProfit}}\' {{/if}})">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',\'{{startTime}}\',\'{{questionId}}\', {{#if insurance}}\'{{insurance}}\', \'{{page}}\', {{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\',{{/if}} {{#if randomProfit}}\'false\', \'undefined\', \'false\',\'{{randomProfit}}\',{{/if}} )">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       </div>'+
 '       {{else}}'+

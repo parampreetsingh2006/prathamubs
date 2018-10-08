@@ -28,7 +28,7 @@ ubsApp.renderDecisonTemplate = function() {
 
 }
 
-ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, page="", pamphlet=false, startTime,questionId, randomProfit=false){
+ubsApp.decisionOptions = function(reputationPts, bankBalance, startTime, questionId, insurance=false, page="", pamphlet=false, randomProfit=false){
 
 	let initialPlayerRepPoints = userArray[playerChance].getReputationPts();
 	let totalReputationPoints = initialPlayerRepPoints+parseInt(reputationPts);
@@ -41,48 +41,48 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
 	if(insurance == "true"){
 	 ubsApp.renderPageByName(page);
 	}
-	
-	if(pamphlet == "true"){
-		let profit = Math.floor(Math.random() * 2500) + 500;
-		let playerBankBalance = userArray[playerChance].getBankBalance();
-		userArray[playerChance].setBankBalance(playerBankBalance+profit);
-		totalPlayerBankBalance += playerBankBalance+profit;
-		nextAction="ubsApp.nextMove();";
-	}
-	else if(randomProfit == "true"){
-		let profitPercentage = Math.floor(Math.random() * 50) +10;
-		let playerBankBal = userArray[playerChance].getBankBalance();
-		let balIncreaseAsProfit =  Math.floor((profitPercentage/100)*playerBankBalance);
-		totalPlayerBankBalance += balIncreaseAsProfit;
-		nextAction="ubsApp.nextMove();";
-	}
 	else{
-		nextAction="ubsApp.closePopup();";
-	}
 
-
-		if(totalReputationPoints > initialPlayerRepPoints && totalPlayerBankBalance < initialPlayerBankBalance){
-			decisionResultMessage = ubsApp.formatMessage( ubsApp.translation["decisionGainReptPointsLostBalance"],[Math.abs(reputationPts), Math.abs(bankBalance)]);
-			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
-			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceLoss");
-
-		} 
-		else if(totalReputationPoints < totalReputationPoints && totalPlayerBankBalance > initialPlayerBankBalance){
-			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainBalanceLoseRptPts"],[Math.abs(bankBalance), Math.abs(reputationPts)]);
-			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
-			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceGain");
-
+		if(pamphlet == "true"){
+			let profit = Math.floor(Math.random() * 2500) + 500;
+			let playerBankBalance = userArray[playerChance].getBankBalance();
+			userArray[playerChance].setBankBalance(playerBankBalance+profit);
+			totalPlayerBankBalance += playerBankBalance+profit;
+			nextAction="ubsApp.nextMove();";
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionResultMessageInCaseOfPamphletOrFestival"], [reputationPts, Math.abs(bankBalance), profit]);
 		}
-		else if (totalReputationPoints > initialPlayerRepPoints){
-			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainRptPts"],[Math.abs(reputationPts)]);
-			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
-
+		else if(randomProfit == "true"){
+			let profitPercentage = Math.floor(Math.random() * 50) +10;
+			let playerBankBal = userArray[playerChance].getBankBalance();
+			let balIncreaseAsProfit =  Math.floor((profitPercentage/100)*playerBankBal);
+			totalPlayerBankBalance += balIncreaseAsProfit;
+			nextAction="ubsApp.nextMove();";
+			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionResultMessageInCaseOfPamphletOrFestival"], [reputationPts, Math.abs(bankBalance), balIncreaseAsProfit]);
 		}
-		else if (totalReputationPoints < initialPlayerRepPoints){
-			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionLoseRptPts"],[Math.abs(reputationPts)]);
-			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
-		}
+		else{
+			nextAction="ubsApp.closePopup();";
+			if(totalReputationPoints > initialPlayerRepPoints && totalPlayerBankBalance < initialPlayerBankBalance){
+				decisionResultMessage = ubsApp.formatMessage( ubsApp.translation["decisionGainReptPointsLostBalance"],[Math.abs(reputationPts), Math.abs(bankBalance)]);
+				ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
+				ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceLoss");
 
+			} 
+			else if(totalReputationPoints < totalReputationPoints && totalPlayerBankBalance > initialPlayerBankBalance){
+				decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainBalanceLoseRptPts"],[Math.abs(bankBalance), Math.abs(reputationPts)]);
+				ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
+				ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, bankBalance,bankBalance, 1, startTime, "decisionBankBalanceGain");
+
+			}
+			else if (totalReputationPoints > initialPlayerRepPoints){
+				decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionGainRptPts"],[Math.abs(reputationPts)]);
+				ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsGain");
+
+			}
+			else if (totalReputationPoints < initialPlayerRepPoints){
+				decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionLoseRptPts"],[Math.abs(reputationPts)]);
+				ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
+			}
+		}
 		 ubsApp.openResultPopup({
         	"message" : decisionResultMessage,
         	"header" : ubsApp.translation["decisionResult"],
@@ -95,6 +95,10 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, insurance=false, p
                         }
                  ]
         })
+	}
+	
+
+
 }
 
 
