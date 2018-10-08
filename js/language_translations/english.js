@@ -627,7 +627,7 @@ ubsApp.translation={
       "QuizQuestion89" : "What is Auto Loan",
       "QuizQuestion90" : "PAN card is issued by",
       "QuizQuestion91" : "Is PAN card accepted as proof of Citizenship",
-      "QuizQuestion92" : "Can PAN card be issue to Foreign Nationals",
+      "QuizQuestion92" : "Can PAN card be issued to Foreign Nationals",
       "QuizQuestion93" : "Can PAN be issued to people below age of 18",
       "QuizQuestion94" : "Is it necessary to pay Income Tax if one has PAN card",
       "QuizQuestion95" : "What is the purpose of PAN card?",

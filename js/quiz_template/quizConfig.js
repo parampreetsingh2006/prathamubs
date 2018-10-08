@@ -844,7 +844,7 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "saftey",
+      "category" : "safety",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
@@ -905,7 +905,7 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "saftey",
+      "category" : "safety",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
@@ -4118,7 +4118,7 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "saftey",
+      "category" : "safety",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
