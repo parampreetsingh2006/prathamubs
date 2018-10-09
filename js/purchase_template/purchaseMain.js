@@ -155,7 +155,7 @@ else{
             ubsApp.closeCurrentScenario();
             ubsApp.currentPlayerContents();
             offlinePurchaseClicked=false;
-        }		
+        }
 
         // document.getElementById("bankBalanceValue").innerHTML=userArray[playerChance].getBankBalance();
         // document.getElementById("cashValue").innerHTML=userArray[playerChance].getplayerScore();

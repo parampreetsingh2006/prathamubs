@@ -245,19 +245,19 @@ ubsApp.checkInventory=function(){
 	let invLevel = userArray[playerChance].getInventoryScore();
 
     if(invLevel > 80 ){
-       percent = (Math.random()*1)*0.1+0.9;
+       percent = (Math.random() % 0.1)+0.9;
     }
     else  if(invLevel >60 ){
-       percent = (Math.random()*2)*0.1+0.8;
+       percent = (Math.random() % 0.1)+0.8;
     }
     else  if(invLevel > 40 ){
-       percent = (Math.random()*2)*0.1+0.6;
+       percent = (Math.random() % 0.2)+0.6;
     }
     else  if(invLevel > 20 ){
-       percent = (Math.random()*2)*0.1+0.4;
+       percent = (Math.random() % 0.2 )+0.4;
     }
     else  if(invLevel > 0 ){
-       percent = (Math.random()*2)*0.1+0.2;
+       percent = (Math.random() % 0.2)+0.2;
     } else  {
         percent = 0;
     }
