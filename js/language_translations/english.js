@@ -55,6 +55,7 @@ ubsApp.translation={
         "decision":"DECISION",
         "luck":"LUCK",
 
+
         "bankBalanceTitle":"BANK BALANCE",
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
@@ -133,6 +134,41 @@ ubsApp.translation={
             "29": "₹ 12/70gm",
             "30": "₹ 60/200gm"
         },
+
+        "itemTable":{
+            "1":"Wheat",
+            "2":"Rice",
+            "3":"Dal",
+            "4":"Sugar",
+            "5":"Milk",
+            "6":"Oil",
+            "7":"Rope",
+            "8":"Chocolate",
+            "9":"Eggs",
+            "10":"Biscuit",
+            "11":"Soap",
+            "12":"Shampoo",
+            "13":"Detergent",
+            "14":"Salt",
+            "15":"Coriander",
+            "16":"Phenyl",
+            "17":"Broom",
+            "18":"Tea",
+            "19":"Bread",
+            "20":"Bessan Flour",
+            "21":"Bessan Flour",
+            "22":"Almonds",
+            "23":"Organic Cashews",
+            "24":"Butter",
+            "25":"Mustard",
+            "26":"Chilli Powder",
+            "27":"Sabudana",
+            "28":"NuttyCocoa",
+            "29":"Noddles",
+            "30":"Jam"
+            
+
+        },
         //center ScoreBoard and transfer to bank
         "payDebtTitle":"PAY DEBT",
         "transferToBank":"TRANSFER CASH TO BANK",
@@ -195,7 +231,7 @@ ubsApp.translation={
         "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
-        "sale":"Sales",
+        
 
         "salesResultHeader":"SALES RESULT",
         "salesWrongAnswer":"This is the wrong answer. ",
@@ -1322,4 +1358,46 @@ ubsApp.translation={
        "salesNoItemMessage" : "Inventory too low no items available to sell.",
        "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
        "decisionBankBalanceTitle":"BANK-BALANCE",
+
+
+       "sale":"Sales",
+
+        "itemTable":{
+            "1":"Wheat",
+            "2":"Rice",
+            "3":"Dal",
+            "4":"Sugar",
+            "5":"Milk",
+            "6":"Oil",
+            "7":"Rope",
+            "8":"Chocolate",
+            "9":"Eggs",
+            "10":"Biscuit",
+            "11":"Soap",
+            "12":"Shampoo",
+            "13":"Detergent",
+            "14":"Salt",
+            "15":"Coriander",
+            "16":"Phenyl",
+            "17":"Broom",
+            "18":"Tea",
+            "19":"Bread",
+            "20":"Bessan Flour",
+            "21":"Bessan Flour",
+            "22":"Almonds",
+            "23":"Organic Cashews",
+            "24":"Butter",
+            "25":"Mustard",
+            "26":"Chilli Powder",
+            "27":"Sabudana",
+            "28":"NuttyCocoa",
+            "29":"Noddles",
+            "30":"Jam"
+            
+
+        },
+
+        "discount": "Buy 500 ml and get 500 ml free",
+        "discount": "7.5% discount on total",
+        "discount": "Discount: 25% on total"
     }   

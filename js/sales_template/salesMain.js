@@ -5,6 +5,9 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
     templateConfig.currentPlayerName = userArray[playerChance].getplayerName();
     templateConfig.Customer = ubsApp.getTranslation("Customer");
     templateConfig.gameLogo = ubsApp.getTranslation("gameLogo");
+
+    templateConfig.salesConfig = ubsApp.getTranslation("sale");
+
     tempVar.html += ubsOrdertemplate(templateConfig);
     ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
 	if(ubsApp.noItemsForSale) {
