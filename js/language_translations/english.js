@@ -173,7 +173,7 @@ ubsApp.translation={
 
         "receiptHeading":"SUPER MARKET RECEIPT",
         "receiptGen":"Receipt Generation",
-        "Order":"Order",
+        "Order":"ORDER",
         "Customer":"CUSTOMER",
         "Items":"Items",
         "SUBMIT": "DONE",
@@ -203,7 +203,7 @@ ubsApp.translation={
         "salesCorrectRptpt2":"Consider this sale to be representative of your whole day's sale.₹ {{cashincreased}} was credited to your cash balance.",
         "salesWrongRptpt":"Reputation points are reduced by ",
         "salesWrongRptpt2":"You do not earn any reputation points. ",
-        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
+        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. <br> Do you need any help to know to how to solve the problem?",
         "salesTimeOut": "Time's Up! Your reputation points are reduced by 4.",
 
         "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",

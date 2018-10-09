@@ -349,6 +349,7 @@ ubsApp.openPopup = function(config) {
     "imageStyle":"",
     "showBorder" : true,
     "backgroundColor" :"white",
+    "messageStyle" : "text-align: center;     padding-top: 19px;",
    }, config);
 
    ubsApp.popupConfig.showImage = showImage;
@@ -384,6 +385,8 @@ ubsApp.openResultPopup = function(config) {
     "imageStyle":"",
     "showBorder" : true,
     "backgroundColor" :"white",
+     "messageStyle" : "text-align: center;     padding-top: 19px;",
+
    }, config);
    ubsApp.popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");
