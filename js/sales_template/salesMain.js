@@ -194,7 +194,7 @@ ubsApp.selectAvailableItems = function(config){
 	let noOfItems =config.order.length;
 	let val=0;
 	let percent = 1-ubsApp.checkInventory();
-	let notAvailable = Math.floor(percent*noOfItems);
+	let notAvailable = Math.round(percent*noOfItems);
 	let arr = [];
 
    if(notAvailable == noOfItems) {
@@ -248,7 +248,7 @@ ubsApp.checkInventory=function(){
        percent = (Math.random() % 0.1)+0.9;
     }
     else  if(invLevel >60 ){
-       percent = (Math.random() % 0.1)+0.8;
+       percent = (Math.random() % 0.2)+0.8;
     }
     else  if(invLevel > 40 ){
        percent = (Math.random() % 0.2)+0.6;
