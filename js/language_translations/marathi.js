@@ -1331,5 +1331,7 @@ ubsApp.translation={
        "hasHighestScoreMessage" : "खेळाडू {{playerName}} ने सर्वोच्च गुण मिळविले परंतु हे गुप्ताजीच्या नेहमीच्या नफ्यापेक्षा कमी होते.",
        "kycHelpImage":"images/incometaxhelp.png",
        "Jar" : "Jar",
+        "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+
 
     }

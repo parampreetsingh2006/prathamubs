@@ -5980,7 +5980,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Get 15% off on bread's if you buy more than 2 loaves of bread",
+                   				"discount": "{{Sales91DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer1",
                    				"receiptHeading": "{{receiptHeading}}",

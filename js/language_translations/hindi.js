@@ -1279,5 +1279,7 @@ ubsApp.translation={
        "salesNoItemMessage" : "बेचने के लिए सूची बहुत कम कोई वस्तु उपलब्ध नहीं है।",
        "advantageCardConvertSuccess" : "बधाई हो कि अब आपके पास {{advantageCard}} लाभ कार्ड {{reputationPoints}} प्रतिष्ठा अंक का उपयोग किया गया है।",
        "Jar" : "Jar",
+        "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+
 
 }
