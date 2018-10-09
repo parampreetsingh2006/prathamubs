@@ -1324,4 +1324,9 @@ ubsApp.translation={
        "decisionResultMessageInCaseOfPamphletOrFestival":"Congratulations. You earned {0} Reputation Points. You also spent Rs. {1} and earned business for Rs. {2}",
         "Jar" : "Jar",
         "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+        "cashChanged":"Cash Changed",
+        "repPointsChanged" : "Reputation Points Changed",
+        "inventoryChanged" : "Inventory Percent Changed",
+        "inventoryValueChanged" : "Inventory Value Changed",
+        "bankBalanceChanged" : "Bank Balance changed",
     }

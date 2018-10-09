@@ -1229,40 +1229,25 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               ''+
                               '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
                               '        '+
-                              '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: bold;">{{WeekTitle}} {{weekNumber}}</div>'+
+                              '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: bold;margin-left: 2%;">{{WeekTitle}} {{weekNumber}}</div>'+
                               '        <div style="display: inline-block;width: 100%;font-weight: bold;">'+
-                              '            <div style="float: left;width: 45%;">'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{BankBalance}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekBankBalance}}</div>'+
+                              '            <div style="float: left;width: 100%;">'+
+                              '                <div style="display: inline-block;width: 100%;padding:2%;">'+
+                              '                        <div style="float: left;">{{ReputationPoints}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekReputationPts}}</div>'+
                               '                </div>'+
-                              ''+
                               '                <div style="display: inline-block;width: 100%;">'+
                               '                        <div style="float: left;">{{Cash}}</div>'+
                               '                        <div style="float: right;">{{currentWeekCash}}</div>'+
                               '                </div>'+
                               ''+
                               '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{Credit}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekCredit}}</div>'+
-                              '                </div>'+
-                              '            </div>'+
-                              '            <div style="float: right;width: 45%;">'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{INVENTORY}}</div>'+
-                              '                        <div style="float: right;">{{currentInventory}}</div>'+
+                              '                        <div style="float: left;">{{BankBalance}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekBankBalance}}</div>'+
                               '                </div>'+
                               '                <div style="display: inline-block;width: 100%;">'+
                               '                        <div style="float: left;">{{INVENTORYVALUE}}</div>'+
                               '                        <div style="float: right;">{{currentInventoryValue}}</div>'+
-                              '                </div>'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{ReputationPoints}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekReputationPts}}</div>'+
-                              '                </div>'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{AdvantageCard}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekAdvantageCard}}</div>'+
                               '                </div>'+
                               ''+
                               '            </div>'+
@@ -1270,7 +1255,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               ''+
                               ''+
                               '        <div style="display:inline-block;margin-top: 10px;width:58%;">'+
-                              '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: bold;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
+                              '            <div style="float:left;margin-left: 2%;background-color: #a6a6e4;padding: 3px;font-weight: bold;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
                               '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
                               '            </div>'+
