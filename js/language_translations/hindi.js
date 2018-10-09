@@ -1278,5 +1278,6 @@ ubsApp.translation={
        "hasHighestScoreMessage" : "प्लेयर {{playerName}} ने उच्चतम स्कोर किया लेकिन यह अभी भी गुप्ता जी के सामान्य लाभ से कम है।",
        "salesNoItemMessage" : "बेचने के लिए सूची बहुत कम कोई वस्तु उपलब्ध नहीं है।",
        "advantageCardConvertSuccess" : "बधाई हो कि अब आपके पास {{advantageCard}} लाभ कार्ड {{reputationPoints}} प्रतिष्ठा अंक का उपयोग किया गया है।",
+       "Jar" : "Jar",
 
 }

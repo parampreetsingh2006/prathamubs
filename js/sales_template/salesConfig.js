@@ -275,7 +275,7 @@ ubsApp.salesConfig={
                    						"itemId": 28,
                    						"item": "NuttyCocoa",
                    						"amount": "Jar",
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -4161,7 +4161,7 @@ ubsApp.salesConfig={
                    						"item": "Nutty Cocoa",
                    						"amount": " 1 Jar",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -4224,7 +4224,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1 Jar",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -4413,7 +4413,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1 Jar",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -5693,7 +5693,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					}
                    				]
@@ -5944,7 +5944,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 3 Jars",
                    						"quantity": 3,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -6042,7 +6042,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					}
                    				]

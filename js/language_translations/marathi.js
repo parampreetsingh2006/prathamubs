@@ -1329,5 +1329,7 @@ ubsApp.translation={
        "luckTakeQuizPopupMessage":"तुम्हाला एक प्रश्न दाखविला जाईल. तुम्ही त्याचे उत्तर दिले, तर तुमचा दंड माफ केला जाईल किंवा तुमच्या खात्यातून पैसे वजा केले जाणार नाहीत",
        "theGameBegins" : "खेळ सुरु झाला!!!",
        "hasHighestScoreMessage" : "खेळाडू {{playerName}} ने सर्वोच्च गुण मिळविले परंतु हे गुप्ताजीच्या नेहमीच्या नफ्यापेक्षा कमी होते.",
-       "kycHelpImage":"images/incometaxhelp.png"
+       "kycHelpImage":"images/incometaxhelp.png",
+       "Jar" : "Jar",
+
     }
