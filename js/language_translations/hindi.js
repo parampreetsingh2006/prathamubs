@@ -1286,4 +1286,39 @@ ubsApp.translation={
        "inventoryValueChanged" : "Inventory Value Changed",
        "bankBalanceChanged" : "Bank Balance changed",
 
+       "itemTable":{
+            "1":"Wheat",
+            "2":"Rice",
+            "3":"Dal",
+            "4":"Sugar",
+            "5":"Milk",
+            "6":"Oil",
+            "7":"Rope",
+            "8":"Chocolate",
+            "9":"Eggs",
+            "10":"Biscuit",
+            "11":"Soap",
+            "12":"Shampoo",
+            "13":"Detergent",
+            "14":"Salt",
+            "15":"Coriander",
+            "16":"Phenyl",
+            "17":"Broom",
+            "18":"Tea",
+            "19":"Bread",
+            "20":"Bessan Flour",
+            "21":"Bessan Flour",
+            "22":"Almonds",
+            "23":"Organic Cashews",
+            "24":"Butter",
+            "25":"Mustard",
+            "26":"Chilli Powder",
+            "27":"Sabudana",
+            "28":"NuttyCocoa",
+            "29":"Noddles",
+            "30":"Jam"
+            
+
+        },
+
 }

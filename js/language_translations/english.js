@@ -135,40 +135,7 @@ ubsApp.translation={
             "30": "₹ 60/200gm"
         },
 
-        "itemTable":{
-            "1":"Wheat",
-            "2":"Rice",
-            "3":"Dal",
-            "4":"Sugar",
-            "5":"Milk",
-            "6":"Oil",
-            "7":"Rope",
-            "8":"Chocolate",
-            "9":"Eggs",
-            "10":"Biscuit",
-            "11":"Soap",
-            "12":"Shampoo",
-            "13":"Detergent",
-            "14":"Salt",
-            "15":"Coriander",
-            "16":"Phenyl",
-            "17":"Broom",
-            "18":"Tea",
-            "19":"Bread",
-            "20":"Bessan Flour",
-            "21":"Bessan Flour",
-            "22":"Almonds",
-            "23":"Organic Cashews",
-            "24":"Butter",
-            "25":"Mustard",
-            "26":"Chilli Powder",
-            "27":"Sabudana",
-            "28":"NuttyCocoa",
-            "29":"Noddles",
-            "30":"Jam"
-            
-
-        },
+        
         //center ScoreBoard and transfer to bank
         "payDebtTitle":"PAY DEBT",
         "transferToBank":"TRANSFER CASH TO BANK",
@@ -1358,7 +1325,7 @@ ubsApp.translation={
        "salesNoItemMessage" : "Inventory too low no items available to sell.",
        "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
        "decisionBankBalanceTitle":"BANK-BALANCE",
-<<<<<<< HEAD
+
 
 
        "sale":"Sales",
@@ -1398,11 +1365,10 @@ ubsApp.translation={
 
         },
 
-        "discount": "Buy 500 ml and get 500 ml free",
+        "Sales95DiscountText": "Buy 500 ml and get 500 ml free",
         "discount": "7.5% discount on total",
         "discount": "Discount: 25% on total"
-    }   
-=======
+       
        "decisionResultMessageInCaseOfPamphletOrFestival":"Congratulations. You earned {0} Reputation Points. You also spent Rs. {1} and earned business for Rs. {2}",
         "Jar" : "Jar",
         "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
@@ -1412,4 +1378,4 @@ ubsApp.translation={
         "inventoryValueChanged" : "Inventory Value Changed",
         "bankBalanceChanged" : "Bank Balance changed",
     }
->>>>>>> 1a2b2551c1b7f01a31844771efe04b502331e115
+
