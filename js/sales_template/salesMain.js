@@ -214,6 +214,7 @@ ubsApp.selectAvailableItems = function(config){
 	for(var i=0;i<noOfItems;i++){
 		var x = config.order[i].itemId;
 		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
+		//config.order[i].item = ubsApp.translation.itemTable[x];
 		if(config.order[i].exclude==false){
 		    config.order[i].no = orderNo;
 		    orderNo++;
