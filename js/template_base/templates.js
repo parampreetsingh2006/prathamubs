@@ -436,9 +436,9 @@ ubsApp.leaderBoardTemplate=
 ubsApp.quizTemplate = '<div id="quiz">'+
 '   <div id="quizTitle">'+
 '       <span id="quizEmoji"></span>    '+
-'       <span id="quizHeading">Quiz</span>'+
-'       <span id="score"> SCORE <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
-'       <span id="playerName"> PLAYER: {{currentPlayerName}}</span>'+
+'       <span id="quizHeading">{{quizTitle}}</span>'+
+'       <span id="score">{{scoreTitle}}: <span id="correctAnswers"></span>/{{noOfQuestions}} </span>'+
+'       <span id="playerName"> {{playerTitle}}: {{currentPlayerName}}</span>'+
 '   </div>'+
 '   <div id="question_answer_background">'+
 '   <div id="question_answer">'+
@@ -454,7 +454,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <div class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}">{{optionValue}}</div><br>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" style="color:green" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\', \'{{helpPageName}}\',\'{{entryPoint}}\')" value="OK"></div>'+
+'       <div id="quizOk"><input type="submit" style="color:green" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\', \'{{helpPageName}}\',\'{{entryPoint}}\')" value={{okTitle}}></div>'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
@@ -1065,19 +1065,19 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
 '       <div class="row" id="leftInfo">'+
 '           <div class="col-md-10">'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 1.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'       <div class="row" id="rightInfo">'+
-'           <div class="col-md-12" >'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
+'       <div class="row" id="rightInfo" style="position: relative;">'+
+'           <div class="col-md-6" >'+
+'               <span id="decisionBankBalance" style="word-spacing: 7.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} ₹{{reputationPts}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
+'       <div class="decisionHelpButtons" onclick="ubsApp.startHelp(\'decisionHelp\')" style="position: absolute;right: 10%;bottom: 20%;"></div>'+
 '       </div>'+
-'   <button id="quizHelp" class=\'quizButtons decisionHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>';
 
 ubsApp.decisionTemplate = '<div id="decisonMaking">'+
@@ -1096,7 +1096,7 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{#if inline}}'+
 '       <div id="yes_no">'+
 '       {{#each options}}'+
-'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',{{#if insurance}}\'{{insurance}}\', \'{{page}}\', {{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\',{{/if}} \'{{startTime}}\',\'{{questionId}}\', {{#if randomProfit}} \'{{randomProfit}}\' {{/if}})">{{optionValue}}</button></span>'+
+'           <span id="option{{id}}"><button class=\'decisionButtons\' onclick="ubsApp.decisionOptions(\'{{credit.reputationPoints}}\', \'{{credit.bankBalance}}\',\'{{startTime}}\',\'{{questionId}}\', {{#if insurance}}\'{{insurance}}\', \'{{page}}\', {{/if}} {{#if pamphlet}}\'false\', \'undefined\', \'{{pamphlet}}\',{{/if}} {{#if randomProfit}}\'false\', \'undefined\', \'false\',\'{{randomProfit}}\',{{/if}} )">{{optionValue}}</button></span>'+
 '       {{/each}}'+
 '       </div>'+
 '       {{else}}'+
@@ -1196,7 +1196,7 @@ ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image
                        ''+
                        '        <div>'+
                        ''+
-                       '            <div style="    text-align: center;     padding-top: 19px;">{{message}}<br></div>'+
+                       '            <div style="{{messageStyle}}">{{message}}<br></div>'+
                        '            {{#if showImage}}'+
                        '            <div style="text-align: center; height: 23vh;"> <img style="height: 100%;{{imageStyle}}" src="{{imageUrl}}"></img></div>'+
                        '            {{/if}}'+
@@ -1205,7 +1205,7 @@ ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image
                        '            <div style="width: fit-content;margin: auto;margin-top: 2%;">'+
                        '                {{#each buttons}}'+
 
-                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 7px; padding-bottom: 15%; color: red; font-weight:bold" onclick="{{action}}" >{{name}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 15px; padding-bottom: 15%; color: red; font-weight:bold" onclick="{{action}}" >{{name}}'+
 
                        '                </div>'+
                        '                {{/each}}'+
@@ -1229,40 +1229,25 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               ''+
                               '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
                               '        '+
-                              '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: bold;">{{WeekTitle}} {{weekNumber}}</div>'+
+                              '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: bold;margin-left: 2%;">{{WeekTitle}} {{weekNumber}}</div>'+
                               '        <div style="display: inline-block;width: 100%;font-weight: bold;">'+
-                              '            <div style="float: left;width: 45%;">'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{BankBalance}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekBankBalance}}</div>'+
+                              '            <div style="float: left;width: 100%;">'+
+                              '                <div style="display: inline-block;width: 100%;padding:2%;">'+
+                              '                        <div style="float: left;">{{ReputationPoints}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekReputationPts}}</div>'+
                               '                </div>'+
-                              ''+
                               '                <div style="display: inline-block;width: 100%;">'+
                               '                        <div style="float: left;">{{Cash}}</div>'+
                               '                        <div style="float: right;">{{currentWeekCash}}</div>'+
                               '                </div>'+
                               ''+
                               '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{Credit}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekCredit}}</div>'+
-                              '                </div>'+
-                              '            </div>'+
-                              '            <div style="float: right;width: 45%;">'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{INVENTORY}}</div>'+
-                              '                        <div style="float: right;">{{currentInventory}}</div>'+
+                              '                        <div style="float: left;">{{BankBalance}}</div>'+
+                              '                        <div style="float: right;">{{currentWeekBankBalance}}</div>'+
                               '                </div>'+
                               '                <div style="display: inline-block;width: 100%;">'+
                               '                        <div style="float: left;">{{INVENTORYVALUE}}</div>'+
                               '                        <div style="float: right;">{{currentInventoryValue}}</div>'+
-                              '                </div>'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{ReputationPoints}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekReputationPts}}</div>'+
-                              '                </div>'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left;">{{AdvantageCard}}</div>'+
-                              '                        <div style="float: right;">{{currentWeekAdvantageCard}}</div>'+
                               '                </div>'+
                               ''+
                               '            </div>'+
@@ -1270,7 +1255,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               ''+
                               ''+
                               '        <div style="display:inline-block;margin-top: 10px;width:58%;">'+
-                              '            <div style="float:left;background-color: #a6a6e4;padding: 3px;font-weight: bold;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
+                              '            <div style="float:left;margin-left: 2%;background-color: #a6a6e4;padding: 3px;font-weight: bold;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
                               '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
                               '            </div>'+

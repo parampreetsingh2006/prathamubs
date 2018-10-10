@@ -100,9 +100,9 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'rightAnswer');
 		let message = ubsApp.getTranslation("salesCorrectAnswer");
 		if(reputationPointIncrease > 0) {
-		    message += ubsApp.getTranslation("salesCorrectRptpt1").replace("{{reputationPoints}}",reputationPointIncrease).replace("{{time}}",time);
+		    message += "<br>" + ubsApp.getTranslation("salesCorrectRptpt1").replace("{{reputationPoints}}",reputationPointIncrease).replace("{{time}}",time);
 		}
-		message += ubsApp.getTranslation("salesCorrectRptpt2").replace("{{cashincreased}}",cashIncreased);
+		message += "<br>" + ubsApp.getTranslation("salesCorrectRptpt2").replace("{{cashincreased}}",cashIncreased);
 		ubsApp.openResultPopup({
                 "message" : message,
                 "header" : ubsApp.getTranslation("salesResultHeader"),
@@ -123,16 +123,16 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 		if(userTotal>total){
 			userArray[playerChance].setReputationPts(r-4);
 			userArray[playerChance].setplayerScore(c+cashIncreased);
-			message+=ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
+			message+= "<br>" + ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
 		}
 		else{
 		    cashIncreased = Math.round(userTotal*ubsApp.getMultiplier() * 100)/ 100;
 		    userArray[playerChance].setReputationPts(r-4);
 			userArray[playerChance].setplayerScore(c+cashIncreased);
-			message+=ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
+			message+="<br>" + ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
 		}
 
-		message+=ubsApp.getTranslation("salesWrongRptpt3").replace("{{cashincreased}}",cashIncreased);
+		message+= "<br>" +ubsApp.getTranslation("salesWrongRptpt3").replace("{{cashincreased}}",cashIncreased);
 		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'wrongAnswer');
 		ubsApp.openResultPopup({
                "message" : message,
@@ -197,7 +197,7 @@ ubsApp.selectAvailableItems = function(config){
 	let noOfItems =config.order.length;
 	let val=0;
 	let percent = 1-ubsApp.checkInventory();
-	let notAvailable = Math.floor(percent*noOfItems);
+	let notAvailable = Math.round(percent*noOfItems);
 	let arr = [];
 
    if(notAvailable == noOfItems) {
@@ -248,19 +248,19 @@ ubsApp.checkInventory=function(){
 	let invLevel = userArray[playerChance].getInventoryScore();
 
     if(invLevel > 80 ){
-       percent = (Math.random()*1)*0.1+0.9;
+       percent = (Math.random() % 0.1)+0.9;
     }
     else  if(invLevel >60 ){
-       percent = (Math.random()*2)*0.1+0.8;
+       percent = (Math.random() % 0.2)+0.8;
     }
     else  if(invLevel > 40 ){
-       percent = (Math.random()*2)*0.1+0.6;
+       percent = (Math.random() % 0.2)+0.6;
     }
     else  if(invLevel > 20 ){
-       percent = (Math.random()*2)*0.1+0.4;
+       percent = (Math.random() % 0.2 )+0.4;
     }
     else  if(invLevel > 0 ){
-       percent = (Math.random()*2)*0.1+0.2;
+       percent = (Math.random() % 0.2)+0.2;
     } else  {
         percent = 0;
     }
@@ -279,7 +279,7 @@ ubsApp.salesTimeOut= function(temp){
     let message = ubsApp.getTranslation("salesWrongAnswer");
 	userArray[playerChance].setReputationPts(r-4);
 	ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');
-    message+=ubsApp.getTranslation("salesTimeOut");
+    message+="<br>" + ubsApp.getTranslation("salesTimeOut");
     ubsApp.openResultPopup({
            "message" : message,
            "header" : ubsApp.getTranslation("salesResultHeader"),

@@ -29,7 +29,7 @@ ubsApp.translation={
         "PLAYER" : "खेळाडूं",
         "enterPlayers":"कृपया खेळाडूंची संख्या प्रविष्ट करा",
         "enterOfflinePlayers":"खेळाडूंची संख्या",
-        "initPageTitle":"कृपया खेळाडूंची संख्या प्रविष्ट कराS",
+        "initPageTitle":"कृपया खेळाडूंची संख्या प्रविष्ट करा",
         "storePlayerDetailsButton":"पुढचा पान",
          "storePlayerDetailsBackPage":"मागे",
         "computerRequiredTitle":"Computer Required?",
@@ -193,16 +193,21 @@ ubsApp.translation={
         "salesCorrectRptpt2":"आजच्या दिवसात तुम्ही भरपूर विक्री केली ! म्हणून तुमच्या रोख रकमेत रु.{{cashincreased}} गुणाक नंतरची रक्कम जमा करत आहोत.  .",
         "salesWrongRptpt":"कमी केलेले प्रतिष्ठा गुण ",
         "salesWrongRptpt2":"तुम्हाला प्रतिष्ठा गुण मिळणार नाहीत. ",
-        "salesWrongRptpt3":"तुमचे उत्तर चुकीचे आहे. आजच्या दिवसात तुम्ही भरपूर विक्री केली ! म्हणून तुमच्या रोख रकमेत रु.{{cashincreased}} जमा करत आहोत.  समस्या सोडवण्यासाठी तुम्हाला मदतीची आवश्यकता आहे का? ",
-        "salesTimeOut": "वेळ संपली! आपले प्रतिष्ठेचे गुण 1 ने कमी केले आहेत.",
+        "salesWrongRptpt3":"आजच्या दिवसात तुम्ही भरपूर विक्री केली ! म्हणून तुमच्या रोख रकमेत रु.{{cashincreased}} जमा करत आहोत.  <br> समस्या सोडवण्यासाठी तुम्हाला मदतीची आवश्यकता आहे का? ",
+        "salesTimeOut": "वेळ संपली! आपले प्रतिष्ठेचे गुण 4 ने कमी केले आहेत.",
 
         "sales80DiscountMsg" : "३ साबण विकत घेतल्यावर चौथ्यावर ५०% सूट",
         "invVal":"इन्वेंटरीचे मूल्य",
         "repPoints":"प्रतिष्ठा गुण",
         "Decision":"निर्णय",
         "questionDecisionInsurance":"तुमच्याकडे विमा एजंट पॉलिसी विकायला  आला आहे - विमाहप्ता / प्रीमीयमची किंमत प्रतिवर्ष रु.₹<br><br>असेल.तुम्ही विमा उतरवणार का? ",
+<<<<<<< HEAD
         "yes":"हो (विमा हप्ता भरा आणि प्रतिष्ठा गुण गमवा)",
         "no":"नाही (प्रतिष्ठा गुण गमवा)",
+=======
+        "yes":"हो",
+        "no":"नाही",
+>>>>>>> 1a2b2551c1b7f01a31844771efe04b502331e115
 
 
         "decisionQ1":"दुकानाची अपुरी कागद पत्रे - .",
@@ -1330,5 +1335,14 @@ ubsApp.translation={
        "luckTakeQuizPopupMessage":"तुम्हाला एक प्रश्न दाखविला जाईल. तुम्ही त्याचे उत्तर दिले, तर तुमचा दंड माफ केला जाईल किंवा तुमच्या खात्यातून पैसे वजा केले जाणार नाहीत",
        "theGameBegins" : "खेळ सुरु झाला!!!",
        "hasHighestScoreMessage" : "खेळाडू {{playerName}} ने सर्वोच्च गुण मिळविले परंतु हे गुप्ताजीच्या नेहमीच्या नफ्यापेक्षा कमी होते.",
-       "kycHelpImage":"images/incometaxhelp.png"
+       "kycHelpImage":"images/incometaxhelp.png",
+       "Jar" : "Jar",
+       "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+
+       "cashChanged":"Cash Changed",
+       "repPointsChanged" : "Reputation Changed",
+       "inventoryChanged" : "Inventory Percent Changed",
+       "inventoryValueChanged" : "Inventory Changed",
+        "bankBalanceChanged" : "Bank Balance changed",
+
     }

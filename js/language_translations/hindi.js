@@ -223,7 +223,7 @@ ubsApp.translation={
     "salesCorrectRptpt2":"इस बिक्री पर अपने दिन की बिक्री के प्रतिनिधि होने पर विचार करें। ₹ {{cashincreased}} को आपके नकद शेष राशि में जमा किया गया था।",
     "salesWrongRptpt":"प्रतिष्ठा अंक कम कर रहे हैं ",
     "salesWrongRptpt2":"आप कोई प्रतिष्ठा अंक अर्जित नहीं करते हैं। ",
-    "salesWrongRptpt3":"हालांकि यह बिक्री आपके पूरे दिन की बिक्री का प्रतिनिधित्व करती है। आपके नकद शेष राशि में ₹ {{cashincreased}} क्रेडिटिंग। क्या आपको समस्या को हल करने के बारे में जानने के लिए किसी भी मदद की ज़रूरत है?",
+    "salesWrongRptpt3":"हालांकि यह बिक्री आपके पूरे दिन की बिक्री का प्रतिनिधित्व करती है। आपके नकद शेष राशि में ₹ {{cashincreased}} क्रेडिटिंग। <br> क्या आपको समस्या को हल करने के बारे में जानने के लिए किसी भी मदद की ज़रूरत है?",
     "salesTimeOut": "समय पूर्ण हुआ! आपकी प्रतिष्ठा अंक 4 से कम हो जाते हैं।",
      "sales80DiscountMsg" : "3 साबुन खरीदें और चौथा 50% छूट पर प्राप्त करें",
 
@@ -1278,5 +1278,12 @@ ubsApp.translation={
        "hasHighestScoreMessage" : "प्लेयर {{playerName}} ने उच्चतम स्कोर किया लेकिन यह अभी भी गुप्ता जी के सामान्य लाभ से कम है।",
        "salesNoItemMessage" : "बेचने के लिए सूची बहुत कम कोई वस्तु उपलब्ध नहीं है।",
        "advantageCardConvertSuccess" : "बधाई हो कि अब आपके पास {{advantageCard}} लाभ कार्ड {{reputationPoints}} प्रतिष्ठा अंक का उपयोग किया गया है।",
+       "Jar" : "Jar",
+       "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+       "cashChanged":"Cash Changed",
+       "repPointsChanged" : "Reputation Points Changed",
+       "inventoryChanged" : "Inventory Percent Changed",
+       "inventoryValueChanged" : "Inventory Value Changed",
+       "bankBalanceChanged" : "Bank Balance changed",
 
 }

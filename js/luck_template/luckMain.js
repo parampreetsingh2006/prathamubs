@@ -51,7 +51,7 @@ ubsApp.findQuizPage = function(category){
     var quizConfig = ubsApp.quizConfig;
     var quizCategory = category;
     if(!quizCategory){
-        quizCategory = "any";
+        quizCategory = "General";
     }
     for(var quizConfigTemplate in quizConfig){
         if(quizConfig[quizConfigTemplate].templates[0].category == quizCategory.toLowerCase()){

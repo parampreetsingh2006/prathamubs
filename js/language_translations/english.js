@@ -209,7 +209,7 @@ ubsApp.translation={
 
         "receiptHeading":"SUPER MARKET RECEIPT",
         "receiptGen":"Receipt Generation",
-        "Order":"Order",
+        "Order":"ORDER",
         "Customer":"CUSTOMER",
         "Items":"Items",
         "SUBMIT": "DONE",
@@ -240,7 +240,7 @@ ubsApp.translation={
         "salesCorrectRptpt2":"Consider this sale to be representative of your whole day's sale.₹ {{cashincreased}} was credited to your cash balance.",
         "salesWrongRptpt":"Reputation points are reduced by ",
         "salesWrongRptpt2":"You do not earn any reputation points. ",
-        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
+        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. <br> Do you need any help to know to how to solve the problem?",
         "salesTimeOut": "Time's Up! Your reputation points are reduced by 4.",
 
         "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",
@@ -439,7 +439,7 @@ ubsApp.translation={
         "luckQuestion17":"Sick Leave for 3 days. Your profit reduced by ₹15000",
         "luckQuestion18":"GST refund. ₹ 8,000",
         "luckQuestion19":"Fine for late payment of GST. ₹ 1000",
-        "luckQuestion20":"In store repai₹ Cost: ₹800",
+        "luckQuestion20":"In store repair. Cost: ₹800",
         "luckQuestion21":"Income tax refund.  ₹ 8700.",
         "luckQuestion22":"Go Green Cash Prize. Rs 3000 +  20 reputation points.",
         "luckQuestion23":"Admitted to hospital for 3 days. Loss: ₹20000",
@@ -664,7 +664,7 @@ ubsApp.translation={
       "QuizQuestion89" : "What is Auto Loan",
       "QuizQuestion90" : "PAN card is issued by",
       "QuizQuestion91" : "Is PAN card accepted as proof of Citizenship",
-      "QuizQuestion92" : "Can PAN card be issue to Foreign Nationals",
+      "QuizQuestion92" : "Can PAN card be issued to Foreign Nationals",
       "QuizQuestion93" : "Can PAN be issued to people below age of 18",
       "QuizQuestion94" : "Is it necessary to pay Income Tax if one has PAN card",
       "QuizQuestion95" : "What is the purpose of PAN card?",
@@ -1358,6 +1358,7 @@ ubsApp.translation={
        "salesNoItemMessage" : "Inventory too low no items available to sell.",
        "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
        "decisionBankBalanceTitle":"BANK-BALANCE",
+<<<<<<< HEAD
 
 
        "sale":"Sales",
@@ -1401,3 +1402,14 @@ ubsApp.translation={
         "discount": "7.5% discount on total",
         "discount": "Discount: 25% on total"
     }   
+=======
+       "decisionResultMessageInCaseOfPamphletOrFestival":"Congratulations. You earned {0} Reputation Points. You also spent Rs. {1} and earned business for Rs. {2}",
+        "Jar" : "Jar",
+        "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+        "cashChanged":"Cash Changed",
+        "repPointsChanged" : "Reputation Points Changed",
+        "inventoryChanged" : "Inventory Percent Changed",
+        "inventoryValueChanged" : "Inventory Value Changed",
+        "bankBalanceChanged" : "Bank Balance changed",
+    }
+>>>>>>> 1a2b2551c1b7f01a31844771efe04b502331e115
