@@ -5742,7 +5742,7 @@ ubsApp.salesConfig={
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
-                                            "value" : 200
+                                            "value" : 100
                                         }
                    					},
                    					{
@@ -5774,7 +5774,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Dozen eggs free with 200 gm Noodles",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer8",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6500,8 +6500,8 @@ ubsApp.salesConfig={
                    						"rate": " 5.5/egg",
                    						"exclude": false,
                    						"discountOnItem" : {
-                                            "type" : 1,
-                                            "value" : 50
+                                            "type" : 2,
+                                            "value" : 33
                                         }
                    					},
                    					{
@@ -6568,7 +6568,7 @@ ubsApp.salesConfig={
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
-                                            "value" : 80
+                                            "value" : 40
                                         }
                    					},
                    					{
