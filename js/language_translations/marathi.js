@@ -1380,4 +1380,27 @@ ubsApp.translation={
 
         },
 
+        "Sales76DiscountText": "50% on Wheat",
+        "Sales77DiscountText": "Buy 500 ml and get 500 ml free!",
+        "Sales78DiscountText": "10% on total",
+        "Sales79DiscountText": "5% on total",
+        "Sales81DiscountText": "20% on oil",
+        "Sales82DiscountText": "10% discount on oil, 15% discount on sugar and 13% discount on Rice",
+        "Sales83DiscountText": "Sugar - Get 1kg free on 2kg purchase",
+        "Sales84DiscountText": "Discount: 25% on total",
+        "Sales85DiscountText": "7.5% discount on total",
+        "Sales86DiscountText": "Get 100gm butter free with 100gm and get 1 loaf of bread free with 4 loaves",
+        "Sales87DiscountText": "Get 100gm of Almonds free with 200gm",
+        "Sales89DiscountText": "Get 100 gm cashews free on purchase of 200 gm",
+        "Sales90DiscountText": "NuttyCocoa combo of 2 Jars @ 20% off",
+        "Sales92DiscountText": "Get 5% off on Almonds and 10% off on Cashew",
+        "Sales93DiscountText": "Cashews at 5% off. Corriander - Get 500gm free on purchase of 500gm",
+        "Sales94DiscountText": "20% on Rice",
+        "Sales95DiscountText": "Buy 500 ml and get 500 ml free",
+        "Sales96DiscountText": "10% on total",
+        "Sales97DiscountText": "50% off on rope",
+        "Sales98DiscountText": "Get half dozen egg free with every dozen",
+        "Sales99DiscountText": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
+        "Sales100DiscountText": "Butter 250 gm free with 500 gm pack",
+
     }
