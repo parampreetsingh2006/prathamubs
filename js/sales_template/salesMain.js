@@ -5,6 +5,9 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
     templateConfig.currentPlayerName = userArray[playerChance].getplayerName();
     templateConfig.Customer = ubsApp.getTranslation("Customer");
     templateConfig.gameLogo = ubsApp.getTranslation("gameLogo");
+
+    templateConfig.salesConfig = ubsApp.getTranslation("sale");
+
     tempVar.html += ubsOrdertemplate(templateConfig);
     ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
 	if(ubsApp.noItemsForSale) {
@@ -214,7 +217,9 @@ ubsApp.selectAvailableItems = function(config){
 	for(var i=0;i<noOfItems;i++){
 		var x = config.order[i].itemId;
 		config.order[i].rate = ubsApp.translation.itemRateDisplay[x];
-		//config.order[i].item = ubsApp.translation.itemTable[x];
+
+    config.order[i].item = ubsApp.translation.itemTable[x];
+
 		if(config.order[i].exclude==false){
 		    config.order[i].no = orderNo;
 		    orderNo++;

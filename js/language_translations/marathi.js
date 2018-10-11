@@ -184,6 +184,7 @@ ubsApp.translation={
         "hasWon" : "has won",
         "Shampoo":"शॅम्पू",
         "Detergent":"Detergent",
+        "sale":"विक्री",
 
         "salesResultHeader":"विक्री परिणाम",
         "salesWrongAnswer":"हे चुकीचे उत्तर आहे. ",
@@ -200,8 +201,13 @@ ubsApp.translation={
         "repPoints":"प्रतिष्ठा गुण",
         "Decision":"निर्णय",
         "questionDecisionInsurance":"तुमच्याकडे विमा एजंट पॉलिसी विकायला  आला आहे - विमाहप्ता / प्रीमीयमची किंमत प्रतिवर्ष रु.₹<br><br>असेल.तुम्ही विमा उतरवणार का? ",
+
+        // "yes":"हो (विमा हप्ता भरा आणि प्रतिष्ठा गुण गमवा)",
+        // "no":"नाही (प्रतिष्ठा गुण गमवा)",
+
         "yes":"हो",
         "no":"नाही",
+
 
 
         "decisionQ1":"दुकानाची अपुरी कागद पत्रे - .",
@@ -1338,5 +1344,63 @@ ubsApp.translation={
        "inventoryChanged" : "Inventory Percent Changed",
        "inventoryValueChanged" : "Inventory Changed",
         "bankBalanceChanged" : "Bank Balance changed",
+
+        "itemTable":{
+            "1":"Wheat",
+            "2":"Rice",
+            "3":"Dal",
+            "4":"Sugar",
+            "5":"Milk",
+            "6":"Oil",
+            "7":"Rope",
+            "8":"Chocolate",
+            "9":"Eggs",
+            "10":"Biscuit",
+            "11":"Soap",
+            "12":"Shampoo",
+            "13":"Detergent",
+            "14":"Salt",
+            "15":"Coriander",
+            "16":"Phenyl",
+            "17":"Broom",
+            "18":"Tea",
+            "19":"Bread",
+            "20":"Bessan Flour",
+            "21":"Bessan Flour",
+            "22":"Almonds",
+            "23":"Organic Cashews",
+            "24":"Butter",
+            "25":"Mustard",
+            "26":"Chilli Powder",
+            "27":"Sabudana",
+            "28":"NuttyCocoa",
+            "29":"Noddles",
+            "30":"Jam"
+            
+
+        },
+
+        "Sales76DiscountText": "50% on Wheat",
+        "Sales77DiscountText": "Buy 500 ml and get 500 ml free!",
+        "Sales78DiscountText": "10% on total",
+        "Sales79DiscountText": "5% on total",
+        "Sales81DiscountText": "20% on oil",
+        "Sales82DiscountText": "10% discount on oil, 15% discount on sugar and 13% discount on Rice",
+        "Sales83DiscountText": "Sugar - Get 1kg free on 2kg purchase",
+        "Sales84DiscountText": "Discount: 25% on total",
+        "Sales85DiscountText": "7.5% discount on total",
+        "Sales86DiscountText": "Get 100gm butter free with 100gm and get 1 loaf of bread free with 4 loaves",
+        "Sales87DiscountText": "Get 100gm of Almonds free with 200gm",
+        "Sales89DiscountText": "Get 100 gm cashews free on purchase of 200 gm",
+        "Sales90DiscountText": "NuttyCocoa combo of 2 Jars @ 20% off",
+        "Sales92DiscountText": "Get 5% off on Almonds and 10% off on Cashew",
+        "Sales93DiscountText": "Cashews at 5% off. Corriander - Get 500gm free on purchase of 500gm",
+        "Sales94DiscountText": "20% on Rice",
+        "Sales95DiscountText": "Buy 500 ml and get 500 ml free",
+        "Sales96DiscountText": "10% on total",
+        "Sales97DiscountText": "50% off on rope",
+        "Sales98DiscountText": "Get half dozen egg free with every dozen",
+        "Sales99DiscountText": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
+        "Sales100DiscountText": "Butter 250 gm free with 500 gm pack",
 
     }
