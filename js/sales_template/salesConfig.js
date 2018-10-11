@@ -275,7 +275,7 @@ ubsApp.salesConfig={
                    						"itemId": 28,
                    						"item": "NuttyCocoa",
                    						"amount": "Jar",
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -4161,7 +4161,7 @@ ubsApp.salesConfig={
                    						"item": "Nutty Cocoa",
                    						"amount": " 1 Jar",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -4224,7 +4224,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1 Jar",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -4413,7 +4413,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1 Jar",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					},
                    					{
@@ -4895,7 +4895,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "50% on Wheat",
+                   				"discount": "{{Sales76DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer6",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -4962,7 +4962,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Buy 500 ml and get 500 ml free!",
+                   				"discount": "{{Sales77DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer7",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5029,7 +5029,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "10% on total",
+                   				"discount": "{{Sales78DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer8",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5096,7 +5096,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "5% on total",
+                   				"discount": "{{Sales79DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer9",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5239,7 +5239,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "20% on oil",
+                   				"discount": "{{Sales81DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer1",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5297,7 +5297,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "10% discount on oil, 15% discount on sugar and 13% discount on Rice",
+                   				"discount": "{{Sales82DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5381,7 +5381,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Sugar - Get 1kg free on 2kg purchase",
+                   				"discount": "{{Sales83DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer3",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5457,7 +5457,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "25% on total",
+                   				"discount": "{{Sales84DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer4",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5542,7 +5542,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "7.5% discount on total",
+                   				"discount": "{{Sales85DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer5",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5618,7 +5618,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Get 100gm butter free with 100gm and get 1 loaf of bread free with 4 loaves",
+                   				"discount": "{{Sales86DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer6",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5693,7 +5693,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					}
                    				]
@@ -5716,7 +5716,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Get 100gm of Almonds free with 200gm",
+                   				"discount": "{{Sales87DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer7",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5742,7 +5742,7 @@ ubsApp.salesConfig={
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
-                                            "value" : 200
+                                            "value" : 100
                                         }
                    					},
                    					{
@@ -5774,7 +5774,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Dozen eggs free with 200 gm Noodles",
+                   				"discount": "",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer8",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5864,7 +5864,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Get 100 gm cashews free on purchase of 200 gm",
+                   				"discount": "{{Sales89DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer9",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5922,7 +5922,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "NuttyCocoa combo of 2 Jars @ 20% off",
+                   				"discount": "{{Sales90DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer10",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -5944,7 +5944,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 3 Jars",
                    						"quantity": 3,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -5980,7 +5980,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Get 15% off on bread's if you buy more than 2 loaves of bread",
+                   				"discount": "{{Sales91DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer1",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6042,7 +6042,7 @@ ubsApp.salesConfig={
                    						"item": "NuttyCocoa",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 320/Jar",
+                   						"rate": " 320/{{Jar}}",
                    						"exclude": false
                    					}
                    				]
@@ -6065,7 +6065,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Get 5% off on Almonds and 10% off on Cashew",
+                   				"discount": "{{Sales92DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer2",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6136,7 +6136,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Cashews at 5% off. Corriander - Get 500gm free on purchase of 500gm",
+                   				"discount": "{{Sales93DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer3",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6216,7 +6216,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "20% on Rice",
+                   				"discount": "{{Sales94DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer4",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6283,7 +6283,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Buy 500 ml and get 500 ml free!",
+                   				"discount": "{{Sales95Discount}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer5",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6341,7 +6341,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "10% on total",
+                   				"discount": "{{Sales96DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer6",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6408,7 +6408,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "50% off on rope",
+                   				"discount": "{{Sales97DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer7",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6475,7 +6475,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Get half dozen egg free with every dozen",
+                   				"discount": "{{Sales98DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer8",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6500,8 +6500,8 @@ ubsApp.salesConfig={
                    						"rate": " 5.5/egg",
                    						"exclude": false,
                    						"discountOnItem" : {
-                                            "type" : 1,
-                                            "value" : 50
+                                            "type" : 2,
+                                            "value" : 33
                                         }
                    					},
                    					{
@@ -6542,7 +6542,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
+                   				"discount": "{{Sales99DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer9",
                    				"receiptHeading": "{{receiptHeading}}",
@@ -6568,7 +6568,7 @@ ubsApp.salesConfig={
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
-                                            "value" : 80
+                                            "value" : 40
                                         }
                    					},
                    					{
@@ -6622,7 +6622,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "Butter 250 gm free with 500 gm pack",
+                   				"discount": "{{Sales100DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer10",
                    				"receiptHeading": "{{receiptHeading}}",

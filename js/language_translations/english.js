@@ -55,6 +55,7 @@ ubsApp.translation={
         "decision":"DECISION",
         "luck":"LUCK",
 
+
         "bankBalanceTitle":"BANK BALANCE",
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
@@ -133,6 +134,8 @@ ubsApp.translation={
             "29": "₹ 12/70gm",
             "30": "₹ 60/200gm"
         },
+
+        
         //center ScoreBoard and transfer to bank
         "payDebtTitle":"PAY DEBT",
         "transferToBank":"TRANSFER CASH TO BANK",
@@ -173,7 +176,7 @@ ubsApp.translation={
 
         "receiptHeading":"SUPER MARKET RECEIPT",
         "receiptGen":"Receipt Generation",
-        "Order":"Order",
+        "Order":"ORDER",
         "Customer":"CUSTOMER",
         "Items":"Items",
         "SUBMIT": "DONE",
@@ -195,6 +198,7 @@ ubsApp.translation={
         "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
+        
 
         "salesResultHeader":"SALES RESULT",
         "salesWrongAnswer":"This is the wrong answer. ",
@@ -203,7 +207,7 @@ ubsApp.translation={
         "salesCorrectRptpt2":"Consider this sale to be representative of your whole day's sale.₹ {{cashincreased}} was credited to your cash balance.",
         "salesWrongRptpt":"Reputation points are reduced by ",
         "salesWrongRptpt2":"You do not earn any reputation points. ",
-        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
+        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. <br> Do you need any help to know to how to solve the problem?",
         "salesTimeOut": "Time's Up! Your reputation points are reduced by 4.",
 
         "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",
@@ -1321,5 +1325,78 @@ ubsApp.translation={
        "salesNoItemMessage" : "Inventory too low no items available to sell.",
        "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
        "decisionBankBalanceTitle":"BANK-BALANCE",
+
+
+
+       "sale":"Sales",
+
+        "itemTable":{
+            "1":"Wheat",
+            "2":"Rice",
+            "3":"Dal",
+            "4":"Sugar",
+            "5":"Milk",
+            "6":"Oil",
+            "7":"Rope",
+            "8":"Chocolate",
+            "9":"Eggs",
+            "10":"Biscuit",
+            "11":"Soap",
+            "12":"Shampoo",
+            "13":"Detergent",
+            "14":"Salt",
+            "15":"Coriander",
+            "16":"Phenyl",
+            "17":"Broom",
+            "18":"Tea",
+            "19":"Bread",
+            "20":"Bessan Flour",
+            "21":"Bessan Flour",
+            "22":"Almonds",
+            "23":"Organic Cashews",
+            "24":"Butter",
+            "25":"Mustard",
+            "26":"Chilli Powder",
+            "27":"Sabudana",
+            "28":"NuttyCocoa",
+            "29":"Noddles",
+            "30":"Jam"
+            
+
+        },
+
+        "Sales76DiscountText": "50% on Wheat",
+        "Sales77DiscountText": "Buy 500 ml and get 500 ml free!",
+        "Sales78DiscountText": "10% on total",
+        "Sales79DiscountText": "5% on total",
+        "Sales81DiscountText": "20% on oil",
+        "Sales82DiscountText": "10% discount on oil, 15% discount on sugar and 13% discount on Rice",
+        "Sales83DiscountText": "Sugar - Get 1kg free on 2kg purchase",
+        "Sales84DiscountText": "Discount: 25% on total",
+        "Sales85DiscountText": "7.5% discount on total",
+        "Sales86DiscountText": "Get 100gm butter free with 100gm and get 1 loaf of bread free with 4 loaves",
+        "Sales87DiscountText": "Get 100gm of Almonds free with 200gm",
+        "Sales89DiscountText": "Get 100 gm cashews free on purchase of 200 gm",
+        "Sales90DiscountText": "NuttyCocoa combo of 2 Jars @ 20% off",
+        "Sales92DiscountText": "Get 5% off on Almonds and 10% off on Cashew",
+        "Sales93DiscountText": "Cashews at 5% off. Corriander - Get 500gm free on purchase of 500gm",
+        "Sales94DiscountText": "20% on Rice",
+        "Sales95DiscountText": "Buy 500 ml and get 500 ml free",
+        "Sales96DiscountText": "10% on total",
+        "Sales97DiscountText": "50% off on rope",
+        "Sales98DiscountText": "Get half dozen egg free with every dozen",
+        "Sales99DiscountText": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
+        "Sales100DiscountText": "Butter 250 gm free with 500 gm pack",
+        
+        
+       
        "decisionResultMessageInCaseOfPamphletOrFestival":"Congratulations. You earned {0} Reputation Points. You also spent Rs. {1} and earned business for Rs. {2}",
-    }   
+        "Jar" : "Jar",
+        "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+        "cashChanged":"Cash Changed",
+        "repPointsChanged" : "Reputation Points Changed",
+        "inventoryChanged" : "Inventory Percent Changed",
+        "inventoryValueChanged" : "Inventory Value Changed",
+        "bankBalanceChanged" : "Bank Balance changed",
+    }
+
