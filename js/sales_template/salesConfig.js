@@ -59,7 +59,7 @@ ubsApp.salesConfig={
                    						"itemId": 1,
                    						"item": "Wheat",
                    						"amount": " Kg",
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -67,7 +67,7 @@ ubsApp.salesConfig={
                    						"itemId": 4,
                    						"item": "Sugar",
                    						"amount": " Kg",
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -75,7 +75,7 @@ ubsApp.salesConfig={
                    						"itemId": 3,
                    						"item": "Dal",
                    						"amount": " Kg",
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -83,7 +83,7 @@ ubsApp.salesConfig={
                    						"itemId": 2,
                    						"item": "Rice",
                    						"amount": " Kg",
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -91,7 +91,7 @@ ubsApp.salesConfig={
                    						"itemId": 7,
                    						"item": "Rope",
                    						"amount": " m",
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -99,7 +99,7 @@ ubsApp.salesConfig={
                    						"itemId": 5,
                    						"item": "Milk",
                    						"amount": " Litre",
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -107,7 +107,7 @@ ubsApp.salesConfig={
                    						"itemId": 9,
                    						"item": "Eggs",
                    						"amount": "",
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -115,7 +115,7 @@ ubsApp.salesConfig={
                    						"itemId": 6,
                    						"item": "Oil",
                    						"amount": " Litre",
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -123,7 +123,7 @@ ubsApp.salesConfig={
                    						"itemId": 8,
                    						"item": "Chocolate",
                    						"amount": "",
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					},
                    					{
@@ -131,7 +131,7 @@ ubsApp.salesConfig={
                    						"itemId": 10,
                    						"item": "Biscuit",
                    						"amount": " Packets",
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -147,7 +147,7 @@ ubsApp.salesConfig={
                    						"itemId": 12,
                    						"item": "Shampoo",
                    						"amount": " ml",
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -155,7 +155,7 @@ ubsApp.salesConfig={
                    						"itemId": 13,
                    						"item": "Detergent",
                    						"amount": " gm",
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -163,7 +163,7 @@ ubsApp.salesConfig={
                    						"itemId": 14,
                    						"item": "Salt",
                    						"amount": "kg",
-                   						"rate": " 15/kg",
+                   						"rate": " 15/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -179,7 +179,7 @@ ubsApp.salesConfig={
                    						"itemId": 16,
                    						"item": "Phenyl",
                    						"amount": " ml",
-                   						"rate": " 70/500ml",
+                   						"rate": " 70/500{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -187,7 +187,7 @@ ubsApp.salesConfig={
                    						"itemId": 17,
                    						"item": "Broom",
                    						"amount": " ",
-                   						"rate": " 25/broom",
+                   						"rate": " 25/{{broom}}",
                    						"exclude": false
                    					},
                    					{
@@ -195,7 +195,7 @@ ubsApp.salesConfig={
                    						"itemId": 18,
                    						"item": "Tea",
                    						"amount": "kg",
-                   						"rate": " 120/kg",
+                   						"rate": " 120/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -203,7 +203,7 @@ ubsApp.salesConfig={
                    						"itemId": 19,
                    						"item": "Bread",
                    						"amount": "packet",
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -211,7 +211,7 @@ ubsApp.salesConfig={
                    						"itemId": 20,
                    						"item": "Pepper",
                    						"amount": "gm",
-                   						"rate": " 85/50gm",
+                   						"rate": " 85/50{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -219,7 +219,7 @@ ubsApp.salesConfig={
                    						"itemId": 21,
                    						"item": "Besan Flour",
                    						"amount": "gm",
-                   						"rate": " 70/500gm",
+                   						"rate": " 70/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -227,7 +227,7 @@ ubsApp.salesConfig={
                    						"itemId": 22,
                    						"item": "Almonds",
                    						"amount": "gm",
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -235,7 +235,7 @@ ubsApp.salesConfig={
                    						"itemId": 23,
                    						"item": "Organic Cashews",
                    						"amount": "gm",
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -243,7 +243,7 @@ ubsApp.salesConfig={
                    						"itemId": 24,
                    						"item": "Butter",
                    						"amount": "gm",
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -251,7 +251,7 @@ ubsApp.salesConfig={
                    						"itemId": 25,
                    						"item": "Mustard",
                    						"amount": "gm",
-                   						"rate": " 30/200gm",
+                   						"rate": " 30/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -259,7 +259,7 @@ ubsApp.salesConfig={
                    						"itemId": 26,
                    						"item": "Chilli Powder",
                    						"amount": "gm",
-                   						"rate": " 50/100gm",
+                   						"rate": " 50/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -267,7 +267,7 @@ ubsApp.salesConfig={
                    						"itemId": 27,
                    						"item": "Sabudana",
                    						"amount": "gm",
-                   						"rate": " 120/kg",
+                   						"rate": " 120/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -283,7 +283,7 @@ ubsApp.salesConfig={
                    						"itemId": 29,
                    						"item": "Noodles",
                    						"amount": "gm",
-                   						"rate": " 12/70gm",
+                   						"rate": " 12/70{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -291,7 +291,7 @@ ubsApp.salesConfig={
                    						"itemId": 30,
                    						"item": "Jam",
                    						"amount": "gm",
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					}
                    				],
@@ -336,7 +336,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -345,7 +345,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -354,7 +354,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -399,7 +399,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -408,7 +408,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 100ml",
                    						"quantity": 1,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					}
                    				]
@@ -453,7 +453,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1 Packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -462,7 +462,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 10m",
                    						"quantity": 10,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -471,7 +471,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -480,7 +480,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -525,7 +525,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -534,7 +534,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -579,7 +579,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 100ml",
                    						"quantity": 1,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -588,7 +588,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 500gm",
                    						"quantity": 1,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -597,7 +597,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -642,7 +642,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -651,7 +651,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1Packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -660,7 +660,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -705,7 +705,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -714,7 +714,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -723,7 +723,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -768,7 +768,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -777,7 +777,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -786,7 +786,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1 Packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -831,7 +831,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					},
                    					{
@@ -840,7 +840,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -885,7 +885,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 500gm",
                    						"quantity": 1,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -894,7 +894,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1 packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -939,7 +939,7 @@ ubsApp.salesConfig={
                    						"item": "Mustard",
                    						"amount": " 200 gm",
                    						"quantity": 1,
-                   						"rate": " 30/200gm",
+                   						"rate": " 30/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -948,7 +948,7 @@ ubsApp.salesConfig={
                    						"item": "Chilli Powder",
                    						"amount": " 100 gm",
                    						"quantity": 1,
-                   						"rate": " 50/100gm",
+                   						"rate": " 50/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -993,7 +993,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 100 gm",
                    						"quantity": 1,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -1002,7 +1002,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 200 gm",
                    						"quantity": 1,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -1047,7 +1047,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 10",
                    						"quantity": 10,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1056,7 +1056,7 @@ ubsApp.salesConfig={
                    						"item": "Salt",
                    						"amount": " 1 Kg",
                    						"quantity": 1,
-                   						"rate": " 15/kg",
+                   						"rate": " 15/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1065,7 +1065,7 @@ ubsApp.salesConfig={
                    						"item": "Pepper",
                    						"amount": " 50 gm",
                    						"quantity": 1,
-                   						"rate": " 85/50gm",
+                   						"rate": " 85/50{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -1110,7 +1110,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 2 Packets",
                    						"quantity": 2,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -1119,7 +1119,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 100 gm",
                    						"quantity": 1,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -1128,7 +1128,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 3",
                    						"quantity": 3,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -1173,7 +1173,7 @@ ubsApp.salesConfig={
                    						"item": "Chilli Powder",
                    						"amount": " 100 gm",
                    						"quantity": 1,
-                   						"rate": " 50/100gm",
+                   						"rate": " 50/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -1182,7 +1182,7 @@ ubsApp.salesConfig={
                    						"item": "Pepper",
                    						"amount": " 50 gm",
                    						"quantity": 1,
-                   						"rate": " 85/50gm",
+                   						"rate": " 85/50{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -1200,7 +1200,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 1 L",
                    						"quantity": 1,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -1245,7 +1245,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1254,7 +1254,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1263,7 +1263,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -1308,7 +1308,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1317,7 +1317,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -1362,7 +1362,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					},
                    					{
@@ -1371,7 +1371,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 100 ml",
                    						"quantity": 1,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -1380,7 +1380,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 500 gm",
                    						"quantity": 1,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -1389,7 +1389,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -1443,7 +1443,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -1488,7 +1488,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -1497,7 +1497,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1506,7 +1506,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1 Packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -1551,7 +1551,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					},
                    					{
@@ -1560,7 +1560,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 10m",
                    						"quantity": 10,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					}
                    				]
@@ -1605,7 +1605,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1614,7 +1614,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1623,7 +1623,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -1668,7 +1668,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -1677,7 +1677,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 500 gm",
                    						"quantity": 1,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -1686,7 +1686,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1 Packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -1731,7 +1731,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 100ml",
                    						"quantity": 1,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -1740,7 +1740,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 10m",
                    						"quantity": 10,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					}
                    				]
@@ -1785,7 +1785,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 1L",
                    						"quantity": 1,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -1794,7 +1794,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1 packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -1839,7 +1839,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 4",
                    						"quantity": 4,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1848,7 +1848,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -1857,7 +1857,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 2L",
                    						"quantity": 2,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -1902,7 +1902,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 20m",
                    						"quantity": 20,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -1911,7 +1911,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 3",
                    						"quantity": 3,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					},
                    					{
@@ -1920,7 +1920,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 1",
                    						"quantity": 1,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -1965,7 +1965,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 3 kg",
                    						"quantity": 3,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -1974,7 +1974,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -2019,7 +2019,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 3 Packets",
                    						"quantity": 3,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2028,7 +2028,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 2",
                    						"quantity": 2,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					},
                    					{
@@ -2037,7 +2037,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 100ml",
                    						"quantity": 1,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					}
                    				]
@@ -2082,7 +2082,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 2Kg",
                    						"quantity": 2,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2091,7 +2091,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 200ml",
                    						"quantity": 2,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					}
                    				]
@@ -2136,7 +2136,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 10",
                    						"quantity": 10,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2145,7 +2145,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 4",
                    						"quantity": 4,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -2190,7 +2190,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 1000 gm",
                    						"quantity": 2,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -2199,7 +2199,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 500 ml",
                    						"quantity": 5,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					}
                    				]
@@ -2244,7 +2244,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 8",
                    						"quantity": 8,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2253,7 +2253,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 2 Packets",
                    						"quantity": 2,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2262,7 +2262,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 2",
                    						"quantity": 2,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					},
                    					{
@@ -2271,7 +2271,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1Kg",
                    						"quantity": 1,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -2316,7 +2316,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 5Kg",
                    						"quantity": 5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2325,7 +2325,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -2370,7 +2370,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 6kg",
                    						"quantity": 6,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2379,7 +2379,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 3L",
                    						"quantity": 3,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -2424,7 +2424,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 1 Packet",
                    						"quantity": 1,
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2433,7 +2433,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 200 gm",
                    						"quantity": 1,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -2442,7 +2442,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 300 gm",
                    						"quantity": 3,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -2487,7 +2487,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 12",
                    						"quantity": 12,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2496,7 +2496,7 @@ ubsApp.salesConfig={
                    						"item": "Pepper",
                    						"amount": " 100 gm",
                    						"quantity": 2,
-                   						"rate": " 85/50gm",
+                   						"rate": " 85/50{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -2505,7 +2505,7 @@ ubsApp.salesConfig={
                    						"item": "Coriander",
                    						"amount": " 1 Kg",
                    						"quantity": 1,
-                   						"rate": " 100/kg",
+                   						"rate": " 100/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2514,7 +2514,7 @@ ubsApp.salesConfig={
                    						"item": "Salt",
                    						"amount": " 1 KG",
                    						"quantity": 1,
-                   						"rate": " 15/kg",
+                   						"rate": " 15/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -2559,7 +2559,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1.5 Kgs",
                    						"quantity": 1.5,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2568,7 +2568,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 0.5 Ltrs",
                    						"quantity": 0.5,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}]",
                    						"exclude": false
                    					},
                    					{
@@ -2577,7 +2577,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 50 gm",
                    						"quantity": 0.5,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -2622,7 +2622,7 @@ ubsApp.salesConfig={
                    						"item": "Tea",
                    						"amount": " 250 gm",
                    						"quantity": 0.25,
-                   						"rate": " 120/kg",
+                   						"rate": " 120/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2631,7 +2631,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 2 Packets",
                    						"quantity": 2,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2640,7 +2640,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 300 gm",
                    						"quantity": 1.5,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -2649,7 +2649,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 3 Lts",
                    						"quantity": 3,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -2694,7 +2694,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 150gm",
                    						"quantity": 1.5,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -2703,7 +2703,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 150gm",
                    						"quantity": 1.5,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -2748,7 +2748,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 1 Packet",
                    						"quantity": 1,
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2757,7 +2757,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 400 gm",
                    						"quantity": 2,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -2802,7 +2802,7 @@ ubsApp.salesConfig={
                    						"item": "Pepper",
                    						"amount": "  100 gm",
                    						"quantity": 2,
-                   						"rate": " 85/50gm",
+                   						"rate": " 85/50{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -2811,7 +2811,7 @@ ubsApp.salesConfig={
                    						"item": "Coriander",
                    						"amount": " 1 Kg",
                    						"quantity": 1,
-                   						"rate": " 100/kg",
+                   						"rate": " 100/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2820,7 +2820,7 @@ ubsApp.salesConfig={
                    						"item": "Salt",
                    						"amount": " 1 KG",
                    						"quantity": 1,
-                   						"rate": " 15/kg",
+                   						"rate": " 15/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -2865,7 +2865,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1.5 Kgs",
                    						"quantity": 1.5,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2874,7 +2874,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 100 gm",
                    						"quantity": 1,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -2919,7 +2919,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 6",
                    						"quantity": 6,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2928,7 +2928,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 1 packet",
                    						"quantity": 1,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2937,7 +2937,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 2L",
                    						"quantity": 2,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -2982,7 +2982,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 2 kg",
                    						"quantity": 2,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -2991,7 +2991,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2 kg",
                    						"quantity": 2,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3000,7 +3000,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 1 L",
                    						"quantity": 1,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -3045,7 +3045,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 1 kg",
                    						"quantity": 2,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3054,7 +3054,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 2 Packets",
                    						"quantity": 2,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -3099,7 +3099,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 3",
                    						"quantity": 3,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					},
                    					{
@@ -3108,7 +3108,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 12",
                    						"quantity": 12,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					}
                    				]
@@ -3153,7 +3153,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 2Kg",
                    						"quantity": 2,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3162,7 +3162,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 2Kg",
                    						"quantity": 2,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -3205,9 +3205,9 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 20,
                    						"item": "Pepper",
-                   						"amount": "  200 gm",
+                   						"amount": "  200 {{gm}}",
                    						"quantity": 4,
-                   						"rate": " 85/50gm",
+                   						"rate": " 85/50{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3216,7 +3216,7 @@ ubsApp.salesConfig={
                    						"item": "Sabudana",
                    						"amount": " 2kg",
                    						"quantity": 2,
-                   						"rate": " 120/kg",
+                   						"rate": " 120/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3225,7 +3225,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 3 packets",
                    						"quantity": 3,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -3270,7 +3270,7 @@ ubsApp.salesConfig={
                    						"item": "Noodles",
                    						"amount": "  210 gm",
                    						"quantity": 3,
-                   						"rate": " 12/70gm",
+                   						"rate": " 12/70{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3279,7 +3279,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 200 gm",
                    						"quantity": 2,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3288,7 +3288,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 2",
                    						"quantity": 2,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -3333,7 +3333,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 2Kg",
                    						"quantity": 4,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3342,7 +3342,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 500 gm",
                    						"quantity": 0.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3351,7 +3351,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 3",
                    						"quantity": 3,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -3396,7 +3396,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1 and a 1/2 kg",
                    						"quantity": 1.5,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3405,7 +3405,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 12",
                    						"quantity": 12,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3414,7 +3414,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 200 ml",
                    						"quantity": 2,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					}
                    				]
@@ -3459,7 +3459,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 500 gm",
                    						"quantity": 0.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3468,7 +3468,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 500 gm",
                    						"quantity": 0.5,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3477,7 +3477,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 1 Kg",
                    						"quantity": 1,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3486,7 +3486,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -3531,7 +3531,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 2 and a half L",
                    						"quantity": 2,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -3540,7 +3540,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 10",
                    						"quantity": 10,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3549,7 +3549,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 3",
                    						"quantity": 3,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -3594,7 +3594,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 500 ml",
                    						"quantity": 0.5,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -3603,7 +3603,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2.5kg",
                    						"quantity": 2.5,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3612,7 +3612,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 2",
                    						"quantity": 2,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -3657,7 +3657,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 250 ml",
                    						"quantity": 0.25,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -3666,7 +3666,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 30 m",
                    						"quantity": 30,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -3675,7 +3675,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 4",
                    						"quantity": 4,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -3720,7 +3720,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 3.5 kg",
                    						"quantity": 3.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3729,7 +3729,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 1.5 Kg",
                    						"quantity": 1.5,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3738,7 +3738,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1kg",
                    						"quantity": 1,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3747,7 +3747,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 5m",
                    						"quantity": 5,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					}
                    				]
@@ -3792,7 +3792,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 3.5kg",
                    						"quantity": 7,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3801,7 +3801,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 5.5Kg",
                    						"quantity": 5.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -3846,7 +3846,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 1L",
                    						"quantity": 10,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -3855,7 +3855,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 5",
                    						"quantity": 5,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -3900,7 +3900,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 100m",
                    						"quantity": 100,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -3909,7 +3909,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 750 gm",
                    						"quantity": 0.75,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -3918,7 +3918,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1 kg",
                    						"quantity": 1,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -3963,7 +3963,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 500 gm",
                    						"quantity": 5,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3972,7 +3972,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 500 gm",
                    						"quantity": 2.5,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -3981,7 +3981,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 2 packets",
                    						"quantity": 2,
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -4026,7 +4026,7 @@ ubsApp.salesConfig={
                    						"item": "Besan Flour",
                    						"amount": " 1250 gm",
                    						"quantity": 2.5,
-                   						"rate": " 70/500gm",
+                   						"rate": " 70/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4035,7 +4035,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 200 gm",
                    						"quantity": 2,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -4080,7 +4080,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 5",
                    						"quantity": 5,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					},
                    					{
@@ -4089,7 +4089,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 200 gm",
                    						"quantity": 1,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4098,7 +4098,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 100 gm",
                    						"quantity": 1,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4107,7 +4107,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 250 gm",
                    						"quantity": 2.5,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -4152,7 +4152,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 18",
                    						"quantity": 18,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4170,7 +4170,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 3 Packet",
                    						"quantity": 3,
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -4179,7 +4179,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 200 gm",
                    						"quantity": 2,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -4233,7 +4233,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 250 gm",
                    						"quantity": 2.5,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4242,7 +4242,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 150 gm",
                    						"quantity": 1.5,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -4287,7 +4287,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 500 gm",
                    						"quantity": 5,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4296,7 +4296,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 500 gm",
                    						"quantity": 2.5,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4305,7 +4305,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 2 packets",
                    						"quantity": 2,
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -4350,7 +4350,7 @@ ubsApp.salesConfig={
                    						"item": "Besan Flour",
                    						"amount": " 1000 gm",
                    						"quantity": 2,
-                   						"rate": " 70/500gm",
+                   						"rate": " 70/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4359,7 +4359,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 350 gm",
                    						"quantity": 3.5,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -4404,7 +4404,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 400 gm",
                    						"quantity": 2,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4422,7 +4422,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 150 gm",
                    						"quantity": 1.5,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -4467,7 +4467,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 350 ml",
                    						"quantity": 3.5,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -4476,7 +4476,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 500 gm",
                    						"quantity": 0.5,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -4521,7 +4521,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 1.5 kg",
                    						"quantity": 1.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4530,7 +4530,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 35 m",
                    						"quantity": 35,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -4539,7 +4539,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 1.5 L",
                    						"quantity": 1.5,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -4584,7 +4584,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 2",
                    						"quantity": 2,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					},
                    					{
@@ -4593,7 +4593,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 4",
                    						"quantity": 4,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					},
                    					{
@@ -4602,7 +4602,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2.5 Kg",
                    						"quantity": 2.5,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -4647,7 +4647,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 3.5 kg",
                    						"quantity": 3.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4656,7 +4656,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 6",
                    						"quantity": 6,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4665,7 +4665,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 0.5 L",
                    						"quantity": 0.5,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -4710,7 +4710,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 500 ml",
                    						"quantity": 0.5,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -4719,7 +4719,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2.5kg",
                    						"quantity": 2.5,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4728,7 +4728,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 2",
                    						"quantity": 2,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -4773,7 +4773,7 @@ ubsApp.salesConfig={
                    						"item": "Besan Flour",
                    						"amount": " 1.5 kg",
                    						"quantity": 3,
-                   						"rate": " 70/500gm",
+                   						"rate": " 70/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -4782,7 +4782,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 2.5 L",
                    						"quantity": 2.5,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -4827,7 +4827,7 @@ ubsApp.salesConfig={
                    						"item": "Salt",
                    						"amount": " 2kg",
                    						"quantity": 2,
-                   						"rate": " 15/kg",
+                   						"rate": " 15/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4836,7 +4836,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 500 ml",
                    						"quantity": 0.5,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -4845,7 +4845,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 15m",
                    						"quantity": 15,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -4854,7 +4854,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 500 gm",
                    						"quantity": 0.5,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4863,7 +4863,7 @@ ubsApp.salesConfig={
                    						"item": "Phenyl",
                    						"amount": " 250 ml",
                    						"quantity": 5.0E-4,
-                   						"rate": " 70/500ml",
+                   						"rate": " 70/500{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -4872,7 +4872,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 0.5 kg",
                    						"quantity": 0.5,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -4917,7 +4917,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4926,7 +4926,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -4935,7 +4935,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                    						    "type" : 1,
@@ -4984,7 +4984,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 1L",
                    						"quantity": 10,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -4997,7 +4997,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 1.5kg",
                    						"quantity": 3,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -5006,7 +5006,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 5",
                    						"quantity": 5,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -5055,7 +5055,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 4 kg",
                    						"quantity": 4,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5064,7 +5064,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 2 L",
                    						"quantity": 2,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -5073,7 +5073,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2Kg",
                    						"quantity": 2,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -5122,7 +5122,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 5L",
                    						"quantity": 5,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -5131,7 +5131,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 50 m",
                    						"quantity": 50,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -5140,7 +5140,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 3",
                    						"quantity": 3,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -5185,7 +5185,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 3 doz",
                    						"quantity": 3,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5194,7 +5194,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 2L",
                    						"quantity": 2,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -5203,7 +5203,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 3kg",
                    						"quantity": 3,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5212,7 +5212,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 4",
                    						"quantity": 4,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -5261,7 +5261,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 5L",
                    						"quantity": 5,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -5274,7 +5274,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 500gm",
                    						"quantity": 1,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -5319,7 +5319,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 500 ml",
                    						"quantity": 0.5,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -5328,7 +5328,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 250 ml",
                    						"quantity": 0.25,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -5341,7 +5341,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 500 gm",
                    						"quantity": 0.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -5354,7 +5354,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 3 kg",
                    						"quantity": 3,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -5403,7 +5403,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 25m",
                    						"quantity": 25,
-                   						"rate": " 35/10m",
+                   						"rate": " 35/10{{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -5412,7 +5412,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 2.5kg",
                    						"quantity": 2.5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5421,7 +5421,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 15",
                    						"quantity": 15,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5430,7 +5430,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 3Kg",
                    						"quantity": 3,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -5483,7 +5483,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 250 ml",
                    						"quantity": 2.5,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false
                    					},
                    					{
@@ -5492,7 +5492,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 2L",
                    						"quantity": 2,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -5501,7 +5501,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 3kg",
                    						"quantity": 3,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5510,7 +5510,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 1kg",
                    						"quantity": 1,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5519,7 +5519,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 2",
                    						"quantity": 2,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -5568,7 +5568,7 @@ ubsApp.salesConfig={
                    						"item": "Biscuit",
                    						"amount": " 2 Pkt",
                    						"quantity": 2,
-                   						"rate": " 25/Packet",
+                   						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -5577,7 +5577,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 4kg",
                    						"quantity": 8,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -5586,7 +5586,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 2m",
                    						"quantity": 2,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false
                    					},
                    					{
@@ -5595,7 +5595,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 3.5 L",
                    						"quantity": 3.5,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					}
                    				]
@@ -5640,7 +5640,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 5 Packets",
                    						"quantity": 5,
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -5653,7 +5653,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 200 gm",
                    						"quantity": 2,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -5666,7 +5666,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 200 gm",
                    						"quantity": 1,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -5675,7 +5675,7 @@ ubsApp.salesConfig={
                    						"item": "Besan Flour",
                    						"amount": " 500 gm",
                    						"quantity": 1,
-                   						"rate": " 70/500gm",
+                   						"rate": " 70/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -5684,7 +5684,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 1 Kg",
                    						"quantity": 1,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5738,7 +5738,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": "  400gm",
                    						"quantity": 4,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -5751,7 +5751,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 200gm",
                    						"quantity": 2,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -5796,7 +5796,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 12",
                    						"quantity": 12,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5805,7 +5805,7 @@ ubsApp.salesConfig={
                    						"item": "Noodles",
                    						"amount": " 245 gm",
                    						"quantity": 3.5,
-                   						"rate": " 12/70gm",
+                   						"rate": " 12/70{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -5814,7 +5814,7 @@ ubsApp.salesConfig={
                    						"item": "Salt",
                    						"amount": " 250 gm",
                    						"quantity": 0.25,
-                   						"rate": " 15/kg",
+                   						"rate": " 15/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5823,7 +5823,7 @@ ubsApp.salesConfig={
                    						"item": "Pepper",
                    						"amount": " 100 gm",
                    						"quantity": 2,
-                   						"rate": " 85/50gm",
+                   						"rate": " 85/50{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -5832,7 +5832,7 @@ ubsApp.salesConfig={
                    						"item": "Coriander",
                    						"amount": " 1 Kg",
                    						"quantity": 1,
-                   						"rate": " 100/kg",
+                   						"rate": " 100/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5841,7 +5841,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 250 gm",
                    						"quantity": 2.5,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -5886,7 +5886,7 @@ ubsApp.salesConfig={
                    						"item": "Sabudana",
                    						"amount": " 3.5 Kgs",
                    						"quantity": 3.5,
-                   						"rate": " 120/kg",
+                   						"rate": " 120/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -5895,7 +5895,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 300 gm",
                    						"quantity": 3,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -5957,7 +5957,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 500 gm",
                    						"quantity": 2.5,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -6002,7 +6002,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 5 Packets",
                    						"quantity": 5,
-                   						"rate": " 15/packet",
+                   						"rate": " 15/{{packet}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6015,7 +6015,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 200 gm",
                    						"quantity": 2,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -6024,7 +6024,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 200 gm",
                    						"quantity": 1,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -6033,7 +6033,7 @@ ubsApp.salesConfig={
                    						"item": "Besan Flour",
                    						"amount": " 500 gm",
                    						"quantity": 1,
-                   						"rate": " 70/500gm",
+                   						"rate": " 70/500{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -6087,7 +6087,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 400gm",
                    						"quantity": 4,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6100,7 +6100,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 200gm",
                    						"quantity": 2,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6113,7 +6113,7 @@ ubsApp.salesConfig={
                    						"item": "Besan Flour",
                    						"amount": " 500 gm",
                    						"quantity": 1,
-                   						"rate": " 70/500gm",
+                   						"rate": " 70/500{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -6158,7 +6158,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 12",
                    						"quantity": 12,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false
                    					},
                    					{
@@ -6167,7 +6167,7 @@ ubsApp.salesConfig={
                    						"item": "Noodles",
                    						"amount": " 350 gm",
                    						"quantity": 5,
-                   						"rate": " 12/70gm",
+                   						"rate": " 12/70{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -6176,7 +6176,7 @@ ubsApp.salesConfig={
                    						"item": "Coriander",
                    						"amount": " 1 Kg",
                    						"quantity": 1,
-                   						"rate": " 100/kg",
+                   						"rate": " 100/{{kg}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6189,7 +6189,7 @@ ubsApp.salesConfig={
                    						"item": "Organic Cashews",
                    						"amount": " 250 gm",
                    						"quantity": 2.5,
-                   						"rate": " 150/100gm",
+                   						"rate": " 150/100{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6238,7 +6238,7 @@ ubsApp.salesConfig={
                    						"item": "Rice",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 110/kg",
+                   						"rate": " 110/{{kg}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6251,7 +6251,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -6260,7 +6260,7 @@ ubsApp.salesConfig={
                    						"item": "Wheat",
                    						"amount": " 2 Kg",
                    						"quantity": 2,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -6305,7 +6305,7 @@ ubsApp.salesConfig={
                    						"item": "Shampoo",
                    						"amount": " 1L",
                    						"quantity": 10,
-                   						"rate": " 45/100ml",
+                   						"rate": " 45/100{{ml}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6318,7 +6318,7 @@ ubsApp.salesConfig={
                    						"item": "Detergent",
                    						"amount": " 1.5kg",
                    						"quantity": 3,
-                   						"rate": " 37/500gm",
+                   						"rate": " 37/500{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -6367,7 +6367,7 @@ ubsApp.salesConfig={
                    						"item": "Sugar",
                    						"amount": " 5 kg",
                    						"quantity": 5,
-                   						"rate": " 50/kg",
+                   						"rate": " 50/{{kg}}",
                    						"exclude": false
                    					},
                    					{
@@ -6376,7 +6376,7 @@ ubsApp.salesConfig={
                    						"item": "Oil",
                    						"amount": " 2 L",
                    						"quantity": 2,
-                   						"rate": " 125/litre",
+                   						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -6385,7 +6385,7 @@ ubsApp.salesConfig={
                    						"item": "Dal",
                    						"amount": " 3Kg",
                    						"quantity": 3,
-                   						"rate": " 80/kg",
+                   						"rate": " 80/{{kg}}",
                    						"exclude": false
                    					}
                    				]
@@ -6430,7 +6430,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 3 L",
                    						"quantity": 3,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -6439,7 +6439,7 @@ ubsApp.salesConfig={
                    						"item": "Rope",
                    						"amount": " 100 m",
                    						"quantity": 100,
-                   						"rate": " 35/10 m",
+                   						"rate": " 35/10 {{m}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6452,7 +6452,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 5",
                    						"quantity": 5,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false
                    					}
                    				]
@@ -6497,7 +6497,7 @@ ubsApp.salesConfig={
                    						"item": "Eggs",
                    						"amount": " 2 dozens",
                    						"quantity": 24,
-                   						"rate": " 5.5/egg",
+                   						"rate": " 5.5/{{egg}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -6510,7 +6510,7 @@ ubsApp.salesConfig={
                    						"item": "Milk",
                    						"amount": " 3 L",
                    						"quantity": 3,
-                   						"rate": " 45/litre",
+                   						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
                    					{
@@ -6519,7 +6519,7 @@ ubsApp.salesConfig={
                    						"item": "Soap",
                    						"amount": " 4",
                    						"quantity": 4,
-                   						"rate": " 27/soap",
+                   						"rate": " 27/{{soap}}",
                    						"exclude": false
                    					}
                    				]
@@ -6564,7 +6564,7 @@ ubsApp.salesConfig={
                    						"item": "Chocolate",
                    						"amount": " 5",
                    						"quantity": 5,
-                   						"rate": " 40/chocolate",
+                   						"rate": " 40/{{chocolate}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -6577,7 +6577,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 600 gm",
                    						"quantity": 3,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
@@ -6590,7 +6590,7 @@ ubsApp.salesConfig={
                    						"item": "Almonds",
                    						"amount": " 100 gm",
                    						"quantity": 1,
-                   						"rate": " 100/100gm",
+                   						"rate": " 100/100{{gm}}",
                    						"exclude": false
                    					},
                    					{
@@ -6599,7 +6599,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 250 gm",
                    						"quantity": 2.5,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false
                    					}
                    				]
@@ -6644,7 +6644,7 @@ ubsApp.salesConfig={
                    						"item": "Butter",
                    						"amount": " 750 gm",
                    						"quantity": 7.5,
-                   						"rate": " 46/100gm",
+                   						"rate": " 46/100{{gm}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -6657,7 +6657,7 @@ ubsApp.salesConfig={
                    						"item": "Jam",
                    						"amount": " 500 gm",
                    						"quantity": 2.5,
-                   						"rate": " 60/200gm",
+                   						"rate": " 60/200{{gm}}",
                    						"exclude": false
                    					}
                    				]
