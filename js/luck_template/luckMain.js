@@ -40,8 +40,10 @@ ubsApp.renderLuckQuizQuestion = function(page){
     quizPage.onClickPage.nextPage = "luckQuizResult";    //quizPage = resultPage
     quizPage.noOfQuestions = noOfQuestions;
     quizPage.entryPoint = "unluckyScenario";
+    quizPage.luckScenarioName = page;
     ubsApp.pages[quizPage.onClickPage.nextPage].templates[0].noOfQuestions = noOfQuestions;
     ubsApp.pages[quizPage.pageName].templates[0].entryPoint = "unluckyScenario";
+    ubsApp.pages[quizPage.pageName].templates[0].luckScenarioName =  page;
 
     ubsApp.renderFirstQuizPage(quizPage.pageName);
 }
@@ -308,7 +310,7 @@ ubsApp.payOrGain=function(pageName){
         header = ubsApp.getTranslation("goodLuckResultHeader");
         message= ubsApp.formatMessage(ubsApp.translation["goodLuckResultPopUpInv"], [userArray[playerChance].getInventoryScore() - initialInventory]);
     }
-
+    ubsApp.currentPlayerContents();
     ubsApp.openResultPopup({
         "message" : message,
         "header" : header,
