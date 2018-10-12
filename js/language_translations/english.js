@@ -1398,5 +1398,21 @@ ubsApp.translation={
         "inventoryChanged" : "Inventory Percent Changed",
         "inventoryValueChanged" : "Inventory Value Changed",
         "bankBalanceChanged" : "Bank Balance changed",
+
+        "kg" : "kg",
+        "Kg" : "Kg", 
+        "litre" : "litre",
+        "m" : "m",
+        "chocolate" : "chocolate",
+        "Packet" : "Packet",
+        "Packets" : "Packets",
+        "soap" : "soap",
+        "ml" : "ml",
+        "gm" : "gm",
+        "broom" : "broom",
+        "L" : "L",
+        "dozens" : "dozens",
+        
+
     }
 

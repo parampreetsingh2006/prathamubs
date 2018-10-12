@@ -1344,4 +1344,17 @@ ubsApp.translation={
         "Sales99DiscountText": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
         "Sales100DiscountText": "Butter 250 gm free with 500 gm pack",
 
+        "Kg" : "Kg", 
+        "litre" : "litre",
+        "m" : "m",
+        "chocolate" : "chocolate",
+        "Packet" : "Packet",
+        "Packets" : "Packets",
+        "soap" : "soap",
+        "ml" : "ml",
+        "gm" : "gm",
+        "broom" : "broom",
+        "L" : "L",
+        "dozens" : "dozens",
+
 }
