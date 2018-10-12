@@ -112,7 +112,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
                 	{
                 		'id':"closePopupButton",
                 		'name' : ubsApp.getTranslation("CLOSE"),
-              			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()"
+              			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');setTimeout(function(){ubsApp.closePopup();}, 2000);"
                 	}
                 ]
                 });

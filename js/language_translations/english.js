@@ -307,9 +307,9 @@ ubsApp.translation={
         "decisionQ32O2":"Invest in FD with 6% Compound interest for 1 year (Safe, higher gains)",
         "decisionQ32O3":"Invest in a friend's scheme that assures of 25% growth (Risky)",
 
-        "decisionQ33":"Customers come to the shope without money",
+        "decisionQ33":"Customers come to the shop without money",
         "decisionQ33O1":"Introduce monthly account books (Retains customers but Items could be left out resulting in minor losses)",
-        "decisionQ33O2":"Let regular customers by on credit (Risk of forgetting to collect money)",
+        "decisionQ33O2":"Let regular customers buy on credit (Risk of forgetting to collect money)",
         "decisionQ33O3":"Only sell to those who have money (Risk of losing customers)",
 
         "decisionQ34":"Electricity shortage",
