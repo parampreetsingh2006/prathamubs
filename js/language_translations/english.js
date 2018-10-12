@@ -1400,14 +1400,18 @@ ubsApp.translation={
         "bankBalanceChanged" : "Bank Balance changed",
 
         "kg" : "kg",
+        "Kg" : "Kg", 
         "litre" : "litre",
         "m" : "m",
         "chocolate" : "chocolate",
-        "packet" : "packet",
+        "Packet" : "Packet",
+        "Packets" : "Packets",
         "soap" : "soap",
         "ml" : "ml",
         "gm" : "gm",
         "broom" : "broom",
+        "L" : "L",
+        "dozens" : "dozens",
         
 
     }
