@@ -58,7 +58,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	if(entryPoint == "unluckyScenario"){
 		  		let currentPlayerRepPoints = userArray[playerChance].getReputationPts();
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongResultFromLuckyScenario'], [reputationPoints]));
-		  		nextAction = "ubsApp.closePopup(); ubsApp.closeCurrentScenario();"
+		  		nextAction = "ubsApp.closePopup(); ubsApp.closeCurrentScenario();ubsApp.nextMove();"
 		  	}
 		  	else{
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizCorrectAnswerMessage'], [reputationPoints]));
@@ -97,7 +97,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	                		{
 	                			'id':"unluckyScenarioOkButton",
 	                            'name' : ubsApp.getTranslation("OK"),
-	                            'action': "ubsApp.closePopup(); ubsApp.payOrGain(\'"+ scenarioName +"\');ubsApp.closeCurrentScenario();"
+	                            'action': "ubsApp.closePopup(); ubsApp.payOrGain(\'"+ scenarioName +"\');ubsApp.closeCurrentScenario(); ubsApp.nextMove();"
 	                        }
 	                 ]
 
