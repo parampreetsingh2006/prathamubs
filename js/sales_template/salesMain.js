@@ -7,6 +7,9 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
     templateConfig.gameLogo = ubsApp.getTranslation("gameLogo");
 
     templateConfig.salesConfig = ubsApp.getTranslation("sale");
+    templateConfig.sale = ubsApp.getTranslation("sale");
+    templateConfig.PLAYER = ubsApp.getTranslation("PLAYER");
+
 
     tempVar.html += ubsOrdertemplate(templateConfig);
     ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');

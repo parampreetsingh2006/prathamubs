@@ -304,7 +304,7 @@ ubsApp.leaderBoardTemplate=
                     '               <img src="{{salesImage}}.png" class="icon" style="">'+
                     '           </div>'+
                     '       <div id="luckPlayerNameTitle">'+
-                    '       PLAYER:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
+                    '       {{PLAYER}}:<span id="player" style="padding: 1px">{{currentPlayerName}}</span>'+
                     '       </div>'+
 '    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
      '<div id="profile">'+
