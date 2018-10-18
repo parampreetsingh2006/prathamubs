@@ -89,7 +89,7 @@ ubsApp.translation={
         "validAmount":"Please enter a valid amount",
         "lessMoney":"Payment is being made for ₹ <CurrentAmount> only. Please make payment of ₹ <ActualAmount>",
         "moreMoney":"Payment is being made for ₹ <CurrentAmount>. Please make payment of ₹ <ActualAmount>",
-        "moreCash":"Insufficient cash to complete transaction. Please pay by cheque or buy on credit.",
+        "moreCash":"Insufficient cash to complete transaction. Please pay by cheque.",
         "bankBalance":"Insufficient funds to complete transaction. Please transfer money or buy on credit.",
         "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
         "pleaseConfirm":"You have not purchased any inventory. Are you sure you want to proceed?",
