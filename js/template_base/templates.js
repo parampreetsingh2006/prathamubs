@@ -1230,9 +1230,9 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
                               '        '+
                               '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: bold;margin-left: 2%;">{{WeekTitle}} {{weekNumber}}</div>'+
-                              '        <div style="display: inline-block;width: 100%;font-weight: bold;">'+
+                              '        <div style="display: inline-block;width: 96%;font-weight: bold; margin-left: 2%; margin-right: 2%;">'+
                               '            <div style="float: left;width: 100%;">'+
-                              '                <div style="display: inline-block;width: 100%;padding:2%;">'+
+                              '                <div style="display: inline-block;width: 100%;">'+
                               '                        <div style="float: left;">{{ReputationPoints}}</div>'+
                               '                        <div style="float: right;">{{currentWeekReputationPts}}</div>'+
                               '                </div>'+

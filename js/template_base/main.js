@@ -304,6 +304,7 @@ ubsApp.closeCurrentScenario=function(){
 }
 
 ubsApp.startCurrentScenario=function(){
+    $('#resultBackground').show();
 	$('#monopolyBase').css("z-index",-10)
 	$('#templateBase').css("z-index",10)
 	
