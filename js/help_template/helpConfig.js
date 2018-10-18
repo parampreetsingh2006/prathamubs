@@ -38,11 +38,18 @@ ubsApp.helpConfig={
     "luckHelp":{
         "templates":[
             {
+                "templateId":4,
+                "templateType":"static",
+                "id":"helpImage",
+                "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
+                "src":"<image src=\"../../images/luck_screen\"></image>"
+            },
+            {
                 "templateId":5,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"Luck HELP!!!"
+                "style":"position:absolute;top:47.5%;left:5%;background-repeat: no-repeat;color:white;",
+                "src":"{{LUCK HELP}}"
             },
             {
                 "templateId":6,
@@ -74,11 +81,18 @@ ubsApp.helpConfig={
     "decisionHelp":{
         "templates":[
             {
+                "templateId":2,
+                "templateType":"static",
+                "id":"helpImage",
+                "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
+                "src":"<image src=\"../../images/decision_screen\"></image>"
+            },
+            {
                 "templateId":3,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"DECISION HELP!!!"
+                "style":"position:absolute;top:47.5%;left:5%;background-repeat: no-repeat;color:white;",
+                "src":"{{DECISION HELP}}"
             },
             {
                 "templateId":4,
@@ -92,11 +106,19 @@ ubsApp.helpConfig={
         "purchaseHelp":{
             "templates":[
                 {
+                    "templateId":10,
+                    "templateType":"static",
+                    "id":"helpImage",
+                    "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
+                    "src":"<image src=\"../../images/buy_screen\"></image>"
+                },
+
+                {
                     "templateId":11,
                     "templateType":"static",
                     "id":"helpContent",
-                    "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                    "src":"PURCHASE HELP!!!"
+                    "style":"position:absolute;top:47.5%;left:5%;background-repeat: no-repeat;color:white;",
+                    "src":"{{PURCHASE HELP}}"
                 },
                 {
                     "templateId":12,

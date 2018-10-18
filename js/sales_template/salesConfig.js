@@ -130,7 +130,7 @@ ubsApp.salesConfig={
                    						"no": 10,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " {{Packets}}",
+                   						"amount": " 1 {{Packet}}",
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
                    					},
@@ -649,7 +649,7 @@ ubsApp.salesConfig={
                    						"no": 2,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " 1{{Packet}}",
+                   						"amount": " 1 {{Packet}}",
                    						"quantity": 1,
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
@@ -1054,7 +1054,7 @@ ubsApp.salesConfig={
                    						"no": 2,
                    						"itemId": 14,
                    						"item": "Salt",
-                   						"amount": " 1 {{Kg}}",
+                   						"amount": " 1 {{kg}}",
                    						"quantity": 1,
                    						"rate": " 15/{{kg}}",
                    						"exclude": false
@@ -1792,7 +1792,7 @@ ubsApp.salesConfig={
                    						"no": 2,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " 1 {{packet}}",
+                   						"amount": " 1 {{Packet}}",
                    						"quantity": 1,
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
@@ -1846,7 +1846,7 @@ ubsApp.salesConfig={
                    						"no": 2,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " 1",
+                   						"amount": " 1{{Packet}}",
                    						"quantity": 1,
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
@@ -2818,7 +2818,7 @@ ubsApp.salesConfig={
                    						"no": 3,
                    						"itemId": 14,
                    						"item": "Salt",
-                   						"amount": " 1 {{KG}}",
+                   						"amount": " 1 {{Kg}}",
                    						"quantity": 1,
                    						"rate": " 15/{{kg}}",
                    						"exclude": false
@@ -3223,7 +3223,7 @@ ubsApp.salesConfig={
                    						"no": 3,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " 3 {{packets}}",
+                   						"amount": " 3 {{Packets}}",
                    						"quantity": 3,
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
@@ -3547,7 +3547,7 @@ ubsApp.salesConfig={
                    						"no": 3,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " 3",
+                   						"amount": " 3 {{Packets}}",
                    						"quantity": 3,
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
@@ -5566,7 +5566,7 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " 2 {{Pkt}}",
+                   						"amount": " 2 {{Packets}}",
                    						"quantity": 2,
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
