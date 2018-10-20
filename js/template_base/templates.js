@@ -663,7 +663,8 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-8">{{newInventoryLevelTitle}}:</div>'+
 '                    <div class="col-md-4" style="text-align: right;">'+
-'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">%'+
+//'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">%'+
+'                           <span id="newInventoryLevelText"></span>%'+
 '                    </div>'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+

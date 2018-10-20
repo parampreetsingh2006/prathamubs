@@ -29,7 +29,7 @@ ubsApp.updateInventoryLevel=function(value){
 }
 ubsApp.fillUp=function(){
 var temp=document.getElementById("value").innerHTML;
-document.getElementById("newInventoryLevelText").value=document.getElementById("percent").innerHTML;
+document.getElementById("newInventoryLevelText").innerHTML=document.getElementById("percent").innerHTML;
 $("#newCostText").text((parseInt(temp.substring(2))-userArray[playerChance].getInventoryScore()*1000));//-userArray[playerChance].getInventoryScore()*1000;
 $("#updatedInventoryValue").text(temp.substring(2));
 }
@@ -45,7 +45,7 @@ if(cost){
 var creditChanged=userArray[playerChance].getCredit();
 var bankBalanceChanged=userArray[playerChance].getBankBalance();
 var cashChanged=userArray[playerChance].getplayerScore();
-var newLevel=document.getElementById("newInventoryLevelText").value;
+var newLevel=document.getElementById("newInventoryLevelText").innerHTML;
 newLevel=parseInt(newLevel.substring(0,newLevel.length));
 var totalAmountEntered=0;
 for(var i=1;i<=numberOfPaymentModes;i++){
