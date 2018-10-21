@@ -1249,7 +1249,7 @@ ubsApp.translation={
       "QuizQuestion146Option1" : "is a big risk for Investor, Read all the documents/guidelines carefully",
       "QuizQuestion146Option2" : "reading is waste of time",
       "QuizQuestion146Option3" : "you can trust the guidelines blindly",
-      "QuizQuestion146Option4" : "(b) & ©",
+      "QuizQuestion146Option4" : "(b) & (C)",
       "QuizQuestion147Option1" : "Bank will recover money in case of default",
       "QuizQuestion147Option2" : "Collateral serves as borrower's guarantee",
       "QuizQuestion147Option3" : "collateral value should be in comparasion with loan vakue",
@@ -1412,7 +1412,11 @@ ubsApp.translation={
         "broom" : "broom",
         "L" : "L",
         "dozens" : "dozens",
-        
-
+        "incomeTaxVideo":"videos/income_tax.mp4",
+        "propertyTaxVideo":"videos/property_tax.mp4",
+        "insuranceVideo":"videos/insurance.mp4",
+        "bankingVideo":"videos/banking.mp4",
+        "atm":"videos/atm.mp4",
+        "deposits":"videos/deposits.mp4",
     }
 
