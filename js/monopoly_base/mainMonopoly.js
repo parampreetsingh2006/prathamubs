@@ -387,8 +387,9 @@ monopoly.storePlayerDetails=function(){
     done_initialising=true;
     monopoly.renderPageforBoard(monopoly.pages["monopoly"]);
     ubsApp.openPopup({
-                      "header" : ubsApp.getTranslation("theGameBegins"),
-                      "message" : "",
+                      "header" : "",
+                      "message" : ubsApp.getTranslation("theGameBegins"),
+                      "messageStyle" : "text-align: center;   color: red; font-size:2.5vmax;  padding-top: 19px;",
                       "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
                       "showCloseButton" : false,
                       "showBorder" : false,
@@ -917,7 +918,7 @@ ubsApp.openQuizIfValid = function() {
                             'id':"quizStart",
                             'name' : ubsApp.getTranslation("startQuiz"),
                             'action': "ubsApp.closePopup();ubsApp.renderPageByName('generalQuizStarter');"
-                        }
+                    }
                  ]
 
           });

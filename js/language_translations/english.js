@@ -3,7 +3,7 @@ ubsApp.translation={
         "question2":"Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - ₹60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should Sardarji return to customer?",
         "question3":"Looks like Same Customer is back.He wants to return few items and purchase some new.<br>He wants to return<br>1kg Onion - ₹19<br>1 kg of Potato- Rs 34<br><br> He wants to purchase <br>1.5kg Tomato<br> 1kg Cabbage<br>Per kg cost of tomato/cabbage is 26/24 rupees<br> Can you tell how much money should you pay?",
         "question4":"Looks like a Customer is back.he wants to return few items.<br>He wants to return<br>1kg Rice - ₹60<br>1 kg of Dal - Rs 90<br><br> <br> Can you tell how much money will you return to customer?",
-        "pratham_title_sales":"Sales",
+        "pratham_title_sales":"SALES",
         "pratham_title_surprise":"Surprise",
         "pratham_title_luck":"LUCK",
         "pratham_title_purchase":"BUY",
@@ -55,6 +55,7 @@ ubsApp.translation={
         "decision":"DECISION",
         "luck":"LUCK",
 
+
         "bankBalanceTitle":"BANK BALANCE",
         "BankBalance":"BANK BALANCE",
         "debtTitle":"DEBT",
@@ -88,7 +89,7 @@ ubsApp.translation={
         "validAmount":"Please enter a valid amount",
         "lessMoney":"Payment is being made for ₹ <CurrentAmount> only. Please make payment of ₹ <ActualAmount>",
         "moreMoney":"Payment is being made for ₹ <CurrentAmount>. Please make payment of ₹ <ActualAmount>",
-        "moreCash":"Insufficient cash to complete transaction. Please pay by cheque or buy on credit.",
+        "moreCash":"Insufficient cash to complete transaction. Please pay by cheque.",
         "bankBalance":"Insufficient funds to complete transaction. Please transfer money or buy on credit.",
         "lotDebt":"You have a lot of debt. Please pay by cash or cheque.",
         "pleaseConfirm":"You have not purchased any inventory. Are you sure you want to proceed?",
@@ -133,6 +134,8 @@ ubsApp.translation={
             "29": "₹ 12/70gm",
             "30": "₹ 60/200gm"
         },
+
+        
         //center ScoreBoard and transfer to bank
         "payDebtTitle":"PAY DEBT",
         "transferToBank":"TRANSFER CASH TO BANK",
@@ -173,7 +176,7 @@ ubsApp.translation={
 
         "receiptHeading":"SUPER MARKET RECEIPT",
         "receiptGen":"Receipt Generation",
-        "Order":"Order",
+        "Order":"ORDER",
         "Customer":"CUSTOMER",
         "Items":"Items",
         "SUBMIT": "DONE",
@@ -195,6 +198,7 @@ ubsApp.translation={
         "hasWon" : "has won",
         "Shampoo":"Shampoo",
         "Detergent":"Detergent",
+        
 
         "salesResultHeader":"SALES RESULT",
         "salesWrongAnswer":"This is the wrong answer. ",
@@ -203,7 +207,7 @@ ubsApp.translation={
         "salesCorrectRptpt2":"Consider this sale to be representative of your whole day's sale.₹ {{cashincreased}} was credited to your cash balance.",
         "salesWrongRptpt":"Reputation points are reduced by ",
         "salesWrongRptpt2":"You do not earn any reputation points. ",
-        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. Do you need any help to know to how to solve the problem?",
+        "salesWrongRptpt3":"However this sales represents your whole day's sale. Crediting ₹ {{cashincreased}} to your cash balance. <br> Do you need any help to know to how to solve the problem?",
         "salesTimeOut": "Time's Up! Your reputation points are reduced by 4.",
 
         "sales80DiscountMsg" : "Buy 3 soaps and get the 4th at 50% discount",
@@ -303,9 +307,9 @@ ubsApp.translation={
         "decisionQ32O2":"Invest in FD with 6% Compound interest for 1 year (Safe, higher gains)",
         "decisionQ32O3":"Invest in a friend's scheme that assures of 25% growth (Risky)",
 
-        "decisionQ33":"Customers come to the shope without money",
+        "decisionQ33":"Customers come to the shop without money",
         "decisionQ33O1":"Introduce monthly account books (Retains customers but Items could be left out resulting in minor losses)",
-        "decisionQ33O2":"Let regular customers by on credit (Risk of forgetting to collect money)",
+        "decisionQ33O2":"Let regular customers buy on credit (Risk of forgetting to collect money)",
         "decisionQ33O3":"Only sell to those who have money (Risk of losing customers)",
 
         "decisionQ34":"Electricity shortage",
@@ -402,7 +406,7 @@ ubsApp.translation={
         "luckQuestion17":"Sick Leave for 3 days. Your profit reduced by ₹15000",
         "luckQuestion18":"GST refund. ₹ 8,000",
         "luckQuestion19":"Fine for late payment of GST. ₹ 1000",
-        "luckQuestion20":"In store repai₹ Cost: ₹800",
+        "luckQuestion20":"In store repair. Cost: ₹800",
         "luckQuestion21":"Income tax refund.  ₹ 8700.",
         "luckQuestion22":"Go Green Cash Prize. Rs 3000 +  20 reputation points.",
         "luckQuestion23":"Admitted to hospital for 3 days. Loss: ₹20000",
@@ -627,7 +631,7 @@ ubsApp.translation={
       "QuizQuestion89" : "What is Auto Loan",
       "QuizQuestion90" : "PAN card is issued by",
       "QuizQuestion91" : "Is PAN card accepted as proof of Citizenship",
-      "QuizQuestion92" : "Can PAN card be issue to Foreign Nationals",
+      "QuizQuestion92" : "Can PAN card be issued to Foreign Nationals",
       "QuizQuestion93" : "Can PAN be issued to people below age of 18",
       "QuizQuestion94" : "Is it necessary to pay Income Tax if one has PAN card",
       "QuizQuestion95" : "What is the purpose of PAN card?",
@@ -1321,4 +1325,94 @@ ubsApp.translation={
        "salesNoItemMessage" : "Inventory too low no items available to sell.",
        "advantageCardConvertSuccess" : "Congratulations you now have {{advantageCard}}  Advantage Card(s){{reputationPoints}} Reputation points have been used.",
        "decisionBankBalanceTitle":"BANK-BALANCE",
-    }   
+
+
+
+       "sale":"SALES",
+
+        "itemTable":{
+            "1":"Wheat",
+            "2":"Rice",
+            "3":"Dal",
+            "4":"Sugar",
+            "5":"Milk",
+            "6":"Oil",
+            "7":"Rope",
+            "8":"Chocolate",
+            "9":"Eggs",
+            "10":"Biscuit",
+            "11":"Soap",
+            "12":"Shampoo",
+            "13":"Detergent",
+            "14":"Salt",
+            "15":"Coriander",
+            "16":"Phenyl",
+            "17":"Broom",
+            "18":"Tea",
+            "19":"Bread",
+            "20":"Bessan Flour",
+            "21":"Bessan Flour",
+            "22":"Almonds",
+            "23":"Organic Cashews",
+            "24":"Butter",
+            "25":"Mustard",
+            "26":"Chilli Powder",
+            "27":"Sabudana",
+            "28":"NuttyCocoa",
+            "29":"Noddles",
+            "30":"Jam"
+            
+
+        },
+
+        "Sales76DiscountText": "50% on Wheat",
+        "Sales77DiscountText": "Buy 500 ml and get 500 ml free!",
+        "Sales78DiscountText": "10% on total",
+        "Sales79DiscountText": "5% on total",
+        "Sales81DiscountText": "20% on oil",
+        "Sales82DiscountText": "10% discount on oil, 15% discount on sugar and 13% discount on Rice",
+        "Sales83DiscountText": "Sugar - Get 1kg free on 2kg purchase",
+        "Sales84DiscountText": "Discount: 25% on total",
+        "Sales85DiscountText": "7.5% discount on total",
+        "Sales86DiscountText": "Get 100gm butter free with 100gm and get 1 loaf of bread free with 4 loaves",
+        "Sales87DiscountText": "Get 100gm of Almonds free with 200gm",
+        "Sales89DiscountText": "Get 100 gm cashews free on purchase of 200 gm",
+        "Sales90DiscountText": "NuttyCocoa combo of 2 Jars @ 20% off",
+        "Sales92DiscountText": "Get 5% off on Almonds and 10% off on Cashew",
+        "Sales93DiscountText": "Cashews at 5% off. Corriander - Get 500gm free on purchase of 500gm",
+        "Sales94DiscountText": "20% on Rice",
+        "Sales95DiscountText": "Buy 500 ml and get 500 ml free",
+        "Sales96DiscountText": "10% on total",
+        "Sales97DiscountText": "50% off on rope",
+        "Sales98DiscountText": "Get half dozen egg free with every dozen",
+        "Sales99DiscountText": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
+        "Sales100DiscountText": "Butter 250 gm free with 500 gm pack",
+        
+        
+       
+       "decisionResultMessageInCaseOfPamphletOrFestival":"Congratulations. You earned {0} Reputation Points. You also spent Rs. {1} and earned business for Rs. {2}",
+        "Jar" : "Jar",
+        "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
+        "cashChanged":"Cash Changed",
+        "repPointsChanged" : "Reputation Points Changed",
+        "inventoryChanged" : "Inventory Percent Changed",
+        "inventoryValueChanged" : "Inventory Value Changed",
+        "bankBalanceChanged" : "Bank Balance changed",
+
+        "kg" : "kg",
+        "Kg" : "Kg", 
+        "litre" : "litre",
+        "m" : "m",
+        "chocolate" : "chocolate",
+        "Packet" : "Packet",
+        "Packets" : "Packets",
+        "soap" : "soap",
+        "ml" : "ml",
+        "gm" : "gm",
+        "broom" : "broom",
+        "L" : "L",
+        "dozens" : "dozens",
+        
+
+    }
+

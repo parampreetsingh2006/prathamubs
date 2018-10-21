@@ -38,7 +38,7 @@ ubsApp.displayNextQuizQuestion=function(page, updateCorrectAnswerScore){
 	  }
 }
 
-ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId, reputationPoints, startTime, helpPageName, entryPoint){
+ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionId, reputationPoints, startTime, helpPageName, entryPoint, scenarioName){
   var totalMarks = 1; // each question carries 1 mark
   var date=new Date();
   var resultConfig={};
@@ -58,7 +58,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  	if(entryPoint == "unluckyScenario"){
 		  		let currentPlayerRepPoints = userArray[playerChance].getReputationPts();
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizWrongResultFromLuckyScenario'], [reputationPoints]));
-		  		nextAction = "ubsApp.closePopup();	ubsApp.closeCurrentScenario();"
+		  		nextAction = "ubsApp.closePopup(); ubsApp.closeCurrentScenario();ubsApp.nextMove();"
 		  	}
 		  	else{
 		  		quizResultMessage = ubsApp.formatMessage(ubsApp.formatMessage(ubsApp.translation['quizCorrectAnswerMessage'], [reputationPoints]));
@@ -97,7 +97,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	                		{
 	                			'id':"unluckyScenarioOkButton",
 	                            'name' : ubsApp.getTranslation("OK"),
-	                            'action': "ubsApp.closePopup();	ubsApp.closeCurrentScenario();"
+	                            'action': "ubsApp.closePopup(); ubsApp.payOrGain(\'"+ scenarioName +"\');ubsApp.closeCurrentScenario(); ubsApp.nextMove();"
 	                        }
 	                 ]
 

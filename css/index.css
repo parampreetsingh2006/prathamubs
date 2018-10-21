@@ -468,7 +468,7 @@ button:focus {outline:0;}
 
 .purchaseIcon {
     margin-top: 3%;
-    background-image:url(../images/backgrounds_and_buttons/buy_strip.png);
+    background-image:url(../images/buy.png);
     background-size: 100% 100%;
     width: 8vw;
     height: 7vw;

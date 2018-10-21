@@ -55,6 +55,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ1"
     } ]
   },
@@ -113,6 +116,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ2"
     } ]
   },
@@ -171,6 +177,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ3"
     } ]
   },
@@ -229,6 +238,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ4"
     } ]
   },
@@ -287,6 +299,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ5"
     } ]
   },
@@ -345,6 +360,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ6"
     } ]
   },
@@ -403,6 +421,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ7"
     } ]
   },
@@ -461,6 +482,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ8"
     } ]
   },
@@ -519,6 +543,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ9"
     } ]
   },
@@ -577,6 +604,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ10"
     } ]
   },
@@ -635,6 +665,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ11"
     } ]
   },
@@ -693,6 +726,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ12"
     } ]
   },
@@ -751,6 +787,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ13"
     } ]
   },
@@ -809,6 +848,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ14"
     } ]
   },
@@ -867,6 +909,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ15"
     } ]
   },
@@ -925,6 +970,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ16"
     } ]
   },
@@ -983,6 +1031,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ17"
     } ]
   },
@@ -1041,6 +1092,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ18"
     } ]
   },
@@ -1099,6 +1153,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ19"
     } ]
   },
@@ -1157,6 +1214,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ20"
     } ]
   },
@@ -1215,6 +1275,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ21"
     } ]
   },
@@ -1273,6 +1336,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ22"
     } ]
   },
@@ -1331,6 +1397,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ23"
     } ]
   },
@@ -1389,6 +1458,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ24"
     } ]
   },
@@ -1447,6 +1519,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ25"
     } ]
   },
@@ -1505,6 +1580,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ26"
     } ]
   },
@@ -1563,6 +1641,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ27"
     } ]
   },
@@ -1621,6 +1702,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ28"
     } ]
   },
@@ -1679,6 +1763,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ29"
     } ]
   },
@@ -1737,6 +1824,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ30"
     } ]
   },
@@ -1795,6 +1885,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ31"
     } ]
   },
@@ -1853,6 +1946,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ32"
     } ]
   },
@@ -1907,10 +2003,13 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "any",
+      "category" : "general",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ33"
     } ]
   },
@@ -1969,6 +2068,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ34"
     } ]
   },
@@ -2027,6 +2129,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ35"
     } ]
   },
@@ -2085,6 +2190,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ36"
     } ]
   },
@@ -2143,6 +2251,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ37"
     } ]
   },
@@ -2201,6 +2312,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ38"
     } ]
   },
@@ -2259,6 +2373,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ39"
     } ]
   },
@@ -2317,6 +2434,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ40"
     } ]
   },
@@ -2375,6 +2495,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ41"
     } ]
   },
@@ -2429,10 +2552,13 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "any",
+      "category" : "general",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ42"
     } ]
   },
@@ -2491,6 +2617,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ43"
     } ]
   },
@@ -2549,6 +2678,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ44"
     } ]
   },
@@ -2607,6 +2739,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ45"
     } ]
   },
@@ -2665,6 +2800,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ46"
     } ]
   },
@@ -2723,6 +2861,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ47"
     } ]
   },
@@ -2781,6 +2922,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ48"
     } ]
   },
@@ -2839,6 +2983,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ49"
     } ]
   },
@@ -2897,6 +3044,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ50"
     } ]
   },
@@ -2955,6 +3105,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ51"
     } ]
   },
@@ -3013,6 +3166,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ52"
     } ]
   },
@@ -3071,6 +3227,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ53"
     } ]
   },
@@ -3129,6 +3288,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ54"
     } ]
   },
@@ -3187,6 +3349,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ55"
     } ]
   },
@@ -3245,6 +3410,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ56"
     } ]
   },
@@ -3303,6 +3471,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ57"
     } ]
   },
@@ -3361,6 +3532,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ58"
     } ]
   },
@@ -3419,6 +3593,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ59"
     } ]
   },
@@ -3472,6 +3649,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ60"
     } ]
   },
@@ -3530,6 +3710,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ61"
     } ]
   },
@@ -3583,6 +3766,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ62"
     } ]
   },
@@ -3641,6 +3827,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ63"
     } ]
   },
@@ -3699,6 +3888,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ64"
     } ]
   },
@@ -3757,6 +3949,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ65"
     } ]
   },
@@ -3815,6 +4010,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ66"
     } ]
   },
@@ -3859,10 +4057,13 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "any",
+      "category" : "general",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ67"
     } ]
   },
@@ -3921,6 +4122,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ68"
     } ]
   },
@@ -3979,6 +4183,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ69"
     } ]
   },
@@ -4027,6 +4234,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ70"
     } ]
   },
@@ -4085,6 +4295,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ71"
     } ]
   },
@@ -4143,6 +4356,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ72"
     } ]
   },
@@ -4201,6 +4417,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ73"
     } ]
   },
@@ -4259,6 +4478,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ74"
     } ]
   },
@@ -4317,6 +4539,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ75"
     } ]
   },
@@ -4375,6 +4600,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ76"
     } ]
   },
@@ -4433,6 +4661,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ77"
     } ]
   },
@@ -4481,6 +4712,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ78"
     } ]
   },
@@ -4529,6 +4763,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ79"
     } ]
   },
@@ -4577,6 +4814,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ80"
     } ]
   },
@@ -4625,6 +4865,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ81"
     } ]
   },
@@ -4673,6 +4916,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ82"
     } ]
   },
@@ -4721,6 +4967,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ83"
     } ]
   },
@@ -4769,6 +5018,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ84"
     } ]
   },
@@ -4827,6 +5079,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ85"
     } ]
   },
@@ -4885,6 +5140,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ86"
     } ]
   },
@@ -4943,6 +5201,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ87"
     } ]
   },
@@ -5001,6 +5262,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ88"
     } ]
   },
@@ -5059,6 +5323,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ89"
     } ]
   },
@@ -5117,6 +5384,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ90"
     } ]
   },
@@ -5165,6 +5435,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ91"
     } ]
   },
@@ -5213,6 +5486,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ92"
     } ]
   },
@@ -5261,6 +5537,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ93"
     } ]
   },
@@ -5309,6 +5588,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ94"
     } ]
   },
@@ -5367,6 +5649,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ95"
     } ]
   },
@@ -5415,6 +5700,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ96"
     } ]
   },
@@ -5473,6 +5761,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ97"
     } ]
   },
@@ -5531,6 +5822,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ98"
     } ]
   },
@@ -5589,6 +5883,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ99"
     } ]
   },
@@ -5647,6 +5944,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ100"
     } ]
   },
@@ -5705,6 +6005,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ101"
     } ]
   },
@@ -5763,6 +6066,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ102"
     } ]
   },
@@ -5821,6 +6127,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ103"
     } ]
   },
@@ -5879,6 +6188,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ104"
     } ]
   },
@@ -5937,6 +6249,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ105"
     } ]
   },
@@ -5995,6 +6310,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ106"
     } ]
   },
@@ -6053,6 +6371,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ107"
     } ]
   },
@@ -6111,6 +6432,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ108"
     } ]
   },
@@ -6169,6 +6493,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ109"
     } ]
   },
@@ -6227,6 +6554,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ110"
     } ]
   },
@@ -6285,6 +6615,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ111"
     } ]
   },
@@ -6343,6 +6676,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ112"
     } ]
   },
@@ -6401,6 +6737,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ113"
     } ]
   },
@@ -6459,6 +6798,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ114"
     } ]
   },
@@ -6517,6 +6859,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ115"
     } ]
   },
@@ -6575,6 +6920,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ116"
     } ]
   },
@@ -6633,6 +6981,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ117"
     } ]
   },
@@ -6691,6 +7042,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ118"
     } ]
   },
@@ -6749,6 +7103,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ119"
     } ]
   },
@@ -6807,6 +7164,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ120"
     } ]
   },
@@ -6865,6 +7225,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ121"
     } ]
   },
@@ -6923,6 +7286,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ122"
     } ]
   },
@@ -6981,6 +7347,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ123"
     } ]
   },
@@ -7039,6 +7408,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ124"
     } ]
   },
@@ -7097,6 +7469,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ125"
     } ]
   },
@@ -7155,6 +7530,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ126"
     } ]
   },
@@ -7213,6 +7591,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ127"
     } ]
   },
@@ -7271,6 +7652,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ128"
     } ]
   },
@@ -7329,6 +7713,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ129"
     } ]
   },
@@ -7387,6 +7774,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ130"
     } ]
   },
@@ -7445,6 +7835,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ131"
     } ]
   },
@@ -7503,6 +7896,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ132"
     } ]
   },
@@ -7561,6 +7957,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ133"
     } ]
   },
@@ -7619,6 +8018,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ134"
     } ]
   },
@@ -7677,6 +8079,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ135"
     } ]
   },
@@ -7735,6 +8140,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ136"
     } ]
   },
@@ -7793,6 +8201,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ137"
     } ]
   },
@@ -7851,6 +8262,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ138"
     } ]
   },
@@ -7909,6 +8323,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ139"
     } ]
   },
@@ -7967,6 +8384,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ140"
     } ]
   },
@@ -8025,6 +8445,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ141"
     } ]
   },
@@ -8083,6 +8506,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ142"
     } ]
   },
@@ -8141,6 +8567,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ143"
     } ]
   },
@@ -8199,6 +8628,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ144"
     } ]
   },
@@ -8257,6 +8689,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ145"
     } ]
   },
@@ -8315,6 +8750,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ146"
     } ]
   },
@@ -8373,6 +8811,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ147"
     } ]
   },
@@ -8431,6 +8872,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ148"
     } ]
   },
@@ -8489,6 +8933,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ149"
     } ]
   },
@@ -8547,6 +8994,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ150"
     } ]
   },
@@ -8605,6 +9055,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ151"
     } ]
   },
@@ -8663,6 +9116,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ152"
     } ]
   },
@@ -8721,6 +9177,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ153"
     } ]
   },
@@ -8779,6 +9238,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ154"
     } ]
   },
@@ -8837,6 +9299,9 @@ ubsApp.quizConfig=
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
+      "scoreTitle" : "{{scoreSideBar}}",
+      "playerTitle" : "{{playerTitle}}",
+      "quizTitle" : "{{quizTitle}}",
       "pageName" : "quizQ155"
     } ]
   }

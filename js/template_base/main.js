@@ -304,6 +304,7 @@ ubsApp.closeCurrentScenario=function(){
 }
 
 ubsApp.startCurrentScenario=function(){
+    $('#resultBackground').show();
 	$('#monopolyBase').css("z-index",-10)
 	$('#templateBase').css("z-index",10)
 	
@@ -349,6 +350,7 @@ ubsApp.openPopup = function(config) {
     "imageStyle":"",
     "showBorder" : true,
     "backgroundColor" :"white",
+    "messageStyle" : "text-align: center;     padding-top: 19px;",
    }, config);
 
    ubsApp.popupConfig.showImage = showImage;
@@ -384,6 +386,8 @@ ubsApp.openResultPopup = function(config) {
     "imageStyle":"",
     "showBorder" : true,
     "backgroundColor" :"white",
+     "messageStyle" : "text-align: center;     padding-top: 19px;",
+
    }, config);
    ubsApp.popupConfig.showImage = showImage;
    ubsApp.renderPageByName("generalPopUp");
