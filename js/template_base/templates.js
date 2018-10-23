@@ -663,7 +663,8 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-8">{{newInventoryLevelTitle}}:</div>'+
 '                    <div class="col-md-4" style="text-align: right;">'+
-'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">%'+
+//'                        <input type="text" class="borderB1" id="newInventoryLevelText" onChange="ubsApp.updateInventoryLevel(this.value);ubsApp.fillUp()">%'+
+'                           <span id="newInventoryLevelText"></span>%'+
 '                    </div>'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
@@ -674,10 +675,9 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '                    <div class="col-md-6 col-lg-6">{{costTitle}}:</div>'+
 '                    <div class="col-md-6 col-lg-6" style="text-align: right;">₹ <span  id="newCostText"  style="width: 45%; color: black;" ></span></div>'+
 '                </div>'+
-'                <div class="row" style="padding: 1%;">'+
-'                    <div id="parent1">'+
-'                        <span style="padding-left: 15px;">{{payByTitle}}:</span><select class="borderB1" id="pay1" ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select><input style="display:none;" type="number" class="enterAmountText" id="amount1" min="0" style="width: 20%;">'+
-'                    </div><br>'+
+'                <div id="parent1" class="row" style="padding: 1%;">'+
+'                    <div class="col-md-6 col-lg-6">{{payByTitle}}:</div>'+
+'                    <div class="col-md-6 col-lg-6" style="text-align: right;"><select class="borderB1" id="pay1" ><option value="cash">{{cashTitle}}</option><option value="cheque">{{chequeTitle}}</option><option value="credit">{{creditTitle}}</option></select><input style="display:none;" type="number" class="enterAmountText" id="amount1" min="0" style="width: 20%;"></div>'+
 '                </div>'+
 '                <div class="row" style="">'+
 '                    <div id="parent2" style="display:none; padding: 1%;">'+
@@ -1174,9 +1174,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            '        <div style="display:inline-block;margin-top: 10px;width:100%;">'+
                            '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 1%; padding-bottom: 2%; color: green;font-weight:bold; width: 16%;text-align: center;font-size: large;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
-
-                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold;font-size: large; width: 16%;text-align: center;padding-right: 15%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
-
+                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold;font-size: large; width: 15.5%;text-align: center; padding-right: 16%; padding-left: 2%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
                            '                 <div style="cursor: pointer;     float: right;padding: 3%;width: 13%;    background-size: 100% 100%;background-image: url(images/help-button.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
 
                            '        </div>'+

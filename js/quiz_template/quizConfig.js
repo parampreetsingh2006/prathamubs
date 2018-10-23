@@ -1,4 +1,4 @@
-ubsApp.quizConfig=
+ubsApp.quizConfig = 
 {
   "quizQ1" : {
     "category" : "Quiz",
@@ -17,7 +17,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -58,7 +58,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ1"
+      "pageName" : "quizQ1",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ2" : {
@@ -78,7 +79,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -119,7 +120,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ2"
+      "pageName" : "quizQ2",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ3" : {
@@ -139,7 +141,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -180,7 +182,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ3"
+      "pageName" : "quizQ3",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ4" : {
@@ -200,7 +203,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -241,7 +244,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ4"
+      "pageName" : "quizQ4",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ5" : {
@@ -261,7 +265,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -302,7 +306,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ5"
+      "pageName" : "quizQ5",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ6" : {
@@ -322,7 +327,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -363,7 +368,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ6"
+      "pageName" : "quizQ6",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ7" : {
@@ -383,7 +389,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -424,7 +430,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ7"
+      "pageName" : "quizQ7",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ8" : {
@@ -444,7 +451,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -485,7 +492,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ8"
+      "pageName" : "quizQ8",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ9" : {
@@ -505,7 +513,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -546,7 +554,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ9"
+      "pageName" : "quizQ9",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ10" : {
@@ -566,7 +575,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -607,7 +616,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ10"
+      "pageName" : "quizQ10",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ11" : {
@@ -627,7 +637,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -668,7 +678,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ11"
+      "pageName" : "quizQ11",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ12" : {
@@ -688,7 +699,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -729,7 +740,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ12"
+      "pageName" : "quizQ12",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ13" : {
@@ -749,7 +761,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -790,7 +802,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ13"
+      "pageName" : "quizQ13",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ14" : {
@@ -810,7 +823,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "insuranceHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -844,14 +857,15 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "safety",
+      "category" : "saftey",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ14"
+      "pageName" : "quizQ14",
+      "videoMapping" : "insurance"
     } ]
   },
   "quizQ15" : {
@@ -871,7 +885,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "insuranceHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -905,14 +919,15 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "safety",
+      "category" : "saftey",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ15"
+      "pageName" : "quizQ15",
+      "videoMapping" : "insurance"
     } ]
   },
   "quizQ16" : {
@@ -932,7 +947,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -973,7 +988,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ16"
+      "pageName" : "quizQ16",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ17" : {
@@ -993,7 +1009,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1034,7 +1050,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ17"
+      "pageName" : "quizQ17",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ18" : {
@@ -1054,7 +1071,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1095,7 +1112,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ18"
+      "pageName" : "quizQ18",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ19" : {
@@ -1115,7 +1133,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1156,7 +1174,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ19"
+      "pageName" : "quizQ19",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ20" : {
@@ -1176,7 +1195,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1217,7 +1236,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ20"
+      "pageName" : "quizQ20",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ21" : {
@@ -1237,7 +1257,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1278,7 +1298,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ21"
+      "pageName" : "quizQ21",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ22" : {
@@ -1298,7 +1319,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1339,7 +1360,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ22"
+      "pageName" : "quizQ22",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ23" : {
@@ -1359,7 +1381,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1400,7 +1422,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ23"
+      "pageName" : "quizQ23",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ24" : {
@@ -1420,7 +1443,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1461,7 +1484,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ24"
+      "pageName" : "quizQ24",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ25" : {
@@ -1481,7 +1505,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1522,7 +1546,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ25"
+      "pageName" : "quizQ25",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ26" : {
@@ -1542,7 +1567,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1583,7 +1608,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ26"
+      "pageName" : "quizQ26",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ27" : {
@@ -1603,7 +1629,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1644,7 +1670,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ27"
+      "pageName" : "quizQ27",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ28" : {
@@ -1664,7 +1691,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1705,7 +1732,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ28"
+      "pageName" : "quizQ28",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ29" : {
@@ -1725,7 +1753,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1766,7 +1794,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ29"
+      "pageName" : "quizQ29",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ30" : {
@@ -1786,7 +1815,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1827,7 +1856,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ30"
+      "pageName" : "quizQ30",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ31" : {
@@ -1847,7 +1877,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1888,7 +1918,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ31"
+      "pageName" : "quizQ31",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ32" : {
@@ -1908,7 +1939,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "mobileBankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -1949,7 +1980,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ32"
+      "pageName" : "quizQ32",
+      "videoMapping" : "mobile-banking"
     } ]
   },
   "quizQ33" : {
@@ -1969,7 +2001,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2010,7 +2042,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ33"
+      "pageName" : "quizQ33",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ34" : {
@@ -2030,7 +2063,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2071,7 +2104,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ34"
+      "pageName" : "quizQ34",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ35" : {
@@ -2091,7 +2125,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2132,7 +2166,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ35"
+      "pageName" : "quizQ35",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ36" : {
@@ -2152,7 +2187,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "incomeTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2193,7 +2228,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ36"
+      "pageName" : "quizQ36",
+      "videoMapping" : "income_tax"
     } ]
   },
   "quizQ37" : {
@@ -2213,7 +2249,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2254,7 +2290,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ37"
+      "pageName" : "quizQ37",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ38" : {
@@ -2274,7 +2311,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2315,7 +2352,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ38"
+      "pageName" : "quizQ38",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ39" : {
@@ -2335,7 +2373,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2376,7 +2414,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ39"
+      "pageName" : "quizQ39",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ40" : {
@@ -2396,7 +2435,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2437,7 +2476,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ40"
+      "pageName" : "quizQ40",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ41" : {
@@ -2457,7 +2497,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2498,7 +2538,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ41"
+      "pageName" : "quizQ41",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ42" : {
@@ -2518,7 +2559,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2559,7 +2600,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ42"
+      "pageName" : "quizQ42",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ43" : {
@@ -2579,7 +2621,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2620,7 +2662,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ43"
+      "pageName" : "quizQ43",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ44" : {
@@ -2640,7 +2683,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2681,7 +2724,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ44"
+      "pageName" : "quizQ44",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ45" : {
@@ -2701,7 +2745,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2742,7 +2786,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ45"
+      "pageName" : "quizQ45",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ46" : {
@@ -2762,7 +2807,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2803,7 +2848,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ46"
+      "pageName" : "quizQ46",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ47" : {
@@ -2823,7 +2869,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2864,7 +2910,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ47"
+      "pageName" : "quizQ47",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ48" : {
@@ -2884,7 +2931,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2925,7 +2972,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ48"
+      "pageName" : "quizQ48",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ49" : {
@@ -2945,7 +2993,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -2986,7 +3034,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ49"
+      "pageName" : "quizQ49",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ50" : {
@@ -3006,7 +3055,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3047,7 +3096,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ50"
+      "pageName" : "quizQ50",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ51" : {
@@ -3067,7 +3117,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3108,7 +3158,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ51"
+      "pageName" : "quizQ51",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ52" : {
@@ -3128,7 +3179,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3169,7 +3220,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ52"
+      "pageName" : "quizQ52",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ53" : {
@@ -3189,7 +3241,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3230,7 +3282,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ53"
+      "pageName" : "quizQ53",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ54" : {
@@ -3250,7 +3303,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3291,7 +3344,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ54"
+      "pageName" : "quizQ54",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ55" : {
@@ -3311,7 +3365,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3352,7 +3406,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ55"
+      "pageName" : "quizQ55",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ56" : {
@@ -3372,7 +3427,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "incomeTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3413,7 +3468,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ56"
+      "pageName" : "quizQ56",
+      "videoMapping" : "income_tax"
     } ]
   },
   "quizQ57" : {
@@ -3433,7 +3489,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "incomeTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3474,7 +3530,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ57"
+      "pageName" : "quizQ57",
+      "videoMapping" : "income_tax"
     } ]
   },
   "quizQ58" : {
@@ -3494,7 +3551,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "incomeTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3535,7 +3592,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ58"
+      "pageName" : "quizQ58",
+      "videoMapping" : "income_tax"
     } ]
   },
   "quizQ59" : {
@@ -3555,7 +3613,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "incomeTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3596,7 +3654,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ59"
+      "pageName" : "quizQ59",
+      "videoMapping" : "income_tax"
     } ]
   },
   "quizQ60" : {
@@ -3616,7 +3675,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "propertyTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3652,7 +3711,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ60"
+      "pageName" : "quizQ60",
+      "videoMapping" : "property_tax"
     } ]
   },
   "quizQ61" : {
@@ -3672,7 +3732,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "propertyTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3713,7 +3773,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ61"
+      "pageName" : "quizQ61",
+      "videoMapping" : "property_tax"
     } ]
   },
   "quizQ62" : {
@@ -3733,7 +3794,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3769,7 +3830,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ62"
+      "pageName" : "quizQ62",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ63" : {
@@ -3789,7 +3851,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3830,7 +3892,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ63"
+      "pageName" : "quizQ63",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ64" : {
@@ -3850,7 +3913,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3891,7 +3954,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ64"
+      "pageName" : "quizQ64",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ65" : {
@@ -3911,7 +3975,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -3952,7 +4016,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ65"
+      "pageName" : "quizQ65",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ66" : {
@@ -3972,7 +4037,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4013,7 +4078,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ66"
+      "pageName" : "quizQ66",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ67" : {
@@ -4033,7 +4099,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4064,7 +4130,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ67"
+      "pageName" : "quizQ67",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ68" : {
@@ -4084,7 +4151,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "insuranceHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4118,14 +4185,15 @@ ubsApp.quizConfig=
         "nextPage" : "",
         "hideScenarios" : false
       },
-      "category" : "safety",
+      "category" : "saftey",
       "doneTitle" : "{{SUBMIT}}",
       "cancelTitle" : "{{cancelTitle}}",
       "okTitle" : "{{OK}}",
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ68"
+      "pageName" : "quizQ68",
+      "videoMapping" : "insurance"
     } ]
   },
   "quizQ69" : {
@@ -4145,7 +4213,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4186,7 +4254,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ69"
+      "pageName" : "quizQ69",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ70" : {
@@ -4206,7 +4275,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4237,7 +4306,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ70"
+      "pageName" : "quizQ70",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ71" : {
@@ -4257,7 +4327,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4298,7 +4368,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ71"
+      "pageName" : "quizQ71",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ72" : {
@@ -4318,7 +4389,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4359,7 +4430,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ72"
+      "pageName" : "quizQ72",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ73" : {
@@ -4379,7 +4451,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4420,7 +4492,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ73"
+      "pageName" : "quizQ73",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ74" : {
@@ -4440,7 +4513,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4481,7 +4554,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ74"
+      "pageName" : "quizQ74",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ75" : {
@@ -4501,7 +4575,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4542,7 +4616,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ75"
+      "pageName" : "quizQ75",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ76" : {
@@ -4562,7 +4637,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4603,7 +4678,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ76"
+      "pageName" : "quizQ76",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ77" : {
@@ -4623,7 +4699,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4664,7 +4740,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ77"
+      "pageName" : "quizQ77",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ78" : {
@@ -4684,7 +4761,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4715,7 +4792,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ78"
+      "pageName" : "quizQ78",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ79" : {
@@ -4735,7 +4813,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4766,7 +4844,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ79"
+      "pageName" : "quizQ79",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ80" : {
@@ -4786,7 +4865,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4817,7 +4896,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ80"
+      "pageName" : "quizQ80",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ81" : {
@@ -4837,7 +4917,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4868,7 +4948,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ81"
+      "pageName" : "quizQ81",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ82" : {
@@ -4888,7 +4969,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4919,7 +5000,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ82"
+      "pageName" : "quizQ82",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ83" : {
@@ -4939,7 +5021,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -4970,7 +5052,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ83"
+      "pageName" : "quizQ83",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ84" : {
@@ -4990,7 +5073,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "incomeTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5021,7 +5104,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ84"
+      "pageName" : "quizQ84",
+      "videoMapping" : "income_tax"
     } ]
   },
   "quizQ85" : {
@@ -5041,7 +5125,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "gstHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5082,7 +5166,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ85"
+      "pageName" : "quizQ85",
+      "videoMapping" : "gst"
     } ]
   },
   "quizQ86" : {
@@ -5102,7 +5187,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5143,7 +5228,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ86"
+      "pageName" : "quizQ86",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ87" : {
@@ -5163,7 +5249,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5204,7 +5290,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ87"
+      "pageName" : "quizQ87",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ88" : {
@@ -5224,7 +5311,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "mobileBankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5265,7 +5352,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ88"
+      "pageName" : "quizQ88",
+      "videoMapping" : "mobile-banking"
     } ]
   },
   "quizQ89" : {
@@ -5285,7 +5373,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5326,7 +5414,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ89"
+      "pageName" : "quizQ89",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ90" : {
@@ -5346,7 +5435,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5387,7 +5476,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ90"
+      "pageName" : "quizQ90",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ91" : {
@@ -5407,7 +5497,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5438,7 +5528,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ91"
+      "pageName" : "quizQ91",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ92" : {
@@ -5458,7 +5549,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5489,7 +5580,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ92"
+      "pageName" : "quizQ92",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ93" : {
@@ -5509,7 +5601,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5540,7 +5632,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ93"
+      "pageName" : "quizQ93",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ94" : {
@@ -5560,7 +5653,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "incomeTaxHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5591,7 +5684,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ94"
+      "pageName" : "quizQ94",
+      "videoMapping" : "income_tax"
     } ]
   },
   "quizQ95" : {
@@ -5611,7 +5705,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5652,7 +5746,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ95"
+      "pageName" : "quizQ95",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ96" : {
@@ -5672,7 +5767,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5703,7 +5798,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ96"
+      "pageName" : "quizQ96",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ97" : {
@@ -5723,7 +5819,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5764,7 +5860,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ97"
+      "pageName" : "quizQ97",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ98" : {
@@ -5784,7 +5881,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5825,7 +5922,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ98"
+      "pageName" : "quizQ98",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ99" : {
@@ -5845,7 +5943,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5886,7 +5984,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ99"
+      "pageName" : "quizQ99",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ100" : {
@@ -5906,7 +6005,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -5947,7 +6046,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ100"
+      "pageName" : "quizQ100",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ101" : {
@@ -5967,7 +6067,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6008,7 +6108,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ101"
+      "pageName" : "quizQ101",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ102" : {
@@ -6028,7 +6129,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6069,7 +6170,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ102"
+      "pageName" : "quizQ102",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ103" : {
@@ -6089,7 +6191,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6130,7 +6232,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ103"
+      "pageName" : "quizQ103",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ104" : {
@@ -6150,7 +6253,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6191,7 +6294,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ104"
+      "pageName" : "quizQ104",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ105" : {
@@ -6211,7 +6315,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6252,7 +6356,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ105"
+      "pageName" : "quizQ105",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ106" : {
@@ -6272,7 +6377,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6313,7 +6418,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ106"
+      "pageName" : "quizQ106",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ107" : {
@@ -6333,7 +6439,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6374,7 +6480,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ107"
+      "pageName" : "quizQ107",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ108" : {
@@ -6394,7 +6501,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6435,7 +6542,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ108"
+      "pageName" : "quizQ108",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ109" : {
@@ -6455,7 +6563,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6496,7 +6604,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ109"
+      "pageName" : "quizQ109",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ110" : {
@@ -6516,7 +6625,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6557,7 +6666,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ110"
+      "pageName" : "quizQ110",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ111" : {
@@ -6577,7 +6687,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6618,7 +6728,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ111"
+      "pageName" : "quizQ111",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ112" : {
@@ -6638,7 +6749,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6679,7 +6790,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ112"
+      "pageName" : "quizQ112",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ113" : {
@@ -6699,7 +6811,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6740,7 +6852,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ113"
+      "pageName" : "quizQ113",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ114" : {
@@ -6760,7 +6873,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6801,7 +6914,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ114"
+      "pageName" : "quizQ114",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ115" : {
@@ -6821,7 +6935,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6862,7 +6976,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ115"
+      "pageName" : "quizQ115",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ116" : {
@@ -6882,7 +6997,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6923,7 +7038,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ116"
+      "pageName" : "quizQ116",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ117" : {
@@ -6943,7 +7059,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -6984,7 +7100,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ117"
+      "pageName" : "quizQ117",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ118" : {
@@ -7004,7 +7121,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7045,7 +7162,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ118"
+      "pageName" : "quizQ118",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ119" : {
@@ -7065,7 +7183,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7106,7 +7224,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ119"
+      "pageName" : "quizQ119",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ120" : {
@@ -7126,7 +7245,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7167,7 +7286,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ120"
+      "pageName" : "quizQ120",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ121" : {
@@ -7187,7 +7307,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7228,7 +7348,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ121"
+      "pageName" : "quizQ121",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ122" : {
@@ -7248,7 +7369,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7289,7 +7410,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ122"
+      "pageName" : "quizQ122",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ123" : {
@@ -7309,7 +7431,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7350,7 +7472,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ123"
+      "pageName" : "quizQ123",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ124" : {
@@ -7370,7 +7493,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7411,7 +7534,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ124"
+      "pageName" : "quizQ124",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ125" : {
@@ -7431,7 +7555,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7472,7 +7596,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ125"
+      "pageName" : "quizQ125",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ126" : {
@@ -7492,7 +7617,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7533,7 +7658,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ126"
+      "pageName" : "quizQ126",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ127" : {
@@ -7553,7 +7679,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7594,7 +7720,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ127"
+      "pageName" : "quizQ127",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ128" : {
@@ -7614,7 +7741,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7655,7 +7782,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ128"
+      "pageName" : "quizQ128",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ129" : {
@@ -7675,7 +7803,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7716,7 +7844,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ129"
+      "pageName" : "quizQ129",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ130" : {
@@ -7736,7 +7865,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7777,7 +7906,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ130"
+      "pageName" : "quizQ130",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ131" : {
@@ -7797,7 +7927,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7838,7 +7968,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ131"
+      "pageName" : "quizQ131",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ132" : {
@@ -7858,7 +7989,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7899,7 +8030,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ132"
+      "pageName" : "quizQ132",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ133" : {
@@ -7919,7 +8051,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -7960,7 +8092,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ133"
+      "pageName" : "quizQ133",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ134" : {
@@ -7980,7 +8113,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8021,7 +8154,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ134"
+      "pageName" : "quizQ134",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ135" : {
@@ -8041,7 +8175,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8082,7 +8216,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ135"
+      "pageName" : "quizQ135",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   },
   "quizQ136" : {
@@ -8102,7 +8237,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8143,7 +8278,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ136"
+      "pageName" : "quizQ136",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ137" : {
@@ -8163,7 +8299,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8204,7 +8340,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ137"
+      "pageName" : "quizQ137",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ138" : {
@@ -8224,7 +8361,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8265,7 +8402,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ138"
+      "pageName" : "quizQ138",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ139" : {
@@ -8285,7 +8423,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8326,7 +8464,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ139"
+      "pageName" : "quizQ139",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ140" : {
@@ -8346,7 +8485,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8387,7 +8526,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ140"
+      "pageName" : "quizQ140",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ141" : {
@@ -8407,7 +8547,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8448,7 +8588,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ141"
+      "pageName" : "quizQ141",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ142" : {
@@ -8468,7 +8609,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8509,7 +8650,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ142"
+      "pageName" : "quizQ142",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ143" : {
@@ -8529,7 +8671,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8570,7 +8712,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ143"
+      "pageName" : "quizQ143",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ144" : {
@@ -8590,7 +8733,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8631,7 +8774,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ144"
+      "pageName" : "quizQ144",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ145" : {
@@ -8651,7 +8795,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8692,7 +8836,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ145"
+      "pageName" : "quizQ145",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ146" : {
@@ -8712,7 +8857,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8753,7 +8898,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ146"
+      "pageName" : "quizQ146",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ147" : {
@@ -8773,7 +8919,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8814,7 +8960,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ147"
+      "pageName" : "quizQ147",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ148" : {
@@ -8834,7 +8981,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8875,7 +9022,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ148"
+      "pageName" : "quizQ148",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ149" : {
@@ -8895,7 +9043,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "generalHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8936,7 +9084,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ149"
+      "pageName" : "quizQ149",
+      "videoMapping" : "general"
     } ]
   },
   "quizQ150" : {
@@ -8956,7 +9105,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "loansHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -8997,7 +9146,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ150"
+      "pageName" : "quizQ150",
+      "videoMapping" : "loans"
     } ]
   },
   "quizQ151" : {
@@ -9017,7 +9167,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -9058,7 +9208,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ151"
+      "pageName" : "quizQ151",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ152" : {
@@ -9078,7 +9229,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "bankingHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -9119,7 +9270,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ152"
+      "pageName" : "quizQ152",
+      "videoMapping" : "banking"
     } ]
   },
   "quizQ153" : {
@@ -9139,7 +9291,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -9180,7 +9332,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ153"
+      "pageName" : "quizQ153",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ154" : {
@@ -9200,7 +9353,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "atmHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -9241,7 +9394,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ154"
+      "pageName" : "quizQ154",
+      "videoMapping" : "atm"
     } ]
   },
   "quizQ155" : {
@@ -9261,7 +9415,7 @@ ubsApp.quizConfig=
       "questionTime" : 3000,
       "optionsTime" : 2000,
       "questionHeading" : "{{QuizQuestionHeading}}",
-      "helpPageName" : "{{QuizHelpPageName}}",
+      "helpPageName" : "kycPanAadharHelp",
       "credit" : {
         "inventory" : 0,
         "bankBalance" : 0,
@@ -9302,7 +9456,8 @@ ubsApp.quizConfig=
       "scoreTitle" : "{{scoreSideBar}}",
       "playerTitle" : "{{playerTitle}}",
       "quizTitle" : "{{quizTitle}}",
-      "pageName" : "quizQ155"
+      "pageName" : "quizQ155",
+      "videoMapping" : "kyc-pan-aadhar"
     } ]
   }
 }

@@ -41,7 +41,7 @@ ubsApp.translation={
         "hard":"मध्यम",
         "name":"Name",
 
-        "start":"वीक अप",
+        "start":"आठवडा",
         "purchase":"खरेदी",
         "sale":"विक्री",
         "payment":"पैसे भरणे",
@@ -130,14 +130,14 @@ ubsApp.translation={
         "payment":"पैसे भरणे",
         "youCan":"आपण करू शकता",
         "alternateMessage":"किंवा आपण चांगले करू शकता ",
-        "transferTitle":"ट्रान्स्फर",
+        "transferTitle":"हस्तांतरण",
         "payOffTitle":"भरणा",
         "payDebtTitle":"कर्ज भरणा",
         "payTitle":"पैसे भरा ",
         "transferToBankTitle":"बँकेत पैसे ट्रान्स्फर करा",
         "debtAmountTitle":"कर्ज रक्कम",
         "cancelTitle":"कॅन्सेल",
-        "withdrawTitle":"विथड्रॉ",
+        "withdrawTitle":"पैसे काढणे",
 
         "amountToPayTitle":"पैसे भरणे",
         "amountToTransferTitle":"ट्रान्स्फर रक्कम",
@@ -458,7 +458,7 @@ ubsApp.translation={
         "goodPaymentResultPopUpInv":"{0} % इन्वेंटरी तुमच्या खात्यातून जमा केली आहे. ",
         "paymentResultHeader":"पैसे भरणे परिणाम",
 
-        "convertTitle":"कनवर्ट / रुपांतर",
+        "convertTitle":"रुपांतर",
         "quizTitle":"प्रश्नमंजुषा",
 
 
@@ -1380,5 +1380,5 @@ ubsApp.translation={
    
               "LUCK HELP" : "Luck spaces pose lucky or unlucky situations that you face. Lucky situations generally help you<br>earn money or reputation points. Unlucky situations typically cause you to lose money.<br>However, you can avoid losing money if you choose to:<br><br>-   Answer a question (Take Quiz)  – You will be asked a question based on any financial<br>topic. If you can answer it correctly, the fine will be waived.<br><br>-   Use an Advantage card – If you have one or more advantage cards, you can use one of<br>them to waive the question. Advantage cards can be earned by converting reputation<br>points.<br><br>If you click on the ‘Pay’ button, the fine or payment will be deducted from your bank balance.<br><br><b>Payment</b><br><br>If you are unlucky enough to land on the Payment space, you will have to pay the fine! It will be deducted<br>from your bank balance!<br><br><b>Week Up</b><br><br>This is the space you start the game from. Each time you pass this space, it indicates that one<br>week has elapsed. The following things happen when you pass this space:<br><br>i)  The cash that has been collected in the past week needs to be deposited in the bank.<br>You will be shown a screen to do the same<br>ii) If four weeks are up since the first time you purchase inventory on credit, you will be<br>reminded to pay off your debt.<br>iii)    If 12 weeks are up for you, your accounts will be frozen and you will not get a turn until<br>all players finish.<br> iv) You will also get to see a weekly summary that shows you how the week was",
 
-
+              "SALES HELP"  : "<../../Sales_Help.html>"
     }

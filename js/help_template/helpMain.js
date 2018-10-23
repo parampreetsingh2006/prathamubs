@@ -1,7 +1,7 @@
 ubsApp.startHelp=function(pageName){
 
     ubsApp.closeHelp();
-	document.getElementById("helpContent").style.opacity="0.95";
+	//document.getElementById("helpContent").style.opacity="0.95";
 	$('#helpContent').css("height",(screenHeight)+'px')
 	$('#helpContent').css("width",(screenWidth)+'px')
 	helpScenarioOpen=true;
