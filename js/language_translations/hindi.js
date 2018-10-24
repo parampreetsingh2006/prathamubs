@@ -1195,7 +1195,7 @@ ubsApp.translation={
        "QuizQuestion150Option4" : "(b) & ©",
        "QuizQuestion151Option1" : "Bank will recover money in case of default",
        "QuizQuestion151Option2" : "Collateral serves as borrower's guarantee",
-       "QuizQuestion151Option3" : "collateral value should be in comparasion with loan vakue",
+       "QuizQuestion151Option3" : "collateral value should be in comparasion with loan value",
        "QuizQuestion151Option4" : "All of above",
        "QuizQuestion152Option1" : "Reserve Bank of India",
        "QuizQuestion152Option2" : "Rich people",
@@ -1356,6 +1356,11 @@ ubsApp.translation={
         "broom" : "broom",
         "L" : "L",
         "dozens" : "dozens",
+        "salesVideo":"videos/sales_help_hindi.mp4",
+        "purchaseVideo":"videos/purchase_help_hindi.mp4",
+        "instructionVideo":"videos/instructions_hindi.mp4",
+        "introVideo":"videos/intro_hindi.mp4",
+
 
         "PURCHASE HELP" : "The Purchase or Buy screen is used fill your inventory. If your inventory is not at a high level,<br>items will not be available when ordered by customers.<br><br><b>Changing Inventory Level:</b> Use the slider to change the inventory level and see its<br>corresponding value. When you decide what the level should be click on the ‘Confirm’ button.<br><br><b>Paying for Purchased Inventory:</b> You can pay for inventory by three modes.<br>- Cheque – The amount will be deducted from your bank balance.<br>- Cash – The amount will be deducted from Cash<br>- Credit – The amount will be added to your Debt.<br><br>You can pay the amount using multiple modes of payment. Eg. If you are purchasing inventory<br>worth Rs. 20000, you can pay Rs. 10000 by cheque and Rs. 10000 on credit.<br><br>When you have set the inventory level and defined Payment modes, click on the ‘Submit’ button.",
 

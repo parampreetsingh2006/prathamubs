@@ -527,6 +527,7 @@ monopoly.closeLeaderBoard=function(){
 
 monopoly.chooseLanguage=function(){
 
+ $("#backgroundaudio").get(0).play();
 
   var language=$('input[name=languageRadio]:checked').val();
   var flag = false;
@@ -588,9 +589,11 @@ monopoly.chooseLanguage=function(){
     	 monopoly.initializePages();
 
     	 ubsApp.translateScenarios();
-    	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
-    	 monopoly.renderPageforBoard(monopoly.pages.WelcomePage);
     	 ubsApp.closePopup();
+    	 ubsApp.startHelp("introHelp");
+    	 monopoly.pages.WelcomePage[1].src="<img src=\"images/" + languageSelected +"/logo.png\" style=\"height: 39vh;top:40%;margin: 6%;margin-left: 30%;\"> </img>";
+
+
       }
     }
   
@@ -598,11 +601,12 @@ monopoly.chooseLanguage=function(){
 
 monopoly.readInstruction=function(){
 	 
-	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
+/*	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
           "header" : ubsApp.getTranslation("instructionHeader"),
           "headerStyle" : "text-align: center;  color: red;"
-               });
-	  }
+               });*/
+      ubsApp.startHelp("instructionHelp");
+}
 
 monopoly.startGame=function(){
 	

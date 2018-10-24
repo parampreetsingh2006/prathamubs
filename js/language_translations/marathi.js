@@ -1373,6 +1373,11 @@ ubsApp.translation={
               "broom" : "झाडू",
               "L" : "लि.",
               "dozens" : "डझन ",
+              "salesVideo":"videos/sales_help_marathi.mp4",
+              "purchaseVideo":"videos/purchase_help_marathi.mp4",
+              "instructionVideo":"videos/instructions_marathi.mp4",
+              "introVideo":"videos/intro_marathi.mp4",
+
 
               "PURCHASE HELP" : "The Purchase or Buy screen is used fill your inventory. If your inventory is not at a high level,<br>items will not be available when ordered by customers.<br><br><b>Changing Inventory Level:</b> Use the slider to change the inventory level and see its<br>corresponding value. When you decide what the level should be click on the ‘Confirm’ button.<br><br><b>Paying for Purchased Inventory:</b> You can pay for inventory by three modes.<br>- Cheque – The amount will be deducted from your bank balance.<br>- Cash – The amount will be deducted from Cash<br>- Credit – The amount will be added to your Debt.<br><br>You can pay the amount using multiple modes of payment. Eg. If you are purchasing inventory<br>worth Rs. 20000, you can pay Rs. 10000 by cheque and Rs. 10000 on credit.<br><br>When you have set the inventory level and defined Payment modes, click on the ‘Submit’ button.",
 
