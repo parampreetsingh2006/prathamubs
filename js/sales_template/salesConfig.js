@@ -53,6 +53,7 @@ ubsApp.salesConfig={
                    				"Tools": "{{Tools}}",
                    				"tooltipMessage": "{{This item is not available in your Inventory}}",
                    				"tempTotal": "",
+                                          // "src" : "{{SALES HELP}}",
                    				"order": [
                    					{
                    						"no": 1,
