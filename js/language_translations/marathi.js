@@ -1374,6 +1374,7 @@ ubsApp.translation={
               "L" : "लि.",
               "dozens" : "डझन ",
               "instructionVideo":"videos/instructions_marathi.mp4",
+              "introVideo":"videos/intro_marathi.mp4",
 
 
     }

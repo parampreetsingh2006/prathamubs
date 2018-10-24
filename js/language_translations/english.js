@@ -1421,5 +1421,6 @@ ubsApp.translation={
         "salesVideo":"videos/sales.mp4",
         "purchaseVideo":"videos/purchase.mp4",
         "instructionVideo":"videos/instructions_english.mp4",
+        "introVideo":"videos/intro_english.mp4",
     }
 
