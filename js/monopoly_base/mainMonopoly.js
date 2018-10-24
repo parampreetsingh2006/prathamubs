@@ -527,6 +527,7 @@ monopoly.closeLeaderBoard=function(){
 
 monopoly.chooseLanguage=function(){
 
+ $("#backgroundaudio").get(0).play();
 
   var language=$('input[name=languageRadio]:checked').val();
   var flag = false;
