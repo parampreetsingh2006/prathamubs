@@ -1373,6 +1373,8 @@ ubsApp.translation={
               "broom" : "झाडू",
               "L" : "लि.",
               "dozens" : "डझन ",
+              "salesVideo":"videos/sales_help_marathi.mp4",
+              "purchaseVideo":"videos/purchase_help_marathi.mp4",
               "instructionVideo":"videos/instructions_marathi.mp4",
               "introVideo":"videos/intro_marathi.mp4",
 

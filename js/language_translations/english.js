@@ -1418,8 +1418,8 @@ ubsApp.translation={
         "bankingVideo":"videos/banking.mp4",
         "atm":"videos/atm.mp4",
         "deposits":"videos/deposits.mp4",
-        "salesVideo":"videos/sales.mp4",
-        "purchaseVideo":"videos/purchase.mp4",
+        "salesVideo":"videos/sales_help_english.mp4",
+        "purchaseVideo":"videos/purchase_help_english.mp4",
         "instructionVideo":"videos/instructions_english.mp4",
         "introVideo":"videos/intro_english.mp4",
     }
