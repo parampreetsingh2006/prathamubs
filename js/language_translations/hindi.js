@@ -1356,5 +1356,7 @@ ubsApp.translation={
         "broom" : "broom",
         "L" : "L",
         "dozens" : "dozens",
+        "instructionVideo":"videos/instructions_hindi.mp4",
+
 
 }

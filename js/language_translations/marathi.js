@@ -1373,5 +1373,7 @@ ubsApp.translation={
               "broom" : "झाडू",
               "L" : "लि.",
               "dozens" : "डझन ",
+              "instructionVideo":"videos/instructions_marathi.mp4",
+
 
     }
