@@ -202,8 +202,8 @@ ubsApp.helpConfig={
                 "templateId":4,
                 "templateType":"static",
                 "id":"helpImage",
-                "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"<image src=\"../../images/luck_screen\"></image>"
+                "style":"width: 50%;margin: auto;;background-repeat: no-repeat;color:white;",
+                "src":"<image src=\"images/luck_screen.jpg\"></image>"
             },
             {
                 "templateId":5,
