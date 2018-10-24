@@ -2,18 +2,18 @@ ubsApp.helpConfig={
     "salesHelp":{
         "templates":[
             {
-                "templateId":1,
+                "templateId":3,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"SALES HELP!!!"
+                "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
+                "src":"<div style=\"width:95%;height:95%\"><video width=\"100%\" height=\"100%\" controls><source src={{salesVideo}} type=\"video/mp4\"></video> <div>"
             },
             {
-                "templateId":2,
+                "templateId":4,
                 "templateType":"static",
-                "id":"convertToAdvantage",
+                "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp()\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
     ]
     },
@@ -245,22 +245,40 @@ ubsApp.helpConfig={
             }
     ]
     },
-        "purchaseHelp":{
+    "purchaseHelp":{
             "templates":[
                 {
-                    "templateId":11,
-                    "templateType":"static",
-                    "id":"helpContent",
-                    "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                    "src":"PURCHASE HELP!!!"
-                },
-                {
-                    "templateId":12,
-                    "templateType":"static",
-                    "id":"purchaseClose",
-                    "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                    "src":"<button onclick=\"ubsApp.closeHelp()\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
-                }
+                "templateId":3,
+                "templateType":"static",
+                "id":"helpContent",
+                "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
+                "src":"<div style=\"width:95%;height:95%\"><video width=\"100%\" height=\"100%\" controls><source src={{purchaseVideo}} type=\"video/mp4\"></video> <div>"
+            },
+            {
+                "templateId":4,
+                "templateType":"static",
+                "id":"quizClose",
+                "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+            }
         ]
-        },
+    },
+    "instructionHelp":{
+        "templates":[
+            {
+                "templateId":3,
+                "templateType":"static",
+                "id":"helpContent",
+                "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
+                "src":"<div style=\"width:95%;height:95%\"><video width=\"100%\" height=\"100%\" controls><source src={{instructionVideo}} type=\"video/mp4\"></video> <div>"
+            },
+            {
+                "templateId":4,
+                "templateType":"static",
+                "id":"quizClose",
+                "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+            }
+        ]
+    },
 }

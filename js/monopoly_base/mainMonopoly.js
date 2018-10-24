@@ -598,11 +598,12 @@ monopoly.chooseLanguage=function(){
 
 monopoly.readInstruction=function(){
 	 
-	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
+/*	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
           "header" : ubsApp.getTranslation("instructionHeader"),
           "headerStyle" : "text-align: center;  color: red;"
-               });
-	  }
+               });*/
+      ubsApp.startHelp("instructionHelp");
+}
 
 monopoly.startGame=function(){
 	
