@@ -5,8 +5,13 @@ ubsApp.helpConfig={
                 "templateId":3,
                 "templateType":"static",
                 "id":"helpContent",
+
+                //"style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
+                //"src":"{{SALES HELP}}"
+
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
                 "src":"<div style=\"width:95%;height:95%\"><video width=\"100%\" height=\"100%\" controls><source src={{salesVideo}} type=\"video/mp4\"></video> <div>"
+
             },
             {
                 "templateId":4,
@@ -194,11 +199,18 @@ ubsApp.helpConfig={
     "luckHelp":{
         "templates":[
             {
+                "templateId":4,
+                "templateType":"static",
+                "id":"helpImage",
+                "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
+                "src":"<image src=\"../../images/luck_screen\"></image>"
+            },
+            {
                 "templateId":5,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"Luck HELP!!!"
+                "style":"position:absolute;top:47.5%;left:5%;background-repeat: no-repeat;color:white;",
+                "src":"{{LUCK HELP}}"
             },
             {
                 "templateId":6,
@@ -230,11 +242,18 @@ ubsApp.helpConfig={
     "decisionHelp":{
         "templates":[
             {
+                "templateId":2,
+                "templateType":"static",
+                "id":"helpImage",
+                "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
+                "src":"<image src=\"../../images/decision_screen\"></image>"
+            },
+            {
                 "templateId":3,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"DECISION HELP!!!"
+                "style":"position:absolute;top:47.5%;left:5%;background-repeat: no-repeat;color:white;",
+                "src":"{{DECISION HELP}}"
             },
             {
                 "templateId":4,
@@ -284,11 +303,13 @@ ubsApp.helpConfig={
      "introHelp":{
             "templates":[
                 {
+
                     "templateId":3,
                     "templateType":"static",
                     "id":"helpContent",
                     "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
                     "src":"<div style=\"width:95%;height:95%\"><video width=\"100%\" height=\"100%\" controls><source src={{introVideo}} type=\"video/mp4\"></video> <div>"
+
                 },
                 {
                     "templateId":4,
