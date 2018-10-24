@@ -1195,7 +1195,7 @@ ubsApp.translation={
        "QuizQuestion150Option4" : "(b) & ©",
        "QuizQuestion151Option1" : "Bank will recover money in case of default",
        "QuizQuestion151Option2" : "Collateral serves as borrower's guarantee",
-       "QuizQuestion151Option3" : "collateral value should be in comparasion with loan vakue",
+       "QuizQuestion151Option3" : "collateral value should be in comparasion with loan value",
        "QuizQuestion151Option4" : "All of above",
        "QuizQuestion152Option1" : "Reserve Bank of India",
        "QuizQuestion152Option2" : "Rich people",
