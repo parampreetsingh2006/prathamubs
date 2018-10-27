@@ -55,7 +55,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -73,7 +73,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -91,7 +91,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -109,7 +109,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -127,7 +127,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -145,7 +145,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -156,7 +156,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -167,7 +167,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -178,7 +178,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -189,7 +189,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -200,7 +200,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
@@ -211,7 +211,7 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"quizClose",
                 "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup("+true+");\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
             }
         ]
     },
