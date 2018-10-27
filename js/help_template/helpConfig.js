@@ -22,6 +22,25 @@ ubsApp.helpConfig={
             }
     ]
     },
+     "salesAnswerHelp":{
+            "templates":[
+
+                {
+                    "templateId":4,
+                    "templateType":"static",
+                    "id":"salesHelpAnswer",
+                    "style":"position:absolute;background-repeat: no-repeat;",
+                    "src":"{{salesAnswerHelp}}"
+                },
+                  {
+                    "templateId":4,
+                    "templateType":"static",
+                    "id":"salesHelpAnswerClose",
+                    "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
+                    "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup();\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                  }
+        ]
+        },
     "incomeTaxHelp":{
         "templates":[
             {
