@@ -3,7 +3,7 @@ ubsApp.translation={
         "question2":"Looks like Same Customer is back.he wants to return few items and purchase soem new.<br>He wants to return<br>1kg Rice - ₹60<br>1 kg of Dal- Rs 90<br><br> He wants to purchase <br>0.5 litre Oil<br> 6 chips packet<br> 1 ltr oil/1 chip packet cost Rs 90/10. <br> Can you tell how much money should Sardarji return to customer?",
         "question3":"Looks like Same Customer is back.He wants to return few items and purchase some new.<br>He wants to return<br>1kg Onion - ₹19<br>1 kg of Potato- Rs 34<br><br> He wants to purchase <br>1.5kg Tomato<br> 1kg Cabbage<br>Per kg cost of tomato/cabbage is 26/24 rupees<br> Can you tell how much money should you pay?",
         "question4":"Looks like a Customer is back.he wants to return few items.<br>He wants to return<br>1kg Rice - ₹60<br>1 kg of Dal - Rs 90<br><br> <br> Can you tell how much money will you return to customer?",
-        "pratham_title_sales":"SALES",
+        "pratham_title_sales":"SELL",
         "pratham_title_surprise":"Surprise",
         "pratham_title_luck":"LUCK",
         "pratham_title_purchase":"BUY",
@@ -1328,8 +1328,6 @@ ubsApp.translation={
 
 
 
-       "sale":"SALES",
-
         "itemTable":{
             "1":"Wheat",
             "2":"Rice",
@@ -1424,7 +1422,7 @@ ubsApp.translation={
         "instructionVideo":"videos/instructions_english.mp4",
         "introVideo":"videos/intro_english.mp4",
         "salesAnswerHelp" : "<embed src=\\\"pdf/SalesHelp.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
-        "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpEnglish.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",   
-        "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpEnglish.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",   
+        "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpEnglish.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"13\\\">",
+        "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpEnglish.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
     }
 

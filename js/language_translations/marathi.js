@@ -1379,8 +1379,8 @@ ubsApp.translation={
               "instructionVideo":"videos/instructions_marathi.mp4",
               "introVideo":"videos/intro_marathi.mp4",
               "salesAnswerHelp" : "<embed src=\\\"pdf/SalesHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
-              "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
-              "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
+              "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"13\\\">",
+              "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
     
               
     }

@@ -147,7 +147,7 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
                "buttons":[
                       {
                            'name' : ubsApp.getTranslation("yes"),
-                           'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
+                           'action': "ubsApp.closePopup(true);ubsApp.startHelp(\'salesAnswerHelp\');",
                      },
 
                 	{
