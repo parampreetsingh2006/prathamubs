@@ -217,18 +217,12 @@ ubsApp.helpConfig={
     },
     "luckHelp":{
         "templates":[
-            {
-                "templateId":4,
-                "templateType":"static",
-                "id":"helpImage",
-                "style":"width: 50%;margin: auto;;background-repeat: no-repeat;color:white;",
-                "src":"<image src=\"images/luck_screen.jpg\"></image>"
-            },
+            
             {
                 "templateId":5,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:5%;background-repeat: no-repeat;color:white;",
+                "style":"position:absolute;background-repeat: no-repeat;color:white;",
                 "src":"{{LUCK HELP}}"
             },
             {
@@ -260,18 +254,18 @@ ubsApp.helpConfig={
     },
     "decisionHelp":{
         "templates":[
-            {
-                "templateId":2,
-                "templateType":"static",
-                "id":"helpImage",
-                "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
-                "src":"<image src=\"../../images/decision_screen\"></image>"
-            },
+            // {
+                // "templateId":2,
+                // "templateType":"static",
+                // "id":"helpImage",
+                // "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
+                // "src":"<image src=\"../../images/decision_screen\"></image>"
+            // },
             {
                 "templateId":3,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;top:47.5%;left:5%;background-repeat: no-repeat;color:white;",
+                "style":"position:absolute;background-repeat: no-repeat;color:white;",
                 "src":"{{DECISION HELP}}"
             },
             {

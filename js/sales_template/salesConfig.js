@@ -203,8 +203,8 @@ ubsApp.salesConfig={
                    						"no": 19,
                    						"itemId": 19,
                    						"item": "Bread",
-                   						"amount": "{{packet}}",
-                   						"rate": " 15/{{packet}}",
+                   						"amount": "{{Packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2425,7 +2425,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 1 {{Packet}}",
                    						"quantity": 1,
-                   						"rate": " 15/{{packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -2749,7 +2749,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 1 {{Packet}}",
                    						"quantity": 1,
-                   						"rate": " 15/{{packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -3980,9 +3980,9 @@ ubsApp.salesConfig={
                    						"no": 3,
                    						"itemId": 19,
                    						"item": "Bread",
-                   						"amount": " 2 {{packets}}",
+                   						"amount": " 2 {{Packets}}",
                    						"quantity": 2,
-                   						"rate": " 15/{{packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -4171,7 +4171,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 3 {{Packet}}",
                    						"quantity": 3,
-                   						"rate": " 15/{{packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false
                    					},
                    					{
@@ -4304,9 +4304,9 @@ ubsApp.salesConfig={
                    						"no": 3,
                    						"itemId": 19,
                    						"item": "Bread",
-                   						"amount": " 2 {{packets}}",
+                   						"amount": " 2 {{Packets}}",
                    						"quantity": 2,
-                   						"rate": " 15/{{packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false
                    					}
                    				]
@@ -5184,7 +5184,7 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 9,
                    						"item": "Eggs",
-                   						"amount": " 3 {{doz}}",
+                   						"amount": " 3 {{dozens}}",
                    						"quantity": 3,
                    						"rate": " 5.5/{{egg}}",
                    						"exclude": false
@@ -5641,7 +5641,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 5 {{Packets}}",
                    						"quantity": 5,
-                   						"rate": " 15/{{packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 2,
@@ -6003,7 +6003,7 @@ ubsApp.salesConfig={
                    						"item": "Bread",
                    						"amount": " 5 {{Packets}}",
                    						"quantity": 5,
-                   						"rate": " 15/{{packet}}",
+                   						"rate": " 15/{{Packet}}",
                    						"exclude": false,
                    						"discountOnItem" : {
                                             "type" : 1,
