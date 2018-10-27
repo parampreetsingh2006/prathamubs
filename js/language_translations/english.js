@@ -1433,6 +1433,7 @@ ubsApp.translation={
         "purchaseVideo":"videos/purchase_help_english.mp4",
         "instructionVideo":"videos/instructions_english.mp4",
         "introVideo":"videos/intro_english.mp4",
+        "salesAnswerHelp" : "<embed src=\\\"pdf/SalesHelp.pdf#toolbar=0&navpanes=0&scrollbar=0\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">"
     }
 
 

@@ -580,6 +580,9 @@ monopoly.chooseLanguage=function(){
       }
      else
      {
+        ubsApp.translation["screenHeight"] = screenHeight;
+        ubsApp.translation["screenWidth"] = screenWidth;
+
     	 //reinitialze the page
    	    monopoly.intitializeTemplates();
     	 monopoly.initializeScenarios();
