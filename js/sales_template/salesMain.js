@@ -8,6 +8,7 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 
     templateConfig.salesConfig = ubsApp.getTranslation("sale");
     templateConfig.sale = ubsApp.getTranslation("sale");
+    templateConfig.Discount = ubsApp.getTranslation("Discount");
     templateConfig.PLAYER = ubsApp.getTranslation("PLAYER");
 
 
