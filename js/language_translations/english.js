@@ -677,7 +677,7 @@ ubsApp.translation={
       "QuizQuestion135" : "What is the full form of KYC in banks",
       "QuizQuestion136" : "When someone puts money into an account with a bank, this is called",
       "QuizQuestion137" : "When someone takes money from an account with a bank, this is called",
-      "QuizQuestion138" : "Flaoting rate and Fixed rate are the examples of",
+      "QuizQuestion138" : "Floating rate and Fixed rate are the examples of",
       "QuizQuestion139" : "Compund interest can be applied on",
       "QuizQuestion140" : "Simple interest can be applied on",
       "QuizQuestion141" : "Which of the following is true for a Bank loan",
@@ -1424,5 +1424,6 @@ ubsApp.translation={
         "salesAnswerHelp" : "<embed src=\\\"pdf/SalesHelp.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
         "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpEnglish.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"13\\\">",
         "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpEnglish.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
+        "decisionSameMessaage":"Your reputation points and bank balance remain as is",
     }
 

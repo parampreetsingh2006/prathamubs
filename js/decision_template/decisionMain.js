@@ -82,6 +82,9 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, startTime, questio
 				decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionLoseRptPts"],[Math.abs(reputationPts)]);
 				ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, reputationPts,reputationPts, 1, startTime, "decisionRptPtsLoss");
 			}
+			else {
+				decisionResultMessage = ubsApp.translation["decisionSameMessaage"];
+			}
 		}
 		 ubsApp.openResultPopup({
         	"message" : decisionResultMessage,
