@@ -773,7 +773,7 @@ ubsApp.nextMove = function(){
                                           "showBorder" : false,
                                           "backgroundColor" :"transparent",
                                        });
-                       setTimeout(function(){ubsApp.closePopup();}, 2000);
+                       setTimeout(function(){ubsApp.closePopup(true);}, 2000);
          }
 
 			playerChance+=1;
