@@ -60,6 +60,13 @@ ubsApp.findQuizPage = function(category){
             filteredObjs.push(quizConfig[quizConfigTemplate]);
         }
     }
+    if(filteredObjs.length == 0){
+        for(var quizConfigTemplate in quizConfig){
+            if(quizConfig[quizConfigTemplate].templates[0].category == "general"){
+                filteredObjs.push(quizConfig[quizConfigTemplate]);
+            }
+        } 
+    }
 
     var quizRandomNumber = Math.floor(Math.random()*filteredObjs.length);
     return filteredObjs[quizRandomNumber].templates[0];
