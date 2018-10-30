@@ -506,7 +506,7 @@ ubsApp.decisionConfig = {
 						"credit":{
 							"inventory":0,
 							"bankBalance":0,
-							"reputationPoints":10,
+							"reputationPoints":-10,
 							"cash":0,
 						},
 					},
@@ -517,7 +517,7 @@ ubsApp.decisionConfig = {
 						"credit":{
 							"inventory":0,
 							"bankBalance":500,
-							"reputationPoints":-10,
+							"reputationPoints":10,
 							"cash":0,
 						},
 					},

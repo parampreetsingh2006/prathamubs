@@ -3699,6 +3699,11 @@ ubsApp.quizConfig =
         "optionValue" : "{{QuizQuestion60Option3}}",
         "id" : 3,
         "priority" : 3
+      },{
+        "optionName" : "q60",
+        "optionValue" : "{{QuizQuestion60Option4}}",
+        "id" : 3,
+        "priority" : 4
       } ],
       "onClickPage" : {
         "nextPage" : "",
@@ -7128,7 +7133,7 @@ ubsApp.quizConfig =
         "reputationPoints" : 1.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "4",
       "optionName" : "q118",
       "options" : [ {
         "optionName" : "q118",
