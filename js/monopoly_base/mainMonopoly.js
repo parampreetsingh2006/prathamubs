@@ -27,7 +27,7 @@ var initialPlayerCash=1000;
 var initialPlayerBankBalance=100000;
 var initialInventoryScore=60;
 var initialReputation=10;
-var harnamSinghProfit=11000;
+var harnamSinghProfit=8000;
 var ubsBoardTemplate = monopoly.ubsBoardTemplate;
 var ubsSideScoreBoardTemplate = monopoly.sideScoreBoardTemplate;
 var ubsEndGameTemplate = monopoly.ubsEndGameTemplate;
@@ -773,7 +773,7 @@ ubsApp.nextMove = function(){
                                           "showBorder" : false,
                                           "backgroundColor" :"transparent",
                                        });
-                       setTimeout(function(){ubsApp.closePopup();}, 2000);
+                       setTimeout(function(){ubsApp.closePopup(true);}, 2000);
          }
 
 			playerChance+=1;
