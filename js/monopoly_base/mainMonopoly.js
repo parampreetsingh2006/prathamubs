@@ -712,6 +712,8 @@ ubsApp.confirmEndGame=function(){
         let weeks = player.getWeeks() - 1;
         if(weeks > 12) {
             weeks = 12;
+        } else if(weeks < 1) {
+            weeks = 1;
         }
   		var harnamProjectedScore=weeks*harnamSinghProfit;
 
