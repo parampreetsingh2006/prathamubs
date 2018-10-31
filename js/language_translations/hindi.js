@@ -1365,5 +1365,18 @@ ubsApp.translation={
         "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpHindi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"13\\\">",
         "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
         "decisionSameMessaage":"Your reputation points and bank balance remain as is",
+        
+        "incomeTaxVideo":"videos/income_tax_hindi.mp4",
+        "propertyTaxVideo":"videos/property_tax_hindi.mp4",
+        "insuranceVideo":"videos/insurance_hindi.mp4",
+        "bankingVideo":"videos/banking_hindi.mp4",
+        "atm":"videos/atm_hindi.mp4",
+        "deposits":"videos/deposits_hindi.mp4",
+        "kycPanAadharVideo":"videos/kycPanAadhar.mp4",
+        "gstVideo":"videos/gst_hindi.mp4",
+        "loansVideo":"videos/loans_hindi.mp4",
+        "mobileBankingVideo":"videos/mobileBanking_hindi.mp4",
+        "quizGeneralHelp":"<embed src=\\\"pdf/GeneralHelp.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
+
 
 }

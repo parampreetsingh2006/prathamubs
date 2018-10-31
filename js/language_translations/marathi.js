@@ -1382,5 +1382,18 @@ ubsApp.translation={
               "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"13\\\">",
               "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
               "decisionSameMessaage":"Your reputation points and bank balance remain as is",
+
+              "incomeTaxVideo":"videos/income_tax_marathi.mp4",
+              "propertyTaxVideo":"videos/property_tax_marathi.mp4",
+              "insuranceVideo":"videos/insurance_marathi.mp4",
+              "bankingVideo":"videos/banking_marathi.mp4",
+              "atm":"videos/atm_marathi.mp4",
+              "deposits":"videos/deposits_marathi.mp4",
+              "kycPanAadharVideo":"videos/kycPanAadhar.mp4",
+              "gstVideo":"videos/gst_marathi.mp4",
+              "loansVideo":"videos/loans_marathi.mp4",
+              "mobileBankingVideo":"videos/mobileBanking_marathi.mp4",
+              "quizGeneralHelp":"<embed src=\\\"pdf/GeneralHelp.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
+
               
     }
