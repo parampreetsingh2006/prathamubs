@@ -47,7 +47,7 @@ var difficultyLevel=monopoly.difficultyLevel;
 var flag2=monopoly.flag2;
 var computerDifficulty=monopoly.computerDifficulty;
 var scenario =  monopoly.scenario;
-ubsApp.maxNumOfWeeks = 12;
+ubsApp.maxNumOfWeeks = 1;
 var renderTimeOutMiliSec = 6000;
 ubsApp.inventoryPerPercentValue = 1000;
 ubsApp.endGameConfig = {};
@@ -240,7 +240,7 @@ monopoly.myMove = function(count, pId, currentPos) {
         let message = userArray[pId].getplayerName() + " "  + ubsApp.getTranslation("gameFinishedForAUser");
         ubsApp.closeCurrentScenario();
         monopoly.noPlayersPlaying--;
-        if(monopoly.noPlayersPlaying == 0) {
+        if(monopoly.noPlayersPlaying <= 0) {
             ubsApp.endGame();
         } else {
             ubsApp.openCurrentPlayerSummary({
@@ -675,8 +675,8 @@ ubsApp.confirmEndGame=function(){
  // turning off all the reminders
   userArray[playerChance].setPaymentReminderOpen(false);
   userArray[playerChance].setTransferReminderOpened(true);
-  userArray[pId].setOpenWeekSummary(false);
-  
+  userArray[playerChance].setOpenWeekSummary(false);
+
   	var arr=[];
 
     let playersConfig =[];
@@ -709,7 +709,7 @@ ubsApp.confirmEndGame=function(){
         playerConfig.Credit = ubsApp.getTranslation("DEBT");
         playerConfig.Cash = ubsApp.getTranslation("cashTitle");
 
-        let weeks = player.getWeeks();
+        let weeks = player.getWeeks() - 1;
         if(weeks > 12) {
             weeks = 12;
         }
