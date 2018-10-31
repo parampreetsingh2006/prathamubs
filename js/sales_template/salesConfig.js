@@ -3395,7 +3395,7 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 2,
                    						"item": "Rice",
-                   						"amount": " 1 and a 1/2 {{kg}}",
+                   						"amount": " {{OneAndHalf}} {{kg}}",
                    						"quantity": 1.5,
                    						"rate": " 110/{{kg}}",
                    						"exclude": false
@@ -3530,8 +3530,8 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 5,
                    						"item": "Milk",
-                   						"amount": " 2 and a half {{L}}",
-                   						"quantity": 2,
+                   						"amount": " {{2AndHalf}} {{litre}}",
+                   						"quantity": 2.5,
                    						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
@@ -5701,7 +5701,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
@@ -5759,7 +5759,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
@@ -5849,7 +5849,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
@@ -5907,7 +5907,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
@@ -5965,7 +5965,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
@@ -6050,7 +6050,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
@@ -6121,7 +6121,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},
@@ -6201,7 +6201,7 @@ ubsApp.salesConfig={
                    			}
                    		],
                    		"repeatforuser": false,
-                   		"category": null,
+                   		"category": "salesDifficult",
                    		"questionTime": 3000,
                    		"repeatforall": true
                    	},

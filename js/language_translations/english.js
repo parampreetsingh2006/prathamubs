@@ -1426,5 +1426,7 @@ ubsApp.translation={
         "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpEnglish.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
         "decisionSameMessaage":"Your reputation points and bank balance remain as is",
         "Discount" : "Discount",
+        "2AndHalf" : "2 and half",
+         "OneAndHalf" : "1 and 1/2"
     }
 

@@ -1366,4 +1366,7 @@ ubsApp.translation={
         "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
         "decisionSameMessaage":"Your reputation points and bank balance remain as is",
         "Discount":"छूट",
+        "2AndHalf" : "ढाई(2.5)",
+        "OneAndHalf" : "डैड(1.5)",
+
 }
