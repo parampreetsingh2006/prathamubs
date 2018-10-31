@@ -742,7 +742,7 @@ ubsApp.confirmEndGame=function(){
 
 
   		if(arr[highestScoringPlayer]) {
-  		  winnerName=userArray[i].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
+  		  winnerName=userArray[highestScoringPlayer].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
 
   		} else {
   		     winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}" , userArray[highestScoringPlayer].getplayerName()) +  " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
