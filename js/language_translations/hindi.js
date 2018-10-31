@@ -96,7 +96,7 @@ ubsApp.translation={
     //Main Screen
     "Card Wallet":"बटुआ",
     "Roll it":"पासा घुमाओ",
-    "Purchase":"खरीद फरोख्त",
+    "Purchase":"खरीद",
     "Take Exam":"परीक्षा दें",
     "Rs": "₹",
 
