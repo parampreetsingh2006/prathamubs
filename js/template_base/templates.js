@@ -368,7 +368,7 @@ ubsApp.leaderBoardTemplate=
 '                       {{/each}}'+
 '                     {{#if discount}}'+
 '                     <tr>'+
-'                       <td colspan="4" style="color:#009933;vertical-align:middle;"><i> Discount: &nbsp;&nbsp;{{discount}}</i></td>'+
+'                       <td colspan="4" style="color:#009933;vertical-align:middle;"><i> {{Discount}}: &nbsp;&nbsp;{{discount}}</i></td>'+
 '                       <td ><input id = "discount" type="number" name="amt" class="amount" oninput="ubsApp.calculateBill()" ></td>  '+
 '                     </tr>'+
 '                     {{/if}}'+

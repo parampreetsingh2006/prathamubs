@@ -96,7 +96,7 @@ ubsApp.translation={
     //Main Screen
     "Card Wallet":"बटुआ",
     "Roll it":"पासा घुमाओ",
-    "Purchase":"खरीद फरोख्त",
+    "Purchase":"खरीद",
     "Take Exam":"परीक्षा दें",
     "Rs": "₹",
 
@@ -1364,8 +1364,7 @@ ubsApp.translation={
         "salesAnswerHelp" : "<embed src=\\\"pdf/SalesHelpHindi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
         "DECISION HELP" : "<embed src=\\\"pdf/DecisionHelpHindi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"13\\\">",
         "LUCK HELP" : "<embed src=\\\"pdf/LuckHelpMarathi.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"14\\\">",
-        "decisionSameMessaage":"Your reputation points and bank balance remain as is",
-        
+        "decisionSameMessaage":"आपकी प्रतिष्ठा अंक और बैंक शेष राशि उतनी ही बनी हुई है",
         "incomeTaxVideo":"videos/income_tax_hindi.mp4",
         "propertyTaxVideo":"videos/property_tax_hindi.mp4",
         "insuranceVideo":"videos/insurance_hindi.mp4",
@@ -1377,6 +1376,8 @@ ubsApp.translation={
         "loansVideo":"videos/loans_hindi.mp4",
         "mobileBankingVideo":"videos/mobileBanking_hindi.mp4",
         "quizGeneralHelp":"<embed src=\\\"pdf/GeneralHelp.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
-
+        "Discount":"छूट",
+        "2AndHalf" : "ढाई(2.5)",
+        "OneAndHalf" : "डैड(1.5)",
 
 }
