@@ -527,8 +527,6 @@ monopoly.closeLeaderBoard=function(){
 
 monopoly.chooseLanguage=function(){
 
- $("#backgroundaudio").get(0).play();
-
   var language=$('input[name=languageRadio]:checked').val();
   var flag = false;
   if(language == null){
@@ -673,6 +671,12 @@ ubsApp.confirmEndGame=function(){
 }
 
  ubsApp.endGame=function(){
+
+ // turning off all the reminders
+  userArray[playerChance].setPaymentReminderOpen(false);
+  userArray[playerChance].setTransferReminderOpened(true);
+  userArray[pId].setOpenWeekSummary(false);
+  
   	var arr=[];
 
     let playersConfig =[];

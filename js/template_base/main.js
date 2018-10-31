@@ -44,7 +44,6 @@ let postScore=false;
 ubsApp.popupConfig = {};
 
 $(document).ready(function(){
-    $("#backgroundaudio").get(0).play();
 	ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
 	

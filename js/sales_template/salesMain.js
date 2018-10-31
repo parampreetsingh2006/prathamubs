@@ -98,13 +98,13 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 		userArray[playerChance].setplayerScore(c+cashIncreased);
 
-    let reputationPointIncrease = ubsApp.getReputationPointsIncreasedInSales(time, totalTime, ubsApp.currentScenarioCategory);
+            let reputationPointIncrease = ubsApp.getReputationPointsIncreasedInSales(time, totalTime, ubsApp.currentScenarioCategory);
 
 		userArray[playerChance].setReputationPts(r + reputationPointIncrease);
 		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'rightAnswer');
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,reputationPointIncrease, 0, ubsApp.currentScenarioCategory, time,"salesReputationPointIncrease");
+        ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,reputationPointIncrease, 0, ubsApp.currentScenarioCategory, time,"salesReputationPointIncrease");
 		ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,cashIncreased, 0, ubsApp.currentScenarioCategory, time,"salesCashIncrease");
-    let message = ubsApp.getTranslation("salesCorrectAnswer");
+        let message = ubsApp.getTranslation("salesCorrectAnswer");
 		if(reputationPointIncrease > 0) {
 		    message += "<br>" + ubsApp.getTranslation("salesCorrectRptpt1").replace("{{reputationPoints}}",reputationPointIncrease).replace("{{time}}",time);
 		}
