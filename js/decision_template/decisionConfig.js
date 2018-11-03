@@ -811,7 +811,7 @@ ubsApp.decisionConfig = {
 					},
 					{
 						"optionName":"q16", 
-						"optionValue": "{{decisionQ16O1}}",
+						"optionValue": "{{decisionQ16O2}}",
 						"id":2,
 						"credit":{
 							"inventory":0,
