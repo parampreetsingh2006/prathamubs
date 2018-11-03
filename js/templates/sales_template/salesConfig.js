@@ -5943,7 +5943,7 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 28,
                    						"item": "NuttyCocoa",
-                   						"amount": " 3 {{Jars}}",
+                   						"amount": " 3 {{Jar}}",
                    						"quantity": 3,
                    						"rate": " 320/{{Jar}}",
                    						"exclude": false,

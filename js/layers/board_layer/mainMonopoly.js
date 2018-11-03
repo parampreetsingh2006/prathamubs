@@ -682,7 +682,7 @@ ubsApp.confirmEndGame=function(){
     let playersConfig =[];
     let atleastOne=false;
     let highestScoringPlayer = -1;
-    let highestScore = -10000;
+    let highestScore = -1000000;
 
   	for(var i=0;i<numplayers;i++){
   	    let playerConfig = {};

@@ -321,7 +321,7 @@ ubsApp.leaderBoardTemplate=
 '    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
 '       <div id="order">'+
 '           <div id="orderList">'+
-'           <div style="background-color: white;height: 100%;padding: 2px;">'+
+'           <div style="background-color: white;height: 100%;padding: 2px;overflow: auto;">'+
 '           <center><b>{{Order}}</b></center>'+
 '               <table class="table table-sm">'+
 '                   <tbody>'+
