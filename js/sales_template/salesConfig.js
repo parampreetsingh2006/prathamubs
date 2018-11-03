@@ -99,7 +99,7 @@ ubsApp.salesConfig={
                    						"no": 6,
                    						"itemId": 5,
                    						"item": "Milk",
-                   						"amount": " {{Litre}}",
+                   						"amount": " {{litre}}",
                    						"rate": " 45/{{litre}}",
                    						"exclude": false
                    					},
@@ -115,7 +115,7 @@ ubsApp.salesConfig={
                    						"no": 8,
                    						"itemId": 6,
                    						"item": "Oil",
-                   						"amount": " {{Litre}}",
+                   						"amount": " {{litre}}",
                    						"rate": " 125/{{litre}}",
                    						"exclude": false
                    					},
@@ -2864,7 +2864,7 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 2,
                    						"item": "Rice",
-                   						"amount": " 1.5 {{Kgs}}",
+                   						"amount": " 1.5 {{Kg}}",
                    						"quantity": 1.5,
                    						"rate": " 110/{{kg}}",
                    						"exclude": false
@@ -2927,7 +2927,7 @@ ubsApp.salesConfig={
                    						"no": 2,
                    						"itemId": 10,
                    						"item": "Biscuit",
-                   						"amount": " 1 {{packet}}",
+                   						"amount": " 1 {{Packet}}",
                    						"quantity": 1,
                    						"rate": " 25/{{Packet}}",
                    						"exclude": false
@@ -5885,7 +5885,7 @@ ubsApp.salesConfig={
                    						"no": 1,
                    						"itemId": 27,
                    						"item": "Sabudana",
-                   						"amount": " 3.5 {{Kgs}}",
+                   						"amount": " 3.5 {{Kg}}",
                    						"quantity": 3.5,
                    						"rate": " 120/{{kg}}",
                    						"exclude": false
