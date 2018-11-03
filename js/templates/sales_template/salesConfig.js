@@ -6284,7 +6284,7 @@ ubsApp.salesConfig={
                    				"Amount": "{{Amount}}",
                    				"Tools": "{{Tools}}",
                    				"Quantity": "{{Quantity}}",
-                   				"discount": "{{Sales95Discount}}",
+                   				"discount": "{{Sales95DiscountText}}",
                    				"templateId": 4,
                    				"profilePicture": "images/Customer/customer5",
                    				"receiptHeading": "{{receiptHeading}}",
