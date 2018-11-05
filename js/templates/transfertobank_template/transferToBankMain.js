@@ -16,7 +16,9 @@ ubsApp.getTransferTemplate=function(templateConfig,tempVar){
 		object.hindi=true;
 	}
 	templateConfig=$.extend(templateConfig,object);
+	templateConfig.openNextMove = ubsApp.openNextMoveAfterTransfer;
 	tempVar.html+=ubsPayOffTemplate(templateConfig);
+	ubsApp.openNextMoveAfterTransfer = false;
 }
 
 ubsApp.transferToBank=function(){
@@ -73,7 +75,8 @@ ubsApp.transferToBank=function(){
 	}
 }
 
-ubsApp.openTransferToBank=function(){
+ubsApp.openTransferToBank=function(openNextMove = false){
 	ubsApp.startCurrentScenario();
+	ubsApp.openNextMoveAfterTransfer = true;
 	ubsApp.renderPageByName("transferToBank");
 }

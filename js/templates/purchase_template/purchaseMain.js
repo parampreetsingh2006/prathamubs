@@ -10,8 +10,10 @@ ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 	object.currentPlayerName = userArray[playerChance].getplayerName();
 	object.inventoryValue="₹ "+userArray[playerChance].getInventoryScore()*1000;
     object.creditLimit="₹ "+userArray[playerChance].getCreditLimit();
+    object.openNextMove = ubsApp.openNextMoveAfterPurchase;
     templateConfig=$.extend(templateConfig,object);
 	tempVar.html+=ubsPurchaseTemplate(templateConfig);
+	ubsApp.openNextMoveAfterPurchase = true;
 }
 
 
@@ -176,7 +178,7 @@ ubsApp.openPopup({
     "header" : ubsApp.getTranslation("purchaseHeader"),
     "headerStyle" : "text-align: center;  color: red; font-weight: 700;"
 
-    
+
 });
 resultMessage="";
 }
@@ -210,8 +212,9 @@ while(end < start + ms) {
 }
 }
 
-ubsApp.openPurchaseScenario=function(){
+ubsApp.openPurchaseScenario=function(openNextMove = true){
 	offlinePurchaseClicked=true;
+	ubsApp.openNextMoveAfterPurchase = openNextMove;
 	ubsApp.startCurrentScenario();
 	ubsApp.renderPageByName("purchaseScenario");
 }

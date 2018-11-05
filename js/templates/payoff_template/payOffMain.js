@@ -10,7 +10,9 @@ ubsApp.getPayOffTemplate=function(templateConfig,tempVar){
 		object.hindi=true;
 	}
 	templateConfig=$.extend(templateConfig,object);
+	templateConfig.openNextMove = ubsApp.openNextMoveAfterPayOff;
 	tempVar.html+=ubsPayOffTemplate(templateConfig);
+	ubsApp.openNextMoveAfterPayOff = false;
 }
 
 ubsApp.payDebt=function(){
@@ -88,7 +90,8 @@ ubsApp.payDebt=function(){
 	}
 }
 
-ubsApp.openPayOffScenario=function(){
+ubsApp.openPayOffScenario=function(openNextMove = false){
 	ubsApp.startCurrentScenario();
+	ubsApp.openNextMoveAfterPayOff = true;
 	ubsApp.renderPageByName("PayOffScenario");
 }

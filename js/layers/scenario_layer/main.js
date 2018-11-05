@@ -281,25 +281,6 @@ ubsApp.closeCurrentScenario=function(){
 	 document.getElementById("templateContent").style.opacity="0.95";
 	$('#rollIt').attr('disabled',false);
 
-	if(!userArray[playerChance]) {
-		return;
-	}
-	if(userArray[playerChance].getWeeks() > 1 && userArray[playerChance].isOpenWeekSummary()) {
-        ubsApp.openCurrentPlayerSummary({
-			"header" : ubsApp.getTranslation("WeeklySummary"),
-			"isWeekSummary" : true,
-			});
-	}
-	else{
-	    if(userArray[playerChance].getTransferReminderOpened()==false){
-        		userArray[playerChance].setTransferReminderOpened(true);
-        		ubsApp.openTransferToBank();
-        } else if(userArray[playerChance].getPayOffDeadline()==0 && userArray[playerChance].getPaymentReminderOpen()){
-            userArray[playerChance].setPaymentReminderOpen(false);
-            ubsApp.openPayOffScenario();
-        }
-
-	}
 
 }
 

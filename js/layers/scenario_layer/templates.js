@@ -695,7 +695,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '            </div></div>'+
 '            <div class="row" style="height:20vmax;">'+
 '                    <div class="confirmButton mainButtons" onclick="ubsApp.pay()">{{doneTitle}}</div>'+
-'                    <div class="confirmButton mainButtons" id="target_cancel" onclick="ubsApp.nextMove()">{{noThanksTitle}}</div>'+
+'                    <div class="confirmButton mainButtons" id="target_cancel" onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove }} ubsApp.nextMove(); {{/if}}">{{noThanksTitle}}</div>'+
 '                    <div class="helpBtn mainButtons" onclick="ubsApp.startHelp(\'purchaseHelp\')"></div>'+
 '            </div>'+
 '        </div>'+
@@ -821,7 +821,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                           <button style="color:green;" class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
 '                      <div style="width:24%;margin-left: 2%;" >'+
-'                           <button style="color:red;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario()" >{{cancelTitle}}</button>'+
+'                           <button style="color:red;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove}} ubsApp.nextMove(); {{/if}}" >{{cancelTitle}}</button>'+
 '                      </div>' +
 '</div>'+
 '       <div id="result"></div>'+
@@ -1255,7 +1255,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               '        <div style="display:inline-block;margin-top: 10px;width:58%;">'+
                               '            <div style="float:left;margin-left: 2%;background-color: #a6a6e4;padding: 3px;font-weight: bold;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
-                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;" onclick="ubsApp.closeCurrentScenario()" >{{Close}}</div>'+
+                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove();" >{{Close}}</div>'+
                               '            </div>'+
                               '        </div>'+
                               '</div>'+
