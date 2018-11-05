@@ -993,3 +993,11 @@ ubsApp.restartGame = function() {
 monopoly.initializePages = function() {
     monopoly.pages = $.extend({},monopoly.origpages);
 }
+
+ubsApp.startBackgroundMusic = function () {
+    $('#backgroundaudio').get(0).play();
+}
+
+ubsApp.stopBackgroundMusic = function () {
+    $('#backgroundaudio').get(0).pause();
+}
