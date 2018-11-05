@@ -3,7 +3,8 @@ ubsApp.getWithdrawFromBankTemplate=function(templateConfig,tempVar){
 	object.color=userArray[playerChance].getplayerColor();
 	object.cash=userArray[playerChance].getplayerScore();
 	object.bankBalance=userArray[playerChance].getBankBalance();
-	
+		ubsApp.openedTransferScenario = true;
+
 	templateConfig=$.extend(templateConfig,object);
 	tempVar.html+=ubsPayOffTemplate(templateConfig);
 }
