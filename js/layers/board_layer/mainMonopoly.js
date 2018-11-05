@@ -51,6 +51,10 @@ ubsApp.maxNumOfWeeks = 12   ;
 var renderTimeOutMiliSec = 6000;
 ubsApp.inventoryPerPercentValue = 1000;
 ubsApp.endGameConfig = {};
+ubsApp.openNextMoveAfterPurchase = true;
+ubsApp.openNextMoveAfterTransfer = false;
+ubsApp.openedTransferScenario = false;
+ubsApp.openNextMoveAfterPayOff = false;
 
 $(document).ready(function(){
 	ubsApp.restartGame();
