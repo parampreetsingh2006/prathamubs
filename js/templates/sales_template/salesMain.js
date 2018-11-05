@@ -280,7 +280,7 @@ ubsApp.getMultiplier = function() {
     if(userArray[playerChance].getReputationPts() >= 100) {
         return 55;
     }
-    return 45;
+    return 50;
 }
 ubsApp.salesTimeOut= function(temp){
 	let r = userArray[playerChance].getReputationPts();
