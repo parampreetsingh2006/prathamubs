@@ -51,6 +51,10 @@ ubsApp.maxNumOfWeeks = 12   ;
 var renderTimeOutMiliSec = 6000;
 ubsApp.inventoryPerPercentValue = 1000;
 ubsApp.endGameConfig = {};
+ubsApp.openNextMoveAfterPurchase = true;
+ubsApp.openNextMoveAfterTransfer = false;
+ubsApp.openedTransferScenario = false;
+ubsApp.openNextMoveAfterPayOff = false;
 
 $(document).ready(function(){
 	ubsApp.restartGame();
@@ -682,7 +686,7 @@ ubsApp.confirmEndGame=function(){
     let playersConfig =[];
     let atleastOne=false;
     let highestScoringPlayer = -1;
-    let highestScore = -10000;
+    let highestScore = -1000000;
 
   	for(var i=0;i<numplayers;i++){
   	    let playerConfig = {};
@@ -712,6 +716,8 @@ ubsApp.confirmEndGame=function(){
         let weeks = player.getWeeks() - 1;
         if(weeks > 12) {
             weeks = 12;
+        } else if(weeks < 1) {
+            weeks = 1;
         }
   		var harnamProjectedScore=weeks*harnamSinghProfit;
 
@@ -742,7 +748,7 @@ ubsApp.confirmEndGame=function(){
 
 
   		if(arr[highestScoringPlayer]) {
-  		  winnerName=userArray[i].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
+  		  winnerName=userArray[highestScoringPlayer].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
 
   		} else {
   		     winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}" , userArray[highestScoringPlayer].getplayerName()) +  " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
@@ -765,13 +771,35 @@ ubsApp.confirmEndGame=function(){
   }
 
 ubsApp.nextMove = function(){
+
+
+    ubsApp.closeCurrentScenario();
+    if(!userArray[playerChance]) {
+        return;
+    }
+    if(userArray[playerChance].getWeeks() > 1 && userArray[playerChance].isOpenWeekSummary()) {
+        ubsApp.openCurrentPlayerSummary({
+            "header" : ubsApp.getTranslation("WeeklySummary"),
+            "isWeekSummary" : true
+            });
+    }
+    else if (userArray[playerChance].getTransferReminderOpened()==false){
+
+                userArray[playerChance].setTransferReminderOpened(true);
+                ubsApp.openTransferToBank(true);
+    } else if(userArray[playerChance].getPayOffDeadline()==0 && userArray[playerChance].getPaymentReminderOpen()){
+            userArray[playerChance].setPaymentReminderOpen(false);
+            ubsApp.openPayOffScenario(true);
+
+    } else {
+
          if(numplayers > 1) {
             ubsApp.raiseAudioEvent(document.getElementById('playerId'),'nextPlayer');
              ubsApp.openPopup({
                                            "header" : "",
                                           "message" : "",
                                           "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-                                          "imageUrl" : ubsApp.getTranslation("nextPlayerImage"),
+                                           "imageUrl" : ubsApp.getTranslation("nextPlayerImage"),
                                           "imageStyle" : "width:100%;",
                                           "showCloseButton" : false,
                                           "showBorder" : false,
@@ -795,7 +823,7 @@ ubsApp.nextMove = function(){
                 atleastOnePlayerPlaying = true;
             }
 
-			ubsApp.closeCurrentScenario();
+
 			this.currentPlayerContents();
 
 			$("#diceval").html(" ");
@@ -812,6 +840,9 @@ ubsApp.nextMove = function(){
 					$('#rollIt').attr('disabled',true);
 				},2000);
 			}
+    }
+
+
 }
 ubsApp.getScore=function()
 {
@@ -965,4 +996,12 @@ ubsApp.restartGame = function() {
 
 monopoly.initializePages = function() {
     monopoly.pages = $.extend({},monopoly.origpages);
+}
+
+ubsApp.startBackgroundMusic = function () {
+    $('#backgroundaudio').get(0).play();
+}
+
+ubsApp.stopBackgroundMusic = function () {
+    $('#backgroundaudio').get(0).pause();
 }

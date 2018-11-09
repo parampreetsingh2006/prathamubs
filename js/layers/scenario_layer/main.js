@@ -280,26 +280,8 @@ ubsApp.closeCurrentScenario=function(){
 	document.getElementById("templateContent").style["background-color"] = "rgb(105,105,105)";
 	 document.getElementById("templateContent").style.opacity="0.95";
 	$('#rollIt').attr('disabled',false);
-
-	if(!userArray[playerChance]) {
-		return;
-	}
-	if(userArray[playerChance].getWeeks() > 1 && userArray[playerChance].isOpenWeekSummary()) {
-        ubsApp.openCurrentPlayerSummary({
-			"header" : ubsApp.getTranslation("WeeklySummary"),
-			"isWeekSummary" : true,
-			});
-	}
-	else{
-	    if(userArray[playerChance].getTransferReminderOpened()==false){
-        		userArray[playerChance].setTransferReminderOpened(true);
-        		ubsApp.openTransferToBank();
-        } else if(userArray[playerChance].getPayOffDeadline()==0 && userArray[playerChance].getPaymentReminderOpen()){
-            userArray[playerChance].setPaymentReminderOpen(false);
-            ubsApp.openPayOffScenario();
-        }
-
-	}
+    ubsApp.openNextMoveAfterPayOff = false;
+    ubsApp.openNextMoveAfterTransfer = false;
 
 }
 
@@ -357,14 +339,14 @@ ubsApp.openPopup = function(config) {
    ubsApp.startHelp("generalPopUp");
 }
 
-ubsApp.closePopup = function(config) {
+ubsApp.closePopup = function(config, doNextMove=true) {
 
    if(ubsApp.isResultPopUpOpen && config) {
         $('#popupBackground').hide();
         ubsApp.closeHelp();
    } 
    else if (ubsApp.isResultPopUpOpen){
-        ubsApp.closeResultPopup();
+        ubsApp.closeResultPopup(doNextMove);
         ubsApp.isResultPopUpOpen = false;
    }
    else {
@@ -395,9 +377,23 @@ ubsApp.openResultPopup = function(config) {
 
 }
 
-ubsApp.closeResultPopup = function(config) {
+ubsApp.closeResultPopup = function(doNextMove=true) {
    $('#resultBackground').hide();
-   ubsApp.nextMove();
+
+   if(ubsApp.openedTransferScenario && (ubsApp.openNextMoveAfterTransfer || ubsApp.openNextMoveAfterPayOff)) {
+       ubsApp.nextMove();
+       }
+    else if (!ubsApp.openedTransferScenario ) {
+        ubsApp.nextMove();
+   }
+   else {
+    ubsApp.closeCurrentScenario();
+    ubsApp.openNextMoveAfterPayOff = false;
+    ubsApp.openNextMoveAfterTransfer = false;
+    ubsApp.openedTransferScenario = false;
+
+
+   }
 }
 
 ubsApp.updateScoreInDB = function(playerStudentId, questionId, scoredMarks,totalMarks, level, startTime, label){

@@ -9,8 +9,11 @@ ubsApp.getPayOffTemplate=function(templateConfig,tempVar){
 	if(languageSelected=="hindi"){
 		object.hindi=true;
 	}
+		ubsApp.openedTransferScenario = true;
 	templateConfig=$.extend(templateConfig,object);
+	templateConfig.openNextMove = ubsApp.openNextMoveAfterPayOff;
 	tempVar.html+=ubsPayOffTemplate(templateConfig);
+	//ubsApp.openNextMoveAfterPayOff = false;
 }
 
 ubsApp.payDebt=function(){
@@ -92,7 +95,9 @@ ubsApp.payDebt=function(){
 	}
 }
 
-ubsApp.openPayOffScenario=function(){
+ubsApp.openPayOffScenario=function(openNextMove = false){
 	ubsApp.startCurrentScenario();
+	ubsApp.openNextMoveAfterPayOff = openNextMove;
+	ubsApp.openedTransferScenario = true;
 	ubsApp.renderPageByName("PayOffScenario");
 }

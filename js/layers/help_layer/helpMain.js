@@ -7,6 +7,8 @@ ubsApp.startHelp=function(pageName){
 	$('#helpContent').css("width",(screenWidth)+'px')
 	helpScenarioOpen=true;
 	ubsApp.renderHelpPage(ubsApp.pages[pageName].templates);
+
+
 }
 
 ubsApp.renderHelpPage=function(template){
@@ -28,10 +30,24 @@ ubsApp.renderHelpPage=function(template){
 
 	}
 	document.getElementById("helpContent").innerHTML+=html;
+	setTimeout(ubsApp.stopAudioIfRequired(), 2000);
+
+}
+
+ubsApp.stopAudioIfRequired = function() {
+
+    var vid = document.getElementById("helpVideo");
+    	if(vid) {
+    	    vid.onplay = function() {
+                    ubsApp.stopBackgroundMusic();
+                };
+    	}
+
 }
 
 ubsApp.closeHelp=function(){
 
+    ubsApp.startBackgroundMusic();
     $('#popupBackground').hide();
 	$('#helpContent').css("height",0+'px')
 	document.getElementById("helpContent").innerHTML="";
@@ -39,3 +55,4 @@ ubsApp.closeHelp=function(){
   document.getElementById("helpContent").style.opacity="0.95";
   document.getElementById("helpContent").style["background-color"] = "rgb(105,105,105)";
 }
+
