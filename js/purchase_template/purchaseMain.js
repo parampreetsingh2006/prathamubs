@@ -10,6 +10,7 @@ ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 	object.currentPlayerName = userArray[playerChance].getplayerName();
 	object.inventoryValue="₹ "+userArray[playerChance].getInventoryScore()*1000;
     object.creditLimit="₹ "+userArray[playerChance].getCreditLimit();
+    ubsApp.startRecordingTimer(templateConfig);
     templateConfig=$.extend(templateConfig,object);
 	tempVar.html+=ubsPurchaseTemplate(templateConfig);
 }
@@ -34,7 +35,7 @@ $("#newCostText").text((parseInt(temp.substring(2))-userArray[playerChance].getI
 $("#updatedInventoryValue").text(temp.substring(2));
 }
 
-ubsApp.pay=function(){
+ubsApp.pay=function(startTime){
 var paymentDone=false;
 var resultMessage="";
 var subResultMessage="";
@@ -62,6 +63,7 @@ for(var i=1;i<=numberOfPaymentModes;i++){
         }
     }
 }
+ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,totalAmountEntered, 0, 0, startTime,"purchaseInventory");
 if(totalAmountEntered<cost){
     resultMessage = ubsApp.translation["lessMoney"].replace("<CurrentAmount>",totalAmountEntered).replace("<ActualAmount>",cost);
 }

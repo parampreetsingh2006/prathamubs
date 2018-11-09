@@ -42,8 +42,10 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
   var totalMarks = 1; // each question carries 1 mark
   var date=new Date();
   var resultConfig={};
-  //var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-  if(ubsApp.atleastOneSelected(optionName)){
+  if(startTime == ""){
+  	var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+  }
+    if(ubsApp.atleastOneSelected(optionName)){
   	  let quizCorrectAnswer = $("#correctAnswers").html();
 	  let checkedValue = $("input[name='" + ubsDecisionOption + "'	]:checked").attr("id");
 	  let questionNo = $("#quizQuestionNumber").html();

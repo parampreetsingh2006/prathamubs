@@ -11,7 +11,7 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
     templateConfig.Discount = ubsApp.getTranslation("Discount");
     templateConfig.PLAYER = ubsApp.getTranslation("PLAYER");
 
-
+    ubsApp.startRecordingTimer(templateConfig);
     tempVar.html += ubsOrdertemplate(templateConfig);
     ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
 	if(ubsApp.noItemsForSale) {
@@ -81,7 +81,7 @@ ubsApp.validateAmount = function() {
         }
     return true;
 }
-ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
+ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime, startTime){
     total = parseFloat(total);
 	let time = totalTime - $("#seconds").html();
 	ubsApp.stopTimer();
@@ -98,12 +98,12 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 
 		userArray[playerChance].setplayerScore(c+cashIncreased);
 
-            let reputationPointIncrease = ubsApp.getReputationPointsIncreasedInSales(time, totalTime, ubsApp.currentScenarioCategory);
+    let reputationPointIncrease = ubsApp.getReputationPointsIncreasedInSales(time, totalTime, ubsApp.currentScenarioCategory);
 
 		userArray[playerChance].setReputationPts(r + reputationPointIncrease);
 		ubsApp.raiseAudioEvent(document.getElementById('salesSubmitButton'), 'rightAnswer');
-        ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,reputationPointIncrease, 0, ubsApp.currentScenarioCategory, time,"salesReputationPointIncrease");
-		ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,cashIncreased, 0, ubsApp.currentScenarioCategory, time,"salesCashIncrease");
+      ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,reputationPointIncrease, 0, ubsApp.getCategoryToPostScore(ubsApp.currentScenarioCategory), startTime,"salesReputationPointIncrease");
+		  ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,cashIncreased, 0, ubsApp.getCategoryToPostScore(ubsApp.currentScenarioCategory), startTime,"salesCashIncrease");
         let message = ubsApp.getTranslation("salesCorrectAnswer");
 		if(reputationPointIncrease > 0) {
 		    message += "<br>" + ubsApp.getTranslation("salesCorrectRptpt1").replace("{{reputationPoints}}",reputationPointIncrease).replace("{{time}}",time);
@@ -130,12 +130,18 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime){
 			userArray[playerChance].setReputationPts(r-4);
 			userArray[playerChance].setplayerScore(c+cashIncreased);
 			message+= "<br>" + ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
+      ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,r-4, 0,ubsApp.getCategoryToPostScore(ubsApp.currentScenarioCategory), startTime,"salesReputationPointDecrease");
+      ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,c+cashIncreased, 0, ubsApp.getCategoryToPostScore(ubsApp.currentScenarioCategory), startTime,"salesCashIncrease");
+ 
 		}
 		else{
 		    cashIncreased = Math.round(userTotal*ubsApp.getMultiplier() * 100)/ 100;
 		    userArray[playerChance].setReputationPts(r-4);
 			userArray[playerChance].setplayerScore(c+cashIncreased);
 			message+="<br>" + ubsApp.getTranslation("salesWrongRptpt") + 4 + ". ";
+      ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,r-4, 0, ubsApp.currentScenarioCategory, startTime,"salesReputationPointDecrease");
+      ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,c+cashIncreased, 0, ubsApp.currentScenarioCategory, startTime,"salesCashIncrease");
+
 		}
 
 		message+= "<br>" +ubsApp.getTranslation("salesWrongRptpt3").replace("{{cashincreased}}",cashIncreased);
@@ -295,3 +301,23 @@ ubsApp.salesTimeOut= function(temp){
            "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
            });
 	}
+
+ubsApp.getCategoryToPostScore = function(category){
+  var numericCategory;
+  switch(category){
+    case "salesSimple":
+      numericCategory = 1;
+      break;
+    case "salesEasy":
+      numericCategory = 2;
+      break;
+    case "salesModerate":
+      numericCategory = 3;
+      break;
+    case "salesDifficult":
+      numericCategory = 4;
+      break;
+  }
+
+  return numericCategory;
+}

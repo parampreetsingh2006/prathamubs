@@ -39,6 +39,7 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, startTime, questio
 	userArray[playerChance].setReputationPts(initialPlayerRepPoints+parseInt(reputationPts));
 	userArray[playerChance].setBankBalance(initialPlayerBankBalance+parseInt(bankBalance));
 	if(insurance == "true"){
+	ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, 0,0, 1, startTime, "decisionInsuranceQuestion");
 	 ubsApp.renderPageByName(page);
 	}
 	else{
@@ -48,6 +49,8 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, startTime, questio
 			let playerBankBalance = userArray[playerChance].getBankBalance();
 			userArray[playerChance].setBankBalance(playerBankBalance+profit);
 			totalPlayerBankBalance += playerBankBalance+profit;
+		
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, totalPlayerBankBalance,totalPlayerBankBalance, 1, startTime, "decisionBankBalanceGain");
 			nextAction="ubsApp.nextMove();";
 			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionResultMessageInCaseOfPamphletOrFestival"], [reputationPts, Math.abs(bankBalance), profit]);
 		}
@@ -56,6 +59,7 @@ ubsApp.decisionOptions = function(reputationPts, bankBalance, startTime, questio
 			let playerBankBal = userArray[playerChance].getBankBalance();
 			let balIncreaseAsProfit =  Math.floor((profitPercentage/100)*playerBankBal);
 			totalPlayerBankBalance += balIncreaseAsProfit;
+			ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, totalPlayerBankBalance,totalPlayerBankBalance, 1, startTime, "decisionBankBalanceGain");
 			nextAction="ubsApp.nextMove();";
 			decisionResultMessage = ubsApp.formatMessage(ubsApp.translation["decisionResultMessageInCaseOfPamphletOrFestival"], [reputationPts, Math.abs(bankBalance), balIncreaseAsProfit]);
 		}

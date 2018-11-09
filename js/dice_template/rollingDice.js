@@ -19,5 +19,5 @@ function pointRoll() {
     }
 
   }
-  return diceValueOne;
+  return 1;
 }

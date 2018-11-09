@@ -21,7 +21,10 @@ ubsApp.getTransferTemplate=function(templateConfig,tempVar){
 
 ubsApp.transferToBank=function(){
 	var amount=document.getElementById("debtPaymentText").value;
-	
+	var date = new Date();
+	var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+	ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,amount, 0,0, startTime,"transferToBank");
+
 	if(amount){
 		if(amount<=userArray[playerChance].getplayerScore()){
 			userArray[playerChance].setplayerScore(userArray[playerChance].getplayerScore()-amount);
