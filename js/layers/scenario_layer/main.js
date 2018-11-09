@@ -40,7 +40,7 @@ let screenWidth = $(window).width();
 let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "popup", "weekSummary"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
-let postScore=true;
+let postScore=false;
 ubsApp.popupConfig = {};
 
 $(document).ready(function(){
