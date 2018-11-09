@@ -27,13 +27,13 @@ ubsApp.getWeekSummaryTemplate = function(templateConfig, tempVar){
     //Update weeklySummary in DB
     var date = new Date();
     var startTime=date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekCash, 0, 0, startTime,"weeklySummary"+weekNumber+"currentWeekCash");
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekBankBalance, 0, 0, startTime,"weeklySummary"+weekNumber+"currentWeekBankBalance");
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekReputationPts, 0, 0, startTime,"weeklySummary"+weekNumber+"currentWeekReputationPts");
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekCredit, 0, 0, startTime,"weeklySummary"+weekNumber+"currentWeekCredit");
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekAdvantageCard, 0, 0, startTime,"weeklySummary"+weekNumber+"currentWeekAdvantageCard");
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentInventory, 0, 0, startTime,"weeklySummary"+weekNumber+"currentInventory");
-    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentInventoryValue, 0, 0, startTime,"weeklySummary"+weekNumber+"currentInventoryValue");
+    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekCash, 0, 0, startTime,"weeklySummary"+week+"currentWeekCash");
+    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekBankBalance, 0, 0, startTime,"weeklySummary"+week+"currentWeekBankBalance");
+    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekReputationPts, 0, 0, startTime,"weeklySummary"+week+"currentWeekReputationPts");
+    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekCredit, 0, 0, startTime,"weeklySummary"+week+"currentWeekCredit");
+    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentWeekAdvantageCard, 0, 0, startTime,"weeklySummary"+week+"currentWeekAdvantageCard");
+    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentInventory, 0, 0, startTime,"weeklySummary"+week+"currentInventory");
+    ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(),0,templateConfig.currentInventoryValue, 0, 0, startTime,"weeklySummary"+week+"currentInventoryValue");
     
 
     userArray[playerChance].setOpenWeekSummary(false);
