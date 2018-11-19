@@ -634,7 +634,7 @@ monopoly.startGame=function(){
 
              //let studentArray = Android.getStudentList();
              ubsApp.studentArray = "[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]";
-             ubsApp.studentArray = studentArray;
+             //ubsApp.studentArray = studentArray;
              if( ubsApp.studentArray &&  ubsApp.studentArray.length > 0) {
                 ubsApp.isOfflineMode = true;
              }
