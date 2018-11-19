@@ -356,7 +356,7 @@ ubsApp.helpConfig={
                     "templateType":"static",
                     "id":"helpContent",
                     "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                    "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{introVideo}} type=\"video/mp4\"></video> <div>"
+                    "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls autoplay><source src={{introVideo}} type=\"video/mp4\"></video> <div>"
 
                 },
                 {
