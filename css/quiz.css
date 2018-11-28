@@ -3,7 +3,6 @@
 	background-image: url('../images/background.png');
 	height: 100%;
 	width: 100%;	
-	padding: 1%;
 	overflow: hidden;
 }
 
@@ -70,8 +69,8 @@
 
 #question_answer{
 	background-color: white;
-	margin: 2% 2% 2% 2%;
-	padding: 2%;
+	margin: 0.5% 2%;
+	padding: 0.7%;
 }
 
 #answerDiv{
@@ -170,4 +169,13 @@ input[class="quizButtons"]:focus {outline:0;}
     left: 1%;
     width: 15vw;
     height: 7vw;
+}
+
+.quizOptionsStyle{
+	background:url('../images/buttonlong.png'); 
+	background-size: 100% 100%;
+	border:3px solid white;
+	cursor: pointer;
+	padding: 0.4% 0% 0% 1%;
+	width: 70%;
 }
