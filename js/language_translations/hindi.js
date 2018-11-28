@@ -14,7 +14,7 @@ ubsApp.translation={
 	"nextPlayerImage":"images/hindi/nextplayer.png",
     	
 	"Close":"बंद करे",
-	"CLOSE":"बंद करे",ue
+	"CLOSE":"बंद करे",
         "scoreSideBar":"स्कोर",
         "documentSideBar":"दस्तावेज़",
         "inventorySideBar":"इन्वेंटरी",
@@ -214,7 +214,7 @@ ubsApp.translation={
             "29": "₹ 12/70gm",
             "30": "₹ 60/200gm"
         },
-        "This item is not available in your Inventory":"This item is not available in your Inventory",
+        
 	
 	"salesResultHeader":"बिक्री परिणाम",
         "salesWrongAnswer":"गलत जवाब।",
@@ -1468,5 +1468,6 @@ ubsApp.translation={
         "decisionQ15O2":"No (Gain reputation points)",
         "decisionQ16O1":"Do not pass on discount to customers. (Earn money but lose reputation points)",
         "decisionQ16O2":"Pass on discount to customers. (Gain reputation points)",        
-		
+	"This item is not available in your Inventory":"This item is not available in your Inventory",
+	
 }
