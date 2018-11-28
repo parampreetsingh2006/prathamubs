@@ -1,32 +1,32 @@
 ubsApp.translation={
-	"question1":"ऐसा लगता है कि एक ग्राहक आइटम खरीदना चाहता है: <br> 1.5 किलोग्राम चावल <br> 2.5 किग्रा दल <br> 1 किलोग्राम अटा <br> <br> चावल / दल / अट्टा प्रति किलोग्राम की लागत क्रमश: 60/90/40 रुपये है <br> <br> क्या आप बता सकते हैं कि आप ग्राहक से कितना पैसा लेंगे?",
-	"question2":"ऐसा लगता है कि वही ग्राहक वापस आ गया है। वह कुछ वस्तुओं को वापस लेना चाहती है और कुछ नया खरीदना चाहती है। <br> वह 1 किलो चावल वापस करना चाहता है - 60 रुपये - 1 किलोग्राम दल- 90 रुपये <br> <br> वह 0.5 लीटर तेल <br> 6 चिप्स पैकेट खरीदना चाहता है <br> 1 एलआरटी तेल / 1 चिप पैकेट लागत 90/10 रुपये। <br> क्या आप बता सकते हैं कि सरदारजी ग्राहक को कितना पैसा चाहिए?",
-	"question3":"ऐसा लगता है कि वही ग्राहक वापस आ गया है। वह कुछ वस्तुओं को वापस लौटना चाहता है और कुछ नया खरीदना चाहता है। <br> वह 1 किलो प्याज वापस करना चाहता है - 19 रुपये - 1 किलो आलू- 34 रुपये <br> <br> वह 1.5 किलो टमाटर खरीदना चाहता है <br> 1 किलो गोभी <br> टमाटर / गोभी की प्रति किलो लागत 26/24 रुपये है <br> क्या आप बता सकते हैं कि आप कितना पैसा चुकाना चाहिए?",
-	"question4":"ऐसा लगता है कि एक ग्राहक वापस आ गया है। वह कुछ वस्तुओं को वापस करना चाहता है। <br> वह 1 किलो चावल वापस करना चाहता है - रुपये 60 रुपये 1 किलो आलू- 34 रुपये <br> <br> <br> आप बताते हैं कि आप ग्राहक को कितना पैसा वापस कर देंगे?",
-	"pratham_title_sales":"बिक्री",
-	"pratham_title_surprise":"अचरज",
-	"pratham_title_luck":"भाग्य",
-	"pratham_title_purchase":"खरीद फरोख्त",
-	"pratham_title_start":"प्रारंभ",
-	"pratham_title_decision":"निर्णय लेना",
+	      "question1":"ऐसा लगता है कि एक ग्राहक आइटम खरीदना चाहता है: <br> 1.5 किलोग्राम चावल <br> 2.5 किग्रा दल <br> 1 किलोग्राम अटा <br> <br> चावल / दल / अट्टा प्रति किलोग्राम की लागत क्रमश: 60/90/40 रुपये है <br> <br> क्या आप बता सकते हैं कि आप ग्राहक से कितना पैसा लेंगे?",
+	      "question2":"ऐसा लगता है कि वही ग्राहक वापस आ गया है। वह कुछ वस्तुओं को वापस लेना चाहती है और कुछ नया खरीदना चाहती है। <br> वह 1 किलो चावल वापस करना चाहता है - 60 रुपये - 1 किलोग्राम दल- 90 रुपये <br> <br> वह 0.5 लीटर तेल <br> 6 चिप्स पैकेट खरीदना चाहता है <br> 1 एलआरटी तेल / 1 चिप पैकेट लागत 90/10 रुपये। <br> क्या आप बता सकते हैं कि सरदारजी ग्राहक को कितना पैसा चाहिए?",
+	      "question3":"ऐसा लगता है कि वही ग्राहक वापस आ गया है। वह कुछ वस्तुओं को वापस लौटना चाहता है और कुछ नया खरीदना चाहता है। <br> वह 1 किलो प्याज वापस करना चाहता है - 19 रुपये - 1 किलो आलू- 34 रुपये <br> <br> वह 1.5 किलो टमाटर खरीदना चाहता है <br> 1 किलो गोभी <br> टमाटर / गोभी की प्रति किलो लागत 26/24 रुपये है <br> क्या आप बता सकते हैं कि आप कितना पैसा चुकाना चाहिए?",
+	      "question4":"ऐसा लगता है कि एक ग्राहक वापस आ गया है। वह कुछ वस्तुओं को वापस करना चाहता है। <br> वह 1 किलो चावल वापस करना चाहता है - रुपये 60 रुपये 1 किलो आलू- 34 रुपये <br> <br> <br> आप बताते हैं कि आप ग्राहक को कितना पैसा वापस कर देंगे?",
+	      "pratham_title_sales":"बिक्री",
+	      "pratham_title_surprise":"अचरज",
+	      "pratham_title_luck":"भाग्य",
+	      "pratham_title_purchase":"खरीद फरोख्त",
+	      "pratham_title_start":"प्रारंभ",
+	      "pratham_title_decision":"निर्णय लेना",
         "close":"बंद करे",
-	"congratulationImage":"images/hindi/congratulations.png",
-	"nextPlayerImage":"images/hindi/nextplayer.png",
+	      "congratulationImage":"images/hindi/congratulations.png",
+	      "nextPlayerImage":"images/hindi/nextplayer.png",
     	
-	"Close":"बंद करे",
-	"CLOSE":"बंद करे",
+	      "Close":"बंद करे",
+	      "CLOSE":"बंद करे",
         "scoreSideBar":"स्कोर",
         "documentSideBar":"दस्तावेज़",
         "inventorySideBar":"इन्वेंटरी",
         "meritSideBar":"योग्यता",
         "Cash":"कैश",
-	"cheque":"चेक",
-	"ScoreSummary":"स्कोर सारांश",
+	      "cheque":"चेक",
+	      "ScoreSummary":"स्कोर सारांश",
 	
 	
-	"rollit":"घुमाओ",
+	      "rollit":"घुमाओ",
         "endGame":"अंत खेल",
-	"enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
+	      "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
         "enterOfflinePlayers":"खिलाड़ियों की संख्या दर्ज करें",
         "initPageTitle":"खिलाड़ियों की संख्या चुनें",
         "storePlayerDetailsButton":"अगला पृष्ठ",
@@ -40,89 +40,89 @@ ubsApp.translation={
         "name":"नाम",
         
 // Monopoly main board
-	// board footer caption
-	"start":"सप्ताह पूरा",
+	      // board footer caption
+	      "start":"सप्ताह पूरा",
         "purchase":"खरीद",
         "sale":"बेचना",
         "payment":"भुगतान",
         "decision":"फेसला",
         "luck":"भाग्य",
 	
-    	//This is where new addition started	
-	"inventoryTitle":"इन्वेंटरी",
+    	   //This is where new addition started	
+	      "inventoryTitle":"इन्वेंटरी",
         "weekTitle":"सप्ताह",
-	"lastBalanceTitle":"अंतिम संतुलन",
+	      "lastBalanceTitle":"अंतिम संतुलन",
         "insuranceTitle":"बीमा",
         "reputationTitle":" प्रतिष्ठा अंक",
-	"inventoryValueTitle":"इन्वेंटरी मूल्य",
-	"language":"hindi",
+	      "inventoryValueTitle":"इन्वेंटरी मूल्य",
+	      "language":"hindi",
         "rollIt":"घुमाओ",
-	"playerTitle":"खिलाड़ी",
+	      "playerTitle":"खिलाड़ी",
         "PLAYER":"खिलाड़ी",
-	//This is where the new addition ended
-	"nextQuestion":"अगला प्रश्न",
-	"bankBalanceTitle":"बैंक राशि",
+	      //This is where the new addition ended
+	      "nextQuestion":"अगला प्रश्न",
+	      "bankBalanceTitle":"बैंक राशि",
         "BankBalance":"बैंक राशि",
         "debtTitle":"कर्ज",
         "cashTitle":"कैश",
-	"creditTitle":"श्रेय",
-	"Credit":"श्रेय",
+	      "creditTitle":"श्रेय",
+	      "Credit":"श्रेय",
         "DEBT":"कर्ज",
 	
-	"creditLimitTitle":"श्रेय सीमा",
+	      "creditLimitTitle":"श्रेय सीमा",
         "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q1-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q1-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
 
 	
-	"q2-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
+	      "q2-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q2-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q2-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         
 	
-	"q3-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
+	      "q3-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q3-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q3-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         
 	
-	"q4-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
+	      "q4-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q4-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q4-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         
-	"paymentQuestion1":"ड्राइविंग लाइसेंस नहीं होने के लिए आपको 1000 रुपये जुर्माना लगाया गया है।",
+	      "paymentQuestion1":"ड्राइविंग लाइसेंस नहीं होने के लिए आपको 1000 रुपये जुर्माना लगाया गया है।",
         "paymentQuestion2":"दुकान लाइसेंस नहीं होने के लिए आपको 1000 रुपये जुर्माना लगाया गया है।",
 	
 	
-	//Main Screen
-	"Card Wallet":"बटुआ",
-	"Roll it":"पासा घुमाओ",
-	"Purchase":"खरीद",
-	"Take Exam":"परीक्षा दें",
-	"Rs":"₹",
+	      //Main Screen
+	      "Card Wallet":"बटुआ",
+	      "Roll it":"पासा घुमाओ",
+	      "Purchase":"खरीद",
+	      "Take Exam":"परीक्षा दें",
+	      "Rs":"₹",
 	
 	
 	
 	
-	"transferTitle":"ट्रांसफर ",
+	      "transferTitle":"ट्रांसफर ",
         "payOffTitle":"भुगतान करें",
 	
-	"payDebtTitle":"पाय डेब्ट",
+	      "payDebtTitle":"पाय डेब्ट",
         "transferToBankTitle":"ट्रांसफर कैश तो बैंक ",	
-	"payTitle":"भुगतान",
+	      "payTitle":"भुगतान",
         "debtAmountTitle":"डेब्ट राशि",
         "cancelTitle":"कैंसिल",
-	"amountToPayTitle":"राशि तो पाय",
+	      "amountToPayTitle":"राशि तो पाय",
         "amountToTransferTitle":"राशि तो ट्रांसफर",
         "modeOfPaymentTitle":"भुगतान का प्रकार",
         "helpTitle":"मदद",
         "gainTitle":"लाभ",
-	"youCan":"आप ऐसा कर सकते हैं",
+	      "youCan":"आप ऐसा कर सकते हैं",
         "alternateMessage":"या ठीक करने के लिए",
-	"takeQuizTitle":"कोई क्विज लें",
+	      "takeQuizTitle":"कोई क्विज लें",
         "checkWildCard":"वाइल्ड कार्ड की जांच करें",
-	"noDebt":"आपके पास कोई डेब्ट नहीं है",
-	"level":"स्तर",
-	"current":"वर्तमान",
+	      "noDebt":"आपके पास कोई डेब्ट नहीं है",
+	      "level":"स्तर",
+	      "current":"वर्तमान",
         "confirmTitle":"कन्फर्म",
         "newInventoryLevelTitle":"नई इन्वेंटरी स्तर",
         "costTitle":"कॉस्ट",
@@ -132,9 +132,9 @@ ubsApp.translation={
         "doneTitle":"खरीद",
         "noThanksTitle":"रद्द",
         "or":"या",
-	"inventoryValueTitle":"सूची मूल्य",
+	      "inventoryValueTitle":"सूची मूल्य",
 		
-	"validAmount":"कृपया एक वैध राशि दर्ज करें",
+	      "validAmount":"कृपया एक वैध राशि दर्ज करें",
         "lessMoney":"केवल ₹<CurrentAmount> के लिए भुगतान किया जा रहा है। कृपया ₹<ActualAmount> का भुगतान करें।",
         "moreMoney":"₹<CurrentAmount> के लिए भुगतान किया जा रहा है। कृपया ₹<ActualAmount> का भुगतान करें।",
         "moreCash":"लेनदेन को पूरा करने के लिए अपर्याप्त नकदी। चेक द्वारा भुगतान करें।",
@@ -144,45 +144,45 @@ ubsApp.translation={
         "purchaseSuccess":"बधाई हो! आपकी सूची भर दी गई है! <br> यह अब <Percent>% पर है। आपने ₹<Amount> चुकाए हैं। ",
         "purchaseHeader":"खरीद फरोख्त अलर्ट",
         "withdrawTitle":"विथड्रॉ",
-	"cashChequeMessage":"आपके पास अपर्याप्त नकद है, शेष भुगतान चेक के माध्यम से किया जाएगा",
+	      "cashChequeMessage":"आपके पास अपर्याप्त नकद है, शेष भुगतान चेक के माध्यम से किया जाएगा",
         "cashChequeCreditMessage":"आपके पास अपर्याप्त नकद और बैंक शेष है, शेष भुगतान क्रेडिट के माध्यम से किया जाएगा",
         "chequeCreditMessage":"आपके पास अपर्याप्त बैंक शेष है, शेष भुगतान क्रेडिट के माध्यम से किया जाएगा",
 
-	//Sales
+      	//Sales
 	
-	"This item is not available in your Inventory":"यह आइटम आपके इन्वेंटरी में उपलब्ध नहीं है",
+	      "This item is not available in your Inventory":"यह आइटम आपके इन्वेंटरी में उपलब्ध नहीं है",
         "Wheat":"गेहूँ",
         "Sugar":"चीनी",
-	"Dal":"दाल",
+	      "Dal":"दाल",
         "Rice":"चावल",
         "Rope":"रस्सी",
         "Milk":"दूध",
         "Eggs":"अंडे",
         "egg":"अंडा",
-	"Oil":"तेल",
+	      "Oil":"तेल",
         "Chocolate":"चॉकलेट",
-	"chocolate":"चॉकलेट",
+	      "chocolate":"चॉकलेट",
         "Biscuits":"बिस्कुट",
         "Soap":"साबुन",
         "Shampoo":"शैम्पू",
-	"shampoo":"शैम्पू",
+	      "shampoo":"शैम्पू",
         "Detergent":"डिटर्जेंट",
-	"Packet":"पैकेट",
+	      "Packet":"पैकेट",
 	
         "Order":"किराना सूची",
-	"receiptHeading":"सुपर मार्केट रसीद",
+	      "receiptHeading":"सुपर मार्केट रसीद",
         "receiptGen":"किराने का बिल",
         "Quantity":"मात्रा",
-	"Rate":"भाव",
+	      "Rate":"भाव",
         "Items":"वस्तु का नाम",
         "Amount":"रकम",
-	"Discount":"छूट",
-	"Customer":"ग्राहक",
+	      "Discount":"छूट",
+	      "Customer":"ग्राहक",
         "Tools":"उपकरण",
-	"SUBMIT": "समाप्त",
-	"sale":"बिक्री",
+    	  "SUBMIT": "समाप्त",
+	      "sale":"बिक्री",
 		
-	"itemRateDisplay":{
+	      "itemRateDisplay":{
             "1":"₹ 50/kg",
             "2":"₹ 110/kg",
             "3":"₹ 80/kg",
@@ -216,29 +216,29 @@ ubsApp.translation={
         },
         
 	
-	"salesResultHeader":"बिक्री परिणाम",
+	      "salesResultHeader":"बिक्री परिणाम",
         "salesWrongAnswer":"गलत जवाब।",
         "salesCorrectAnswer":"सही जवाब।",
         "salesCorrectRptpt1":" आपने {{time}} सेकंड में समस्या को हल करने के लिए {{reputationPoints}} प्रतिष्ठा अंक अर्जित किए हैं! ",
         "salesCorrectRptpt2":"इस बिक्री पर अपने दिन की बिक्री के प्रतिनिधि होने पर विचार करें। ₹ {{cashincreased}} को आपके नकद शेष राशि में जमा किया गया था।",
-	"salesWrongRptpt":"प्रतिष्ठा अंक कम कर रहे हैं ",
+	      "salesWrongRptpt":"प्रतिष्ठा अंक कम कर रहे हैं ",
         "salesWrongRptpt2":"आप कोई प्रतिष्ठा अंक अर्जित नहीं करते हैं। ",
         "salesWrongRptpt3":"हालांकि यह बिक्री आपके पूरे दिन की बिक्री का प्रतिनिधित्व करती है। आपके नकद शेष राशि में ₹ {{cashincreased}} क्रेडिटिंग। <br> क्या आपको समस्या को हल करने के बारे में जानने के लिए किसी भी मदद की ज़रूरत है?",
         "salesTimeOut": "समय पूर्ण हुआ! आपकी प्रतिष्ठा अंक 4 से कम हो जाते हैं।",
         "sales80DiscountMsg" : "3 साबुन खरीदें और चौथा 50% छूट पर प्राप्त करें",
 
-	//Decision
-	"hasWon" : "जीता है",
+	      //Decision
+	      "hasWon" : "जीता है",
         "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",
-	"inventory":"इन्वेंटरी",
-	"invVal":"प्रतिष्ठा अंक",
+	      "inventory":"इन्वेंटरी",
+	      "invVal":"प्रतिष्ठा अंक",
         "repPoints":"इन्वेंटरी मूल्य",
         "Decision":"निर्णय",
         "yes":"हाँ",
         "no":"नहीं",
         
 		
-	"decisionQ1":"खाद्य निरीक्षक आपकी दुकान पर जाता है और यह पाया जाता है कि आपके पास कुछ उत्पाद हैं जो अभी भी बिक्री के लिए रखे गए हैं। खाद्य निरीक्षक आपत्ति उठाता है। वह दुकान दस्तावेजों के लिए पूछता है। आपके पास सभी दस्तावेज नहीं हैं।",
+	      "decisionQ1":"खाद्य निरीक्षक आपकी दुकान पर जाता है और यह पाया जाता है कि आपके पास कुछ उत्पाद हैं जो अभी भी बिक्री के लिए रखे गए हैं। खाद्य निरीक्षक आपत्ति उठाता है। वह दुकान दस्तावेजों के लिए पूछता है। आपके पास सभी दस्तावेज नहीं हैं।",
         "decisionQ2":"पिछले साल भारी बारिश के दौरान, आपके क्षेत्र में भारी बाढ़ और पानी भरने की वजह से आपकी दुकान में खाद्य पदार्थों का आंशिक या पूरा नुकसान हुआ। पड़ोसी दुकानों में से कुछ भी प्रभावित हुए थे। आपका बीमा एजेंट आपकी पॉलिसी खरीदने के लिए आया है? प्रीमियम लागत 3000 रुपये से 6800 रुपये प्रति वर्ष के बीच होगी। क्या आप इसे खरीद लेंगे?",
         "decisionQ3":"आपको अपने स्टोर में टूटी हुई छत की मरम्मत के लिए धन की आवश्यकता है। छत की मरम्मत की लागत 10000 रुपये है। क्या आप -",
         "decisionQ4":"आप एक महत्वपूर्ण आय होने के बावजूद करों का भुगतान न करने का फैसला करते हैं। आयकर अधिकारी ने आपको 20000 रुपये के भुगतान और 3,500 रुपये के जुर्माना के लिए नोटिस भेजा है।",
@@ -254,15 +254,15 @@ ubsApp.translation={
         "decisionQ14":"5 किमी आसपास के इलाकों में 3 नई किराने की दुकानें खोली गई हैं। अपने स्टोर को ज्ञात करने के लिए, आप ऐसे पैम्फलेट भेज सकते हैं जिनके लिए आपको प्रिंट और वितरित करने के लिए 1000 रुपये खर्च होंगे। इसके परिणामस्वरूप 500 से 3000 रुपये के बीच बिक्री में वृद्धि हो सकती है। क्या आप इसे करेंगे?",
         "decisionQ15":"आपकी दुकान सिम कार्ड भी बेचती है। एक ग्राहक आपको केवाईसी दस्तावेजों के बिना सिम कार्ड बेचने के लिए 2000 रुपये प्रदान करता है। क्या तुम स्वीकार करते हो?",
         
-	"decisionQ1O1":"क्या आप इंस्पेक्टर को 1000 रुपये का रिश्वत देते हैं? (Lose Reputation Points and Rs.1000)",
+	      "decisionQ1O1":"क्या आप इंस्पेक्टर को 1000 रुपये का रिश्वत देते हैं? (Lose Reputation Points and Rs.1000)",
         "decisionQ1O2":"क्या आप 1500 रुपये का जुर्माना और 1000 रुपये की दस्तावेज शुल्क का भुगतान करते हैं (Lose more money but gain Reputation points)",
         
 		
-	"decisionQ3O1":"पंजाब नेशनल बैंक से ऋण का लाभ उठाएं?(Gain 5 Reputation Points as it is always better to opt for a bank loan)",
+	      "decisionQ3O1":"पंजाब नेशनल बैंक से ऋण का लाभ उठाएं?(Gain 5 Reputation Points as it is always better to opt for a bank loan)",
         "decisionQ3O2":"दोस्त से पैसे ले लो?(Lose 5 reputation points. Always better to opt for an official loan)",
         "decisionQ3O3":"एक अनधिकृत डीलर से पैसे ले लो?(Lose 10 reputation points. Too many risks. Opt for official loan)",
         
-	"decisionQ4O1":"क्या आप कर और जुर्माना अदा करेंगे? (Lose tax amount but gain reputation points)",
+	      "decisionQ4O1":"क्या आप कर और जुर्माना अदा करेंगे? (Lose tax amount but gain reputation points)",
         "decisionQ4O2":"क्या आप इसे अनदेखा करेंगे।(Lose 30 Reputation Points)",
         "decisionQ4O3":"क्या आप 5000 रुपये के कर अधिकारी को रिश्वत देंगे?(Lose 20 reputation points and Rs. 5000)",
 
@@ -270,10 +270,10 @@ ubsApp.translation={
         "decisionQ6O2":"पारंपरिक मशीन(Balance reduces by Rs. 500 and Reputation Points decrease by 5)",
         
 	
-	"decisionQ11O1":"क्या आप पुलिस को 100 रुपये रिश्वत देते हैं और डिलीवरी के लिए भागते हैं।(Lose Reputation Points and Rs. 100)",
+	      "decisionQ11O1":"क्या आप पुलिस को 100 रुपये रिश्वत देते हैं और डिलीवरी के लिए भागते हैं।(Lose Reputation Points and Rs. 100)",
         "decisionQ11O2":"पुलिस स्टेशन जाकर 500 रुपये का जुर्माना अदा करें और डिलीवरी के लिए देर हो जाओ(Lose Rs. 500 but gain reputation points)",
         
-	//Insurance
+	      //Insurance
 		
         "insuranceType":"बीमा प्रकार का चयन करें:",
         "Insurance":"बीमा",
@@ -286,15 +286,15 @@ ubsApp.translation={
         "buy":"खरीदें",
         "cancel":"रद्द करना",
         "cash":"कैश",
-	"Cash":"कैश",
+	      "Cash":"कैश",
         "cheque":"चेक",
         "mode":"भुगतान का प्रकार :",
         
-	"convertTitle":"कन्वर्ट",
+	      "convertTitle":"कन्वर्ट",
         "quizTitle":"प्रश्नोत्तरी",
 	
-	//luck
-	"luckQuestion1":"स्क्रैच कार्ड कैश पुरस्कार: 500 रुपये",
+	      //luck
+	      "luckQuestion1":"स्क्रैच कार्ड कैश पुरस्कार: 500 रुपये",
         "luckQuestion2":"स्क्रैच कार्ड कैश पुरस्कार: 100 रुपये",
         "luckQuestion3":"गर्मियों में बेचा अतिरिक्त आइसक्रीम। लाभ: रुपये 2500 ",
         "luckQuestion4":"बिजली कटौती। दूध खराब हो गया। 1800 रुपये की सूची खो दी।",
@@ -352,7 +352,7 @@ ubsApp.translation={
         "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
         "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
         
-	"badLuckResultPopUpBankBalance":"Oops. Rs {0} debited from your account. ",
+	      "badLuckResultPopUpBankBalance":"Oops. Rs {0} debited from your account. ",
         "badLuckResultPopUpCash":"Oops. Rs {0} debited from your account cash balance. ",
         "badLuckResultPopUpRepPt":"Oops. {0} reputation points debited from your account. ",
         "badLuckResultPopUpInv":"Oops. {0} % Inventory debited from your account. ", // percentage
@@ -365,7 +365,7 @@ ubsApp.translation={
         "redeemAdvantageCardHeader":"एडवांटेज कार्ड का उपयोग",
         "redeemAdvantageCardMessage":"1 advantage card redeemed! You have {0} advantage cards left.",
         
-	"badPaymentResultPopUpBankBalance":"Rs {0} debited from your account. ",
+	      "badPaymentResultPopUpBankBalance":"Rs {0} debited from your account. ",
         "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
         "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
         "badPaymentResultPopUpInv":"{0} % Inventory debited from your account. ", // percentage
@@ -375,17 +375,17 @@ ubsApp.translation={
         "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
         "goodPaymentResultPopUpInv":"{0} % Inventory credited to your account. ", // percentage
         
-	"paymentResultHeader":"भुगतान परिणाम",
+	      "paymentResultHeader":"भुगतान परिणाम",
 
         
 	
-	"EndGameSummary":"अंत खेल सारांश",
-	"GAMEOVER":"खेल खत्म",
+	      "EndGameSummary":"अंत खेल सारांश",
+	      "GAMEOVER":"खेल खत्म",
         "gameLogo":"images/hindi/logo.png",
-	"wowImage": "images/hindi/wow.png",
+	      "wowImage": "images/hindi/wow.png",
 	
-	// Advantage Card
-	"advantageCardTitle":"एडवांटेज कार्ड",
+	      // Advantage Card
+	      "advantageCardTitle":"एडवांटेज कार्ड",
         "reputationPointAvailableTitle":"प्रतिष्ठा अंक उपलब्ध हैं",
         "numberToConvertTitle":"कनवर्ट करने के लिए संख्या",
         "numberOfAdvantageCardTitle":"एडवांटेज कार्ड की संख्या",
@@ -396,16 +396,16 @@ ubsApp.translation={
         "You have entered more points than you have":"आपने अपने से अधिक अंक दर्ज किए हैं।",
         "validReputationPts":"14 से अधिक मान्य प्रतिष्ठा बिंदु और वर्तमान प्रतिष्ठा अंक से कम दर्ज करें",
         "LastWeek":"पिछले सप्ताह",
-	"eachPlayerNameUniqueMessage": "दो खिलाड़ी समान नहीं हो सकते हैं",
+	      "eachPlayerNameUniqueMessage": "दो खिलाड़ी समान नहीं हो सकते हैं",
 	
-	"CurrentWeek":"यह सप्ताह",
+	      "CurrentWeek":"यह सप्ताह",
         "WeeklySummary" : "साप्ताहिक सारांश",
-	//withdraw from bank
-	"withdrawFromBankTitle":"बैंक से निकालें",
+	      //withdraw from bank
+	      "withdrawFromBankTitle":"बैंक से निकालें",
         "amountToWithdrawTitle":"राशि वापस लेने के लिए",
         
-	//payment Scenarios
-	"paymentQuestion1":"अगले हफ्ते 500 रुपये का बिजली बिल देय है।",
+	      //payment Scenarios
+	      "paymentQuestion1":"अगले हफ्ते 500 रुपये का बिजली बिल देय है।",
         "paymentQuestion2":"आपको तत्काल टैक्स रिटर्न दाखिल करने की आवश्यकता है और चार्टर्ड अकाउंटेंट शुल्क 1000 रुपये है।",
         "paymentQuestion3":"इस गर्मी में अत्यधिक उपयोग के कारण रेफ्रिजरेटर टूट गया है।",
         "paymentQuestion4":"दुकान प्रवेश द्वार 800 रुपये नवीकरण की जरूरत है।",
@@ -431,9 +431,9 @@ ubsApp.translation={
         "gameFinishedForAUser": "का खेल अब खत्म हो गया है",
         "NOTICE": "सूचना",
 
-	"loadingGameMessage": "गेम लोड हो रहा है...",
+	      "loadingGameMessage": "गेम लोड हो रहा है...",
 
-	"ReadInstructions" : "निर्देश देखें",
+	      "ReadInstructions" : "निर्देश देखें",
         "StartGame" : "खेल शुरू",
         
         "instructionHeader" : "निर्देश",
@@ -445,10 +445,11 @@ ubsApp.translation={
 					    	   "बिक्री / खरीद / किस्मत / सूची जैसे कई टेम्पलेट हैं और टेम्पलेट के आधार पर कई परिदृश्य हैं।" +
 					    	   "गेम शुरू करने से पहले प्रत्येक टेम्पलेट और परिदृश्य को ध्यान से पढ़ें।" +
 					    	   "जैसे ही आप प्रगति करेंगे, आपको अपने निर्णय और उत्तरों के आधार पर पॉइंट या इनाम मिलेगा।",
-	"quizWrongAnswerHeader":"WRONG ANSWER",
-	"quizWrongAnswerMessage":"You have got wrong message!",
-	"quizRightAnswer":"RIGHT ANSWER",
-	"INVENTORYVALUE": "INVENTORY VALUE",
+
+	      "quizWrongAnswerHeader":"WRONG ANSWER",
+	      "quizWrongAnswerMessage":"You have got wrong message!",
+	      "quizRightAnswer":"RIGHT ANSWER",
+	      "INVENTORYVALUE": "INVENTORY VALUE",
         "INVENTORY" : "इनवेंटरी",
         "decisionResult": "DECISION RESULT",
         "welcome":"सुस्वागतम",
@@ -619,7 +620,7 @@ ubsApp.translation={
 		
 		
 		
-	"QuizQuestion1Option1" : "यह सुरक्षित है",
+	      "QuizQuestion1Option1" : "यह सुरक्षित है",
         "QuizQuestion1Option2" : "यह ब्याज कमाता है",
         "QuizQuestion1Option3" : "किसी भी समय पैसे निकाले जा सकते है",
         "QuizQuestion1Option4" : "उपर्युक्त सभी",
@@ -1118,7 +1119,7 @@ ubsApp.translation={
         "QuizQuestion132Option2" : "साझेदार २",
         "QuizQuestion132Option3" : "साझेदार १ और २ दोनों",
         "QuizQuestion132Option4" : "इन में से कोई नहीं",
-	"QuizQuestion133Option1" : "क्रेडिट कार्ड",
+	      "QuizQuestion133Option1" : "क्रेडिट कार्ड",
         "QuizQuestion133Option2" : "डेबिट कार्ड",
         "QuizQuestion133Option3" : "प्रीपेड कार्ड",
         "QuizQuestion133Option4" : "इन में से कोई नहीं",
@@ -1186,7 +1187,7 @@ ubsApp.translation={
         "QuizQuestion149Option2" : "मुद्रास्फीति - सामान्य स्तर पर ३ / ४ दिनों में वस्तुओं की कीमत में बढ़त",
         "QuizQuestion149Option3" : "राजनैतिक षड़यंत्र",
         "QuizQuestion149Option4" : "गेहू का उत्पादन बंद हो गया है",
-	"QuizQuestion150Option1" : "आपकी गारंटी",
+	      "QuizQuestion150Option1" : "आपकी गारंटी",
         "QuizQuestion150Option2" : "आपकी गारंटी और आप भुगतान करने में असमर्थ रहे तो बैंक गारंटी से पैसे वसूल करेगा",
         "QuizQuestion150Option3" : "आपकी गारंटी और कुछ भी भुगतान करने की जरुरत नहीं ",
         "QuizQuestion150Option4" : "औपचारिकता",
@@ -1278,7 +1279,7 @@ ubsApp.translation={
         "hasHighestScoreMessage" : "प्लेयर {{playerName}} ने उच्चतम स्कोर किया लेकिन यह अभी भी गुप्ता जी के सामान्य लाभ से कम है।",
         "salesNoItemMessage" : "बेचने के लिए सूची बहुत कम कोई वस्तु उपलब्ध नहीं है।",
         "advantageCardConvertSuccess" : "बधाई हो कि अब आपके पास {{advantageCard}} लाभ कार्ड {{reputationPoints}} प्रतिष्ठा अंक का उपयोग किया गया है।",	
-	"Jar" : "जार",
+	      "Jar" : "जार",
         "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
         "cashChanged":"Cash Changed",
         "repPointsChanged" : "Reputation Points Changed",
@@ -1344,8 +1345,8 @@ ubsApp.translation={
         "Sales99DiscountText": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
         "Sales100DiscountText": "Butter 250 gm free with 500 gm pack",
 	
-	"Kg" : "Kg",
-	"kg" : "kg",
+	      "Kg" : "Kg",
+        "kg" : "kg",
         "litre" : "litre",
         "m" : "m",
         "chocolate" : "चॉकलेट",
@@ -1470,4 +1471,5 @@ ubsApp.translation={
         "decisionQ16O2":"Pass on discount to customers. (Gain reputation points)",        
 	"This item is not available in your Inventory":"This item is not available in your Inventory",
 	
+
 }
