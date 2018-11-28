@@ -17,7 +17,6 @@ ubsApp.translation={
         "inventorySideBar":"इन्वेंटरी",
         "meritSideBar":"योग्यता",
         "Rs": "रुपये",
-        //This is where new addition started
         "inventoryTitle":"इन्वेंटरी",
         "weekTitle":"सप्ताह",
         "lastBalanceTitle":"अंतिम संतुलन",
@@ -28,10 +27,6 @@ ubsApp.translation={
         "rollIt":"घुमाओ",
         "playerTitle":"खिलाड़ी",
         "PLAYER" : "खिलाड़ी",
-
-
-    //This is where the new addition ended
-
         "enterPlayers":"खिलाड़ियों की संख्या दर्ज करें",
         "enterOfflinePlayers":"खिलाड़ियों की संख्या दर्ज करें",
         "initPageTitle":"खिलाड़ियों की संख्या चुनें",
@@ -40,22 +35,16 @@ ubsApp.translation={
         "computerRequiredTitle":"कंप्यूटर आवश्यक है?",
         "playerNameTitle":"खिलाडि",
         "diceValueTitle":"पासा मूल्य",
-
         "easy":"आसान",
         "medium":"मध्यम",
         "hard":"कठिन",
         "name":"नाम",
-
-    // Monopoly main board
-        // board footer caption
         "start":"सप्ताह पूरा",
         "purchase":"खरीद",
         "sale":"बेचना",
         "payment":"भुगतान",
         "decision":"फेसला",
         "luck":"भाग्य",
-
-
         "bankBalanceTitle":"बैंक राशि",
         "BankBalance":"बैंक राशि",
         "debtTitle":"कर्ज",
@@ -65,27 +54,20 @@ ubsApp.translation={
         "creditTitle":"श्रेय",
         "creditLimitTitle":"श्रेय सीमा",
         "nextQuestion":"अगला प्रश्न",
-
         "q1-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q1-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q1-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
-
         "q2-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q2-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q2-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
-
         "q3-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q3-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q3-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
-
         "q4-correct":"हाँ, आपने सही उत्तर दिया। आपका संतुलन बढ़ता है।",
         "q4-wrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "q4-vvwrong":"उफ़ !! आपने गलत जवाब दिया। तुमने पैसा खो दिया",
         "paymentQuestion1":"ड्राइविंग लाइसेंस नहीं होने के लिए आपको 1000 रुपये जुर्माना लगाया गया है।",
         "paymentQuestion2":"दुकान लाइसेंस नहीं होने के लिए आपको 1000 रुपये जुर्माना लगाया गया है।",
-
-
-        //new
         "validAmount":"कृपया एक वैध राशि दर्ज करें",
         "lessMoney":"केवल ₹<CurrentAmount> के लिए भुगतान किया जा रहा है। कृपया ₹<ActualAmount> का भुगतान करें।",
         "moreMoney":"₹<CurrentAmount> के लिए भुगतान किया जा रहा है। कृपया ₹<ActualAmount> का भुगतान करें।",
@@ -100,9 +82,7 @@ ubsApp.translation={
         "cashChequeMessage":"आपके पास अपर्याप्त नकद है, शेष भुगतान चेक के माध्यम से किया जाएगा",
         "cashChequeCreditMessage":"आपके पास अपर्याप्त नकद और बैंक शेष है, शेष भुगतान क्रेडिट के माध्यम से किया जाएगा",
         "chequeCreditMessage":"आपके पास अपर्याप्त बैंक शेष है, शेष भुगतान क्रेडिट के माध्यम से किया जाएगा",
-
         "itemRateDisplay":{
-
             "1":"₹ 50/kg",
             "2":"₹ 110/kg",
             "3":"₹ 80/kg",
@@ -134,9 +114,6 @@ ubsApp.translation={
             "29": "₹ 12/70gm",
             "30": "₹ 60/200gm"
         },
-
-
-        //center ScoreBoard and transfer to bank
         "payDebtTitle":"पाय डेब्ट",
         "transferToBankTitle":"ट्रांसफर कैश तो बैंक ",
         "payment":"भुगतान",
@@ -150,8 +127,6 @@ ubsApp.translation={
         "debtAmountTitle":"डेब्ट राशि",
         "cancelTitle":"कैंसिल",
         "withdrawTitle":"विथड्रॉ",
-
-        //purchase
         "amountToPayTitle":"राशि तो पाय",
         "amountToTransferTitle":"राशि तो ट्रांसफर",
         "modeOfPaymentTitle":"भुगतान का प्रकार",
@@ -171,9 +146,6 @@ ubsApp.translation={
         "noThanksTitle":"रद्द",
         "or":"या",
         "cheque":"चेक",
-
-        //Sales
-
         "receiptHeading":"सुपर मार्केट रसीद",
         "receiptGen":"किराने का बिल",
         "Order":"किराना सूची",
@@ -198,8 +170,6 @@ ubsApp.translation={
         "hasWon" : "जीता है",
         "Shampoo":"शैम्पू",
         "Detergent":"डिटर्जेंट",
-
-
         "salesResultHeader":"बिक्री परिणाम",
         "salesWrongAnswer":"गलत जवाब।",
         "salesCorrectAnswer":"सही जवाब।",
@@ -209,17 +179,13 @@ ubsApp.translation={
         "salesWrongRptpt2":"आप कोई प्रतिष्ठा अंक अर्जित नहीं करते हैं। ",
         "salesWrongRptpt3":"हालांकि यह बिक्री आपके पूरे दिन की बिक्री का प्रतिनिधित्व करती है। आपके नकद शेष राशि में ₹ {{cashincreased}} क्रेडिटिंग। <br> क्या आपको समस्या को हल करने के बारे में जानने के लिए किसी भी मदद की ज़रूरत है?",
         "salesTimeOut": "समय पूर्ण हुआ! आपकी प्रतिष्ठा अंक 4 से कम हो जाते हैं।",
-
         "sales80DiscountMsg" : "3 साबुन खरीदें और चौथा 50% छूट पर प्राप्त करें",
-        //Decision
         "invVal":"प्रतिष्ठा अंक",
         "repPoints":"इन्वेंटरी मूल्य",
         "Decision":"निर्णय",
         "questionDecisionInsurance":"एक बीमा सलाहकार आपको व्यापक दुकान बीमा प्रदान कर रहा है जिसमें आग, चोरी और प्राकृतिक आपदाएं शामिल हैं।<br>प्रीमियम: बीमा कवर के आधार पर 15000 रुपये और 24,000 रुपये के बीच<br>बीमित राशि: 300000 और 500000 के बीच|<br>क्या आप यह बीमा खरीदना चाहेंगे?",
         "yes":"हाँ",
         "no":"नहीं",
-
-
         "decisionQ1":"खाद्य निरीक्षक आपकी दुकान पर जाता है और यह पाया जाता है कि आपके पास कुछ उत्पाद हैं जो अभी भी बिक्री के लिए रखे गए हैं। खाद्य निरीक्षक आपत्ति उठाता है। वह दुकान दस्तावेजों के लिए पूछता है। आपके पास सभी दस्तावेज नहीं हैं।",
         "decisionQ2":"पिछले साल भारी बारिश के दौरान, आपके क्षेत्र में भारी बाढ़ और पानी भरने की वजह से आपकी दुकान में खाद्य पदार्थों का आंशिक या पूरा नुकसान हुआ। पड़ोसी दुकानों में से कुछ भी प्रभावित हुए थे। आपका बीमा एजेंट आपकी पॉलिसी खरीदने के लिए आया है? प्रीमियम लागत 3000 रुपये से 6800 रुपये प्रति वर्ष के बीच होगी। क्या आप इसे खरीद लेंगे?",
         "decisionQ3":"आपको अपने स्टोर में टूटी हुई छत की मरम्मत के लिए धन की आवश्यकता है। छत की मरम्मत की लागत 10000 रुपये है। क्या आप -",
@@ -243,123 +209,92 @@ ubsApp.translation={
         "decisionQ18O1":"Start selling prescription medicine even though you don't have a license",
         "decisionQ18O2":"Do not sell as it is illegal",
         "decisionQ18O3":"Secretly sell only to regular customers",
-
         "decisionQ19":"During shop closing time you find there are many sandwiches unsold",
         "decisionQ19O1":"Put them in freezer and sell tomorrow. (Lose reputation points)",
         "decisionQ19O2":"Throw them away and incur loss of Rs. 250 (Gain reputation points but lose Rs. 250)",
         "decisionQ19O3":"Give them away to the nearest charity shelter. (Gain reputation points)",
-
         "decisionQ20":"Customer asks help to carry items to home",
         "decisionQ20O1":"Tell customer the sale value is low so no help",
         "decisionQ20O2":"Close shop for half an hour and help - Loss of business worth Rs.1000",
         "decisionQ20O3":"Deliver after shop closes",
-
         "decisionQ21":"Purchase swipe machine for Rs. 3000?",
         "decisionQ21O1":"Yes (Spend Rs. 3000 but gain reputation points)",
         "decisionQ21O2":" No (Lose reputation points)",
-
         "decisionQ22":"Incur charges of 2% on card transactions resulting in loss of Rs. 500",
         "decisionQ22O1":"You pass on the charge to customers (Lose Reputation Points)",
         "decisionQ22O2":"You absorb the charge as customers always spend more on card(Lose Rs. 500 but gain Reputation Points)",
-
         "decisionQ23":"Regular customer has Rs. 150 less in cash for a bill of Rs. 1000",
         "decisionQ23O1":"Only sell them goods worth Rs. 850",
         "decisionQ23O2":"Make a note and ask customer to pay during next visit",
-
         "decisionQ24":"There is a shortage of milk in the market but you have 100 packets",
         "decisionQ24O1":"Hike up price and make Rs. 1000 extra (Gain Rs. 1000 but lose Reputation Points)",
         "decisionQ24O2":"Sell at usual price (Gain Reputation points)",
         "decisionQ24O3":"Sell until break-even and give the rest to the needy (Gain Reputation points)",
-
         "decisionQ25":"Nebouring shop charges Re. 1 extra for cold water bottles",
         "decisionQ25O1":"Advise the shop next door to not charge to avoid reporting to authorities",
         "decisionQ25O2":"Tell your customers to not go to that shop",
         "decisionQ25O3":"You also start charging",
-
         "decisionQ26":"Unsold sandwiches at shop closing time",
         "decisionQ26O1":"Put them in freezer and sell the next day. (Lose Reputation points)",
         "decisionQ26O2":"Throw them away. (Lose Rs. 250 but gain reputation points)",
         "decisionQ26O3":"Give them away to the nearest charity shelter on the same day (Gain Reputation points)",
-
         "decisionQ27":"Received fake note of Rs. 2000 from an unknown customer",
         "decisionQ27O1":"Report and hand in the note to the bank (Lose money but gain reputation points)",
         "decisionQ27O2":"Try and pass it on unknowingly to another customer (Lose reputation points)",
-
         "decisionQ28":"Bird flu spreading in area",
         "decisionQ28O1":"Discard all stock of eggs (Lose Rs. 3500, but gain reputation points)",
         "decisionQ28O2":"Keep the stock and sell without informing customers (Earn profit on eggs but Lose reputation points)",
-
         "decisionQ29":"No stock of dal anywhere except your shop",
         "decisionQ29O1":"Increase dal price by 50% and earn profit of Rs. 1000 (Lose reputation points)",
         "decisionQ29O2":"Sell at same price (Gain reputation points)",
-
         "decisionQ30":"Festival coming up. Purchase extra food items worth Rs. 5000 and hope to earn extra profit between (10 - 50%)",
         "decisionQ30O1":"Buy extra items",
         "decisionQ30O2":"Do nothing. Continue as usual",
-
         "decisionQ31":"Good Sales.Extra money in the bank",
         "decisionQ31O1":"Put extra money into a Fixed deposit that earns 6% interest (Gain reputation points - High)",
         "decisionQ31O2":"Pay bonus to employees and take extra salary for the month (Gain reputation points - Low)",
         "decisionQ31O3":"Do Nothing in case you need the money (Lose reputation points)",
-
         "decisionQ32":"Aunt gifts business Rs. 1,00,000",
         "decisionQ32O1":"Invest in FD with 8% Simple Interest for 1 year (Safe with liquidity)",
         "decisionQ32O2":"Invest in FD with 6% Compound interest for 1 year (Safe, higher gains)",
         "decisionQ32O3":"Invest in a friend's scheme that assures of 25% growth (Risky)",
-
         "decisionQ33":"Customers come to the shop without money",
         "decisionQ33O1":"Introduce monthly account books (Retains customers but Items could be left out resulting in minor losses)",
         "decisionQ33O2":"Let regular customers buy on credit (Risk of forgetting to collect money)",
         "decisionQ33O3":"Only sell to those who have money (Risk of losing customers)",
-
         "decisionQ34":"Electricity shortage",
         "decisionQ34O1":"Buy invertor. Cost Rs. 5000",
         "decisionQ34O2":"Use candles in night",
-
         "decisionQ1O1":"क्या आप इंस्पेक्टर को 1000 रुपये का रिश्वत देते हैं? (Lose Reputation Points and Rs.1000)",
         "decisionQ1O2":"क्या आप 1500 रुपये का जुर्माना और 1000 रुपये की दस्तावेज शुल्क का भुगतान करते हैं (Lose more money but gain Reputation points)",
-
         "decisionQ3O1":"पंजाब नेशनल बैंक से ऋण का लाभ उठाएं?(Gain 5 Reputation Points as it is always better to opt for a bank loan)",
         "decisionQ3O2":"दोस्त से पैसे ले लो?(Lose 5 reputation points. Always better to opt for an official loan)",
         "decisionQ3O3":"एक अनधिकृत डीलर से पैसे ले लो?(Lose 10 reputation points. Too many risks. Opt for official loan)",
-
         "decisionQ4O1":"क्या आप कर और जुर्माना अदा करेंगे? (Lose tax amount but gain reputation points)",
         "decisionQ4O2":"क्या आप इसे अनदेखा करेंगे।(Lose 30 Reputation Points)",
         "decisionQ4O3":"क्या आप 5000 रुपये के कर अधिकारी को रिश्वत देंगे?(Lose 20 reputation points and Rs. 5000)",
-
         "decisionQ5O1":"Yes (Lose Rs. 100 but gain Reputation Points)",
         "decisionQ5O2":"No (Lose Reputation Points)",
-
         "decisionQ6O1":"इलेक्ट्रॉनिक मशीन(Balances reduces by Rs. 1200 but Reputation Points increase by 10)",
         "decisionQ6O2":"पारंपरिक मशीन(Balance reduces by Rs. 500 and Reputation Points decrease by 5)",
-
         "decisionQ7O1":"Yes (Balances reduces but reputation points increase)",
         "decisionQ7O2":"No (Reputation points decrease)",
-
         "decisionQ9O1":"Shut shop, look after him but risk loss of business worth Rs. 7000 (Gain Reputation points)",
         "decisionQ9O2":"Do not go (Lose Reputation Points but gain Rs. 7000)",
-
         "decisionQ10O1":"Sell on discount and earn a profit of Rs. 500 (Earn Rs. 500 but lose reputation points)",
         "decisionQ10O2":"Do not sell (Gain Reputation Points)",
-
         "decisionQ11O1":"क्या आप पुलिस को 100 रुपये रिश्वत देते हैं और डिलीवरी के लिए भागते हैं।(Lose Reputation Points and Rs. 100)",
         "decisionQ11O2":"पुलिस स्टेशन जाकर 500 रुपये का जुर्माना अदा करें और डिलीवरी के लिए देर हो जाओ(Lose Rs. 500 but gain reputation points)",
-
         "decisionQ12O1":"Buy 1 service for Rs. 750 (Balance reduces by Rs. 750 but lose Reputation Points)",
         "decisionQ12O2":"Buy 3 services and get one free (Balance reduces by Rs. 2250 but gain reputation points",
-
         "decisionQ13O1":"Buy stabilizer for Rs. 3000 and save stock damage worth Rs. 700 (Spend money but gain reputation points)",
         "decisionQ13O2":"Don't buy (Lose inventory worth Rs. 700 and lose reputation points)",
-
         "decisionQ14O1":"Spend (Calculated risk could earn you some money and you gain reputation points)",
         "decisionQ14O2":"Don't spend (No impact)",
-
         "decisionQ15O1":"Yes (Balance increases by Rs. 2000 but lose Reputation points)",
         "decisionQ15O2":"No (Gain reputation points)",
-
         "decisionQ16O1":"Do not pass on discount to customers. (Earn money but lose reputation points)",
         "decisionQ16O2":"Pass on discount to customers. (Gain reputation points)",
-
         "insuranceType":"बीमा प्रकार का चयन करें:",
         "Insurance":"बीमा",
         "insurance1":"चोरी का बीमा",
@@ -386,7 +321,6 @@ ubsApp.translation={
         "nextPlayerImage" : "images/hindi/nextplayer.png",
         "GAMEOVER":"खेल खत्म",
         "gameLogo":"images/hindi/logo.png",
-        //luck scenario
         "luckQuestion1":"स्क्रैच कार्ड कैश पुरस्कार: 500 रुपये",
         "luckQuestion2":"स्क्रैच कार्ड कैश पुरस्कार: 100 रुपये",
         "luckQuestion3":"गर्मियों में बेचा अतिरिक्त आइसक्रीम। लाभ: रुपये 2500 ",
@@ -444,8 +378,6 @@ ubsApp.translation={
         "luckQuestion55":"Change to Hindi:Government increased the prices on  Wheat. You lose ₹ 100 per week",
         "luckQuestion56":"Change to Hindi:Bank increased the interest rate on your fixed deposit",
         "luckQuestion57":"Change to Hindi:Bank decreased the interest rate on your fixed deposit",
-
-
         "badLuckResultPopUpBankBalance":"Oops. Rs {0} debited from your account. ",
         "badLuckResultPopUpCash":"Oops. Rs {0} debited from your account cash balance. ",
         "badLuckResultPopUpRepPt":"Oops. {0} reputation points debited from your account. ",
@@ -458,7 +390,6 @@ ubsApp.translation={
         "badLuckResultHeader":"खराब भाग्य परिणाम",
         "redeemAdvantageCardHeader":"एडवांटेज कार्ड का उपयोग",
         "redeemAdvantageCardMessage":"1 advantage card redeemed! You have {0} advantage cards left.",
-
         "badPaymentResultPopUpBankBalance":"Rs {0} debited from your account. ",
         "badPaymentResultPopUpCash":"Rs {0} debited from your account cash balance. ",
         "badPaymentResultPopUpRepPt":"{0} reputation points debited from your account. ",
@@ -469,12 +400,8 @@ ubsApp.translation={
         "goodPaymentResultPopUpRepPt":"{0} reputation points credited to your account. ",
         "goodPaymentResultPopUpInv":"{0} % Inventory credited to your account. ", // percentage
         "paymentResultHeader":"भुगतान परिणाम",
-
         "convertTitle":"कन्वर्ट",
         "quizTitle":"प्रश्नोत्तरी",
-
-
-        // Advantage Card
         "advantageCardTitle":"एडवांटेज कार्ड",
         "reputationPointAvailableTitle":"प्रतिष्ठा अंक उपलब्ध हैं",
         "numberToConvertTitle":"कनवर्ट करने के लिए संख्या",
@@ -485,14 +412,8 @@ ubsApp.translation={
         "enterInMultipleOf15":"कृपया 15 के एकाधिक में नंबर दर्ज करें।",
         "You have entered more points than you have":"आपने अपने से अधिक अंक दर्ज किए हैं।",
         "validReputationPts":"14 से अधिक मान्य प्रतिष्ठा बिंदु और वर्तमान प्रतिष्ठा अंक से कम दर्ज करें",
-
-
-        //withdraw from bank
-
         "withdrawFromBankTitle":"बैंक से निकालें",
         "amountToWithdrawTitle":"राशि वापस लेने के लिए",
-    
-        //payment Scenarios
         "paymentQuestion1":"अगले हफ्ते 500 रुपये का बिजली बिल देय है।",
         "paymentQuestion2":"आपको तत्काल टैक्स रिटर्न दाखिल करने की आवश्यकता है और चार्टर्ड अकाउंटेंट शुल्क 1000 रुपये है।",
         "paymentQuestion3":"इस गर्मी में अत्यधिक उपयोग के कारण रेफ्रिजरेटर टूट गया है।",
@@ -520,11 +441,9 @@ ubsApp.translation={
         "NOTICE": "सूचना",
         "eachPlayerNameUniqueMessage": "दो खिलाड़ी समान नहीं हो सकते हैं",
         "loadingGameMessage": "गेम लोड हो रहा है...",
-
         "ReadInstructions" : "निर्देश देखें",
         "StartGame" : "खेल शुरू",
         "Back" : "Back",
-
         "instructionHeader" : "निर्देश",
         "instructionsMessage" : "खेल निर्देश / निर्देश" +
 					    	   "यदि आप खेल के लिए नए हैं, तो प्राथम द्वारा निर्धारित गाइड मिशन का पालन करने की अनुशंसा की जाती है" +
@@ -534,12 +453,10 @@ ubsApp.translation={
 					    	   "बिक्री / खरीद / किस्मत / सूची जैसे कई टेम्पलेट हैं और टेम्पलेट के आधार पर कई परिदृश्य हैं।" +
 					    	   "गेम शुरू करने से पहले प्रत्येक टेम्पलेट और परिदृश्य को ध्यान से पढ़ें।" +
 					    	   "जैसे ही आप प्रगति करेंगे, आपको अपने निर्णय और उत्तरों के आधार पर पॉइंट या इनाम मिलेगा।",
-		"INVENTORYVALUE": "INVENTORY VALUE",
+	"INVENTORYVALUE": "INVENTORY VALUE",
         "INVENTORY" : "इनवेंटरी",
         "decisionResult": "DECISION RESULT",
         "welcome":"सुस्वागतम",
-       
-    	/******************************************Quiz key Start******************************************************************/
         "QuizQuestion1" : "हमें अपनी बचत बैंकों में रखनी चाहिए क्योंकि",
         "QuizQuestion2" : "बैंक इनके सम्मुख ऋण नहीं देता",
         "QuizQuestion3" : "रु.१००/- की नोट पर किसके हस्ताक्षर होते है?",
@@ -695,7 +612,6 @@ ubsApp.translation={
         "QuizQuestion153" : "क्रेडिट कार्ड चोरी होने पर आपको क्या करना चाहिए?",
         "QuizQuestion154" : "निमालिखित में से किसे साझा नहीं करना चाहिए?",
         "QuizQuestion155" : "बैंक की पासबुक पर उल्लिखित पता, पता प्रमाण के रूप में इस्तेमाल किया जा सकता है अगर ---- ",
-
         "QuizQuestion1Option1" : "यह सुरक्षित है",
         "QuizQuestion1Option2" : "यह ब्याज कमाता है",
         "QuizQuestion1Option3" : "किसी भी समय पैसे निकाले जा सकते है",
@@ -1195,7 +1111,7 @@ ubsApp.translation={
         "QuizQuestion132Option2" : "साझेदार २",
         "QuizQuestion132Option3" : "साझेदार १ और २ दोनों",
         "QuizQuestion132Option4" : "इन में से कोई नहीं",
-		"QuizQuestion133Option1" : "क्रेडिट कार्ड",
+	"QuizQuestion133Option1" : "क्रेडिट कार्ड",
         "QuizQuestion133Option2" : "डेबिट कार्ड",
         "QuizQuestion133Option3" : "प्रीपेड कार्ड",
         "QuizQuestion133Option4" : "इन में से कोई नहीं",
@@ -1263,7 +1179,7 @@ ubsApp.translation={
         "QuizQuestion149Option2" : "मुद्रास्फीति - सामान्य स्तर पर ३ / ४ दिनों में वस्तुओं की कीमत में बढ़त",
         "QuizQuestion149Option3" : "राजनैतिक षड़यंत्र",
         "QuizQuestion149Option4" : "गेहू का उत्पादन बंद हो गया है",
-		"QuizQuestion150Option1" : "आपकी गारंटी",
+	"QuizQuestion150Option1" : "आपकी गारंटी",
         "QuizQuestion150Option2" : "आपकी गारंटी और आप भुगतान करने में असमर्थ रहे तो बैंक गारंटी से पैसे वसूल करेगा",
         "QuizQuestion150Option3" : "आपकी गारंटी और कुछ भी भुगतान करने की जरुरत नहीं ",
         "QuizQuestion150Option4" : "औपचारिकता",
@@ -1287,14 +1203,9 @@ ubsApp.translation={
         "QuizQuestion155Option2" : "बैंक की पासबुक के पता का कोई महत्व नहीं है",
         "QuizQuestion155Option3" : "अ) तथा ड) दोनों",
         "QuizQuestion155Option4" : "के.वाय.सी के दौरान पता एक महत्वपूर्ण घटक है",
-
-
         "QuizTemplateType" : "quiz",
         "QuizQuestionHeading" : "GST",
         "QuizHelpPageName" : "quizHelp",
-
-        /******************************************Quiz key End******************************************************************/
-
         "quizCorrectAnswerMessage":"You earned {0} Reputation Points for answering that question!",
         "quizCorrectAnswerHeading":"Correct Answer",
         "quizWrongAnswerMessage":"You do not earn any reputation points for this question.<br> Do you need help on this topic?",
@@ -1326,11 +1237,7 @@ ubsApp.translation={
         "salesNoItemMessage" : "बेचने के लिए सूची बहुत कम कोई वस्तु उपलब्ध नहीं है।",
         "advantageCardConvertSuccess" : "बधाई हो कि अब आपके पास {{advantageCard}} लाभ कार्ड {{reputationPoints}} प्रतिष्ठा अंक का उपयोग किया गया है।",
         "decisionBankBalanceTitle":"BANK-BALANCE",
-
-
-
         "sale": "बिक्री",
-
         "itemTable":{
             "1":"गेहूँ",
             "2":"चावल",
@@ -1362,10 +1269,7 @@ ubsApp.translation={
             "28":"NuttyCocoa",
             "29":"Noodles",
             "30":"Jam"
-            
-
         },
-
         "Sales76DiscountText": "50% on Wheat",
         "Sales77DiscountText": "Buy 500 ml and get 500 ml free!",
         "Sales78DiscountText": "10% on total",
@@ -1388,9 +1292,6 @@ ubsApp.translation={
         "Sales98DiscountText": "Get half dozen egg free with every dozen",
         "Sales99DiscountText": "Buy 2 Chocolate get 1 free and get 20% off on Jam",
         "Sales100DiscountText": "Butter 250 gm free with 500 gm pack",
-
-
-
         "decisionResultMessageInCaseOfPamphletOrFestival":"Congratulations. You earned {0} Reputation Points. You also spent Rs. {1} and earned business for Rs. {2}",
         "Jar" : "जार",
         "Sales91DiscountText" : "Get 15% off on bread's if you buy more than 2 loaves of bread",
@@ -1399,7 +1300,6 @@ ubsApp.translation={
         "inventoryChanged" : "Inventory Percent Changed",
         "inventoryValueChanged" : "Inventory Value Changed",
         "bankBalanceChanged" : "Bank Balance changed",
-
         "kg" : "kg",
         "Kg" : "Kg",
         "litre" : "litre",
@@ -1412,7 +1312,5 @@ ubsApp.translation={
         "gm" : "gm",
         "broom" : "broom",
         "L" : "L",
-        "dozens" : "dozens",
-
-
+        "dozens" : "dozens"
 }
