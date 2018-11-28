@@ -451,7 +451,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 /*'       <span id ="quizQuestionNo">Question <span id="quizQuestionNumber"></span></span>'+*/
 '       <div id="quizOptions">'+
 '           {{#each options}}'+
-'           <div class="quizOptionsStyle">{{optionValue}}</div>'+
+'           <label for="{{id}}" class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}" />{{optionValue}}</label>'+
 '           {{/each}}'+
 '       </div>'+
 '       <div id="quizOk"><input type="submit" style="color:green" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\', \'{{helpPageName}}\',\'{{entryPoint}}\', \'{{luckScenarioName}}\')" value={{okTitle}}></div>'+

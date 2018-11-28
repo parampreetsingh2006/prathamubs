@@ -68,7 +68,7 @@ body {
     padding: 2% 3%;
     margin: auto;
     margin-top: 10%;
-    max-height: 80vh;
+    max-height: 80vmax;
     overflow: auto;
   }
 .imageContainer{
