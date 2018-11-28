@@ -29,7 +29,7 @@ ubsApp.helpConfig={
                     "templateId":4,
                     "templateType":"static",
                     "id":"salesHelpAnswer",
-                    "style":"position:absolute;background-repeat: no-repeat;",
+                    "style":"position:absolute;background-repeat: no-repeat; overflow:auto; height:{{screenHeight}}px",
                     "src":"{{salesAnswerHelp}}"
                 },
                   {
@@ -238,7 +238,7 @@ ubsApp.helpConfig={
                     "templateId":4,
                     "templateType":"static",
                     "id":"salesHelpAnswer",
-                    "style":"position:absolute;background-repeat: no-repeat;",
+                    "style":"position:absolute;background-repeat: no-repeat;  overflow:auto; height:{{screenHeight}}px",
                     "src":"{{quizGeneralHelp}}"
             },
             {
@@ -257,7 +257,7 @@ ubsApp.helpConfig={
                 "templateId":5,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;background-repeat: no-repeat;color:white;",
+                "style":"position:absolute;background-repeat: no-repeat;color:white;  overflow:auto; height:{{screenHeight}}px",
                 "src":"{{LUCK HELP}}"
             },
             {
@@ -300,7 +300,7 @@ ubsApp.helpConfig={
                 "templateId":3,
                 "templateType":"static",
                 "id":"helpContent",
-                "style":"position:absolute;background-repeat: no-repeat;color:white;",
+                "style":"position:absolute;background-repeat: no-repeat;  overflow:auto; height:{{screenHeight}}px",
                 "src":"{{DECISION HELP}}"
             },
             {
