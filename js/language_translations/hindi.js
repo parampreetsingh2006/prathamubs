@@ -1477,6 +1477,8 @@ ubsApp.translation={
     "decisionQ16O1":"ग्राहकों को छूट न दें। (पैसा कमाने लेकिन प्रतिष्ठा अंक खोना)",
     "decisionQ16O2":"ग्राहकों को छूट दें। (प्रतिष्ठा अंक प्राप्त करें)",
 	"This item is not available in your Inventory":"यह आइटम आपकी इन्वेंटरी में उपलब्ध नहीं है",
+	"Total" : "पूरा",
+
 
 	
 

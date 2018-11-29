@@ -1431,6 +1431,7 @@ ubsApp.translation={
         "mobileBankingVideo":"videos/mobileBanking.mp4",
         "Discount" : "Discount",
         "2AndHalf" : "2 and half",
-         "OneAndHalf" : "1 and 1/2",
+        "OneAndHalf" : "1 and 1/2",
+        "Total" : "Total",
     }
 

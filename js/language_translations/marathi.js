@@ -1401,5 +1401,7 @@ ubsApp.translation={
               "mobileBankingVideo":"videos/mobileBanking_marathi.mp4",
               "Discount":"सूट",
               "2AndHalf" : "अडीच(2.5)",
-              "OneAndHalf" : "दीद(1.5)",              
+              "OneAndHalf" : "दीद(1.5)",
+              "Total" : "बेरीज",
+
     }

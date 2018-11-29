@@ -10,6 +10,7 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
     templateConfig.sale = ubsApp.getTranslation("sale");
     templateConfig.Discount = ubsApp.getTranslation("Discount");
     templateConfig.PLAYER = ubsApp.getTranslation("PLAYER");
+    templateConfig.Total = ubsApp.getTranslation("Total");
 
     ubsApp.startRecordingTimer(templateConfig);
     tempVar.html += ubsOrdertemplate(templateConfig);
