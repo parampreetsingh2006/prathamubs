@@ -455,7 +455,7 @@ ubsApp.translation={
 	      "quizRightAnswer":"RIGHT ANSWER",
 	      "INVENTORYVALUE": "INVENTORY VALUE",
         "INVENTORY" : "इनवेंटरी",
-        "decisionResult": "DECISION RESULT",
+        "decisionResult": "निर्णय परिणाम",
         "welcome":"सुस्वागतम",
 
 	
@@ -1256,7 +1256,6 @@ ubsApp.translation={
         "quizWrongAnswerMessage":"You do not earn any reputation points for this question.<br> Do you need help on this topic?",
         "quizWrongAnswerHeading":"Wrong Answer",
         "quizAllCorrectAnswers":"Congratulations and well done! You earned {0} reputation points!",
-        "wowImage":"images/wah.png",
         "quizPartialCorrectMessage":"You earned {0} reputation points for taking that quiz",
         "decisionGainReptPointsLostBalance": " You earned {0} Reputation Points. However you lost ₹ {1}",
         "decisionGainBalanceLoseRptPts": "You earned ₹ {0}. However you lost {1} Reputation Points",
