@@ -12,6 +12,7 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
     templateConfig.PLAYER = ubsApp.getTranslation("PLAYER");
     templateConfig.Total = ubsApp.getTranslation("Total");
 
+
     ubsApp.startRecordingTimer(templateConfig);
     tempVar.html += ubsOrdertemplate(templateConfig);
     ubsApp.raiseAudioEvent(document.getElementById('templateContent'),'spaceLanding');
@@ -31,6 +32,51 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
                         });
     }
 
+    setTimeout(function() { ubsApp.bindSaleTabEvents();}, 2000);
+
+}
+
+ubsApp.bindSaleTabEvents = function() {
+    $(".saleInputButtons").on("keydown",function(event){
+
+               let nextIndex = parseInt(event.target.id[event.target.id.length - 1]) + 1;
+               if (event.keyCode == 9) {
+                    event.preventDefault();
+                   if($('#input' + nextIndex).length) {
+                         if(!$('#input' + nextIndex).is(':disabled')) {
+                            $('#input' + nextIndex).focus();
+                         } else {
+                              nextIndex++;
+                              var gotInput = false;
+                            while($('#input' + nextIndex).length) {
+                                if(!$('#input' + nextIndex).is(':disabled')) {
+                                    $('#input' + nextIndex).focus();
+                                    gotInput = true;
+                                    break;
+                                }
+                                nextIndex++;
+
+                            }
+
+                            if(!gotInput) {
+                                if ($('#discount').length) {
+                                                        $('#discount').focus();
+                                                   }else {
+                                                    $('#receiptTotal').focus();
+                                                   }
+                            }
+                         }
+
+
+                   } else if ($('#discount').length) {
+                        $('#discount').focus();
+                   }else {
+                    $('#receiptTotal').focus();
+                   }
+
+               }
+
+        });
 }
 ubsApp.validateAmount = function() {
     var item = document.getElementsByName('amt');
@@ -235,7 +281,7 @@ ubsApp.selectAvailableItems = function(config){
 
 		if(config.order[i].exclude==false){
 		    config.order[i].no = orderNo;
-		    orderNo++;
+             orderNo++;
 			val+=config.order[i].quantity * ubsApp.salesConfig.itemRate[x];
 			if(config.order[i].discountOnItem) {
             	    if(config.order[i].discountOnItem.type == 1) {
