@@ -453,12 +453,19 @@ ubsApp.translation={
         "badPaymentResultPopUpCash":"रु {0} तुमच्या रोखतून वजा केली आहे. ",
         "badPaymentResultPopUpRepPt":"{0} प्रतिष्ठा गुण गमवले आहेत. ",
         "badPaymentResultPopUpInv":"{0} % इन्वेंटरी तुमच्या खात्यातून वजा केली आहे.. ",
-        "badPaymentResultPopUpInv2" : "आपले खाते शिल्लक आता शून्य असल्याने आपण आपल्या खात्यातून संपूर्ण सूची गमावाल.",
+        "badPaymentResultPopUpInv2" : "आपले खाते शिल्लक आता शून्य असल्याने आपण आपल्या खात्यातून संपूर्ण इन्वेंटरी गमावाल.",
         "goodPaymentResultPopUpBankBalance":"रु {0} तुमच्या खात्यात जमा झाली आहे. ",
         "goodPaymentResultPopUpCash":"रु {0} तुमच्या रोखतून जमा झाली आहे. ",
         "goodPaymentResultPopUpRepPt":"{0} प्रतिष्ठा गुण मिळवले आहेत !. ",
         "goodPaymentResultPopUpInv":"{0} % इन्वेंटरी तुमच्या खात्यातून जमा केली आहे. ",
         "paymentResultHeader":"पैसे भरणे परिणाम",
+
+        "salesNoItemMessage" : "इन्वेंटरी खूप कमी आहे म्हणून विक्री करण्यासाठी कोणतीही वस्तू उपलब्ध नाहीत.",
+        "advantageCardConvertSuccess" : "अभिनंदन, आपल्याकडे आता {{advantageCard}} अॅडव्हान्टेज कार्ड (र्), {{reputationPoints}} प्रतिष्ठा बिंदू वापरली गेली आहेत.",
+        "decisionBankBalanceTitle":"बँक-बॅलन्स",
+        "decisionResultMessageInCaseOfPamphletOrFestival":"अभिनंदन आपण {0} प्रतिष्ठा पॉइंट अर्जित केले. आपण {1} रुपये खर्च केले आणि {2} रुपये कमावले आहेत",
+        "decisionSameMessaage":"आपले प्रतिष्ठेचे बिंदू आणि बँक बॅलन्स तेच राहतात",
+
 
         "convertTitle":"रुपांतर",
         "quizTitle":"प्रश्नमंजुषा",
