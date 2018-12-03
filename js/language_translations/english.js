@@ -1433,5 +1433,8 @@ ubsApp.translation={
         "2AndHalf" : "2 and half",
         "OneAndHalf" : "1 and 1/2",
         "Total" : "Total",
+        "guptaJiProfit" : "Gupta ji profit",
+        "yourProfit" : "your profit",
+        "PLAYAGAIN" : "PLAY AGAIN",
     }
 

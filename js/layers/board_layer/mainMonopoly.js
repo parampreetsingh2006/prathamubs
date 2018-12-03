@@ -164,6 +164,7 @@ monopoly.renderPageforBoard = function(page) {
             }
             else if(templateType == "endGameTemplate") {
                 templateConfig = $.extend(templateConfig,ubsApp.endGameConfig);
+                templateConfig.PLAYAGAIN = ubsApp.getTranslation("PLAYAGAIN");
                 html += ubsEndGameTemplate(templateConfig);
             }
         }
@@ -742,10 +743,10 @@ ubsApp.confirmEndGame=function(){
 
 
   		if(arr[highestScoringPlayer]) {
-  		  winnerName=userArray[highestScoringPlayer].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
+  		  winnerName=userArray[highestScoringPlayer].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " " + ubsApp.getTranslation("guptaJiProfit") + " = " + harnamProjectedScore + " " +  ubsApp.getTranslation("yourProfit") + " = " + highestScore;
 
   		} else {
-  		     winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}" , userArray[highestScoringPlayer].getplayerName()) +  " gupta ji profit = " + harnamProjectedScore + " your profit = " + highestScore;
+  		     winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}" , userArray[highestScoringPlayer].getplayerName()) +  " " + ubsApp.getTranslation("guptaJiProfit") + " = " + harnamProjectedScore + " " +  ubsApp.getTranslation("yourProfit") + " = " + highestScore;
 
   		}
 

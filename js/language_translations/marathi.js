@@ -1410,5 +1410,8 @@ ubsApp.translation={
               "2AndHalf" : "अडीच(2.5)",
               "OneAndHalf" : "दीद(1.5)",
               "Total" : "बेरीज",
+              "guptaJiProfit" : "गुप्ता जीचा नफा",
+              "yourProfit" : "तुमचा नफा",
+               "PLAYAGAIN" : "परत खेळ",
 
     }
