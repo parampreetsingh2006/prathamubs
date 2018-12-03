@@ -39,7 +39,7 @@ ubsApp.translation={
         "easy":"एकदम सोपे",
         "medium":"सोपे",
         "hard":"मध्यम",
-        "name":"Name",
+        "name":"नाव",
 
         "start":"आठवडा",
         "purchase":"खरेदी",
@@ -182,9 +182,9 @@ ubsApp.translation={
         "Eggs":"अंडी",
         "Biscuits":"बिस्कीट",
         "Soap":"साबण",
-        "hasWon" : "has won",
+        "hasWon" : "जिंकला आहे",
         "Shampoo":"शॅम्पू",
-        "Detergent":"Detergent",
+        "Detergent":"डिटर्जेंट",
         "sale":"विक्री",
 
         "salesResultHeader":"विक्री परिणाम",
