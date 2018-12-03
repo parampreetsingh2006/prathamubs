@@ -585,13 +585,6 @@ monopoly.chooseLanguage=function(language){
         ubsApp.translation["screenHeight"] = screenHeight;
         ubsApp.translation["screenWidth"] = screenWidth;
 
-    	 //reinitialze the page
-   	    monopoly.intitializeTemplates();
-    	 monopoly.initializeScenarios();
-    	 ubsApp.intitializeTemplates();
-    	 ubsApp.mapTemplatetoFunction();
-    	 ubsApp.initializeUbsPages();
-    	 monopoly.initializePages();
 
     	 ubsApp.translateScenarios();
     	 ubsApp.closePopup();
@@ -983,9 +976,9 @@ ubsApp.restartGame = function() {
     monopoly.intitializeTemplates();
     monopoly.initializeScenarios();
     ubsApp.intitializeTemplates();
-	  ubsApp.mapTemplatetoFunction();
-	  ubsApp.initializeUbsPages();
-	  monopoly.initializePages();
+	ubsApp.mapTemplatetoFunction();
+	ubsApp.initializeUbsPages();
+	monopoly.initializePages();
     monopoly.renderPageforBoard(monopoly.pages.Splash);
 
     //raise Audio Event splash

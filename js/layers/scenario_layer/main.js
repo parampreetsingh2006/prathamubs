@@ -46,7 +46,13 @@ ubsApp.popupConfig = {};
 $(document).ready(function(){
 	ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
-	
+	monopoly.intitializeTemplates();
+	monopoly.initializeScenarios();
+	ubsApp.intitializeTemplates();
+	ubsApp.mapTemplatetoFunction();
+    ubsApp.initializeUbsPages();
+    monopoly.initializePages();
+
 });
 
 
@@ -299,24 +305,30 @@ ubsApp.startCurrentScenario=function(){
 
 ubsApp.translateScenarios=function(){
 	var string=JSON.stringify(ubsApp.pages);
+    var pattern = /\{{([^}]+)\}}/g;
 
-	
-	while(string.indexOf("{{")>=0){
-		let translationKey= string.substring(string.indexOf("{{") + 2,string.indexOf("}}",string.indexOf("{{")));//string.substring(string.indexOf("{{")+2,string.indexOf("}}"));
-		
-		let stringToBeReplaced="{{"+translationKey+"}}";
-		string=string.replace(stringToBeReplaced,ubsApp.translation[translationKey]);
-	}
-	ubsApp.pages=JSON.parse(string);
+	var resultString = string.replace( pattern, function replacer(match){
+        return ubsApp.getTranslation(match.substring(2,match.length - 2));
+    } );
+//	while(string.indexOf("{{")>=0){
+//		let translationKey= string.substring(string.indexOf("{{") + 2,string.indexOf("}}",string.indexOf("{{")));//string.substring(string.indexOf("{{")+2,string.indexOf("}}"));
+//
+//		let stringToBeReplaced="{{"+translationKey+"}}";
+//		string=string.replace(stringToBeReplaced,ubsApp.translation[translationKey]);
+//	}
+	ubsApp.pages=JSON.parse(resultString);
 	string=JSON.stringify(monopoly.pages);
-	while(string.indexOf("{{")>=0){
-		let translationKey= string.substring(string.indexOf("{{") + 2,string.indexOf("}}",string.indexOf("{{")));//string.substring(string.indexOf("{{")+2,string.indexOf("}}"));
-		
-		let stringToBeReplaced="{{"+translationKey+"}}";
-		string=string.replace(stringToBeReplaced,ubsApp.translation[translationKey]);
-	}
+	var resultString = string.replace( pattern, function replacer(match){
+            return ubsApp.getTranslation(match.substring(2,match.length - 2));
+        } );
+//	while(string.indexOf("{{")>=0){
+//		let translationKey= string.substring(string.indexOf("{{") + 2,string.indexOf("}}",string.indexOf("{{")));//string.substring(string.indexOf("{{")+2,string.indexOf("}}"));
+//
+//		let stringToBeReplaced="{{"+translationKey+"}}";
+//		string=string.replace(stringToBeReplaced,ubsApp.translation[translationKey]);
+//	}
 	
-	monopoly.pages=JSON.parse(string);
+	monopoly.pages=JSON.parse(resultString);
 }
 
 

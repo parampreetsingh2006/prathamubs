@@ -40,7 +40,9 @@ ubsApp.bindSaleTabEvents = function() {
     $(".saleInputButtons").on("keydown",function(event){
 
                let nextIndex = parseInt(event.target.id[event.target.id.length - 1]) + 1;
-               if (event.keyCode == 9) {
+
+
+               if (event.keyCode == 9 || event.keyCode == 13) {
                     event.preventDefault();
                    if($('#input' + nextIndex).length) {
                          if(!$('#input' + nextIndex).is(':disabled')) {
