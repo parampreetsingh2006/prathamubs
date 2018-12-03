@@ -39,7 +39,10 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
 ubsApp.bindSaleTabEvents = function() {
     $(".saleInputButtons").on("keydown",function(event){
 
-               let nextIndex = parseInt(event.target.id[event.target.id.length - 1]) + 1;
+                let nextIndex = -12323;
+                if(event.target.id != "discount") {
+                   nextIndex = parseInt(event.target.id[event.target.id.length - 1]) + 1;
+                  }
 
 
                if (event.keyCode == 9 || event.keyCode == 13) {
@@ -70,7 +73,7 @@ ubsApp.bindSaleTabEvents = function() {
                          }
 
 
-                   } else if ($('#discount').length) {
+                   } else if ($('#discount').length && event.target.id != "discount") {
                         $('#discount').focus();
                    }else {
                     $('#receiptTotal').focus();
