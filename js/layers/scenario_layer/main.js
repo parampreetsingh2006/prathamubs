@@ -46,13 +46,6 @@ ubsApp.popupConfig = {};
 $(document).ready(function(){
 	ubsApp.intitializeTemplates();
 	ubsApp.mapTemplatetoFunction();
-	monopoly.intitializeTemplates();
-	monopoly.initializeScenarios();
-	ubsApp.intitializeTemplates();
-	ubsApp.mapTemplatetoFunction();
-    ubsApp.initializeUbsPages();
-    monopoly.initializePages();
-
 });
 
 

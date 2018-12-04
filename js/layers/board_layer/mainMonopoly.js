@@ -586,7 +586,12 @@ monopoly.chooseLanguage=function(language){
         ubsApp.translation["screenHeight"] = screenHeight;
         ubsApp.translation["screenWidth"] = screenWidth;
 
-
+        monopoly.intitializeTemplates();
+        	monopoly.initializeScenarios();
+        	ubsApp.intitializeTemplates();
+        	ubsApp.mapTemplatetoFunction();
+            ubsApp.initializeUbsPages();
+            monopoly.initializePages();
     	 ubsApp.translateScenarios();
     	 ubsApp.closePopup();
     	 ubsApp.startHelp("introHelp");
