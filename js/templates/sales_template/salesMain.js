@@ -83,52 +83,58 @@ ubsApp.bindSaleTabEvents = function() {
 
         });
 }
-ubsApp.validateAmount = function() {
+ubsApp.validateAmount = function(showPopup = true) {
     var item = document.getElementsByName('amt');
     var salesSubmitButton = document.getElementById('salesSubmitButton');
 
 	for(var i=0;i<item.length;i++){
     	if(!item[i].value) {
-    	   ubsApp.raiseAudioEvent(salesSubmitButton, 'wrongAnswer');
-    	   ubsApp.openPopup({
-               "message" : "Please calculate amount for all items. Do you need Help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
-              "header" : ubsApp.getTranslation("ERROR"),
-              "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-              "imageUrl" : "",
-               'buttons' : [
-                   {
-                       'name' : ubsApp.getTranslation("yes"),
-                       'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
-                   },
+    	   if(showPopup) {
+    	     ubsApp.raiseAudioEvent(salesSubmitButton, 'wrongAnswer');
+                	   ubsApp.openPopup({
+                           "message" : "Please calculate amount for all items. Do you need Help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
+                          "header" : ubsApp.getTranslation("ERROR"),
+                          "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                          "imageUrl" : "",
+                           'buttons' : [
+                               {
+                                   'name' : ubsApp.getTranslation("yes"),
+                                   'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
+                               },
 
-                   {
-                               'name' : ubsApp.getTranslation("no"),
-                               'action': "ubsApp.closePopup();"
-                   }
-               ]
-           });
+                               {
+                                           'name' : ubsApp.getTranslation("no"),
+                                           'action': "ubsApp.closePopup();"
+                               }
+                           ]
+                       });
+    	   }
+
            return false;
 	    }
 	}
 
     if(!$("#receiptTotal").val()) {
-         ubsApp.openPopup({
-                       "message" : "Please calculate total amount. Do you need any help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
-                      "header" : ubsApp.getTranslation("ERROR"),
-                      "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-                      "imageUrl" : "",
-                       'buttons' : [
-                           {
-                               'name' : ubsApp.getTranslation("yes"),
-                               'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
-                           },
+        if(showPopup) {
+             ubsApp.openPopup({
+                                   "message" : "Please calculate total amount. Do you need any help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
+                                  "header" : ubsApp.getTranslation("ERROR"),
+                                  "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                                  "imageUrl" : "",
+                                   'buttons' : [
+                                       {
+                                           'name' : ubsApp.getTranslation("yes"),
+                                           'action': "ubsApp.closePopup();ubsApp.startHelp(\'salesHelp\');",
+                                       },
 
-                           {
-                                       'name' : ubsApp.getTranslation("no"),
-                                       'action': "ubsApp.closePopup();"
-                           }
-                       ]
-                   });
+                                       {
+                                                   'name' : ubsApp.getTranslation("no"),
+                                                   'action': "ubsApp.closePopup();"
+                                       }
+                                   ]
+                               });
+        }
+
                    return false;
         }
     return true;
@@ -341,17 +347,22 @@ ubsApp.getMultiplier = function() {
     return 50;
 }
 ubsApp.salesTimeOut= function(temp){
-	let r = userArray[playerChance].getReputationPts();
+    if(ubsApp.validateAmount(false)) {
+        $('#salesSubmitButton').trigger("click");
+    } else {
+        let r = userArray[playerChance].getReputationPts();
 
-    let message = ubsApp.getTranslation("salesWrongAnswer");
-	userArray[playerChance].setReputationPts(r-4);
-	ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');
-    message+="<br>" + ubsApp.getTranslation("salesTimeOut");
-    ubsApp.openResultPopup({
-           "message" : message,
-           "header" : ubsApp.getTranslation("salesResultHeader"),
-           "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
-           });
+            let message = ubsApp.getTranslation("salesWrongAnswer");
+        	userArray[playerChance].setReputationPts(r-4);
+        	ubsApp.raiseAudioEvent(document.getElementById(temp.divID), 'timeOut');
+            message+="<br>" + ubsApp.getTranslation("salesTimeOut");
+            ubsApp.openResultPopup({
+                   "message" : message,
+                   "header" : ubsApp.getTranslation("salesResultHeader"),
+                   "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
+                   });
+    }
+
 	}
 
 ubsApp.getCategoryToPostScore = function(category){
