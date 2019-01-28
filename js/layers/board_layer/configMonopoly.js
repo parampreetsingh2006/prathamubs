@@ -92,12 +92,12 @@ monopoly.origpages = {
 
   
 "InitialisePlayers":[{
-        "templateId":1,
-        "templateType":"static",
-        "style": "padding:8px;text-align:center; color:white;border-radius:5px;position:absolute;top:0%;width:100%;left:0%;height:6%; background-color:black;",
-        "id":"initPageTitle",
-        "src":"{{initPageTitle}}",
-    },
+                             "templateId":1,
+                             "templateType":"static",
+                             "style": "padding:8px;text-align:center; color:white;border-radius:5px;width:100%;left:0%;height:11vh;background-image: url(images/red_strip.png);    background-size: 100% 100%;font-size: 3vmax;",
+                             "id":"initPageTitle",
+                             "src":"{{initPageTitle}}",
+                         },
 //    {
 //        "templateId":1,
 //        "templateType":"static",
@@ -110,42 +110,53 @@ monopoly.origpages = {
 //        "src":"<div id=\"computerDetails\"></div>",
 //        "style": "position:absolute; right:10%;top:20%;"
 //    },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "src": "<div id=\"enterPlayers\">{{enterPlayers}}</div>" ,
+//        "style": "position:absolute; left:25%;top:10%;color:black;",
+//    },
     {
         "templateId":1,
         "templateType":"static",
-        "src": "<div id=\"enterPlayers\">{{enterPlayers}}</div>" ,
-        "style": "position:absolute; left:25%;top:10%;color:black;",
+        "src": "<div id=\"enterOnlinePlayers\">{{enterOfflinePlayers}} <select id=\"num_online_players\"   onchange=\"monopoly.initOnlinePlayers()\"> "+
+                                                                                            "<option value=\"1\"><span  id=\"player1\">1</span></option> "+
+                                                                                            "<option value=\"2\"><span id=\"player2\">2</span></option> "+
+                                                                                            "<option value=\"3\"><span id=\"player3\">3</span></option> "+
+                                                                                            "<option value=\"4\"><span id=\"player4\">4</span></option> "+
+                                                                                        "</select> </div>" ,
+        "style": "text-align:center;    margin-top: 2%;",
     },
+//    {
+//        "templateId":1,
+//        "templateType":"static",
+//        "style":"position:absolute;left:45%;top:10%;",
+//        "src":"<input type=\"number\"  id=\"num_players\"   max=\"4\" min=\"1\" value=\"1\" oninput=\"monopoly.initPlayers()\"></input><br><br>",
+//    },
     {
         "templateId":1,
         "templateType":"static",
-        "style":"position:absolute;left:45%;top:10%;",
-        "src":"<input type=\"number\"  id=\"num_players\"   oninput=\"monopoly.initPlayers()\"></input><br><br>",
-    },
-    {
-        "templateId":1,
-        "templateType":"static",
-        "style":" top:15%;left:40%;position:absolute;",
+        "style":"text-align: center;    margin-top: 2%;",
         "src":"<div id=\"take_input\"></div>",
     },
     {
-        "templateId":1,
-        "templateType":"static",
-        "style":" top:85%;position:absolute;    width: 100%;display: flex;flex-direction: row;justify-content: space-around;",
-        "src":"<button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;\" id=\"storePlayerDetailsButton\">{{storePlayerDetailsButton}} </button>",
-    },
+           "templateId":1,
+           "templateType":"static",
+           "style":" width:100%;display: flex;flex-direction: row;justify-content: space-around; ",
+           "src":"<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/backbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;    color: red;\" > </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/nextbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;;    color: green;\" id=\"storePlayerDetailsButton\"> </button>",
+       },
     /*{
         "templateId":1,
         "templateType":"static",
         "src":"<div id=\"languageDetails\"><input type=\"radio\" name=\"languageRadio\" value=\"english\" id=\"english\"><label for\"english\">English</label>&nbsp&nbsp<input type=\"radio\" name=\"languageRadio\" value=\"hindi\" id=\"hindi\"><label for\"hindi\">Hindi</label></div>",
         "style": "position:absolute; left:44%;bottom:3%;"
     }*/
-    {
-        "templateId":2,
-        "templateType":"static",
-        "src":"<img src=\"images/guptaji/guptaji_side.png\" style=\"position:absolute; top:20%; width: 20%; height: 40%;\"></img>",
-       /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
-    }
+   {
+          "templateId":2,
+          "templateType":"static",
+          "src":"<img src=\"images/guptaji/guptaji_side.png\" style=\"position:absolute; top:20%; width: 12%; height: 40%;\"></img>",
+         /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
+      }
 ],
 
 "InitialiseOfflinePlayers":[{

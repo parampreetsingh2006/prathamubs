@@ -2,10 +2,9 @@
 	background-color:#3d4543;
 	border-radius:.8vw;
 	width: 90%;
-	height: 56%; 
 	border: 3px solid brown;
-	padding: 6%;
-	padding-left:7%;
+	padding: 2%;
+	height: 66%;
 }
 
 #numberInput{
@@ -22,7 +21,7 @@
 
 #calcButton{
 	width:17%;
-	height: 11%; 
+	height: 10%;
 	margin-left: 5%;
 	margin-top: 5%;
 	cursor:pointer;

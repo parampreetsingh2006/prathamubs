@@ -318,25 +318,25 @@ ubsApp.leaderBoardTemplate=
 '<img src="{{gameLogo}}" class="gameLogoImage">' +
 '       </div>'+
     //need to add dhandha chalo image here
-'    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
-'       <div id="order">'+
-'           <div id="orderList">'+
-'           <div style="background-color: white;height: 100%;padding: 2px;overflow: auto;">'+
-'           <center><b>{{Order}}</b></center>'+
-'               <table class="table table-sm">'+
-'                   <tbody>'+
-'                       {{#each order}}'+
-'                         <tr class = "row{{no}} {{#if exclude}}strikeout{{/if}}" data-toggle="tooltip" data-placement="bottom" {{#if exclude}}title="This item is not available in your Inventory"{{/if}} >'+
-'                           <td class="items">{{item}}</td>'+
-'                           <td class="items">{{amount}}</td>'+
-'                         </tr>'+
-'                       {{/each}}'+
-'                   </tbody>'+
-'               </table>'+
-'           </div>'+
-'       </div>'+
-'       </div>'+
-'    </div>'+
+//'    <div class="col-md-2 col-sm-2 col-xs-2 customer">'+
+//'       <div id="order">'+
+//'           <div id="orderList">'+
+//'           <div style="background-color: white;height: 100%;padding: 2px;overflow: auto;">'+
+//'           <center><b>{{Order}}</b></center>'+
+//'               <table class="table table-sm">'+
+//'                   <tbody>'+
+//'                       {{#each order}}'+
+//'                         <tr class = "row{{no}} {{#if exclude}}strikeout{{/if}}" data-toggle="tooltip" data-placement="bottom" {{#if exclude}}title="This item is not available in your Inventory"{{/if}} >'+
+//'                           <td class="items">{{item}}</td>'+
+//'                           <td class="items">{{amount}}</td>'+
+//'                         </tr>'+
+//'                       {{/each}}'+
+//'                   </tbody>'+
+//'               </table>'+
+//'           </div>'+
+//'       </div>'+
+//'       </div>'+
+//'    </div>'+
 '    <div class="col-md-5 col-sm-5 col-xs-5 receipt-gen">'+
 '       <div class="receipt">'+
 '       <div class="receiptSale">'+
@@ -358,7 +358,7 @@ ubsApp.leaderBoardTemplate=
 '                   </thead>'+
 '                   <tbody>'+
 '                       {{#each order}}'+
-'                     <tr class = "row{{no}} {{#if exclude}}hide{{/if}}">'+
+'                     <tr class = "row{{no}} {{#if exclude}}strikeout{{/if}}" data-toggle="tooltip" data-placement="bottom" {{#if exclude}}title="This item is not available in your Inventory"{{/if}} ">'+
 '                       <td  class="items">{{no}}</td>'+
 '                       <td  class="items">{{item}}</td>'+
 '                       <td  class="items" id="itemPrice{{no}}">{{amount}}</td>'+
@@ -387,10 +387,22 @@ ubsApp.leaderBoardTemplate=
 '       </div>'+
 '       </div>'+
 '    </div>'+
-'   <div class="col-md-3 col-sm-3 col-xs-3" style="    margin-top: 5%;">'+
+'   <div class="col-md-5 col-sm-5 col-xs-5" style="    margin-top: 5%;">'+
+'   <div style="display: flex;flex-direction: row;justify-content: space-around;" >' +
 '       <div class="tools" style="color:white;    text-align: center;padding-right: 6%;">'+
 '           {{Tools}}'+
 '       </div>'+
+        '<div style="text-align: center;">'+
+        '       <span id = "minutes">00'+
+        '           '+
+        '       </span>'+
+        '       <span id = "colon">'+
+        '           :'+
+        '       </span>'+
+        '       <span id = "seconds">'+
+        '           '+
+        '       </span> </div>'+
+        '   </div>' +
 '           '+
 '       <div id="calculator">'+
 '           <input type="text" readonly size="10" maxlength="7" id="numberInput">'+
@@ -413,21 +425,12 @@ ubsApp.leaderBoardTemplate=
 '           <input id="calcButton" class="button orange" type="button" value="DEL" onclick="addToDisplay(\'DEL\')">'+
 '           <input id="calcButton" class="button gray" type="button" value="." onclick="addToDisplay(\'.\')">'+
 '           <input id="calcButton" class="button orange" type="button" value="+/-" disabled onclick="addToDisplay(\'\')">'+
-'       </div> <div style="text-align: center;">'+
-'       <span id = "minutes">00'+
-'           '+
-'       </span>'+
-'       <span id = "colon">'+
-'           :'+
-'       </span>'+
-'       <span id = "seconds">'+
-'           '+
-'       </span> </div>'+
-'<div style="display:inline-block; width:33.33%; text-align:left;"/>'+
+'       </div>'+
+'<div style="display:flex; width:100%; text-align:left;     margin-top: 2%;">'+
 '                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\', \'{{startTime}}\');}">'+
 '           {{SUBMIT}}'+
 ' </div>' +
-'           <div class="helpBtn" style=" margin-top: 3%;padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
+'           <div class="helpBtn" style="padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
 '              </div>'+
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+

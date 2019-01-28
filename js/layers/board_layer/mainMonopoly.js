@@ -58,8 +58,13 @@ ubsApp.openNextMoveAfterPayOff = false;
 
 $(document).ready(function(){
 	ubsApp.restartGame();
-  
-  
+    ubsApp.isOfflineMode = true;
+    try {
+        let isOnline = Android.isOnlineVersion();
+        ubsApp.isOfflineMode = !isOnline;
+    } catch(err) {
+    }
+  ubsApp.isOfflineMode = false;
 	//monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
@@ -430,6 +435,43 @@ monopoly.initPlayers=function(){
     }
 }
 
+monopoly.initOnlinePlayers=function(){
+    numplayers=document.getElementById("num_online_players").value;
+    document.getElementById("take_input").innerHTML="";
+
+    if(numplayers<=4)
+    {
+        for(var i=0;i<numplayers;i++)
+        {
+            var object={};
+            object.nameTitle=ubsApp.translation["name"]+(i+1);
+            object.numberOfTokens=[];
+            object.nameId="name"+(i);
+            object.isDropdown = true;
+            object.studentArray = ubsApp.studentArray;
+            var isCheckedByDefault;
+            for (var j = 0; j<tokens.length; j++) {
+                isCheckedByDefault = (i==j);
+                object.numberOfTokens.push(
+                {   "radioName":"Radio"+i,
+                    "radioValue":tokens[j],
+                    "radioId":"radio"+j,
+                    "tokenColor":tokens[j],
+                    "checked":isCheckedByDefault,
+                    "display":"none"
+                });
+
+            }
+            document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
+        }
+
+        for(var i=0;i<numplayers;i++) {
+            $("#name" + i).val(ubsApp.studentArray[i].StudentId + "_" + ubsApp.studentArray[i].StudentName);
+        }
+
+
+    }
+}
 
 monopoly.initOfflinePlayers=function(){
     numplayers=document.getElementById("num_offline_players").value;
@@ -633,10 +675,7 @@ monopoly.startGame=function(){
 
              //let studentArray = Android.getStudentList();
              ubsApp.studentArray = "[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]";
-             //ubsApp.studentArray = studentArray;
-             if( ubsApp.studentArray &&  ubsApp.studentArray.length > 0) {
-                ubsApp.isOfflineMode = true;
-             }
+
            if(ubsApp.isOfflineMode) { // is mode offline
               ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
               monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
@@ -647,7 +686,9 @@ monopoly.startGame=function(){
                 monopoly.initOfflinePlayers();
               }
            } else {
+              ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
               monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+              monopoly.initOnlinePlayers();
            }
 	   }
 }
