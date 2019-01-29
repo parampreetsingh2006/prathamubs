@@ -697,6 +697,11 @@ monopoly.startGame=function(){
            } else {
               ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
               monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
+              if(ubsApp.studentArray.length < 4) {
+                  for(let i = 4 ; i > ubsApp.studentArray.length; i--) {
+                      $("#num_online_players option[value='" + i + "']").remove();
+                  }
+              }
               monopoly.initOnlinePlayers();
            }
 	   }
