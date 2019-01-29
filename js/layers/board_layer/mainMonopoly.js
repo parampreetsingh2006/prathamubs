@@ -60,11 +60,12 @@ $(document).ready(function(){
 	ubsApp.restartGame();
     ubsApp.isOfflineMode = true;
     try {
-        let isOnline = Android.isOnlineVersion();
-        ubsApp.isOfflineMode = !isOnline;
+        if(ubsApp.isAndroidEnabled) {
+            let isOnline = Android.isOnlineVersion();
+            ubsApp.isOfflineMode = !isOnline;
+        }
     } catch(err) {
     }
-  ubsApp.isOfflineMode = false;
 	//monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);
 });
 
@@ -325,20 +326,21 @@ monopoly.storePlayerDetails=function(){
     var i=0;
     let computerRequired=false;  //document.getElementById("computer").checked;
     let isOffline = ubsApp.isOfflineMode;
-     if(isOffline) {
-        let playerMap = {};
-             for( i=0;i<numplayers;i++) {
-                if(playerMap[document.getElementById("name"+i).value]) {
-                     ubsApp.openPopup({
-                            "message" : ubsApp.getTranslation("eachPlayerNameUniqueMessage"),
-                            "header" : ubsApp.getTranslation("ERROR"),
-                            "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
-                            });
-                     return;
-                }
-                playerMap[document.getElementById("name"+i).value] = true;
-             }
+    let playerMap = {};
+     for( i=0;i<numplayers;i++) {
+
+        if(playerMap[document.getElementById("name"+i).value]) {
+             ubsApp.openPopup({
+                    "message" : ubsApp.getTranslation("eachPlayerNameUniqueMessage"),
+                    "header" : ubsApp.getTranslation("ERROR"),
+                    "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                    });
+             return;
+        }
+        playerMap[document.getElementById("name"+i).value] = true;
      }
+
+
 
 
 
@@ -654,6 +656,9 @@ monopoly.readInstruction=function(){
       ubsApp.startHelp("instructionHelp");
 }
 
+monopoly.openAddPlayer = function()  {
+    ubsApp.openAddPlayerTemplate();
+}
 monopoly.startGame=function(){
 	
 	  var jsElm = document.createElement("script");
@@ -673,8 +678,12 @@ monopoly.startGame=function(){
 	   jsElm.onload=function(){
 
 
-             //let studentArray = Android.getStudentList();
-             ubsApp.studentArray = "[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]";
+             if(ubsApp.isAndroidEnabled) {
+                ubsApp.studentArray = Android.getStudentList();
+             } else {
+                ubsApp.studentArray = "[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]";
+             }
+
 
            if(ubsApp.isOfflineMode) { // is mode offline
               ubsApp.studentArray = JSON.parse(ubsApp.studentArray);

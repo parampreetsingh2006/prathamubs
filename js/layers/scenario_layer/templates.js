@@ -295,6 +295,44 @@ ubsApp.leaderBoardTemplate=
         
     '</div><br>';
 
+    ubsApp.addPlayerTemplate =
+    '<div style="{{style}}">'+
+                               '    <div style="background-color: white;margin-left:1%;margin-right:1%;position: relative; overflow: auto; max-height: 80vh; ">'+
+                               ''+
+                               '        <div>'+
+                               ''+
+                               '            <div style="text-align: center;margin-top:1%" class="popupHeaderFontSize" >{{title}}</div>'+
+                               ''+
+                               '        </div>'+
+                               ''+
+                               '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
+                               '        '+
+                               '        <div style="display: inline-block;width: 100%;font-weight:bold;">'+
+                               '            <div style="float: left;width: 80%;     margin-left: 10%;    margin-bottom: 2%;">'+
+                               '                <div style="display: inline-block;width: 100%;">'+
+                               '                        <div style="float: left;">{{name}}</div>'+
+                              '                        <div style="float: right;"><input  style="" id="playerNameInput"></input></div>'+
+                               '                </div>'+
+                               '                <div style="display: inline-block;width: 100%;">'+
+                               '                        <div style="float: left;">{{age}}</div>'+
+                              '                        <div style="float: right;"><input type="number" style="" id="playerAge"></input></div>'+
+                               '                </div>'+
+                              '                <div style="display: inline-block;width: 100%;">'+
+                              '                        <div style="float: left; ">{{gender}}</div>'+
+                              '                        <div style="float: right;"><select style="" id="playerGender"><option id="male" value="male">{{MALE}}</option><option id="female" value="female">{{FEMALE}}</option></select></div>'+
+                              '                </div>'+
+                               ''+
+                               '            </div>'+
+                               '        </div>'+
+                               ''+
+                               '<div id="addPlayerValidationMessage" style="color:red;margin-bottom: 2%;text-align: center;"> </div>'+
+                               '        <div style="display:inline-block;width:100%;">'+
+                               '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 1%; padding-bottom: 2%; color: green;font-weight:bold; width: 16%;text-align: center;" onclick="ubsApp.addNewPlayer()" >{{add}}</div>'+
+                               '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold; width: 15.5%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{cancel}}</div>'+
+
+                               '        </div>'+
+                               '</div>'+
+                               '</div>';
     ubsApp.salesTemplate=
     '<div class="mainDiv row" style="height:100%;width:100%">'+
     '       <div class="salesScreenTitle" style="color:white">'+

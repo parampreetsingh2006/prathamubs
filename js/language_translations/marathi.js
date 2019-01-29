@@ -1413,5 +1413,5 @@ ubsApp.translation={
               "guptaJiProfit" : "गुप्ता जीचा नफा",
               "yourProfit" : "तुमचा नफा",
                "PLAYAGAIN" : "परत खेळ",
-
+               "ADD_PLAYER" : "ADD PLAYER",
     }

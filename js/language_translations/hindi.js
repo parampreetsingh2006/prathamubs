@@ -1481,5 +1481,5 @@ ubsApp.translation={
     "guptaJiProfit" : "गुप्ता जी का लाभ",
     "yourProfit" : "आपका लाभ",
     "PLAYAGAIN" : "फिर से चालू करें",
-
+    "ADD_PLAYER" : "ADD PLAYER",
 }

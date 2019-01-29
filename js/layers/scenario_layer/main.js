@@ -20,6 +20,7 @@ let ubsOrdertemplate;
 let ubsAdvantageCardTemplate;
 let ubsQuizTemplate;
 let ubsWeekSummarytemplate;
+let ubsAddPlayerTempate;
 let choiceSelected={};
 let timeVar;
 var helpScenarioOpen=false;
@@ -37,10 +38,10 @@ var calculatorReq=false;
 let screenHeight = $(window).height();
 let screenWidth = $(window).width();
 
-let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "popup", "weekSummary"];
+let templateName = ["static", "decision","purchase","withdrawFromBank","advantageCard","luck","pay","payOff", "insurance","transfer","wheelOfFortune", "timerTemp", "popup", "rollingDice","scratchCard","choice","audio", "score","sales", "quiz","quizStarter", "popup", "weekSummary", "addPlayer"];
 let templateMap = {};
 let offlinePurchaseClicked=false;
-let postScore=false;
+ubsApp.isAndroidEnabled=false;
 ubsApp.popupConfig = {};
 
 $(document).ready(function(){
@@ -229,6 +230,7 @@ ubsApp.intitializeTemplates = function() {
 	ubsOrdertemplate = Template7.compile(ubsApp.salesTemplate);
 	ubsInsuranceTemplate = Template7.compile(ubsApp.insuranceTemplate);
 	ubsPopupTemplate = Template7.compile(ubsApp.popUpTemplate);
+	ubsAddPlayerTemplate = Template7.compile(ubsApp.addPlayerTemplate);
 
 }
 
@@ -402,7 +404,7 @@ ubsApp.closeResultPopup = function(doNextMove=true) {
 }
 
 ubsApp.updateScoreInDB = function(playerStudentId, questionId, scoredMarks,totalMarks, level, startTime, label){
-	if(postScore){
+	if(ubsApp.isAndroidEnabled){
 		Android.addScore(playerStudentId,questionId,scoredMarks, totalMarks, level, startTime,label);
 	}
 	
@@ -482,6 +484,7 @@ ubsApp.initializeUbsPages = function() {
     ubsApp.pages=$.extend(ubsApp.pages,ubsApp.quizStarterConfig);
     ubsApp.pages=$.extend(ubsApp.pages,ubsApp.successErrorConfig);
     ubsApp.pages=$.extend(ubsApp.pages,ubsApp.weekSummaryConfig);
+    ubsApp.pages=$.extend(ubsApp.pages,ubsApp.addPlayerConfig);
 }
 
 ubsApp.startRecordingTimer = function(templateConfig){

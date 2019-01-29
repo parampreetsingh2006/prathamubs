@@ -142,8 +142,8 @@ monopoly.origpages = {
     {
            "templateId":1,
            "templateType":"static",
-           "style":" width:100%;display: flex;flex-direction: row;justify-content: space-around; ",
-           "src":"<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/backbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;    color: red;\" > </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/nextbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;;    color: green;\" id=\"storePlayerDetailsButton\"> </button>",
+           "style":" width:90%;display: flex;flex-direction: row;justify-content: space-around;float:right; ",
+           "src":"<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/backbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;    color: red;\" > </button> <button onclick=\"monopoly.openAddPlayer();\" style=\" background: url('images/button long.png'); padding: 14px;    background-size: 100% 100%;    background-color: transparent;    border: none;    cursor: pointer;   color: red;\" > {{ADD_PLAYER}}</button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/nextbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;;    color: green;\" id=\"storePlayerDetailsButton\"> </button>",
        },
     /*{
         "templateId":1,

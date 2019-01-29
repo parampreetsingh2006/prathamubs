@@ -1436,5 +1436,17 @@ ubsApp.translation={
         "guptaJiProfit" : "Gupta ji profit",
         "yourProfit" : "your profit",
         "PLAYAGAIN" : "PLAY AGAIN",
+        "ADD_PLAYER" : "ADD PLAYER",
+        "PLAYER_NAME" : "PLAYER NAME",
+        "GENDER" : "GENDER",
+        "AGE" : "AGE",
+        "ADD" : "ADD",
+        "MALE" : "MALE",
+        "FEMALE" : "FEMALE",
+        "ENTER_PLAYER_NAME" : "Enter Player Name",
+        "ENTER_PLAYER_AGE" : "Enter Player Age",
+        "ENTER_PLAYER_GENDER" : "Select Player Gender",
+        "PLAYER_ADDED_HEADER" : "ADD PLAYER",
+        "PLAYER_ADDED_SUCCESSFULLY" : "Player Added Successfully !",
     }
 
