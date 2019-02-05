@@ -36,7 +36,7 @@ ubsApp.addNewPlayer = function() {
     player.age = parseInt(playerAge);
     player.gender = gender;
     if(ubsApp.isAndroidEnabled) {
-       Android.storePlayer(JSON.stringify(player));
+       Android.addStudents(JSON.stringify(player));
     }
     message = ubsApp.getTranslation("PLAYER_ADDED_SUCCESSFULLY");
     ubsApp.openResultPopup({
