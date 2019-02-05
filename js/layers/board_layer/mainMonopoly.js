@@ -58,7 +58,7 @@ ubsApp.openNextMoveAfterPayOff = false;
 
 $(document).ready(function(){
 	ubsApp.restartGame();
-    ubsApp.isOfflineMode = true;
+    ubsApp.isOfflineMode = false;
     try {
         if(ubsApp.isAndroidEnabled) {
             let isOnline = Android.isOnlineVersion();
