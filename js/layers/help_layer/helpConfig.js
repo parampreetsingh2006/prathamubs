@@ -4,13 +4,15 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
 
                 //"style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
                 //"src":"{{SALES HELP}}"
 
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{salesVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{salesVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{salesVideoOnline}} type=\"video/mp4\"></video> <div>"
+
 
             },
             {
@@ -46,9 +48,11 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video  id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{incomeTaxVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video  id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{incomeTaxVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video  id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{incomeTaxVideoOnline}} type=\"video/mp4\"></video> </div>",
+
             },
             {
                 "templateId":4,
@@ -64,9 +68,11 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video  id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{propertyTaxVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video  id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{propertyTaxVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video  id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{propertyTaxVideoOnline}} type=\"video/mp4\"></video> <div>"
+
             },
             {
                 "templateId":4,
@@ -82,9 +88,11 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{insuranceVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{insuranceVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{insuranceVideoOnline}} type=\"video/mp4\"></video> <div>"
+
             },
             {
                 "templateId":4,
@@ -100,9 +108,10 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{bankingVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{bankingVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{bankingVideoOnline}} type=\"video/mp4\"></video> </div>"
             },
             {
                 "templateId":4,
@@ -118,9 +127,10 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{atmVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{atmVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{atmVideoOnline}} type=\"video/mp4\"></video> </div>",
             },
             {
                 "templateId":4,
@@ -136,9 +146,11 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{depositsVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{depositsVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{depositsVideoOnline}} type=\"video/mp4\"></video> <div>"
+
             },
             {
                 "templateId":4,
@@ -154,9 +166,11 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{kycPanAadharVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{kycPanAadharVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{kycPanAadharVideoOnline}} type=\"video/mp4\"></video> <div>"
+
             },
             {
                 "templateId":4,
@@ -172,9 +186,11 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{gstVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{gstVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{gstVideoOnline}} type=\"video/mp4\"></video> <div>"
+
             },
             {
                 "templateId":4,
@@ -190,9 +206,10 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{loansVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{loansVideo}} type=\"video/mp4\"></video> </div>",              
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{loansVideoOnline}} type=\"video/mp4\"></video> </div>"
             },
             {
                 "templateId":4,
@@ -208,9 +225,10 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{mobileBankingVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{mobileBankingVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{mobileBankingVideoOnline}} type=\"video/mp4\"></video> </div>"
             },
             {
                 "templateId":4,
@@ -256,7 +274,7 @@ ubsApp.helpConfig={
             {
                 "templateId":5,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;background-repeat: no-repeat;color:white;  overflow:auto; height:{{screenHeight}}px",
                 "src":"{{LUCK HELP}}"
             },
@@ -274,7 +292,7 @@ ubsApp.helpConfig={
             {
                 "templateId":7,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:47.5%;left:45%;background-repeat: no-repeat;color:white;",
                 "src":"Payment HELP!!!"
             },
@@ -299,7 +317,7 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;background-repeat: no-repeat;  overflow:auto; height:{{screenHeight}}px",
                 "src":"{{DECISION HELP}}"
             },
@@ -317,7 +335,7 @@ ubsApp.helpConfig={
                 {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
                 "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{purchaseVideo}} type=\"video/mp4\"></video> <div>"
             },
@@ -335,9 +353,11 @@ ubsApp.helpConfig={
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContent",
+                "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{instructionVideo}} type=\"video/mp4\"></video> <div>"
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{instructionVideo}} type=\"video/mp4\"></video> <div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{instructionVideoOnline}} type=\"video/mp4\"></video> <div>"
+
             },
             {
                 "templateId":4,
@@ -354,10 +374,10 @@ ubsApp.helpConfig={
 
                     "templateId":3,
                     "templateType":"static",
-                    "id":"helpContent",
+                    "id":"helpContentVideo",
                     "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                    "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls autoplay><source src={{introVideo}} type=\"video/mp4\"></video> <div>"
-
+                    "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls autoplay> <source src={{introVideo}} type=\"video/mp4\"></video> </div>",
+                    "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls autoplay> <source src={{introVideoOnline}} type=\"video/mp4\"></video> <div>"
                 },
                 {
                     "templateId":4,

@@ -242,7 +242,10 @@ monopoly.sideScoreBoardTemplate=
 
 
 monopoly.staticTemplate ='<div class="{{width}}" style="{{style}}"   onclick="monopoly.renderPageforBoard(\'{{onClickPage}}\',\'{{amount}}\')">'+
+'{{#if isOfflineMode}}'+
 '       {{src}}'+
+'{{else}}'+
+'       {{srcOnline}}'+
 ' </div>'+
 '<div id={{audioId}}></div>';
 

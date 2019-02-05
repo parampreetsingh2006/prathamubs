@@ -1,9 +1,12 @@
 // using http://pojo.sodhanalibrary.com/string.html
 
 ubsApp.staticTemplate ='<div class="{{width}}" id="{{id}}" style="{{style}}" {{#if onClickPage}} onclick="ubsApp.checkPageorBoard(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\')" {{/if}}>'+
-
-'		{{src}}'+
+'{{#if isOnlineMode}}'+
+'       {{srcOnline}}'+
+'{{else}}'+
+'       {{src}}'+
 ' </div>'+
+'{{/if}}'+
 '<div id={{audioId}}></div>';
 	
 	

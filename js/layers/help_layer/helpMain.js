@@ -18,7 +18,9 @@ ubsApp.renderHelpPage=function(template){
 		 templateConfig["screenHeight"] = screenHeight;
          templateConfig["screenWidth"] = screenWidth;
 		if(templateConfig.templateType=="static"){
-
+			if(templateConfig.id == "helpContentVideo"){
+				templateConfig.isOnlineMode = !ubsApp.isOfflineMode; //default
+			}
 			html+=ubsStaticTemplate(templateConfig);
 		} else if(templateConfig.templateType ==  "popup") {
             document.getElementById("helpContent").style.opacity="1";
