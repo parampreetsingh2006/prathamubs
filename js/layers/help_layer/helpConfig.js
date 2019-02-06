@@ -26,7 +26,6 @@ ubsApp.helpConfig={
     },
      "salesAnswerHelp":{
             "templates":[
-
                 {
                     "templateId":4,
                     "templateType":"static",
@@ -274,7 +273,7 @@ ubsApp.helpConfig={
             {
                 "templateId":5,
                 "templateType":"static",
-                "id":"helpContentVideo",
+                "id":"helpContent",
                 "style":"position:absolute;background-repeat: no-repeat;color:white;  overflow:auto; height:{{screenHeight}}px",
                 "src":"{{LUCK HELP}}"
             },
@@ -337,8 +336,10 @@ ubsApp.helpConfig={
                 "templateType":"static",
                 "id":"helpContentVideo",
                 "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
-                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{purchaseVideo}} type=\"video/mp4\"></video> <div>"
-            },
+                "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{purchaseVideo}} type=\"video/mp4\"></video> </div>",
+                "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls><source src={{purchaseVideoOnline}} type=\"video/mp4\"></video> </div>",
+
+             },
             {
                 "templateId":4,
                 "templateType":"static",
@@ -375,7 +376,7 @@ ubsApp.helpConfig={
                     "templateId":3,
                     "templateType":"static",
                     "id":"helpContentVideo",
-                    "style":"position:absolute;top:2%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
+                    "style":"position:absolute;top:1%;left:2%;background-repeat: no-repeat;color:white;height:100vh;",
                     "src":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls autoplay> <source src={{introVideo}} type=\"video/mp4\"></video> </div>",
                     "srcOnline":"<div style=\"width:95%;height:95%\"><video id=\"helpVideo\" width=\"100%\" height=\"100%\" controls autoplay> <source src={{introVideoOnline}} type=\"video/mp4\"></video> <div>"
                 },
