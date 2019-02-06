@@ -238,7 +238,7 @@ if(currentScenarioCategory == "salesEasy") {
 } else if(currentScenarioCategory == "salesModerate") {
     level1=40;level2=60;level3=80;level4=100;
 } else if(currentScenarioCategory == "salesDifficult") {
-    level1=50;level2=80;level3=110;level4=140;
+    level1=65;level2=95;level3=125;level4=155;
 
 }
 let reputationPointIncrease = 0;

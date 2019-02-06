@@ -690,7 +690,7 @@ monopoly.startGame=function(){
                              ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
 
                     } catch(err) {
-                        console.log("Erro parsing student array from andriod");
+                        console.log("Error parsing student array from andriod");
                       ubsApp.studentArray=[];
                     }
               monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
@@ -705,7 +705,7 @@ monopoly.startGame=function(){
                ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
 
               } catch(err) {
-                                      console.log("Erro parsing student array from andriod");
+                                      console.log("Error parsing student array from andriod");
 
                 ubsApp.studentArray=[];
               }
@@ -816,10 +816,10 @@ ubsApp.confirmEndGame=function(){
 
 
   		if(arr[highestScoringPlayer]) {
-  		  winnerName=userArray[highestScoringPlayer].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + " " + ubsApp.getTranslation("guptaJiProfit") + " = " + harnamProjectedScore + " " +  ubsApp.getTranslation("yourProfit") + " = " + highestScore;
+  		  winnerName=userArray[highestScoringPlayer].getplayerName() +  " " + ubsApp.getTranslation("hasWon") + ".<br> " + ubsApp.getTranslation("guptaJiProfit") + " = " + harnamProjectedScore + " " +  ubsApp.getTranslation("yourProfit") + " = " + highestScore;
 
   		} else {
-  		     winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}" , userArray[highestScoringPlayer].getplayerName()) +  " " + ubsApp.getTranslation("guptaJiProfit") + " = " + harnamProjectedScore + " " +  ubsApp.getTranslation("yourProfit") + " = " + highestScore;
+  		     winnerName= ubsApp.getTranslation("hasHighestScoreMessage").replace("{{playerName}}" , userArray[highestScoringPlayer].getplayerName()) +  ".<br> " + ubsApp.getTranslation("guptaJiProfit") + " = " + harnamProjectedScore + " " +  ubsApp.getTranslation("yourProfit") + " = " + highestScore;
 
   		}
 

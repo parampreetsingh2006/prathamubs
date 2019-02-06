@@ -323,7 +323,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -386,7 +386,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -440,7 +440,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -512,7 +512,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -566,7 +566,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -629,7 +629,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -692,7 +692,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -755,7 +755,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -818,7 +818,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -872,7 +872,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -926,7 +926,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -980,7 +980,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1034,7 +1034,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1097,7 +1097,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1160,7 +1160,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1232,7 +1232,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1295,7 +1295,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1349,7 +1349,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1421,7 +1421,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1475,7 +1475,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1538,7 +1538,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1592,7 +1592,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1655,7 +1655,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1718,7 +1718,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1772,7 +1772,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel01",
+                   				"salesImage": "images/receipt-easy",
                    				"time": 90,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1826,7 +1826,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1889,7 +1889,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -1952,7 +1952,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2006,7 +2006,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2069,7 +2069,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2123,7 +2123,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2177,7 +2177,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2231,7 +2231,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2303,7 +2303,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2357,7 +2357,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2411,7 +2411,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2474,7 +2474,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2546,7 +2546,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2609,7 +2609,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2681,7 +2681,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2735,7 +2735,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2789,7 +2789,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2852,7 +2852,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2906,7 +2906,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -2969,7 +2969,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3032,7 +3032,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3086,7 +3086,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3140,7 +3140,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3194,7 +3194,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3257,7 +3257,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel02",
+                   				"salesImage": "images/receipt-medium",
                    				"time": 100,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3320,7 +3320,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3383,7 +3383,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3446,7 +3446,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3518,7 +3518,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3581,7 +3581,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3644,7 +3644,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3707,7 +3707,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3779,7 +3779,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3833,7 +3833,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3887,7 +3887,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -3950,7 +3950,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4013,7 +4013,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4067,7 +4067,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4139,7 +4139,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4211,7 +4211,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4274,7 +4274,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4337,7 +4337,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4391,7 +4391,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4454,7 +4454,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4508,7 +4508,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4571,7 +4571,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4634,7 +4634,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4697,7 +4697,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4760,7 +4760,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4814,7 +4814,7 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel03",
+                   				"salesImage": "images/receipt-medium-hard",
                    				"time": 110,
                    				"divID": "seconds",
                    				"onClickPage": {
@@ -4904,8 +4904,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -4971,8 +4971,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5038,8 +5038,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5105,8 +5105,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5172,8 +5172,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5248,8 +5248,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5306,8 +5306,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5390,8 +5390,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5466,8 +5466,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5551,8 +5551,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5627,8 +5627,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5725,8 +5725,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5783,8 +5783,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5873,8 +5873,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5931,8 +5931,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -5989,8 +5989,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6074,8 +6074,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6145,8 +6145,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": null,
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6225,8 +6225,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6292,8 +6292,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6350,8 +6350,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6417,8 +6417,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6484,8 +6484,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6551,8 +6551,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
@@ -6631,8 +6631,8 @@ ubsApp.salesConfig={
                    				"tooltipMessage": "This item is not available in your Inventory",
                    				"helpPageName": "salesHelp",
                    				"Items": "{{Items}}",
-                   				"salesImage": "images/selllevel04",
-                   				"time": 150,
+                   				"salesImage": "images/receipt-hard",
+                   				"time": 165,
                    				"divID": "seconds",
                    				"onClickPage": {
                    					"hideScenarios": true,
