@@ -686,7 +686,13 @@ monopoly.startGame=function(){
 
 
            if(ubsApp.isOfflineMode) { // is mode offline
-              ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
+               try {
+                             ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
+
+                    } catch(err) {
+                        console.log("Erro parsing student array from andriod");
+                      ubsApp.studentArray=[];
+                    }
               monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
               if(ubsApp.studentArray.length < 4) {
                 for(let i = 4 ; i > ubsApp.studentArray.length; i--) {
@@ -695,7 +701,14 @@ monopoly.startGame=function(){
                 monopoly.initOfflinePlayers();
               }
            } else {
-              ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
+              try {
+               ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
+
+              } catch(err) {
+                                      console.log("Erro parsing student array from andriod");
+
+                ubsApp.studentArray=[];
+              }
               monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
               if(ubsApp.studentArray.length < 4) {
                   for(let i = 4 ; i > ubsApp.studentArray.length; i--) {
