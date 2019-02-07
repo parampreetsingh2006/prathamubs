@@ -347,13 +347,10 @@ monopoly.storePlayerDetails=function(){
     for( i=0;i<numplayers;i++)
     {
         let user=new User();
-        if(isOffline) {
-            let res = document.getElementById("name"+i).value.split("_");
-            user.setplayerName(res[1]);
-            user.setplayerStudentId(res[0]);
-        } else {
-            user.setplayerName(document.getElementById("name"+i).value);
-        }
+        let res = document.getElementById("name"+i).value.split("_");
+        user.setplayerName(res[1]);
+        user.setplayerStudentId(res[0]);
+
 
 
         user.setplayerScore(initialPlayerCash);
