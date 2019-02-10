@@ -311,27 +311,53 @@ ubsApp.leaderBoardTemplate=
                                '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
                                '        '+
                                '        <div style="display: inline-block;width: 100%;font-weight:bold;">'+
-                               '            <div style="float: left;width: 80%;     margin-left: 10%;    margin-bottom: 2%;">'+
-                               '                <div style="display: inline-block;width: 100%;">'+
-                               '                        <div style="float: left;">{{name}}</div>'+
-                              '                        <div style="float: right;"><input  style="" id="playerNameInput"></input></div>'+
+                               '<div id="addPlayerValidationMessage" style="color:red;margin-bottom: 2%;text-align: center;"> </div>'+
+
+                               '            <div style="display: table;width: 80%;     margin-left: 10%;    margin-bottom: 2%;">'+
+                               '                <div style="display: table-row;">'+
+                               '                        <div style="display: table-cell;">{{name}}</div>'+
+                               '                        <div style="display: table-cell;">{{age}}</div>'+
+                               '                        <div style="display: table-cell; ">{{gender}}</div>'+
+                               '                        <div style="display: table-cell; "></div>'+
+                               '                        <div style="display: table-cell; "></div>'+
+
+
                                '                </div>'+
-                               '                <div style="display: inline-block;width: 100%;">'+
-                               '                        <div style="float: left;">{{age}}</div>'+
-                              '                        <div style="float: right;"><input type="number" style="" id="playerAge"></input></div>'+
+                               '                <div style="display: table-row;">'+
+                               '                        <div style="display: table-cell;"><input  style="" id="playerNameInput"></input></div>'+
+                               '                        <div style="display: table-cell;"><input type="number" style="" id="playerAge"></input></div>'+
+                               '                        <div style="display: table-cell;"><select style="" id="playerGender"><option id="male" value="male">{{MALE}}</option><option id="female" value="female">{{FEMALE}}</option></select></div>'+
+                               '                        <div style="display: table-cell; vertical-align: middle;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%; padding-bottom: 1%; color: green;font-weight:bold;text-align: center;" onclick="ubsApp.addNewPlayer()" >{{add}}</div>'+
+
                                '                </div>'+
-                              '                <div style="display: inline-block;width: 100%;">'+
-                              '                        <div style="float: left; ">{{gender}}</div>'+
-                              '                        <div style="float: right;"><select style="" id="playerGender"><option id="male" value="male">{{MALE}}</option><option id="female" value="female">{{FEMALE}}</option></select></div>'+
+                               '{{#if isStudentAdded}}' +
+
+                              '                <div style="display: table-row;">'+
+                              '                        <div style="display: table-cell;padding-bottom:2%; padding-top: 2%;"><hr></div>'+
+                              '                        <div style="display: table-cell;"><hr></div>'+
+                              '                        <div style="display: table-cell;"><hr></div>'+
+                              '                        <div style="display: table-cell;"><hr></div>'+
+
                               '                </div>'+
+                               '{{/if}}' +
+                              '{{#each studentList}}' +
+
+                               '                <div style="display: table-row;">'+
+                               '                        <div style="display: table-cell;"><input  style="" id="{{StudentId}}Name" value="{{StudentName}}"></input></div>'+
+                               '                        <div style="display: table-cell;"><input type="number" style="" id="{{StudentId}}Age" value="{{StudentAge}}"></input></div>'+
+                               '                        <div style="display: table-cell;"><select style="" id="{{StudentId}}Gender"><option {{#if isMale}} selected="selected" {{/if}} id="male" value="male">{{MALE}}</option><option {{#if isFemale}} selected="selected" {{/if}} id="female" value="female">{{FEMALE}}</option></select></div>'+
+                               '                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1%;vertical-align: middle; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.updatePlayer(\'{{StudentId}}\')" >{{update}}</div>'+
+                               '                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1%;vertical-align: middle; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.deletePlayer(\'{{StudentId}}\')" >{{delete}}</div>'+
+
+                              '                </div>'+
+                              '{{/each}}' +
+
                                ''+
                                '            </div>'+
                                '        </div>'+
                                ''+
-                               '<div id="addPlayerValidationMessage" style="color:red;margin-bottom: 2%;text-align: center;"> </div>'+
                                '        <div style="display:inline-block;width:100%;">'+
-                               '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 1%; padding-bottom: 2%; color: green;font-weight:bold; width: 16%;text-align: center;" onclick="ubsApp.addNewPlayer()" >{{add}}</div>'+
-                               '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold; width: 15.5%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{cancel}}</div>'+
+                               '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold; width: 15.5%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{cancel}}</div>'+
 
                                '        </div>'+
                                '</div>'+

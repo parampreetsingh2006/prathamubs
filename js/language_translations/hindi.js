@@ -1496,4 +1496,22 @@ ubsApp.translation={
     "yourProfit" : "आपका लाभ",
     "PLAYAGAIN" : "फिर से चालू करें",
     "ADD_PLAYER" : "ADD PLAYER",
+    "PLAYER_NAME" : "PLAYER NAME",
+    "GENDER" : "GENDER",
+    "AGE" : "AGE",
+    "ADD" : "ADD",
+    "MALE" : "MALE",
+    "FEMALE" : "FEMALE",
+    "ENTER_PLAYER_NAME" : "Enter Player Name",
+    "ENTER_PLAYER_AGE" : "Enter Player Age",
+    "ENTER_PLAYER_GENDER" : "Select Player Gender",
+    "PLAYER_ADDED_HEADER" : "ADD PLAYER",
+    "PLAYER_ADDED_SUCCESSFULLY" : "Player Added Successfully !",
+    "ADD_PLAYER_TO_PLAY" : "Add player to play the game !!!",
+    "UPDATE" : "UPDATE",
+    "DELETE" : "DELETE",
+    "PLAYER_UPDATED_SUCCESSFULLY" : "Player Updated Successfully !",
+    "PLAYER_DELETED_SUCCESSFULLY" : "Player Deleted Successfully !",
+
+
 }

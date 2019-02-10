@@ -435,41 +435,51 @@ monopoly.initPlayers=function(){
 }
 
 monopoly.initOnlinePlayers=function(){
-    numplayers=document.getElementById("num_online_players").value;
-    document.getElementById("take_input").innerHTML="";
+    document.getElementById("take_input").innerHTML = "";
+    $("#enterOnlinePlayers").show();
+    if(ubsApp.studentArray.length == 0) {
+        $("#enterOnlinePlayers").hide();
+        let message = ubsApp.getTranslation("ADD_PLAYER_TO_PLAY");
+        let addPlayerDiv = "<div style=\"margin-bottom:2%\">" + message + "</div>";
+        document.getElementById("take_input").innerHTML+=addPlayerDiv;
+    } else {
+         numplayers=document.getElementById("num_online_players").value;
+            document.getElementById("take_input").innerHTML="";
 
-    if(numplayers<=4)
-    {
-        for(var i=0;i<numplayers;i++)
-        {
-            var object={};
-            object.nameTitle=ubsApp.translation["name"]+(i+1);
-            object.numberOfTokens=[];
-            object.nameId="name"+(i);
-            object.isDropdown = true;
-            object.studentArray = ubsApp.studentArray;
-            var isCheckedByDefault;
-            for (var j = 0; j<tokens.length; j++) {
-                isCheckedByDefault = (i==j);
-                object.numberOfTokens.push(
-                {   "radioName":"Radio"+i,
-                    "radioValue":tokens[j],
-                    "radioId":"radio"+j,
-                    "tokenColor":tokens[j],
-                    "checked":isCheckedByDefault,
-                    "display":"none"
-                });
+            if(numplayers<=4)
+            {
+                for(var i=0;i<numplayers;i++)
+                {
+                    var object={};
+                    object.nameTitle=ubsApp.translation["name"]+(i+1);
+                    object.numberOfTokens=[];
+                    object.nameId="name"+(i);
+                    object.isDropdown = true;
+                    object.studentArray = ubsApp.studentArray;
+                    var isCheckedByDefault;
+                    for (var j = 0; j<tokens.length; j++) {
+                        isCheckedByDefault = (i==j);
+                        object.numberOfTokens.push(
+                        {   "radioName":"Radio"+i,
+                            "radioValue":tokens[j],
+                            "radioId":"radio"+j,
+                            "tokenColor":tokens[j],
+                            "checked":isCheckedByDefault,
+                            "display":"none"
+                        });
+
+                    }
+                    document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
+                }
+
+                for(var i=0;i<numplayers;i++) {
+                    $("#name" + i).val(ubsApp.studentArray[i].StudentId + "_" + ubsApp.studentArray[i].StudentName);
+                }
+
 
             }
-            document.getElementById("take_input").innerHTML+=ubsformTemplate(object);
-        }
-
-        for(var i=0;i<numplayers;i++) {
-            $("#name" + i).val(ubsApp.studentArray[i].StudentId + "_" + ubsApp.studentArray[i].StudentName);
-        }
-
-
     }
+
 }
 
 monopoly.initOfflinePlayers=function(){
@@ -678,7 +688,7 @@ monopoly.startGame=function(){
              if(ubsApp.isAndroidEnabled) {
                 ubsApp.studentArray = Android.getStudentList();
              } else {
-                ubsApp.studentArray = "[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]";
+                ubsApp.studentArray = "[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentAge\": 12,\"StudentGender\": \"male\",\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentAge\": 24,\"StudentGender\": \"female\",\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentAge\": 32,\"StudentGender\": \"male\",\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]";
              }
 
 
@@ -690,6 +700,7 @@ monopoly.startGame=function(){
                         console.log("Error parsing student array from andriod");
                       ubsApp.studentArray=[];
                     }
+              ubsApp.populateStudentArray(ubsApp.studentArray);
               monopoly.renderPageforBoard(monopoly.pages.InitialiseOfflinePlayers);
               if(ubsApp.studentArray.length < 4) {
                 for(let i = 4 ; i > ubsApp.studentArray.length; i--) {
@@ -706,6 +717,7 @@ monopoly.startGame=function(){
 
                 ubsApp.studentArray=[];
               }
+               ubsApp.populateStudentArray(ubsApp.studentArray);
               monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
               if(ubsApp.studentArray.length < 4) {
                   for(let i = 4 ; i > ubsApp.studentArray.length; i--) {
@@ -1069,4 +1081,21 @@ ubsApp.startBackgroundMusic = function () {
 
 ubsApp.stopBackgroundMusic = function () {
     $('#backgroundaudio').get(0).pause();
+}
+
+ubsApp.populateStudentArray = function(studentArray) {
+
+    for(let i = 0; i < studentArray.length; i++) {
+        if(studentArray[i].StudentGender.toLowerCase() == "male") {
+            studentArray[i].isMale= true;
+            studentArray[i].isFemale= false;
+        } else {
+            studentArray[i].isFemale= true;
+            studentArray[i].isMale= false;
+        }
+        studentArray[i].MALE = ubsApp.getTranslation("MALE");
+        studentArray[i].FEMALE = ubsApp.getTranslation("FEMALE");
+        studentArray[i].update = ubsApp.getTranslation("UPDATE");
+        studentArray[i]["delete"] = ubsApp.getTranslation("DELETE");
+    }
 }
