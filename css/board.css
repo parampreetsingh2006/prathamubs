@@ -6,9 +6,6 @@
 .responsive {
     width: 69%;
     height: 96%;
-    position: absolute;
-    top: 10px;
-    left: 10px;
     float: left;
 }
 
@@ -20,7 +17,6 @@
     height: 96%;
     float: right;
     margin-top: 10px;
-    margin-right: 10px;
 }
 
 .sideScoreBoard {
