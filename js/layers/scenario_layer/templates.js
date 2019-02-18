@@ -346,8 +346,8 @@ ubsApp.leaderBoardTemplate=
                                '                        <div style="display: table-cell;"><input  style="" id="{{StudentId}}Name" value="{{StudentName}}"></input></div>'+
                                '                        <div style="display: table-cell;"><input type="number" style="" id="{{StudentId}}Age" value="{{StudentAge}}"></input></div>'+
                                '                        <div style="display: table-cell;"><select style="" id="{{StudentId}}Gender"><option {{#if isMale}} selected="selected" {{/if}} id="male" value="male">{{MALE}}</option><option {{#if isFemale}} selected="selected" {{/if}} id="female" value="female">{{FEMALE}}</option></select></div>'+
-                               '                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1%;vertical-align: middle; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.updatePlayer(\'{{StudentId}}\')" >{{update}}</div>'+
-                               '                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1%;vertical-align: middle; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.deletePlayer(\'{{StudentId}}\')" >{{delete}}</div>'+
+                               '                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1.5%; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.updatePlayer(\'{{StudentId}}\')" >{{update}}</div>'+
+                               '                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1.5%; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.deletePlayer(\'{{StudentId}}\')" >{{delete}}</div>'+
 
                               '                </div>'+
                               '{{/each}}' +
