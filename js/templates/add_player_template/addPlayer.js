@@ -62,6 +62,7 @@ ubsApp.addNewPlayer = function() {
      }
      ubsApp.populateStudentArray(ubsApp.studentArray);
     let numberOfPlayers = 4;
+
     if(ubsApp.studentArray.length < 4) {
         numberOfPlayers = ubsApp.studentArray.length;
     }

@@ -1263,6 +1263,7 @@ ubsApp.translation={
         "decisionLoseRptPts":"यह एक अच्छा फैसला नहीं था। आप {0} प्रतिष्ठा अंक खो गए!",
 	
 	"endGameConfirm" : "क्या आप वाकई खेल खत्म करना चाहते हैं?",
+	sssssssssssssssssss---------sssssssssssssssssssss : sdsdsnnnnnnnnnnn-----------nsdsdsdsdsdaPalyae d;
 	"ENDGAME":"अंत खेल",
 	"convertReputationPointsTitle" :"कन्वर्ट प्रतिष्ठान अंक",
         "convertReputationMessage" : "कार्ड को उन्नत करने के लिए कनवर्टर प्रतिस्थापन",
