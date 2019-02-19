@@ -1462,8 +1462,6 @@ ubsApp.translation={
         "PLAYER_ADDED_HEADER" : "ADD PLAYER",
         "PLAYER_ADDED_SUCCESSFULLY" : "Player Added Successfully !",
         "ADD_PLAYER_TO_PLAY" : "Add player to play the game !!!",
-        "UPDATE" : "UPDATE",
-        "DELETE" : "DELETE",
         "PLAYER_UPDATED_SUCCESSFULLY" : "Player Updated Successfully !",
         "PLAYER_DELETED_SUCCESSFULLY" : "Player Deleted Successfully !",
     }
