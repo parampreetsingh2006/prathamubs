@@ -10,6 +10,10 @@ object.currentPlayerName = userArray[playerChance].getplayerName();
 object.gameLogo = ubsApp.getTranslation("gameLogo");
 ubsApp.startRecordingTimer(templateConfig);
 object = $.extend(true, templateConfig, object);
+for(let i = 0; i < object.options.length; i++) {
+    object.options[i]["startTime"] = templateConfig.startTime;
+    object.options[i]["questionId"] = object.questionId;
+}
 tempVar.html+=ubsDecisionTemplate(object);
 $('#templateContent').css("height","100vh");
 $('#templateContent').css("width","100vw");
@@ -30,13 +34,14 @@ ubsApp.renderDecisonTemplate = function() {
 
 ubsApp.decisionOptions = function(reputationPts, bankBalance, startTime, questionId, insurance=false, page="", pamphlet=false, randomProfit=false){
 
+    reputationPts = parseInt(reputationPts);
 	let initialPlayerRepPoints = userArray[playerChance].getReputationPts();
 	let totalReputationPoints = initialPlayerRepPoints+parseInt(reputationPts);
 	let initialPlayerBankBalance = userArray[playerChance].getBankBalance();
 	let totalPlayerBankBalance = initialPlayerBankBalance+parseInt(bankBalance);
 	let decisionResultMessage = "";
 	let nextAction;
-	userArray[playerChance].setReputationPts(initialPlayerRepPoints+parseInt(reputationPts));
+	userArray[playerChance].setReputationPts(initialPlayerRepPoints+ reputationPts);
 	userArray[playerChance].setBankBalance(initialPlayerBankBalance+parseInt(bankBalance));
 	if(insurance == "true"){
 	ubsApp.updateScoreInDB(userArray[playerChance].getplayerStudentId(), questionId, 0,0, 1, startTime, "decisionInsuranceQuestion");

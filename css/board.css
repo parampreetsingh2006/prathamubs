@@ -255,7 +255,7 @@
 .firstLine-left {
   top: 0px;
   bottom: 0px;
-  right: 60%;
+  width: 100%;
 }
 
 .firstLine-left.no-color {
@@ -265,7 +265,7 @@
 .firstLine-right {
   top: 0;
   bottom: 0;
-  left: 60%!important;
+  width: 100%;
 }
 
 .firstLine-right.no-color {
@@ -320,16 +320,16 @@
    background-color: #cc6699;
 }
 
-.rotation1 {
-  transform: rotate(90deg);
+.rotation1 > span img {
+  height : 40%;
 }
 
-.rotation2 {
-  transform: rotate(0deg);
+.rotation2 > span img {
+  width : 15%;
 }
 
-.rotation3 {
-  transform: rotate(-90deg);
+.rotation3 > span img {
+  height : 40%;
 }
 
 
