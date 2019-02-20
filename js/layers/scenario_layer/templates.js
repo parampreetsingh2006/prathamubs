@@ -665,7 +665,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '        <div class="columnPurchase">'+
 '            <div class="row">'+
 '                <div class="purchaseIcon" style="padding-right: 0%;"></div>'+
-'                <div class="col-md-8" style="padding-left: 0%;">'+
+'                <div style="padding-left: 0%;width:40%">'+
 '                    <div class="purchaseTitle">{{purchase}}</div>'+
 '                </div>'+
 '            </div>'+
@@ -712,11 +712,19 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '                    <div class="col-md-4">'+
 '                        <input type="range" value="{{sliderValue}}" id="mySlider" oninput="ubsApp.updateInventoryLevel(this.value)">'+
 '                    </div>'+
-'                    <div id="value" class="col-md-4" style="padding-left: 0%;margin:auto;">{{inventoryValue}}</div>'+
+'                    <div id="increaseValue" class="col-md-4" style="padding-left: 0%;margin:auto;display:grid;">'+
+'                       <div id="increaseInventory" >'+
+'                        <button id="increaseButton" style="width:35%" onclick="ubsApp.increaseInventory()">+</button>'+
+'                       </div>'+
+'                      <div id="value" class="col-md-14" style="padding-left: 0%;margin:auto;">{{inventoryValue}}</div>'+
+'                       <div id="decreaseInventory" >'+
+'                        <button id="decreaseButton" style="width:35%" onclick="ubsApp.decreaseInventory()">-</button>'+
+'                       </div>'+
+'                   </div>'+
 '                </div>'+
-'                <div class="row" style="height:7vmax;">'+
+/*'                <div class="row" style="height:7vmax;">'+
 '                    <div class="confirmButton" onclick="ubsApp.fillUp()">{{confirmTitle}}</div>'+
-'                </div>'+
+'                </div>'+*/
 '            </div>'+
 '        </div> </div>'+
 '        <div class="columnPurchase">'+
