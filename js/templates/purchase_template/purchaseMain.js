@@ -220,3 +220,21 @@ ubsApp.openPurchaseScenario=function(openNextMove = true){
 	ubsApp.startCurrentScenario();
 	ubsApp.renderPageByName("purchaseScenario");
 }
+
+
+ubsApp.increaseInventory=function(){
+    var currentSliderValue = document.getElementById("mySlider").value;
+    document.getElementById("mySlider").value = parseFloat(currentSliderValue)+0.5;
+    ubsApp.updateInventoryLevel(document.getElementById("mySlider").value);
+    ubsApp.fillUp();
+}
+
+ubsApp.decreaseInventory=function(){
+    var currentSliderValue = document.getElementById("mySlider").value;
+    if(parseFloat(currentSliderValue)>parseFloat(userArray[playerChance].getInventoryScore())){
+        document.getElementById("mySlider").value = parseFloat(currentSliderValue)-1.0;
+        ubsApp.updateInventoryLevel(document.getElementById("mySlider").value);
+        ubsApp.fillUp();
+    }
+
+}
