@@ -32,11 +32,12 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
                         });
     }
 
-    setTimeout(function() { ubsApp.bindSaleTabEvents();}, 2000);
 
 }
 
 ubsApp.bindSaleTabEvents = function() {
+
+
     $(".saleInputButtons").on("keydown",function(event){
 
                 let nextIndex = -12323;
@@ -82,6 +83,16 @@ ubsApp.bindSaleTabEvents = function() {
                }
 
         });
+
+
+}
+
+ubsApp.salesOnLoadActions = function () {
+     $('#bill').animate({
+                      scrollLeft: $("#receiptTotal").offset().left
+                    }, 2000);
+
+     ubsApp.bindSaleTabEvents();
 }
 ubsApp.validateAmount = function(showPopup = true) {
     var item = document.getElementsByName('amt');

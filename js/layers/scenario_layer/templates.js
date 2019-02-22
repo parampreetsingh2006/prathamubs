@@ -413,7 +413,7 @@ ubsApp.leaderBoardTemplate=
 '       '+
 '           <img src="images/red header.png" style="width:100%" >'+
 '           <div id="bill">'+
-'               <div class="table-responsive">          '+
+'               <div class="table-responsive" style="overflow-x: unset;">          '+
 '                 <table class="table table-bordered">'+
 '                   <thead>'+
 '                     <tr>'+
@@ -504,7 +504,8 @@ ubsApp.leaderBoardTemplate=
 
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
 '   </div>'+
-'  </div>';
+'  </div>' +
+'<script type="text/javascript">ubsApp.salesOnLoadActions();</script>';
 
 ubsApp.quizTemplate = '<div id="quiz">'+
 '   <div id="quizTitle">'+
