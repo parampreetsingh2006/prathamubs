@@ -1396,7 +1396,7 @@ ubsApp.translation={
               "introVideo":"videos/intro_marathi.mp4",
               "introVideoOnline":"http://prathamopenschool.org/UBS/FinLit/videos/intro_marathi.mp4",
              "salesAnswerHelp" : "<img src=\\\"images/helpdoc/SalesHelpMarathi.jpg\\\" width=\\\"100%\\\" ></img>",
-             "DECISION HELP" : "<img src=\\\"images/helpdoc/DecisionHelpMarathi.jpg\\\" width=\\\"100%\\\" ></img>",
+             "decisionHelp" : "<img src=\\\"images/helpdoc/DecisionHelpMarathi.jpg\\\" width=\\\"100%\\\" ></img>",
              "LUCK HELP" : "<img src=\\\"images/helpdoc/LuckHelpMarathi.jpg\\\" width=\\\"100%\\\"></img>",
              "quizGeneralHelp":"<img src=\\\"images/helpdoc/GeneralHelp.jpg\\\" width=\\\"100%\\\"> </img>",
               "incomeTaxVideo":"videos/income_tax_marathi.mp4",
@@ -1441,5 +1441,6 @@ ubsApp.translation={
                "ADD_PLAYER_TO_PLAY" : "खेळ खेळण्यासाठी खेळाडू जोडा !!!",
                 "PLAYER_UPDATED_SUCCESSFULLY" : "खेळाडू यशस्वीरित्या अद्यतनित झाला!",
                 "PLAYER_DELETED_SUCCESSFULLY" : "खेळाडू यशस्वीरित्या हटविला!",
+                "continueTitle":"सुरू",
 
     }

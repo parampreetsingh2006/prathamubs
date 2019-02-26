@@ -1430,7 +1430,7 @@ ubsApp.translation={
         "introVideoOnline":"http://prathamopenschool.org/UBS/FinLit/videos/intro_english.mp4",
         //"salesAnswerHelp" : "<embed src=\\\"pdf/SalesHelp.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
         "salesAnswerHelp" : "<img src=\\\"images/helpdoc/SalesHelpEnglish.jpg\\\" width=\\\"100%\\\" ></img>",
-        "DECISION HELP" : "<img src=\\\"images/helpdoc/DecisionHelpEnglish.jpg\\\" width=\\\"100%\\\" ></img>",
+        "decisionHelp" : "<img src=\\\"images/helpdoc/DecisionHelpEnglish.jpg\\\" width=\\\"100%\\\" ></img>",
         "LUCK HELP" : "<img src=\\\"images/helpdoc/LuckHelpEnglish.jpg\\\" width=\\\"100%\\\"></img>",
         "quizGeneralHelp":"<img src=\\\"images/helpdoc/GeneralHelp.jpg\\\" width=\\\"100%\\\"> </img>",
         "decisionSameMessaage":"Your reputation points and bank balance remain as is",
@@ -1464,5 +1464,6 @@ ubsApp.translation={
         "ADD_PLAYER_TO_PLAY" : "Add player to play the game !!!",
         "PLAYER_UPDATED_SUCCESSFULLY" : "Player Updated Successfully !",
         "PLAYER_DELETED_SUCCESSFULLY" : "Player Deleted Successfully !",
+        "continueTitle":"CONTINUE",
     }
 
