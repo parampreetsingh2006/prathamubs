@@ -1191,14 +1191,14 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       '+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
 '       <div class="row" id="leftInfo">'+
-'           <div class="col-md-10">'+
-'               <span id="decisionBankBalance" style="word-spacing: 1.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
+'           <div class="col-md-12" style="width:80%;">'+
+'               <span id="decisionBankBalance" style="word-spacing: 0.2vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
 '       <div class="row" id="rightInfo" style="position: relative;">'+
-'           <div class="col-md-6" >'+
+'           <div class="col-md-12" style="width:45%;">'+
 '               <span id="decisionBankBalance" style="word-spacing: 7.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+

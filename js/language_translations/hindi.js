@@ -1370,7 +1370,7 @@ ubsApp.translation={
         "introVideo":"videos/intro_hindi.mp4",
         "introVideoOnline":"http://prathamopenschool.org/UBS/FinLit/videos/intro_hindi.mp4",
         "salesAnswerHelp" : "<img src=\\\"images/helpdoc/SalesHelpHindi.jpg\\\" width=\\\"100%\\\" ></img>",
-	    "DECISION HELP" : "<img src=\\\"images/helpdoc/DecisionHelpHindi.jpg\\\" width=\\\"100%\\\" ></img>",
+	    "decisionHelp" : "<img src=\\\"images/helpdoc/DecisionHelpHindi.jpg\\\" width=\\\"100%\\\" ></img>",
         "LUCK HELP" : "<img src=\\\"images/helpdoc/LuckHelpHindi.jpg\\\" width=\\\"100%\\\"></img>",
         "quizGeneralHelp":"<img src=\\\"images/helpdoc/GeneralHelp.jpg\\\" width=\\\"100%\\\"> </img>",
 	    "decisionSameMessaage":"आपकी प्रतिष्ठा अंक और बैंक शेष राशि उतनी ही बनी हुई है",
@@ -1401,7 +1401,7 @@ ubsApp.translation={
 	//Are these required?
     "decisionResultMessageInCaseOfPamphletOrFestival":"बधाई हो। आपने {0} प्रतिष्ठा अंक अर्जित किए हैं। आपने रुपये खर्च किए {1} और  व्यापार की कमाई की {2}।",
     "kycHelpImage":"images/incometaxhelp.png",
-    "decisionBankBalanceTitle":"बैंक राशि",
+    "decisionBankBalanceTitle":"बैंक-राशि",
     "Back" : "वापस",
     "payment":"भुगतान",
     "decisionQ16":"डिटर्जेंट पर थोक व्यापारी छूट 2500 रुपये का लाभ।",
@@ -1510,5 +1510,6 @@ ubsApp.translation={
     "ADD_PLAYER_TO_PLAY" : "गेम खेलने के लिए खिलाड़ी जोड़ें !!!",
     "PLAYER_UPDATED_SUCCESSFULLY" : "खिलाड़ी अपडेट किया गया!",
     "PLAYER_DELETED_SUCCESSFULLY" : "खिलाड़ी सफलतापूर्वक हटा दिया गया!",
+    "continueTitle":"चालू करे",
 
 }

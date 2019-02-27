@@ -23,10 +23,12 @@ ubsApp.updateInventoryLevel=function(value){
         document.getElementById("mySlider").value=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
         document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
         document.getElementById("value").innerHTML="₹ "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
+        ubsApp.fillUp();
     }
     else{
         document.getElementById("percent").innerHTML=parseFloat(value).toFixed(2);
         document.getElementById("value").innerHTML="₹ "+parseInt(value*1000);
+        ubsApp.fillUp();
     }
     
 }

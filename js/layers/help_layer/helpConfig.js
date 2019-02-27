@@ -306,19 +306,12 @@ ubsApp.helpConfig={
     },
     "decisionHelp":{
         "templates":[
-            // {
-                // "templateId":2,
-                // "templateType":"static",
-                // "id":"helpImage",
-                // "style":"position:absolute;top:5%;left:45%;background-repeat: no-repeat;color:white;",
-                // "src":"<image src=\"../../images/decision_screen\"></image>"
-            // },
             {
                 "templateId":3,
                 "templateType":"static",
-                "id":"helpContentVideo",
+                "id":"decisionHelpId",
                 "style":"position:absolute;background-repeat: no-repeat;  overflow:auto; height:{{screenHeight}}px",
-                "src":"{{DECISION HELP}}"
+                "src":"{{decisionHelp}}"
             },
             {
                 "templateId":4,
@@ -385,7 +378,7 @@ ubsApp.helpConfig={
                     "templateType":"static",
                     "id":"quizClose",
                     "style":"position:absolute;bottom:5%;left:90%;background-repeat: no-repeat;",
-                    "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup(); ubsApp.startBackgroundMusic(); monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{cancelTitle}}</button>"
+                    "src":"<button onclick=\"ubsApp.closeHelp();ubsApp.closePopup(); ubsApp.startBackgroundMusic(); monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"padding:7px; color:white; font-weight:650; border:0; background:orangered;border-radius:5px; \">{{continueTitle}}</button>"
                 }
             ]
         },
