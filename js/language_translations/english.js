@@ -1465,5 +1465,6 @@ ubsApp.translation={
         "PLAYER_UPDATED_SUCCESSFULLY" : "Player Updated Successfully !",
         "PLAYER_DELETED_SUCCESSFULLY" : "Player Deleted Successfully !",
         "continueTitle":"CONTINUE",
+        "noOfWeeks" : "NO OF WEEKS : ",
     }
 

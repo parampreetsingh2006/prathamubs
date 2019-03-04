@@ -1442,5 +1442,7 @@ ubsApp.translation={
                 "PLAYER_UPDATED_SUCCESSFULLY" : "खेळाडू यशस्वीरित्या अद्यतनित झाला!",
                 "PLAYER_DELETED_SUCCESSFULLY" : "खेळाडू यशस्वीरित्या हटविला!",
                 "continueTitle":"सुरू",
+                "noOfWeeks" : "आठवड्यांची संख्या : ",
+
 
     }

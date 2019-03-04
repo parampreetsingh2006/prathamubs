@@ -1511,5 +1511,7 @@ ubsApp.translation={
     "PLAYER_UPDATED_SUCCESSFULLY" : "खिलाड़ी अपडेट किया गया!",
     "PLAYER_DELETED_SUCCESSFULLY" : "खिलाड़ी सफलतापूर्वक हटा दिया गया!",
     "continueTitle":"चालू करे",
+    "noOfWeeks" : "सप्ताह की संख्या : ",
+
 
 }

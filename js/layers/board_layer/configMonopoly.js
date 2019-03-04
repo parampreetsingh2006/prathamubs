@@ -119,7 +119,7 @@ monopoly.origpages = {
     {
         "templateId":1,
         "templateType":"static",
-        "src": "<div id=\"enterOnlinePlayers\">{{enterOfflinePlayers}} <select id=\"num_online_players\"   onchange=\"monopoly.initOnlinePlayers()\"> "+
+        "src": "<div style=\"margin-bottom:2%;\">{{noOfWeeks}}<input type=\"radio\" name=\"noOfWeeks\" value=\"6\">6 <input type=\"radio\" name=\"noOfWeeks\" value=12 checked=\"\">12</div><div id=\"enterOnlinePlayers\">{{enterOfflinePlayers}} <select id=\"num_online_players\"   onchange=\"monopoly.initOnlinePlayers()\"> "+
                                                                                             "<option value=\"1\"><span  id=\"player1\">1</span></option> "+
                                                                                             "<option value=\"2\"><span id=\"player2\">2</span></option> "+
                                                                                             "<option value=\"3\"><span id=\"player3\">3</span></option> "+
@@ -181,7 +181,7 @@ monopoly.origpages = {
     {
         "templateId":1,
         "templateType":"static",
-        "src": "<div id=\"enterOfflinePlayers\">{{enterOfflinePlayers}} <select id=\"num_offline_players\"   onchange=\"monopoly.initOfflinePlayers()\"> "+
+        "src": "<div style=\"margin-bottom:2%;\">{{noOfWeeks}}<input type=\"radio\" name=\"noOfWeeks\" value=\"6\">6 <input type=\"radio\" name=\"noOfWeeks\" value=12 checked=\"\">12</div><div id=\"enterOfflinePlayers\">{{enterOfflinePlayers}} <select id=\"num_offline_players\"   onchange=\"monopoly.initOfflinePlayers()\"> "+
                                                                                             "<option value=\"1\"><span  id=\"player1\">1</span></option> "+
                                                                                             "<option value=\"2\"><span id=\"player2\">2</span></option> "+
                                                                                             "<option value=\"3\"><span id=\"player3\">3</span></option> "+

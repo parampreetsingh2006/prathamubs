@@ -280,7 +280,7 @@ monopoly.myMove = function(count, pId, currentPos) {
       
       blockNo %= boardConfig.blocks;
       if(blockNo==0){
-        document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
+        document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks() + "/" + ubsApp.maxNumOfWeeks;
       }
       $("#" + blockNo).append(playerToken);
       var audioElement = document.getElementById('p'+pId+'');
@@ -327,6 +327,7 @@ monopoly.storePlayerDetails=function(){
     let computerRequired=false;  //document.getElementById("computer").checked;
     let isOffline = ubsApp.isOfflineMode;
     let playerMap = {};
+    ubsApp.maxNumOfWeeks = $("input[name='noOfWeeks']:checked"). val();
      for( i=0;i<numplayers;i++) {
 
         if(playerMap[document.getElementById("name"+i).value]) {
@@ -942,7 +943,7 @@ ubsApp.addInventory=function(inventoryPoints){
 ubsApp.currentPlayerContents=function(){
     $("#playerId").empty();
 	$("#playerId").html(userArray[playerChance].getplayerName());
-	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks();
+	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks() + "/" + ubsApp.maxNumOfWeeks;
 	document.getElementById("bankBalance").innerHTML="₹ "+userArray[playerChance].getBankBalance();
 	document.getElementById("cash").innerHTML="₹ "+userArray[playerChance].getplayerScore();
 	document.getElementById("debt").innerHTML="₹ "+userArray[playerChance].getCredit();
