@@ -1,5 +1,6 @@
 var rollingDiceConfig = {};
-rollingDiceConfig.currentRandomDiceOne=0;
+rollingDiceConfig.currentRandomDiceOne=5; //intial value of the dice
+
 
 function pointRoll() {
   var elDiceOne       = document.getElementById('dice1');
