@@ -327,6 +327,7 @@ monopoly.storePlayerDetails=function(){
     let computerRequired=false;  //document.getElementById("computer").checked;
     let isOffline = ubsApp.isOfflineMode;
     let playerMap = {};
+    ubsApp.maxNumOfWeeks = $("input[name='noOfWeeks']:checked"). val();
      for( i=0;i<numplayers;i++) {
 
         if(playerMap[document.getElementById("name"+i).value]) {
