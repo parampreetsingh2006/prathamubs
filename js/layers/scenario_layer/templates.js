@@ -776,7 +776,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '                </div>'+
 '            </div></div>'+
 '            <div class="row" style="height:20vmax;">'+
-'                    <div class="confirmButton mainButtons" onclick="ubsApp.pay(\'{{startTime}}\'); {{#if openNextMove }} ubsApp.nextMove(); {{/if}}">{{doneTitle}}</div>'+
+'                    <div class="confirmButton mainButtons" onclick="ubsApp.pay(\'{{startTime}}\'); ">{{doneTitle}}</div>'+
 '                    <div class="confirmButton mainButtons" id="target_cancel" onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove }} ubsApp.nextMove(); {{/if}}">{{noThanksTitle}}</div>'+
 '                    <div class="helpBtn mainButtons" onclick="ubsApp.startHelp(\'purchaseHelp\')"></div>'+
 '            </div>'+
