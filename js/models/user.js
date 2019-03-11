@@ -221,7 +221,7 @@ class User{
         return this.correctProbability;
     }
     getplayerName(){
-        return this.name;
+        return (this.name).toUpperCase();
     }
 
     isPlayerEligibleToPlay() {
