@@ -171,6 +171,7 @@ monopoly.renderPageforBoard = function(page) {
             else if(templateType == "endGameTemplate") {
                 templateConfig = $.extend(templateConfig,ubsApp.endGameConfig);
                 templateConfig.PLAYAGAIN = ubsApp.getTranslation("PLAYAGAIN");
+                templateConfig.CLOSE = ubsApp.getTranslation("CLOSE");
                 html += ubsEndGameTemplate(templateConfig);
             }
         }
@@ -937,6 +938,12 @@ ubsApp.addScore=function (earnedScore)
 ubsApp.addInventory=function(inventoryPoints){
 	var currentInventory=userArray[playerChance].getInventoryScore();
 	userArray[playerChance].setInventoryScore(inventoryPoints+currentInventory);
+}
+
+ubsApp.closeGame = function() {
+    if(ubsApp.isAndroidEnabled) {
+        Android.endSession();
+    }
 }
 
 
