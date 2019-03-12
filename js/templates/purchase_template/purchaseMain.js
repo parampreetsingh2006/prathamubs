@@ -26,7 +26,7 @@ ubsApp.updateInventoryLevel=function(value){
         ubsApp.fillUp();
     }
     else{
-        document.getElementById("percent").innerHTML=parseFloat(value).toFixed(2);
+        document.getElementById("percent").innerHTML=parseInt(value);
         document.getElementById("value").innerHTML="₹ "+parseInt(value*1000);
         ubsApp.fillUp();
     }
@@ -226,7 +226,7 @@ ubsApp.openPurchaseScenario=function(openNextMove = true){
 
 ubsApp.increaseInventory=function(){
     var currentSliderValue = document.getElementById("mySlider").value;
-    document.getElementById("mySlider").value = parseFloat(currentSliderValue)+0.5;
+    document.getElementById("mySlider").value = parseInt(currentSliderValue)+1;
     ubsApp.updateInventoryLevel(document.getElementById("mySlider").value);
     ubsApp.fillUp();
 }
@@ -234,7 +234,7 @@ ubsApp.increaseInventory=function(){
 ubsApp.decreaseInventory=function(){
     var currentSliderValue = document.getElementById("mySlider").value;
     if(parseFloat(currentSliderValue)>parseFloat(userArray[playerChance].getInventoryScore())){
-        document.getElementById("mySlider").value = parseFloat(currentSliderValue)-1.0;
+        document.getElementById("mySlider").value = parseInt(currentSliderValue)-1;
         ubsApp.updateInventoryLevel(document.getElementById("mySlider").value);
         ubsApp.fillUp();
     }
