@@ -312,7 +312,7 @@ width: 100%;
     padding:5px;
     border:0;
     color:#0e0e54;
-    background-image:url('../images/buttonmedium.png');
+    background-image:url('../images/buttonMedium.png');
     background-size: 100% 100%;
     background-color:transparent;
     font-weight: bold;
@@ -322,7 +322,7 @@ width: 100%;
     padding:5px;
     border:0;
     color:#560a56;
-    background-image:url('../images/buttonmedium.png');
+    background-image:url('../images/buttonMedium.png');
     background-size: 100% 100%;
     background-color:transparent;
 }
