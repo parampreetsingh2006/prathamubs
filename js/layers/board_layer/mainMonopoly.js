@@ -171,7 +171,7 @@ monopoly.renderPageforBoard = function(page) {
             else if(templateType == "endGameTemplate") {
                 templateConfig = $.extend(templateConfig,ubsApp.endGameConfig);
                 templateConfig.PLAYAGAIN = ubsApp.getTranslation("PLAYAGAIN");
-                templateConfig.ENDGAME = ubsApp.getTranslation("ENDGAME");
+                templateConfig.CLOSE = ubsApp.getTranslation("CLOSE");
                 html += ubsEndGameTemplate(templateConfig);
             }
         }
